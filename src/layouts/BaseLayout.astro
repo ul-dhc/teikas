@@ -15,13 +15,13 @@ const base = import.meta.env.BASE_URL;
     <meta name="description" content={description} />
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <script is:inline>try{const d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('teikas-theme')||'light';d.dataset.contentMode=s.getItem('teikas-content-mode')||'parallel';d.dataset.uiLang=s.getItem('teikas-ui-lang')||'lv';d.style.setProperty('--font-scale',s.getItem('teikas-font-scale')||'1')}catch{}</script>
-    <title>{title === 'Teikas' ? title : `${title} — Teikas`}</title>
+    <title>{title === 'Teikas' ? title : `${title} – Teikas`}</title>
   </head>
   <body>
     <script type="application/json" id="ui-translations" is:inline set:html={JSON.stringify(uiTranslations).replace(/</g,'\u003c')} />
     <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
     <header class="site-header">
-      {active === 'home' ? <span class="wordmark-placeholder" aria-hidden="true"></span> : <a class="wordmark" href={base} aria-label="Teikas — sākumlapa">Teikas</a>}
+      {active === 'home' ? <span class="wordmark-placeholder" aria-hidden="true"></span> : <a class="wordmark" href={base} aria-label="Teikas – sākumlapa">Teikas</a>}
       <nav aria-label="Galvenā navigācija">
         <a class:list={[{ active: active === 'home' }]} href={base} data-nav-key="home">Sākums</a>
         <a class:list={[{ active: active === 'browse' }]} href={`${base}teikas/`} data-nav-key="texts">Teksti</a>
@@ -38,8 +38,8 @@ const base = import.meta.env.BASE_URL;
     <main id="saturs"><slot /></main>
     <footer class="site-footer"><div class="institution-credit"><a href="https://ul-dhc.github.io/" target="_blank" rel="noopener noreferrer">LU Digitālo humanitāro zinātņu centrs</a><span>, 2026</span></div></footer>
     <script>
-      import { createIcons, ArrowLeft, ArrowRight, ArrowUpDown, CalendarDays, Check, ChevronDown, Copy, FileStack, LayoutGrid, Link, List, MapPin, Minus, Moon, NotebookPen, Pin, PinOff, Plus, RotateCcw, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
-      const iconSet={ArrowLeft,ArrowRight,ArrowUpDown,CalendarDays,Check,ChevronDown,Copy,FileStack,LayoutGrid,Link,List,MapPin,Minus,Moon,NotebookPen,Pin,PinOff,Plus,RotateCcw,SlidersHorizontal,Sun,UsersRound,X};
+      import { createIcons, ArrowLeft, ArrowRight, ArrowUpDown, CalendarDays, Check, ChevronDown, Copy, FileStack, LayoutGrid, Link, List, MapPin, Minus, Moon, NotebookPen, Pin, PinOff, Plus, Quote, RotateCcw, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
+      const iconSet={ArrowLeft,ArrowRight,ArrowUpDown,CalendarDays,Check,ChevronDown,Copy,FileStack,LayoutGrid,Link,List,MapPin,Minus,Moon,NotebookPen,Pin,PinOff,Plus,Quote,RotateCcw,SlidersHorizontal,Sun,UsersRound,X};
       const renderIcons=()=>createIcons({icons:iconSet,attrs:{'aria-hidden':'true','stroke-width':'1.8'}});(window as any).renderLucideIcons=renderIcons;window.addEventListener('lucide-refresh',renderIcons);renderIcons();
       const doc=document.documentElement, store=localStorage;
       const themeButton=document.querySelector<HTMLButtonElement>('[data-theme-toggle]')!;
