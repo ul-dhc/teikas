@@ -7,6 +7,7 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
+    "i18n:fetch": "node scripts/fetch-ui-i18n.mjs",
     "i18n:generate": "node scripts/generate-ui-i18n.mjs",
     "i18n:export": "node scripts/export-ui-i18n.mjs",
     "test:data": ".venv/bin/python scripts/XLSXtoJSON-test/run_tests.py",

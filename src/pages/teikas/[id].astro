@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { legends, resolveLegend, sourceLabel, legendYear, displayPersonName, type Legend } from '../../lib/data';
+const base = import.meta.env.BASE_URL;
 export function getStaticPaths() { return legends.map((legend, index) => ({ params: { id: legend.id }, props: { legend, index } })); }
 const { legend, index } = Astro.props as { legend: Legend; index: number };
 const data = resolveLegend(legend), previous = legends[index - 1], next = legends[index + 1], year = legendYear(legend);
 const basicRows = [['ID', legend.id], ['Vieta', data.place?.name || 'Nav norādīts'], ['Teicējs', displayPersonName(data.narrator) || '—'], ['Pierakstītājs', displayPersonName(data.collector) || '—'], ['Gads', year || 'Nav norādīts']];
 const allSources = [...data.primarySources, ...data.secondarySources];
 const hasSources = allSources.length > 0 || Boolean(legend.primarySourceRaw || legend.secondarySourceRaw);
-const publicUrl = `https://dhc.lu.lv/teikas/${legend.id}/`;
+const publicUrl = new URL(`${base}teikas/${legend.id}/`, Astro.site ?? Astro.url.origin).href;
 const narratorName = displayPersonName(data.narrator), collectorName = displayPersonName(data.collector);
 const shareMetadata = [
   `ID: ${legend.id}.`,
@@ -22,7 +23,7 @@ const parallelShareText = [legend.title.lv || 'Bez nosaukuma', 'Latviski', legen
 ---
 <BaseLayout title={legend.title.lv || legend.id} active="browse">
   <article class="detail">
-    <div class="detail-top"><a class="back-link icon-link" href="/teikas/" data-back><i data-lucide="arrow-left"></i> Atpakaļ</a><button class="copy-icon" type="button" data-copy data-copy-lv={lvShareText} data-copy-de={deShareText} data-copy-parallel={parallelShareText} aria-label="Kopēt teiku" title="Kopēt teiku"><i data-lucide="copy"></i></button></div>
+    <div class="detail-top"><a class="back-link icon-link" href={`${base}teikas/`} data-back><i data-lucide="arrow-left"></i> Atpakaļ</a><button class="copy-icon" type="button" data-copy data-copy-lv={lvShareText} data-copy-de={deShareText} data-copy-parallel={parallelShareText} aria-label="Kopēt teiku" title="Kopēt teiku"><i data-lucide="copy"></i></button></div>
     <header class="title-row"><div><h1 data-title-lang="lv">{legend.title.lv || 'Bez nosaukuma'}</h1><h1 data-title-lang="de" lang="de">{legend.title.de || 'Ohne Titel'}</h1></div></header>
     <div class="mode-tabs" role="tablist" aria-label="Šīs teikas valodas skats"><button role="tab" data-mode="lv">Latviski</button><button role="tab" data-mode="de">Deutsch</button><button role="tab" data-mode="parallel">Paralēli</button></div>
     <div class="detail-grid">
@@ -30,7 +31,7 @@ const parallelShareText = [legend.title.lv || 'Bez nosaukuma', 'Latviski', legen
         <div class="texts" data-texts><section class="text-panel" data-lang="lv" aria-labelledby="lv-heading"><h2 id="lv-heading">LATVISKI</h2><div class="legend-text">{legend.text.lv || 'Teksts nav norādīts.'}</div></section><section class="text-panel" data-lang="de" lang="de" aria-labelledby="de-heading"><h2 id="de-heading">DEUTSCH</h2><div class="legend-text">{legend.text.de || 'Text nicht angegeben.'}</div></section></div>
         <details class="information" data-information open><summary><span>Informācija<small>Par teiku un tās avotiem</small></span><i data-lucide="chevron-down"></i></summary><div class="information-body"><dl>{basicRows.map(([label,value]) => <div class="metadata-row"><dt>{label}</dt><dd>{value}</dd></div>)}</dl><details class="more-metadata"><summary><span>Papildu metadati</span><i data-lucide="chevron-down"></i></summary><dl><div class="metadata-row"><dt>Sējums</dt><dd>{legend.volume}. sējums</dd></div><div class="metadata-row"><dt>Tēma</dt><dd>{legend.chapter.lv || 'Nav norādīts'}{legend.chapter.de && <small lang="de"><br />{legend.chapter.de}</small>}</dd></div>{legend.originalMetadata && <div class="metadata-row"><dt>Oriģinālie metadati</dt><dd>{legend.originalMetadata}</dd></div>}{hasSources && <div class="metadata-row"><dt>Avoti</dt><dd>{allSources.length ? <ul class="source-list">{allSources.map(({source,relation}) => <li>{source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer">{sourceLabel(source)}</a> : sourceLabel(source)}{relation.rawCitation && <small><br />{relation.rawCitation}</small>}</li>)}</ul> : (legend.primarySourceRaw || legend.secondarySourceRaw)}</dd></div>}</dl></details></div></details>
         {(legend.comments || legend.notes) && <aside class="editorial" aria-label="Redakcionālā informācija">{legend.comments && <details><summary>Redaktora komentārs</summary><p>{legend.comments}</p></details>}{legend.notes && <details><summary>Redakcionālās piezīmes</summary><p>{legend.notes}</p></details>}</aside>}
-        <nav class="prev-next" aria-label="Blakus teikas">{previous ? <a href={`/teikas/${previous.id}/`}><span class="nav-direction"><i data-lucide="arrow-left"></i> Iepriekšējā teika</span><strong>{previous.title.lv || previous.id}</strong></a> : <span></span>}{next && <a href={`/teikas/${next.id}/`}><span class="nav-direction">Nākamā teika <i data-lucide="arrow-right"></i></span><strong>{next.title.lv || next.id}</strong></a>}</nav>
+        <nav class="prev-next" aria-label="Blakus teikas">{previous ? <a href={`${base}teikas/${previous.id}/`}><span class="nav-direction"><i data-lucide="arrow-left"></i> Iepriekšējā teika</span><strong>{previous.title.lv || previous.id}</strong></a> : <span></span>}{next && <a href={`${base}teikas/${next.id}/`}><span class="nav-direction">Nākamā teika <i data-lucide="arrow-right"></i></span><strong>{next.title.lv || next.id}</strong></a>}</nav>
       </div>
     </div>
   </article>

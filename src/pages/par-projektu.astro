@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { legends } from '../lib/data';
 
 const legendCount = legends.length.toLocaleString('lv-LV');
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout
   title="Par projektu"
@@ -11,7 +12,7 @@ const legendCount = legends.length.toLocaleString('lv-LV');
 >
   <header class="about-hero">
     <div class="shell about-shell">
-      <a class="back-link icon-link" href="/"><i data-lucide="arrow-left"></i> Atpakaļ</a>
+      <a class="back-link icon-link" href={base}><i data-lucide="arrow-left"></i> Atpakaļ</a>
       <div class="eyebrow">Par projektu</div>
       <h1>Latviešu teiku digitālā platforma</h1>
     </div>
@@ -37,16 +38,16 @@ const legendCount = legends.length.toLocaleString('lv-LV');
 
     <section class="funding-logos" aria-label="Projekta veidotājs un atbalstītājs">
       <a href="https://ul-dhc.github.io/" class="institution-logo dhc-logo" target="_blank" rel="noopener noreferrer" aria-label="LU Digitālo humanitāro zinātņu centrs">
-        <img class="logo-lv logo-light" src="/assets/logos/dhc-lv.png" alt="LU Digitālo humanitāro zinātņu centrs" />
-        <img class="logo-en logo-light" src="/assets/logos/dhc-en.png" alt="University of Latvia Digital Humanities Centre" />
-        <img class="logo-lv logo-dark" src="/assets/logos/dhc-lv-white.png" alt="" />
-        <img class="logo-en logo-dark" src="/assets/logos/dhc-en-white.png" alt="" />
+        <img class="logo-lv logo-light" src={`${base}assets/logos/dhc-lv.png`} alt="LU Digitālo humanitāro zinātņu centrs" />
+        <img class="logo-en logo-light" src={`${base}assets/logos/dhc-en.png`} alt="University of Latvia Digital Humanities Centre" />
+        <img class="logo-lv logo-dark" src={`${base}assets/logos/dhc-lv-white.png`} alt="" />
+        <img class="logo-en logo-dark" src={`${base}assets/logos/dhc-en-white.png`} alt="" />
       </a>
       <a href="https://www.lzp.gov.lv/" class="institution-logo vpp-logo" target="_blank" rel="noopener noreferrer" aria-label="Valsts pētījumu programma">
-        <img class="logo-lv logo-light" src="/assets/logos/vpp-lv.png" alt="VPP – Valsts pētījumu programma" />
-        <img class="logo-en logo-light" src="/assets/logos/vpp-en.png" alt="SRP – State Research Programme" />
-        <img class="logo-lv logo-dark" src="/assets/logos/vpp-lv-white.png" alt="" />
-        <img class="logo-en logo-dark" src="/assets/logos/vpp-en-white.png" alt="" />
+        <img class="logo-lv logo-light" src={`${base}assets/logos/vpp-lv.png`} alt="VPP – Valsts pētījumu programma" />
+        <img class="logo-en logo-light" src={`${base}assets/logos/vpp-en.png`} alt="SRP – State Research Programme" />
+        <img class="logo-lv logo-dark" src={`${base}assets/logos/vpp-lv-white.png`} alt="" />
+        <img class="logo-en logo-dark" src={`${base}assets/logos/vpp-en-white.png`} alt="" />
       </a>
     </section>
 

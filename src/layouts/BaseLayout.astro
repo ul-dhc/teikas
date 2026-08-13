@@ -5,6 +5,7 @@ import '../styles/responsive-fix.css';
 import '../styles/icons.css';
 import uiTranslations from '../i18n/ui.json';
 const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitālā kolekcija', active = '' } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="lv" data-theme="light" data-content-mode="parallel">
@@ -12,7 +13,7 @@ const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitāl
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <script is:inline>try{const d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('teikas-theme')||'light';d.dataset.contentMode=s.getItem('teikas-content-mode')||'parallel';d.dataset.uiLang=s.getItem('teikas-ui-lang')||'lv';d.style.setProperty('--font-scale',s.getItem('teikas-font-scale')||'1')}catch{}</script>
     <title>{title === 'Teikas' ? title : `${title} — Teikas`}</title>
   </head>
@@ -20,13 +21,13 @@ const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitāl
     <script type="application/json" id="ui-translations" is:inline set:html={JSON.stringify(uiTranslations).replace(/</g,'\u003c')} />
     <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
     <header class="site-header">
-      {active === 'home' ? <span class="wordmark-placeholder" aria-hidden="true"></span> : <a class="wordmark" href="/" aria-label="Teikas — sākumlapa">Teikas</a>}
+      {active === 'home' ? <span class="wordmark-placeholder" aria-hidden="true"></span> : <a class="wordmark" href={base} aria-label="Teikas — sākumlapa">Teikas</a>}
       <nav aria-label="Galvenā navigācija">
-        <a class:list={[{ active: active === 'home' }]} href="/" data-nav-key="home">Sākums</a>
-        <a class:list={[{ active: active === 'browse' }]} href="/teikas/" data-nav-key="texts">Teksti</a>
+        <a class:list={[{ active: active === 'home' }]} href={base} data-nav-key="home">Sākums</a>
+        <a class:list={[{ active: active === 'browse' }]} href={`${base}teikas/`} data-nav-key="texts">Teksti</a>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="map">Karte</span>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="data">Dati</span>
-        <a class:list={[{ active: active === 'about' }]} href="/par-projektu/" data-nav-key="about">Par projektu</a>
+        <a class:list={[{ active: active === 'about' }]} href={`${base}par-projektu/`} data-nav-key="about">Par projektu</a>
       </nav>
       <div class="header-tools">
         <div class="mini-switch" aria-label="Saskarnes valoda"><button type="button" aria-pressed="true" data-ui-lang="lv">LV</button><button type="button" aria-pressed="false" data-ui-lang="de">DE</button><button type="button" aria-pressed="false" data-ui-lang="en">EN</button></div>
