@@ -461,3 +461,7 @@ body{background:
 
 /* Keep desktop navigation hit areas flush with the header's bottom edge. */
 @media(min-width:851px){.site-header nav{align-self:stretch;height:auto;align-items:stretch}.site-header nav a,.site-header nav .nav-muted{height:auto;align-self:stretch}}
+@media(min-width:851px) and (max-width:1150px){.site-header nav{margin-bottom:-.6rem}}
+
+/* Extend the hover panel over the transparent underline area to the header edge. */
+@media(min-width:851px){.site-header{overflow:clip}.site-header nav a{isolation:isolate;--nav-hover-bg:color-mix(in srgb,var(--blue),transparent 93%)}.site-header nav a.active{--nav-hover-bg:color-mix(in srgb,var(--blue),transparent 91%)}.site-header nav a::before{content:'';position:absolute;z-index:-1;inset:0 0 -3px;background:var(--nav-hover-bg);border:1px solid color-mix(in srgb,var(--blue),transparent 80%);opacity:0;pointer-events:none;transition:opacity .18s ease}.site-header nav a:hover{background:transparent;box-shadow:none}.site-header nav a:hover::before{opacity:1}}
