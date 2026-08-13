@@ -433,6 +433,7 @@ body{background:
   .browser-layout .list-head,.browser[data-view=list] .result-card{grid-template-columns:72px minmax(120px,.8fr) minmax(300px,2fr) minmax(90px,.7fr) minmax(110px,.85fr) minmax(90px,.7fr) 62px}
 }
 .browser[data-view=list] .result-card h2{font-size:.92rem;line-height:1.35}
+.browser[data-view=list] .result-card h2 small{font-family:inherit;font-size:inherit;line-height:inherit;font-weight:inherit;color:var(--muted)}
 .browser[data-view=list] .result-excerpt{font-family:var(--sans);font-size:.78rem;line-height:1.5;color:var(--ink);font-weight:400}
 .browser[data-view=list] .result-excerpt .excerpt-de{font-family:var(--sans);font-size:inherit;line-height:inherit;color:color-mix(in srgb,var(--muted),var(--blue) 25%)}
 :root[data-theme=dark] .browser[data-view=list] .result-excerpt{color:var(--ink)}

@@ -11,17 +11,18 @@ const hasSources = allSources.length > 0 || Boolean(legend.primarySourceRaw || l
 const publicUrl = new URL(`${base}teikas/${legend.id}/`, Astro.site ?? Astro.url.origin).href;
 const narratorName = displayPersonName(data.narrator), collectorName = displayPersonName(data.collector);
 const trimPeriod = (value: string) => value.replace(/[.\s]+$/,'');
-const shortCitation = `Latviešu pasakas un teikas, ${legend.volume}. sējums, ID ${legend.id}. Sast. Pēteris Šmits. 1925–1937.`;
-const recording = [data.place?.name, year].filter(Boolean).join(', ');
+const shortCitation = `Latviešu pasakas un teikas, ${legend.volume}. sējums, ID ${legend.id}. sast. Pēteris Šmits. 1925–1937. Pieejams: ${publicUrl}`;
 const extendedCitation = [
   `Latviešu pasakas un teikas, ${legend.volume}. sējums,`,
-  'Sast. Pēteris Šmits.',
+  'sast. Pēteris Šmits.',
   '1925–1937.',
   `ID ${legend.id}.`,
   legend.title.lv ? `${trimPeriod(legend.title.lv)}.` : '',
   narratorName ? `Teicējs: ${trimPeriod(narratorName)}.` : '',
   collectorName ? `Pierakstītājs: ${trimPeriod(collectorName)}.` : '',
-  recording ? `Pierakstīts ${recording}.` : '',
+  data.place?.name ? `Pierakstīšanas vieta: ${data.place.name}.` : '',
+  year ? `Pierakstīšanas gads: ${year}.` : '',
+  `Pieejams: ${publicUrl}`,
 ].filter(Boolean).join(' ');
 const shareMetadata = [
   `ID: ${legend.id}.`,
