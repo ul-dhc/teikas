@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { legends } from '../lib/data';
+
+const legendCount = legends.length.toLocaleString('lv-LV');
+---
+<BaseLayout
+  title="Par projektu"
+  description="Par Pētera Šmita latviešu teiku digitālo platformu, tās avotiem, mērķiem un veidotājiem."
+  active="about"
+>
+  <header class="about-hero">
+    <div class="shell about-shell">
+      <a class="back-link icon-link" href="/"><i data-lucide="arrow-left"></i> Atpakaļ</a>
+      <div class="eyebrow">Par projektu</div>
+      <h1>Latviešu teiku digitālā platforma</h1>
+    </div>
+  </header>
+
+  <article class="about-content shell">
+    <div class="about-main">
+      <p class="about-intro">Šī digitālā platforma šobrīd piedāvā iepazīt {legendCount} latviešu teikas, kas publicētas folklorista Pētera Šmita apkopotajā 15 sējumu izdevumā “Latviešu pasakas un teikas” – līdz šim lielākajā latviešu vēstītājfolkloras krājumā, kas publicēts no 1925. līdz 1937. gadam. Teiku tekstiem tiek piedāvāts tulkojums vācu valodā, un drīzumā tiks pievienotas anotācijas angļu valodā.</p>
+
+      <h2>Projekta mērķis</h2>
+      <p>Projekta mērķis ir izstrādāt jaunu digitālo versiju Pētera Šmita “Latviešu pasaku un teiku” krājumam, pilnveidojot un papildinot metadatus, kā arī izstrādājot rīkus teiku analīzei un datu vizualizācijai. Tuvākajā laikā plānots šo resursu sasaistīt ar LU LFMI Latviešu folkloras krātuves digitālo arhīvu <a href="https://garamantas.lv/" target="_blank" rel="noopener noreferrer">garamantas.lv</a>.</p>
+
+      <h2>Tulkojums vācu valodā</h2>
+      <p>Krājumam pastāv pilns tulkojums vācu valodā, kas glabājas Vācijā Getingenas Zinātņu akadēmijas pētniecības centra <span lang="de">“Enzyklopädie des Märchens”</span> arhīvā. Tulkojums veikts 20. gadsimta 60. gadu beigās un 70. gadu sākumā, iekļaujot iepriekšējos tulkojumus, un tas ir līdz šim lielākais latviešu folkloras tekstu tulkojums citā valodā. Šajā digitālajā platformā izmantots teiku tekstu tulkojums.</p>
+
+      <h2>Iepriekšējās digitālās versijas</h2>
+      <p>Pētera Šmita “Latviešu pasakām un teikām” ir izstrādātas vairākas digitālās versijas. Pirmā no tām pieejama jau kopš 1998. gada, kad krājumu digitalizēja LU MII Mākslīgā intelekta laboratorija.</p>
+      <p>Krājuma 13.–15. sējumam, kuros apkopotas teikas, 2012. gadā tika publicēts uzlabots resurss. Tajā bija iekļauti arī teiku tulkojumi vācu valodā, taču resurss vairs nav pieejams ārpus interneta arhivēšanas rīkiem. Projektu īstenoja LU LFMI Latviešu folkloras krātuves un LU MII Mākslīgā intelekta laboratorijas pētnieki, un tieši šai digitālajai versijai sagatavotie dati izmantoti šīs platformas izstrādē.</p>
+
+      <h2>Veidotāji un atbalsts</h2>
+      <p>Digitālā teiku platforma tiek veidota LU Humanitāro zinātņu fakultātes Digitālo humanitāro zinātņu centrā ar Valsts pētījumu programmas “Letonika latviskas un eiropeiskas sabiedrības attīstībai” projekta <a href="https://lulfmi.lv/petijumi/projekti/nams-latviska-identitate-un-zinasanu-strategijas-ka-sabiedribas-noturibas-resurss" target="_blank" rel="noopener noreferrer">“Latviskā identitāte un zināšanu stratēģijas kā sabiedrības noturības resurss”</a> (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) atbalstu.</p>
+    </div>
+
+    <section class="funding-logos" aria-label="Projekta veidotājs un atbalstītājs">
+      <a href="https://ul-dhc.github.io/" class="institution-logo dhc-logo" target="_blank" rel="noopener noreferrer" aria-label="LU Digitālo humanitāro zinātņu centrs">
+        <img class="logo-lv logo-light" src="/assets/logos/dhc-lv.png" alt="LU Digitālo humanitāro zinātņu centrs" />
+        <img class="logo-en logo-light" src="/assets/logos/dhc-en.png" alt="University of Latvia Digital Humanities Centre" />
+        <img class="logo-lv logo-dark" src="/assets/logos/dhc-lv-white.png" alt="" />
+        <img class="logo-en logo-dark" src="/assets/logos/dhc-en-white.png" alt="" />
+      </a>
+      <a href="https://www.lzp.gov.lv/" class="institution-logo vpp-logo" target="_blank" rel="noopener noreferrer" aria-label="Valsts pētījumu programma">
+        <img class="logo-lv logo-light" src="/assets/logos/vpp-lv.png" alt="VPP – Valsts pētījumu programma" />
+        <img class="logo-en logo-light" src="/assets/logos/vpp-en.png" alt="SRP – State Research Programme" />
+        <img class="logo-lv logo-dark" src="/assets/logos/vpp-lv-white.png" alt="" />
+        <img class="logo-en logo-dark" src="/assets/logos/vpp-en-white.png" alt="" />
+      </a>
+    </section>
+
+    <div class="about-bottom">
+      <section class="about-resource">
+        <h2>Datu kopas</h2>
+        <p>Reinsone, Sanita; Kaščejeva, Simona; Spektors, Andrejs and Pakalns, Guntis, 2025, <cite>Latvian Folk Legend Corpus of LPT (in Latvian)</cite>, CLARIN-LV digital library at IMCS, University of Latvia.</p>
+        <a class="source-link icon-link" href="http://hdl.handle.net/20.500.12574/147" target="_blank" rel="noopener noreferrer">Atvērt datu kopu <i data-lucide="arrow-right"></i></a>
+      </section>
+      <section class="about-resource">
+        <h2>Kontakti</h2>
+        <a href="mailto:dhc@lu.lv" target="_blank" rel="noopener noreferrer">dhc@lu.lv</a>
+      </section>
+    </div>
+  </article>
+</BaseLayout>

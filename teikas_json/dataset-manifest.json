@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-12T08:43:21.004359+00:00",
+  "sourceFile": "latvian_legends_master_data.xlsx",
+  "sourceSha256": "41f273505e9017bbf91bdf369525fa461007713bf0ebfe328ae1c593bbe57746",
+  "recordCounts": {
+    "legends.json": 3586,
+    "collectors.json": 824,
+    "narrators.json": 482,
+    "places.json": 607,
+    "sources.json": 112,
+    "legend-sources.json": 3038
+  }
+}

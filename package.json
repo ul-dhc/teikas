@@ -1,0 +1,25 @@
+{
+  "name": "teikas",
+  "version": "1.0.0",
+  "description": "Bilingual static edition of Pēteris Šmits' Latvian legends",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "i18n:generate": "node scripts/generate-ui-i18n.mjs",
+    "i18n:export": "node scripts/export-ui-i18n.mjs",
+    "test:data": ".venv/bin/python scripts/XLSXtoJSON-test/run_tests.py",
+    "data:generate": ".venv/bin/python scripts/XLSXtoJSON.py latvian_legends_master_data.xlsx teikas_json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.2.1",
+    "lucide": "^1.31.0",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,5 @@
+@media(max-width:600px){
+  .browser-toolbar .view-tools{grid-template-columns:1fr}
+  .browser-toolbar .view-switch{width:100%}
+  .browser-toolbar .view-switch button{flex:1;min-width:0}
+}

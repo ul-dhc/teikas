@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import '../styles/polish.css';
+import '../styles/responsive-fix.css';
+import '../styles/icons.css';
+import uiTranslations from '../i18n/ui.json';
+const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitālā kolekcija', active = '' } = Astro.props;
+---
+<!doctype html>
+<html lang="lv" data-theme="light" data-content-mode="parallel">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>try{const d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('teikas-theme')||'light';d.dataset.contentMode=s.getItem('teikas-content-mode')||'parallel';d.dataset.uiLang=s.getItem('teikas-ui-lang')||'lv';d.style.setProperty('--font-scale',s.getItem('teikas-font-scale')||'1')}catch{}</script>
+    <title>{title === 'Teikas' ? title : `${title} — Teikas`}</title>
+  </head>
+  <body>
+    <script type="application/json" id="ui-translations" is:inline set:html={JSON.stringify(uiTranslations).replace(/</g,'\u003c')} />
+    <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
+    <header class="site-header">
+      {active === 'home' ? <span class="wordmark-placeholder" aria-hidden="true"></span> : <a class="wordmark" href="/" aria-label="Teikas — sākumlapa">Teikas</a>}
+      <nav aria-label="Galvenā navigācija">
+        <a class:list={[{ active: active === 'home' }]} href="/" data-nav-key="home">Sākums</a>
+        <a class:list={[{ active: active === 'browse' }]} href="/teikas/" data-nav-key="texts">Teksti</a>
+        <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="map">Karte</span>
+        <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="data">Dati</span>
+        <a class:list={[{ active: active === 'about' }]} href="/par-projektu/" data-nav-key="about">Par projektu</a>
+      </nav>
+      <div class="header-tools">
+        <div class="mini-switch" aria-label="Saskarnes valoda"><button type="button" aria-pressed="true" data-ui-lang="lv">LV</button><button type="button" aria-pressed="false" data-ui-lang="de">DE</button><button type="button" aria-pressed="false" data-ui-lang="en">EN</button></div>
+        <div class="font-tools" aria-label="Teksta izmērs"><button type="button" data-font-down aria-label="Samazināt burtus"><span aria-hidden="true">A</span><i data-lucide="minus"></i></button><button type="button" data-font-up aria-label="Palielināt burtus"><span aria-hidden="true">A</span><i data-lucide="plus"></i></button></div>
+        <button class="icon-control theme-toggle" type="button" data-theme-toggle aria-label="Ieslēgt tumšo režīmu"><i data-theme-icon data-lucide="moon"></i></button>
+      </div>
+    </header>
+    <main id="saturs"><slot /></main>
+    <footer class="site-footer"><div class="institution-credit"><a href="https://ul-dhc.github.io/" target="_blank" rel="noopener noreferrer">LU Digitālo humanitāro zinātņu centrs</a><span>, 2026</span></div></footer>
+    <dialog class="preference-dialog" data-preference-dialog aria-labelledby="preference-title">
+      <form method="dialog"><div class="eyebrow">Lasīšanas izvēle</div><h2 id="preference-title">Kādā valodā vēlaties skatīt teikas?</h2><p>Izvēli atcerēsimies šajā ierīcē. Pie katras teikas varēsiet režīmu mainīt.</p><div class="preference-options"><button value="lv" data-choose-mode>Latviski <small>Latviešu virsraksti un teksti</small></button><button value="de" data-choose-mode>Deutsch <small>Deutsche Titel und Texte</small></button><button value="parallel" data-choose-mode>Paralēli <small>Abas valodas līdzās</small></button></div></form>
+    </dialog>
+    <script>
+      import { createIcons, ArrowLeft, ArrowRight, ArrowUpDown, CalendarDays, Check, ChevronDown, Copy, FileStack, LayoutGrid, Link, List, MapPin, Minus, Moon, NotebookPen, Pin, PinOff, Plus, RotateCcw, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
+      const iconSet={ArrowLeft,ArrowRight,ArrowUpDown,CalendarDays,Check,ChevronDown,Copy,FileStack,LayoutGrid,Link,List,MapPin,Minus,Moon,NotebookPen,Pin,PinOff,Plus,RotateCcw,SlidersHorizontal,Sun,UsersRound,X};
+      const renderIcons=()=>createIcons({icons:iconSet,attrs:{'aria-hidden':'true','stroke-width':'1.8'}});(window as any).renderLucideIcons=renderIcons;window.addEventListener('lucide-refresh',renderIcons);renderIcons();
+      const doc=document.documentElement, store=localStorage;
+      const themeButton=document.querySelector<HTMLButtonElement>('[data-theme-toggle]')!;
+      const applyTheme=(theme:string)=>{doc.dataset.theme=theme;store.setItem('teikas-theme',theme);themeButton.setAttribute('aria-label',theme==='dark'?'Ieslēgt gaišo režīmu':'Ieslēgt tumšo režīmu');themeButton.querySelector<HTMLElement>('[data-theme-icon]')!.dataset.lucide=theme==='dark'?'sun':'moon';renderIcons()};
+      applyTheme(doc.dataset.theme||'light');themeButton.addEventListener('click',()=>applyTheme(doc.dataset.theme==='dark'?'light':'dark'));
+      let scale=Number(store.getItem('teikas-font-scale')||1);const applyScale=(value:number)=>{scale=Math.max(.9,Math.min(1.2,value));doc.style.setProperty('--font-scale',String(scale));store.setItem('teikas-font-scale',String(scale))};document.querySelector('[data-font-down]')?.addEventListener('click',()=>applyScale(scale-.1));document.querySelector('[data-font-up]')?.addEventListener('click',()=>applyScale(scale+.1));
+      type UiLang='lv'|'de'|'en';type Entry={lv:string;de:string;en:string};const ui=JSON.parse(document.querySelector('#ui-translations')!.textContent||'{}') as Record<string,Entry>,byAny=new Map<string,string>();Object.entries(ui).forEach(([key,value])=>(['lv','de','en'] as UiLang[]).forEach(lang=>byAny.set(value[lang],key)));(window as any).teikasT=(key:string,values:Record<string,string|number>={})=>{const lang=(doc.dataset.uiLang||'lv') as UiLang;return (ui[key]?.[lang]||ui[key]?.lv||key).replace(/\{(\w+)\}/g,(_,name)=>String(values[name]??''))};
+      const skipTranslation=(node:Node)=>{const el=node.parentElement;return !el||!!el.closest('script,style,[data-i18n-skip],.legend-text,[data-title-lang],.result-card h2,.result-excerpt,.meta-value,.source-list')};
+      const applyTranslations=(lang:UiLang)=>{doc.dataset.uiLang=lang;doc.lang=lang;store.setItem('teikas-ui-lang',lang);document.querySelectorAll<HTMLButtonElement>('[data-ui-lang]').forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.uiLang===lang)));const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node:Node|null;while(node=walker.nextNode()){if(skipTranslation(node))continue;const raw=node.textContent||'',trimmed=raw.trim(),key=(node.parentElement?.dataset.i18n||byAny.get(trimmed));if(!key||!ui[key])continue;node.textContent=raw.replace(trimmed,ui[key][lang])}document.querySelectorAll<HTMLElement>('*').forEach(el=>{for(const attr of ['placeholder','aria-label','title'] as const){const value=el.getAttribute(attr),key=value&&(el.dataset[`i18n${attr.replace('-','').replace(/^./,c=>c.toUpperCase())}`]||byAny.get(value));if(key&&ui[key])el.setAttribute(attr,ui[key][lang])}});window.dispatchEvent(new CustomEvent('ui-language-change',{detail:lang}))};(window as any).applyTeikasUiLanguage=applyTranslations;document.querySelectorAll<HTMLButtonElement>('[data-ui-lang]').forEach(button=>button.addEventListener('click',()=>applyTranslations(button.dataset.uiLang as UiLang)));applyTranslations((doc.dataset.uiLang as UiLang)||'lv');
+      const setGlobalMode=(mode:string)=>{doc.dataset.contentMode=mode;store.setItem('teikas-content-mode',mode);window.dispatchEvent(new CustomEvent('content-mode-change',{detail:mode}))};
+      const syncGermanReadingMode=(lang:string)=>{if(lang==='de')setGlobalMode('de')};window.addEventListener('ui-language-change',(event)=>syncGermanReadingMode((event as CustomEvent).detail));syncGermanReadingMode(doc.dataset.uiLang||'lv');
+      const dialog=document.querySelector<HTMLDialogElement>('[data-preference-dialog]')!;if(!store.getItem('teikas-preference-seen'))dialog.showModal();document.querySelectorAll<HTMLButtonElement>('[data-choose-mode]').forEach(button=>button.addEventListener('click',()=>{store.setItem('teikas-preference-seen','1');setGlobalMode(button.value)}));
+    </script>
+  </body>
+</html>

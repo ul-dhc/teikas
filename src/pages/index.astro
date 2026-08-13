@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { legends, collectors, narrators, places, resolveLegend, legendYear, displayPersonName } from '../lib/data';
+import homeMap from '../data/home-map.json';
+const todayParts = new Intl.DateTimeFormat('lv-LV', { timeZone: 'Europe/Riga', day: '2-digit', month: '2-digit', year: 'numeric' }).formatToParts(new Date());
+const todayPart = (type: Intl.DateTimeFormatPartTypes) => todayParts.find(part => part.type === type)?.value ?? '';
+const today = `${todayPart('day')}.${todayPart('month')}.${todayPart('year')}`;
+const dayNumber = Math.floor(Date.UTC(Number(todayPart('year')), Number(todayPart('month')) - 1, Number(todayPart('day'))) / 86400000);
+const daily = legends[dayNumber % legends.length];
+const dailyExcerpt = (daily.text.lv ?? '').replace(/\s+/g,' ').slice(0,520).trimEnd() + ((daily.text.lv?.length ?? 0)>520?'…':'');
+const dailyExcerptDe = (daily.text.de ?? '').replace(/\s+/g,' ').slice(0,520).trimEnd() + ((daily.text.de?.length ?? 0)>520?'…':'');
+const dailyData = resolveLegend(daily);
+const dailyYear = legendYear(daily);
+const dailyPlaceYear = [dailyData.place?.name, dailyYear].filter(Boolean).join(', ');
+const dailyNarrator = displayPersonName(dailyData.narrator), dailyCollector = displayPersonName(dailyData.collector);
+const dailyAttribution = [dailyPlaceYear ? `${dailyPlaceYear}.` : '', dailyNarrator ? `Stāstīja: ${dailyNarrator.replace(/[.\s]+$/,'')}.` : '', dailyCollector ? `Pierakstīja: ${dailyCollector.replace(/[.\s]+$/,'')}.` : ''].filter(Boolean).join(' ');
+const publicCollectionUrl = 'https://dhc.lu.lv/teikas';
+const dailyPublicUrl = `${publicCollectionUrl}/${daily.id}/`;
+const dailyShareText = [`Dienas teika. ${today}.`, daily.title.lv || 'Bez nosaukuma', dailyExcerpt || 'Teksts nav norādīts.', dailyAttribution, dailyPublicUrl].filter(Boolean).join('\n\n');
+---
+<BaseLayout active="home">
+  <section class="hero"><div class="home-map is-arriving" aria-hidden="true"><svg viewBox={`0 0 ${homeMap.width} ${homeMap.height}`} preserveAspectRatio="xMidYMid meet"><g class="legend-points">{homeMap.points.map((point,index)=><circle cx={point.x} cy={point.y} r={Math.min(11,1.25+Math.sqrt(point.count)*.48)} data-legend-count={point.count} class:list={[index%3===0?'point-green':'point-blue']}/>)}</g></svg></div><div class="shell"><h1 class="display">Teikas</h1><p class="lede">Latviešu tautas teikas, ko apkopojis Pēteris Šmits “Latviešu pasaku un teiku” (1925–1937) 13.–15. sējumā.</p><form class="hero-search" action="/teikas/" method="get"><label class="sr-only" for="home-search">Meklēt kolekcijā</label><input id="home-search" name="q" type="search" placeholder="Meklēt pēc atslēgvārda, teicēja vārda vai vietas…" /><button class="button primary" type="submit">Meklēt</button></form><div class="hero-actions"><a class="button icon-link" href="/teikas/">Atvērt teiku pārlūku <i data-lucide="arrow-right"></i></a></div></div></section>
+  <section class="shell stats" aria-label="Kolekcijas statistika"><div class="stat"><i data-lucide="file-stack"></i><strong data-count-up={legends.length}>{legends.length.toLocaleString('lv-LV')}</strong><span>teikas</span></div><div class="stat"><i data-lucide="notebook-pen"></i><strong data-count-up={collectors.length}>{collectors.length.toLocaleString('lv-LV')}</strong><span>pierakstītāji</span></div><div class="stat"><i data-lucide="users-round"></i><strong data-count-up={narrators.length}>{narrators.length.toLocaleString('lv-LV')}</strong><span>teicēji</span></div><div class="stat"><i data-lucide="map-pin"></i><strong data-count-up={places.length}>{places.length.toLocaleString('lv-LV')}</strong><span>vietas</span></div></section>
+  <section class="section shell daily-section"><div class="daily-icon" aria-label={`Šodien, ${today}`}><span class="calendar-mark"><i data-lucide="calendar-days"></i></span><span class="calendar-label">Šodien</span><time datetime={`${todayPart('year')}-${todayPart('month')}-${todayPart('day')}`}>{today}</time></div><article class="daily-legend"><div class="daily-heading"><div class="eyebrow">Dienas teika</div><button class="daily-copy" type="button" data-daily-copy={dailyShareText} aria-label="Kopēt dienas teiku" title="Kopēt dienas teiku"><i data-copy-icon data-lucide="copy"></i><span data-copy-status aria-live="polite"></span></button></div><h2><a href={`/teikas/${daily.id}/`}>{daily.title.lv || 'Bez nosaukuma'}</a></h2><p class="daily-excerpt">{dailyExcerpt || 'Teksts nav norādīts.'}</p>{dailyAttribution && <p class="daily-attribution">{dailyAttribution}</p>}<a class="button icon-link" href={`/teikas/${daily.id}/`}>Lasīt teiku <i data-lucide="arrow-right"></i></a></article></section>
+  <script define:vars={{dailyTitleLv: daily.title.lv || 'Bez nosaukuma', dailyTitleDe: daily.title.de || 'Ohne Titel', dailyExcerptLv: dailyExcerpt || 'Teksts nav norādīts.', dailyExcerptDe: dailyExcerptDe || 'Text nicht angegeben.', todayValue: today}}>
+    const showDailyLanguage=(lang)=>{const german=lang==='de',title=document.querySelector('.daily-legend h2 a'),text=document.querySelector('.daily-excerpt'),date=document.querySelector('.daily-icon time');if(title)title.textContent=german?dailyTitleDe:dailyTitleLv;if(text)text.textContent=german?dailyExcerptDe:dailyExcerptLv;if(date)date.textContent=todayValue+(lang==='lv'?'.':'')};window.addEventListener('ui-language-change',event=>showDailyLanguage(event.detail));showDailyLanguage(document.documentElement.dataset.uiLang);
+  </script>
+  <script>
+    const counters=[...document.querySelectorAll<HTMLElement>('[data-count-up]')];
+    const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const formatter=new Intl.NumberFormat('lv-LV');
+    function animateCounter(counter:HTMLElement){const target=Number(counter.dataset.countUp);if(!Number.isFinite(target)||counter.dataset.animated)return;counter.dataset.animated='true';if(reducedMotion){counter.textContent=formatter.format(target);return}counter.textContent='0';const duration=2400,start=performance.now();function frame(now:number){const progress=Math.min(1,(now-start)/duration),eased=1-Math.pow(1-progress,3);counter.textContent=formatter.format(Math.round(target*eased));if(progress<1)requestAnimationFrame(frame)}requestAnimationFrame(frame)}
+    if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){animateCounter(entry.target as HTMLElement);observer.unobserve(entry.target)}}),{threshold:.45});counters.forEach(counter=>observer.observe(counter))}else counters.forEach(animateCounter);
+    const map=document.querySelector<HTMLElement>('.home-map');
+    if(map){if(reducedMotion||!matchMedia('(min-width:1100px)').matches)map.classList.remove('is-arriving');else{const dots=[...map.querySelectorAll<SVGCircleElement>('.legend-points circle')];dots.forEach((dot,index)=>dot.style.setProperty('--intro-delay',`${((index*37)%64)*38}ms`));setTimeout(()=>map.classList.remove('is-arriving'),3700)}}
+    const dailyCopy=document.querySelector<HTMLButtonElement>('[data-daily-copy]');
+    dailyCopy?.addEventListener('click',async()=>{const text=dailyCopy.dataset.dailyCopy||'';try{await navigator.clipboard.writeText(text)}catch{const area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.opacity='0';document.body.append(area);area.select();document.execCommand('copy');area.remove()}const icon=dailyCopy.querySelector<HTMLElement>('[data-copy-icon]')!,status=dailyCopy.querySelector<HTMLElement>('[data-copy-status]')!;icon.dataset.lucide='check';status.textContent='Nokopēts';dailyCopy.classList.add('copied');(window as any).renderLucideIcons?.();setTimeout(()=>{icon.dataset.lucide='copy';status.textContent='';dailyCopy.classList.remove('copied');(window as any).renderLucideIcons?.()},1800)});
+  </script>
+</BaseLayout>

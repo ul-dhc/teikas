@@ -1,0 +1,3376 @@
+[
+  {
+    "id": "narrator-0001",
+    "fullName": "Aizsila, Arvīda māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0002",
+    "fullName": "Aizsils, Arvīds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0003",
+    "fullName": "Akmentiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0004",
+    "fullName": "Andermane, Līze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0005",
+    "fullName": "Andersone, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0006",
+    "fullName": "Andersone, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0007",
+    "fullName": "Andersons, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0008",
+    "fullName": "Andžāne, Agnese",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0009",
+    "fullName": "Andžāne, Hedviga",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0010",
+    "fullName": "Antene, Marta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0011",
+    "fullName": "Antēns",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0012",
+    "fullName": "Antēns, B.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0013",
+    "fullName": "Antēns, Edvards",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0014",
+    "fullName": "Antēns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0015",
+    "fullName": "Antēns, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "narrator-0016",
+    "fullName": "Anziķe, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0017",
+    "fullName": "Ančupāne, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0018",
+    "fullName": "Apriķe, Late",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0019",
+    "fullName": "Apse",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0020",
+    "fullName": "Atteka, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0021",
+    "fullName": "Augstkalne, Emīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0022",
+    "fullName": "Auniņas, Emīlijas vecāmāte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0023",
+    "fullName": "Avotiņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0024",
+    "fullName": "Balode, Ilze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0025",
+    "fullName": "Balode, Līze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 33
+  },
+  {
+    "id": "narrator-0026",
+    "fullName": "Baltiņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 20
+  },
+  {
+    "id": "narrator-0027",
+    "fullName": "Baltā, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0028",
+    "fullName": "Banaze, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0029",
+    "fullName": "Bankera, K. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0030",
+    "fullName": "Bankers, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0031",
+    "fullName": "Barankovskis, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0032",
+    "fullName": "Barkāns, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0033",
+    "fullName": "Bauliņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0034",
+    "fullName": "Baumanis, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0035",
+    "fullName": "Baumanis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0036",
+    "fullName": "Bergmanis, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0037",
+    "fullName": "Biele, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0038",
+    "fullName": "Birkvaldene",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0039",
+    "fullName": "Birģelis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "narrator-0040",
+    "fullName": "Bite, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0041",
+    "fullName": "Bitniece, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0042",
+    "fullName": "Biubins, B.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0043",
+    "fullName": "Blaus, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0044",
+    "fullName": "Blodziņa, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0045",
+    "fullName": "Bodnieks, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0046",
+    "fullName": "Boganoviča, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0047",
+    "fullName": "Borhertes, A. māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0048",
+    "fullName": "Borkovskis, Staņislavs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0049",
+    "fullName": "Bozis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0050",
+    "fullName": "Bramane, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0051",
+    "fullName": "Brambergs, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0052",
+    "fullName": "Branka, Zuze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0053",
+    "fullName": "Briede, Emma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "narrator-0054",
+    "fullName": "Briede, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0055",
+    "fullName": "Briede, Zana",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "narrator-0056",
+    "fullName": "Brikmanis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0057",
+    "fullName": "Brutāne, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0058",
+    "fullName": "Brāka, Aina",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0059",
+    "fullName": "Brūķe, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0060",
+    "fullName": "Burlacāns, Salimons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0061",
+    "fullName": "Bāliņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0062",
+    "fullName": "Bērtulāns, Kr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0063",
+    "fullName": "Bērziņa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0064",
+    "fullName": "Bērziņa, L. skolnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0065",
+    "fullName": "Bērziņa, Luda skolnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0066",
+    "fullName": "Bērziņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0067",
+    "fullName": "Bērziņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0068",
+    "fullName": "Bērziņš, Roberts",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0069",
+    "fullName": "Caune",
+    "gender": null,
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0070",
+    "fullName": "Cekuls, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0071",
+    "fullName": "Celmiņa, Frīda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0072",
+    "fullName": "Celmiņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0073",
+    "fullName": "Cibere, Marta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0074",
+    "fullName": "Cimanis, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0075",
+    "fullName": "Cimziete, Žana",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0076",
+    "fullName": "Cīrule, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0077",
+    "fullName": "Danka, P.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "narrator-0078",
+    "fullName": "Dembovska, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0079",
+    "fullName": "Didriksone, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0080",
+    "fullName": "Diķeles, Līdijas māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0081",
+    "fullName": "Dižkalne, Agnese",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0082",
+    "fullName": "Dortholca, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0083",
+    "fullName": "Dortholca, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0084",
+    "fullName": "Driba, Dāvis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0085",
+    "fullName": "Drulle, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "narrator-0086",
+    "fullName": "Dubrovskis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0087",
+    "fullName": "Dubrovskis, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0088",
+    "fullName": "Dukāte, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0089",
+    "fullName": "Dunika, Miķelis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0090",
+    "fullName": "Dzenis, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0091",
+    "fullName": "Dāboliņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0092",
+    "fullName": "Egle, Jūlijs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0093",
+    "fullName": "Egliens",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0094",
+    "fullName": "Eliasa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0095",
+    "fullName": "Eniķis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0096",
+    "fullName": "Ennīte, Jūla",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0097",
+    "fullName": "Ernestsones, M. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0098",
+    "fullName": "Ezerkalne",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0099",
+    "fullName": "Ezerkalns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0100",
+    "fullName": "Ezerroze, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0101",
+    "fullName": "Ezers, Kaspars",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0102",
+    "fullName": "Eņģeveirs, Br.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0103",
+    "fullName": "Filšs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0104",
+    "fullName": "Freibergs, Mag.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0105",
+    "fullName": "Freimane, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0106",
+    "fullName": "Fridrihsona, H. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0107",
+    "fullName": "Gaga, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0108",
+    "fullName": "Gaidulis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0109",
+    "fullName": "Gaile, Līze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0110",
+    "fullName": "Gailis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 30
+  },
+  {
+    "id": "narrator-0111",
+    "fullName": "Gailuma, Tekla",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0112",
+    "fullName": "Gailums, Tadeušs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "narrator-0113",
+    "fullName": "Gailīte, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0114",
+    "fullName": "Gailītis, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0115",
+    "fullName": "Gailītis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0116",
+    "fullName": "Gajevska, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0117",
+    "fullName": "Galvāns, B.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0118",
+    "fullName": "Garoziņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0119",
+    "fullName": "Gedrovice, P.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0120",
+    "fullName": "Grantiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0121",
+    "fullName": "Grants, Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0122",
+    "fullName": "Grase",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0123",
+    "fullName": "Graudiņš, Pauls",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0124",
+    "fullName": "Grautiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0125",
+    "fullName": "Gribulis, Jēcis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0126",
+    "fullName": "Griška, Alma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0127",
+    "fullName": "Grudulis, Valdis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0128",
+    "fullName": "Grunte, Lība",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0129",
+    "fullName": "Grābeklis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0130",
+    "fullName": "Grāvere, Benīta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0131",
+    "fullName": "Grāvīte, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0132",
+    "fullName": "Grīstiņš, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0133",
+    "fullName": "Grīzāns, Aloizs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0134",
+    "fullName": "Grūberte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0135",
+    "fullName": "Gudrimoviča, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0136",
+    "fullName": "Gudrimovičs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0137",
+    "fullName": "Gudļevska, Veronika",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0138",
+    "fullName": "Gulbe, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0139",
+    "fullName": "Gulbis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0140",
+    "fullName": "Gulmanis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0141",
+    "fullName": "Halle, L.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0142",
+    "fullName": "Helmane, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0143",
+    "fullName": "Ievalts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0144",
+    "fullName": "Ignātes, M. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0145",
+    "fullName": "Ilgaša, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0146",
+    "fullName": "Indriksone, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0147",
+    "fullName": "Indriksons, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0148",
+    "fullName": "Itcaks, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0149",
+    "fullName": "Ištele, Īva",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0150",
+    "fullName": "Jakovičs, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0151",
+    "fullName": "Jansone, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0152",
+    "fullName": "Jansone, Kristīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0153",
+    "fullName": "Jansone, Trīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0154",
+    "fullName": "Jansons, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "narrator-0155",
+    "fullName": "Jansons, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0156",
+    "fullName": "Jasa, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0157",
+    "fullName": "Jaugiets, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0158",
+    "fullName": "Jeronovičs, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0159",
+    "fullName": "Jezupate, Vaivoda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0160",
+    "fullName": "Joāse, D.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0161",
+    "fullName": "Jukums, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0162",
+    "fullName": "Jupāne, Liena",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0163",
+    "fullName": "Jurēvica, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0164",
+    "fullName": "Jurģis, Kārlis",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0165",
+    "fullName": "Jurķis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0166",
+    "fullName": "Jurķis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0167",
+    "fullName": "Juškēvics, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0168",
+    "fullName": "Jākobsona, Vernera vectēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0169",
+    "fullName": "Jēkabsone, Jūle",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0170",
+    "fullName": "Kacāns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0171",
+    "fullName": "Kalne, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0172",
+    "fullName": "Kalnieks, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0173",
+    "fullName": "Kalniņa, Kr.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0174",
+    "fullName": "Kalniņa, Made",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0175",
+    "fullName": "Kalnvagāru saimniece",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0176",
+    "fullName": "Karoga, Made",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0177",
+    "fullName": "Karpa, J. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0178",
+    "fullName": "Karpa, J. vectēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0179",
+    "fullName": "Karūse, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0180",
+    "fullName": "Kauliņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0181",
+    "fullName": "Kazainis, Reinis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0182",
+    "fullName": "Kaļļa, O. vecāki",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0183",
+    "fullName": "Kažēna, Jāņa māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0184",
+    "fullName": "Kažēna, Žaņa māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0185",
+    "fullName": "Keibinīks, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "narrator-0186",
+    "fullName": "Kesters, Jonts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0187",
+    "fullName": "Kovaļevskis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0188",
+    "fullName": "Kozlovskis, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0189",
+    "fullName": "Koņīte, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0190",
+    "fullName": "Krancelis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0191",
+    "fullName": "Kraujupe, Vilma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0192",
+    "fullName": "Krauksts, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0193",
+    "fullName": "Kraulers, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0194",
+    "fullName": "Kreicberga, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0195",
+    "fullName": "Kretulnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0196",
+    "fullName": "Krieve, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0197",
+    "fullName": "Krievāne, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0198",
+    "fullName": "Krule, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0199",
+    "fullName": "Krustkalne, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0200",
+    "fullName": "Krusts, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0201",
+    "fullName": "Krusts, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0202",
+    "fullName": "Krēgers, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0203",
+    "fullName": "Kuble, Zelma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0204",
+    "fullName": "Kule, Dore",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0205",
+    "fullName": "Kuplais, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0206",
+    "fullName": "Kuplais, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0207",
+    "fullName": "Kuplā",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0208",
+    "fullName": "Kuplā, Marta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0209",
+    "fullName": "Kurāte, Minna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0210",
+    "fullName": "Kārkliņa, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0211",
+    "fullName": "Kārkliņš, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0212",
+    "fullName": "Kārkliņš, Mārcis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0213",
+    "fullName": "Kļava, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0214",
+    "fullName": "Laganovskis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0215",
+    "fullName": "Lagzdiņa, Lība",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0216",
+    "fullName": "Landzbergs, Ansis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0217",
+    "fullName": "Langass",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0218",
+    "fullName": "Lankava, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0219",
+    "fullName": "Lankmane, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "narrator-0220",
+    "fullName": "Lapaine, Līze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0221",
+    "fullName": "Latkovskis, T.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0222",
+    "fullName": "Laucis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0223",
+    "fullName": "Laupača, Buorbala",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0224",
+    "fullName": "Lazdiņa, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0225",
+    "fullName": "Lazdiņa, Zuzanna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0226",
+    "fullName": "Lašaka, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0227",
+    "fullName": "Leimanis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0228",
+    "fullName": "Lielozola, Kārļa vecāmāte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0229",
+    "fullName": "Liepiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0230",
+    "fullName": "Liepiņa, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0231",
+    "fullName": "Liepiņš, Jānis (Kamburu Jānis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 13
+  },
+  {
+    "id": "narrator-0232",
+    "fullName": "Liepiņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0233",
+    "fullName": "Linde, Vilma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0234",
+    "fullName": "Listneriene",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0235",
+    "fullName": "Lode, Marete",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0236",
+    "fullName": "Loncka, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0237",
+    "fullName": "Lulles, L. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0238",
+    "fullName": "Lērums, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0239",
+    "fullName": "Līcis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0240",
+    "fullName": "Līdeka, Elfr.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0241",
+    "fullName": "Līdurta, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0242",
+    "fullName": "Līpiņa, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0243",
+    "fullName": "Makalāne, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0244",
+    "fullName": "Malnace, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0245",
+    "fullName": "Malzate, Eda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0246",
+    "fullName": "Matisons, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0247",
+    "fullName": "Mazjāne, P.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0248",
+    "fullName": "Mačs, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0249",
+    "fullName": "Maļinka, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0250",
+    "fullName": "Meijere, D.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0251",
+    "fullName": "Menke, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0252",
+    "fullName": "Mežielis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0253",
+    "fullName": "Mežulis, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0254",
+    "fullName": "Miezone, Ilze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0255",
+    "fullName": "Miezīte, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0256",
+    "fullName": "Morgenšterne, N.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0257",
+    "fullName": "Mužika, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0258",
+    "fullName": "Mālniece, Eda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0259",
+    "fullName": "Māmiņa",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "narrator-0260",
+    "fullName": "Māmuļa",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0261",
+    "fullName": "Mūrnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0262",
+    "fullName": "Nagēviča, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0263",
+    "fullName": "Odene",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0264",
+    "fullName": "Okmaniene, Māra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0265",
+    "fullName": "Olle, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0266",
+    "fullName": "Olmane, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0267",
+    "fullName": "Olmane, Elzbete",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0268",
+    "fullName": "Opse, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0269",
+    "fullName": "Ozole, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0270",
+    "fullName": "Ozole, D.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0271",
+    "fullName": "Ozoliņa, J. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0272",
+    "fullName": "Ozoliņa, Kristīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0273",
+    "fullName": "Ozoliņa, Made",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0274",
+    "fullName": "Ozoliņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0275",
+    "fullName": "Ozoliņš, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0276",
+    "fullName": "Ozoliņš, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0277",
+    "fullName": "Ozols, Miķelis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0278",
+    "fullName": "Ošiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0279",
+    "fullName": "Oškalna, Andreja māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0280",
+    "fullName": "Oškalne, Eda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0281",
+    "fullName": "Pastiņa, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0282",
+    "fullName": "Pastiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0283",
+    "fullName": "Pauniņa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0284",
+    "fullName": "Pavlovičs, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0285",
+    "fullName": "Paņevežas leitis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0286",
+    "fullName": "Peka, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0287",
+    "fullName": "Petrovskis, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0288",
+    "fullName": "Pinka, M.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0289",
+    "fullName": "Plauža, Jāņa māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0290",
+    "fullName": "Ploks, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0291",
+    "fullName": "Podiņa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0292",
+    "fullName": "Pole, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0293",
+    "fullName": "Poriete, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0294",
+    "fullName": "Poriņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0295",
+    "fullName": "Priedītis, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0296",
+    "fullName": "Prikule, Madaļa",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0297",
+    "fullName": "Pudule, Helēna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0298",
+    "fullName": "Puida, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0299",
+    "fullName": "Pujiņa, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "narrator-0300",
+    "fullName": "Pujiņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0301",
+    "fullName": "Puncuļe, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0302",
+    "fullName": "Pureniņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0303",
+    "fullName": "Puriņa, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0304",
+    "fullName": "Puriņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0305",
+    "fullName": "Puriņš, Reinis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "narrator-0306",
+    "fullName": "Putniņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0307",
+    "fullName": "Putns, Broņislavs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 15
+  },
+  {
+    "id": "narrator-0308",
+    "fullName": "Putrāle, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "narrator-0309",
+    "fullName": "Putāne, Buorbola",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0310",
+    "fullName": "Pušķe, Made",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0311",
+    "fullName": "Raize, Dominiks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0312",
+    "fullName": "Ramane, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0313",
+    "fullName": "Ramančuks, Jezups",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0314",
+    "fullName": "Rasnā, Z.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0315",
+    "fullName": "Rastaga, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0316",
+    "fullName": "Ratsaps",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0317",
+    "fullName": "Raudupe, Ede",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0318",
+    "fullName": "Razgalis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0319",
+    "fullName": "Razgalis, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0320",
+    "fullName": "Raņķe, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0321",
+    "fullName": "Rebaine, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0322",
+    "fullName": "Regža, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0323",
+    "fullName": "Regža, Juonis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0324",
+    "fullName": "Regža, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0325",
+    "fullName": "Reinīka, Tekla",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0326",
+    "fullName": "Reisupe, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0327",
+    "fullName": "Reiters, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0328",
+    "fullName": "Rekaša, Malvīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0329",
+    "fullName": "Rezevska, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0330",
+    "fullName": "Reča, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0331",
+    "fullName": "Rečs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0332",
+    "fullName": "Riekstiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0333",
+    "fullName": "Riekstiņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0334",
+    "fullName": "Ripa, Dora",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0335",
+    "fullName": "Ripene",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0336",
+    "fullName": "Ritenis, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0337",
+    "fullName": "Riņģa tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0338",
+    "fullName": "Rodiņa, Z.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0339",
+    "fullName": "Rokošs, Juoņs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0340",
+    "fullName": "Romans",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0341",
+    "fullName": "Rozenberga, Alvīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0342",
+    "fullName": "Rozentāle, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0343",
+    "fullName": "Rozentāle, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0344",
+    "fullName": "Rozenšteina, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0345",
+    "fullName": "Rozlovskis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0346",
+    "fullName": "Rubenis, Jūlijs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0347",
+    "fullName": "Rudzīte, Alvīne",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0348",
+    "fullName": "Rudzīte, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0349",
+    "fullName": "Rumaka, Broņislava",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0350",
+    "fullName": "Rušķere, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0351",
+    "fullName": "Rācene, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0352",
+    "fullName": "Rūtentāls, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0353",
+    "fullName": "Salma, B. tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0354",
+    "fullName": "Salnāja, Kate",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0355",
+    "fullName": "Samtes, Hertas tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0356",
+    "fullName": "Seglers, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0357",
+    "fullName": "Sermuliene, Līze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0358",
+    "fullName": "Sieviete",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0359",
+    "fullName": "Sieviņa",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0360",
+    "fullName": "Silenieks, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0361",
+    "fullName": "Sisenes, Idas tēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0362",
+    "fullName": "Skapars, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0363",
+    "fullName": "Skujiņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0364",
+    "fullName": "Smalkā, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0365",
+    "fullName": "Smilģe, Eda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0366",
+    "fullName": "Soms, Ontons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0367",
+    "fullName": "Sprance, P.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0368",
+    "fullName": "Sprancis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0369",
+    "fullName": "Sproģa, J. māte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0370",
+    "fullName": "Staleidzāne, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "narrator-0371",
+    "fullName": "Stradiņš, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0372",
+    "fullName": "Streipa, Andža",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0373",
+    "fullName": "Striķe, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0374",
+    "fullName": "Strode, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0375",
+    "fullName": "Strode, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0376",
+    "fullName": "Strods",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0377",
+    "fullName": "Studente, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0378",
+    "fullName": "Suša, St.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0379",
+    "fullName": "Sušs, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0380",
+    "fullName": "Sveikota, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0381",
+    "fullName": "Sēja, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0382",
+    "fullName": "Sīkulis, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0383",
+    "fullName": "Sīpole, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0384",
+    "fullName": "Sīpole, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0385",
+    "fullName": "Sīpole, Zelma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0386",
+    "fullName": "Sūcis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0387",
+    "fullName": "Tabunovs, Jēzups",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0388",
+    "fullName": "Tauriņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0389",
+    "fullName": "Teicēja",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0390",
+    "fullName": "Tetere, Jūla",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0391",
+    "fullName": "Tiļļa",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0392",
+    "fullName": "Tiļļa, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0393",
+    "fullName": "Tralliņa, Emīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0394",
+    "fullName": "Treidiņš, Staņislavs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0395",
+    "fullName": "Treimane, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0396",
+    "fullName": "Tudrimovičs, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0397",
+    "fullName": "Turķis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "narrator-0398",
+    "fullName": "Upīte, Māra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0399",
+    "fullName": "Utināne, Agate",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0400",
+    "fullName": "Vaholders, Fridrihs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0401",
+    "fullName": "Vaickalis, Ks.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0402",
+    "fullName": "Valeinis, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0403",
+    "fullName": "Valtere, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0404",
+    "fullName": "Vasariņš, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0405",
+    "fullName": "Veca māmiņa",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0406",
+    "fullName": "Vecenīte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0407",
+    "fullName": "Vecmāte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0408",
+    "fullName": "Vecs nespējnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0409",
+    "fullName": "Vecs saimnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0410",
+    "fullName": "Vecs vīrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0411",
+    "fullName": "Vecs zaldāts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0412",
+    "fullName": "Vectēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0413",
+    "fullName": "Vecītis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0414",
+    "fullName": "Veidiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0415",
+    "fullName": "Veidiņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0416",
+    "fullName": "Veinbergs, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "narrator-0417",
+    "fullName": "Velde, Dāvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0418",
+    "fullName": "Verners, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0419",
+    "fullName": "Vilcmeirs, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0420",
+    "fullName": "Vilstere, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0421",
+    "fullName": "Visocka, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0422",
+    "fullName": "Visockis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0423",
+    "fullName": "Vitkovska, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0424",
+    "fullName": "Viškers, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0425",
+    "fullName": "Vonogs, Ignāts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0426",
+    "fullName": "Vucene, Ilze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0427",
+    "fullName": "Vulfs, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0428",
+    "fullName": "Vāczeme, Katrīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0429",
+    "fullName": "Vērdiņa, Z.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0430",
+    "fullName": "Vērdiņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0431",
+    "fullName": "Vērniece, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0432",
+    "fullName": "Vēvere, Elza",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0433",
+    "fullName": "Vēvere, Līza",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0434",
+    "fullName": "Vīksne, O.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0435",
+    "fullName": "Vītole, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0436",
+    "fullName": "Vīķis",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0437",
+    "fullName": "Zaharska, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0438",
+    "fullName": "Zaharēvičs, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0439",
+    "fullName": "Zaščerinska, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0440",
+    "fullName": "Zaščerinska, S.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0441",
+    "fullName": "Zeltiņa, P.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 71
+  },
+  {
+    "id": "narrator-0442",
+    "fullName": "Zemarāja, Madlēna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0443",
+    "fullName": "Zeps, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0444",
+    "fullName": "Ziemele, Tonija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "narrator-0445",
+    "fullName": "Ziliņa, C.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0446",
+    "fullName": "Zute, Līze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0447",
+    "fullName": "Zučkina, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0448",
+    "fullName": "Zvaigzne, Dārta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0449",
+    "fullName": "Zvejniece, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0450",
+    "fullName": "Zāģers, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0451",
+    "fullName": "Zēbergs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0452",
+    "fullName": "Zēbergs, M.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0453",
+    "fullName": "Zīverts, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0454",
+    "fullName": "Ābele, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 23
+  },
+  {
+    "id": "narrator-0455",
+    "fullName": "Āboliņa, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "narrator-0456",
+    "fullName": "Āboltiņa, P.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0457",
+    "fullName": "Ādernieks, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0458",
+    "fullName": "Čača, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0459",
+    "fullName": "Čikuls, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0460",
+    "fullName": "Čipiņš, Kaspars",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "narrator-0461",
+    "fullName": "Ģedule, Elīze",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0462",
+    "fullName": "Ģērmane, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "narrator-0463",
+    "fullName": "Ķilevicene",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0464",
+    "fullName": "Ķise, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0465",
+    "fullName": "Ņikitins, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0466",
+    "fullName": "Šakune, Emīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0467",
+    "fullName": "Šaltiņa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0468",
+    "fullName": "Škirmants",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0469",
+    "fullName": "Šmita, Pētera vectēvs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 20
+  },
+  {
+    "id": "narrator-0470",
+    "fullName": "Šmits, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0471",
+    "fullName": "Špakovska, T.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0472",
+    "fullName": "Špakovskis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0473",
+    "fullName": "Šulpe, Lība",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0474",
+    "fullName": "Šuša, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0475",
+    "fullName": "Šveicare, Līna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "narrator-0476",
+    "fullName": "Šveicare, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0477",
+    "fullName": "Švirksts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0478",
+    "fullName": "Šūmane, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0479",
+    "fullName": "Ūdrs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "narrator-0480",
+    "fullName": "Ždanovska, B.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0481",
+    "fullName": "Žeigure, Z.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "narrator-0482",
+    "fullName": "Žeigurs, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  }
+]

@@ -1,0 +1,5770 @@
+[
+  {
+    "id": "collector-0001",
+    "fullName": "-ts",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0002",
+    "fullName": "Abuls, Pēteris (Tālivaldis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0003",
+    "fullName": "Abīte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0004",
+    "fullName": "Adamsons, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0005",
+    "fullName": "Aizderdzis, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0006",
+    "fullName": "Aizpurve, Alīda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0007",
+    "fullName": "Aizpurve, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0008",
+    "fullName": "Aizsils, Arvīds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 22
+  },
+  {
+    "id": "collector-0009",
+    "fullName": "Aizupe, Līvija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0010",
+    "fullName": "Akmentiņš, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "collector-0011",
+    "fullName": "Alberte, Emma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0012",
+    "fullName": "Alksnis, Kristaps (Naudižnieks, Zundulis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "collector-0013",
+    "fullName": "Alunāns, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0014",
+    "fullName": "Ancelāne, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0015",
+    "fullName": "Andersons, T.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0016",
+    "fullName": "Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0017",
+    "fullName": "Andriņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0018",
+    "fullName": "Andrītis, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0019",
+    "fullName": "Andžāne, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0020",
+    "fullName": "Anisimenoka, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0021",
+    "fullName": "Anitēns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0022",
+    "fullName": "Ansaberģis, Frīdis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0023",
+    "fullName": "Ansberģis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0024",
+    "fullName": "Antene, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0025",
+    "fullName": "Antonēvičs, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0026",
+    "fullName": "Anšmits, T.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0027",
+    "fullName": "Apariņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0028",
+    "fullName": "Apfelbaums, F.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0029",
+    "fullName": "Apfelbaums, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0030",
+    "fullName": "Apriķis, Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0031",
+    "fullName": "Apsītis, Augusts (Apsesdēls)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0032",
+    "fullName": "Apšenieks, C.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0033",
+    "fullName": "Atars, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0034",
+    "fullName": "Atteka, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0035",
+    "fullName": "Audzenieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0036",
+    "fullName": "Audzis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 16
+  },
+  {
+    "id": "collector-0037",
+    "fullName": "Augustāne, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0038",
+    "fullName": "Augšsperis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0039",
+    "fullName": "Aulis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0040",
+    "fullName": "Aulis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0041",
+    "fullName": "Auniņa, Emīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0042",
+    "fullName": "Auniņš, Roberts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "collector-0043",
+    "fullName": "Austrums, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0044",
+    "fullName": "Aviņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0045",
+    "fullName": "Avotiņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0046",
+    "fullName": "Ašmane, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0047",
+    "fullName": "Ašmane, N.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0048",
+    "fullName": "Ašmane, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0049",
+    "fullName": "B., M.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0050",
+    "fullName": "B., T.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0051",
+    "fullName": "Bajāris, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0052",
+    "fullName": "Bakšs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0053",
+    "fullName": "Balodis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0054",
+    "fullName": "Balodis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0055",
+    "fullName": "Baltiņa",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0056",
+    "fullName": "Baltiņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0057",
+    "fullName": "Banazis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "collector-0058",
+    "fullName": "Banga",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0059",
+    "fullName": "Banka, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0060",
+    "fullName": "Bankers, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "collector-0061",
+    "fullName": "Bankers, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0062",
+    "fullName": "Bankins, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0063",
+    "fullName": "Barkovskis, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0064",
+    "fullName": "Bauģis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0065",
+    "fullName": "Becenbergers, Adalberts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0066",
+    "fullName": "Bergmanis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0067",
+    "fullName": "Bergmanis, Ž.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0068",
+    "fullName": "Bernana, Velta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0069",
+    "fullName": "Bernevics, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0070",
+    "fullName": "Bernāts, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0071",
+    "fullName": "Bertelsons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0072",
+    "fullName": "Bertolds, Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0073",
+    "fullName": "Berzinskis, Arvīds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0074",
+    "fullName": "Beča, T.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0075",
+    "fullName": "Biezais, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0076",
+    "fullName": "Bika, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 23
+  },
+  {
+    "id": "collector-0077",
+    "fullName": "Bikše, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0078",
+    "fullName": "Birzmalietis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0079",
+    "fullName": "Birznieks, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0080",
+    "fullName": "Birznieks-Upītis, Ernests",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0081",
+    "fullName": "Bisenieks, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0082",
+    "fullName": "Biteniece, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0083",
+    "fullName": "Biša, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0084",
+    "fullName": "Blauberģis, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0085",
+    "fullName": "Blaus, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 18
+  },
+  {
+    "id": "collector-0086",
+    "fullName": "Bluzņins",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0087",
+    "fullName": "Blūms, Jāka",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0088",
+    "fullName": "Blūms, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0089",
+    "fullName": "Bokums, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0090",
+    "fullName": "Borherte, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0091",
+    "fullName": "Borkovskis, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0092",
+    "fullName": "Bornāts, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0093",
+    "fullName": "Borozinska, Ģertrūde",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0094",
+    "fullName": "Bozis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0095",
+    "fullName": "Bramane, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0096",
+    "fullName": "Bramanis, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0097",
+    "fullName": "Bramanis, Vitālijs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0098",
+    "fullName": "Brasliņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0099",
+    "fullName": "Brencēns",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0100",
+    "fullName": "Brics, Jāzeps",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0101",
+    "fullName": "Briedis, Augusts (Piperu Augusts)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0102",
+    "fullName": "Brigadere, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0103",
+    "fullName": "Brikule, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0104",
+    "fullName": "Briņķe, Erna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0105",
+    "fullName": "Briņķis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0106",
+    "fullName": "Brīvniece, Liesma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0107",
+    "fullName": "Brīvnieks, Kārlis (Krēmanis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0108",
+    "fullName": "Brīvzemnieks, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "collector-0109",
+    "fullName": "Budze, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0110",
+    "fullName": "Bukums, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0111",
+    "fullName": "Bule, Zemislava",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0112",
+    "fullName": "Bulīte, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0113",
+    "fullName": "Bumbiere, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0114",
+    "fullName": "Bumbieris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0115",
+    "fullName": "Bundža, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0116",
+    "fullName": "Burkins, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0117",
+    "fullName": "Burlacāns, Salimons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0118",
+    "fullName": "Bāriņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0119",
+    "fullName": "Bēdulis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0120",
+    "fullName": "Bērtulis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0121",
+    "fullName": "Bērziņa, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0122",
+    "fullName": "Bērziņa, Luda skolnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0123",
+    "fullName": "Bērziņa, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0124",
+    "fullName": "Bērziņš, Eduards",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0125",
+    "fullName": "Bērziņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0126",
+    "fullName": "Bērziņš, Ludis (Pabērzis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0127",
+    "fullName": "Bērziņš, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 20
+  },
+  {
+    "id": "collector-0128",
+    "fullName": "Bērziņš, Roberts (Upciemu Milda-Skaidrīte)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 28
+  },
+  {
+    "id": "collector-0129",
+    "fullName": "Bērziņš, T.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0130",
+    "fullName": "Bērziņš, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0131",
+    "fullName": "Bīlande, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0132",
+    "fullName": "Bīlenšteins, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 24
+  },
+  {
+    "id": "collector-0133",
+    "fullName": "Būcēns, Ž.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0134",
+    "fullName": "Būde, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0135",
+    "fullName": "Celmiņa, Austra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0136",
+    "fullName": "Celmiņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0137",
+    "fullName": "Celmiņš, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0138",
+    "fullName": "Celms, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0139",
+    "fullName": "Cena, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0140",
+    "fullName": "Censonis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0141",
+    "fullName": "Cepurītis, Ludvigs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0142",
+    "fullName": "Ciemīte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0143",
+    "fullName": "Cimemane, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0144",
+    "fullName": "Cinovskis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0145",
+    "fullName": "Ciķelis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0146",
+    "fullName": "Corbika, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0147",
+    "fullName": "Corbiks, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0148",
+    "fullName": "Cukure, Z.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0149",
+    "fullName": "Cukurs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0150",
+    "fullName": "Cukurs, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0151",
+    "fullName": "D., L.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0152",
+    "fullName": "Dambergs, D.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0153",
+    "fullName": "Dandenis, M.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0154",
+    "fullName": "Danovskis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0155",
+    "fullName": "Dauškāns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0156",
+    "fullName": "Dellis, Hugons (Salncietis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0157",
+    "fullName": "Didriksone",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0158",
+    "fullName": "Dimants, Ādams",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0159",
+    "fullName": "Dinsberģis, Ernests",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0160",
+    "fullName": "Diķele, Līdija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0161",
+    "fullName": "Doks, Atis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0162",
+    "fullName": "Dragone, Alīda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0163",
+    "fullName": "Draugs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0164",
+    "fullName": "Dravniece, Herta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0165",
+    "fullName": "Dreiers, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0166",
+    "fullName": "Dreimanis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0167",
+    "fullName": "Drīzulis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0168",
+    "fullName": "Dunkule, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0169",
+    "fullName": "Dzintariņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0170",
+    "fullName": "Dzērve, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0171",
+    "fullName": "Döring, Julius",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0172",
+    "fullName": "Dārziņa, Nellija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0173",
+    "fullName": "Dāvids",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0174",
+    "fullName": "Dēbners, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0175",
+    "fullName": "Dīcmanis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0176",
+    "fullName": "Dž.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0177",
+    "fullName": "E.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0178",
+    "fullName": "E., P.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0179",
+    "fullName": "Egle, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0180",
+    "fullName": "Egle, Jūlijs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0181",
+    "fullName": "Eglentāle, Rūta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0182",
+    "fullName": "Eglīte",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0183",
+    "fullName": "Eglīte, Emma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0184",
+    "fullName": "Eglītis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0185",
+    "fullName": "Elksnītis, Edgārs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0186",
+    "fullName": "Emsiņš, Gasiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0187",
+    "fullName": "Eniķis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0188",
+    "fullName": "Ennīts, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0189",
+    "fullName": "Ernestsone, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0190",
+    "fullName": "Ezeriņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0191",
+    "fullName": "Ezeriņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0192",
+    "fullName": "Ezers, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0193",
+    "fullName": "F., L.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0194",
+    "fullName": "Ferlina, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0195",
+    "fullName": "Filšs, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0196",
+    "fullName": "Fišers, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0197",
+    "fullName": "Freiberga, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0198",
+    "fullName": "Freibergs, Mag.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0199",
+    "fullName": "Fricsons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0200",
+    "fullName": "Fridrihsons, H.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0201",
+    "fullName": "Fīrhufs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0202",
+    "fullName": "G.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0203",
+    "fullName": "G., A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0204",
+    "fullName": "G., J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0205",
+    "fullName": "Gaiduļs, Juonis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0206",
+    "fullName": "Gaigaliņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0207",
+    "fullName": "Gaile, Elza",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0208",
+    "fullName": "Gailis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0209",
+    "fullName": "Gaiķis-Zadiņš, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0210",
+    "fullName": "Garjānis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 56
+  },
+  {
+    "id": "collector-0211",
+    "fullName": "Garkolne, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 27
+  },
+  {
+    "id": "collector-0212",
+    "fullName": "Gavars, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0213",
+    "fullName": "Gavračs, Jāzeps",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0214",
+    "fullName": "Gilučs, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0215",
+    "fullName": "Gobziņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0216",
+    "fullName": "Goldberģe, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0217",
+    "fullName": "Graudiņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0218",
+    "fullName": "Graudiņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0219",
+    "fullName": "Grauds-Graudēvics, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0220",
+    "fullName": "Greblis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0221",
+    "fullName": "Grencione, Konstancija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0222",
+    "fullName": "Grenševica, Otīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0223",
+    "fullName": "Grigāns, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0224",
+    "fullName": "Gross, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0225",
+    "fullName": "Grumondze, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0226",
+    "fullName": "Gruzna, Ņīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0227",
+    "fullName": "Gruzītis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0228",
+    "fullName": "Grīnberga, Zenta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0229",
+    "fullName": "Grīnbergs, T.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0230",
+    "fullName": "Grīnberģe, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0231",
+    "fullName": "Grīnerts, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0232",
+    "fullName": "Grīnfogele, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0233",
+    "fullName": "Grūbe, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0234",
+    "fullName": "Gudļevskis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0235",
+    "fullName": "Gulbis, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0236",
+    "fullName": "Gulbis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0237",
+    "fullName": "Gulbis, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0238",
+    "fullName": "Gustavs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0239",
+    "fullName": "Gusts, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0240",
+    "fullName": "Gāršmalietis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0241",
+    "fullName": "Gūtmane, H.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0242",
+    "fullName": "Gūtmanis, T.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0243",
+    "fullName": "Hansons, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0244",
+    "fullName": "Heidens, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0245",
+    "fullName": "Henniņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0246",
+    "fullName": "Hollanderis, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0247",
+    "fullName": "Hollanderis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0248",
+    "fullName": "Hāze, S.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0249",
+    "fullName": "Ieviņš, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0250",
+    "fullName": "Ignāte, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0251",
+    "fullName": "Ignāte, S.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0252",
+    "fullName": "Ilcberga, Herta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0253",
+    "fullName": "Ilsters, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0254",
+    "fullName": "Indriksons, B.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0255",
+    "fullName": "Irbe, Ieva",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0256",
+    "fullName": "Irbe, M.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0257",
+    "fullName": "J., A. S.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0258",
+    "fullName": "Jakans, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0259",
+    "fullName": "Janberģis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0260",
+    "fullName": "Jansone, Marta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0261",
+    "fullName": "Jansone, Mirdza",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0262",
+    "fullName": "Jansons, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0263",
+    "fullName": "Jansons, Jānis Alberts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 58
+  },
+  {
+    "id": "collector-0264",
+    "fullName": "Jansons, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 30
+  },
+  {
+    "id": "collector-0265",
+    "fullName": "Jansons, Pauls",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0266",
+    "fullName": "Jansons, Pāvuls",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0267",
+    "fullName": "Janševskis, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0268",
+    "fullName": "Jaudzema, St.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0269",
+    "fullName": "Jaunzeme, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0270",
+    "fullName": "Jaunzeme, Katrīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0271",
+    "fullName": "Jaunzemis, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0272",
+    "fullName": "Jende, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0273",
+    "fullName": "Johansone, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0274",
+    "fullName": "Jugana, Ārija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0275",
+    "fullName": "Jumurdietis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0276",
+    "fullName": "Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0277",
+    "fullName": "Jurka, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0278",
+    "fullName": "Jurkovska, Emīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0279",
+    "fullName": "Jurēvics, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0280",
+    "fullName": "Jurķis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0281",
+    "fullName": "Juškēvičs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0282",
+    "fullName": "Jākobsone, Frīda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0283",
+    "fullName": "Jākobsons, Verners",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0284",
+    "fullName": "Jānekalns, Ž.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0285",
+    "fullName": "Jānis, G.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0286",
+    "fullName": "Jēce, Alma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0287",
+    "fullName": "Jēpe, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0288",
+    "fullName": "Jērums, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0289",
+    "fullName": "Jēģere, Austra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0290",
+    "fullName": "Jēģeris, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0291",
+    "fullName": "Jūsmiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0292",
+    "fullName": "Kallis, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0293",
+    "fullName": "Kalniņa, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0294",
+    "fullName": "Kalniņa, Emīlija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0295",
+    "fullName": "Kalniņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "collector-0296",
+    "fullName": "Kalniņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 16
+  },
+  {
+    "id": "collector-0297",
+    "fullName": "Kalniņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0298",
+    "fullName": "Kalniņš, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0299",
+    "fullName": "Kalniņš, Reinis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0300",
+    "fullName": "Kalnlapsa, Andrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0301",
+    "fullName": "Kalnmaliets, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0302",
+    "fullName": "Kalnozols, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0303",
+    "fullName": "Kalnāne, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0304",
+    "fullName": "Kalējs, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0305",
+    "fullName": "Kanaviņš, Oto",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0306",
+    "fullName": "Karlbloms, Pauls",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0307",
+    "fullName": "Karlsons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0308",
+    "fullName": "Karps, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0309",
+    "fullName": "Karēlis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0310",
+    "fullName": "Kasparovics, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0311",
+    "fullName": "Kaudzīte, Matīss",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0312",
+    "fullName": "Kaufmanis, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0313",
+    "fullName": "Kaufmanis, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0314",
+    "fullName": "Kauliņa, Berta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0315",
+    "fullName": "Kauliņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0316",
+    "fullName": "Kauķis, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0317",
+    "fullName": "Kaļvāns, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0318",
+    "fullName": "Kažoka, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0319",
+    "fullName": "Kažoka, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0320",
+    "fullName": "Kažēns, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0321",
+    "fullName": "Kažēns, Žanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0322",
+    "fullName": "Kerzuma, Marta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0323",
+    "fullName": "Klauss, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0324",
+    "fullName": "Kleinhofs, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0325",
+    "fullName": "Klemenss, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 17
+  },
+  {
+    "id": "collector-0326",
+    "fullName": "Kleķeris, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0327",
+    "fullName": "Kln",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0328",
+    "fullName": "Kluce, Hortenzija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0329",
+    "fullName": "Knīvele, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0330",
+    "fullName": "Kociņš, Rūdolfs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0331",
+    "fullName": "Kondrāte, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0332",
+    "fullName": "Korsaks, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0333",
+    "fullName": "Kozlovskis, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0334",
+    "fullName": "Krasovska, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0335",
+    "fullName": "Krastiņa, H.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0336",
+    "fullName": "Krastiņš, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0337",
+    "fullName": "Krauja",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0338",
+    "fullName": "Kraujš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0339",
+    "fullName": "Kreicbergs, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0340",
+    "fullName": "Kreicbergs, Ādams",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0341",
+    "fullName": "Kreims-Skābais, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0342",
+    "fullName": "Krieve, Alma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0343",
+    "fullName": "Krievāne, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0344",
+    "fullName": "Krievāns, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0345",
+    "fullName": "Krilova, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0346",
+    "fullName": "Krimbergs, N.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0347",
+    "fullName": "Kriķis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 13
+  },
+  {
+    "id": "collector-0348",
+    "fullName": "Krogzemis, Mikus (Auseklis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0349",
+    "fullName": "Krokums, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0350",
+    "fullName": "Krēsliņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 20
+  },
+  {
+    "id": "collector-0351",
+    "fullName": "Krūmiņa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0352",
+    "fullName": "Krūmiņa, Ērika",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0353",
+    "fullName": "Krūmiņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0354",
+    "fullName": "Krūmiņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0355",
+    "fullName": "Krūmiņš, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0356",
+    "fullName": "Krūmiņš, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0357",
+    "fullName": "Krūmiņš, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0358",
+    "fullName": "Kuda, O.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0359",
+    "fullName": "Kundziņa, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0360",
+    "fullName": "Kundziņš, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0361",
+    "fullName": "Kundziņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0362",
+    "fullName": "Kundziņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0363",
+    "fullName": "Kungs, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0364",
+    "fullName": "Kunstmane, Paula",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0365",
+    "fullName": "Kupfers, Viktors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0366",
+    "fullName": "Kupšis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0367",
+    "fullName": "Kurme, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0368",
+    "fullName": "Kurāts, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0369",
+    "fullName": "Kārkliņa, Elza",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0370",
+    "fullName": "Kārkliņš, Dāvis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0371",
+    "fullName": "Kārkluvalks, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0372",
+    "fullName": "Kļava, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0373",
+    "fullName": "Kļaviņa, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0374",
+    "fullName": "Kļaviņš, B.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0375",
+    "fullName": "Kļaviņš, Ernsts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0376",
+    "fullName": "L-tis",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0377",
+    "fullName": "Lablaiks, Arnolds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0378",
+    "fullName": "Labvēlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0379",
+    "fullName": "Laicēns, K. A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0380",
+    "fullName": "Lamberga, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0381",
+    "fullName": "Lamberts, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0382",
+    "fullName": "Lancmanis, Z.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0383",
+    "fullName": "Lapa, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 18
+  },
+  {
+    "id": "collector-0384",
+    "fullName": "Lapiņa, N.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0385",
+    "fullName": "Lapiņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0386",
+    "fullName": "Lapiņš, Z.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0387",
+    "fullName": "Lapsiņš, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0388",
+    "fullName": "Laroze, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0389",
+    "fullName": "Laudanskis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0390",
+    "fullName": "Launadziņš, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0391",
+    "fullName": "Laus, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0392",
+    "fullName": "Lautenbahs-Jūsmiņš, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0393",
+    "fullName": "Lauva, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0394",
+    "fullName": "Lazdiņa, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0395",
+    "fullName": "Legzda, Ingus",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0396",
+    "fullName": "Legzdiņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0397",
+    "fullName": "Leimane, Alma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0398",
+    "fullName": "Leimanis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0399",
+    "fullName": "Leja, Alīse",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0400",
+    "fullName": "Lejasmeijere, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0401",
+    "fullName": "Lejasmeijere, Līdija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0402",
+    "fullName": "Lejasmeiris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0403",
+    "fullName": "Lejasmiezis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0404",
+    "fullName": "Lerhis, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0405",
+    "fullName": "Lerhis-Puškaitis, Anss",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 121
+  },
+  {
+    "id": "collector-0406",
+    "fullName": "Lielozols, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0407",
+    "fullName": "Lielupis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0408",
+    "fullName": "Liepiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0409",
+    "fullName": "Liepiņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0410",
+    "fullName": "Liepiņš, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0411",
+    "fullName": "Liepiņš, Z.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0412",
+    "fullName": "Liepiņš, Zigfrīds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0413",
+    "fullName": "Liepsals, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0414",
+    "fullName": "Linabergs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0415",
+    "fullName": "Lindberga, H.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0416",
+    "fullName": "Linde, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0417",
+    "fullName": "Lindemanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0418",
+    "fullName": "Lindāns, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0419",
+    "fullName": "Lodziņš, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "collector-0420",
+    "fullName": "Lomane, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0421",
+    "fullName": "Lorence, Marta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0422",
+    "fullName": "Loze, Velta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0423",
+    "fullName": "Lukašēviča, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0424",
+    "fullName": "Lulle, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0425",
+    "fullName": "Luters, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "collector-0426",
+    "fullName": "Lāma, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0427",
+    "fullName": "Lēmanis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0428",
+    "fullName": "Lībrehts, Z.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0429",
+    "fullName": "Līcis, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0430",
+    "fullName": "Līcis, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0431",
+    "fullName": "Līdaka, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0432",
+    "fullName": "Līdurta, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0433",
+    "fullName": "Lītavnīks, Antons",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0434",
+    "fullName": "Macpāne, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0435",
+    "fullName": "Maisiņš, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0436",
+    "fullName": "Maksims",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0437",
+    "fullName": "Malvess, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0438",
+    "fullName": "Marķevics, F.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0439",
+    "fullName": "Mateuss, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0440",
+    "fullName": "Matisons, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0441",
+    "fullName": "Matisons, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0442",
+    "fullName": "Matīsens, G. Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0443",
+    "fullName": "Mazjānis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0444",
+    "fullName": "Mazjānis, Edvards",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0445",
+    "fullName": "Mazjānis, Sīmanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0446",
+    "fullName": "Mazulis, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0447",
+    "fullName": "Mačkēviče-Saulīte",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0448",
+    "fullName": "Mačulāns, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 15
+  },
+  {
+    "id": "collector-0449",
+    "fullName": "Medne, Alma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0450",
+    "fullName": "Medne, Irma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0451",
+    "fullName": "Medniece, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0452",
+    "fullName": "Mednis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0453",
+    "fullName": "Meijers, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0454",
+    "fullName": "Meiunte, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0455",
+    "fullName": "Melbārdis, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0456",
+    "fullName": "Meliezers, Dāvis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0457",
+    "fullName": "Mellezers, Toms",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0458",
+    "fullName": "Melnbikse, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0459",
+    "fullName": "Mencis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0460",
+    "fullName": "Menke, Ernests",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0461",
+    "fullName": "Metuzāle, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0462",
+    "fullName": "Meļķis, N.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0463",
+    "fullName": "Meževskis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0464",
+    "fullName": "Mežmalietis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0465",
+    "fullName": "Mierkalns, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0466",
+    "fullName": "Miezere, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0467",
+    "fullName": "Miezis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0468",
+    "fullName": "Miezone, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0469",
+    "fullName": "Miezone, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0470",
+    "fullName": "Miglava, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0471",
+    "fullName": "Mindere, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0472",
+    "fullName": "Minders, M.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0473",
+    "fullName": "Mintiks, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0474",
+    "fullName": "Mičuls, Edgars",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0475",
+    "fullName": "Miķīte, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0476",
+    "fullName": "Miļnus, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0477",
+    "fullName": "Miļuns, Pēcis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0478",
+    "fullName": "Mordaks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0479",
+    "fullName": "Muceniece, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0480",
+    "fullName": "Mākonis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0481",
+    "fullName": "Mālmeistere, Milda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "collector-0482",
+    "fullName": "Mālnieks, Tālivalds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0483",
+    "fullName": "Māturs, Atis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0484",
+    "fullName": "Mūrniece, Austra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0485",
+    "fullName": "Mūrniece, Zelma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0486",
+    "fullName": "Mūrnieks, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0487",
+    "fullName": "Mūrnieks, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0488",
+    "fullName": "Mūrnieks, St.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0489",
+    "fullName": "Mūrēns, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0490",
+    "fullName": "N.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0491",
+    "fullName": "Nagēviča, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0492",
+    "fullName": "Nairis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0493",
+    "fullName": "Nameits, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0494",
+    "fullName": "Neilands, F.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0495",
+    "fullName": "Neimane, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0496",
+    "fullName": "Neimanis, F.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0497",
+    "fullName": "Neslers, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0498",
+    "fullName": "Neslers, G. A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0499",
+    "fullName": "Nezināms",
+    "gender": null,
+    "notes": null,
+    "legendCount": 195
+  },
+  {
+    "id": "collector-0500",
+    "fullName": "Niedre, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0501",
+    "fullName": "Niedre, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0502",
+    "fullName": "Nummers, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0503",
+    "fullName": "Nāburgs, Kr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0504",
+    "fullName": "Nīders, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0505",
+    "fullName": "Nīdra, Jōns",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0506",
+    "fullName": "O., N.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0507",
+    "fullName": "Odīte, Hilda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0508",
+    "fullName": "Opincāns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0509",
+    "fullName": "Opsenbergs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0510",
+    "fullName": "Osis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0511",
+    "fullName": "Ostravs, Voldemārs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0512",
+    "fullName": "Ostrovskis, B.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0513",
+    "fullName": "Ozola, Alvīne",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0514",
+    "fullName": "Ozola, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0515",
+    "fullName": "Ozoliņa, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0516",
+    "fullName": "Ozoliņa, I.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0517",
+    "fullName": "Ozoliņš, Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0518",
+    "fullName": "Ozoliņš, Dāvis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 16
+  },
+  {
+    "id": "collector-0519",
+    "fullName": "Ozoliņš, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0520",
+    "fullName": "Ozoliņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0521",
+    "fullName": "Ozoliņš, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0522",
+    "fullName": "Ozoliņš, Niklāss",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0523",
+    "fullName": "Ozoliņš, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0524",
+    "fullName": "Ozoliņš, Vilis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 15
+  },
+  {
+    "id": "collector-0525",
+    "fullName": "Ozols, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "collector-0526",
+    "fullName": "Ozols, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0527",
+    "fullName": "Oša, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0528",
+    "fullName": "Oškalns, Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0529",
+    "fullName": "P., R.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0530",
+    "fullName": "Paegle, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0531",
+    "fullName": "Paegle, Ilga",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0532",
+    "fullName": "Paeglis, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 19
+  },
+  {
+    "id": "collector-0533",
+    "fullName": "Palevičs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0534",
+    "fullName": "Pamplis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0535",
+    "fullName": "Pastars, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0536",
+    "fullName": "Paule, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0537",
+    "fullName": "Paulītis, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0538",
+    "fullName": "Pelns, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0539",
+    "fullName": "Pencis, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0540",
+    "fullName": "Pindzulis, Artūrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0541",
+    "fullName": "Pinnis, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0542",
+    "fullName": "Piģene, Veronika",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0543",
+    "fullName": "Plakāne, A. E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0544",
+    "fullName": "Platinskis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0545",
+    "fullName": "Plaudis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "collector-0546",
+    "fullName": "Plocins, Kazimirs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0547",
+    "fullName": "Pločkalne, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0548",
+    "fullName": "Pločkalns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0549",
+    "fullName": "Plūdonis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0550",
+    "fullName": "Pole, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0551",
+    "fullName": "Polis, Gothards",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "collector-0552",
+    "fullName": "Pomelnieks, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0553",
+    "fullName": "Poriete, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0554",
+    "fullName": "Porietis, Arv.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0555",
+    "fullName": "Potrimps",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0556",
+    "fullName": "Preiss, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0557",
+    "fullName": "Priede, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0558",
+    "fullName": "Priede, Jēkabs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0559",
+    "fullName": "Priediņa, Elvīra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0560",
+    "fullName": "Priediņš, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0561",
+    "fullName": "Priednieks, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0562",
+    "fullName": "Priedīte, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0563",
+    "fullName": "Priedīte, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0564",
+    "fullName": "Priedīts, Alfonss",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0565",
+    "fullName": "Priedīts, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0566",
+    "fullName": "Prudiņa, Elvīra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0567",
+    "fullName": "Pumpurs, Lejaslauka",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0568",
+    "fullName": "Punka, Jānis (Raudaviete)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0569",
+    "fullName": "Puntaks, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0570",
+    "fullName": "Purgals, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0571",
+    "fullName": "Pusturs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0572",
+    "fullName": "Putvaidis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0573",
+    "fullName": "Puķudārzs, Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0574",
+    "fullName": "Puķītis, Fricis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0575",
+    "fullName": "Pārupis, Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0576",
+    "fullName": "Pērsliņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0577",
+    "fullName": "Pētersons, Alberts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0578",
+    "fullName": "Pētersons, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0579",
+    "fullName": "Pētersons, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "collector-0580",
+    "fullName": "Pļavinskis, P. Ed.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0581",
+    "fullName": "Pļaviņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0582",
+    "fullName": "Pūle, Melānija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0583",
+    "fullName": "Pūliņa, G.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0584",
+    "fullName": "Pūliņa, Gaida",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0585",
+    "fullName": "Radziņš, Art.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0586",
+    "fullName": "Ragainis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0587",
+    "fullName": "Ramanis, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0588",
+    "fullName": "Ramanis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0589",
+    "fullName": "Rana, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0590",
+    "fullName": "Rancāna, Nikodema skolnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0591",
+    "fullName": "Rancāns, Nikodems",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0592",
+    "fullName": "Rasmanis, Kristaps",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0593",
+    "fullName": "Rasnacis, Staņislavs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0594",
+    "fullName": "Ravizers, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0595",
+    "fullName": "Račevskis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0596",
+    "fullName": "Raņķis, M.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0597",
+    "fullName": "Rašmanis, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0598",
+    "fullName": "Reinbaha, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0599",
+    "fullName": "Reinfelds, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0600",
+    "fullName": "Reiters, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0601",
+    "fullName": "Remb, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0602",
+    "fullName": "Remess, Arvīds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0603",
+    "fullName": "Rempa, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0604",
+    "fullName": "Renca, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0605",
+    "fullName": "Reķis, Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "collector-0606",
+    "fullName": "Rgus, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0607",
+    "fullName": "Riekstiņš, Bruno",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0608",
+    "fullName": "Riekstiņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0609",
+    "fullName": "Rinkus, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0610",
+    "fullName": "Riss, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0611",
+    "fullName": "Ritenis, Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "collector-0612",
+    "fullName": "Robalts, I.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0613",
+    "fullName": "Rode, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0614",
+    "fullName": "Roga",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0615",
+    "fullName": "Rogulis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0616",
+    "fullName": "Romyslovs, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0617",
+    "fullName": "Rozenbergs, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0618",
+    "fullName": "Rozenbergs, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0619",
+    "fullName": "Rozenšteine, J.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0620",
+    "fullName": "Rožukalns, Marčus",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0621",
+    "fullName": "Rubenis, Jūlijs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 31
+  },
+  {
+    "id": "collector-0622",
+    "fullName": "Rudzītis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0623",
+    "fullName": "Rumaks, Kazimirs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0624",
+    "fullName": "Rundēlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0625",
+    "fullName": "Runtulis, Vilis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "collector-0626",
+    "fullName": "Ruška, Antonina",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0627",
+    "fullName": "Rāts, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0628",
+    "fullName": "Saldmiers",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0629",
+    "fullName": "Saliņš, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0630",
+    "fullName": "Salms, B.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0631",
+    "fullName": "Samte, Herta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0632",
+    "fullName": "Sargūna, Vera",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0633",
+    "fullName": "Saulīte, Trīna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0634",
+    "fullName": "Sebežs, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0635",
+    "fullName": "Seržants, Krišjānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0636",
+    "fullName": "Sestule, Elvīra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0637",
+    "fullName": "Siliņa, Hilda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0638",
+    "fullName": "Siliņš, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0639",
+    "fullName": "Siliņš, Voldemārs (Silamalas Vaivariņš)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0640",
+    "fullName": "Silkalns, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0641",
+    "fullName": "Simenovs, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 19
+  },
+  {
+    "id": "collector-0642",
+    "fullName": "Sisene, Īda",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0643",
+    "fullName": "Siķēns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "collector-0644",
+    "fullName": "Skara, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0645",
+    "fullName": "Skolnieki",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0646",
+    "fullName": "Skolnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0647",
+    "fullName": "Skrupska, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0648",
+    "fullName": "Skrīvelis, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0649",
+    "fullName": "Skuja, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0650",
+    "fullName": "Skujiņš, Hugo (Andrs Ziemelis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 569
+  },
+  {
+    "id": "collector-0651",
+    "fullName": "Skujiņš, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 51
+  },
+  {
+    "id": "collector-0652",
+    "fullName": "Smagars, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0653",
+    "fullName": "Smerka, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0654",
+    "fullName": "Smildziņa, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0655",
+    "fullName": "Smilga, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0656",
+    "fullName": "Snipe, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0657",
+    "fullName": "Spalviņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0658",
+    "fullName": "Sprancis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0659",
+    "fullName": "Spriņģis, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0660",
+    "fullName": "Sproģis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "collector-0661",
+    "fullName": "Sprudžs, Aleksandrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0662",
+    "fullName": "Spuriņš, Artūrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0663",
+    "fullName": "Stankēviča, G.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0664",
+    "fullName": "Starķis, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0665",
+    "fullName": "Stilieris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0666",
+    "fullName": "Strautiņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0667",
+    "fullName": "Strautiņš, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0668",
+    "fullName": "Strautmalietis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0669",
+    "fullName": "Strautmanis, Žanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0670",
+    "fullName": "Strazdiņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0671",
+    "fullName": "Streidiņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0672",
+    "fullName": "Streņģe, Maiga",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0673",
+    "fullName": "Strods, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0674",
+    "fullName": "Strēlerts, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0675",
+    "fullName": "Stuce, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0676",
+    "fullName": "Suntalnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0677",
+    "fullName": "Sēja, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0678",
+    "fullName": "Sēronis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0679",
+    "fullName": "Sūbre, Daina",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0680",
+    "fullName": "Tabine, Rozālija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "collector-0681",
+    "fullName": "Taisnaitis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0682",
+    "fullName": "Talaža",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0683",
+    "fullName": "Talcis, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0684",
+    "fullName": "Tapilnieks, Kaspars",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0685",
+    "fullName": "Tarzieris, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0686",
+    "fullName": "Tautietis, S. J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0687",
+    "fullName": "Tereško, Viktors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0688",
+    "fullName": "Tiltiņa, Lūcija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0689",
+    "fullName": "Tomsone",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0690",
+    "fullName": "Tortuss, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0691",
+    "fullName": "Trapāne, Marianna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0692",
+    "fullName": "Treimanis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "collector-0693",
+    "fullName": "Tupesis, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0694",
+    "fullName": "Turka, Emma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0695",
+    "fullName": "Tālumnieks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0696",
+    "fullName": "Tīģeris, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0697",
+    "fullName": "U., A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0698",
+    "fullName": "Uljāna, L.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0699",
+    "fullName": "Ulmanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0700",
+    "fullName": "Untiņš, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0701",
+    "fullName": "Upmalietis, A. V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0702",
+    "fullName": "Upītis, Juris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 26
+  },
+  {
+    "id": "collector-0703",
+    "fullName": "Utināns, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0704",
+    "fullName": "V-ņš, S.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0705",
+    "fullName": "Vaidelots",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0706",
+    "fullName": "Valains, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0707",
+    "fullName": "Valdemārs, Krišjānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0708",
+    "fullName": "Valdmanis, Vilis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0709",
+    "fullName": "Valdovskis, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0710",
+    "fullName": "Valteris, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0711",
+    "fullName": "Vanags, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0712",
+    "fullName": "Varabalss",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0713",
+    "fullName": "Vaskis, Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 59
+  },
+  {
+    "id": "collector-0714",
+    "fullName": "Vaskis, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0715",
+    "fullName": "Vasīlnieks, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0716",
+    "fullName": "Vaļminska, A.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0717",
+    "fullName": "Vecvanags, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0718",
+    "fullName": "Veirihs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0719",
+    "fullName": "Vembris, M.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0720",
+    "fullName": "Vesmanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0721",
+    "fullName": "Vestmanis, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0722",
+    "fullName": "Vidauska, E.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "collector-0723",
+    "fullName": "Vieglais, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0724",
+    "fullName": "Vihmane, Irēna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0725",
+    "fullName": "Vilks, Dāvids",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0726",
+    "fullName": "Vilks, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0727",
+    "fullName": "Vilsons, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0728",
+    "fullName": "Visocka, V.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0729",
+    "fullName": "Vizbule, Irma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0730",
+    "fullName": "Voitkāns, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0731",
+    "fullName": "Volters, Eduards",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0732",
+    "fullName": "Vonogs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0733",
+    "fullName": "Vulfs, R.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0734",
+    "fullName": "Vāverāns, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0735",
+    "fullName": "Vēbere, Emma",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0736",
+    "fullName": "Vēvere, Elza",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0737",
+    "fullName": "Vīksme, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0738",
+    "fullName": "Vīksna, L.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0739",
+    "fullName": "Vīksne, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "collector-0740",
+    "fullName": "Vīlips, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0741",
+    "fullName": "Vīlisteris, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0742",
+    "fullName": "Vīrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0743",
+    "fullName": "Vītiņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0744",
+    "fullName": "Vītoliņš, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0745",
+    "fullName": "Vītoliņš, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0746",
+    "fullName": "Vītols",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0747",
+    "fullName": "Vītols, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0748",
+    "fullName": "Vītols, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0749",
+    "fullName": "Vīška, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0750",
+    "fullName": "Zaharska, Vēra",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 51
+  },
+  {
+    "id": "collector-0751",
+    "fullName": "Zaravičs, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0752",
+    "fullName": "Zariņa, Bertrille",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0753",
+    "fullName": "Zariņa, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0754",
+    "fullName": "Zariņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0755",
+    "fullName": "Zaļaiskalns, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0756",
+    "fullName": "Zebeža, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0757",
+    "fullName": "Zeltiņa, P.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0758",
+    "fullName": "Zemesarāja, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0759",
+    "fullName": "Zemītis, Kārlis (Pērsietis)",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0760",
+    "fullName": "Zibens, A.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0761",
+    "fullName": "Ziediņa, M.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0762",
+    "fullName": "Ziediņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0763",
+    "fullName": "Ziedskalniņa, Zenta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0764",
+    "fullName": "Ziemelis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0765",
+    "fullName": "Ziemelis, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0766",
+    "fullName": "Zilmanis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0767",
+    "fullName": "Zilumkalns, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0768",
+    "fullName": "Ziģenots",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0769",
+    "fullName": "Zommere, Aina",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0770",
+    "fullName": "Zommers, G.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0771",
+    "fullName": "Zommers, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0772",
+    "fullName": "Zunte, Arnolds",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0773",
+    "fullName": "Zvaigzne, Andžs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0774",
+    "fullName": "Zvaigzne, P.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0775",
+    "fullName": "Zvirbulis, L.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0776",
+    "fullName": "Zāns, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0777",
+    "fullName": "Zēbergs, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0778",
+    "fullName": "Zēvalds, P.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0779",
+    "fullName": "Zītars, A.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0780",
+    "fullName": "Zīvers, Kr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0781",
+    "fullName": "Ābele, Kārlis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0782",
+    "fullName": "Ābels, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0783",
+    "fullName": "Ābels, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0784",
+    "fullName": "Āboliņš, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0785",
+    "fullName": "Ādlers, Augusts",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "collector-0786",
+    "fullName": "Ādlers, Paulis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0787",
+    "fullName": "Āriņš, Marks",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0788",
+    "fullName": "Ārne",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0789",
+    "fullName": "Ārons, Matīss",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 18
+  },
+  {
+    "id": "collector-0790",
+    "fullName": "Čakšs, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0791",
+    "fullName": "Čeičinīks, O.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0792",
+    "fullName": "Ēdolietis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0793",
+    "fullName": "Ētmanis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "collector-0794",
+    "fullName": "Ēķis, Eduards",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0795",
+    "fullName": "Ģirģens, Jānis",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0796",
+    "fullName": "Ķaupelis, M.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0797",
+    "fullName": "Ķemeris, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0798",
+    "fullName": "Ķenga, T.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0799",
+    "fullName": "Ķevietis, Andrejs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0800",
+    "fullName": "Ķida, O.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0801",
+    "fullName": "Ķuzis, Viļums",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0802",
+    "fullName": "Ļionovičs, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0803",
+    "fullName": "Šimiņš, Mārtiņš",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0804",
+    "fullName": "Širmanis, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0805",
+    "fullName": "Šlipenbahs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0806",
+    "fullName": "Šmits, Pēteris",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 114
+  },
+  {
+    "id": "collector-0807",
+    "fullName": "Šneiders, E.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "collector-0808",
+    "fullName": "Štauers, Teodors",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0809",
+    "fullName": "Štālberga, Ruta",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0810",
+    "fullName": "Štāls, Fr.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0811",
+    "fullName": "Štībele, O.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0812",
+    "fullName": "Štīlers",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0813",
+    "fullName": "Šulcs, K.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "collector-0814",
+    "fullName": "Švalbe, J.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0815",
+    "fullName": "Šāberts, J.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0816",
+    "fullName": "Šēnbergs, E. F.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "collector-0817",
+    "fullName": "Šķipsna, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0818",
+    "fullName": "Šķipsna, Valija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0819",
+    "fullName": "Šķēre, Anna",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 24
+  },
+  {
+    "id": "collector-0820",
+    "fullName": "Ūdrs",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0821",
+    "fullName": "Ūdrs, V.",
+    "gender": "M",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0822",
+    "fullName": "Žagata, L.",
+    "gender": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "collector-0823",
+    "fullName": "Žeijere, Marija",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "collector-0824",
+    "fullName": "Žiema, K.",
+    "gender": "F",
+    "notes": null,
+    "legendCount": 2
+  }
+]

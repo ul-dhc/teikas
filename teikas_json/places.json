@@ -1,0 +1,7220 @@
+[
+  {
+    "id": "place-0001",
+    "name": "Aglona",
+    "coordinates": {
+      "latitude": 56.126495,
+      "longitude": 27.014599
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.126495, 27.014599 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0002",
+    "name": "Aizkraukle",
+    "coordinates": {
+      "latitude": 56.59305,
+      "longitude": 25.243154
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.593050, 25.243154 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0003",
+    "name": "Aizkraukles pagasts",
+    "coordinates": {
+      "latitude": 56.646108,
+      "longitude": 25.237085
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.646108, 25.237085 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0004",
+    "name": "Aizkuja",
+    "coordinates": {
+      "latitude": 56.941982,
+      "longitude": 26.399467
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.941982, 26.399467 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0005",
+    "name": "Aizpute",
+    "coordinates": {
+      "latitude": 56.715739,
+      "longitude": 21.605305
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.715739, 21.605305 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0006",
+    "name": "Aizputes apgabals",
+    "coordinates": {
+      "latitude": 56.71826,
+      "longitude": 21.607276
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.718260, 21.607276 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0007",
+    "name": "Aizupes pagasts",
+    "coordinates": {
+      "latitude": 56.926922,
+      "longitude": 22.584946
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.926922, 22.584946 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0008",
+    "name": "Aknišas pagasts",
+    "coordinates": {
+      "latitude": 56.161304,
+      "longitude": 25.748483
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.161304, 25.748483 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0009",
+    "name": "Aknīstes pagasts",
+    "coordinates": {
+      "latitude": 56.161304,
+      "longitude": 25.748483
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.161304, 25.748483 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0010",
+    "name": "Aloja",
+    "coordinates": {
+      "latitude": 57.767136,
+      "longitude": 24.877084
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.767136, 24.877084 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0011",
+    "name": "Alojas pagasts",
+    "coordinates": {
+      "latitude": 57.768599,
+      "longitude": 24.877703
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.768599, 24.877703 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0012",
+    "name": "Alsunga",
+    "coordinates": {
+      "latitude": 56.980315,
+      "longitude": 21.567256
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.980315, 21.567256 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0013",
+    "name": "Alsviķu pagasts",
+    "coordinates": {
+      "latitude": 57.437713,
+      "longitude": 26.847176
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.437713, 26.847176 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0014",
+    "name": "Altene",
+    "coordinates": {
+      "latitude": 56.61997,
+      "longitude": 25.451168
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.619970, 25.451168 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0015",
+    "name": "Alūksne",
+    "coordinates": {
+      "latitude": 57.420788,
+      "longitude": 27.051349
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.420788, 27.051349 (10)",
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "place-0016",
+    "name": "Alūksnes pagasts",
+    "coordinates": {
+      "latitude": 57.425448,
+      "longitude": 27.042497
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.425448, 27.042497 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0017",
+    "name": "Ambeļmuiža",
+    "coordinates": {
+      "latitude": 56.031913,
+      "longitude": 26.893098
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.031913, 26.893098 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0018",
+    "name": "Ance",
+    "coordinates": {
+      "latitude": 57.513773,
+      "longitude": 22.02176
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.513773, 22.021760 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0019",
+    "name": "Andrupenes pagasts",
+    "coordinates": {
+      "latitude": 56.158088,
+      "longitude": 27.378404
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.158088, 27.378404 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0020",
+    "name": "Annas",
+    "coordinates": {
+      "latitude": 57.037741,
+      "longitude": 25.367088
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.037741, 25.367088 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0021",
+    "name": "Annas pagasts",
+    "coordinates": {
+      "latitude": 57.335873,
+      "longitude": 27.023778
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.335873, 27.023778 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0022",
+    "name": "Annēnieši",
+    "coordinates": {
+      "latitude": 57.064492,
+      "longitude": 25.296903
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.064492, 25.296903 (8)",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "place-0023",
+    "name": "Ape",
+    "coordinates": {
+      "latitude": 57.537763,
+      "longitude": 26.704314
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.537763, 26.704314 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0024",
+    "name": "Apukalns",
+    "coordinates": {
+      "latitude": 57.550654,
+      "longitude": 26.898441
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.550654, 26.898441 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0025",
+    "name": "Asares pagasts",
+    "coordinates": {
+      "latitude": 56.140019,
+      "longitude": 25.900023
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.140019, 25.900023 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0026",
+    "name": "Atašiene",
+    "coordinates": {
+      "latitude": 56.545765,
+      "longitude": 26.398883
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.545765, 26.398883 (11)",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "place-0027",
+    "name": "Auces muiža",
+    "coordinates": {
+      "latitude": 56.479891,
+      "longitude": 22.973649
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.479891, 22.973649 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0028",
+    "name": "Auces pagasts",
+    "coordinates": {
+      "latitude": 56.479891,
+      "longitude": 22.973649
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.479891, 22.973649 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0029",
+    "name": "Audzes pagasts",
+    "coordinates": {
+      "latitude": 56.452942,
+      "longitude": 25.187653
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.452942, 25.187653 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0030",
+    "name": "Augškurzeme",
+    "coordinates": {
+      "latitude": 56.559895,
+      "longitude": 25.3972
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.559895, 25.397200 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0031",
+    "name": "Aumeisteri",
+    "coordinates": {
+      "latitude": 57.522915,
+      "longitude": 26.203548
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.522915, 26.203548 (162); 57.547738, 26.714124 (1)",
+    "notes": null,
+    "legendCount": 163
+  },
+  {
+    "id": "place-0032",
+    "name": "Aumeisteru pagasts",
+    "coordinates": {
+      "latitude": 57.522915,
+      "longitude": 26.203548
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.522915, 26.203548 (118); 57.390975, 23.793624 (1)",
+    "notes": null,
+    "legendCount": 119
+  },
+  {
+    "id": "place-0033",
+    "name": "Auru pagasts",
+    "coordinates": {
+      "latitude": 56.563808,
+      "longitude": 23.2906
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.563808, 23.290600 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0034",
+    "name": "Auļukalns",
+    "coordinates": {
+      "latitude": 57.230772,
+      "longitude": 25.780897
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.230772, 25.780897 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0035",
+    "name": "Babītes pagasts",
+    "coordinates": {
+      "latitude": 56.891909,
+      "longitude": 23.774324
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.891909, 23.774324 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0036",
+    "name": "Baižkalns",
+    "coordinates": {
+      "latitude": 57.331693,
+      "longitude": 25.610034
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.331693, 25.610034 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0037",
+    "name": "Baldone",
+    "coordinates": {
+      "latitude": 56.745838,
+      "longitude": 24.406107
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.745838, 24.406107 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0038",
+    "name": "Baltā muiža",
+    "coordinates": {
+      "latitude": 56.96967,
+      "longitude": 24.10107
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.969670, 24.101070 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0039",
+    "name": "Balvu pagasts",
+    "coordinates": {
+      "latitude": 57.090403,
+      "longitude": 27.238356
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.090403, 27.238356 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0040",
+    "name": "Barkava",
+    "coordinates": {
+      "latitude": 56.727045,
+      "longitude": 26.611603
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.727045, 26.611603 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0041",
+    "name": "Barkavas apkārtne",
+    "coordinates": {
+      "latitude": 56.727045,
+      "longitude": 26.611603
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.727045, 26.611603 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0042",
+    "name": "Bauskas apriņķis",
+    "coordinates": {
+      "latitude": 56.408789,
+      "longitude": 24.192654
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.408789, 24.192654 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0043",
+    "name": "Bauņu pagasts",
+    "coordinates": {
+      "latitude": 57.746436,
+      "longitude": 25.177545
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.746436, 25.177545 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0044",
+    "name": "Bebrene",
+    "coordinates": {
+      "latitude": 56.063581,
+      "longitude": 26.128204
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.063581, 26.128204 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0045",
+    "name": "Bejas pagasts",
+    "coordinates": {
+      "latitude": 57.416275,
+      "longitude": 27.204097
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.416275, 27.204097 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0046",
+    "name": "Beļavas pagasts",
+    "coordinates": {
+      "latitude": 57.226929,
+      "longitude": 26.70213
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.226929, 26.702130 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0047",
+    "name": "Beļavieši",
+    "coordinates": {
+      "latitude": 57.253467,
+      "longitude": 26.778948
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.253467, 26.778948 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0048",
+    "name": "Bikavas pagasts",
+    "coordinates": {
+      "latitude": 56.737224,
+      "longitude": 27.067601
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.737224, 27.067601 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0049",
+    "name": "Biksti",
+    "coordinates": {
+      "latitude": 56.668909,
+      "longitude": 22.9725
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.668909, 22.972500 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0050",
+    "name": "Biksēja",
+    "coordinates": {
+      "latitude": 57.474787,
+      "longitude": 25.720991
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.474787, 25.720991 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0051",
+    "name": "Biksēre",
+    "coordinates": {
+      "latitude": 56.921869,
+      "longitude": 26.312265
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.921869, 26.312265 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0052",
+    "name": "Bilskas pagasts",
+    "coordinates": {
+      "latitude": 57.465147,
+      "longitude": 26.077438
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.465147, 26.077438 (116); 57.465148, 26.077439 (1); 57.465149, 26.077440 (1); 57.465150, 26.077441 (1); 57.465151, 26.077442 (1)",
+    "notes": null,
+    "legendCount": 120
+  },
+  {
+    "id": "place-0053",
+    "name": "Bilstiņi",
+    "coordinates": {
+      "latitude": 56.638942,
+      "longitude": 25.411111
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.638942, 25.411111 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0054",
+    "name": "Birzgale",
+    "coordinates": {
+      "latitude": 56.631191,
+      "longitude": 24.756584
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.631191, 24.756584 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0055",
+    "name": "Birzgales pagasts",
+    "coordinates": {
+      "latitude": 56.635721,
+      "longitude": 24.781898
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.635721, 24.781898 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0056",
+    "name": "Birzgaļi",
+    "coordinates": {
+      "latitude": 56.286128,
+      "longitude": 24.223483
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.286128, 24.223483 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0057",
+    "name": "Blome",
+    "coordinates": {
+      "latitude": 57.436614,
+      "longitude": 25.779025
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.436614, 25.779025 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0058",
+    "name": "Blomes pagasts",
+    "coordinates": {
+      "latitude": 57.455159,
+      "longitude": 25.736462
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.455159, 25.736462 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0059",
+    "name": "Blīdene",
+    "coordinates": {
+      "latitude": 56.648386,
+      "longitude": 22.78501
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.648386, 22.785010 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0060",
+    "name": "Bornsmindes pagasts",
+    "coordinates": {
+      "latitude": 56.370008,
+      "longitude": 24.112374
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.370008, 24.112374 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0061",
+    "name": "Briežu muiža",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0062",
+    "name": "Brukna",
+    "coordinates": {
+      "latitude": 56.468673,
+      "longitude": 24.44309
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.468673, 24.443090 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0063",
+    "name": "Brunava",
+    "coordinates": {
+      "latitude": 56.357012,
+      "longitude": 24.38863
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.357012, 24.388630 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0064",
+    "name": "Budenbroka",
+    "coordinates": {
+      "latitude": 57.614265,
+      "longitude": 25.077818
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.614265, 25.077818 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0065",
+    "name": "Bukmuižas pagasts",
+    "coordinates": {
+      "latitude": 56.185906,
+      "longitude": 27.65776
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.185906, 27.657760 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0066",
+    "name": "Bukumuižas pagasts",
+    "coordinates": {
+      "latitude": 56.185906,
+      "longitude": 27.65776
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.185906, 27.657760 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0067",
+    "name": "Burtnieki",
+    "coordinates": {
+      "latitude": 57.694876,
+      "longitude": 25.27645
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.694876, 25.276450 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0068",
+    "name": "Burtnieku pagasts",
+    "coordinates": {
+      "latitude": 57.6949,
+      "longitude": 25.276478
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.691310, 25.261173 (1); 57.694900, 25.276478 (1)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0069",
+    "name": "Bučauska",
+    "coordinates": {
+      "latitude": 57.006187,
+      "longitude": 26.408146
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.006187, 26.408146 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0070",
+    "name": "Bārbele",
+    "coordinates": {
+      "latitude": 56.452532,
+      "longitude": 24.595587
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.452532, 24.595587 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0071",
+    "name": "Bērzaune",
+    "coordinates": {
+      "latitude": 56.808758,
+      "longitude": 26.036931
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.808758, 26.036931 (38)",
+    "notes": null,
+    "legendCount": 38
+  },
+  {
+    "id": "place-0072",
+    "name": "Bērzaunes pagasts",
+    "coordinates": {
+      "latitude": 56.820665,
+      "longitude": 25.977015
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.820665, 25.977015 (9)",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "place-0073",
+    "name": "Bērzmuiža",
+    "coordinates": {
+      "latitude": 56.492977,
+      "longitude": 24.126454
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.492977, 24.126454 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0074",
+    "name": "Bērznieki",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "place-0075",
+    "name": "Bērzpils apkārtne",
+    "coordinates": {
+      "latitude": 56.848396,
+      "longitude": 27.084523
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.848396, 27.084523 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0076",
+    "name": "Bērzpils pagasts",
+    "coordinates": {
+      "latitude": 56.849796,
+      "longitude": 27.083977
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.849796, 27.083977 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0077",
+    "name": "Cesvaine",
+    "coordinates": {
+      "latitude": 56.965144,
+      "longitude": 26.311047
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.965144, 26.311047 (28)",
+    "notes": null,
+    "legendCount": 28
+  },
+  {
+    "id": "place-0078",
+    "name": "Cesvaines pagasts",
+    "coordinates": {
+      "latitude": 57.02535,
+      "longitude": 26.305464
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.025350, 26.305464 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0079",
+    "name": "Ciecere",
+    "coordinates": {
+      "latitude": 56.679272,
+      "longitude": 22.062071
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.679272, 22.062071 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0080",
+    "name": "Cirgaļu pagasts",
+    "coordinates": {
+      "latitude": 57.664429,
+      "longitude": 26.201002
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.664429, 26.201002 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0081",
+    "name": "Cēsis",
+    "coordinates": {
+      "latitude": 57.310332,
+      "longitude": 25.267469
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.310332, 25.267469 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0082",
+    "name": "Cēsu apriņķis",
+    "coordinates": {
+      "latitude": 57.310332,
+      "longitude": 25.267469
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.310332, 25.267469 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0083",
+    "name": "Cīravas pagasts",
+    "coordinates": {
+      "latitude": 56.736495,
+      "longitude": 21.385717
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.736495, 21.385717 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0084",
+    "name": "Dagda",
+    "coordinates": {
+      "latitude": 56.095609,
+      "longitude": 27.532459
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.095609, 27.532459 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0085",
+    "name": "Daudzeva",
+    "coordinates": {
+      "latitude": 56.506517,
+      "longitude": 25.239825
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.506517, 25.239825 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0086",
+    "name": "Daugavas mala",
+    "coordinates": {
+      "latitude": 56.82136,
+      "longitude": 24.42476
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.821360, 24.424760 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0087",
+    "name": "Daugavpils",
+    "coordinates": {
+      "latitude": 55.874736,
+      "longitude": 26.536179
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.874736, 26.536179 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0088",
+    "name": "Dauguļi",
+    "coordinates": {
+      "latitude": 57.526396,
+      "longitude": 25.064092
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.526396, 25.064092 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0089",
+    "name": "Dignāja",
+    "coordinates": {
+      "latitude": 56.295609,
+      "longitude": 26.173116
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.295609, 26.173116 (2); 56.295135, 26.172010 (1)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0090",
+    "name": "Dignājas pagasts",
+    "coordinates": {
+      "latitude": 56.333968,
+      "longitude": 26.104784
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.333968, 26.104784 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0091",
+    "name": "Dobe",
+    "coordinates": {
+      "latitude": 56.500069,
+      "longitude": 22.742979
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.500069, 22.742979 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0092",
+    "name": "Dobele",
+    "coordinates": {
+      "latitude": 56.624906,
+      "longitude": 23.279107
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.624906, 23.279107 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0093",
+    "name": "Dobeles apgabals",
+    "coordinates": {
+      "latitude": 56.624906,
+      "longitude": 23.279107
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.624906, 23.279107 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0094",
+    "name": "Dobeles pagasts",
+    "coordinates": {
+      "latitude": 56.673622,
+      "longitude": 23.25593
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.673622, 23.255930 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0095",
+    "name": "Dole",
+    "coordinates": {
+      "latitude": 56.856174,
+      "longitude": 24.275452
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.856174, 24.275452 (24)",
+    "notes": null,
+    "legendCount": 24
+  },
+  {
+    "id": "place-0096",
+    "name": "Domopole",
+    "coordinates": {
+      "latitude": 56.859066,
+      "longitude": 27.081218
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.859066, 27.081218 (19)",
+    "notes": null,
+    "legendCount": 19
+  },
+  {
+    "id": "place-0097",
+    "name": "Domopoles pagasts",
+    "coordinates": {
+      "latitude": 56.859066,
+      "longitude": 27.081218
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.859066, 27.081218 (11)",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "place-0098",
+    "name": "Dricānu pagasts",
+    "coordinates": {
+      "latitude": 56.661379,
+      "longitude": 27.198707
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.661379, 27.198707 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0099",
+    "name": "Drusti",
+    "coordinates": {
+      "latitude": 57.231064,
+      "longitude": 25.856311
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.231064, 25.856311 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0100",
+    "name": "Druviena",
+    "coordinates": {
+      "latitude": 57.113805,
+      "longitude": 26.293459
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.113805, 26.293459 (16)",
+    "notes": null,
+    "legendCount": 16
+  },
+  {
+    "id": "place-0101",
+    "name": "Druvienas pagasts",
+    "coordinates": {
+      "latitude": 57.101883,
+      "longitude": 26.234985
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.101883, 26.234985 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0102",
+    "name": "Dunava",
+    "coordinates": {
+      "latitude": 56.213947,
+      "longitude": 26.202944
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.213947, 26.202944 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0103",
+    "name": "Dundaga",
+    "coordinates": {
+      "latitude": 57.507633,
+      "longitude": 22.351967
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.507633, 22.351967 (33)",
+    "notes": null,
+    "legendCount": 33
+  },
+  {
+    "id": "place-0104",
+    "name": "Dzelda",
+    "coordinates": {
+      "latitude": 56.570678,
+      "longitude": 21.897405
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.570678, 21.897405 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0105",
+    "name": "Dzelzava",
+    "coordinates": {
+      "latitude": 56.997053,
+      "longitude": 26.430658
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.997053, 26.430658 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0106",
+    "name": "Dzirciems",
+    "coordinates": {
+      "latitude": 57.120393,
+      "longitude": 23.012127
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.956112, 24.062006 (4); 57.120393, 23.012127 (2)",
+    "notes": "Var apzīmēt ciemu Zentenes pagastā, ciemu Ugāles pagastā vai Rīgas daļu. Tika izvēlēts Jelgavai (lielākai daļai pierakstītāju) tuvākais ciems.",
+    "legendCount": 6
+  },
+  {
+    "id": "place-0107",
+    "name": "Dzērbenes pagasts",
+    "coordinates": {
+      "latitude": 57.221222,
+      "longitude": 25.641797
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.221222, 25.641797 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0108",
+    "name": "Dzērve",
+    "coordinates": {
+      "latitude": 56.752722,
+      "longitude": 21.461428
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.752722, 21.461428 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0109",
+    "name": "Dūre",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0110",
+    "name": "Džūkste",
+    "coordinates": {
+      "latitude": 56.78922,
+      "longitude": 23.247195
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.789220, 23.247195 (47)",
+    "notes": null,
+    "legendCount": 47
+  },
+  {
+    "id": "place-0111",
+    "name": "Džūkste-Pienava",
+    "coordinates": {
+      "latitude": 56.78922,
+      "longitude": 23.247195
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.789220, 23.247195 (49)",
+    "notes": null,
+    "legendCount": 49
+  },
+  {
+    "id": "place-0112",
+    "name": "Džūkstes pagasts",
+    "coordinates": {
+      "latitude": 56.787716,
+      "longitude": 23.280386
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.787716, 23.280386 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0113",
+    "name": "Elkšņu pagasts",
+    "coordinates": {
+      "latitude": 56.228367,
+      "longitude": 25.6114
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.228367, 25.611400 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0114",
+    "name": "Embūte",
+    "coordinates": {
+      "latitude": 56.505848,
+      "longitude": 21.819187
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.505848, 21.819187 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0115",
+    "name": "Englūtes pagasts",
+    "coordinates": {
+      "latitude": 57.095444,
+      "longitude": 24.65032
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.095444, 24.650320 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0116",
+    "name": "Engure",
+    "coordinates": {
+      "latitude": 57.162312,
+      "longitude": 23.219723
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.162312, 23.219723 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0117",
+    "name": "Eversmuižas pagasts",
+    "coordinates": {
+      "latitude": 56.55387,
+      "longitude": 27.869801
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.553870, 27.869801 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0118",
+    "name": "Ezere",
+    "coordinates": {
+      "latitude": 56.409175,
+      "longitude": 22.362505
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.409175, 22.362505 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0119",
+    "name": "Ezeres pagasts",
+    "coordinates": {
+      "latitude": 56.425056,
+      "longitude": 22.336605
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.425056, 22.336605 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0120",
+    "name": "Ezermuiža",
+    "coordinates": {
+      "latitude": 57.170385,
+      "longitude": 23.125139
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.170385, 23.125139 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0121",
+    "name": "Galgauska",
+    "coordinates": {
+      "latitude": 57.166314,
+      "longitude": 26.55206
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.166314, 26.552060 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0122",
+    "name": "Galgauskas pagasts",
+    "coordinates": {
+      "latitude": 57.165231,
+      "longitude": 26.545767
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.165231, 26.545767 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0123",
+    "name": "Garkalne",
+    "coordinates": {
+      "latitude": 57.045849,
+      "longitude": 24.418654
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.045849, 24.418654 (9)",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "place-0124",
+    "name": "Garlene",
+    "coordinates": {
+      "latitude": 57.262255,
+      "longitude": 22.805257
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.262255, 22.805257 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0125",
+    "name": "Garoza",
+    "coordinates": {
+      "latitude": 56.626829,
+      "longitude": 23.941651
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.626829, 23.941651 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0126",
+    "name": "Gatarta",
+    "coordinates": {
+      "latitude": 57.214301,
+      "longitude": 25.895793
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.214301, 25.895793 (14)",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "place-0127",
+    "name": "Gatartas pagasts",
+    "coordinates": {
+      "latitude": 57.214301,
+      "longitude": 25.895793
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.214301, 25.895793 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0128",
+    "name": "Gaujiena",
+    "coordinates": {
+      "latitude": 57.51734,
+      "longitude": 26.403088
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.517340, 26.403088 (23)",
+    "notes": null,
+    "legendCount": 23
+  },
+  {
+    "id": "place-0129",
+    "name": "Gaujienas pagasts",
+    "coordinates": {
+      "latitude": 57.534941,
+      "longitude": 26.419432
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.534941, 26.419432 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0130",
+    "name": "Gramzda",
+    "coordinates": {
+      "latitude": 56.367683,
+      "longitude": 21.60185
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.367683, 21.601850 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0131",
+    "name": "Grauzde",
+    "coordinates": {
+      "latitude": 56.794986,
+      "longitude": 23.326683
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.794986, 23.326683 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0132",
+    "name": "Grazdona",
+    "coordinates": {
+      "latitude": 56.967854,
+      "longitude": 24.12303
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.967854, 24.123030 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0133",
+    "name": "Grazdone",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0134",
+    "name": "Grašu pagasts",
+    "coordinates": {
+      "latitude": 56.986704,
+      "longitude": 26.274161
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.986704, 26.274161 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0135",
+    "name": "Grebla",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0136",
+    "name": "Grenči",
+    "coordinates": {
+      "latitude": 56.898126,
+      "longitude": 22.874527
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.898126, 22.874527 (2); 56.391378, 23.624842 (2)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0137",
+    "name": "Grobiņa",
+    "coordinates": {
+      "latitude": 56.539632,
+      "longitude": 21.166892
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.539632, 21.166892 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0138",
+    "name": "Gruncule",
+    "coordinates": {
+      "latitude": 57.459239,
+      "longitude": 26.266217
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.459239, 26.266217 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0139",
+    "name": "Grundzāles pagasts",
+    "coordinates": {
+      "latitude": 57.466801,
+      "longitude": 26.234026
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.466801, 26.234026 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0140",
+    "name": "Grāvendāle",
+    "coordinates": {
+      "latitude": 56.485706,
+      "longitude": 24.034977
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.485706, 24.034977 (11)",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "place-0141",
+    "name": "Grīva",
+    "coordinates": {
+      "latitude": 57.061504,
+      "longitude": 27.505532
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.061504, 27.505532 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0142",
+    "name": "Gulbene",
+    "coordinates": {
+      "latitude": 57.171482,
+      "longitude": 26.752254
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.171482, 26.752254 (59)",
+    "notes": null,
+    "legendCount": 60
+  },
+  {
+    "id": "place-0143",
+    "name": "Gārsene",
+    "coordinates": {
+      "latitude": 56.101259,
+      "longitude": 25.808732
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.101259, 25.808732 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0144",
+    "name": "Gārsiena",
+    "coordinates": {
+      "latitude": 56.101259,
+      "longitude": 25.808732
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.101259, 25.808732 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0145",
+    "name": "Iecava",
+    "coordinates": {
+      "latitude": 56.59536,
+      "longitude": 24.198956
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.595360, 24.198956 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0146",
+    "name": "Ikšķile",
+    "coordinates": {
+      "latitude": 56.833558,
+      "longitude": 24.49544
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.833558, 24.495440 (30)",
+    "notes": null,
+    "legendCount": 30
+  },
+  {
+    "id": "place-0147",
+    "name": "Ilūkstes apriņķis",
+    "coordinates": {
+      "latitude": 55.976315,
+      "longitude": 26.305525
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.976315, 26.305525 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0148",
+    "name": "Inciems",
+    "coordinates": {
+      "latitude": 57.2540952,
+      "longitude": 24.8742997
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.254095, 24.874300 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0149",
+    "name": "Inčukalna pagasts",
+    "coordinates": {
+      "latitude": 57.095444,
+      "longitude": 24.65032
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.095444, 24.650320 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0150",
+    "name": "Inčukalns",
+    "coordinates": {
+      "latitude": 57.099434,
+      "longitude": 24.685557
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.099434, 24.685557 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0151",
+    "name": "Izvaltas pagasts",
+    "coordinates": {
+      "latitude": 55.97253,
+      "longitude": 27.042749
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.972530, 27.042749 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0152",
+    "name": "Jasmuiža",
+    "coordinates": {
+      "latitude": 56.202239,
+      "longitude": 26.784639
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.202239, 26.784639 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0153",
+    "name": "Jasmuižas pagasts",
+    "coordinates": {
+      "latitude": 56.202239,
+      "longitude": 26.784639
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.202239, 26.784639 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0154",
+    "name": "Jaunauce",
+    "coordinates": {
+      "latitude": 56.446433,
+      "longitude": 22.691311
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.446433, 22.691311 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0155",
+    "name": "Jaunbebri",
+    "coordinates": {
+      "latitude": 56.740372,
+      "longitude": 25.586815
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.740372, 25.586815 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0156",
+    "name": "Jaunbrenguļi",
+    "coordinates": {
+      "latitude": 57.321401,
+      "longitude": 25.199032
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.321401, 25.199032 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0157",
+    "name": "Jaunciems",
+    "coordinates": {
+      "latitude": 57.390278,
+      "longitude": 22.753611
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.390963, 22.755424 (1); 57.390278, 22.753611 (1)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0158",
+    "name": "Jaundubulti",
+    "coordinates": {
+      "latitude": 56.961074,
+      "longitude": 23.757757
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.961074, 23.757757 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0159",
+    "name": "Jaungulbene",
+    "coordinates": {
+      "latitude": 57.063187,
+      "longitude": 26.597362
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.063187, 26.597362 (16)",
+    "notes": null,
+    "legendCount": 16
+  },
+  {
+    "id": "place-0160",
+    "name": "Jaunjelgavas pagasts",
+    "coordinates": {
+      "latitude": 56.593,
+      "longitude": 25.066155
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.593000, 25.066155 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0161",
+    "name": "Jaunkalsnava",
+    "coordinates": {
+      "latitude": 56.688363,
+      "longitude": 25.973079
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.688363, 25.973079 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0162",
+    "name": "Jaunlaicene",
+    "coordinates": {
+      "latitude": 57.5253,
+      "longitude": 26.870934
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.525300, 26.870934 (21)",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "place-0163",
+    "name": "Jaunlaicenes pagasts",
+    "coordinates": {
+      "latitude": 57.537564,
+      "longitude": 26.89161
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.537564, 26.891610 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0164",
+    "name": "Jaunmuiža",
+    "coordinates": {
+      "latitude": 56.614213,
+      "longitude": 22.071859
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.614213, 22.071859 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0165",
+    "name": "Jaunpiebalga",
+    "coordinates": {
+      "latitude": 57.177044,
+      "longitude": 26.03367
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.177044, 26.033670 (17)",
+    "notes": null,
+    "legendCount": 17
+  },
+  {
+    "id": "place-0166",
+    "name": "Jaunpils",
+    "coordinates": {
+      "latitude": 56.72998,
+      "longitude": 23.016588
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.990248, 25.263398 (1); 56.729980, 23.016588 (2)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0167",
+    "name": "Jaunroze",
+    "coordinates": {
+      "latitude": 57.547738,
+      "longitude": 26.714124
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.547738, 26.714124 (41)",
+    "notes": null,
+    "legendCount": 41
+  },
+  {
+    "id": "place-0168",
+    "name": "Jaunrozes pagasts",
+    "coordinates": {
+      "latitude": 57.54776,
+      "longitude": 26.714174
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.547760, 26.714174 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0169",
+    "name": "Jaunsaules pagasts",
+    "coordinates": {
+      "latitude": 56.345384,
+      "longitude": 24.447839
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.345384, 24.447839 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0170",
+    "name": "Jaunsērpils",
+    "coordinates": {
+      "latitude": 56.507938,
+      "longitude": 25.646235
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.507938, 25.646235 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0171",
+    "name": "Jaunā muiža",
+    "coordinates": {
+      "latitude": 56.524406,
+      "longitude": 25.973327
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.524406, 25.973327 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0172",
+    "name": "Jaunēnieši",
+    "coordinates": {
+      "latitude": 57.32888,
+      "longitude": 25.469989
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.328880, 25.469989 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0173",
+    "name": "Jelgavas apkārtne",
+    "coordinates": {
+      "latitude": 56.651109,
+      "longitude": 23.721354
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.651109, 23.721354 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0174",
+    "name": "Jelgavas apriņķis",
+    "coordinates": {
+      "latitude": 56.6534,
+      "longitude": 23.710102
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.653400, 23.710102 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0175",
+    "name": "Jumurda",
+    "coordinates": {
+      "latitude": 56.939864,
+      "longitude": 25.730919
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.939864, 25.730919 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0176",
+    "name": "Jēkabnieku pagasts",
+    "coordinates": {
+      "latitude": 56.533363,
+      "longitude": 23.59908
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.533363, 23.599080 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0177",
+    "name": "Jēkabpils",
+    "coordinates": {
+      "latitude": 56.501455,
+      "longitude": 25.878299
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.501455, 25.878299 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0178",
+    "name": "Jērkule",
+    "coordinates": {
+      "latitude": 57.209283,
+      "longitude": 24.763925
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.209283, 24.763925 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0179",
+    "name": "Jērkules pagasts",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0180",
+    "name": "Jūdaži",
+    "coordinates": {
+      "latitude": 57.107263,
+      "longitude": 24.936111
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.107263, 24.936111 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0181",
+    "name": "Kabile",
+    "coordinates": {
+      "latitude": 56.951279,
+      "longitude": 22.399744
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.951279, 22.399744 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0182",
+    "name": "Kacēnu pagasts",
+    "coordinates": {
+      "latitude": 57.466472,
+      "longitude": 27.764647
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.466472, 27.764647 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0183",
+    "name": "Kalnamuiža",
+    "coordinates": {
+      "latitude": 56.481402,
+      "longitude": 23.386849
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.481402, 23.386849 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0184",
+    "name": "Kalnciems",
+    "coordinates": {
+      "latitude": 56.802187,
+      "longitude": 23.605598
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.802187, 23.605598 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0185",
+    "name": "Kalsnava",
+    "coordinates": {
+      "latitude": 56.728918,
+      "longitude": 25.901241
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.728918, 25.901241 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0186",
+    "name": "Kalupe",
+    "coordinates": {
+      "latitude": 56.096879,
+      "longitude": 26.546332
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.096879, 26.546332 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0187",
+    "name": "Kalupes pagasts",
+    "coordinates": {
+      "latitude": 56.096879,
+      "longitude": 26.546332
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.096879, 26.546332 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0188",
+    "name": "Kalēti",
+    "coordinates": {
+      "latitude": 56.361964,
+      "longitude": 21.478859
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.361964, 21.478859 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0189",
+    "name": "Kamarišku pagasts",
+    "coordinates": {
+      "latitude": 55.721953,
+      "longitude": 26.388605
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.721953, 26.388605 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0190",
+    "name": "Kandava",
+    "coordinates": {
+      "latitude": 57.033151,
+      "longitude": 22.77679
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.033151, 22.776790 (13)",
+    "notes": null,
+    "legendCount": 13
+  },
+  {
+    "id": "place-0191",
+    "name": "Kandavas pagasts",
+    "coordinates": {
+      "latitude": 57.004093,
+      "longitude": 22.717504
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.004093, 22.717504 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0192",
+    "name": "Kapiņi",
+    "coordinates": {
+      "latitude": 56.140797,
+      "longitude": 27.112332
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.140797, 27.112332 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0193",
+    "name": "Kapiņu pagasts",
+    "coordinates": {
+      "latitude": 56.130786,
+      "longitude": 27.108963
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.130786, 27.108963 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0194",
+    "name": "Karva",
+    "coordinates": {
+      "latitude": 57.492091,
+      "longitude": 26.832022
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.492091, 26.832022 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0195",
+    "name": "Katriņa",
+    "coordinates": {
+      "latitude": 56.973497,
+      "longitude": 25.554829
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.973497, 25.554829 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0196",
+    "name": "Katvaru pagasts",
+    "coordinates": {
+      "latitude": 57.592673,
+      "longitude": 24.810137
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.592673, 24.810137 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0197",
+    "name": "Kauguri",
+    "coordinates": {
+      "latitude": 56.963748,
+      "longitude": 23.602314
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.963748, 23.602314 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0198",
+    "name": "Kaunata",
+    "coordinates": {
+      "latitude": 56.330474,
+      "longitude": 27.543543
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.330474, 27.543543 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0199",
+    "name": "Kaunatas pagasts",
+    "coordinates": {
+      "latitude": 56.288664,
+      "longitude": 27.590834
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.288664, 27.590834 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0200",
+    "name": "Kazdanga",
+    "coordinates": {
+      "latitude": 56.732629,
+      "longitude": 21.732806
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.732629, 21.732806 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0201",
+    "name": "Kliģene",
+    "coordinates": {
+      "latitude": 56.985158,
+      "longitude": 25.352859
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.985158, 25.352859 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0202",
+    "name": "Koknese",
+    "coordinates": {
+      "latitude": 56.649065,
+      "longitude": 25.431094
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.649065, 25.431094 (25)",
+    "notes": null,
+    "legendCount": 25
+  },
+  {
+    "id": "place-0203",
+    "name": "Kokneses pagasts",
+    "coordinates": {
+      "latitude": 56.655122,
+      "longitude": 25.416709
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.655122, 25.416709 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0204",
+    "name": "Kokorevas pagasts",
+    "coordinates": {
+      "latitude": 56.88933,
+      "longitude": 27.366864
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.889330, 27.366864 (17)",
+    "notes": null,
+    "legendCount": 17
+  },
+  {
+    "id": "place-0205",
+    "name": "Korvas pagasts",
+    "coordinates": {
+      "latitude": 57.492091,
+      "longitude": 26.832022
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.492091, 26.832022 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0206",
+    "name": "Kosa",
+    "coordinates": {
+      "latitude": 57.092101,
+      "longitude": 25.421152
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.092101, 25.421152 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0207",
+    "name": "Kosas pagasts",
+    "coordinates": {
+      "latitude": 57.092101,
+      "longitude": 25.421152
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.092101, 25.421152 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0208",
+    "name": "Krapa",
+    "coordinates": {
+      "latitude": 57.129796,
+      "longitude": 26.657792
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.129796, 26.657792 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0209",
+    "name": "Krape",
+    "coordinates": {
+      "latitude": 56.737382,
+      "longitude": 25.119641
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.737382, 25.119641 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0210",
+    "name": "Krapes pagasts",
+    "coordinates": {
+      "latitude": 56.727672,
+      "longitude": 25.19312
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.727672, 25.193120 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0211",
+    "name": "Kraukļu pagasts",
+    "coordinates": {
+      "latitude": 56.997338,
+      "longitude": 26.313208
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.997338, 26.313208 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0212",
+    "name": "Krustpils",
+    "coordinates": {
+      "latitude": 56.516139,
+      "longitude": 25.878317
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.516139, 25.878317 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0213",
+    "name": "Krustpils pagasts",
+    "coordinates": {
+      "latitude": 56.563214,
+      "longitude": 25.833703
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.563214, 25.833703 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0214",
+    "name": "Krūte",
+    "coordinates": {
+      "latitude": 56.379002,
+      "longitude": 21.425377
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.379002, 21.425377 (9)",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "place-0215",
+    "name": "Kubeles skola",
+    "coordinates": {
+      "latitude": 57.461862,
+      "longitude": 22.398636
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.461862, 22.398636 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0216",
+    "name": "Kursīši",
+    "coordinates": {
+      "latitude": 56.512114,
+      "longitude": 22.405964
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.512114, 22.405964 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0217",
+    "name": "Kursīšu pagasts",
+    "coordinates": {
+      "latitude": 56.505532,
+      "longitude": 22.347957
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.505532, 22.347957 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0218",
+    "name": "Kurzeme",
+    "coordinates": {
+      "latitude": 56.914028,
+      "longitude": 22.058861
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.914028, 22.058861 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0219",
+    "name": "Kurzemes vidiene",
+    "coordinates": {
+      "latitude": 56.914028,
+      "longitude": 22.058861
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.914028, 22.058861 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0220",
+    "name": "Kuršu kāpu Preiļi",
+    "coordinates": {
+      "latitude": 55.372107,
+      "longitude": 21.063031
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.372107, 21.063031 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0221",
+    "name": "Kuršu kāpu Preiļos",
+    "coordinates": {
+      "latitude": 55.372107,
+      "longitude": 21.063031
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.372107, 21.063031 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0222",
+    "name": "Kusas pagasts",
+    "coordinates": {
+      "latitude": 56.896899,
+      "longitude": 26.12853
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.896899, 26.128530 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0223",
+    "name": "Kārsava",
+    "coordinates": {
+      "latitude": 56.783781,
+      "longitude": 27.681978
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.783781, 27.681978 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0224",
+    "name": "Kārzdaba",
+    "coordinates": {
+      "latitude": 56.982593,
+      "longitude": 26.202594
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.982593, 26.202594 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0225",
+    "name": "Kārķu pagasts",
+    "coordinates": {
+      "latitude": 57.803594,
+      "longitude": 25.644084
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.803594, 25.644084 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0226",
+    "name": "Kārļu muižas pagasts",
+    "coordinates": {
+      "latitude": 57.24056,
+      "longitude": 25.212121
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.240560, 25.212121 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0227",
+    "name": "Latgale",
+    "coordinates": {
+      "latitude": 56.502444,
+      "longitude": 27.187056
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.502444, 27.187056 (14)",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "place-0228",
+    "name": "Laukgaļi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0229",
+    "name": "Lazdona",
+    "coordinates": {
+      "latitude": 56.827388,
+      "longitude": 26.243898
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.827388, 26.243898 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0230",
+    "name": "Laši",
+    "coordinates": {
+      "latitude": 55.959555,
+      "longitude": 26.117402
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.959555, 26.117402 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0231",
+    "name": "Lašu pagasts",
+    "coordinates": {
+      "latitude": 55.959555,
+      "longitude": 26.117402
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.959555, 26.117402 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0232",
+    "name": "Leišmale",
+    "coordinates": {
+      "latitude": 56.449333,
+      "longitude": 24.889032
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.449333, 24.889032 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0233",
+    "name": "Leišu robeža",
+    "coordinates": {
+      "latitude": 56.449333,
+      "longitude": 24.889032
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.449333, 24.889032 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0234",
+    "name": "Lejas pagasts",
+    "coordinates": {
+      "latitude": 57.278957,
+      "longitude": 26.575757
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.278957, 26.575757 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0235",
+    "name": "Lenču pagasts",
+    "coordinates": {
+      "latitude": 57.391096,
+      "longitude": 25.192848
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.391096, 25.192848 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0236",
+    "name": "Lesiņi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0237",
+    "name": "Lestene",
+    "coordinates": {
+      "latitude": 56.77394,
+      "longitude": 23.146236
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.773940, 23.146236 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0238",
+    "name": "Lielezere",
+    "coordinates": {
+      "latitude": 56.409175,
+      "longitude": 22.362505
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.409175, 22.362505 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0239",
+    "name": "Lieliecava",
+    "coordinates": {
+      "latitude": 56.59536,
+      "longitude": 24.198956
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.595360, 24.198956 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0240",
+    "name": "Lielplatone",
+    "coordinates": {
+      "latitude": 56.449185,
+      "longitude": 23.657849
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.449185, 23.657849 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0241",
+    "name": "Lielsatiķi",
+    "coordinates": {
+      "latitude": 56.819294,
+      "longitude": 22.548708
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.819294, 22.548708 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0242",
+    "name": "Lielsesava",
+    "coordinates": {
+      "latitude": 56.358064,
+      "longitude": 23.812995
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.358064, 23.812995 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0243",
+    "name": "Lielvircava",
+    "coordinates": {
+      "latitude": 56.518213,
+      "longitude": 23.740016
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.518213, 23.740016 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0244",
+    "name": "Lielvircavas pagasts",
+    "coordinates": {
+      "latitude": 56.518213,
+      "longitude": 23.740016
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.518213, 23.740016 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0245",
+    "name": "Lielvārde",
+    "coordinates": {
+      "latitude": 56.719152,
+      "longitude": 24.814229
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.719152, 24.814229 (26)",
+    "notes": null,
+    "legendCount": 26
+  },
+  {
+    "id": "place-0246",
+    "name": "Liepas muiža",
+    "coordinates": {
+      "latitude": 57.367696,
+      "longitude": 25.434553
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.367696, 25.434553 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0247",
+    "name": "Liepkalns",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0248",
+    "name": "Liepnas pagasts",
+    "coordinates": {
+      "latitude": 57.32734,
+      "longitude": 27.530341
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.327340, 27.530341 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0249",
+    "name": "Liepupe",
+    "coordinates": {
+      "latitude": 57.46393,
+      "longitude": 24.470248
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.463930, 24.470248 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0250",
+    "name": "Liepupes apgabals",
+    "coordinates": {
+      "latitude": 57.517431,
+      "longitude": 24.474417
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.517431, 24.474417 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0251",
+    "name": "Liepāja",
+    "coordinates": {
+      "latitude": 56.504668,
+      "longitude": 21.010806
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.504668, 21.010806 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0252",
+    "name": "Lietuva, Pestelišķi",
+    "coordinates": {
+      "latitude": 56.312409,
+      "longitude": 24.097472
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.312409, 24.097472 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0253",
+    "name": "Liezere",
+    "coordinates": {
+      "latitude": 57.018123,
+      "longitude": 26.059641
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.018123, 26.059641 (9); 57.018433, 26.064218 (1)",
+    "notes": null,
+    "legendCount": 10
+  },
+  {
+    "id": "place-0254",
+    "name": "Liezēre",
+    "coordinates": {
+      "latitude": 57.018436,
+      "longitude": 26.064247
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.018436, 26.064247 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0255",
+    "name": "Lieģi",
+    "coordinates": {
+      "latitude": 56.579268,
+      "longitude": 21.336228
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.579268, 21.336228 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0256",
+    "name": "Lilienfelde",
+    "coordinates": {
+      "latitude": 55.896401,
+      "longitude": 26.420881
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.896401, 26.420881 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0257",
+    "name": "Limbaži",
+    "coordinates": {
+      "latitude": 57.512983,
+      "longitude": 24.721996
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.512983, 24.721996 (19)",
+    "notes": null,
+    "legendCount": 19
+  },
+  {
+    "id": "place-0258",
+    "name": "Linde",
+    "coordinates": {
+      "latitude": 56.698964,
+      "longitude": 24.844037
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.698964, 24.844037 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0259",
+    "name": "Lindes pagasts",
+    "coordinates": {
+      "latitude": 56.698964,
+      "longitude": 24.844037
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.698964, 24.844037 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0260",
+    "name": "Litene",
+    "coordinates": {
+      "latitude": 57.189794,
+      "longitude": 27.02305
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.189794, 27.023050 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0261",
+    "name": "Lizuma pagasts",
+    "coordinates": {
+      "latitude": 57.219024,
+      "longitude": 26.362043
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.219024, 26.362043 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0262",
+    "name": "Lizums",
+    "coordinates": {
+      "latitude": 57.188033,
+      "longitude": 26.370253
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.188033, 26.370253 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0263",
+    "name": "Lode",
+    "coordinates": {
+      "latitude": 57.131085,
+      "longitude": 25.645974
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.131085, 25.645974 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0264",
+    "name": "Lodes muiža",
+    "coordinates": {
+      "latitude": 57.131085,
+      "longitude": 25.645974
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.131085, 25.645974 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0265",
+    "name": "Lubeja",
+    "coordinates": {
+      "latitude": 56.938586,
+      "longitude": 25.962063
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.938586, 25.962063 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0266",
+    "name": "Lubāna",
+    "coordinates": {
+      "latitude": 56.899927,
+      "longitude": 26.719879
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.899927, 26.719879 (63)",
+    "notes": null,
+    "legendCount": 63
+  },
+  {
+    "id": "place-0267",
+    "name": "Lugaži",
+    "coordinates": {
+      "latitude": 57.765161,
+      "longitude": 25.951531
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.765161, 25.951531 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0268",
+    "name": "Luste",
+    "coordinates": {
+      "latitude": 56.695583,
+      "longitude": 23.345702
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.695583, 23.345702 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0269",
+    "name": "Lutriņu pagasts",
+    "coordinates": {
+      "latitude": 56.733695,
+      "longitude": 22.329279
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.733695, 22.329279 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0270",
+    "name": "Lībagu pagasts",
+    "coordinates": {
+      "latitude": 57.186044,
+      "longitude": 22.574293
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.186044, 22.574293 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0271",
+    "name": "Līksna",
+    "coordinates": {
+      "latitude": 55.986617,
+      "longitude": 26.397738
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.986617, 26.397738 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0272",
+    "name": "Līksnas pagasts",
+    "coordinates": {
+      "latitude": 55.961186,
+      "longitude": 26.47442
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.961186, 26.474420 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0273",
+    "name": "Līkumu pagasts",
+    "coordinates": {
+      "latitude": 56.610437,
+      "longitude": 25.732214
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.610437, 25.732214 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0274",
+    "name": "Līvbērze",
+    "coordinates": {
+      "latitude": 56.686701,
+      "longitude": 23.501851
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.686701, 23.501851 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0275",
+    "name": "Līvbērznieki",
+    "coordinates": {
+      "latitude": 56.686701,
+      "longitude": 23.501851
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.686701, 23.501851 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0276",
+    "name": "Līvāni",
+    "coordinates": {
+      "latitude": 56.355176,
+      "longitude": 26.172526
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.355176, 26.172526 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0277",
+    "name": "Madaliena",
+    "coordinates": {
+      "latitude": 56.845224,
+      "longitude": 25.155215
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.845224, 25.155215 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0278",
+    "name": "Madaliņas baznīca",
+    "coordinates": {
+      "latitude": 56.217955,
+      "longitude": 26.236989
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.217955, 26.236989 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0279",
+    "name": "Madliena",
+    "coordinates": {
+      "latitude": 56.845224,
+      "longitude": 25.155215
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.845224, 25.155215 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0280",
+    "name": "Makašānu pagasts",
+    "coordinates": {
+      "latitude": 56.587658,
+      "longitude": 27.315628
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.587658, 27.315628 (20)",
+    "notes": null,
+    "legendCount": 20
+  },
+  {
+    "id": "place-0281",
+    "name": "Maliena",
+    "coordinates": {
+      "latitude": 57.35365,
+      "longitude": 27.17867
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.353650, 27.178670 (12)",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "place-0282",
+    "name": "Mangaļi",
+    "coordinates": {
+      "latitude": 57.018506,
+      "longitude": 24.12914
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.018506, 24.129140 (3)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0283",
+    "name": "Matkule",
+    "coordinates": {
+      "latitude": 56.981554,
+      "longitude": 22.595436
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.981554, 22.595436 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0284",
+    "name": "Mazlaicene",
+    "coordinates": {
+      "latitude": 57.594133,
+      "longitude": 26.944182
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.594133, 26.944182 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0285",
+    "name": "Mazsalaca",
+    "coordinates": {
+      "latitude": 57.860649,
+      "longitude": 25.055591
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.860649, 25.055591 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0286",
+    "name": "Mazsalacas pagasts",
+    "coordinates": {
+      "latitude": 57.926775,
+      "longitude": 25.066989
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.926775, 25.066989 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0287",
+    "name": "Meirāni",
+    "coordinates": {
+      "latitude": 56.829758,
+      "longitude": 26.614457
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.829758, 26.614457 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0288",
+    "name": "Meņģele",
+    "coordinates": {
+      "latitude": 56.806528,
+      "longitude": 25.416797
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.806528, 25.416797 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0289",
+    "name": "Meņģeles pagasts",
+    "coordinates": {
+      "latitude": 56.803285,
+      "longitude": 25.399189
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.803285, 25.399189 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0290",
+    "name": "Mežotne",
+    "coordinates": {
+      "latitude": 56.442026,
+      "longitude": 24.055357
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.442026, 24.055357 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0291",
+    "name": "Misa",
+    "coordinates": {
+      "latitude": 56.743163,
+      "longitude": 23.966328
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.743163, 23.966328 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0292",
+    "name": "Mores pagasts",
+    "coordinates": {
+      "latitude": 57.066799,
+      "longitude": 25.070563
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.066799, 25.070563 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0293",
+    "name": "Mujāni",
+    "coordinates": {
+      "latitude": 57.524407,
+      "longitude": 25.280608
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.524407, 25.280608 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0294",
+    "name": "Mujānu pagasts",
+    "coordinates": {
+      "latitude": 57.536375,
+      "longitude": 25.248526
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.536375, 25.248526 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0295",
+    "name": "Mālupe",
+    "coordinates": {
+      "latitude": 57.339211,
+      "longitude": 27.232944
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.339211, 27.232944 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0296",
+    "name": "Mālupes pagasts",
+    "coordinates": {
+      "latitude": 57.325013,
+      "longitude": 27.280288
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.325013, 27.280288 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0297",
+    "name": "Mārciena",
+    "coordinates": {
+      "latitude": 56.775697,
+      "longitude": 26.123843
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.775697, 26.123843 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0298",
+    "name": "Mārsnēnu pagasts",
+    "coordinates": {
+      "latitude": 57.419266,
+      "longitude": 25.567002
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.419266, 25.567002 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0299",
+    "name": "Mārupes pagasts",
+    "coordinates": {
+      "latitude": 56.896572,
+      "longitude": 24.046005
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.896572, 24.046005 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0300",
+    "name": "Mēdzula",
+    "coordinates": {
+      "latitude": 57.020331,
+      "longitude": 25.945215
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.020331, 25.945215 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0301",
+    "name": "Mēdzūla",
+    "coordinates": {
+      "latitude": 57.020331,
+      "longitude": 25.945215
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.020331, 25.945215 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0302",
+    "name": "Mēdzūlas pagasts",
+    "coordinates": {
+      "latitude": 57.020331,
+      "longitude": 25.945215
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.020331, 25.945215 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0303",
+    "name": "Mēmeles pagasts",
+    "coordinates": {
+      "latitude": 56.327872,
+      "longitude": 24.55058
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.327872, 24.550580 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0304",
+    "name": "Mērdzenes pagasts",
+    "coordinates": {
+      "latitude": 56.695807,
+      "longitude": 27.7681
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.695807, 27.768100 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0305",
+    "name": "Mēri",
+    "coordinates": {
+      "latitude": 57.443291,
+      "longitude": 26.09159
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.443291, 26.091590 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0306",
+    "name": "Mēru pagasts",
+    "coordinates": {
+      "latitude": 57.444902,
+      "longitude": 26.092646
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.444902, 26.092646 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0307",
+    "name": "Mīlakšas",
+    "coordinates": {
+      "latitude": 57.214301,
+      "longitude": 25.895793
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.214301, 25.895793 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0308",
+    "name": "Mīlakši",
+    "coordinates": {
+      "latitude": 57.255843,
+      "longitude": 25.942658
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.255843, 25.942658 (8); 57.255900, 25.942586 (2); 57.214301, 25.895793 (1)",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "place-0309",
+    "name": "Mīlgrāvis",
+    "coordinates": {
+      "latitude": 57.029162,
+      "longitude": 24.144084
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.029162, 24.144084 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0310",
+    "name": "Mūrmuiža",
+    "coordinates": {
+      "latitude": 57.474978,
+      "longitude": 25.491651
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.474978, 25.491651 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0311",
+    "name": "Naudīte",
+    "coordinates": {
+      "latitude": 56.534635,
+      "longitude": 23.195994
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.534635, 23.195994 (18)",
+    "notes": null,
+    "legendCount": 18
+  },
+  {
+    "id": "place-0312",
+    "name": "Naukšēni",
+    "coordinates": {
+      "latitude": 57.885252,
+      "longitude": 25.459776
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.885252, 25.459776 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0313",
+    "name": "Nereta",
+    "coordinates": {
+      "latitude": 56.20472,
+      "longitude": 25.307767
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.204720, 25.307767 (6); 56.198791, 25.325195 (1)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0314",
+    "name": "Nirzas pagasts",
+    "coordinates": {
+      "latitude": 56.39374,
+      "longitude": 27.908532
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.393740, 27.908532 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0315",
+    "name": "Nogale",
+    "coordinates": {
+      "latitude": 57.369123,
+      "longitude": 22.729198
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.369123, 22.729198 (35)",
+    "notes": null,
+    "legendCount": 35
+  },
+  {
+    "id": "place-0316",
+    "name": "Nurmuiža",
+    "coordinates": {
+      "latitude": 57.226405,
+      "longitude": 22.762069
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.226405, 22.762069 (15)",
+    "notes": null,
+    "legendCount": 15
+  },
+  {
+    "id": "place-0317",
+    "name": "Nēķine",
+    "coordinates": {
+      "latitude": 57.391233,
+      "longitude": 26.944845
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.391233, 26.944845 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0318",
+    "name": "Nīca",
+    "coordinates": {
+      "latitude": 56.346498,
+      "longitude": 21.065493
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.346498, 21.065493 (58)",
+    "notes": null,
+    "legendCount": 58
+  },
+  {
+    "id": "place-0319",
+    "name": "Nīcgale",
+    "coordinates": {
+      "latitude": 56.134821,
+      "longitude": 26.365399
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.134821, 26.365399 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0320",
+    "name": "Nīcgales apkārtne",
+    "coordinates": {
+      "latitude": 56.143252,
+      "longitude": 26.414023
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.143252, 26.414023 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0321",
+    "name": "Nīgrande",
+    "coordinates": {
+      "latitude": 56.485415,
+      "longitude": 22.092268
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.485415, 22.092268 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0322",
+    "name": "Nīgrandes pagasts",
+    "coordinates": {
+      "latitude": 56.456628,
+      "longitude": 22.043066
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.456628, 22.043066 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0323",
+    "name": "Nīkrāces pagasts",
+    "coordinates": {
+      "latitude": 56.58314,
+      "longitude": 21.933268
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.583140, 21.933268 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0324",
+    "name": "Nītaure",
+    "coordinates": {
+      "latitude": 57.064273,
+      "longitude": 25.190475
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.064273, 25.190475 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0325",
+    "name": "Nītaures pagasts",
+    "coordinates": {
+      "latitude": 57.070027,
+      "longitude": 25.224321
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.070027, 25.224321 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0326",
+    "name": "Odzienas pagasts",
+    "coordinates": {
+      "latitude": 56.71347,
+      "longitude": 25.684091
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.713470, 25.684091 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0327",
+    "name": "Ogre",
+    "coordinates": {
+      "latitude": 56.814736,
+      "longitude": 24.604455
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.814736, 24.604455 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0328",
+    "name": "Ogresgala pagasts",
+    "coordinates": {
+      "latitude": 56.804746,
+      "longitude": 24.719317
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.804746, 24.719317 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0329",
+    "name": "Ogresgals",
+    "coordinates": {
+      "latitude": 56.807931,
+      "longitude": 24.737745
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.807931, 24.737745 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0330",
+    "name": "Olaine",
+    "coordinates": {
+      "latitude": 56.789674,
+      "longitude": 23.92958
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.789674, 23.929580 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0331",
+    "name": "Oleri",
+    "coordinates": {
+      "latitude": 57.80362,
+      "longitude": 25.400709
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.803620, 25.400709 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0332",
+    "name": "Otaņķe",
+    "coordinates": {
+      "latitude": 57.390975,
+      "longitude": 23.793624
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.390975, 23.793624 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0333",
+    "name": "Otaņķi",
+    "coordinates": {
+      "latitude": 56.425258,
+      "longitude": 21.100777
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.425258, 21.100777 (13)",
+    "notes": null,
+    "legendCount": 13
+  },
+  {
+    "id": "place-0334",
+    "name": "Ozolmuiža",
+    "coordinates": {
+      "latitude": 57.637752,
+      "longitude": 25.047476
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.637752, 25.047476 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0335",
+    "name": "Ozolmuižas pagasts",
+    "coordinates": {
+      "latitude": 56.496963,
+      "longitude": 27.277921
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.496963, 27.277921 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0336",
+    "name": "Ozolnieki",
+    "coordinates": {
+      "latitude": 56.688534,
+      "longitude": 23.777469
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.688534, 23.777469 (20)",
+    "notes": null,
+    "legendCount": 20
+  },
+  {
+    "id": "place-0337",
+    "name": "Palsmane",
+    "coordinates": {
+      "latitude": 57.389912,
+      "longitude": 26.183327
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.389912, 26.183327 (21)",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "place-0338",
+    "name": "Palsmanes pagasts",
+    "coordinates": {
+      "latitude": 57.388398,
+      "longitude": 26.149023
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.388398, 26.149023 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0339",
+    "name": "Pastende",
+    "coordinates": {
+      "latitude": 57.220918,
+      "longitude": 22.518035
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.220918, 22.518035 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0340",
+    "name": "Patkule",
+    "coordinates": {
+      "latitude": 56.909775,
+      "longitude": 26.294105
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.909775, 26.294105 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0341",
+    "name": "Patkules pagasts",
+    "coordinates": {
+      "latitude": 56.909775,
+      "longitude": 26.294105
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.909775, 26.294105 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0342",
+    "name": "Paškules pagasts",
+    "coordinates": {
+      "latitude": 56.909775,
+      "longitude": 26.294105
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.909775, 26.294105 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0343",
+    "name": "Penkule",
+    "coordinates": {
+      "latitude": 56.48606,
+      "longitude": 23.185671
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.486060, 23.185671 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0344",
+    "name": "Penkules pagasts",
+    "coordinates": {
+      "latitude": 56.492722,
+      "longitude": 23.210147
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.492722, 23.210147 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0345",
+    "name": "Piebalga",
+    "coordinates": {
+      "latitude": 57.151391,
+      "longitude": 25.992021
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.151391, 25.992021 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0346",
+    "name": "Pienava",
+    "coordinates": {
+      "latitude": 56.740851,
+      "longitude": 23.253574
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.740851, 23.253574 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0347",
+    "name": "Pienavas pagasts",
+    "coordinates": {
+      "latitude": 56.740851,
+      "longitude": 23.253574
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.740851, 23.253574 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0348",
+    "name": "Pilda",
+    "coordinates": {
+      "latitude": 56.403965,
+      "longitude": 27.7465
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.403965, 27.746500 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0349",
+    "name": "Pildas pagasts",
+    "coordinates": {
+      "latitude": 56.348165,
+      "longitude": 27.746195
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.348165, 27.746195 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0350",
+    "name": "Piltene",
+    "coordinates": {
+      "latitude": 57.224626,
+      "longitude": 21.677583
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.224626, 21.677583 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0351",
+    "name": "Pleskava",
+    "coordinates": {
+      "latitude": 57.816701,
+      "longitude": 28.33447
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.816701, 28.334470 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0352",
+    "name": "Plātere",
+    "coordinates": {
+      "latitude": 56.835008,
+      "longitude": 25.210382
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.835008, 25.210382 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0353",
+    "name": "Plāņi",
+    "coordinates": {
+      "latitude": 57.53774,
+      "longitude": 25.865279
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.537740, 25.865279 (29)",
+    "notes": null,
+    "legendCount": 29
+  },
+  {
+    "id": "place-0354",
+    "name": "Plāņu pagasts",
+    "coordinates": {
+      "latitude": 57.622547,
+      "longitude": 25.804809
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.622547, 25.804809 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0355",
+    "name": "Pociems",
+    "coordinates": {
+      "latitude": 57.596003,
+      "longitude": 24.850608
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.596003, 24.850608 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0356",
+    "name": "Praulienas pagasts",
+    "coordinates": {
+      "latitude": 56.821992,
+      "longitude": 26.347337
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.821992, 26.347337 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0357",
+    "name": "Praviņu pagasts",
+    "coordinates": {
+      "latitude": 56.890732,
+      "longitude": 23.235635
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.890732, 23.235635 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0358",
+    "name": "Preiļi",
+    "coordinates": {
+      "latitude": 56.290878,
+      "longitude": 26.721958
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.290878, 26.721958 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0359",
+    "name": "Preiļu pagasts",
+    "coordinates": {
+      "latitude": 56.290878,
+      "longitude": 26.721958
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.300848, 26.670215 (5); 56.290878, 26.721958 (1)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0360",
+    "name": "Priedaine",
+    "coordinates": {
+      "latitude": 56.9777,
+      "longitude": 23.938844
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.977700, 23.938844 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0361",
+    "name": "Priekule",
+    "coordinates": {
+      "latitude": 56.447466,
+      "longitude": 21.600166
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.447466, 21.600166 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0362",
+    "name": "Puikules pagasts",
+    "coordinates": {
+      "latitude": 57.687149,
+      "longitude": 24.882699
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.687149, 24.882699 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0363",
+    "name": "Puzes pagasts",
+    "coordinates": {
+      "latitude": 57.366191,
+      "longitude": 22.055573
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.366191, 22.055573 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0364",
+    "name": "Puķele",
+    "coordinates": {
+      "latitude": 57.687149,
+      "longitude": 24.882699
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.687149, 24.882699 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0365",
+    "name": "Pāle",
+    "coordinates": {
+      "latitude": 57.701708,
+      "longitude": 24.664
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.701708, 24.664000 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0366",
+    "name": "Pērses apgabals",
+    "coordinates": {
+      "latitude": 56.676255,
+      "longitude": 25.496163
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.676255, 25.496163 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0367",
+    "name": "Pēterburga",
+    "coordinates": {
+      "latitude": 59.927533,
+      "longitude": 30.465434
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "59.927533, 30.465434 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0368",
+    "name": "Pēternieki",
+    "coordinates": {
+      "latitude": 56.762528,
+      "longitude": 23.934816
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.762528, 23.934816 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0369",
+    "name": "Pēterupe",
+    "coordinates": {
+      "latitude": 57.257474,
+      "longitude": 24.439882
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.257474, 24.439882 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0370",
+    "name": "Pļaviņas",
+    "coordinates": {
+      "latitude": 56.618245,
+      "longitude": 25.725792
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.618245, 25.725792 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0371",
+    "name": "Raibenieki",
+    "coordinates": {
+      "latitude": 56.580166,
+      "longitude": 21.381553
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.580166, 21.381553 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0372",
+    "name": "Ranka",
+    "coordinates": {
+      "latitude": 57.210523,
+      "longitude": 26.184278
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.210523, 26.184278 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0373",
+    "name": "Rauna",
+    "coordinates": {
+      "latitude": 57.331693,
+      "longitude": 25.610034
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.331693, 25.610034 (35); 57.331698, 25.610039 (2); 57.331694, 25.610035 (1); 57.331695, 25.610036 (1); 57.331696, 25.610037 (1); 57.331697, 25.610038 (1); 57.390975, 23.793624 (1)",
+    "notes": null,
+    "legendCount": 42
+  },
+  {
+    "id": "place-0374",
+    "name": "Raunas pagasts",
+    "coordinates": {
+      "latitude": 57.315451,
+      "longitude": 25.654069
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.315451, 25.654069 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0375",
+    "name": "Rauza",
+    "coordinates": {
+      "latitude": 57.407235,
+      "longitude": 26.115982
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.407235, 26.115982 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0376",
+    "name": "Rauzas pagasts",
+    "coordinates": {
+      "latitude": 57.407235,
+      "longitude": 26.115982
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.407235, 26.115982 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0377",
+    "name": "Raņķi",
+    "coordinates": {
+      "latitude": 56.780835,
+      "longitude": 21.993553
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.780835, 21.993553 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0378",
+    "name": "Raņķu pagasts",
+    "coordinates": {
+      "latitude": 56.798631,
+      "longitude": 21.981394
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.798631, 21.981394 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0379",
+    "name": "Rembate",
+    "coordinates": {
+      "latitude": 56.752147,
+      "longitude": 24.779733
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.752147, 24.779733 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0380",
+    "name": "Rencēni",
+    "coordinates": {
+      "latitude": 57.728987,
+      "longitude": 25.428093
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.728987, 25.428093 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0381",
+    "name": "Renda",
+    "coordinates": {
+      "latitude": 57.066978,
+      "longitude": 22.288959
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.066978, 22.288959 (14)",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "place-0382",
+    "name": "Rendas pagasts",
+    "coordinates": {
+      "latitude": 57.069985,
+      "longitude": 22.242887
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.069985, 22.242887 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0383",
+    "name": "Reņģe",
+    "coordinates": {
+      "latitude": 56.390796,
+      "longitude": 22.615219
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.390796, 22.615219 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0384",
+    "name": "Riktere",
+    "coordinates": {
+      "latitude": 56.957645,
+      "longitude": 24.918135
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.957645, 24.918135 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0385",
+    "name": "Rikteres pagasts",
+    "coordinates": {
+      "latitude": 56.954493,
+      "longitude": 24.901502
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.954493, 24.901502 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0386",
+    "name": "Romeškalns",
+    "coordinates": {
+      "latitude": 57.563039,
+      "longitude": 26.910965
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.563039, 26.910965 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0387",
+    "name": "Ropaži",
+    "coordinates": {
+      "latitude": 56.97532,
+      "longitude": 24.629619
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.975320, 24.629619 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0388",
+    "name": "Rozentavas pagasts",
+    "coordinates": {
+      "latitude": 56.341704,
+      "longitude": 27.182689
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.341704, 27.182689 (9)",
+    "notes": null,
+    "legendCount": 9
+  },
+  {
+    "id": "place-0389",
+    "name": "Rozentovas pagasts",
+    "coordinates": {
+      "latitude": 56.341704,
+      "longitude": 27.182689
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.341704, 27.182689 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0390",
+    "name": "Rubas pagasts",
+    "coordinates": {
+      "latitude": 56.405869,
+      "longitude": 22.561362
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.405869, 22.561362 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0391",
+    "name": "Rubene",
+    "coordinates": {
+      "latitude": 57.466951,
+      "longitude": 25.256957
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.466951, 25.256957 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0392",
+    "name": "Rucava",
+    "coordinates": {
+      "latitude": 56.163691,
+      "longitude": 21.159481
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.163691, 21.159481 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0393",
+    "name": "Rudbārži",
+    "coordinates": {
+      "latitude": 56.642405,
+      "longitude": 21.883971
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.642405, 21.883971 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0394",
+    "name": "Rudzētu pagasts",
+    "coordinates": {
+      "latitude": 56.455338,
+      "longitude": 26.471094
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.455338, 26.471094 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0395",
+    "name": "Rugāju pagasts",
+    "coordinates": {
+      "latitude": 57.035193,
+      "longitude": 27.109556
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.035193, 27.109556 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0396",
+    "name": "Rumbenieki",
+    "coordinates": {
+      "latitude": 56.990206,
+      "longitude": 22.045213
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.990206, 22.045213 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0397",
+    "name": "Rundāle",
+    "coordinates": {
+      "latitude": 56.413433,
+      "longitude": 24.024491
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.413433, 24.024491 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0398",
+    "name": "Rušūna",
+    "coordinates": {
+      "latitude": 56.211883,
+      "longitude": 26.896576
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.211883, 26.896576 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0399",
+    "name": "Rāmuļi",
+    "coordinates": {
+      "latitude": 57.212569,
+      "longitude": 25.41515
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.212569, 25.415150 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0400",
+    "name": "Rēzekne",
+    "coordinates": {
+      "latitude": 56.509922,
+      "longitude": 27.333136
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.509922, 27.333136 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0401",
+    "name": "Rēzeknes apkārtne",
+    "coordinates": {
+      "latitude": 56.509922,
+      "longitude": 27.333136
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.509922, 27.333136 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0402",
+    "name": "Rēznas pagasts",
+    "coordinates": {
+      "latitude": 56.335441,
+      "longitude": 27.446717
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.335441, 27.446717 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0403",
+    "name": "Rīga",
+    "coordinates": {
+      "latitude": 56.949649,
+      "longitude": 24.105186
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.949649, 24.105186 (51); 56.949650, 24.105187 (1); 56.949651, 24.105188 (1); 56.949652, 24.105189 (1); 56.949653, 24.105190 (1); 56.949654, 24.105191 (1)",
+    "notes": null,
+    "legendCount": 56
+  },
+  {
+    "id": "place-0404",
+    "name": "Rīgas apgabals",
+    "coordinates": {
+      "latitude": 56.969094,
+      "longitude": 24.101013
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.969094, 24.101013 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0405",
+    "name": "Rūjiena",
+    "coordinates": {
+      "latitude": 57.893891,
+      "longitude": 25.339336
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.893891, 25.339336 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0406",
+    "name": "Rūjienas pagasts",
+    "coordinates": {
+      "latitude": 57.893729,
+      "longitude": 25.339101
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.893729, 25.339101 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0407",
+    "name": "Sabile",
+    "coordinates": {
+      "latitude": 57.047929,
+      "longitude": 22.568172
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.047929, 22.568172 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0408",
+    "name": "Saikava",
+    "coordinates": {
+      "latitude": 56.759416,
+      "longitude": 26.389982
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.759416, 26.389982 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0409",
+    "name": "Sakstagala pagasts",
+    "coordinates": {
+      "latitude": 56.510527,
+      "longitude": 27.11802
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.510527, 27.118020 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0410",
+    "name": "Salaca",
+    "coordinates": {
+      "latitude": 57.876858,
+      "longitude": 25.056171
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.876858, 25.056171 (7)",
+    "notes": null,
+    "legendCount": 7
+  },
+  {
+    "id": "place-0411",
+    "name": "Salaspils",
+    "coordinates": {
+      "latitude": 56.856429,
+      "longitude": 24.352272
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.856429, 24.352272 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0412",
+    "name": "Salaspils pagasts",
+    "coordinates": {
+      "latitude": 56.860815,
+      "longitude": 24.349788
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.860815, 24.349788 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0413",
+    "name": "Saldus",
+    "coordinates": {
+      "latitude": 56.665302,
+      "longitude": 22.492169
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.665302, 22.492169 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0414",
+    "name": "Salenieki",
+    "coordinates": {
+      "latitude": 56.895038,
+      "longitude": 24.478196
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.895038, 24.478196 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0415",
+    "name": "Salenieku pagasts",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0416",
+    "name": "Sante",
+    "coordinates": {
+      "latitude": 56.836459,
+      "longitude": 22.738431
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.836459, 22.738431 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0417",
+    "name": "Sarkaņu pagasts",
+    "coordinates": {
+      "latitude": 56.901972,
+      "longitude": 26.36852
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.901972, 26.368520 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0418",
+    "name": "Sasmaka",
+    "coordinates": {
+      "latitude": 57.369055,
+      "longitude": 22.591118
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.369055, 22.591118 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0419",
+    "name": "Sauka",
+    "coordinates": {
+      "latitude": 56.275234,
+      "longitude": 25.481709
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.275234, 25.481709 (16)",
+    "notes": null,
+    "legendCount": 16
+  },
+  {
+    "id": "place-0420",
+    "name": "Saukas pagasts",
+    "coordinates": {
+      "latitude": 56.293377,
+      "longitude": 25.425169
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.293377, 25.425169 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0421",
+    "name": "Sausneja",
+    "coordinates": {
+      "latitude": 56.794427,
+      "longitude": 25.711139
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.794427, 25.711139 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0422",
+    "name": "Sausnēja",
+    "coordinates": {
+      "latitude": 56.794427,
+      "longitude": 25.711139
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.794427, 25.711139 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0423",
+    "name": "Sece",
+    "coordinates": {
+      "latitude": 56.559895,
+      "longitude": 25.3972
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.559895, 25.397200 (14)",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "place-0424",
+    "name": "Seces pagasts",
+    "coordinates": {
+      "latitude": 56.555529,
+      "longitude": 25.377678
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.555529, 25.377678 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0425",
+    "name": "Sesava",
+    "coordinates": {
+      "latitude": 56.425236,
+      "longitude": 23.816233
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.425236, 23.816233 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0426",
+    "name": "Sigulda",
+    "coordinates": {
+      "latitude": 57.149563,
+      "longitude": 24.860333
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.149563, 24.860333 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0427",
+    "name": "Silajāņu pagasts",
+    "coordinates": {
+      "latitude": 56.36494,
+      "longitude": 26.913343
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.364940, 26.913343 (11)",
+    "notes": null,
+    "legendCount": 11
+  },
+  {
+    "id": "place-0428",
+    "name": "Skaistkalne",
+    "coordinates": {
+      "latitude": 56.385009,
+      "longitude": 24.646537
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.385009, 24.646537 (22)",
+    "notes": null,
+    "legendCount": 22
+  },
+  {
+    "id": "place-0429",
+    "name": "Skaistkalnes apvidus",
+    "coordinates": {
+      "latitude": 56.385009,
+      "longitude": 24.646537
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.385009, 24.646537 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0430",
+    "name": "Skaistkalnes pagasts",
+    "coordinates": {
+      "latitude": 56.378046,
+      "longitude": 24.587477
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.378046, 24.587477 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0431",
+    "name": "Skrunda",
+    "coordinates": {
+      "latitude": 56.674534,
+      "longitude": 22.004971
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.674534, 22.004971 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0432",
+    "name": "Skrundas pagasts",
+    "coordinates": {
+      "latitude": 56.674534,
+      "longitude": 22.004971
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.674534, 22.004971 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0433",
+    "name": "Skrīveri",
+    "coordinates": {
+      "latitude": 56.637074,
+      "longitude": 25.114346
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.637074, 25.114346 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0434",
+    "name": "Skujene",
+    "coordinates": {
+      "latitude": 57.096407,
+      "longitude": 25.475582
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.096407, 25.475582 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0435",
+    "name": "Skulte",
+    "coordinates": {
+      "latitude": 57.31832,
+      "longitude": 24.436441
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.368183, 24.496527 (1); 57.318320, 24.436441 (1)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0436",
+    "name": "Skultes, Limbažu apkārtne",
+    "coordinates": {
+      "latitude": 57.368183,
+      "longitude": 24.496527
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.368183, 24.496527 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0437",
+    "name": "Skursteņmuiža",
+    "coordinates": {
+      "latitude": 56.433447,
+      "longitude": 23.782675
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.433447, 23.782675 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0438",
+    "name": "Skursteņu muižā",
+    "coordinates": {
+      "latitude": 56.433447,
+      "longitude": 23.782675
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.433447, 23.782675 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0439",
+    "name": "Slates pagasts",
+    "coordinates": {
+      "latitude": 56.201103,
+      "longitude": 25.99717
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.201103, 25.997170 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0440",
+    "name": "Sloka",
+    "coordinates": {
+      "latitude": 56.939639,
+      "longitude": 23.512817
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.939639, 23.512817 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0441",
+    "name": "Smiltene",
+    "coordinates": {
+      "latitude": 57.423063,
+      "longitude": 25.900378
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.423063, 25.900378 (87)",
+    "notes": null,
+    "legendCount": 87
+  },
+  {
+    "id": "place-0442",
+    "name": "Smiltenes pagasts",
+    "coordinates": {
+      "latitude": 57.451421,
+      "longitude": 25.864327
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.451421, 25.864327 (77)",
+    "notes": null,
+    "legendCount": 77
+  },
+  {
+    "id": "place-0443",
+    "name": "Smārde",
+    "coordinates": {
+      "latitude": 56.949661,
+      "longitude": 23.337112
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.949661, 23.337112 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0444",
+    "name": "Snēpele",
+    "coordinates": {
+      "latitude": 56.842947,
+      "longitude": 21.944971
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.842947, 21.944971 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0445",
+    "name": "Spriestiņi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0446",
+    "name": "Starti",
+    "coordinates": {
+      "latitude": 57.409967,
+      "longitude": 25.524702
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.409967, 25.524702 (13)",
+    "notes": null,
+    "legendCount": 13
+  },
+  {
+    "id": "place-0447",
+    "name": "Staļģene",
+    "coordinates": {
+      "latitude": 56.570756,
+      "longitude": 23.956173
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.570756, 23.956173 (1); 57.390975, 23.793624 (1)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0448",
+    "name": "Stende",
+    "coordinates": {
+      "latitude": 57.141246,
+      "longitude": 22.536656
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.141246, 22.536656 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0449",
+    "name": "Stendes pagasts",
+    "coordinates": {
+      "latitude": 57.141246,
+      "longitude": 22.536656
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.141246, 22.536656 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0450",
+    "name": "Stopiņi",
+    "coordinates": {
+      "latitude": 56.936449,
+      "longitude": 24.287295
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.936449, 24.287295 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0451",
+    "name": "Straupe",
+    "coordinates": {
+      "latitude": 57.346995,
+      "longitude": 24.947703
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.346995, 24.947703 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0452",
+    "name": "Strenči",
+    "coordinates": {
+      "latitude": 57.630161,
+      "longitude": 25.692493
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.630161, 25.692493 (27)",
+    "notes": null,
+    "legendCount": 27
+  },
+  {
+    "id": "place-0453",
+    "name": "Strenču pagasts",
+    "coordinates": {
+      "latitude": 57.626911,
+      "longitude": 25.692205
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.626911, 25.692205 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0454",
+    "name": "Striķi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0455",
+    "name": "Stružāni",
+    "coordinates": {
+      "latitude": 56.696536,
+      "longitude": 27.235337
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.696536, 27.235337 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0456",
+    "name": "Stukmaņi",
+    "coordinates": {
+      "latitude": 56.599082,
+      "longitude": 25.637919
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.598043, 25.637529 (6); 56.599082, 25.637919 (2)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0457",
+    "name": "Stākenberga",
+    "coordinates": {
+      "latitude": 57.768599,
+      "longitude": 24.877703
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.768599, 24.877703 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0458",
+    "name": "Stūri",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0459",
+    "name": "Suntaži",
+    "coordinates": {
+      "latitude": 56.903539,
+      "longitude": 24.925863
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.903539, 24.925863 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0460",
+    "name": "Suseja",
+    "coordinates": {
+      "latitude": 56.305587,
+      "longitude": 25.167574
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.305587, 25.167574 (2); 56.305517, 25.167532 (1)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0461",
+    "name": "Susēja",
+    "coordinates": {
+      "latitude": 56.305587,
+      "longitude": 25.167574
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.305517, 25.167532 (2); 56.305587, 25.167574 (2)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0462",
+    "name": "Sāviena",
+    "coordinates": {
+      "latitude": 56.668378,
+      "longitude": 26.103677
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.668378, 26.103677 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0463",
+    "name": "Sērene",
+    "coordinates": {
+      "latitude": 56.579392,
+      "longitude": 25.202784
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.579392, 25.202784 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0464",
+    "name": "Sērpils",
+    "coordinates": {
+      "latitude": 56.587447,
+      "longitude": 25.657696
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.587447, 25.657696 (12)",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "place-0465",
+    "name": "Sērpils apgabals",
+    "coordinates": {
+      "latitude": 56.507938,
+      "longitude": 25.646235
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.507938, 25.646235 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0466",
+    "name": "Sērpils pagasts",
+    "coordinates": {
+      "latitude": 56.507938,
+      "longitude": 25.646235
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.507938, 25.646235 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0467",
+    "name": "Sēļu pagasts",
+    "coordinates": {
+      "latitude": 57.835036,
+      "longitude": 25.213562
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.835036, 25.213562 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0468",
+    "name": "Sīkrags",
+    "coordinates": {
+      "latitude": 57.65909,
+      "longitude": 22.230026
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.659090, 22.230026 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0469",
+    "name": "Talsenieši",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0470",
+    "name": "Talsi",
+    "coordinates": {
+      "latitude": 57.248041,
+      "longitude": 22.587386
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.248041, 22.587386 (44)",
+    "notes": null,
+    "legendCount": 44
+  },
+  {
+    "id": "place-0471",
+    "name": "Talsu apgabals",
+    "coordinates": {
+      "latitude": 57.248041,
+      "longitude": 22.587386
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.248041, 22.587386 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0472",
+    "name": "Talsu apriņķis",
+    "coordinates": {
+      "latitude": 57.248041,
+      "longitude": 22.587386
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.248041, 22.587386 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0473",
+    "name": "Talsu pagasts",
+    "coordinates": {
+      "latitude": 57.341521,
+      "longitude": 22.571312
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.341521, 22.571312 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0474",
+    "name": "Taurkalne",
+    "coordinates": {
+      "latitude": 56.563431,
+      "longitude": 24.931262
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.563431, 24.931262 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0475",
+    "name": "Taurkalnes pagasts",
+    "coordinates": {
+      "latitude": 56.563431,
+      "longitude": 24.931262
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.563431, 24.931262 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0476",
+    "name": "Taurupe",
+    "coordinates": {
+      "latitude": 56.884453,
+      "longitude": 25.34147
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.884453, 25.341470 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0477",
+    "name": "Ternejas pagasts",
+    "coordinates": {
+      "latitude": 57.902939,
+      "longitude": 25.323355
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.902939, 25.323355 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0478",
+    "name": "Tetelminde",
+    "coordinates": {
+      "latitude": 56.640564,
+      "longitude": 23.838372
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.640564, 23.838372 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0479",
+    "name": "Tilžas pagasts",
+    "coordinates": {
+      "latitude": 56.88933,
+      "longitude": 27.366864
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.889330, 27.366864 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0480",
+    "name": "Tirza",
+    "coordinates": {
+      "latitude": 57.141217,
+      "longitude": 26.428336
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.141217, 26.428336 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0481",
+    "name": "Tome",
+    "coordinates": {
+      "latitude": 56.75737,
+      "longitude": 24.63861
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.757370, 24.638610 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0482",
+    "name": "Tomes pagasts",
+    "coordinates": {
+      "latitude": 56.75271,
+      "longitude": 24.624884
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.752710, 24.624884 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0483",
+    "name": "Trikāta",
+    "coordinates": {
+      "latitude": 57.54396,
+      "longitude": 25.709581
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.543960, 25.709581 (18)",
+    "notes": null,
+    "legendCount": 18
+  },
+  {
+    "id": "place-0484",
+    "name": "Trikātas apkārtne",
+    "coordinates": {
+      "latitude": 57.54396,
+      "longitude": 25.709581
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.543960, 25.709581 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0485",
+    "name": "Tukuma apkārtne",
+    "coordinates": {
+      "latitude": 56.969664,
+      "longitude": 23.15319
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.969664, 23.153190 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0486",
+    "name": "Tukuma apriņķis",
+    "coordinates": {
+      "latitude": 56.969664,
+      "longitude": 23.15319
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.969664, 23.153190 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0487",
+    "name": "Tukums",
+    "coordinates": {
+      "latitude": 56.969664,
+      "longitude": 23.15319
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.969664, 23.153190 (52)",
+    "notes": null,
+    "legendCount": 52
+  },
+  {
+    "id": "place-0488",
+    "name": "Turaida",
+    "coordinates": {
+      "latitude": 57.182273,
+      "longitude": 24.850391
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.182273, 24.850391 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0489",
+    "name": "Tūjas pagasts",
+    "coordinates": {
+      "latitude": 57.488878,
+      "longitude": 24.391162
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.488878, 24.391162 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0490",
+    "name": "Udze",
+    "coordinates": {
+      "latitude": 56.492977,
+      "longitude": 24.126454
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.492977, 24.126454 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0491",
+    "name": "Udzes pagasts",
+    "coordinates": {
+      "latitude": 56.492977,
+      "longitude": 24.126454
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.492977, 24.126454 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0492",
+    "name": "Umurga",
+    "coordinates": {
+      "latitude": 57.519392,
+      "longitude": 24.807236
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.519392, 24.807236 (24)",
+    "notes": null,
+    "legendCount": 24
+  },
+  {
+    "id": "place-0493",
+    "name": "Umurgas pagasts",
+    "coordinates": {
+      "latitude": 57.522858,
+      "longitude": 24.91231
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.522858, 24.912310 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0494",
+    "name": "Ungurmuižas pagasts",
+    "coordinates": {
+      "latitude": 57.362447,
+      "longitude": 25.088695
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.362447, 25.088695 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0495",
+    "name": "Upesmuiža",
+    "coordinates": {
+      "latitude": 56.309776,
+      "longitude": 21.541154
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.309776, 21.541154 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0496",
+    "name": "Usma",
+    "coordinates": {
+      "latitude": 57.217597,
+      "longitude": 22.155601
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.217597, 22.155601 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0497",
+    "name": "Vadakstes pagasts",
+    "coordinates": {
+      "latitude": 56.386191,
+      "longitude": 22.786238
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.386191, 22.786238 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0498",
+    "name": "Vaidava",
+    "coordinates": {
+      "latitude": 57.429906,
+      "longitude": 25.286833
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.429906, 25.286833 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0499",
+    "name": "Vaidavas pagasts",
+    "coordinates": {
+      "latitude": 57.433462,
+      "longitude": 25.276399
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.433462, 25.276399 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0500",
+    "name": "Valdegale",
+    "coordinates": {
+      "latitude": 57.286469,
+      "longitude": 22.57192
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.286469, 22.571920 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0501",
+    "name": "Valete",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0502",
+    "name": "Valgales pagasts",
+    "coordinates": {
+      "latitude": 57.057596,
+      "longitude": 22.498627
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.057596, 22.498627 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0503",
+    "name": "Valka",
+    "coordinates": {
+      "latitude": 57.776041,
+      "longitude": 26.002839
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.776041, 26.002839 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0504",
+    "name": "Valkas apgabals",
+    "coordinates": {
+      "latitude": 57.776041,
+      "longitude": 26.002839
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.776041, 26.002839 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0505",
+    "name": "Valkas pagasts",
+    "coordinates": {
+      "latitude": 57.725085,
+      "longitude": 26.003649
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.725085, 26.003649 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0506",
+    "name": "Valmiera",
+    "coordinates": {
+      "latitude": 57.538466,
+      "longitude": 25.426362
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.538466, 25.426362 (10); 57.538467, 25.426363 (1); 57.538468, 25.426364 (1); 57.538469, 25.426365 (1)",
+    "notes": null,
+    "legendCount": 13
+  },
+  {
+    "id": "place-0507",
+    "name": "Valmieras apriņķis",
+    "coordinates": {
+      "latitude": 57.530319,
+      "longitude": 25.423951
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.530319, 25.423951 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0508",
+    "name": "Valmieras pagasts",
+    "coordinates": {
+      "latitude": 57.591859,
+      "longitude": 25.442104
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.591859, 25.442104 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0509",
+    "name": "Valtaiķi",
+    "coordinates": {
+      "latitude": 56.697359,
+      "longitude": 21.803699
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.697359, 21.803699 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0510",
+    "name": "Valtenberga",
+    "coordinates": {
+      "latitude": 57.862282,
+      "longitude": 25.036647
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.862282, 25.036647 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0511",
+    "name": "Vandzene",
+    "coordinates": {
+      "latitude": 57.307962,
+      "longitude": 22.76919
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.307962, 22.769190 (18)",
+    "notes": null,
+    "legendCount": 18
+  },
+  {
+    "id": "place-0512",
+    "name": "Vandzenes pagasts",
+    "coordinates": {
+      "latitude": 57.328223,
+      "longitude": 22.829616
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.328223, 22.829616 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0513",
+    "name": "Varakļāni",
+    "coordinates": {
+      "latitude": 56.606956,
+      "longitude": 26.759953
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.606956, 26.759953 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0514",
+    "name": "Varakļānu pagasts",
+    "coordinates": {
+      "latitude": 56.588346,
+      "longitude": 26.680689
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.588346, 26.680689 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0515",
+    "name": "Varenbroka",
+    "coordinates": {
+      "latitude": 56.415,
+      "longitude": 25.546918
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.415000, 25.546918 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0516",
+    "name": "Vatrāne",
+    "coordinates": {
+      "latitude": 56.902835,
+      "longitude": 25.126435
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.902835, 25.126435 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0517",
+    "name": "Vecauce",
+    "coordinates": {
+      "latitude": 56.465138,
+      "longitude": 22.89042
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.465138, 22.890420 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0518",
+    "name": "Vecgulbene",
+    "coordinates": {
+      "latitude": 57.171482,
+      "longitude": 26.752254
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.171482, 26.752254 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0519",
+    "name": "Veckalsnava",
+    "coordinates": {
+      "latitude": 56.751446,
+      "longitude": 26.021743
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.751446, 26.021743 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0520",
+    "name": "Veckārķi",
+    "coordinates": {
+      "latitude": 57.809291,
+      "longitude": 25.636075
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.809291, 25.636075 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0521",
+    "name": "Veclaicene",
+    "coordinates": {
+      "latitude": 57.572213,
+      "longitude": 27.026072
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.572213, 27.026072 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0522",
+    "name": "Veclaicenes pagasts",
+    "coordinates": {
+      "latitude": 57.576493,
+      "longitude": 26.935259
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.576493, 26.935259 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0523",
+    "name": "Vecmuiža",
+    "coordinates": {
+      "latitude": 56.600511,
+      "longitude": 24.527433
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.600511, 24.527433 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0524",
+    "name": "Vecmīlgrāvis",
+    "coordinates": {
+      "latitude": 57.036426,
+      "longitude": 24.096943
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.036426, 24.096943 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0525",
+    "name": "Vecpiebalga",
+    "coordinates": {
+      "latitude": 57.061272,
+      "longitude": 25.817596
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.061272, 25.817596 (8)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0526",
+    "name": "Vecsērene",
+    "coordinates": {
+      "latitude": 56.606514,
+      "longitude": 25.126592
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.606514, 25.126592 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0527",
+    "name": "Vecumnieki",
+    "coordinates": {
+      "latitude": 56.606248,
+      "longitude": 24.522179
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.606248, 24.522179 (10); 56.606234, 24.522189 (2)",
+    "notes": null,
+    "legendCount": 12
+  },
+  {
+    "id": "place-0528",
+    "name": "Veismaņi",
+    "coordinates": {
+      "latitude": 57.299556,
+      "longitude": 25.342374
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.299556, 25.342374 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0529",
+    "name": "Vekši",
+    "coordinates": {
+      "latitude": 57.691291,
+      "longitude": 26.053982
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.691291, 26.053982 (1); 57.691201, 26.053682 (1)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0530",
+    "name": "Velēna",
+    "coordinates": {
+      "latitude": 57.240755,
+      "longitude": 26.400587
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.240755, 26.400587 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0531",
+    "name": "Velēnas draudze",
+    "coordinates": {
+      "latitude": 57.239357,
+      "longitude": 26.404653
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.239357, 26.404653 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0532",
+    "name": "Ventspils apkārtne",
+    "coordinates": {
+      "latitude": 57.393722,
+      "longitude": 21.564707
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.393722, 21.564707 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0533",
+    "name": "Veselauska",
+    "coordinates": {
+      "latitude": 57.289635,
+      "longitude": 25.476713
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.289635, 25.476713 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0534",
+    "name": "Vestiena",
+    "coordinates": {
+      "latitude": 56.86528,
+      "longitude": 25.870343
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.865280, 25.870343 (21)",
+    "notes": null,
+    "legendCount": 21
+  },
+  {
+    "id": "place-0535",
+    "name": "Veļķi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0536",
+    "name": "Vidrižu pagasts",
+    "coordinates": {
+      "latitude": 57.344943,
+      "longitude": 24.666387
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.344943, 24.666387 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0537",
+    "name": "Vidsmuiža",
+    "coordinates": {
+      "latitude": 56.61445,
+      "longitude": 21.870916
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.614450, 21.870916 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0538",
+    "name": "Vidusmuižas pagasts",
+    "coordinates": {
+      "latitude": 56.410255,
+      "longitude": 23.825461
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.410255, 23.825461 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0539",
+    "name": "Vidzeme",
+    "coordinates": {
+      "latitude": 57.406564,
+      "longitude": 25.874153
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.406564, 25.874153 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0540",
+    "name": "Vidzemes Jūrmala",
+    "coordinates": {
+      "latitude": 57.546291,
+      "longitude": 24.363404
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.546291, 24.363404 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0541",
+    "name": "Vidzemes Katrīnas draudze",
+    "coordinates": {
+      "latitude": 56.957882,
+      "longitude": 24.249131
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.957882, 24.249131 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0542",
+    "name": "Vietalva",
+    "coordinates": {
+      "latitude": 56.733963,
+      "longitude": 25.768627
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.733963, 25.768627 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0543",
+    "name": "Vietalvas pagasts",
+    "coordinates": {
+      "latitude": 56.720778,
+      "longitude": 25.720566
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.720778, 25.720566 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0544",
+    "name": "Vijciema pagasts",
+    "coordinates": {
+      "latitude": 57.589147,
+      "longitude": 26.012205
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.589147, 26.012205 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0545",
+    "name": "Vilce",
+    "coordinates": {
+      "latitude": 56.41966,
+      "longitude": 23.551757
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.419660, 23.551757 (14)",
+    "notes": null,
+    "legendCount": 14
+  },
+  {
+    "id": "place-0546",
+    "name": "Vilzēnu pagasts",
+    "coordinates": {
+      "latitude": 57.720373,
+      "longitude": 25.017359
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.720373, 25.017359 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0547",
+    "name": "Virbu pagasts",
+    "coordinates": {
+      "latitude": 57.125407,
+      "longitude": 22.642886
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.125407, 22.642886 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0548",
+    "name": "Vircava",
+    "coordinates": {
+      "latitude": 56.549461,
+      "longitude": 23.77243
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.549461, 23.772430 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0549",
+    "name": "Viskāļi",
+    "coordinates": {
+      "latitude": 56.684414,
+      "longitude": 25.315839
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.684414, 25.315839 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0550",
+    "name": "Viļakas pagasts",
+    "coordinates": {
+      "latitude": 57.172226,
+      "longitude": 27.667319
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.172226, 27.667319 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0551",
+    "name": "Viļāni",
+    "coordinates": {
+      "latitude": 56.550104,
+      "longitude": 26.922966
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.550104, 26.922966 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0552",
+    "name": "Viļānu apkārtne",
+    "coordinates": {
+      "latitude": 56.550104,
+      "longitude": 26.922966
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.550104, 26.922966 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0553",
+    "name": "Viļānu pagasts",
+    "coordinates": {
+      "latitude": 56.578557,
+      "longitude": 26.931358
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.578557, 26.931358 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0554",
+    "name": "Višķi",
+    "coordinates": {
+      "latitude": 56.054218,
+      "longitude": 26.783596
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.054218, 26.783596 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0555",
+    "name": "Vāne",
+    "coordinates": {
+      "latitude": 56.923293,
+      "longitude": 22.560251
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.923293, 22.560251 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0556",
+    "name": "Vēriena",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0557",
+    "name": "Vīkstene",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0558",
+    "name": "Vīkstenes pagasts",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0559",
+    "name": "Zalgale",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0560",
+    "name": "Zante",
+    "coordinates": {
+      "latitude": 56.836459,
+      "longitude": 22.738431
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.836459, 22.738431 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0561",
+    "name": "Zasulauka",
+    "coordinates": {
+      "latitude": 56.947827,
+      "longitude": 24.051286
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.947827, 24.051286 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0562",
+    "name": "Zasulauks",
+    "coordinates": {
+      "latitude": 56.947827,
+      "longitude": 24.051286
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.947827, 24.051286 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0563",
+    "name": "Zaubes pagasts",
+    "coordinates": {
+      "latitude": 56.990248,
+      "longitude": 25.263398
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.990248, 25.263398 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0564",
+    "name": "Zelgauska",
+    "coordinates": {
+      "latitude": 56.858019,
+      "longitude": 26.1151
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.858019, 26.115100 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0565",
+    "name": "Zeltiņu pagasts",
+    "coordinates": {
+      "latitude": 57.346085,
+      "longitude": 26.76749
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.346085, 26.767490 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0566",
+    "name": "Zemīte",
+    "coordinates": {
+      "latitude": 56.928616,
+      "longitude": 22.791403
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.928616, 22.791403 (4)",
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0567",
+    "name": "Zemītnieki",
+    "coordinates": {
+      "latitude": 56.928616,
+      "longitude": 22.791403
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.928616, 22.791403 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0568",
+    "name": "Zentene",
+    "coordinates": {
+      "latitude": 57.135519,
+      "longitude": 22.965777
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.135519, 22.965777 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0569",
+    "name": "Ziemera pagasts",
+    "coordinates": {
+      "latitude": 57.499086,
+      "longitude": 27.005541
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.499086, 27.005541 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0570",
+    "name": "Zilupe",
+    "coordinates": {
+      "latitude": 56.387721,
+      "longitude": 28.119561
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.387721, 28.119561 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0571",
+    "name": "Zlēkas",
+    "coordinates": {
+      "latitude": 57.124696,
+      "longitude": 21.829211
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.124696, 21.829211 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0572",
+    "name": "Zvidzienas apkārtne",
+    "coordinates": {
+      "latitude": 56.840354,
+      "longitude": 26.861835
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.840354, 26.861835 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0573",
+    "name": "Zvirgzdienes pagasts",
+    "coordinates": {
+      "latitude": 56.591953,
+      "longitude": 27.693566
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.591953, 27.693566 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0574",
+    "name": "Zvārde",
+    "coordinates": {
+      "latitude": 56.560313,
+      "longitude": 22.711399
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.560313, 22.711399 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0575",
+    "name": "Zvārtava",
+    "coordinates": {
+      "latitude": 57.537593,
+      "longitude": 26.370216
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.537593, 26.370216 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0576",
+    "name": "Zvārtavas pagasts",
+    "coordinates": {
+      "latitude": 57.582933,
+      "longitude": 26.205056
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.582933, 26.205056 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0577",
+    "name": "Āderkaši",
+    "coordinates": {
+      "latitude": 56.854699,
+      "longitude": 25.336636
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.854699, 25.336636 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0578",
+    "name": "Āraiši",
+    "coordinates": {
+      "latitude": 57.253127,
+      "longitude": 25.279156
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.253127, 25.279156 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0579",
+    "name": "Ārlava",
+    "coordinates": {
+      "latitude": 57.394756,
+      "longitude": 22.595723
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.394756, 22.595723 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0580",
+    "name": "Ēdole",
+    "coordinates": {
+      "latitude": 57.01954,
+      "longitude": 21.691937
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.019540, 21.691937 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0581",
+    "name": "Ērgļi",
+    "coordinates": {
+      "latitude": 56.899228,
+      "longitude": 25.640242
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.899228, 25.640242 (54); 57.390975, 23.793624 (1)",
+    "notes": null,
+    "legendCount": 55
+  },
+  {
+    "id": "place-0582",
+    "name": "Ērģeme",
+    "coordinates": {
+      "latitude": 57.807376,
+      "longitude": 25.821953
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.807376, 25.821953 (3); 57.807377, 25.821954 (1); 57.807378, 25.821955 (1); 57.807379, 25.821956 (1); 57.807380, 25.821957 (1); 57.807381, 25.821958 (1)",
+    "notes": null,
+    "legendCount": 8
+  },
+  {
+    "id": "place-0583",
+    "name": "Ēvele",
+    "coordinates": {
+      "latitude": 57.694132,
+      "longitude": 25.560432
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.694132, 25.560432 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0584",
+    "name": "Ēversmuižas pagasts",
+    "coordinates": {
+      "latitude": 56.55387,
+      "longitude": 27.869801
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.553870, 27.869801 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0585",
+    "name": "Ēķingrāve",
+    "coordinates": {
+      "latitude": 56.336065,
+      "longitude": 25.521237
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.336065, 25.521237 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0586",
+    "name": "Īle",
+    "coordinates": {
+      "latitude": 56.541964,
+      "longitude": 22.998927
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.541964, 22.998927 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0587",
+    "name": "Īles pagasts",
+    "coordinates": {
+      "latitude": 56.560306,
+      "longitude": 22.986556
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.560306, 22.986556 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0588",
+    "name": "Īslīces pagasts",
+    "coordinates": {
+      "latitude": 56.338521,
+      "longitude": 24.091865
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.338521, 24.091865 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0589",
+    "name": "Ķeipene",
+    "coordinates": {
+      "latitude": 56.891212,
+      "longitude": 25.181552
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.891212, 25.181552 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0590",
+    "name": "Ķeipenes pagasts",
+    "coordinates": {
+      "latitude": 56.891173,
+      "longitude": 25.181558
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.891173, 25.181558 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0591",
+    "name": "Ķenziņi",
+    "coordinates": {
+      "latitude": 56.620942,
+      "longitude": 23.99225
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.620942, 23.992250 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0592",
+    "name": "Ķieģeļi",
+    "coordinates": {
+      "latitude": 57.475267,
+      "longitude": 25.23243
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.475267, 25.232430 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0593",
+    "name": "Ķēči",
+    "coordinates": {
+      "latitude": 57.109094,
+      "longitude": 25.3138
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.109094, 25.313800 (5)",
+    "notes": null,
+    "legendCount": 5
+  },
+  {
+    "id": "place-0594",
+    "name": "Ķēču pagasts",
+    "coordinates": {
+      "latitude": 57.109221,
+      "longitude": 25.313695
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "57.109221, 25.313695 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0595",
+    "name": "Ķūķi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 4
+  },
+  {
+    "id": "place-0596",
+    "name": "Ļaudona",
+    "coordinates": {
+      "latitude": 56.707361,
+      "longitude": 26.193543
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.707361, 26.193543 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0597",
+    "name": "Šauļu apriņķis, Lietuva",
+    "coordinates": {
+      "latitude": 55.998575,
+      "longitude": 23.138005
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "55.998575, 23.138005 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0598",
+    "name": "Švarcmuiža",
+    "coordinates": {
+      "latitude": 56.948017,
+      "longitude": 24.0768
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.948017, 24.076800 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0599",
+    "name": "Švarcmuiža, Rīga",
+    "coordinates": {
+      "latitude": 56.948017,
+      "longitude": 24.0768
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.948017, 24.076800 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0600",
+    "name": "Švitene",
+    "coordinates": {
+      "latitude": 56.373917,
+      "longitude": 23.919543
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.373917, 23.919543 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0601",
+    "name": "Šēnberga",
+    "coordinates": {
+      "latitude": 56.385009,
+      "longitude": 24.646537
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.385009, 24.646537 (2)",
+    "notes": null,
+    "legendCount": 2
+  },
+  {
+    "id": "place-0602",
+    "name": "Šķaunes pagasts",
+    "coordinates": {
+      "latitude": 56.150443,
+      "longitude": 27.959345
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.150443, 27.959345 (3)",
+    "notes": null,
+    "legendCount": 3
+  },
+  {
+    "id": "place-0603",
+    "name": "Šķibe",
+    "coordinates": {
+      "latitude": 56.624617,
+      "longitude": 23.415624
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.624617, 23.415624 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0604",
+    "name": "Šķēpiņi",
+    "coordinates": null,
+    "coordinateStatus": "missing",
+    "coordinateVariantsRaw": null,
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0605",
+    "name": "Ūziņi",
+    "coordinates": {
+      "latitude": 56.479051,
+      "longitude": 23.566532
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.479051, 23.566532 (6)",
+    "notes": null,
+    "legendCount": 6
+  },
+  {
+    "id": "place-0606",
+    "name": "Žagares pagasts",
+    "coordinates": {
+      "latitude": 56.355849,
+      "longitude": 23.244445
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.355849, 23.244445 (1)",
+    "notes": null,
+    "legendCount": 1
+  },
+  {
+    "id": "place-0607",
+    "name": "Žeime",
+    "coordinates": {
+      "latitude": 56.273007,
+      "longitude": 23.996325
+    },
+    "coordinateStatus": "consistent",
+    "coordinateVariantsRaw": "56.273007, 23.996325 (1)",
+    "notes": null,
+    "legendCount": 1
+  }
+]

@@ -1,0 +1,537 @@
+{
+  "nav.home": {
+    "lv": "Sākums",
+    "de": "Startseite",
+    "en": "Home"
+  },
+  "nav.texts": {
+    "lv": "Teksti",
+    "de": "Texte",
+    "en": "Texts"
+  },
+  "nav.map": {
+    "lv": "Karte",
+    "de": "Karte",
+    "en": "Map"
+  },
+  "nav.data": {
+    "lv": "Dati",
+    "de": "Daten",
+    "en": "Data"
+  },
+  "nav.about": {
+    "lv": "Par projektu",
+    "de": "Über das Projekt",
+    "en": "About the project"
+  },
+  "common.back": {
+    "lv": "Atpakaļ",
+    "de": "Zurück",
+    "en": "Back"
+  },
+  "common.search": {
+    "lv": "Meklēt",
+    "de": "Suchen",
+    "en": "Search"
+  },
+  "common.notSpecified": {
+    "lv": "Nav norādīts",
+    "de": "Nicht angegeben",
+    "en": "Not specified"
+  },
+  "common.nextStage": {
+    "lv": "Paredzēts nākamajam posmam",
+    "de": "Für eine spätere Projektphase vorgesehen",
+    "en": "Planned for a later project phase"
+  },
+  "header.interfaceLanguage": {
+    "lv": "Saskarnes valoda",
+    "de": "Oberflächensprache",
+    "en": "Interface language"
+  },
+  "header.textSize": {
+    "lv": "Teksta izmērs",
+    "de": "Textgröße",
+    "en": "Text size"
+  },
+  "header.decreaseText": {
+    "lv": "Samazināt burtus",
+    "de": "Text verkleinern",
+    "en": "Decrease text size"
+  },
+  "header.increaseText": {
+    "lv": "Palielināt burtus",
+    "de": "Text vergrößern",
+    "en": "Increase text size"
+  },
+  "header.dark": {
+    "lv": "Ieslēgt tumšo režīmu",
+    "de": "Dunkelmodus einschalten",
+    "en": "Turn on dark mode"
+  },
+  "header.light": {
+    "lv": "Ieslēgt gaišo režīmu",
+    "de": "Hellmodus einschalten",
+    "en": "Turn on light mode"
+  },
+  "skip.content": {
+    "lv": "Pāriet uz saturu",
+    "de": "Zum Inhalt springen",
+    "en": "Skip to content"
+  },
+  "header.institution": {
+    "lv": "LU Digitālo humanitāro zinātņu centrs",
+    "de": "UL Digital Humanities Center",
+    "en": "UL Digital Humanities Center"
+  },
+  "home.intro": {
+    "lv": "Latviešu tautas teikas, ko apkopojis Pēteris Šmits “Latviešu pasaku un teiku” (1925–1937) 13.–15. sējumā.",
+    "de": "Lettische Volkssagen, gesammelt von Pēteris Šmits in den Bänden 13–15 der „Lettischen Märchen und Sagen“ (1925–1937).",
+    "en": "Latvian folk legends collected by Pēteris Šmits in volumes 13–15 of Latvian Folk Tales and Legends (1925–1937)."
+  },
+  "home.searchPlaceholder": {
+    "lv": "Meklēt pēc atslēgvārda, teicēja vārda vai vietas…",
+    "de": "Nach Stichwort, Erzähler oder Ort suchen…",
+    "en": "Search by keyword, narrator or place…"
+  },
+  "home.openBrowser": {
+    "lv": "Atvērt teiku pārlūku",
+    "de": "Sagenbrowser öffnen",
+    "en": "Open the legend browser"
+  },
+  "stats.legends": {
+    "lv": "teikas",
+    "de": "Sagen",
+    "en": "legends"
+  },
+  "stats.collectors": {
+    "lv": "pierakstītāji",
+    "de": "Aufzeichnende",
+    "en": "collectors"
+  },
+  "stats.narrators": {
+    "lv": "teicēji",
+    "de": "Erzählende",
+    "en": "narrators"
+  },
+  "stats.places": {
+    "lv": "vietas",
+    "de": "Orte",
+    "en": "places"
+  },
+  "daily.today": {
+    "lv": "Šodien",
+    "de": "Heute",
+    "en": "Today"
+  },
+  "daily.legend": {
+    "lv": "Dienas teika",
+    "de": "Sage des Tages",
+    "en": "Legend of the day"
+  },
+  "daily.read": {
+    "lv": "Lasīt teiku",
+    "de": "Sage lesen",
+    "en": "Read the legend"
+  },
+  "daily.copy": {
+    "lv": "Kopēt dienas teiku",
+    "de": "Sage des Tages kopieren",
+    "en": "Copy the legend of the day"
+  },
+  "daily.copied": {
+    "lv": "Nokopēts",
+    "de": "Kopiert",
+    "en": "Copied"
+  },
+  "browser.title": {
+    "lv": "Teiku pārlūks",
+    "de": "Sagenbrowser",
+    "en": "Legend browser"
+  },
+  "browser.intro": {
+    "lv": "Meklējiet, salīdziniet un piespraudiet teikas, pie kurām vēlaties atgriezties.",
+    "de": "Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.",
+    "en": "Search, compare and pin legends you would like to revisit."
+  },
+  "filters.title": {
+    "lv": "Filtri",
+    "de": "Filter",
+    "en": "Filters"
+  },
+  "filters.clear": {
+    "lv": "Notīrīt filtrus",
+    "de": "Filter zurücksetzen",
+    "en": "Clear filters"
+  },
+  "filters.themes": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "filters.narrators": {
+    "lv": "Teicēji",
+    "de": "Erzählende",
+    "en": "Narrators"
+  },
+  "filters.collectors": {
+    "lv": "Pierakstītāji",
+    "de": "Aufzeichnende",
+    "en": "Collectors"
+  },
+  "filters.places": {
+    "lv": "Vietas",
+    "de": "Orte",
+    "en": "Places"
+  },
+  "filters.volumes": {
+    "lv": "Sējumi",
+    "de": "Bände",
+    "en": "Volumes"
+  },
+  "filters.allF": {
+    "lv": "Visas",
+    "de": "Alle",
+    "en": "All"
+  },
+  "filters.allM": {
+    "lv": "Visi",
+    "de": "Alle",
+    "en": "All"
+  },
+  "filters.searchTheme": {
+    "lv": "Meklēt tēmu…",
+    "de": "Thema suchen…",
+    "en": "Search themes…"
+  },
+  "filters.searchNarrator": {
+    "lv": "Meklēt teicēju…",
+    "de": "Erzählende suchen…",
+    "en": "Search narrators…"
+  },
+  "filters.searchCollector": {
+    "lv": "Meklēt pierakstītāju…",
+    "de": "Aufzeichnende suchen…",
+    "en": "Search collectors…"
+  },
+  "filters.searchPlace": {
+    "lv": "Meklēt vietu…",
+    "de": "Ort suchen…",
+    "en": "Search places…"
+  },
+  "filters.period": {
+    "lv": "Laika nogrieznis",
+    "de": "Zeitraum",
+    "en": "Date range"
+  },
+  "filters.includeUndated": {
+    "lv": "Iekļaut nedatētos tekstus",
+    "de": "Undatierte Texte einbeziehen",
+    "en": "Include undated texts"
+  },
+  "filters.selected": {
+    "lv": "{count} atlasīti",
+    "de": "{count} ausgewählt",
+    "en": "{count} selected"
+  },
+  "filters.undatedCount": {
+    "lv": "{percent}% jeb {count} teksti nav datēti",
+    "de": "{percent} % bzw. {count} Texte sind undatiert",
+    "en": "{percent}% or {count} texts are undated"
+  },
+  "browser.searchHelp": {
+    "lv": "Frāzes pēdiņās meklē precīzā vārdu secībā. Piemēram: \"Reiz bija\" \"septiņi gadi\".",
+    "de": "Ausdrücke in Anführungszeichen werden in exakter Wortfolge gesucht. Beispiel: \"Reiz bija\" \"septiņi gadi\".",
+    "en": "Phrases in quotation marks are searched in the exact word order. Example: \"Reiz bija\" \"septiņi gadi\"."
+  },
+  "browser.textLanguage": {
+    "lv": "Tekstu valoda",
+    "de": "Textsprache",
+    "en": "Text language"
+  },
+  "browser.results": {
+    "lv": "rezultāti",
+    "de": "Ergebnisse",
+    "en": "results"
+  },
+  "browser.removePins": {
+    "lv": "Noņemt piespraudes",
+    "de": "Alle Markierungen entfernen",
+    "en": "Remove all pins"
+  },
+  "browser.sort": {
+    "lv": "Kārtot",
+    "de": "Sortieren",
+    "en": "Sort"
+  },
+  "browser.random": {
+    "lv": "Nejaušā secībā",
+    "de": "Zufällige Reihenfolge",
+    "en": "Random order"
+  },
+  "browser.byTitle": {
+    "lv": "Pēc nosaukuma",
+    "de": "Nach Titel",
+    "en": "By title"
+  },
+  "browser.newest": {
+    "lv": "Jaunākie vispirms",
+    "de": "Neueste zuerst",
+    "en": "Newest first"
+  },
+  "browser.oldest": {
+    "lv": "Senākie vispirms",
+    "de": "Älteste zuerst",
+    "en": "Oldest first"
+  },
+  "browser.list": {
+    "lv": "Saraksts",
+    "de": "Liste",
+    "en": "List"
+  },
+  "browser.grid": {
+    "lv": "Režģis",
+    "de": "Raster",
+    "en": "Grid"
+  },
+  "browser.titleColumn": {
+    "lv": "Nosaukums",
+    "de": "Titel",
+    "en": "Title"
+  },
+  "browser.fragment": {
+    "lv": "Fragments",
+    "de": "Auszug",
+    "en": "Excerpt"
+  },
+  "meta.narrator": {
+    "lv": "Teicējs",
+    "de": "Erzähler/in",
+    "en": "Narrator"
+  },
+  "meta.collector": {
+    "lv": "Pierakstītājs",
+    "de": "Aufgezeichnet von",
+    "en": "Collector"
+  },
+  "meta.place": {
+    "lv": "Vieta",
+    "de": "Ort",
+    "en": "Place"
+  },
+  "meta.year": {
+    "lv": "Gads",
+    "de": "Jahr",
+    "en": "Year"
+  },
+  "meta.volume": {
+    "lv": "Sējums",
+    "de": "Band",
+    "en": "Volume"
+  },
+  "meta.theme": {
+    "lv": "Tēma",
+    "de": "Thema",
+    "en": "Theme"
+  },
+  "meta.sources": {
+    "lv": "Avoti",
+    "de": "Quellen",
+    "en": "Sources"
+  },
+  "meta.original": {
+    "lv": "Oriģinālie metadati",
+    "de": "Originalmetadaten",
+    "en": "Original metadata"
+  },
+  "browser.emptyTitle": {
+    "lv": "Nekas netika atrasts.",
+    "de": "Keine Ergebnisse gefunden.",
+    "en": "No results found."
+  },
+  "browser.emptyHelp": {
+    "lv": "Mainiet meklējamo vārdu vai filtrus.",
+    "de": "Ändern Sie den Suchbegriff oder die Filter.",
+    "en": "Try a different search term or filters."
+  },
+  "browser.readAll": {
+    "lv": "Lasīt visu",
+    "de": "Vollständig lesen",
+    "en": "Read in full"
+  },
+  "browser.page": {
+    "lv": "{page}. lapa no {total}",
+    "de": "Seite {page} von {total}",
+    "en": "Page {page} of {total}"
+  },
+  "browser.searched": {
+    "lv": "Meklēts: {value}",
+    "de": "Gesucht: {value}",
+    "en": "Searched: {value}"
+  },
+  "browser.themeTag": {
+    "lv": "Tēma: {value}",
+    "de": "Thema: {value}",
+    "en": "Theme: {value}"
+  },
+  "browser.placeTag": {
+    "lv": "Vieta: {value}",
+    "de": "Ort: {value}",
+    "en": "Place: {value}"
+  },
+  "browser.volumeTag": {
+    "lv": "{value}. sējums",
+    "de": "Band {value}",
+    "en": "Volume {value}"
+  },
+  "browser.narratorTag": {
+    "lv": "Teicējs: {value}",
+    "de": "Erzähler/in: {value}",
+    "en": "Narrator: {value}"
+  },
+  "browser.collectorTag": {
+    "lv": "Pierakstītājs: {value}",
+    "de": "Aufgezeichnet von: {value}",
+    "en": "Collector: {value}"
+  },
+  "browser.withoutUndated": {
+    "lv": "Bez nedatētajiem",
+    "de": "Ohne undatierte Texte",
+    "en": "Without undated texts"
+  },
+  "browser.expand": {
+    "lv": "Izvērst teiku: {value}",
+    "de": "Sage erweitern: {value}",
+    "en": "Expand legend: {value}"
+  },
+  "browser.collapse": {
+    "lv": "Sakļaut teiku: {value}",
+    "de": "Sage einklappen: {value}",
+    "en": "Collapse legend: {value}"
+  },
+  "browser.pin": {
+    "lv": "Piespraust teiku",
+    "de": "Sage merken",
+    "en": "Pin legend"
+  },
+  "browser.unpin": {
+    "lv": "Atspraust teiku",
+    "de": "Markierung entfernen",
+    "en": "Unpin legend"
+  },
+  "detail.lv": {
+    "lv": "Latviski",
+    "de": "Lettisch",
+    "en": "Latvian"
+  },
+  "detail.parallel": {
+    "lv": "Paralēli",
+    "de": "Parallel",
+    "en": "Parallel"
+  },
+  "detail.information": {
+    "lv": "Informācija",
+    "de": "Informationen",
+    "en": "Information"
+  },
+  "detail.infoHelp": {
+    "lv": "Par teiku un tās avotiem",
+    "de": "Über die Sage und ihre Quellen",
+    "en": "About the legend and its sources"
+  },
+  "detail.moreMetadata": {
+    "lv": "Papildu metadati",
+    "de": "Weitere Metadaten",
+    "en": "Additional metadata"
+  },
+  "detail.comments": {
+    "lv": "Redaktora komentārs",
+    "de": "Redaktioneller Kommentar",
+    "en": "Editor’s comment"
+  },
+  "detail.notes": {
+    "lv": "Redakcionālās piezīmes",
+    "de": "Redaktionelle Anmerkungen",
+    "en": "Editorial notes"
+  },
+  "detail.previous": {
+    "lv": "Iepriekšējā teika",
+    "de": "Vorherige Sage",
+    "en": "Previous legend"
+  },
+  "detail.next": {
+    "lv": "Nākamā teika",
+    "de": "Nächste Sage",
+    "en": "Next legend"
+  },
+  "detail.copy": {
+    "lv": "Kopēt teiku",
+    "de": "Sage kopieren",
+    "en": "Copy legend"
+  },
+  "detail.copied": {
+    "lv": "Teika nokopēta",
+    "de": "Sage kopiert",
+    "en": "Legend copied"
+  },
+  "about.label": {
+    "lv": "Par projektu",
+    "de": "Über das Projekt",
+    "en": "About the project"
+  },
+  "about.title": {
+    "lv": "Latviešu teiku digitālā platforma",
+    "de": "Digitale Plattform für lettische Sagen",
+    "en": "Digital Platform for Latvian Legends"
+  },
+  "about.goalTitle": {
+    "lv": "Projekta mērķis",
+    "de": "Projektziel",
+    "en": "Project aim"
+  },
+  "about.translationTitle": {
+    "lv": "Tulkojums vācu valodā",
+    "de": "Die deutsche Übersetzung",
+    "en": "German translation"
+  },
+  "about.previousTitle": {
+    "lv": "Iepriekšējās digitālās versijas",
+    "de": "Frühere digitale Fassungen",
+    "en": "Earlier digital versions"
+  },
+  "about.supportTitle": {
+    "lv": "Veidotāji un atbalsts",
+    "de": "Projektteam und Förderung",
+    "en": "Team and support"
+  },
+  "about.datasets": {
+    "lv": "Datu kopas",
+    "de": "Datensätze",
+    "en": "Datasets"
+  },
+  "about.openDataset": {
+    "lv": "Atvērt datu kopu",
+    "de": "Datensatz öffnen",
+    "en": "Open dataset"
+  },
+  "about.contacts": {
+    "lv": "Kontakti",
+    "de": "Kontakt",
+    "en": "Contact"
+  },
+  "preference.label": {
+    "lv": "Lasīšanas izvēle",
+    "de": "Leseansicht",
+    "en": "Reading preference"
+  },
+  "preference.title": {
+    "lv": "Kādā valodā vēlaties skatīt teikas?",
+    "de": "In welcher Sprache möchten Sie die Sagen lesen?",
+    "en": "In which language would you like to read the legends?"
+  },
+  "preference.help": {
+    "lv": "Izvēli atcerēsimies šajā ierīcē. Pie katras teikas varēsiet režīmu mainīt.",
+    "de": "Ihre Auswahl wird auf diesem Gerät gespeichert. Sie können die Ansicht bei jeder Sage ändern.",
+    "en": "Your choice will be remembered on this device. You can change the view for each legend."
+  }
+}
