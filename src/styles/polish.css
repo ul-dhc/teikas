@@ -458,3 +458,6 @@ body{background:
 :root[data-theme=dark] .copy-icon.copied,:root[data-theme=dark] .citation-copy.copied{color:var(--focus);background:transparent;border-color:color-mix(in srgb,var(--focus),transparent 35%)}
 .prev-next .legend-nav-title{font-weight:400;color:var(--ink);transition:color .18s ease,text-shadow .18s ease}.prev-next a:hover{background:transparent}.prev-next a:hover .legend-nav-title{color:var(--browse-green);text-shadow:0 0 16px color-mix(in srgb,var(--browse-green),transparent 72%)}
 @media(max-width:600px){.citation-panel{position:fixed;left:1rem;right:1rem;top:auto;bottom:1rem;width:auto;max-height:calc(100vh - 2rem);overflow:auto}.citation-panel p{padding-right:0;padding-top:2.2rem}}
+
+/* Keep desktop navigation hit areas flush with the header's bottom edge. */
+@media(min-width:851px){.site-header nav{align-self:stretch;height:auto;align-items:stretch}.site-header nav a,.site-header nav .nav-muted{height:auto;align-self:stretch}}
