@@ -424,6 +424,11 @@
     "de": "Lettisch",
     "en": "Latvian"
   },
+  "detail.de": {
+    "lv": "Vāciski",
+    "de": "Deutsch",
+    "en": "German"
+  },
   "detail.parallel": {
     "lv": "Paralēli",
     "de": "Parallel",
