@@ -59,6 +59,7 @@ body{background:
   .legend-points circle:nth-child(23n + 14){--pulse-fill:#72cbb0;--pulse-halo:rgba(36,154,130,.48);animation:map-point-breathe 16s ease-in-out 3.6s infinite}
   .home-map.is-arriving .legend-points circle{will-change:transform,opacity,filter;animation:map-point-arrive 1.15s cubic-bezier(.2,.72,.25,1) var(--intro-delay,0ms) both!important}
   .legend-points circle:hover{animation:none;opacity:1;fill:#69d2b5;filter:drop-shadow(0 0 7px rgba(105,210,181,.72)) drop-shadow(0 0 16px rgba(54,151,188,.34));transform:scale(1.18)}
+  .legend-points circle.is-near{animation:none!important;opacity:calc(var(--point-rest-opacity) + var(--proximity)*.3);fill:color-mix(in srgb,var(--point-fill),#9cebd5 calc(var(--proximity)*72%));filter:drop-shadow(0 0 calc(2px + var(--proximity)*7px) rgba(105,210,181,.62)) drop-shadow(0 0 calc(4px + var(--proximity)*15px) rgba(54,151,188,.28));transform:scale(calc(1 + var(--proximity)*.2))}
   :root[data-theme=dark] .latvia-boundaries path{fill:rgba(8,25,40,.12);stroke:rgba(231,239,245,.24)}
   :root[data-theme=dark] .legend-points circle{--point-rest-opacity:.82;opacity:var(--point-rest-opacity)}
   :root[data-theme=dark] .legend-points circle:nth-child(13n + 3){--pulse-fill:#f1d36c;--pulse-halo:rgba(241,211,108,.68)}
@@ -461,21 +462,28 @@ body{background:
 @media(min-width:851px){.site-header nav{align-self:stretch;height:auto;align-items:stretch}.site-header nav a,.site-header nav .nav-muted{height:auto;align-self:stretch}}
 @media(min-width:851px) and (max-width:1150px){.site-header nav{margin-bottom:-.6rem}}
 
-/* Extend the hover panel over the transparent underline area to the header edge. */
-@media(min-width:851px){.site-header{overflow:clip}.site-header nav a{isolation:isolate;--nav-hover-bg:color-mix(in srgb,var(--blue),transparent 93%)}.site-header nav a.active{--nav-hover-bg:color-mix(in srgb,var(--blue),transparent 91%)}.site-header nav a::before{content:'';position:absolute;z-index:-1;inset:0 0 -3px;background:var(--nav-hover-bg);opacity:0;pointer-events:none;transition:opacity .18s ease}.site-header nav a:hover{background:transparent;box-shadow:none}.site-header nav a:hover::before{opacity:1}}
+/* Clean header interaction: no filled panel, only a line that grows from the centre. */
+.site-header nav a:hover,.site-header nav a.active:hover{background:transparent!important;box-shadow:none!important}
+@media(min-width:851px){
+  .site-header nav a{isolation:isolate;background:transparent!important;box-shadow:none!important;transition:color .2s ease,text-shadow .2s ease,transform .2s ease}
+  .site-header nav a::before{content:'';position:absolute;z-index:1;left:22%;right:22%;bottom:7px;height:2px;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--accent));opacity:0;transform:scaleX(0);transform-origin:center;box-shadow:0 0 9px color-mix(in srgb,var(--accent),transparent 48%);pointer-events:none;transition:transform .24s cubic-bezier(.22,.75,.2,1),opacity .18s ease}
+  .site-header nav a:hover{color:var(--blue);text-shadow:0 0 14px color-mix(in srgb,var(--blue),transparent 82%);transform:translateY(-1px)}
+  .site-header nav a:hover::before{opacity:1;transform:scaleX(1)}
+  .site-header nav a.active:hover::before{background:var(--accent)}
+}
 
 /* Active navigation and reading tabs use color/underline, not a weight jump. */
 .site-header nav a.active,.mode-tabs button[aria-selected=true]{font-weight:inherit}
 .site-header nav a{--nav-hover-bg:transparent}
-@media(min-width:851px){.site-header nav a::before{background:linear-gradient(to top,color-mix(in srgb,var(--blue),transparent 86%),transparent 72%)} }
 
 /* Keep the home statistic cards opaque enough that section boundaries do not show through. */
 .stats .stat,.stats .stat:nth-child(1),.stats .stat:nth-child(2),.stats .stat:nth-child(3),.stats .stat:nth-child(4),:root[data-theme=dark] .stats .stat{background:var(--raised);backdrop-filter:none;-webkit-backdrop-filter:none}
 :root[data-theme=dark] .stats .stat{background:#10253a}
 
-/* Thousands of animated SVG filters caused dark-theme scroll jank. */
-:root[data-theme=dark] .legend-points circle{animation:none!important;filter:none}
+/* Keep the yellow pulse visible in dark mode, while pausing the other ambient filters. */
+:root[data-theme=dark] .legend-points circle:not(:nth-child(13n + 3)){animation:none!important;filter:none}
 :root[data-theme=dark] .legend-points circle:hover{fill:#8ae7cd;filter:drop-shadow(0 0 8px rgba(138,231,205,.78)) drop-shadow(0 0 18px rgba(74,169,213,.38));transform:scale(1.18)}
+:root[data-theme=dark] .legend-points circle.is-near{filter:drop-shadow(0 0 calc(2px + var(--proximity)*8px) rgba(138,231,205,.68)) drop-shadow(0 0 calc(4px + var(--proximity)*17px) rgba(74,169,213,.3))}
 
 /* Leave a stable click/reading area around the pin for long translated titles. */
 .browser[data-view=grid] .result-card h2{padding-right:3rem}
