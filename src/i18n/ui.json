@@ -279,10 +279,70 @@
     "de": "Alle Markierungen entfernen",
     "en": "Remove all pins"
   },
+  "browser.openPins": {
+    "lv": "Atvērt izlasi jaunā logā",
+    "de": "Auswahl in neuem Fenster öffnen",
+    "en": "Open selection in a new window"
+  },
+  "browser.openPinsShort": {
+    "lv": "Atvērt izlasi",
+    "de": "Auswahl öffnen",
+    "en": "Open selection"
+  },
+  "browser.copySelectionLink": {
+    "lv": "Kopēt saiti uz šo izlasi",
+    "de": "Link zu dieser Auswahl kopieren",
+    "en": "Copy link to this selection"
+  },
+  "browser.selectionLinkCopied": {
+    "lv": "Saite nokopēta",
+    "de": "Link kopiert",
+    "en": "Link copied"
+  },
+  "browser.download": {
+    "lv": "Lejupielādēt",
+    "de": "Herunterladen",
+    "en": "Download"
+  },
+  "browser.downloadHint": {
+    "lv": "Lai lejupielādētu, vispirms veiciet atlasi.",
+    "de": "Treffen Sie vor dem Herunterladen eine Auswahl.",
+    "en": "Make a selection before downloading."
+  },
+  "browser.perPage": {
+    "lv": "Rādīt lappusē",
+    "de": "Pro Seite anzeigen",
+    "en": "Show per page"
+  },
+  "browser.resultsOf": {
+    "lv": "no",
+    "de": "von",
+    "en": "of"
+  },
+  "browser.resultsNoun": {
+    "lv": "rezultātiem",
+    "de": "Ergebnissen",
+    "en": "results"
+  },
+  "browser.citation": {
+    "lv": "Atsauce",
+    "de": "Zitierhinweis",
+    "en": "Citation"
+  },
   "browser.sort": {
     "lv": "Kārtot",
     "de": "Sortieren",
     "en": "Sort"
+  },
+  "browser.sortAscending": {
+    "lv": "Augošā secībā",
+    "de": "Aufsteigend sortieren",
+    "en": "Sort ascending"
+  },
+  "browser.sortDescending": {
+    "lv": "Dilstošā secībā",
+    "de": "Absteigend sortieren",
+    "en": "Sort descending"
   },
   "browser.random": {
     "lv": "Nejaušā secībā",
@@ -375,9 +435,14 @@
     "en": "Volume"
   },
   "meta.theme": {
-    "lv": "Tēma",
-    "de": "Thema",
-    "en": "Theme"
+    "lv": "Nodaļa",
+    "de": "Kapitel",
+    "en": "Chapter"
+  },
+  "meta.chapter": {
+    "lv": "Nodaļa",
+    "de": "Kapitel",
+    "en": "Chapter"
   },
   "meta.sources": {
     "lv": "Avoti",
@@ -403,6 +468,11 @@
     "lv": "Lasīt visu",
     "de": "Vollständig lesen",
     "en": "Read in full"
+  },
+  "browser.openNewWindow": {
+    "lv": "Atvērt jaunā logā",
+    "de": "In neuem Fenster öffnen",
+    "en": "Open in a new window"
   },
   "browser.page": {
     "lv": "{page}. lapa no {total}",
@@ -485,9 +555,9 @@
     "en": "Information"
   },
   "detail.infoHelp": {
-    "lv": "Par teiku un tās avotiem",
-    "de": "Über die Sage und ihre Quellen",
-    "en": "About the legend and its sources"
+    "lv": "par teiku un tās avotiem",
+    "de": "über die Sage und ihre Quellen",
+    "en": "about the legend and its sources"
   },
   "detail.moreMetadata": {
     "lv": "Papildu metadati",
@@ -603,6 +673,11 @@
     "lv": "Citēt teiku",
     "de": "Sage zitieren",
     "en": "Cite legend"
+  },
+  "detail.copyLink": {
+    "lv": "Kopēt saiti",
+    "de": "Link kopieren",
+    "en": "Copy link"
   },
   "detail.closeCitation": {
     "lv": "Aizvērt citēšanu",
