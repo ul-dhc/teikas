@@ -61,9 +61,10 @@ body{background:
   .legend-points circle:hover{animation:none;opacity:1;fill:#69d2b5;filter:drop-shadow(0 0 7px rgba(105,210,181,.72)) drop-shadow(0 0 16px rgba(54,151,188,.34));transform:scale(1.18)}
   .legend-points circle.is-near{animation:none!important;opacity:calc(var(--point-rest-opacity) + var(--proximity)*.3);fill:color-mix(in srgb,var(--point-fill),#9cebd5 calc(var(--proximity)*72%));filter:drop-shadow(0 0 calc(2px + var(--proximity)*7px) rgba(105,210,181,.62)) drop-shadow(0 0 calc(4px + var(--proximity)*15px) rgba(54,151,188,.28));transform:scale(calc(1 + var(--proximity)*.2));transition-duration:.09s}
   :root:not([data-theme=dark]) .legend-points circle.is-near{opacity:1;fill:color-mix(in srgb,var(--point-fill),#dff9f2 calc(var(--proximity)*88%));filter:drop-shadow(0 0 calc(3px + var(--proximity)*9px) rgba(55,184,151,.78)) drop-shadow(0 0 calc(6px + var(--proximity)*20px) rgba(31,126,175,.38));transform:scale(calc(1 + var(--proximity)*.28))}
+  :root:not([data-theme=dark]) .legend-points circle.is-near:nth-child(5n + 2),:root:not([data-theme=dark]) .legend-points circle.is-near:nth-child(7n + 4){fill:color-mix(in srgb,var(--point-fill),#e8c95d calc(var(--proximity)*92%));filter:drop-shadow(0 0 calc(3px + var(--proximity)*9px) rgba(220,184,57,.72)) drop-shadow(0 0 calc(6px + var(--proximity)*18px) rgba(207,170,42,.34))}
   :root[data-theme=dark] .latvia-boundaries path{fill:rgba(8,25,40,.12);stroke:rgba(231,239,245,.24)}
   :root[data-theme=dark] .legend-points circle{--point-rest-opacity:.82;opacity:var(--point-rest-opacity)}
-  :root[data-theme=dark] .legend-points circle:nth-child(13n + 3){--pulse-fill:rgba(241,211,108,.72);--pulse-halo:rgba(241,211,108,.34);--pulse-opacity:.8}
+  :root[data-theme=dark] .legend-points circle:nth-child(13n + 3){--pulse-fill:#f1d36c;--pulse-halo:rgba(241,211,108,.68);--pulse-opacity:1}
   :root[data-theme=dark] .legend-points circle:nth-child(17n + 8){--pulse-fill:#e8f4ef;--pulse-halo:rgba(218,244,238,.58)}
   :root[data-theme=dark] .legend-points circle:nth-child(23n + 14){--pulse-fill:#67d9ba;--pulse-halo:rgba(63,207,172,.66)}
   :root[data-theme=dark] .legend-points circle:hover{fill:#8ae7cd;filter:drop-shadow(0 0 8px rgba(138,231,205,.78)) drop-shadow(0 0 18px rgba(74,169,213,.38));transform:scale(1.18)}
@@ -484,6 +485,7 @@ body{background:
 :root[data-theme=dark] .legend-points circle:not(:nth-child(13n + 3)){animation:none!important;filter:none}
 :root[data-theme=dark] .legend-points circle:hover{fill:#8ae7cd;filter:drop-shadow(0 0 8px rgba(138,231,205,.78)) drop-shadow(0 0 18px rgba(74,169,213,.38));transform:scale(1.18)}
 :root[data-theme=dark] .legend-points circle.is-near{filter:drop-shadow(0 0 calc(2px + var(--proximity)*8px) rgba(138,231,205,.68)) drop-shadow(0 0 calc(4px + var(--proximity)*17px) rgba(74,169,213,.3))}
+:root[data-theme=dark] .legend-points circle.is-near:nth-child(5n + 2),:root[data-theme=dark] .legend-points circle.is-near:nth-child(7n + 4){fill:color-mix(in srgb,var(--point-fill),#f1d36c calc(var(--proximity)*94%));filter:drop-shadow(0 0 calc(3px + var(--proximity)*10px) rgba(241,211,108,.82)) drop-shadow(0 0 calc(7px + var(--proximity)*21px) rgba(206,166,34,.46))}
 
 /* Leave a stable click/reading area around the pin for long translated titles. */
 .browser[data-view=grid] .result-card h2{padding-right:3rem}
