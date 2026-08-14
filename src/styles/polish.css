@@ -456,7 +456,8 @@ body{background:
 .citation-panel{position:absolute;z-index:30;right:0;top:calc(100% + .7rem);width:min(520px,calc(100vw - 2rem));padding:1rem;border:1px solid var(--line);border-radius:14px;background:var(--raised);box-shadow:0 18px 52px color-mix(in srgb,var(--navy),transparent 72%)}
 .citation-panel-head{display:flex;align-items:center;justify-content:space-between;gap:1rem}.citation-panel h2{margin:0;font:500 1.35rem/1.2 var(--serif)}
 .citation-panel article{position:relative;margin-top:.8rem;padding:1rem;border:1px solid var(--line);border-radius:11px;background:var(--surface)}.citation-panel h3{margin:0 0 .45rem;font-size:.78rem;font-weight:500;color:var(--muted)}.citation-panel p{margin:0;padding-right:5.5rem;font-size:.86rem;line-height:1.55}.citation-close{border:0;background:transparent;color:var(--muted);padding:.4rem}.citation-copy{position:absolute;right:.7rem;top:.7rem;display:inline-flex;align-items:center;gap:.35rem;border:0;border-radius:8px;background:transparent;color:var(--blue);padding:.45rem;font-size:.76rem}.citation-copy:hover{color:var(--browse-green);background:color-mix(in srgb,var(--browse-green),transparent 92%)}.citation-copy.copied{color:var(--focus);background:transparent}.citation-copy.copied .lucide{color:var(--focus)}
-:root[data-theme=dark] .copy-icon.copied,:root[data-theme=dark] .citation-copy.copied{color:var(--focus);background:transparent;border-color:color-mix(in srgb,var(--focus),transparent 35%)}
+:root[data-theme=dark] .copy-icon.copied,:root[data-theme=dark] .citation-copy.copied{color:var(--browse-green);background:color-mix(in srgb,var(--browse-green),transparent 94%);border-color:color-mix(in srgb,var(--browse-green),transparent 35%);box-shadow:0 0 12px color-mix(in srgb,var(--browse-green),transparent 72%)}
+:root[data-theme=dark] .copy-icon.copied .lucide,:root[data-theme=dark] .citation-copy.copied .lucide{color:var(--browse-green)}
 .prev-next .legend-nav-title{font-weight:400;color:var(--ink);transition:color .18s ease,text-shadow .18s ease}.prev-next a:hover{background:transparent}.prev-next a:hover .legend-nav-title{color:var(--browse-green);text-shadow:0 0 16px color-mix(in srgb,var(--browse-green),transparent 72%)}
 @media(max-width:600px){.citation-panel{position:fixed;left:1rem;right:1rem;top:auto;bottom:1rem;width:auto;max-height:calc(100vh - 2rem);overflow:auto}.citation-panel p{padding-right:0;padding-top:2.2rem}}
 
@@ -523,6 +524,100 @@ body{background:
 .browser-layout .dual-range .range-track{background:linear-gradient(to right,color-mix(in srgb,var(--line),transparent 15%) 0 var(--range-left),var(--browse-green) var(--range-left) calc(100% - var(--range-right)),color-mix(in srgb,var(--line),transparent 15%) calc(100% - var(--range-right)))}
 .browser-layout .dual-range input::-webkit-slider-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 3px 9px color-mix(in srgb,var(--browse-green),transparent 70%)}
 .browser-layout .dual-range input::-moz-range-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 3px 9px color-mix(in srgb,var(--browse-green),transparent 70%)}
+:root[data-theme=dark] .browser-layout .dual-range .range-track{background:linear-gradient(to right,rgba(145,180,205,.18) 0 var(--range-left),var(--browse-green) var(--range-left) calc(100% - var(--range-right)),rgba(145,180,205,.18) calc(100% - var(--range-right)))}
+:root[data-theme=dark] .browser-layout .dual-range input::-webkit-slider-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 0 14px color-mix(in srgb,var(--browse-green),transparent 68%)}
+:root[data-theme=dark] .browser-layout .dual-range input::-moz-range-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 0 14px color-mix(in srgb,var(--browse-green),transparent 68%)}
+.browser-layout .dual-range{height:30px}
+.browser-layout .dual-range .range-track{top:50%;height:2px;transform:translateY(-50%)}
+.browser-layout .dual-range input{top:0;height:30px;margin:0;background:transparent}
+.browser-layout .dual-range input::-webkit-slider-thumb{width:15px;height:15px;border-width:3px}
+.browser-layout .dual-range input::-moz-range-thumb{box-sizing:border-box;width:15px;height:15px;border-width:3px}
+.browser-layout .dual-range input::-webkit-slider-runnable-track{height:2px;border:0;background:transparent}
+.browser-layout .dual-range input::-moz-range-track,.browser-layout .dual-range input::-moz-range-progress{height:2px;border:0;background:transparent}
+:root[data-theme=dark] .browser-layout .dual-range .range-track{filter:drop-shadow(0 0 4px color-mix(in srgb,var(--browse-green),transparent 68%))}
+:root[data-theme=dark] .browser-layout .dual-range input::-webkit-slider-thumb{background:color-mix(in srgb,var(--browse-green),transparent 8%);box-shadow:0 0 0 1px color-mix(in srgb,var(--browse-green),transparent 12%),0 0 10px color-mix(in srgb,var(--browse-green),transparent 66%)}
+:root[data-theme=dark] .browser-layout .dual-range input::-moz-range-thumb{background:color-mix(in srgb,var(--browse-green),transparent 8%);box-shadow:0 0 0 1px color-mix(in srgb,var(--browse-green),transparent 12%),0 0 10px color-mix(in srgb,var(--browse-green),transparent 66%)}
+
+/* Timeline: one centred rail and simple handles. */
+.browser-layout .dual-range{
+  --range-thumb:16px;
+  position:relative;
+  height:32px;
+  margin:.4rem 0;
+}
+.browser-layout .dual-range .range-track{
+  position:absolute;
+  z-index:0;
+  top:50%;
+  left:calc(var(--range-thumb)/2);
+  right:calc(var(--range-thumb)/2);
+  width:auto;
+  height:3px;
+  border-radius:999px;
+  transform:translateY(-50%);
+  background:linear-gradient(to right,
+    color-mix(in srgb,var(--line),transparent 22%) 0 var(--range-left),
+    var(--browse-green) var(--range-left) calc(100% - var(--range-right)),
+    color-mix(in srgb,var(--line),transparent 22%) calc(100% - var(--range-right))
+  );
+  filter:none;
+}
+.browser-layout .dual-range input{
+  position:absolute;
+  z-index:1;
+  inset:auto 0;
+  top:50%;
+  width:100%;
+  height:3px;
+  margin:0;
+  padding:0;
+  transform:translateY(-50%);
+  appearance:none;
+  -webkit-appearance:none;
+  pointer-events:none;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+}
+.browser-layout .dual-range input::-webkit-slider-runnable-track{height:3px;border:0;background:transparent}
+.browser-layout .dual-range input::-moz-range-track,
+.browser-layout .dual-range input::-moz-range-progress{height:3px;border:0;background:transparent}
+.browser-layout .dual-range input::-webkit-slider-thumb{
+  appearance:none;
+  -webkit-appearance:none;
+  width:var(--range-thumb);
+  height:var(--range-thumb);
+  margin-top:calc((3px - var(--range-thumb))/2);
+  border:2px solid var(--raised);
+  border-radius:50%;
+  background:var(--browse-green);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--browse-green),transparent 22%);
+  pointer-events:auto;
+}
+.browser-layout .dual-range input::-moz-range-thumb{
+  box-sizing:border-box;
+  width:var(--range-thumb);
+  height:var(--range-thumb);
+  border:2px solid var(--raised);
+  border-radius:50%;
+  background:var(--browse-green);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--browse-green),transparent 22%);
+  pointer-events:auto;
+}
+:root[data-theme=dark] .browser-layout .dual-range .range-track{
+  background:linear-gradient(to right,
+    rgba(145,180,205,.17) 0 var(--range-left),
+    color-mix(in srgb,var(--browse-green),transparent 28%) var(--range-left) calc(100% - var(--range-right)),
+    rgba(145,180,205,.17) calc(100% - var(--range-right))
+  );
+  filter:drop-shadow(0 0 7px color-mix(in srgb,var(--browse-green),transparent 84%));
+}
+:root[data-theme=dark] .browser-layout .dual-range input::-webkit-slider-thumb,
+:root[data-theme=dark] .browser-layout .dual-range input::-moz-range-thumb{
+  border-color:var(--raised);
+  background:color-mix(in srgb,var(--browse-green),var(--raised) 24%);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--browse-green),transparent 48%),0 0 12px color-mix(in srgb,var(--browse-green),transparent 82%);
+}
 
 /* Clean header interaction: no panel or extra underline; use scale and palette green. */
 .site-header nav a:hover,.site-header nav a.active:hover{background:transparent!important;box-shadow:none!important}
