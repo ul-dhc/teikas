@@ -107,3 +107,9 @@ about.contacts,Kontakti,Kontakt,Contact
 preference.label,Lasīšanas izvēle,Leseansicht,Reading preference
 preference.title,Kādā valodā vēlaties skatīt teikas?,In welcher Sprache möchten Sie die Sagen lesen?,In which language would you like to read the legends?
 preference.help,Izvēli atcerēsimies šajā ierīcē. Pie katras teikas varēsiet režīmu mainīt.,Ihre Auswahl wird auf diesem Gerät gespeichert. Sie können die Ansicht bei jeder Sage ändern.,Your choice will be remembered on this device. You can change the view for each legend.
+detail.citation,Citēšana,Zitieren,Citation
+detail.shortCitation,Īsā atsauce,Kurzbeleg,Short citation
+detail.extendedCitation,Paplašinātā atsauce,Vollständiger Beleg,Extended citation
+detail.cite,Citēt teiku,Sage zitieren,Cite legend
+detail.closeCitation,Aizvērt citēšanu,Zitat schließen,Close citation
+common.copy,Kopēt,Kopieren,Copy

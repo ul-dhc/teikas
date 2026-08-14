@@ -447,8 +447,6 @@ body{background:
 .timeline.is-active .dual-range input::-moz-range-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 0 13px color-mix(in srgb,var(--browse-green),transparent 58%)}
 .undated-toggle:has(input:checked){background:transparent}
 .undated-toggle input{appearance:none;width:17px;height:17px;border:1px solid var(--line);border-radius:4px;background:transparent;display:grid;place-items:center}
-.undated-toggle input:checked{border-color:var(--browse-green);background:transparent}
-.undated-toggle input:checked:after{content:'✓';color:var(--browse-green);font-size:15px;font-weight:800;line-height:1}
 .more-metadata>summary{font-weight:400;color:var(--ink);border-radius:8px}
 .more-metadata>summary:hover{color:var(--browse-green);background:color-mix(in srgb,var(--browse-green),transparent 93%)}
 .detail-actions{display:flex;align-items:center;gap:.55rem}.citation-control{position:relative}
@@ -465,3 +463,19 @@ body{background:
 
 /* Extend the hover panel over the transparent underline area to the header edge. */
 @media(min-width:851px){.site-header{overflow:clip}.site-header nav a{isolation:isolate;--nav-hover-bg:color-mix(in srgb,var(--blue),transparent 93%)}.site-header nav a.active{--nav-hover-bg:color-mix(in srgb,var(--blue),transparent 91%)}.site-header nav a::before{content:'';position:absolute;z-index:-1;inset:0 0 -3px;background:var(--nav-hover-bg);opacity:0;pointer-events:none;transition:opacity .18s ease}.site-header nav a:hover{background:transparent;box-shadow:none}.site-header nav a:hover::before{opacity:1}}
+
+/* Active navigation and reading tabs use color/underline, not a weight jump. */
+.site-header nav a.active,.mode-tabs button[aria-selected=true]{font-weight:inherit}
+.site-header nav a{--nav-hover-bg:transparent}
+@media(min-width:851px){.site-header nav a::before{background:linear-gradient(to top,color-mix(in srgb,var(--blue),transparent 86%),transparent 72%)} }
+
+/* Keep the home statistic cards opaque enough that section boundaries do not show through. */
+.stats .stat,.stats .stat:nth-child(1),.stats .stat:nth-child(2),.stats .stat:nth-child(3),.stats .stat:nth-child(4),:root[data-theme=dark] .stats .stat{background:var(--raised);backdrop-filter:none;-webkit-backdrop-filter:none}
+:root[data-theme=dark] .stats .stat{background:#10253a}
+
+/* Thousands of animated SVG filters caused dark-theme scroll jank. */
+:root[data-theme=dark] .legend-points circle{animation:none!important;filter:none}
+:root[data-theme=dark] .legend-points circle:hover{filter:drop-shadow(0 0 8px rgba(112,226,195,.7));transform:scale(1.22)}
+
+/* Leave a stable click/reading area around the pin for long translated titles. */
+.browser[data-view=grid] .result-card h2{padding-right:3rem}

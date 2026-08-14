@@ -538,5 +538,35 @@
     "lv": "Izvēli atcerēsimies šajā ierīcē. Pie katras teikas varēsiet režīmu mainīt.",
     "de": "Ihre Auswahl wird auf diesem Gerät gespeichert. Sie können die Ansicht bei jeder Sage ändern.",
     "en": "Your choice will be remembered on this device. You can change the view for each legend."
+  },
+  "detail.citation": {
+    "lv": "Citēšana",
+    "de": "Zitieren",
+    "en": "Citation"
+  },
+  "detail.shortCitation": {
+    "lv": "Īsā atsauce",
+    "de": "Kurzbeleg",
+    "en": "Short citation"
+  },
+  "detail.extendedCitation": {
+    "lv": "Paplašinātā atsauce",
+    "de": "Vollständiger Beleg",
+    "en": "Extended citation"
+  },
+  "detail.cite": {
+    "lv": "Citēt teiku",
+    "de": "Sage zitieren",
+    "en": "Cite legend"
+  },
+  "detail.closeCitation": {
+    "lv": "Aizvērt citēšanu",
+    "de": "Zitat schließen",
+    "en": "Close citation"
+  },
+  "common.copy": {
+    "lv": "Kopēt",
+    "de": "Kopieren",
+    "en": "Copy"
   }
 }
