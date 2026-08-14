@@ -520,6 +520,9 @@ body{background:
 }
 .browser-layout .undated-toggle input[type=checkbox]:checked::before{color:var(--browse-green)}
 .filter-sidebar .filter-title h2{font-family:var(--sans);font-size:1rem}
+.browser-layout .dual-range .range-track{background:linear-gradient(to right,color-mix(in srgb,var(--line),transparent 15%) 0 var(--range-left),var(--browse-green) var(--range-left) calc(100% - var(--range-right)),color-mix(in srgb,var(--line),transparent 15%) calc(100% - var(--range-right)))}
+.browser-layout .dual-range input::-webkit-slider-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 3px 9px color-mix(in srgb,var(--browse-green),transparent 70%)}
+.browser-layout .dual-range input::-moz-range-thumb{background:var(--browse-green);box-shadow:0 0 0 1.5px var(--browse-green),0 3px 9px color-mix(in srgb,var(--browse-green),transparent 70%)}
 
 /* Clean header interaction: no panel or extra underline; use scale and palette green. */
 .site-header nav a:hover,.site-header nav a.active:hover{background:transparent!important;box-shadow:none!important}
