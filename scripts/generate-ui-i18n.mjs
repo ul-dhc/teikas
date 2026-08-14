@@ -24,7 +24,12 @@ function parseCsv(text) {
 const rows = parseCsv(await readFile(source, 'utf8'));
 const [header, ...records] = rows;
 if (header?.join(',') !== 'key,lv,de,en') throw new Error('Expected CSV columns: key,lv,de,en');
-const output = {};
+let output = {};
+try {
+  output = JSON.parse(await readFile(target, 'utf8'));
+} catch {
+  // A fresh project may not have a generated fallback file yet.
+}
 for (const [key, lv, de, en] of records) {
   if (!key) continue;
   if (!lv || !de || !en) throw new Error(`Missing translation for ${key}`);
