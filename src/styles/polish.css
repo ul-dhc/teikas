@@ -690,4 +690,5 @@ body{background:
 .browser[data-view=grid] .result-card h2{padding-right:3rem}
 .source-list li>small{display:none}
 .page-size{top:50%;transform:translateY(-50%)}
-@media(max-width:760px){.page-size{top:auto;transform:none}}
+.pagination-row>.page-label{position:absolute;left:0;top:50%;transform:translateY(-50%);margin:0;color:var(--muted);font-size:.78rem}
+@media(max-width:760px){.page-size{top:auto;transform:none}.pagination-row>.page-label{position:static;width:100%;transform:none;text-align:center}}
