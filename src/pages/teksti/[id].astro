@@ -5,7 +5,8 @@ const base = import.meta.env.BASE_URL;
 export function getStaticPaths() { return legends.map((legend, index) => ({ params: { id: legend.id }, props: { legend, index } })); }
 const { legend, index } = Astro.props as { legend: Legend; index: number };
 const data = resolveLegend(legend), previous = legends[index - 1], next = legends[index + 1], year = legendYear(legend);
-const basicRows = [['ID', legend.id], ['Vieta', data.place?.name || 'Nav norādīts'], ['Teicējs', displayPersonName(data.narrator) || 'Nav norādīts'], ['Pierakstītājs', displayPersonName(data.collector) || 'Nav norādīts'], ['Gads', year || 'Nav norādīts']];
+const missingValue = '—';
+const basicRows = [['ID', legend.id], ['Vieta', data.place?.name || missingValue], ['Teicējs', displayPersonName(data.narrator) || missingValue], ['Pierakstītājs', displayPersonName(data.collector) || missingValue], ['Gads', year || missingValue]];
 const allSources = [...data.primarySources, ...data.secondarySources];
 const hasSources = allSources.length > 0 || Boolean(legend.primarySourceRaw || legend.secondarySourceRaw);
 const publicUrl = new URL(`${base}teksti/${legend.id}/`, Astro.site ?? Astro.url.origin).href;
