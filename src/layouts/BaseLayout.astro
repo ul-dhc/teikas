@@ -26,6 +26,7 @@ const base = import.meta.env.BASE_URL;
         <a class:list={[{ active: active === 'home' }]} href={base} data-nav-key="home">Sākums</a>
         <a class:list={[{ active: active === 'browse' }]} href={`${base}teksti/`} data-nav-key="texts">Teksti</a>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="map">Karte</span>
+        <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="persons">Personas</span>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="data">Dati</span>
         <a class:list={[{ active: active === 'about' }]} href={`${base}par-projektu/`} data-nav-key="about">Par projektu</a>
       </nav>

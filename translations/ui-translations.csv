@@ -2,6 +2,7 @@ key,lv,de,en
 nav.home,Sākums,Startseite,Home
 nav.texts,Teksti,Texte,Texts
 nav.map,Karte,Karte,Map
+nav.persons,Personas,Personen,Persons
 nav.data,Dati,Daten,Data
 nav.about,Par projektu,Über das Projekt,About the project
 common.back,Atpakaļ,Zurück,Back
@@ -29,7 +30,7 @@ daily.read,Lasīt teiku,Sage lesen,Read the legend
 daily.copy,Kopēt dienas teiku,Sage des Tages kopieren,Copy the legend of the day
 daily.copied,Nokopēts,Kopiert,Copied
 browser.title,Teiku pārlūks,Sagenbrowser,Legend browser
-browser.intro,"Meklējiet, salīdziniet un piespraudiet teikas, pie kurām vēlaties atgriezties.","Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.","Search, compare and pin legends you would like to revisit."
+browser.intro,"Meklējiet, izpētiet un piespraudiet teikas, pie kurām vēlaties atgriezties.","Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.","Search, compare and pin legends you would like to revisit."
 filters.title,Filtri,Filter,Filters
 filters.clear,Notīrīt filtrus,Filter zurücksetzen,Clear filters
 filters.themes,Tēmas,Themen,Themes
@@ -45,6 +46,9 @@ filters.searchCollector,Meklēt pierakstītāju…,Aufzeichnende suchen…,Searc
 filters.searchPlace,Meklēt vietu…,Ort suchen…,Search places…
 filters.period,Laika nogrieznis,Zeitraum,Date range
 filters.includeUndated,Iekļaut nedatētos tekstus,Undatierte Texte einbeziehen,Include undated texts
+filters.includeUnknownNarrators,Iekļaut nezināmos teicējus,Unbekannte Erzählende einbeziehen,Include unknown narrators
+filters.includeUnknownCollectors,Iekļaut nezināmos pierakstītājus,Unbekannte Aufzeichnende einbeziehen,Include unknown collectors
+filters.includeUnknownPlaces,Iekļaut nezināmās vietas,Unbekannte Orte einbeziehen,Include unknown places
 filters.selected,{count} atlasīti,{count} ausgewählt,{count} selected
 filters.undatedCount,{percent}% jeb {count} teksti nav datēti,{percent} % bzw. {count} Texte sind undatiert,{percent}% or {count} texts are undated
 browser.searchHelp,"Frāzes pēdiņās meklē precīzā vārdu secībā. Piemēram: ""Reiz bija"" ""septiņi gadi"".","Ausdrücke in Anführungszeichen werden in exakter Wortfolge gesucht. Beispiel: ""Reiz bija"" ""septiņi gadi"".","Phrases in quotation marks are searched in the exact word order. Example: ""Reiz bija"" ""septiņi gadi""."
@@ -54,6 +58,11 @@ browser.removePins,Noņemt piespraudes,Alle Markierungen entfernen,Remove all pi
 browser.sort,Kārtot,Sortieren,Sort
 browser.random,Nejaušā secībā,Zufällige Reihenfolge,Random order
 browser.byTitle,Pēc nosaukuma,Nach Titel,By title
+browser.byId,Pēc ID,Nach ID,By ID
+browser.byPlace,Pēc vietas,Nach Ort,By place
+browser.byCollector,Pēc pierakstītāja,Nach Aufzeichnenden,By collector
+browser.byNarrator,Pēc teicēja,Nach Erzählenden,By narrator
+browser.byYear,Pēc gada,Nach Jahr,By year
 browser.newest,Jaunākie vispirms,Neueste zuerst,Newest first
 browser.oldest,Senākie vispirms,Älteste zuerst,Oldest first
 browser.list,Saraksts,Liste,List
@@ -113,3 +122,5 @@ detail.extendedCitation,Paplašinātā atsauce,Vollständiger Beleg,Extended cit
 detail.cite,Citēt teiku,Sage zitieren,Cite legend
 detail.closeCitation,Aizvērt citēšanu,Zitat schließen,Close citation
 common.copy,Kopēt,Kopieren,Copy
+pagination.goTo,Doties uz,Gehe zu,Go to
+pagination.pageAbbr,lpp.,S.,p.

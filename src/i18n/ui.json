@@ -14,6 +14,11 @@
     "de": "Karte",
     "en": "Map"
   },
+  "nav.persons": {
+    "lv": "Personas",
+    "de": "Personen",
+    "en": "Persons"
+  },
   "nav.data": {
     "lv": "Dati",
     "de": "Daten",
@@ -150,7 +155,7 @@
     "en": "Legend browser"
   },
   "browser.intro": {
-    "lv": "Meklējiet, salīdziniet un piespraudiet teikas, pie kurām vēlaties atgriezties.",
+    "lv": "Meklējiet, izpētiet un piespraudiet teikas, pie kurām vēlaties atgriezties.",
     "de": "Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.",
     "en": "Search, compare and pin legends you would like to revisit."
   },
@@ -229,6 +234,21 @@
     "de": "Undatierte Texte einbeziehen",
     "en": "Include undated texts"
   },
+  "filters.includeUnknownNarrators": {
+    "lv": "Iekļaut nezināmos teicējus",
+    "de": "Unbekannte Erzählende einbeziehen",
+    "en": "Include unknown narrators"
+  },
+  "filters.includeUnknownCollectors": {
+    "lv": "Iekļaut nezināmos pierakstītājus",
+    "de": "Unbekannte Aufzeichnende einbeziehen",
+    "en": "Include unknown collectors"
+  },
+  "filters.includeUnknownPlaces": {
+    "lv": "Iekļaut nezināmās vietas",
+    "de": "Unbekannte Orte einbeziehen",
+    "en": "Include unknown places"
+  },
   "filters.selected": {
     "lv": "{count} atlasīti",
     "de": "{count} ausgewählt",
@@ -273,6 +293,31 @@
     "lv": "Pēc nosaukuma",
     "de": "Nach Titel",
     "en": "By title"
+  },
+  "browser.byId": {
+    "lv": "Pēc ID",
+    "de": "Nach ID",
+    "en": "By ID"
+  },
+  "browser.byPlace": {
+    "lv": "Pēc vietas",
+    "de": "Nach Ort",
+    "en": "By place"
+  },
+  "browser.byCollector": {
+    "lv": "Pēc pierakstītāja",
+    "de": "Nach Aufzeichnenden",
+    "en": "By collector"
+  },
+  "browser.byNarrator": {
+    "lv": "Pēc teicēja",
+    "de": "Nach Erzählenden",
+    "en": "By narrator"
+  },
+  "browser.byYear": {
+    "lv": "Pēc gada",
+    "de": "Nach Jahr",
+    "en": "By year"
   },
   "browser.newest": {
     "lv": "Jaunākie vispirms",
@@ -568,5 +613,15 @@
     "lv": "Kopēt",
     "de": "Kopieren",
     "en": "Copy"
+  },
+  "pagination.goTo": {
+    "lv": "Doties uz",
+    "de": "Gehe zu",
+    "en": "Go to"
+  },
+  "pagination.pageAbbr": {
+    "lv": "lpp.",
+    "de": "S.",
+    "en": "p."
   }
 }

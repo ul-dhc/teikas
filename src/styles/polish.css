@@ -464,6 +464,63 @@ body{background:
 @media(min-width:851px){.site-header nav{align-self:stretch;height:auto;align-items:stretch}.site-header nav a,.site-header nav .nav-muted{height:auto;align-self:stretch}}
 @media(min-width:851px) and (max-width:1150px){.site-header nav{margin-bottom:-.6rem}}
 
+/* Translucent collection surfaces using the existing palette. */
+.browser-layout .filter-sidebar,
+.browser[data-view=grid] .result-card,
+.detail .information,
+.detail .prev-next{
+  background:color-mix(in srgb,var(--raised),transparent 14%);
+  border-color:color-mix(in srgb,var(--blue),var(--line) 70%);
+  box-shadow:inset 0 1px 0 color-mix(in srgb,#fff,transparent 78%),0 16px 42px color-mix(in srgb,var(--navy),transparent 93%);
+  backdrop-filter:blur(12px) saturate(112%);
+  -webkit-backdrop-filter:blur(12px) saturate(112%);
+}
+:root[data-theme=dark] :is(.browser-layout .filter-sidebar,.browser[data-view=grid] .result-card,.detail .information,.detail .prev-next){
+  background:color-mix(in srgb,var(--raised),transparent 26%);
+  border-color:color-mix(in srgb,var(--focus),var(--line) 72%);
+  box-shadow:inset 0 1px 0 color-mix(in srgb,#fff,transparent 91%),0 18px 48px color-mix(in srgb,#000,transparent 72%);
+}
+.browser[data-view=grid] .result-card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
+.browser[data-view=grid] .result-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--browse-green),var(--line) 35%);box-shadow:0 18px 44px color-mix(in srgb,var(--browse-green),transparent 88%)}
+.unknown-toggle{display:flex!important;align-items:center;gap:.5rem;padding:.55rem .25rem;margin:.15rem 0 .35rem!important;color:var(--muted)}
+.unknown-toggle input{accent-color:var(--browse-green)}
+.result-excerpt:not(.is-parallel) .excerpt-de{border-top:0!important;margin-top:0!important;padding-top:0!important}
+.dual-range input::-moz-range-thumb{pointer-events:auto}
+.pagination .pagination-current{width:38px;height:38px;padding:0;border:1.5px solid var(--browse-green);border-radius:50%;outline:0;background:transparent;color:var(--ink);font:inherit;text-align:center;caret-color:var(--browse-green);cursor:text;appearance:textfield;-moz-appearance:textfield;box-shadow:0 0 0 3px color-mix(in srgb,var(--browse-green),transparent 91%)}
+.pagination .pagination-current::-webkit-inner-spin-button,.pagination .pagination-current::-webkit-outer-spin-button{appearance:none;margin:0}
+.pagination .pagination-current:focus{border-color:var(--browse-green);box-shadow:0 0 0 4px color-mix(in srgb,var(--browse-green),transparent 86%)}
+.pagination-row{display:flex;justify-content:center;align-items:center;gap:1.75rem;flex-wrap:wrap;padding:2.5rem 0}.pagination-row .pagination{padding:0}.page-jump{display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.78rem;font-weight:400}.page-jump input{width:70px;height:38px;padding:0 .55rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:inherit;text-align:center;appearance:textfield;-moz-appearance:textfield}.page-jump input::-webkit-inner-spin-button,.page-jump input::-webkit-outer-spin-button{appearance:none;margin:0}.page-jump input:focus{outline:0;border-color:var(--browse-green);box-shadow:0 0 0 3px color-mix(in srgb,var(--browse-green),transparent 88%)}
+.prev-next a:hover .nav-direction{color:var(--browse-green)}
+.prev-next .nav-direction{transition:color .18s ease}
+
+/* Lightweight selected state for named filter options. */
+.browser-layout .multi-options label:has(input[type=checkbox]:checked){background:transparent;color:var(--ink)}
+.browser-layout .multi-options input[type=checkbox]:checked,
+:root[data-theme=dark] .browser-layout .multi-options input[type=checkbox]:checked{
+  background:transparent;
+  border-color:color-mix(in srgb,var(--browse-green),transparent 18%);
+  color:var(--browse-green);
+  box-shadow:none;
+}
+.browser-layout .multi-options input[type=checkbox]:checked::before{color:var(--browse-green)}
+.browser-layout mark{background:rgba(255,216,64,.32);color:var(--ink);border:0;border-radius:4px;padding:.03em .12em;box-shadow:inset 0 0 0 1px rgba(255,216,64,.46)}
+:root[data-theme=dark] .browser-layout mark{background:rgba(255,216,64,.34);color:var(--ink);border:0;box-shadow:inset 0 0 0 1px rgba(255,216,64,.52)}
+.browser-layout :is(button,label,legend,select,option,output,small,strong,h2,b),.browser-layout .browser-toolbar{font-weight:400!important}
+.browser-layout .card-sort select{color-scheme:light;background-color:var(--raised);color:var(--ink)}
+.browser-layout .card-sort option{background-color:var(--raised);color:var(--ink);font-weight:400}
+:root[data-theme=dark] .browser-layout .card-sort select{color-scheme:dark;background-color:#102b42;color:var(--ink)}
+:root[data-theme=dark] .browser-layout .card-sort option{background-color:#102b42;color:var(--ink)}
+.card-sort{color:var(--muted)}.sort-menu{position:relative;width:210px}.sort-menu>summary{list-style:none;height:40px;padding:0 .85rem;display:flex;align-items:center;justify-content:space-between;gap:.7rem;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--raised),transparent 16%);color:color-mix(in srgb,var(--muted),var(--ink) 30%);cursor:pointer}.sort-menu>summary::-webkit-details-marker{display:none}.sort-menu>summary .lucide{width:16px;height:16px;transition:transform .18s ease}.sort-menu[open]>summary{border-color:var(--browse-green);box-shadow:0 0 0 3px color-mix(in srgb,var(--browse-green),transparent 90%)}.sort-menu[open]>summary .lucide{transform:rotate(180deg)}.sort-menu-options{position:absolute;z-index:40;top:calc(100% + .45rem);left:0;width:100%;padding:.4rem;border:1px solid color-mix(in srgb,var(--browse-green),transparent 48%);border-radius:14px;background:color-mix(in srgb,var(--raised),transparent 4%);box-shadow:0 16px 36px color-mix(in srgb,var(--navy),transparent 68%);backdrop-filter:blur(14px)}.sort-menu-options button{width:100%;display:grid;grid-template-columns:18px 1fr;align-items:center;gap:.45rem;padding:.58rem .6rem;border:0;border-radius:9px;background:transparent;color:var(--ink);text-align:left}.sort-menu-options button:hover{background:color-mix(in srgb,var(--browse-green),transparent 91%)}.sort-menu-options button .lucide{width:16px;height:16px;color:var(--browse-green);opacity:0}.sort-menu-options button[aria-pressed=true]{color:var(--browse-green)}.sort-menu-options button[aria-pressed=true] .lucide{opacity:1}:root[data-theme=dark] .sort-menu-options{background:rgba(16,43,66,.94)}
+.browser-layout .undated-toggle input[type=checkbox]:checked,
+:root[data-theme=dark] .browser-layout .undated-toggle input[type=checkbox]:checked{
+  background:transparent;
+  border-color:color-mix(in srgb,var(--browse-green),transparent 18%);
+  color:var(--browse-green);
+  box-shadow:none;
+}
+.browser-layout .undated-toggle input[type=checkbox]:checked::before{color:var(--browse-green)}
+.filter-sidebar .filter-title h2{font-family:var(--sans);font-size:1rem}
+
 /* Clean header interaction: no panel or extra underline; use scale and palette green. */
 .site-header nav a:hover,.site-header nav a.active:hover{background:transparent!important;box-shadow:none!important}
 @media(min-width:851px){
