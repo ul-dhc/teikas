@@ -58,13 +58,13 @@ body{background:
   .legend-points circle:nth-child(17n + 8){--pulse-fill:#f1eee0;--pulse-halo:rgba(119,166,174,.45);animation:map-point-breathe 13s ease-in-out 2.4s infinite}
   .legend-points circle:nth-child(23n + 14){--pulse-fill:#72cbb0;--pulse-halo:rgba(36,154,130,.48);animation:map-point-breathe 16s ease-in-out 3.6s infinite}
   .home-map.is-arriving .legend-points circle{will-change:transform,opacity,filter;animation:map-point-arrive 1.15s cubic-bezier(.2,.72,.25,1) var(--intro-delay,0ms) both!important}
-  .legend-points circle:hover{animation:none;opacity:1;fill:#54c5a5;filter:drop-shadow(0 0 8px rgba(75,192,162,.74)) drop-shadow(0 0 22px rgba(30,123,166,.4));transform:scale(1.48)}
+  .legend-points circle:hover{animation:none;opacity:1;fill:#69d2b5;filter:drop-shadow(0 0 7px rgba(105,210,181,.72)) drop-shadow(0 0 16px rgba(54,151,188,.34));transform:scale(1.18)}
   :root[data-theme=dark] .latvia-boundaries path{fill:rgba(8,25,40,.12);stroke:rgba(231,239,245,.24)}
   :root[data-theme=dark] .legend-points circle{--point-rest-opacity:.82;opacity:var(--point-rest-opacity)}
   :root[data-theme=dark] .legend-points circle:nth-child(13n + 3){--pulse-fill:#f1d36c;--pulse-halo:rgba(241,211,108,.68)}
   :root[data-theme=dark] .legend-points circle:nth-child(17n + 8){--pulse-fill:#e8f4ef;--pulse-halo:rgba(218,244,238,.58)}
   :root[data-theme=dark] .legend-points circle:nth-child(23n + 14){--pulse-fill:#67d9ba;--pulse-halo:rgba(63,207,172,.66)}
-  :root[data-theme=dark] .legend-points circle:hover{fill:#78ddc1;filter:drop-shadow(0 0 9px rgba(112,226,195,.86)) drop-shadow(0 0 25px rgba(74,169,213,.46))}
+  :root[data-theme=dark] .legend-points circle:hover{fill:#8ae7cd;filter:drop-shadow(0 0 8px rgba(138,231,205,.78)) drop-shadow(0 0 18px rgba(74,169,213,.38));transform:scale(1.18)}
   :root[data-theme=dark] .hero:has(.home-map){background:linear-gradient(110deg,var(--paper) 0%,var(--paper) 38%,rgba(10,28,44,.92) 100%)}
   :root[data-theme=dark] .home-map{opacity:.94}
 }
@@ -475,7 +475,7 @@ body{background:
 
 /* Thousands of animated SVG filters caused dark-theme scroll jank. */
 :root[data-theme=dark] .legend-points circle{animation:none!important;filter:none}
-:root[data-theme=dark] .legend-points circle:hover{filter:drop-shadow(0 0 8px rgba(112,226,195,.7));transform:scale(1.22)}
+:root[data-theme=dark] .legend-points circle:hover{fill:#8ae7cd;filter:drop-shadow(0 0 8px rgba(138,231,205,.78)) drop-shadow(0 0 18px rgba(74,169,213,.38));transform:scale(1.18)}
 
 /* Leave a stable click/reading area around the pin for long translated titles. */
 .browser[data-view=grid] .result-card h2{padding-right:3rem}
