@@ -25,7 +25,7 @@ const base = import.meta.env.BASE_URL;
       <nav aria-label="Galvenā navigācija">
         <a class:list={[{ active: active === 'home' }]} href={base} data-nav-key="home">Sākums</a>
         <a class:list={[{ active: active === 'browse' }]} href={`${base}teksti/`} data-nav-key="texts">Teksti</a>
-        <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="map">Karte</span>
+        <a class:list={[{ active: active === 'map' }]} href={`${base}karte/`} data-nav-key="map">Karte</a>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="persons">Personas</span>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="data">Dati</span>
         <a class:list={[{ active: active === 'about' }]} href={`${base}par-projektu/`} data-nav-key="about">Par projektu</a>
@@ -39,8 +39,8 @@ const base = import.meta.env.BASE_URL;
     <main id="saturs"><slot /></main>
     <footer class="site-footer"><div class="institution-credit"><a href="https://ul-dhc.github.io/" target="_blank" rel="noopener noreferrer">LU Digitālo humanitāro zinātņu centrs</a><span>, 2026</span></div></footer>
     <script>
-      import { createIcons, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, CalendarDays, Check, ChevronDown, Copy, Download, ExternalLink, FileStack, LayoutGrid, Link, List, MapPin, Minus, Moon, NotebookPen, Pin, PinOff, Plus, Quote, RotateCcw, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
-      const iconSet={ArrowDown,ArrowLeft,ArrowRight,ArrowUp,ArrowUpDown,CalendarDays,Check,ChevronDown,Copy,Download,ExternalLink,FileStack,LayoutGrid,Link,List,MapPin,Minus,Moon,NotebookPen,Pin,PinOff,Plus,Quote,RotateCcw,SlidersHorizontal,Sun,UsersRound,X};
+      import { createIcons, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, CalendarDays, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, FileStack, GitCompareArrows, Info, Layers, LayoutGrid, Link, List, MapPin, Minus, Moon, Network, NotebookPen, Pin, PinOff, Plus, Quote, RotateCcw, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
+      const iconSet={ArrowDown,ArrowLeft,ArrowRight,ArrowUp,ArrowUpDown,CalendarDays,Check,ChevronDown,ChevronLeft,ChevronRight,Copy,Download,ExternalLink,FileStack,GitCompareArrows,Info,Layers,LayoutGrid,Link,List,MapPin,Minus,Moon,Network,NotebookPen,Pin,PinOff,Plus,Quote,RotateCcw,SlidersHorizontal,Sun,UsersRound,X};
       const renderIcons=()=>createIcons({icons:iconSet,attrs:{'aria-hidden':'true','stroke-width':'1.8'}});(window as any).renderLucideIcons=renderIcons;window.addEventListener('lucide-refresh',renderIcons);renderIcons();
       const doc=document.documentElement, store=localStorage;
       const themeButton=document.querySelector<HTMLButtonElement>('[data-theme-toggle]')!;

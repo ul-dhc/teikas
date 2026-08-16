@@ -86,6 +86,7 @@ function excerpt(value: string | null, length = 420): string {
 
 export const browseRecords = legends.map((legend) => ({
   id: legend.id, volume: legend.volume, chapterLv: legend.chapter.lv ?? '', chapterDe: legend.chapter.de ?? '',
+  placeId: legend.placeId ?? '',
   titleLv: legend.title.lv ?? '', titleDe: legend.title.de ?? '', place: legend.placeId ? placesById.get(legend.placeId)?.name ?? '' : '',
   collector: displayPersonName(collectorsById.get(legend.collectorId)), narrator: legend.narratorId ? displayPersonName(narratorsById.get(legend.narratorId)) : '',
   year: legendYear(legend), excerptLv: excerpt(legend.text.lv), excerptDe: excerpt(legend.text.de),

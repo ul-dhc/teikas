@@ -1,0 +1,204 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import mapData from "../../data/map-data.json";
+import "maplibre-gl/dist/maplibre-gl.css";
+import "../../styles/map.css";
+const base = import.meta.env.BASE_URL;
+const legendProperties = mapData.legends.features.map((feature) => feature.properties);
+const mapYears = legendProperties.map((properties) => Number(properties.year)).filter(Boolean);
+const mapMinYear = Math.min(...mapYears);
+const mapMaxYear = Math.max(...mapYears);
+const mapUndatedCount = legendProperties.filter((properties) => !properties.year).length;
+const mapUndatedPercent = Math.round((mapUndatedCount / legendProperties.length) * 100);
+---
+
+<BaseLayout title="Teiku karte" active="map">
+  <article class="map-page" data-map-page data-base={base}>
+    <div class="map-workspace browser-layout browser">
+    <aside class="filter-sidebar map-filters" data-map-filters>
+      <button class="mobile-filter-toggle" type="button" data-map-mobile-filter-toggle aria-expanded="false" aria-controls="map-filters"><span><i data-lucide="sliders-horizontal"></i><span data-i18n="map.filters">Filtri</span></span><i data-lucide="chevron-down"></i></button>
+      <form id="map-filters">
+        <div class="filter-title"><h2 data-i18n="map.filters">Filtri</h2><button class="text-button clear-filters" type="button" data-map-filter-clear hidden><i data-lucide="rotate-ccw"></i><span data-i18n="map.clearFiltersLong">Notīrīt filtrus</span></button></div>
+        <details class="multi-select" data-map-filter="theme" data-multi-filter="theme"><summary><span data-i18n="map.filterThemes">Tēmas</span><small data-map-filter-count>Visas</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchThemes">Meklēt tēmu</span><input type="search" data-map-filter-search placeholder="Meklēt tēmu…" data-i18n-placeholder="map.searchThemes"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Atzīmēt visus</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Noņemt visus</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="narrator" data-multi-filter="narrator"><summary><span data-i18n="map.filterNarrators">Teicēji</span><small data-map-filter-count>Visi</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchNarrators">Meklēt teicēju</span><input type="search" data-map-filter-search placeholder="Meklēt teicēju…" data-i18n-placeholder="map.searchNarrators"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Atzīmēt visus</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Noņemt visus</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="collector" data-multi-filter="collector"><summary><span data-i18n="map.filterCollectors">Pierakstītāji</span><small data-map-filter-count>Visi</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchCollectors">Meklēt pierakstītāju</span><input type="search" data-map-filter-search placeholder="Meklēt pierakstītāju…" data-i18n-placeholder="map.searchCollectors"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Atzīmēt visus</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Noņemt visus</button></div><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="place" data-multi-filter="place"><summary><span data-i18n="map.filterPlaces">Vietas</span><small data-map-filter-count>Visas</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchPlaces">Meklēt vietu</span><input type="search" data-map-filter-search placeholder="Meklēt vietu…" data-i18n-placeholder="map.searchPlaces"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Atzīmēt visus</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Noņemt visus</button></div><label class="unknown-toggle"><input type="checkbox" data-map-include-unknown="place" checked/><span data-i18n="filters.includeUnknownPlaces">Iekļaut nezināmās vietas</span></label><div class="multi-options"></div></div></details>
+        <details class="multi-select" data-map-filter="volume" data-multi-filter="volume"><summary><span data-i18n="map.filterVolumes">Sējumi</span><small data-map-filter-count>Visi</small><i data-lucide="chevron-down"></i></summary><div class="multi-panel"><label class="multi-search"><span class="sr-only" data-i18n="map.searchVolumes">Meklēt sējumu</span><input type="search" data-map-filter-search placeholder="Meklēt sējumu…" data-i18n-placeholder="map.searchVolumes"/></label><div class="multi-actions"><button type="button" data-map-select-all data-i18n="map.selectAll">Atzīmēt visus</button><button type="button" data-map-clear-all data-i18n="map.clearAll">Noņemt visus</button></div><div class="multi-options"></div></div></details>
+        <fieldset class="timeline"><legend data-i18n="map.timeRange">Laika nogrieznis</legend><div class="timeline-values"><output data-map-year-from>{mapMinYear}</output><span>–</span><output data-map-year-to>{mapMaxYear}</output></div><div class="dual-range"><span class="range-track" aria-hidden="true"></span><input type="range" min={mapMinYear} max={mapMaxYear} value={mapMinYear} data-map-year-from-input/><input type="range" min={mapMinYear} max={mapMaxYear} value={mapMaxYear} data-map-year-to-input/></div><label class="undated-toggle"><input type="checkbox" data-map-undated checked/><span data-i18n="map.includeUndated">Iekļaut nedatētās teikas</span><small>{mapUndatedPercent}% jeb {mapUndatedCount.toLocaleString("lv-LV")} teikas nav datētas</small></label></fieldset>
+      </form>
+      <details class="download-menu" data-map-download data-disabled="true"><summary aria-disabled="true"><i data-lucide="download"></i><span data-i18n="map.download">Lejupielādēt</span><i data-lucide="chevron-down"></i></summary><div class="download-options"><div class="download-formats"><button type="button" data-map-export="csv" disabled>CSV</button><button type="button" data-map-export="geojson" disabled>GeoJSON</button><button type="button" data-map-export="graphml" disabled>GraphML</button></div></div></details><p class="download-hint" data-map-download-hint data-i18n="map.downloadHint">Lai lejupielādētu, vispirms veiciet atlasi.</p>
+    </aside>
+    <span class="map-filter-collapse" role="button" tabindex="0" data-map-filter-collapse aria-expanded="true" aria-controls="map-filters" aria-label="Sakļaut filtrus" title="Sakļaut filtrus"></span>
+    <section
+      class="map-stage"
+      aria-label="Teiku karte"
+      data-i18n-aria-label="map.title"
+    >
+      <div class="corpus-map" data-map tabindex="0"></div>
+      <div class="map-toolbar">
+        <div class="map-toolbar-primary">
+          <div
+            class="map-mode"
+            role="group"
+            aria-label="Vizualizācijas veids"
+            data-i18n-aria-label="map.visualizationType"
+          >
+            <button
+              type="button"
+              data-map-mode="points"
+              aria-pressed="true"
+              data-i18n="map.modePoints">Teikas</button
+            >
+            <button
+              type="button"
+              data-map-mode="clusters"
+              aria-pressed="false"
+              data-i18n="map.modeClusters">Kopas</button
+            >
+            <button
+              type="button"
+              data-map-mode="heatmap"
+              disabled
+              aria-pressed="false"
+              data-i18n="map.modeHeatmap">Intensitāte</button
+            >
+            <button
+              type="button"
+              data-map-mode="network"
+              disabled
+              aria-pressed="false"
+              data-i18n="map.modeNetwork">Tīklojums</button
+            >
+          </div>
+          <details class="layer-menu" data-layer-menu>
+            <summary
+              ><i data-lucide="layers"></i><span data-i18n="map.layers"
+                >Slāņi</span
+              ><i data-lucide="chevron-down"></i></summary
+            >
+            <div class="layer-panel">
+              <section class="layer-group">
+                <h2 data-i18n="map.basemap">Pamatkarte</h2>
+                <div class="layer-select">
+                  <span data-i18n="map.basemapStyle">Kartes izskats</span>
+                  <details class="basemap-select" data-basemap-menu>
+                    <summary><span data-basemap-label></span><i data-lucide="chevron-down"></i></summary>
+                    <div class="basemap-options" role="radiogroup">
+                      <button type="button" role="radio" data-basemap-option="streets" data-i18n="map.basemapStreets">Ielu karte</button>
+                      <button type="button" role="radio" data-basemap-option="light" data-i18n="map.basemapLight">Gaišā karte</button>
+                      <button type="button" role="radio" data-basemap-option="dark" data-i18n="map.basemapDark">Tumšā karte</button>
+                      <button type="button" role="radio" data-basemap-option="minimal" data-i18n="map.basemapMinimal">Minimāla</button>
+                    </div>
+                  </details>
+                  <input type="hidden" data-basemap-style />
+                </div>
+                <label class="layer-option"
+                  ><input type="checkbox" data-layer="geography" checked /><span
+                    class="layer-check"><i data-lucide="check"></i></span
+                  ><span data-i18n="map.geography">Ģeogrāfiskais fons</span
+                  ></label
+                >
+                <label class="layer-option"
+                  ><input type="checkbox" data-layer="labels" checked /><span
+                    class="layer-check"><i data-lucide="check"></i></span
+                  ><span data-i18n="map.labels">Vietu nosaukumi</span></label
+                >
+              </section>
+              <section class="layer-group">
+                <h2 data-i18n="map.dataLayers">Datu slāņi</h2>
+                <fieldset class="map-palette" data-map-palette>
+                  <legend data-i18n="map.dataColor">Datu krāsa</legend>
+                  <label><input type="radio" name="map-palette" value="green" /><span class="map-palette-swatch map-palette-green"></span><span data-i18n="map.colorGreen">Zaļa</span></label>
+                  <label><input type="radio" name="map-palette" value="blue" /><span class="map-palette-swatch map-palette-blue"></span><span data-i18n="map.colorBlue">Zila</span></label>
+                  <label><input type="radio" name="map-palette" value="yellow" /><span class="map-palette-swatch map-palette-yellow"></span><span data-i18n="map.colorYellow">Dzeltena</span></label>
+                </fieldset>
+                <fieldset class="point-color-by" data-point-color-by data-point-layer-control>
+                  <legend data-i18n="map.colorBy">Krāsot pēc</legend>
+                  <label><input type="radio" name="point-color-by" value="single" /><span data-i18n="map.colorBySingle">Vienā krāsā</span></label>
+                  <label><input type="radio" name="point-color-by" value="theme" /><span data-i18n="map.colorByTheme">Tēmas</span></label>
+                  <label><input type="radio" name="point-color-by" value="narrator" /><span data-i18n="map.colorByNarrator">Teicēja</span></label>
+                  <label><input type="radio" name="point-color-by" value="collector" /><span data-i18n="map.colorByCollector">Pierakstītāja</span></label>
+                </fieldset>
+                <fieldset class="point-style-choice" data-point-style-choice data-point-layer-control>
+                  <legend data-i18n="map.pointStyle">Punktu attēlojums</legend>
+                  <label><input type="radio" name="point-style" value="rays" /><span data-i18n="map.pointStyleRays">Stari</span></label>
+                  <label><input type="radio" name="point-style" value="bubbles" /><span data-i18n="map.pointStyleBubbles">Burbuļi</span></label>
+                </fieldset>
+                <label class="layer-option"
+                  ><input type="checkbox" data-layer="unmapped" /><span
+                    class="layer-check"><i data-lucide="check"></i></span
+                  ><span data-i18n="map.showUnmapped"
+                    >Rādīt 314 nekartētās teikas līcī</span
+                  ></label
+                >
+              </section>
+            </div>
+          </details>
+        </div>
+        <a class="map-count" data-map-count aria-live="polite" target="_blank" rel="noopener"><span data-map-count-text></span><i data-lucide="external-link"></i></a>
+      </div>
+      <div class="network-toolbar" data-network-toolbar hidden>
+        <p data-network-context></p>
+        <div class="network-field"><span data-i18n="map.networkType">Tīklojuma veids</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkSimilarity">Tematu līdzība</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="similarity" data-i18n="map.networkSimilarity">Tematu līdzība</button><button type="button" disabled data-network-value="collectors" data-i18n="map.networkCollectorGeography">Pierakstītāju ģeogrāfija</button><button type="button" disabled data-network-value="plots" data-i18n="map.networkPlotPlaces">Temats un vietas</button><button type="button" disabled data-network-value="narratorCollectors" data-i18n="map.networkNarratorCollectors">Teicēji un pierakstītāji</button><button type="button" disabled data-network-value="sources" data-i18n="map.networkSources">Avotu saiknes</button></div><select data-network-type hidden><option value="similarity" data-i18n="map.networkSimilarity">Tematu līdzība</option></select></details></div>
+        <label class="network-density"><span data-i18n="map.networkDensity">Saikņu blīvums</span><small data-i18n="map.networkLess">Mazāk</small><input type="range" min="0" max="100" value="45" step="5" data-network-density/><small data-i18n="map.networkMore">Vairāk</small></label>
+        <div class="network-field"><span data-i18n="map.networkColorBy">Krāsot pēc</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkColorTheme">Dominējošās tēmas</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="theme" data-i18n="map.networkColorTheme">Dominējošās tēmas</button><button type="button" data-network-value="count" data-i18n="map.networkColorCount">Teiku skaita</button><button type="button" disabled data-network-value="region" data-i18n="map.networkColorRegion">Reģiona</button><button type="button" data-network-value="single" data-i18n="map.networkColorSingle">Vienā krāsā</button></div><select data-network-color hidden><option value="theme">Dominējošās tēmas</option><option value="count">Teiku skaita</option><option value="single">Vienā krāsā</option></select></details></div>
+        <div class="network-field"><span data-i18n="map.networkFocus">Fokusa režīms</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkFocusAll">Viss tīkls</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="all" data-i18n="map.networkFocusAll">Viss tīkls</button><button type="button" data-network-value="related" data-i18n="map.networkFocusRelated">Tikai saistītās vietas</button></div><select data-network-focus hidden><option value="all">Viss tīkls</option><option value="related">Tikai saistītās vietas</option></select></details></div>
+        <button type="button" data-network-compare><i data-lucide="git-compare-arrows"></i><span data-i18n="map.comparePlaces">Salīdzināt vietas</span></button>
+      </div>
+      <div class="network-tooltip" data-network-tooltip hidden></div>
+      <div class="heat-controls" data-heat-controls hidden>
+        <label
+          ><span data-i18n="map.intensity">Intensitāte</span><input
+            type="range"
+            min="40"
+            max="200"
+            value="70"
+            step="10"
+            data-heat-intensity
+          /><output data-heat-output>70%</output></label
+        >
+        <label
+          ><span data-i18n="map.radius">Aptvērums</span><input
+            type="range"
+            min="8"
+            max="48"
+            value="26"
+            step="2"
+            data-heat-radius
+          /><output data-radius-output>26</output></label
+        >
+        <div class="heat-key" data-heat-key hidden>
+          <span data-i18n="map.heatLow">Zems</span><span class="heat-ramp"></span><span data-i18n="map.heatMedium">Vidējs</span><span data-i18n="map.heatHigh">Augsts</span>
+        </div>
+      </div>
+      <div class="point-controls" data-point-controls>
+        <label><span data-i18n="map.pointIntensity">Krāsu intensitāte</span><input type="range" min="40" max="200" step="5" value="100" data-point-intensity /><output data-point-intensity-output>100%</output></label>
+      </div>
+      <aside class="map-panel" data-map-panel aria-live="polite" hidden></aside>
+      <div class="map-empty-state" data-map-empty-state hidden><strong data-i18n="map.emptyTitle">Šai atlasei nav atrasta neviena teika.</strong><button type="button" data-map-empty-clear data-i18n="map.clearFiltersLong">Notīrīt filtrus</button></div>
+      <div class="map-legend" data-map-legend>
+        <strong class="map-legend-title" data-i18n="map.legendTitle">Apzīmējumi</strong>
+        <span class="point-key"
+          ><span class="point-dot"></span><span data-i18n="map.oneLegendPoint"
+            >Viens punkts = viena teika</span
+          ></span
+        >
+        <span class="overlap-key" data-i18n="map.overlapNote"
+          >Vienādu koordinātu punkti var pārklāties.</span
+        >
+        <div class="network-key" data-network-key hidden><span class="network-node-sample"></span><span data-i18n="map.networkNodeSize">Lielāks mezgls = vairāk teiku</span><span class="network-edge-sample"></span><span data-i18n="map.networkEdgeStrength">Biezāka saikne = lielāka līdzība</span><button type="button" data-network-method><i data-lucide="info"></i><span data-i18n="map.networkMethodAction">Kā tiek aprēķināta līdzība?</span></button></div>
+      </div>
+    </section>
+    <footer class="map-status-bar"><div><i data-lucide="notebook-pen"></i><strong data-map-total-count></strong></div><div class="map-active-filters" data-map-filter-summary aria-label="Aktīvie filtri" data-i18n-aria-label="map.activeFilters"></div></footer>
+    </div>
+    <script
+      type="application/json"
+      id="corpus-map-data"
+      is:inline
+      set:html={JSON.stringify(mapData).replace(/</g, "\u003c")}
+    />
+  </article>
+  <script>
+    import "../../scripts/map-page";
+  </script>
+</BaseLayout>
