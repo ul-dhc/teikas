@@ -428,13 +428,19 @@ const nearestPointLegend = (event: maplibregl.MapMouseEvent & { features?: mapli
   }
   return nearestId;
 };
-const categoryColor = (properties: LegendProperties) => {
-  if (pointColorBy === "single") return colors.green;
-  const value = String(pointColorBy === "theme" ? properties.themeLv : pointColorBy === "narrator" ? properties.narrator : properties.collector).trim();
-  if (!value) return colors.categoryNeutral;
+const pointCategoryValue = (properties: LegendProperties) => String(pointColorBy === "theme" ? properties.themeLv : pointColorBy === "narrator" ? properties.narrator : properties.collector).trim();
+const pointCategoryIndex = (properties: LegendProperties) => {
+  if (pointColorBy === "single") return 0;
+  const value = pointCategoryValue(properties);
+  if (!value) return colors.category.length;
   const hash = [...value].reduce((total, character) => ((total << 5) - total + character.charCodeAt(0)) | 0, 0);
-  return colors.category[Math.abs(hash) % colors.category.length];
+  return Math.abs(hash) % colors.category.length;
 };
+const categoryColor = (properties: LegendProperties) => pointColorBy === "single"
+  ? colors.green
+  : pointCategoryIndex(properties) === colors.category.length
+    ? colors.categoryNeutral
+    : colors.category[pointCategoryIndex(properties)];
 const canonicalPointCoordinates = new Map(dataset.places.features.map((feature) => [feature.properties.id, feature.geometry.coordinates]));
 const pointGroupCoordinates = (feature: (typeof dataset.legends.features)[number]) => {
   const coordinates = feature.geometry.coordinates,
@@ -458,11 +464,22 @@ const updatePointSources = () => {
   pointAnchors.clear();
   pointDisplayFeatures.clear();
   groups.forEach((group, key) => {
-    group.sort((first, second) => String(first.properties.id).localeCompare(String(second.properties.id)));
+    group.sort((first, second) => pointCategoryIndex(first.properties) - pointCategoryIndex(second.properties)
+      || pointCategoryValue(first.properties).localeCompare(pointCategoryValue(second.properties), "lv")
+      || String(first.properties.id).localeCompare(String(second.properties.id)));
     const [longitude, latitude] = pointGroupCoordinates(group[0]), latitudeRadians = latitude * Math.PI / 180,
-      metersPerPixel = 156543.03392 * Math.cos(latitudeRadians) / 2 ** zoom;
+      metersPerPixel = 156543.03392 * Math.cos(latitudeRadians) / 2 ** zoom,
+      placements = group.map((_, index) => ({
+        radiusIndex: index,
+        angle: index * goldenAngle,
+      })).sort((first, second) => {
+        const normalizedFirst = (first.angle % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2),
+          normalizedSecond = (second.angle % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2);
+        return normalizedFirst - normalizedSecond;
+      });
     group.forEach((feature, index) => {
-      const radiusPixels = ((displayStyle === "rays" ? 8.5 : 9.5) + spacing * Math.sqrt(index + 1)) * rayLength, radiusMeters = radiusPixels * metersPerPixel, angle = index * goldenAngle,
+      const placement = pointColorBy === "single" ? { radiusIndex: index, angle: index * goldenAngle } : placements[index],
+        radiusPixels = ((displayStyle === "rays" ? 8.5 : 9.5) + spacing * Math.sqrt(placement.radiusIndex + 1)) * rayLength, radiusMeters = radiusPixels * metersPerPixel, angle = placement.angle,
         latitudeOffset = Math.sin(angle) * radiusMeters / 111320,
         longitudeOffset = Math.cos(angle) * radiusMeters / Math.max(111320 * Math.cos(latitudeRadians), 1);
       const displayFeature = { ...feature, geometry: { type: "Point", coordinates: [longitude + longitudeOffset, latitude + latitudeOffset] }, properties: { ...feature.properties, visuallyDispersed: true, placeCount: group.length, centerKey: key, categoryColor: categoryColor(feature.properties) } };
