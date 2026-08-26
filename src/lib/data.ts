@@ -92,5 +92,29 @@ export const browseRecords = legends.map((legend) => ({
   year: legendYear(legend), excerptLv: excerpt(legend.text.lv), excerptDe: excerpt(legend.text.de),
 }));
 
+const dailyTheme = (legend: Legend) => legend.chapter.lv?.trim() || '__unknown__';
+const dailyThemeGroups = [...legends.reduce((groups, legend) => {
+  const theme = dailyTheme(legend), group = groups.get(theme) ?? [];
+  group.push(legend);
+  groups.set(theme, group);
+  return groups;
+}, new Map<string, Legend[]>())].map(([theme, records]) => ({ theme, records, cursor: 0 }));
+
+export const dailyLegends: Legend[] = [];
+let previousDailyTheme = '';
+while (dailyLegends.length < legends.length) {
+  const nextGroup = dailyThemeGroups
+    .filter(group => group.cursor < group.records.length && group.theme !== previousDailyTheme)
+    .sort((first, second) => (second.records.length - second.cursor) - (first.records.length - first.cursor)
+      || first.theme.localeCompare(second.theme, 'lv'))[0];
+  if (!nextGroup) throw new Error('Unable to create a daily legend sequence without adjacent matching themes.');
+  dailyLegends.push(nextGroup.records[nextGroup.cursor++]);
+  previousDailyTheme = nextGroup.theme;
+}
+if (dailyTheme(dailyLegends[0]) === dailyTheme(dailyLegends.at(-1)!)) throw new Error('Daily legend sequence repeats a theme at its cycle boundary.');
+
+const browseRecordsById = new Map(browseRecords.map(record => [record.id, record]));
+export const dailyBrowseRecords = dailyLegends.map(legend => browseRecordsById.get(legend.id)!);
+
 export const volumes = [...new Set(legends.map((legend) => legend.volume))].sort((a, b) => a.localeCompare(b, 'lv', { numeric: true }));
 export const chapters = [...new Set(legends.map((legend) => legend.chapter.lv).filter((value): value is string => Boolean(value)))].sort((a, b) => a.localeCompare(b, 'lv'));

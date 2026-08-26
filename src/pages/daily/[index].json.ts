@@ -1,7 +1,7 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
-import { browseRecords } from '../../lib/data';
+import { dailyBrowseRecords } from '../../lib/data';
 
-export const getStaticPaths = (() => browseRecords.map((record, index) => ({
+export const getStaticPaths = (() => dailyBrowseRecords.map((record, index) => ({
   params: { index: String(index) },
   props: { record },
 }))) satisfies GetStaticPaths;
