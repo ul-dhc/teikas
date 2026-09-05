@@ -1168,7 +1168,6 @@ const applyBasemapStyle = () => {
     map.setLayoutProperty(id, "visibility", local && labels ? "visible" : "none");
   for (const name of ["streets", "light", "dark"]) {
     map.setLayoutProperty(`carto-${name}`, "visibility", style === name && geography ? "visible" : "none");
-    map.setLayoutProperty(`carto-${name}-labels`, "visibility", style === name && labels ? "visible" : "none");
   }
   map.setPaintProperty(
     "land",
@@ -1193,14 +1192,17 @@ map.on("load", async () => {
   const region = await fetch(`${base}data/map/northern-europe.json`).then(
     (response) => response.json(),
   );
-  const cartoAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    addCartoSource = (id: string, path: string) => map.addSource(id, { type: "raster", tiles: [`https://a.basemaps.cartocdn.com/${path}/{z}/{x}/{y}@2x.png`, `https://b.basemaps.cartocdn.com/${path}/{z}/{x}/{y}@2x.png`, `https://c.basemaps.cartocdn.com/${path}/{z}/{x}/{y}@2x.png`], tileSize: 256, attribution: cartoAttribution });
-  addCartoSource("carto-streets", "rastertiles/voyager_nolabels");
-  addCartoSource("carto-streets-labels", "rastertiles/voyager_only_labels");
-  addCartoSource("carto-light", "light_nolabels");
-  addCartoSource("carto-light-labels", "light_only_labels");
-  addCartoSource("carto-dark", "dark_nolabels");
-  addCartoSource("carto-dark-labels", "dark_only_labels");
+  const osmAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    addOsmSource = (id: string) => map.addSource(id, {
+      type: "raster",
+      tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+      tileSize: 256,
+      maxzoom: 19,
+      attribution: osmAttribution,
+    });
+  addOsmSource("carto-streets");
+  addOsmSource("carto-light");
+  addOsmSource("carto-dark");
   map.addSource("land", { type: "geojson", data: region.land });
   map.addSource("coast", { type: "geojson", data: region.coast });
   map.addSource("territory-boundaries", { type: "geojson", data: region.boundaries });
@@ -1253,7 +1255,17 @@ map.on("load", async () => {
     },
   });
   for (const name of ["streets", "light", "dark"])
-    map.addLayer({ id: `carto-${name}`, type: "raster", source: `carto-${name}`, layout: { visibility: "none" }, paint: { "raster-opacity": 0.92, "raster-fade-duration": 180 } });
+    map.addLayer({
+      id: `carto-${name}`,
+      type: "raster",
+      source: `carto-${name}`,
+      layout: { visibility: "none" },
+      paint: name === "dark"
+        ? { "raster-opacity": 0.9, "raster-brightness-max": 0.34, "raster-saturation": -0.62, "raster-contrast": 0.18, "raster-fade-duration": 180 }
+        : name === "light"
+          ? { "raster-opacity": 0.72, "raster-saturation": -0.42, "raster-contrast": -0.08, "raster-fade-duration": 180 }
+          : { "raster-opacity": 0.92, "raster-fade-duration": 180 },
+    });
   map.addLayer({
     id: "land",
     type: "fill",
@@ -1325,8 +1337,6 @@ map.on("load", async () => {
       "text-opacity": 0.76,
     },
   });
-  for (const name of ["streets", "light", "dark"])
-    map.addLayer({ id: `carto-${name}-labels`, type: "raster", source: `carto-${name}-labels`, layout: { visibility: "none" }, paint: { "raster-opacity": 0.76, "raster-fade-duration": 180 } });
   map.addLayer({
     id: "heatmap",
     type: "heatmap",
@@ -1898,7 +1908,7 @@ page.querySelectorAll<HTMLInputElement>("[data-layer]").forEach((input) =>
       visibility = input.checked ? "visible" : "none",
       ids =
         name === "labels"
-          ? ["city-dots", "city-labels", "place-labels", "carto-streets-labels", "carto-light-labels", "carto-dark-labels"]
+          ? ["city-dots", "city-labels", "place-labels"]
           : name === "geography"
             ? ["land", "coast", "lakes", "rivers", "territory-boundaries", "carto-streets", "carto-light", "carto-dark"]
           : name === "clusters"
