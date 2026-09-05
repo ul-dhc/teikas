@@ -225,17 +225,19 @@ const map = new maplibregl.Map({
     [51, 73],
   ],
   attributionControl: false,
-  style: {
-    version: 8,
-    sources: {},
-    layers: [
-      {
-        id: "background",
-        type: "background",
-        paint: { "background-color": colors.water },
+  style: basemapStyle.value === "dark"
+    ? "https://tiles.openfreemap.org/styles/dark"
+    : {
+        version: 8,
+        sources: {},
+        layers: [
+          {
+            id: "background",
+            type: "background",
+            paint: { "background-color": colors.water },
+          },
+        ],
       },
-    ],
-  },
 });
 const navigationControl = new maplibregl.NavigationControl({
   showCompass: false,
@@ -1167,7 +1169,8 @@ const applyBasemapStyle = () => {
   for (const id of ["city-dots", "city-labels", "place-labels"])
     map.setLayoutProperty(id, "visibility", local && labels ? "visible" : "none");
   for (const name of ["streets", "light", "dark"]) {
-    map.setLayoutProperty(`carto-${name}`, "visibility", style === name && geography ? "visible" : "none");
+    if (map.getLayer(`carto-${name}`))
+      map.setLayoutProperty(`carto-${name}`, "visibility", style === name && geography ? "visible" : "none");
   }
   map.setPaintProperty(
     "land",
@@ -1202,7 +1205,6 @@ map.on("load", async () => {
     });
   addOsmSource("carto-streets");
   addOsmSource("carto-light");
-  addOsmSource("carto-dark");
   map.addSource("land", { type: "geojson", data: region.land });
   map.addSource("coast", { type: "geojson", data: region.coast });
   map.addSource("territory-boundaries", { type: "geojson", data: region.boundaries });
@@ -1254,7 +1256,7 @@ map.on("load", async () => {
       properties: { id: "unmapped", count: filteredUnmappedLegends.length },
     },
   });
-  for (const name of ["streets", "light", "dark"])
+  for (const name of ["streets", "light"])
     map.addLayer({
       id: `carto-${name}`,
       type: "raster",
@@ -1997,8 +1999,15 @@ page.querySelector<HTMLButtonElement>("[data-network-method]")!.addEventListener
   (window as any).renderLucideIcons?.();
 });
 page.querySelectorAll<HTMLButtonElement>("[data-basemap-option]").forEach((option) => option.addEventListener("click", () => {
+  const previousStyle = basemapStyle.value;
   basemapStyle.value = option.dataset.basemapOption!;
   basemapExplicit = true;
+  if (previousStyle === "dark" || basemapStyle.value === "dark") {
+    basemapMenu.open = false;
+    updateUrl();
+    location.reload();
+    return;
+  }
   colors = themeColors(basemapPalette(basemapStyle.value) ?? document.documentElement.dataset.theme === "dark");
   basemapMenu.open = false;
   syncBasemapMenu();
