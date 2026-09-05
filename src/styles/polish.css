@@ -691,6 +691,11 @@ body{background:
 
 /* Leave a stable click/reading area around the pin for long translated titles. */
 .browser[data-view=grid] .result-card h2{padding-right:3rem}
+.detail-pin{color:var(--muted)}
+.detail-pin .lucide{transform:rotate(-8deg);transition:transform .18s ease,filter .18s ease}
+.detail-pin:hover{color:var(--browse-green)}
+.detail-pin[aria-pressed=true]{color:var(--pin);border-color:color-mix(in srgb,var(--pin),transparent 35%);background:color-mix(in srgb,var(--pin),transparent 92%);box-shadow:0 0 12px color-mix(in srgb,var(--pin),transparent 78%)}
+.detail-pin[aria-pressed=true] .lucide{transform:rotate(-8deg) scale(1.08);filter:drop-shadow(0 0 5px color-mix(in srgb,var(--pin),transparent 45%))}
 .source-list li>small{display:none}
 .page-size{top:50%;transform:translateY(-50%)}
 .pagination-row>.page-label{position:absolute;left:0;top:50%;transform:translateY(-50%);margin:0;color:var(--muted);font-size:.78rem}
