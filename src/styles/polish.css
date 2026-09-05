@@ -702,13 +702,14 @@ body{background:
   .browser[data-view=grid] .results-list{
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:1.25rem;
+    align-items:start;
   }
 }
 .browser[data-view=grid] .result-card{
   min-height:0;
   padding:1.45rem 1.55rem;
   grid-template-columns:1fr auto;
-  grid-template-rows:auto auto minmax(13.5rem,auto) auto auto auto;
+  grid-template-rows:repeat(5,auto);
   gap:.7rem 1rem;
   align-content:start;
 }
@@ -725,7 +726,7 @@ body{background:
 }
 .browser[data-view=grid] .result-excerpt{
   grid-column:1/-1;
-  grid-row:3;
+  grid-row:2;
   margin:.2rem 0 .15rem;
   padding:0;
   border-radius:0;
@@ -751,7 +752,7 @@ body{background:
 .browser[data-view=grid] .card-read-actions{
   display:flex;
   grid-column:1/-1;
-  grid-row:6;
+  grid-row:3;
   align-items:center;
   gap:1rem;
   margin-top:.25rem;
@@ -776,7 +777,7 @@ body{background:
     padding:1.15rem;
   }
   .browser[data-view=grid] .result-excerpt{
-    grid-row:3;
+    grid-row:2;
     min-height:0;
     font-size:1rem;
     line-height:1.62;
@@ -784,5 +785,5 @@ body{background:
   }
   .browser[data-view=grid] .card-location{grid-row:4}
   .browser[data-view=grid] .card-people{grid-row:5}
-  .browser[data-view=grid] .card-read-actions{grid-row:6}
+  .browser[data-view=grid] .card-read-actions{grid-row:3}
 }
