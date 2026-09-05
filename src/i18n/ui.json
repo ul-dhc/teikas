@@ -400,14 +400,14 @@
     "en": "Oldest first"
   },
   "browser.list": {
-    "lv": "Saraksts",
-    "de": "Liste",
-    "en": "List"
+    "lv": "Tabula",
+    "de": "Tabelle",
+    "en": "Table"
   },
   "browser.grid": {
-    "lv": "Režģis",
-    "de": "Raster",
-    "en": "Grid"
+    "lv": "Lasīšana",
+    "de": "Lesen",
+    "en": "Reading"
   },
   "browser.titleColumn": {
     "lv": "Nosaukums",
