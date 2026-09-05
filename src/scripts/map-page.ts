@@ -261,7 +261,6 @@ requestAnimationFrame(() => {
 map.addControl(
   new maplibregl.AttributionControl({
     compact: true,
-    customAttribution: "Korpuss: Teikas · Ģeogrāfija: Natural Earth",
   }),
   "bottom-right",
 );

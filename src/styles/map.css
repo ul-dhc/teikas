@@ -87,12 +87,15 @@
 }
 .maplibregl-ctrl-attrib {
   font-family: var(--sans);
-  font-size: 0.68rem !important;
-  background: color-mix(in srgb, var(--raised), transparent 12%) !important;
+  font-size: 0.62rem !important;
+  background: color-mix(in srgb, var(--raised), transparent 28%) !important;
   color: var(--muted);
+  opacity:.56;
+  transition:opacity .18s ease;
 }
+.maplibregl-ctrl-attrib:hover,.maplibregl-ctrl-attrib:focus-within{opacity:.9}
 .maplibregl-ctrl-attrib a {
-  color: var(--blue);
+  color: inherit;
 }
 .map-toolbar {
   position: absolute;
