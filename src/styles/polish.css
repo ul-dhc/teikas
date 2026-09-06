@@ -366,6 +366,7 @@ body{background:
 .institution-credit a{display:inline-block;color:inherit;text-decoration:none;transform-origin:right center;transition:color .22s ease,transform .22s cubic-bezier(.2,.75,.25,1),text-shadow .22s ease}
 .institution-credit a:hover{color:var(--blue);transform:scale(1.035);text-shadow:0 0 14px color-mix(in srgb,var(--blue),transparent 76%)}
 @media(max-width:600px){.site-footer{padding-block:1.5rem}.institution-credit{white-space:normal}}
+@media(max-width:600px){.filter-sidebar>.download-menu:not([data-has-selection=true]),.filter-sidebar>.download-menu:not([data-has-selection=true])+.download-hint{display:none}}
 
 :root{--daily-green:#168c78}:root[data-theme=dark]{--daily-green:#61c3aa}
 .daily-heading .eyebrow{color:var(--daily-green)}
