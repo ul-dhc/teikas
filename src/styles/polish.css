@@ -414,6 +414,8 @@ body{background:
 :root:not([data-theme=dark]) .stats .stat:hover>.lucide{color:var(--stat-outline);filter:drop-shadow(0 0 8px color-mix(in srgb,var(--stat-outline),transparent 52%));transform:scale(1.06)}
 .hero-search input::placeholder,.browser-main .search-field input::placeholder{font-size:.86rem;font-weight:400;color:color-mix(in srgb,var(--muted),transparent 24%);opacity:1}
 :root[data-theme=dark] .hero-search input::placeholder,:root[data-theme=dark] .browser-main .search-field input::placeholder{color:color-mix(in srgb,var(--muted),transparent 18%);opacity:1}
+.development-notice{width:max-content;max-width:100%;display:flex;align-items:center;gap:.55rem;margin:0 0 1.35rem;padding:.55rem .85rem;border:1px solid color-mix(in srgb,var(--pin),transparent 48%);border-radius:999px;background:color-mix(in srgb,var(--pin),transparent 89%);color:var(--ink);font:600 .84rem/1.35 var(--sans)}
+.development-notice .lucide{width:17px;height:17px;flex:none;color:var(--pin)}
 .daily-section .daily-icon:hover,:root[data-theme=dark] .daily-section .daily-icon:hover{background:var(--raised)!important;background-color:var(--raised)!important}
 
 .browser-layout{--collector-color:#168c78;--narrator-color:var(--pin);--place-color:#1478ad}

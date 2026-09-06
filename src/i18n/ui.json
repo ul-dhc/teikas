@@ -94,6 +94,11 @@
     "de": "Lettische Volkssagen, gesammelt von Pēteris Šmits in den Bänden 13–15 der „Lettischen Märchen und Sagen“ (1925–1937).",
     "en": "Latvian folk legends collected by Pēteris Šmits in volumes 13–15 of Latvian Folk Tales and Legends (1925–1937)."
   },
+  "home.developmentNotice": {
+    "lv": "Šis resurss šobrīd ir izstrādes procesā.",
+    "de": "Diese Ressource befindet sich derzeit in Entwicklung.",
+    "en": "This resource is currently under development."
+  },
   "home.searchPlaceholder": {
     "lv": "Meklēt pēc atslēgvārda, teicēja vārda vai vietas…",
     "de": "Nach Stichwort, Erzähler oder Ort suchen…",
