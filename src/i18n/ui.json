@@ -725,9 +725,9 @@
     "en": "Explore the legend corpus by recorded place."
   },
   "map.layers": {
-    "lv": "Slāņi",
-    "de": "Ebenen",
-    "en": "Layers"
+    "lv": "Iestatījumi",
+    "de": "Einstellungen",
+    "en": "Settings"
   },
   "map.basemap": {
     "lv": "Pamatkarte",
