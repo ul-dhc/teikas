@@ -104,6 +104,11 @@
     "de": "Nach Stichwort, Erzähler oder Ort suchen…",
     "en": "Search by keyword, narrator or place…"
   },
+  "home.searchPlaceholderPerson": {
+    "lv": "Meklēt personu…",
+    "de": "Person suchen…",
+    "en": "Search for a person…"
+  },
   "home.openBrowser": {
     "lv": "Atvērt teiku pārlūku",
     "de": "Sagenbrowser öffnen",
@@ -164,6 +169,16 @@
     "de": "Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.",
     "en": "Search, compare and pin legends you would like to revisit."
   },
+  "browser.titlePersons": {
+    "lv": "Personu pārlūks",
+    "de": "Personenbrowser",
+    "en": "Person browser"
+  },
+  "browser.introPersons": {
+    "lv": "Meklējiet, salīdziniet un piespraudiet personas, pie kurām vēlaties atgriezties.",
+    "de": "Suchen, vergleichen und merken Sie Personen, zu denen Sie zurückkehren möchten.",
+    "en": "Search, compare and pin persons you would like to revisit."
+  },
   "filters.title": {
     "lv": "Filtri",
     "de": "Filter",
@@ -198,6 +213,16 @@
     "lv": "Sējumi",
     "de": "Bände",
     "en": "Volumes"
+  },
+  "filters.genders": {
+    "lv": "Dzimumi",
+    "de": "Geschlechter",
+    "en": "Genders"
+  },
+  "filters.types": {
+    "lv": "Tipi",
+    "de": "Typen",
+    "en": "Types"
   },
   "filters.allF": {
     "lv": "Visas",
@@ -469,6 +494,41 @@
     "de": "Originalmetadaten",
     "en": "Original metadata"
   },
+  "meta.gender": {
+    "lv": "Dzimums",
+    "de": "Geschlecht",
+    "en": "Gender"
+  },
+  "meta.genderM": {
+    "lv": "Vīrietis",
+    "de": "Mann",
+    "en": "Man"
+  },
+  "meta.genderF": {
+    "lv": "Sieviete",
+    "de": "Frau",
+    "en": "Woman"
+  },
+  "meta.type": {
+    "lv": "Tips",
+    "de": "Typ",
+    "en": "Type"
+  },
+  "meta.fullname": {
+    "lv": "Pilnais vārds",
+    "de": "Voller Name",
+    "en": "Full name"
+  },
+  "meta.notes": {
+    "lv": "Piezīmes",
+    "de": "Notizen",
+    "en": "Notes"
+  },
+  "meta.legendCount": {
+    "lv": "Teiku skaits",
+    "de": "Anzahl der Sagen",
+    "en": "Number of legends"
+  },
   "browser.emptyTitle": {
     "lv": "Nekas netika atrasts.",
     "de": "Keine Ergebnisse gefunden.",
@@ -523,6 +583,21 @@
     "lv": "Pierakstītājs: {value}",
     "de": "Aufgezeichnet von: {value}",
     "en": "Collector: {value}"
+  },
+  "browser.genderTag": {
+    "lv": "Dzimums: {value}",
+    "de": "Geschlecht: {value}",
+    "en": "Gender: {value}"
+  },
+  "browser.typeTag": {
+    "lv": "Tips: {value}",
+    "de": "Typ: {value}",
+    "en": "Type: {value}"
+  },
+  "browser.fullnameTag": {
+    "lv": "Pilnais vārds: {value}",
+    "de": "Voller Name: {value}",
+    "en": "Full name: {value}"
   },
   "browser.withoutUndated": {
     "lv": "Bez nedatētajiem",
@@ -1120,6 +1195,26 @@
     "de": "Alle",
     "en": "All"
   },
+  "map.filterAll.gender": {
+    "lv": "Visi",
+    "de": "Alle",
+    "en": "All"
+  },
+  "map.filterAll.type": {
+    "lv": "Visi",
+    "de": "Alle",
+    "en": "All"
+  },
+  "map.filterType.collector": {
+    "lv": "Pierakstītājs",
+    "de": "Sammler",
+    "en": "Collector"
+  },
+  "map.filterType.narrator": {
+    "lv": "Teicējs",
+    "de": "Erzähler/in",
+    "en": "Narrator"
+  },
   "map.timeRange": {
     "lv": "Laika nogrieznis",
     "de": "Zeitraum",
@@ -1174,6 +1269,16 @@
     "lv": "Meklēt vietu…",
     "de": "Ort suchen…",
     "en": "Search places…"
+  },
+  "map.searchGenders": { 
+    "lv": "Meklēt dzimumu…",
+    "de": "Geschlecht suchen…",
+    "en": "Search gender…"
+  },
+  "map.searchTypes": {
+    "lv": "Meklēt tipu…",
+    "de": "Typ suchen…",
+    "en": "Search type…"
   },
   "map.download": {
     "lv": "Lejupielādēt",

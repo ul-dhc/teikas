@@ -91,6 +91,17 @@ export const browseRecords = legends.map((legend) => ({
   collector: displayPersonName(collectorsById.get(legend.collectorId)), narrator: legend.narratorId ? displayPersonName(narratorsById.get(legend.narratorId)) : '',
   year: legendYear(legend), excerptLv: excerpt(legend.text.lv), excerptDe: excerpt(legend.text.de),
 }));
+const browseCollectors = collectors.map((person) => ({
+  id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
+  type: "Pierakstītājs",
+  gender: person.gender,
+}));
+const browseNarrators = narrators.map((person) => ({
+  id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
+  type: "Teicējs",
+  gender: person.gender,
+}));
+export const browsePersons = [...browseNarrators, ...browseCollectors];
 
 const dailyTheme = (legend: Legend) => legend.chapter.lv?.trim() || '__unknown__';
 const dailyThemeGroups = [...legends.reduce((groups, legend) => {
