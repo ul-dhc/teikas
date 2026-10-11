@@ -1,298 +1,455 @@
-key,lv,de,en
-nav.home,Sākums,Startseite,Home
-nav.texts,Teksti,Texte,Texts
-nav.map,Karte,Karte,Map
-map.title,Teiku karte,Karte der Sagen,Map of legends
-map.intro,Izpētiet teiku korpusu pēc pieraksta vietām.,Erkunden Sie das Sagenkorpus nach Aufzeichnungsorten.,Explore the legend corpus by recorded place.
-map.layers,Iestatījumi,Einstellungen,Settings
-map.basemap,Pamatkarte,Basiskarte,Basemap
-map.basemapStyle,Kartes izskats,Kartenstil,Map style
-map.basemapEditorial,Klusā karte,Ruhige Karte,Quiet map
-map.basemapCoast,Krasta līnija,Küstenlinie,Coastline
-map.basemapMinimal,Minimāla,Minimal,Minimal
-map.basemapStandard,Teikas Standard,Teikas Standard,Teikas Standard
-map.basemapStreets,Ielu karte,Straßenkarte,Street map
-map.basemapLight,Gaišā karte,Helle Karte,Light map
-map.basemapDark,Tumšā karte,Dunkle Karte,Dark map
-map.basemapSatellite,Satelīts — nepieciešama piekļuve,Satellit — Zugang erforderlich,Satellite — access required
-map.filters,Filtri,Filter,Filters
-map.clearFilters,Notīrīt,Zurücksetzen,Clear
-map.clearFiltersLong,Notīrīt filtrus,Filter zurücksetzen,Clear filters
-map.filterThemes,Tēmas,Themen,Themes
-map.filterNarrators,Teicēji,Erzähler,Narrators
-map.filterCollectors,Pierakstītāji,Sammler,Collectors
-map.filterPlaces,Vietas,Orte,Places
-map.filterVolumes,Sējumi,Bände,Volumes
-map.searchThemes,Meklēt tēmu…,Thema suchen…,Search themes…
-map.searchNarrators,Meklēt teicēju…,Erzähler suchen…,Search narrators…
-map.searchCollectors,Meklēt pierakstītāju…,Sammler suchen…,Search collectors…
-map.searchPlaces,Meklēt vietu…,Ort suchen…,Search places…
-map.filterAll.theme,Visas,Alle,All
-map.filterAll.narrator,Visi,Alle,All
-map.filterAll.collector,Visi,Alle,All
-map.filterAll.place,Visas,Alle,All
-map.filterAll.volume,Visi,Alle,All
-map.timeRange,Laika nogrieznis,Zeitraum,Time range
-map.fromYear,No,Von,From
-map.toYear,Līdz,Bis,To
-map.includeUndated,Iekļaut nedatētās teikas,Undatierte Sagen einbeziehen,Include undated legends
-map.openExplorer,Atvērt teiku pārlūkā,Im Sagenbrowser öffnen,Open in legend explorer
-map.modeNetwork,Tīklojums,Netzwerk,Network
-map.download,Lejupielādēt,Herunterladen,Download
-map.downloadHint,"Lai lejupielādētu, vispirms veiciet atlasi.",Treffen Sie zuerst eine Auswahl.,Make a selection before downloading.
-map.advancedFilters,Papildu filtri,Weitere Filter,Advanced filters
-map.advancedDataNote,"Papildu pētniecības filtri būs pieejami, kad korpusā būs strukturēti motīvu, avotu un ģeogrāfiskās precizitātes dati.",Weitere Forschungsfilter werden verfügbar sobald strukturierte Motiv- Quellen- und Präzisionsdaten vorliegen.,Additional research filters will become available when structured motif source and geographic precision data exist.
-map.emptyTitle,Šai atlasei nav atrasta neviena teika.,Für diese Auswahl wurden keine Sagen gefunden.,No legends were found for this selection.
-map.exportCsv,Eksportēt CSV,CSV exportieren,Export CSV
-map.resetExtent,Atjaunot Latvijas skatu,Lettland-Ansicht wiederherstellen,Reset to Latvia
-map.selectionCount,Atlasē: {count} teikas,Auswahl: {count} Sagen,Selection: {count} legends
-map.filterSummary,"Atlasītie filtri: {from}–{to}, aktīvas kategorijas: {filters}","Ausgewählte Filter: {from}–{to}, aktive Kategorien: {filters}","Selected filters: {from}–{to}, active categories: {filters}"
-map.notAvailable,Nav datu,Keine Daten,Not available
-map.analyticalSummary,Analītiskais kopsavilkums,Analytische Zusammenfassung,Analytical summary
-map.dominantTheme,Dominējošā tēma,Dominierendes Thema,Dominant theme
-map.activePeriod,Aktīvais periods,Aktiver Zeitraum,Active period
-map.clusterSummary,Kartes kopa,Kartencluster,Map cluster
-map.selectedCluster,Atlasītā teiku kopa,Ausgewählte Sagengruppe,Selected legend cluster
-map.hotspotSummary,Intensitātes apvidus,Dichtegebiet,Density area
-map.legendTitle,Apzīmējumi,Legende,Legend
-map.dataLayers,Datu slāņi,Datenebenen,Data layers
-map.geography,Ģeogrāfiskais fons,Geografischer Hintergrund,Geographic background
-map.boundaries,Administratīvās robežas,Verwaltungsgrenzen,Administrative boundaries
-map.labels,Vietu nosaukumi,Ortsnamen,Place labels
-map.points,Vietas,Orte,Locations
-map.clusters,Kopas,Cluster,Clusters
-map.heatmap,Blīvums,Dichte,Density
-map.network,Saikņu tīkls,Beziehungsnetz,Relationship network
-map.close,Aizvērt,Schließen,Close
-map.selectedPlace,Atlasītā vieta,Ausgewählter Ort,Selected place
-map.legendCount,Teiku skaits,Anzahl der Sagen,Number of legends
-map.yearSpan,Gadi,Jahre,Years
-map.collectors,Pierakstītāji,Sammler,Collectors
-map.narrators,Teicēji,Erzähler,Narrators
-map.openTexts,Atvērt atlasītos tekstus,Gefilterte Texte öffnen,Open filtered texts
-map.noYear,Nav datējuma,Keine Datierung,No dates available
-map.noSelection,Atlasiet vietu kartē,Ort auf der Karte auswählen,Select a place on the map
-map.noSelectionHelp,Izvēlieties punktu vai kopu, lai skatītu vietas informāciju.,Wählen Sie einen Punkt oder Cluster aus, um Ortsinformationen zu sehen.,Choose a point or cluster to view place information.
-map.resultsInView,Redzamajā kartes apgabalā: {count} teikas,Im sichtbaren Kartenausschnitt: {count} Sagen,Visible map area: {count} legends
-map.unmapped,{places} vietām un {legends} teikām nav kartējamu koordinātu.,Für {places} Orte und {legends} Sagen fehlen kartierbare Koordinaten.,{places} places and {legends} legends have no mappable coordinates.
-map.accessibleAlternative,Izmantojiet tekstu pārlūku kā kartes tekstuālo alternatīvu.,Nutzen Sie den Textbrowser als textuelle Alternative zur Karte.,Use the text browser as a textual alternative to the map.
-map.openBrowser,Atvērt tekstu pārlūku,Textbrowser öffnen,Open text browser
-map.pointLegend,Vieta; apļa izmērs rāda teiku skaitu,Ort; die Kreisgröße zeigt die Anzahl der Sagen,Location; circle size shows the number of legends
-map.selectionLegend,Atlasīta vieta,Ausgewählter Ort,Selected location
-map.heatLow,Zems,Niedrig,Low
-map.heatMedium,Vidējs,Mittel,Medium
-map.heatHigh,Augsts,Hoch,High
-map.networkLegend,Līnijas savieno vietas ar vismaz diviem kopīgiem pierakstītājiem.,Linien verbinden Orte mit mindestens zwei gemeinsamen Sammlern.,Lines connect places sharing at least two collectors.
-map.legendPoints,Teiku punkti,Sagenpunkte,Legend points
-map.oneLegendPoint,Viens punkts = viena teika,Ein Punkt = eine Sage,One point = one legend
-map.intensity,Intensitāte,Intensität,Intensity
-map.networkType,Tīkla veids,Netzwerktyp,Network type
-map.networkNarrators,Teicēji–vietas,Erzähler–Orte,Narrators–places
-map.networkCollectors,Pierakstītāji–vietas,Sammler–Orte,Collectors–places
-map.networkThemes,Tēmas–vietas,Themen–Orte,Themes–places
-map.showUnmapped,Rādīt 314 nekartētās teikas līcī,314 nicht kartierbare Sagen im Golf anzeigen,Show 314 unmapped legends in the gulf
-map.unmappedTitle,Nekartētās teikas,Nicht kartierbare Sagen,Unmapped legends
-map.unmappedExplanation,Punkts Rīgas jūras līcī ir simbolisks agregāts; tas nenorāda teiku izcelsmes vietu.,Der Punkt im Rigaer Meerbusen ist ein symbolisches Aggregat und bezeichnet keinen Herkunftsort.,The point in the Gulf of Riga is a symbolic aggregate and does not indicate a place of origin.
-map.networkLegend.narrators,Līnijas savieno vietas ar kopīgiem teicējiem.,Linien verbinden Orte mit gemeinsamen Erzählern.,Lines connect places sharing narrators.
-map.networkLegend.collectors,Līnijas savieno vietas ar vismaz diviem kopīgiem pierakstītājiem.,Linien verbinden Orte mit mindestens zwei gemeinsamen Sammlern.,Lines connect places sharing at least two collectors.
-map.networkLegend.themes,Līnijas savieno vietas ar vismaz divām kopīgām tēmām; rādītas stiprākās saites.,Linien verbinden Orte mit mindestens zwei gemeinsamen Themen; gezeigt werden die stärksten Beziehungen.,Lines connect places sharing at least two themes; the strongest relationships are shown.
-map.visualizationType,Vizualizācijas veids,Visualisierungstyp,Visualization type
-map.modePoints,Punkti,Punkte,Dots
-map.modeClusters,Kopas,Cluster,Clusters
-map.modeHeatmap,Intensitāte,Dichte,Density
-map.radius,Aptvērums,Radius,Radius
-map.overlapNote,Ārējais aplis = vieta; gredzens = teika; līnija piesaista teiku vietas koordinātai.,Äußerer Kreis = Ort; Ring = Sage; die Linie verbindet die Sage mit der Ortskoordinate.,Outer circle = place; ring = legend; a line ties the legend to the place coordinate.
-map.pointPlaceCollection,Vietas teiku kopa,Sagenbestand des Ortes,Legends at this place
-map.pointStatus,{mapped} kartētas teikas · {unmapped} bez koordinātām,{mapped} kartierte Sagen · {unmapped} ohne Koordinaten,{mapped} mapped legends · {unmapped} without coordinates
-map.dispersedPointExplanation,Teiku gredzeni ir vizuāli izkārtoti vietas medaljonā ap avotā norādīto koordinātu; to novietojums medaljonā nav precīza izcelsmes vieta.,Die Sagenringe sind im Ortsmedaillon um die in der Quelle genannte Koordinate angeordnet; ihre Position im Medaillon ist kein genauer Herkunftsort.,Legend rings are arranged inside the place medallion around the coordinate recorded in the source; their position inside it is not a precise place of origin.
-map.showingPointRecords,Parādītas {shown} no {total} teikām.,{shown} von {total} Sagen werden angezeigt.,Showing {shown} of {total} legends.
-map.legendRecord,Teika,Sage,Legend
-map.openLegend,Atvērt teiku,Sage öffnen,Open legend
-map.originalCoordinate,Izmantota teikas oriģinālā koordināta.,Die ursprüngliche Koordinate der Sage wird verwendet.,The legend’s original coordinate is used.
-map.placeCoordinate,Oriģinālās koordinātas vietā izmantota vietas koordināta.,Anstelle einer ursprünglichen Koordinate wird die Ortskoordinate verwendet.,The place coordinate is used because no original coordinate is available.
-map.zoomIn,Tuvināt,Vergrößern,Zoom in
-map.zoomOut,Tālināt,Verkleinern,Zoom out
-map.resetNorth,Atiestatīt ziemeļu virzienu,Nordrichtung zurücksetzen,Reset bearing to north
-nav.persons,Personas,Personen,Persons
-nav.data,Dati,Daten,Data
-nav.about,Par projektu,Über das Projekt,About the project
-common.back,Atpakaļ,Zurück,Back
-common.search,Meklēt,Suchen,Search
-common.notSpecified,Nav norādīts,Nicht angegeben,Not specified
-common.nextStage,Paredzēts nākamajam posmam,Für eine spätere Projektphase vorgesehen,Planned for a later project phase
-header.interfaceLanguage,Saskarnes valoda,Oberflächensprache,Interface language
-header.textSize,Teksta izmērs,Textgröße,Text size
-header.decreaseText,Samazināt burtus,Text verkleinern,Decrease text size
-header.increaseText,Palielināt burtus,Text vergrößern,Increase text size
-header.dark,Ieslēgt tumšo režīmu,Dunkelmodus einschalten,Turn on dark mode
-header.light,Ieslēgt gaišo režīmu,Hellmodus einschalten,Turn on light mode
-skip.content,Pāriet uz saturu,Zum Inhalt springen,Skip to content
-header.institution,LU Digitālo humanitāro zinātņu centrs,UL Digital Humanities Center,UL Digital Humanities Center
-home.intro,"Latviešu tautas teikas, ko apkopojis Pēteris Šmits “Latviešu pasaku un teiku” (1925–1937) 13.–15. sējumā.","Lettische Volkssagen, gesammelt von Pēteris Šmits in den Bänden 13–15 der „Lettischen Märchen und Sagen“ (1925–1937).",Latvian folk legends collected by Pēteris Šmits in volumes 13–15 of Latvian Folk Tales and Legends (1925–1937).
-home.searchPlaceholder,"Meklēt pēc atslēgvārda, teicēja vārda vai vietas…","Nach Stichwort, Erzähler oder Ort suchen…","Search by keyword, narrator or place…"
-home.openBrowser,Atvērt teiku pārlūku,Sagenbrowser öffnen,Open the legend browser
-stats.legends,teikas,Sagen,legends
-stats.collectors,pierakstītāji,Aufzeichnende,collectors
-stats.narrators,teicēji,Erzählende,narrators
-stats.places,vietas,Orte,places
-daily.today,Šodien,Heute,Today
-daily.legend,Dienas teika,Sage des Tages,Legend of the day
-daily.read,Lasīt teiku,Sage lesen,Read the legend
-daily.copy,Kopēt dienas teiku,Sage des Tages kopieren,Copy the legend of the day
-daily.copied,Nokopēts,Kopiert,Copied
-browser.title,Teiku pārlūks,Sagenbrowser,Legend browser
-browser.intro,"Meklējiet, izpētiet un piespraudiet teikas, pie kurām vēlaties atgriezties.","Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.","Search, compare and pin legends you would like to revisit."
-filters.title,Filtri,Filter,Filters
-filters.clear,Notīrīt filtrus,Filter zurücksetzen,Clear filters
-filters.themes,Tēmas,Themen,Themes
-filters.narrators,Teicēji,Erzählende,Narrators
-filters.collectors,Pierakstītāji,Aufzeichnende,Collectors
-filters.places,Vietas,Orte,Places
-filters.volumes,Sējumi,Bände,Volumes
-filters.allF,Visas,Alle,All
-filters.allM,Visi,Alle,All
-filters.searchTheme,Meklēt tēmu…,Thema suchen…,Search themes…
-filters.searchNarrator,Meklēt teicēju…,Erzählende suchen…,Search narrators…
-filters.searchCollector,Meklēt pierakstītāju…,Aufzeichnende suchen…,Search collectors…
-filters.searchPlace,Meklēt vietu…,Ort suchen…,Search places…
-filters.period,Laika nogrieznis,Zeitraum,Date range
-filters.includeUndated,Iekļaut nedatētos tekstus,Undatierte Texte einbeziehen,Include undated texts
-filters.includeUnknownNarrators,Iekļaut nezināmos teicējus,Unbekannte Erzählende einbeziehen,Include unknown narrators
-filters.includeUnknownCollectors,Iekļaut nezināmos pierakstītājus,Unbekannte Aufzeichnende einbeziehen,Include unknown collectors
-filters.includeUnknownPlaces,Iekļaut nezināmās vietas,Unbekannte Orte einbeziehen,Include unknown places
-filters.selected,{count} atlasīti,{count} ausgewählt,{count} selected
-filters.undatedCount,{percent}% jeb {count} teksti nav datēti,{percent} % bzw. {count} Texte sind undatiert,{percent}% or {count} texts are undated
-browser.searchHelp,"Frāzes pēdiņās meklē precīzā vārdu secībā. Piemēram: ""Reiz bija"" ""septiņi gadi"".","Ausdrücke in Anführungszeichen werden in exakter Wortfolge gesucht. Beispiel: ""Reiz bija"" ""septiņi gadi"".","Phrases in quotation marks are searched in the exact word order. Example: ""Reiz bija"" ""septiņi gadi""."
-browser.textLanguage,Tekstu valoda,Textsprache,Text language
-browser.results,rezultāti,Ergebnisse,results
-browser.removePins,Noņemt piespraudes,Alle Markierungen entfernen,Remove all pins
-browser.sort,Kārtot,Sortieren,Sort
-browser.random,Nejaušā secībā,Zufällige Reihenfolge,Random order
-browser.byTitle,Pēc nosaukuma,Nach Titel,By title
-browser.byId,Pēc ID,Nach ID,By ID
-browser.byPlace,Pēc vietas,Nach Ort,By place
-browser.byCollector,Pēc pierakstītāja,Nach Aufzeichnenden,By collector
-browser.byNarrator,Pēc teicēja,Nach Erzählenden,By narrator
-browser.byYear,Pēc gada,Nach Jahr,By year
-browser.newest,Jaunākie vispirms,Neueste zuerst,Newest first
-browser.oldest,Senākie vispirms,Älteste zuerst,Oldest first
-browser.list,Saraksts,Liste,List
-browser.grid,Režģis,Raster,Grid
-browser.titleColumn,Nosaukums,Titel,Title
-browser.fragment,Fragments,Auszug,Excerpt
-meta.narrator,Teicējs,Erzähler/in,Narrator
-meta.collector,Pierakstītājs,Aufgezeichnet von,Collector
-meta.place,Vieta,Ort,Place
-meta.year,Gads,Jahr,Year
-meta.volume,Sējums,Band,Volume
-meta.theme,Nodaļa,Kapitel,Chapter
-meta.chapter,Nodaļa,Kapitel,Chapter
-meta.sources,Avoti,Quellen,Sources
-meta.original,Oriģinālie metadati,Originalmetadaten,Original metadata
-browser.emptyTitle,Nekas netika atrasts.,Keine Ergebnisse gefunden.,No results found.
-browser.emptyHelp,Mainiet meklējamo vārdu vai filtrus.,Ändern Sie den Suchbegriff oder die Filter.,Try a different search term or filters.
-browser.readAll,Lasīt visu,Vollständig lesen,Read in full
-browser.openNewWindow,Atvērt jaunā logā,In neuem Fenster öffnen,Open in a new window
-browser.page,{page}. lapa no {total},Seite {page} von {total},Page {page} of {total}
-browser.searched,Meklēts: {value},Gesucht: {value},Searched: {value}
-browser.themeTag,Tēma: {value},Thema: {value},Theme: {value}
-browser.placeTag,Vieta: {value},Ort: {value},Place: {value}
-browser.volumeTag,{value}. sējums,Band {value},Volume {value}
-browser.narratorTag,Teicējs: {value},Erzähler/in: {value},Narrator: {value}
-browser.collectorTag,Pierakstītājs: {value},Aufgezeichnet von: {value},Collector: {value}
-browser.withoutUndated,Bez nedatētajiem,Ohne undatierte Texte,Without undated texts
-browser.expand,Izvērst teiku: {value},Sage erweitern: {value},Expand legend: {value}
-browser.collapse,Sakļaut teiku: {value},Sage einklappen: {value},Collapse legend: {value}
-browser.pin,Piespraust teiku,Sage merken,Pin legend
-browser.unpin,Atspraust teiku,Markierung entfernen,Unpin legend
-detail.lv,Latviski,Lettisch,Latvian
-detail.de,Vāciski,Deutsch,German
-detail.parallel,Paralēli,Parallel,Parallel
-detail.information,Informācija,Informationen,Information
-detail.infoHelp,par teiku un tās avotiem,über die Sage und ihre Quellen,about the legend and its sources
-browser.download,Lejupielādēt,Herunterladen,Download
-browser.downloadHint,"Lai lejupielādētu, vispirms veiciet atlasi.","Treffen Sie vor dem Herunterladen eine Auswahl.",Make a selection before downloading.
-browser.perPage,Rādīt lappusē,Pro Seite anzeigen,Show per page
-browser.resultsOf,no,von,of
-browser.resultsNoun,rezultātiem,Ergebnissen,results
-browser.citation,Atsauce,Zitierhinweis,Citation
-detail.moreMetadata,Papildu metadati,Weitere Metadaten,Additional metadata
-detail.comments,Redaktora komentārs,Redaktioneller Kommentar,Editor’s comment
-detail.notes,Redakcionālās piezīmes,Redaktionelle Anmerkungen,Editorial notes
-detail.previous,Iepriekšējā teika,Vorherige Sage,Previous legend
-detail.next,Nākamā teika,Nächste Sage,Next legend
-detail.copy,Kopēt teiku,Sage kopieren,Copy legend
-detail.copied,Teika nokopēta,Sage kopiert,Legend copied
-about.label,Par projektu,Über das Projekt,About the project
-about.title,Latviešu teiku digitālā platforma,Digitale Plattform für lettische Sagen,Digital Platform for Latvian Legends
-about.goalTitle,Projekta mērķis,Projektziel,Project aim
-about.translationTitle,Tulkojums vācu valodā,Die deutsche Übersetzung,German translation
-about.previousTitle,Iepriekšējās digitālās versijas,Frühere digitale Fassungen,Earlier digital versions
-about.supportTitle,Veidotāji un atbalsts,Projektteam und Förderung,Team and support
-about.datasets,Datu kopas,Datensätze,Datasets
-about.openDataset,Atvērt datu kopu,Datensatz öffnen,Open dataset
-about.contacts,Kontakti,Kontakt,Contact
-preference.label,Lasīšanas izvēle,Leseansicht,Reading preference
-preference.title,Kādā valodā vēlaties skatīt teikas?,In welcher Sprache möchten Sie die Sagen lesen?,In which language would you like to read the legends?
-preference.help,Izvēli atcerēsimies šajā ierīcē. Pie katras teikas varēsiet režīmu mainīt.,Ihre Auswahl wird auf diesem Gerät gespeichert. Sie können die Ansicht bei jeder Sage ändern.,Your choice will be remembered on this device. You can change the view for each legend.
-detail.citation,Citēšana,Zitieren,Citation
-detail.shortCitation,Īsā atsauce,Kurzbeleg,Short citation
-detail.extendedCitation,Paplašinātā atsauce,Vollständiger Beleg,Extended citation
-detail.cite,Citēt teiku,Sage zitieren,Cite legend
-detail.copyLink,Kopēt saiti,Link kopieren,Copy link
-detail.closeCitation,Aizvērt citēšanu,Zitat schließen,Close citation
-common.copy,Kopēt,Kopieren,Copy
-pagination.goTo,Doties uz,Gehe zu,Go to
-pagination.pageAbbr,lpp.,S.,p.
-browser.sortAscending,Augošā secībā,Aufsteigend sortieren,Sort ascending
-browser.sortDescending,Dilstošā secībā,Absteigend sortieren,Sort descending
-browser.openPins,Atvērt izlasi jaunā logā,Auswahl in neuem Fenster öffnen,Open selection in a new window
-browser.openPinsShort,Atvērt izlasi,Auswahl öffnen,Open selection
-browser.copySelectionLink,Kopēt saiti uz šo izlasi,Link zu dieser Auswahl kopieren,Copy link to this selection
-browser.selectionLinkCopied,Saite nokopēta,Link kopiert,Link copied
-map.networkSimilarity,Tematu līdzība,Ähnlichkeit der Themen,Theme similarity
-map.networkCollectorGeography,Pierakstītāju ģeogrāfija,Geografie der Sammler,Collector geography
-map.networkPlotPlaces,Temats un vietas,Thema und Orte,Theme and places
-map.networkNarratorCollectors,Teicēji un pierakstītāji,Erzähler und Sammler,Narrators and collectors
-map.networkSources,Avotu saiknes,Quellenbeziehungen,Source relationships
-map.networkDensity,Saikņu blīvums,Beziehungsdichte,Relationship density
-map.networkLess,Mazāk,Weniger,Fewer
-map.networkMore,Vairāk,Mehr,More
-map.networkColorBy,Krāsot pēc,Färben nach,Color by
-map.networkColorTheme,Dominējošās tēmas,Dominantem Thema,Dominant theme
-map.networkColorCount,Teiku skaita,Anzahl der Sagen,Legend count
-map.networkColorRegion,Reģiona,Region,Region
-map.networkColorSingle,Vienā krāsā,Eine Farbe,Single color
-map.networkFocus,Fokusa režīms,Fokusmodus,Focus mode
-map.networkFocusAll,Viss tīkls,Gesamtes Netzwerk,Whole network
-map.networkFocusRelated,Tikai saistītās vietas,Nur verbundene Orte,Connected places only
-map.comparePlaces,Salīdzināt vietas,Orte vergleichen,Compare places
-map.networkBuiltFrom,Tīklojums veidots no {count} atlasītām teikām,Netzwerk aus {count} ausgewählten Sagen,Network built from {count} selected legends
-map.networkStatus,{legends} teikas · {places} vietas · {edges} saiknes,{legends} Sagen · {places} Orte · {edges} Beziehungen,{legends} legends · {places} places · {edges} relationships
-map.networkNodeSize,Lielāks mezgls = vairāk teiku,Größerer Knoten = mehr Sagen,Larger node = more legends
-map.networkEdgeStrength,Biezāka saikne = lielāka līdzība,Stärkere Linie = größere Ähnlichkeit,Thicker line = greater similarity
-map.networkMethodAction,Kā tiek aprēķināta līdzība?,Wie wird Ähnlichkeit berechnet?,How is similarity calculated?
-map.networkMethodTitle,Vietu tematiskā līdzība,Thematische Ähnlichkeit der Orte,Theme similarity between places
-map.networkMethodExplanation,Vietu līdzība tiek aprēķināta pēc tajās sastopamo teiku tematu kopuma un to biežuma. Retāk sastopamiem kopīgiem tematiem ir lielāka nozīme nekā ļoti izplatītiem tematiem.,Die Ähnlichkeit von Orten wird anhand der dort belegten Themen und ihrer Häufigkeit berechnet. Seltenere gemeinsame Themen erhalten mehr Gewicht als sehr verbreitete.,Place similarity is calculated from the legend themes found there and their frequency. Rarer shared themes carry more weight than very common themes.
-map.networkMethodDetails,Tīklā iekļauj vietas ar vismaz piecām atlasītām teikām. Saiknei vajadzīgi vismaz divi kopīgi temati; tiek paturētas tikai katras vietas stiprākās saiknes.,Einbezogen werden Orte mit mindestens fünf ausgewählten Sagen. Eine Beziehung benötigt mindestens zwei gemeinsame Themen; nur die stärksten Beziehungen jedes Ortes bleiben sichtbar.,The network includes places with at least five selected legends. A relationship requires at least two shared themes; only each place’s strongest relationships remain visible.
-map.networkPlace,Vietas repertuārs,Ortsrepertoire,Place repertoire
-map.networkLegendCount,{count} teikas,{count} Sagen,{count} legends
-map.networkPlotCount,{count} temati,{count} Themen,{count} themes
-map.networkRelatedCount,{count} saistītas vietas,{count} verbundene Orte,{count} connected places
-map.dominantThemes,Dominējošās tēmas,Dominante Themen,Dominant themes
-map.networkTopPlots,Biežākie temati,Häufigste Themen,Most frequent themes
-map.networkMostSimilar,Vislīdzīgākās vietas,Ähnlichste Orte,Most similar places
-map.openPlaceLegends,Skatīt šīs vietas teikas,Sagen dieses Ortes ansehen,View this place’s legends
-map.compareWithPlace,Salīdzināt ar citu vietu,Mit einem anderen Ort vergleichen,Compare with another place
-map.plotSimilarity,Tematiskā līdzība,Ähnlichkeit der Themen,Theme similarity
-map.similarity,Līdzība,Ähnlichkeit,Similarity
-map.sharedPlots,Kopīgi temati,Gemeinsame Themen,Shared themes
-map.strongestMatches,Spēcīgākās sakritības,Stärkste Übereinstimmungen,Strongest matches
-map.compareBothPlaces,Salīdzināt abu vietu teikas,Sagen beider Orte vergleichen,Compare both places’ legends
-map.networkComparison,Repertuāru salīdzinājums,Repertoirevergleich,Repertoire comparison
-map.firstPlace,1. vieta,1. Ort,First place
-map.secondPlace,2. vieta,2. Ort,Second place
-map.chooseSecondPlace,Izvēlieties otru vietu salīdzinājumam.,Wählen Sie einen zweiten Ort für den Vergleich.,Choose a second place to compare.
-map.onlyIn,Tikai — {place},Nur in {place},Only in {place}
-map.shared,Kopīgais,Gemeinsam,Shared
-map.openComparisonLegends,Atvērt salīdzinājuma teikas,Sagen des Vergleichs öffnen,Open comparison legends
+"key","lv","de","en"
+"nav.home","Sākums","Startseite","Home"
+"nav.texts","Teksti","Texte","Texts"
+"nav.map","Karte","Karte","Map"
+"nav.persons","Personas","Personen","Persons"
+"nav.data","Dati","Daten","Data"
+"nav.about","Par projektu","Über das Projekt","About the project"
+"common.back","Atpakaļ","Zurück","Back"
+"common.search","Meklēt","Suchen","Search"
+"common.notSpecified","Nav norādīts","Nicht angegeben","Not specified"
+"common.nextStage","Paredzēts nākamajam posmam","Für eine spätere Projektphase vorgesehen","Planned for a later project phase"
+"header.interfaceLanguage","Saskarnes valoda","Oberflächensprache","Interface language"
+"header.textSize","Teksta izmērs","Textgröße","Text size"
+"header.decreaseText","Samazināt burtus","Text verkleinern","Decrease text size"
+"header.increaseText","Palielināt burtus","Text vergrößern","Increase text size"
+"header.dark","Ieslēgt tumšo režīmu","Dunkelmodus einschalten","Turn on dark mode"
+"header.light","Ieslēgt gaišo režīmu","Hellmodus einschalten","Turn on light mode"
+"skip.content","Pāriet uz saturu","Zum Inhalt springen","Skip to content"
+"header.institution","LU Digitālo humanitāro zinātņu centrs","UL Digital Humanities Center","UL Digital Humanities Center"
+"home.intro","Latviešu tautas teikas, ko apkopojis Pēteris Šmits “Latviešu pasaku un teiku” (1925–1937) 13.–15. sējumā.","Lettische Volkssagen, gesammelt von Pēteris Šmits in den Bänden 13–15 der „Lettischen Märchen und Sagen“ (1925–1937).","Latvian folk legends collected by Pēteris Šmits in volumes 13–15 of Latvian Folk Tales and Legends (1925–1937)."
+"home.developmentNotice","Šis resurss šobrīd ir izstrādes procesā.","Diese Ressource befindet sich derzeit in Entwicklung.","This resource is currently under development."
+"home.searchPlaceholder","Meklēt pēc atslēgvārda, teicēja vārda vai vietas…","Nach Stichwort, Erzähler oder Ort suchen…","Search by keyword, narrator or place…"
+"home.searchPlaceholderPerson","Meklēt personu…","Person suchen…","Search for a person…"
+"home.openBrowser","Atvērt teiku pārlūku","Sagenbrowser öffnen","Open the legend browser"
+"stats.legends","teikas","Sagen","legends"
+"stats.collectors","pierakstītāji","Aufzeichnende","collectors"
+"stats.narrators","teicēji","Erzählende","narrators"
+"stats.places","vietas","Orte","places"
+"daily.today","Šodien","Heute","Today"
+"daily.legend","Dienas teika","Sage des Tages","Legend of the day"
+"daily.read","Lasīt teiku","Sage lesen","Read the legend"
+"daily.copy","Kopēt dienas teiku","Sage des Tages kopieren","Copy the legend of the day"
+"daily.copied","Nokopēts","Kopiert","Copied"
+"browser.title","Teiku pārlūks","Sagenbrowser","Legend browser"
+"browser.intro","Meklējiet, izpētiet un piespraudiet teikas, pie kurām vēlaties atgriezties.","Suchen, vergleichen und merken Sie Sagen, zu denen Sie zurückkehren möchten.","Search, compare and pin legends you would like to revisit."
+"browser.titlePersons","Personu pārlūks","Personenbrowser","Person browser"
+"browser.introPersons","Meklējiet, salīdziniet un piespraudiet personas, pie kurām vēlaties atgriezties.","Suchen, vergleichen und merken Sie Personen, zu denen Sie zurückkehren möchten.","Search, compare and pin persons you would like to revisit."
+"filters.title","Filtri","Filter","Filters"
+"filters.clear","Notīrīt filtrus","Filter zurücksetzen","Clear filters"
+"filters.themes","Tēmas","Themen","Themes"
+"filters.narrators","Teicēji","Erzählende","Narrators"
+"filters.collectors","Pierakstītāji","Aufzeichnende","Collectors"
+"filters.places","Vietas","Orte","Places"
+"filters.volumes","Sējumi","Bände","Volumes"
+"filters.genders","Dzimumi","Geschlechter","Genders"
+"filters.types","Tipi","Typen","Types"
+"filters.allF","Visas","Alle","All"
+"filters.allM","Visi","Alle","All"
+"filters.searchTheme","Meklēt tēmu…","Thema suchen…","Search themes…"
+"filters.searchNarrator","Meklēt teicēju…","Erzählende suchen…","Search narrators…"
+"filters.searchCollector","Meklēt pierakstītāju…","Aufzeichnende suchen…","Search collectors…"
+"filters.searchPlace","Meklēt vietu…","Ort suchen…","Search places…"
+"filters.period","Laika nogrieznis","Zeitraum","Date range"
+"filters.includeUndated","Iekļaut nedatētos tekstus","Undatierte Texte einbeziehen","Include undated texts"
+"filters.includeUnknownNarrators","Iekļaut nezināmos teicējus","Unbekannte Erzählende einbeziehen","Include unknown narrators"
+"filters.includeUnknownCollectors","Iekļaut nezināmos pierakstītājus","Unbekannte Aufzeichnende einbeziehen","Include unknown collectors"
+"filters.onlyUnknownNarrators","Tikai nezināmie teicēji","Nur unbekannte Erzählende","Only unknown narrators"
+"filters.onlyUnknownCollectors","Tikai nezināmie pierakstītāji","Nur unbekannte Aufzeichnende","Only unknown collectors"
+"filters.includeUnknownPlaces","Iekļaut nezināmās vietas","Unbekannte Orte einbeziehen","Include unknown places"
+"filters.selected","{count} atlasīti","{count} ausgewählt","{count} selected"
+"filters.undatedCount","{percent}% jeb {count} teksti nav datēti","{percent} % bzw. {count} Texte sind undatiert","{percent}% or {count} texts are undated"
+"browser.searchHelp","Frāzes pēdiņās meklē precīzā vārdu secībā. Piemēram: ""Reiz bija"" ""septiņi gadi"".","Ausdrücke in Anführungszeichen werden in exakter Wortfolge gesucht. Beispiel: ""Reiz bija"" ""septiņi gadi"".","Phrases in quotation marks are searched in the exact word order. Example: ""Reiz bija"" ""septiņi gadi""."
+"browser.textLanguage","Tekstu valoda","Textsprache","Text language"
+"browser.results","rezultāti","Ergebnisse","results"
+"browser.removePins","Noņemt piespraudes","Alle Markierungen entfernen","Remove all pins"
+"browser.openPins","Atvērt izlasi jaunā logā","Auswahl in neuem Fenster öffnen","Open selection in a new window"
+"browser.openPinsShort","Atvērt izlasi","Auswahl öffnen","Open selection"
+"browser.copySelectionLink","Kopēt saiti uz šo izlasi","Link zu dieser Auswahl kopieren","Copy link to this selection"
+"browser.selectionLinkCopied","Saite nokopēta","Link kopiert","Link copied"
+"browser.download","Lejupielādēt","Herunterladen","Download"
+"browser.downloadHint","Lai lejupielādētu, vispirms veiciet atlasi.","Treffen Sie vor dem Herunterladen eine Auswahl.","Make a selection before downloading."
+"browser.perPage","Rādīt lappusē","Pro Seite anzeigen","Show per page"
+"browser.resultsOf","no","von","of"
+"browser.resultsNoun","rezultātiem","Ergebnissen","results"
+"browser.citation","Atsauce","Zitierhinweis","Citation"
+"browser.sort","Kārtot","Sortieren","Sort"
+"browser.sortAscending","Augošā secībā","Aufsteigend sortieren","Sort ascending"
+"browser.sortDescending","Dilstošā secībā","Absteigend sortieren","Sort descending"
+"browser.random","Nejaušā secībā","Zufällige Reihenfolge","Random order"
+"browser.byTitle","Pēc nosaukuma","Nach Titel","By title"
+"browser.byId","Pēc ID","Nach ID","By ID"
+"browser.byPlace","Pēc vietas","Nach Ort","By place"
+"browser.byCollector","Pēc pierakstītāja","Nach Aufzeichnenden","By collector"
+"browser.byNarrator","Pēc teicēja","Nach Erzählenden","By narrator"
+"browser.byYear","Pēc gada","Nach Jahr","By year"
+"browser.newest","Jaunākie vispirms","Neueste zuerst","Newest first"
+"browser.oldest","Senākie vispirms","Älteste zuerst","Oldest first"
+"browser.list","Tabula","Tabelle","Table"
+"browser.grid","Lasīšana","Lesen","Reading"
+"browser.titleColumn","Nosaukums","Titel","Title"
+"browser.fragment","Fragments","Auszug","Excerpt"
+"meta.narrator","Teicējs","Erzähler/in","Narrator"
+"meta.collector","Pierakstītājs","Aufgezeichnet von","Collector"
+"meta.place","Vieta","Ort","Place"
+"meta.year","Gads","Jahr","Year"
+"meta.volume","Sējums","Band","Volume"
+"meta.theme","Nodaļa","Kapitel","Chapter"
+"meta.chapter","Nodaļa","Kapitel","Chapter"
+"meta.sources","Avoti","Quellen","Sources"
+"meta.original","Oriģinālie metadati","Originalmetadaten","Original metadata"
+"meta.gender","Dzimums","Geschlecht","Gender"
+"meta.genderM","Vīrietis","Mann","Man"
+"meta.genderF","Sieviete","Frau","Woman"
+"meta.type","Tips","Typ","Type"
+"meta.fullname","Pilnais vārds","Voller Name","Full name"
+"meta.notes","Piezīmes","Notizen","Notes"
+"meta.legendCount","Teiku skaits","Anzahl der Sagen","Number of legends"
+"browser.emptyTitle","Nekas netika atrasts.","Keine Ergebnisse gefunden.","No results found."
+"browser.emptyHelp","Mainiet meklējamo vārdu vai filtrus.","Ändern Sie den Suchbegriff oder die Filter.","Try a different search term or filters."
+"browser.readAll","Lasīt visu","Vollständig lesen","Read in full"
+"browser.openNewWindow","Atvērt jaunā logā","In neuem Fenster öffnen","Open in a new window"
+"browser.page","{page}. lapa no {total}","Seite {page} von {total}","Page {page} of {total}"
+"browser.searched","Meklēts: {value}","Gesucht: {value}","Searched: {value}"
+"browser.themeTag","Tēma: {value}","Thema: {value}","Theme: {value}"
+"browser.placeTag","Vieta: {value}","Ort: {value}","Place: {value}"
+"browser.volumeTag","{value}. sējums","Band {value}","Volume {value}"
+"browser.narratorTag","Teicējs: {value}","Erzähler/in: {value}","Narrator: {value}"
+"browser.collectorTag","Pierakstītājs: {value}","Aufgezeichnet von: {value}","Collector: {value}"
+"browser.genderTag","Dzimums: {value}","Geschlecht: {value}","Gender: {value}"
+"browser.typeTag","Tips: {value}","Typ: {value}","Type: {value}"
+"browser.fullnameTag","Pilnais vārds: {value}","Voller Name: {value}","Full name: {value}"
+"browser.withoutUndated","Bez nedatētajiem","Ohne undatierte Texte","Without undated texts"
+"browser.expand","Izvērst teiku: {value}","Sage erweitern: {value}","Expand legend: {value}"
+"browser.collapse","Sakļaut teiku: {value}","Sage einklappen: {value}","Collapse legend: {value}"
+"browser.pin","Piespraust teiku","Sage merken","Pin legend"
+"browser.unpin","Atspraust teiku","Markierung entfernen","Unpin legend"
+"detail.lv","Latviski","Lettisch","Latvian"
+"detail.de","Vāciski","Deutsch","German"
+"detail.parallel","Paralēli","Parallel","Parallel"
+"detail.information","Informācija","Informationen","Information"
+"detail.infoHelp","par teiku un tās avotiem","über die Sage und ihre Quellen","about the legend and its sources"
+"detail.moreMetadata","Papildu metadati","Weitere Metadaten","Additional metadata"
+"detail.comments","Redaktora komentārs","Redaktioneller Kommentar","Editor’s comment"
+"detail.notes","Redakcionālās piezīmes","Redaktionelle Anmerkungen","Editorial notes"
+"detail.previous","Iepriekšējā teika","Vorherige Sage","Previous legend"
+"detail.next","Nākamā teika","Nächste Sage","Next legend"
+"detail.copy","Kopēt teiku","Sage kopieren","Copy legend"
+"detail.copied","Teika nokopēta","Sage kopiert","Legend copied"
+"about.label","Par projektu","Über das Projekt","About the project"
+"about.title","Latviešu teiku digitālā platforma","Digitale Plattform für lettische Sagen","Digital Platform for Latvian Legends"
+"about.goalTitle","Projekta mērķis","Projektziel","Project aim"
+"about.translationTitle","Tulkojums vācu valodā","Die deutsche Übersetzung","German translation"
+"about.previousTitle","Iepriekšējās digitālās versijas","Frühere digitale Fassungen","Earlier digital versions"
+"about.supportTitle","Veidotāji un atbalsts","Projektteam und Förderung","Team and support"
+"about.datasets","Datu kopas","Datensätze","Datasets"
+"about.openDataset","Atvērt datu kopu","Datensatz öffnen","Open dataset"
+"about.contacts","Kontakti","Kontakt","Contact"
+"preference.label","Lasīšanas izvēle","Leseansicht","Reading preference"
+"preference.title","Kādā valodā vēlaties skatīt teikas?","In welcher Sprache möchten Sie die Sagen lesen?","In which language would you like to read the legends?"
+"preference.help","Izvēli atcerēsimies šajā ierīcē. Pie katras teikas varēsiet režīmu mainīt.","Ihre Auswahl wird auf diesem Gerät gespeichert. Sie können die Ansicht bei jeder Sage ändern.","Your choice will be remembered on this device. You can change the view for each legend."
+"detail.citation","Citēšana","Zitieren","Citation"
+"detail.shortCitation","Īsā atsauce","Kurzbeleg","Short citation"
+"detail.extendedCitation","Paplašinātā atsauce","Vollständiger Beleg","Extended citation"
+"detail.cite","Citēt teiku","Sage zitieren","Cite legend"
+"detail.copyLink","Kopēt saiti","Link kopieren","Copy link"
+"detail.closeCitation","Aizvērt citēšanu","Zitat schließen","Close citation"
+"common.copy","Kopēt","Kopieren","Copy"
+"pagination.goTo","Doties uz","Gehe zu","Go to"
+"pagination.pageAbbr","lpp.","S.","p."
+"map.title","Teiku karte","Karte der Sagen","Map of legends"
+"map.intro","Izpētiet teiku korpusu pēc pieraksta vietām.","Erkunden Sie das Sagenkorpus nach Aufzeichnungsorten.","Explore the legend corpus by recorded place."
+"map.layers","Iestatījumi","Einstellungen","Settings"
+"map.basemap","Pamatkarte","Basiskarte","Basemap"
+"map.dataLayers","Datu slāņi","Datenebenen","Data layers"
+"map.dataColor","Datu krāsa","Datenfarbe","Data color"
+"map.colorGreen","Zaļa","Grün","Green"
+"map.colorBlue","Zila","Blau","Blue"
+"map.colorYellow","Dzeltena","Gelb","Yellow"
+"map.pointStyle","Punktu attēlojums","Punktdarstellung","Point display"
+"map.pointStyleRays","Stari","Strahlen","Rays"
+"map.pointStyleBubbles","Burbuļi","Blasen","Bubbles"
+"map.rayLegend","Viens stars = viena teika","Ein Strahl = eine Sage","One ray = one legend"
+"map.rayExplanation","Centra punkts = vieta; katrs stars ved uz vienu teiku.","Mittelpunkt = Ort; jeder Strahl führt zu einer Sage.","Center point = place; each ray leads to one legend."
+"map.bubbleLegend","Viens burbulis = viena teika","Eine Blase = eine Sage","One bubble = one legend"
+"map.bubbleExplanation","Centra burbulis = vieta; mazais burbulis un stars = teika.","Zentrale Blase = Ort; kleine Blase und Strahl = Sage.","Center bubble = place; small bubble and ray = legend."
+"map.geography","Ģeogrāfiskais fons","Geografischer Hintergrund","Geographic background"
+"map.boundaries","Administratīvās robežas","Verwaltungsgrenzen","Administrative boundaries"
+"map.labels","Vietu nosaukumi","Ortsnamen","Place labels"
+"map.points","Vietas","Orte","Locations"
+"map.clusters","Kopas","Cluster","Clusters"
+"map.heatmap","Blīvums","Dichte","Density"
+"map.close","Aizvērt","Schließen","Close"
+"map.selectedPlace","Atlasītā vieta","Ausgewählter Ort","Selected place"
+"map.legendCount","Teiku skaits","Anzahl der Sagen","Number of legends"
+"map.yearSpan","Gadi","Jahre","Years"
+"map.collectors","Pierakstītāji","Sammler","Collectors"
+"map.narrators","Teicēji","Erzähler","Narrators"
+"map.openTexts","Atvērt atlasītos tekstus","Gefilterte Texte öffnen","Open filtered texts"
+"map.noYear","—","—","—"
+"map.noSelection","Atlasiet vietu kartē","Ort auf der Karte auswählen","Select a place on the map"
+"map.noSelectionHelp","Izvēlies teiku, vietu vai kopu","Wählen Sie eine Sage, einen Ort oder eine Gruppe","Select a point or cluster"
+"map.resultsInView","Redzamajā kartes daļā: {count} / {total} teikas","Im Kartenausschnitt: {count} / {total} Sagen","Visible map area: {count} / {total} legends"
+"map.openVisibleSelection","Atvērt kartes redzamajā apgabalā esošās {count} teikas jaunā logā","Die {count} Sagen im sichtbaren Kartenausschnitt in einem neuen Fenster öffnen","Open the {count} legends in the visible map area in a new window"
+"map.unmapped","{places} vietām un {legends} teikām nav kartējamu koordinātu.","Für {places} Orte und {legends} Sagen fehlen kartierbare Koordinaten.","{places} places and {legends} legends have no mappable coordinates."
+"map.accessibleAlternative","Izmantojiet tekstu pārlūku kā kartes tekstuālo alternatīvu.","Nutzen Sie den Textbrowser als textuelle Alternative zur Karte.","Use the text browser as a textual alternative to the map."
+"map.openBrowser","Atvērt tekstu pārlūku","Textbrowser öffnen","Open text browser"
+"map.pointLegend","Vieta; apļa izmērs rāda teiku skaitu","Ort; die Kreisgröße zeigt die Anzahl der Sagen","Location; circle size shows the number of legends"
+"map.selectionLegend","Atlasīta vieta","Ausgewählter Ort","Selected location"
+"map.heatLow","Zems","Niedrig","Low"
+"map.heatMedium","Vidējs","Mittel","Medium"
+"map.heatHigh","Augsts","Hoch","High"
+"map.networkLegend","Līnijas savieno vietas ar vismaz diviem kopīgiem pierakstītājiem.","Linien verbinden Orte mit mindestens zwei gemeinsamen Sammlern.","Lines connect places sharing at least two collectors."
+"map.zoomIn","Tuvināt","Vergrößern","Zoom in"
+"map.zoomOut","Tālināt","Verkleinern","Zoom out"
+"map.resetNorth","Atiestatīt ziemeļu virzienu","Nordrichtung zurücksetzen","Reset bearing to north"
+"map.legendPoints","Teiku punkti","Sagenpunkte","Legend points"
+"map.oneLegendPoint","Viens punkts = viena teika","Ein Punkt = eine Sage","One point = one legend"
+"map.intensity","Intensitāte","Intensität","Intensity"
+"map.networkType","Tīkla veids","Netzwerktyp","Network type"
+"map.networkNarrators","Teicēji–vietas","Erzähler–Orte","Narrators–places"
+"map.networkCollectors","Pierakstītāji–vietas","Sammler–Orte","Collectors–places"
+"map.networkThemes","Tēmas–vietas","Themen–Orte","Themes–places"
+"map.showUnmapped","Rādīt teikas bez koordinātām","Sagen ohne Koordinaten anzeigen","Show legends without coordinates"
+"map.unmappedTitle","Nekartētās teikas","Nicht kartierbare Sagen","Unmapped legends"
+"map.unmappedExplanation","Šīm teikām nav koordinātu. Punkts Rīgas līcī ir simbolisks apkopojums, nevis dokumentēta vieta.","Diese Sagen haben keine Koordinaten. Der Punkt im Rigaischen Meerbusen ist eine symbolische Sammlung, kein dokumentierter Ort.","These legends have no coordinates. The marker in the Gulf of Riga is a symbolic collection, not a recorded location."
+"map.networkLegend.narrators","Līnijas savieno vietas ar kopīgiem teicējiem.","Linien verbinden Orte mit gemeinsamen Erzählern.","Lines connect places sharing narrators."
+"map.networkLegend.collectors","Līnijas savieno vietas ar vismaz diviem kopīgiem pierakstītājiem.","Linien verbinden Orte mit mindestens zwei gemeinsamen Sammlern.","Lines connect places sharing at least two collectors."
+"map.networkLegend.themes","Līnijas savieno vietas ar vismaz divām kopīgām tēmām; rādītas stiprākās saites.","Linien verbinden Orte mit mindestens zwei gemeinsamen Themen; gezeigt werden die stärksten Beziehungen.","Lines connect places sharing at least two themes; the strongest relationships are shown."
+"map.visualizationType","Vizualizācijas veids","Visualisierungstyp","Visualization type"
+"map.modePoints","Teikas","Sagen","Legends"
+"map.modeClusters","Kopas","Cluster","Clusters"
+"map.modeHeatmap","Intensitāte","Dichte","Density"
+"map.radius","Aptvērums","Radius","Radius"
+"map.overlapNote","Ārējais aplis = vieta; gredzens = teika; līnija piesaista teiku vietas koordinātai.","Äußerer Kreis = Ort; Ring = Sage; die Linie verbindet die Sage mit der Ortskoordinate.","Outer circle = place; ring = legend; a line ties the legend to the place coordinate."
+"map.pointPlaceCollection","Teiku kopa","Sagenbestand","Legend collection"
+"map.colorBy","Krāsot pēc","Färben nach","Color by"
+"map.colorByTheme","Tēmas","Thema","Theme"
+"map.colorBySingle","Vienā krāsā","Einfarbig","Single colour"
+"map.pointIntensity","Krāsu intensitāte","Farbintensität","Colour intensity"
+"map.colorByNarrator","Teicēja","Erzähler","Narrator"
+"map.colorByCollector","Pierakstītāja","Sammler","Collector"
+"map.placeThemeCount","Tēmas","Themen","Themes"
+"map.placeTopThemes","Populārākās tēmas","Häufigste Themen","Most frequent themes"
+"map.openLegendBrowser","Atvērt teiku pārlūkā","Im Sagenbrowser öffnen","Open in legend browser"
+"map.pointStatus","{mapped} kartētas teikas · {unmapped} bez koordinātām","{mapped} kartierte Sagen · {unmapped} ohne Koordinaten","{mapped} mapped legends · {unmapped} without coordinates"
+"map.onlyUnknownNarrators","Tikai nezināmie teicēji","Nur unbekannte Erzählende","Only unknown narrators"
+"map.onlyUnknownCollectors","Tikai nezināmie pierakstītāji","Nur unbekannte Aufzeichnende","Only unknown collectors"
+"map.onlyUnknown.narrator","Tikai nezināmie","Nur unbekannte","Unknown only"
+"map.onlyUnknown.collector","Tikai nezināmie","Nur unbekannte","Unknown only"
+"map.selectAll","Atzīmēt visus","Alle auswählen","Select all"
+"map.searchVolumes","Meklēt sējumu","Band suchen","Search volumes"
+"map.clearAll","Noņemt visus","Alle abwählen","Clear all"
+"map.unknownPerson","Nezināms","Unbekannt","Unknown"
+"map.unknownNarrators","Nezināmie teicēji","Unbekannte Erzählende","Unknown narrators"
+"map.unknownCollectors","Nezināmie pierakstītāji","Unbekannte Aufzeichnende","Unknown collectors"
+"map.noNarrators","Nav atlasītu teicēju","Keine Erzählenden ausgewählt","No narrators selected"
+"map.noCollectors","Nav atlasītu pierakstītāju","Keine Aufzeichnenden ausgewählt","No collectors selected"
+"map.dispersedPointExplanation","Teiku gredzeni ir vizuāli izkārtoti vietas medaljonā ap avotā norādīto koordinātu; to novietojums medaljonā nav precīza izcelsmes vieta.","Die Sagenringe sind im Ortsmedaillon um die in der Quelle genannte Koordinate angeordnet; ihre Position im Medaillon ist kein genauer Herkunftsort.","Legend rings are arranged inside the place medallion around the coordinate recorded in the source; their position inside it is not a precise place of origin."
+"map.showingPointRecords","Parādītas {shown} no {total} teikām.","{shown} von {total} Sagen werden angezeigt.","Showing {shown} of {total} legends."
+"map.legendRecord","Teika","Sage","Legend"
+"map.openLegend","Atvērt teiku","Sage öffnen","Open legend"
+"map.basemapStyle","Kartes izskats","Kartenstil","Map style"
+"map.basemapEditorial","Klusā karte","Ruhige Karte","Quiet map"
+"map.basemapCoast","Krasta līnija","Küstenlinie","Coastline"
+"map.basemapMinimal","Minimāla","Minimal","Minimal"
+"map.filters","Filtri","Filter","Filters"
+"map.collapseFilters","Sakļaut filtrus","Filter einklappen","Collapse filters"
+"map.expandFilters","Atvērt filtrus","Filter öffnen","Open filters"
+"map.clearFilters","Notīrīt","Zurücksetzen","Clear"
+"map.filterThemes","Tēmas","Themen","Themes"
+"map.filterNarrators","Teicēji","Erzähler","Narrators"
+"map.filterCollectors","Pierakstītāji","Sammler","Collectors"
+"map.filterPlaces","Vietas","Orte","Places"
+"map.filterVolumes","Sējumi","Bände","Volumes"
+"map.filterAll.theme","Visas","Alle","All"
+"map.filterAll.narrator","Visi","Alle","All"
+"map.filterAll.collector","Visi","Alle","All"
+"map.filterAll.place","Visas","Alle","All"
+"map.filterAll.volume","Visi","Alle","All"
+"map.filterAll.gender","Visi","Alle","All"
+"map.filterAll.type","Visi","Alle","All"
+"map.filterType.collector","Pierakstītājs","Sammler","Collector"
+"map.filterType.narrator","Teicējs","Erzähler/in","Narrator"
+"map.timeRange","Ieraksta vai avota gads","Jahr des Eintrags oder der Quelle","Record or source year"
+"map.fromYear","No","Von","From"
+"map.toYear","Līdz","Bis","To"
+"map.includeUndated","Iekļaut nedatētās teikas","Undatierte Sagen einbeziehen","Include undated legends"
+"map.openExplorer","Atvērt teiku pārlūkā","Im Sagenbrowser öffnen","Open in legend explorer"
+"map.modeNetwork","Tīklojums","Netzwerk","Network"
+"map.clearFiltersLong","Notīrīt filtrus","Filter zurücksetzen","Clear filters"
+"map.searchThemes","Meklēt tēmu…","Thema suchen…","Search themes…"
+"map.searchNarrators","Meklēt teicēju…","Erzähler suchen…","Search narrators…"
+"map.searchCollectors","Meklēt pierakstītāju…","Sammler suchen…","Search collectors…"
+"map.searchPlaces","Meklēt vietu…","Ort suchen…","Search places…"
+"map.searchGenders","Meklēt dzimumu…","Geschlecht suchen…","Search gender…"
+"map.searchTypes","Meklēt tipu…","Typ suchen…","Search type…"
+"map.download","Lejupielādēt","Herunterladen","Download"
+"map.downloadHint","Lai lejupielādētu, vispirms veiciet atlasi.","Treffen Sie zuerst eine Auswahl.","Make a selection before downloading."
+"map.advancedFilters","Papildu filtri","Weitere Filter","Advanced filters"
+"map.advancedDataNote","Papildu pētniecības filtri būs pieejami, kad korpusā būs strukturēti motīvu, avotu un ģeogrāfiskās precizitātes dati.","Weitere Forschungsfilter werden verfügbar sobald strukturierte Motiv- Quellen- und Präzisionsdaten vorliegen.","Additional research filters will become available when structured motif source and geographic precision data exist."
+"map.emptyTitle","Šai atlasei nav atrasta neviena teika.","Für diese Auswahl wurden keine Sagen gefunden.","No legends were found for this selection."
+"map.exportCsv","Eksportēt CSV","CSV exportieren","Export CSV"
+"map.resetExtent","Atjaunot Latvijas skatu","Lettland-Ansicht wiederherstellen","Reset to Latvia"
+"map.selectionCount","Atlasē: {count} teikas","Auswahl: {count} Sagen","Selection: {count} legends"
+"map.filterSummary","Atlasītie filtri: {from}–{to}, aktīvas kategorijas: {filters}","Ausgewählte Filter: {from}–{to}, aktive Kategorien: {filters}","Selected filters: {from}–{to}, active categories: {filters}"
+"map.activeFilters","Aktīvie filtri","Aktive Filter","Active filters"
+"map.withoutUnknownNarrators","Bez nezināmajiem teicējiem","Ohne unbekannte Erzählende","Without unknown narrators"
+"map.withoutUnknownCollectors","Bez nezināmajiem pierakstītājiem","Ohne unbekannte Aufzeichnende","Without unknown collectors"
+"map.withoutUnknownPlaces","Bez nezināmajām vietām","Ohne unbekannte Orte","Without unknown places"
+"map.notAvailable","Nav datu","Keine Daten","Not available"
+"map.analyticalSummary","Analītiskais kopsavilkums","Analytische Zusammenfassung","Analytical summary"
+"map.dominantTheme","Dominējošā tēma","Dominierendes Thema","Dominant theme"
+"map.activePeriod","Aktīvais periods","Aktiver Zeitraum","Active period"
+"map.clusterSummary","Kartes kopa","Kartencluster","Map cluster"
+"map.selectedCluster","Atlasītā teiku kopa","Ausgewählte Sagengruppe","Selected legend cluster"
+"map.visibleMapFragmentSingular","Kartes fragmentā redzamā","Im Kartenausschnitt sichtbare","Visible in the map area"
+"map.visibleMapFragmentPlural","Kartes fragmentā redzamās","Im Kartenausschnitt sichtbare","Visible in the map area"
+"map.legendCluster","Teiku kopa","Sagengruppe","Legend cluster"
+"map.visibleLegendCluster","Teiku kopa","Sagengruppe","Legend cluster"
+"map.visibleLegendClusters","Teiku kopas","Sagengruppen","Legend clusters"
+"map.mapSelected","Kartē izvēlētā","Auf der Karte ausgewählte","Selected on the map"
+"map.hotspotSummary","Intensitātes apvidus","Dichtegebiet","Density area"
+"map.legendTitle","Apzīmējumi","Legende","Legend"
+"map.basemapStandard","Teikas Standard","Teikas Standard","Teikas Standard"
+"map.basemapStreets","Ielu karte","Straßenkarte","Street map"
+"map.basemapLight","Gaišā karte","Helle Karte","Light map"
+"map.basemapDark","Tumšā karte","Dunkle Karte","Dark map"
+"map.basemapSatellite","Satelīts — nepieciešama piekļuve","Satellit — Zugang erforderlich","Satellite — access required"
+"map.networkSimilarity","Tematu līdzība","Ähnlichkeit der Themen","Theme similarity"
+"map.networkCollectorGeography","Pierakstītāju ģeogrāfija","Geografie der Sammler","Collector geography"
+"map.networkPlotPlaces","Temats un vietas","Thema und Orte","Theme and places"
+"map.networkNarratorCollectors","Teicēji un pierakstītāji","Erzähler und Sammler","Narrators and collectors"
+"map.networkSources","Avotu saiknes","Quellenbeziehungen","Source relationships"
+"map.networkDensity","Saikņu blīvums","Beziehungsdichte","Relationship density"
+"map.networkLess","Mazāk","Weniger","Fewer"
+"map.networkMore","Vairāk","Mehr","More"
+"map.networkColorBy","Krāsot pēc","Färben nach","Color by"
+"map.networkColorTheme","Dominējošās tēmas","Dominantem Thema","Dominant theme"
+"map.networkColorCount","Teiku skaita","Anzahl der Sagen","Legend count"
+"map.networkColorRegion","Reģiona","Region","Region"
+"map.networkColorSingle","Vienā krāsā","Eine Farbe","Single color"
+"map.networkFocus","Fokusa režīms","Fokusmodus","Focus mode"
+"map.networkFocusAll","Viss tīkls","Gesamtes Netzwerk","Whole network"
+"map.networkFocusRelated","Tikai saistītās vietas","Nur verbundene Orte","Connected places only"
+"map.comparePlaces","Salīdzināt vietas","Orte vergleichen","Compare places"
+"map.networkBuiltFrom","Tīklojums veidots no {count} atlasītām teikām","Netzwerk aus {count} ausgewählten Sagen","Network built from {count} selected legends"
+"map.networkStatus","{legends} teikas · {places} vietas · {edges} saiknes","{legends} Sagen · {places} Orte · {edges} Verbindungen","{legends} legends · {places} nodes · {edges} relationships"
+"map.networkNodeSize","Lielāks mezgls = vairāk teiku","Größerer Knoten = mehr Sagen","Larger node = more legends"
+"map.networkEdgeStrength","Biezāka saikne = lielāka līdzība","Stärkere Linie = größere Ähnlichkeit","Thicker line = greater similarity"
+"map.networkMethodAction","Kā tiek aprēķināta līdzība?","Wie wird Ähnlichkeit berechnet?","How is similarity calculated?"
+"map.networkMethodTitle","Vietu tematiskā līdzība","Thematische Ähnlichkeit der Orte","Theme similarity between places"
+"map.networkMethodExplanation","Vietu līdzība tiek aprēķināta pēc tajās sastopamo teiku tematu kopuma un to biežuma. Retāk sastopamiem kopīgiem tematiem ir lielāka nozīme nekā ļoti izplatītiem tematiem.","Die Ähnlichkeit von Orten wird anhand der dort belegten Themen und ihrer Häufigkeit berechnet. Seltenere gemeinsame Themen erhalten mehr Gewicht als sehr verbreitete.","Place similarity is calculated from the legend themes found there and their frequency. Rarer shared themes carry more weight than very common themes."
+"map.networkMethodDetails","Tīklā iekļauj vietas ar vismaz piecām atlasītām teikām. Saiknei vajadzīgi vismaz divi kopīgi temati; tiek paturētas tikai katras vietas stiprākās saiknes.","Einbezogen werden Orte mit mindestens fünf ausgewählten Sagen. Eine Beziehung benötigt mindestens zwei gemeinsame Themen; nur die stärksten Beziehungen jedes Ortes bleiben sichtbar.","The network includes places with at least five selected legends. A relationship requires at least two shared themes, and only each place’s strongest relationships remain visible."
+"map.networkPlace","Vietas repertuārs","Ortsrepertoire","Place repertoire"
+"map.networkLegendCount","{count} teikas","{count} Sagen","{count} legends"
+"map.networkPlotCount","{count} temati","{count} Themen","{count} themes"
+"map.networkRelatedCount","{count} saistītas vietas","{count} verbundene Orte","{count} connected places"
+"map.dominantThemes","Dominējošās tēmas","Dominante Themen","Dominant themes"
+"map.networkTopPlots","Biežākie temati","Häufigste Themen","Most frequent themes"
+"map.networkMostSimilar","Vislīdzīgākās vietas","Ähnlichste Orte","Most similar places"
+"map.openPlaceLegends","Skatīt šīs vietas teikas","Sagen dieses Ortes ansehen","View this place’s legends"
+"map.compareWithPlace","Salīdzināt ar citu vietu","Mit einem anderen Ort vergleichen","Compare with another place"
+"map.plotSimilarity","Tematiskā līdzība","Ähnlichkeit der Themen","Theme similarity"
+"map.similarity","Līdzība","Ähnlichkeit","Similarity"
+"map.sharedPlots","Kopīgi temati","Gemeinsame Themen","Shared themes"
+"map.strongestMatches","Spēcīgākās sakritības","Stärkste Übereinstimmungen","Strongest matches"
+"map.compareBothPlaces","Salīdzināt abu vietu teikas","Sagen beider Orte vergleichen","Compare both places’ legends"
+"map.networkComparison","Repertuāru salīdzinājums","Repertoirevergleich","Repertoire comparison"
+"map.firstPlace","1. vieta","1. Ort","First place"
+"map.secondPlace","2. vieta","2. Ort","Second place"
+"map.chooseSecondPlace","Izvēlieties otru vietu salīdzinājumam.","Wählen Sie einen zweiten Ort für den Vergleich.","Choose a second place to compare."
+"map.onlyIn","Tikai — {place}","Nur in {place}","Only in {place}"
+"map.shared","Kopīgais","Gemeinsam","Shared"
+"map.openComparisonLegends","Atvērt salīdzinājuma teikas","Sagen des Vergleichs öffnen","Open comparison legends"
+"map.networkSettings","Tīkla iestatījumi","Netzwerkeinstellungen","Network settings"
+"map.profile.place","Vietas profils","Ortsprofil","Place profile"
+"map.profile.collector","Pierakstītāja profils","Sammlerprofil","Collector profile"
+"map.profile.narrator","Teicēja profils","Erzählerprofil","Narrator profile"
+"map.profile.category","Nodaļas profils","Kapitelprofil","chapter profile"
+"map.profile.legend","Teikas profils","Sagenprofil","Legend profile"
+"map.profile.connection","Saiknes profils","Verbindungsprofil","Connection profile"
+"map.basemapOpenDark","Tumšs","Dunkel","Dark"
+"map.basemapFiord","Fiord","Fiord","Fiord"
+"map.basemapPositron","Positron","Positron","Positron"
+"map.basemapOSM","OpenStreetMap","OpenStreetMap","OpenStreetMap"
+"map.enterFullscreen","Skatīt karti pilnekrānā","Karte im Vollbild anzeigen","View map full screen"
+"map.exitFullscreen","Iziet no pilnekrāna","Vollbild verlassen","Exit full screen"
+"map.networkShowAll","Rādīt visas saiknes","Alle Verbindungen anzeigen","Show all connections"
+"map.networkStrongestConnections","Redzamas {shown} no {total} saiknēm – spēcīgākie 10% katrai vietai","{shown} von {total} Verbindungen – stärkste 10% je Ort","Showing {shown} of {total} connections – the strongest 10% for each place"
+"map.networkVisibleConnections","Redzamas {shown} no {total} saiknēm","{shown} von {total} Verbindungen","Showing {shown} of {total} connections"
+"map.networkOverviewHint","Izvēlies vietu, lai redzētu visas tās saiknes.","Wählen Sie einen Ort, um alle Verbindungen zu sehen.","Select a place to see all its connections."
+"map.networkBubbleSize","Apļu izmērs","Kreisgröße","Bubble size"
+"map.networkThreadIntensity","Līniju intensitāte","Linienintensität","Thread intensity"
+"map.networkColorCollector","Pierakstītājs","Sammler","Collector"
+"map.networkMappedLegends","Teikas ar koordinātām","Sagen mit Koordinaten","Mapped legends"
+"map.networkUnmappedCollector","Vēl {count} atlasītām teikām nav vietas ar koordinātām. Tās tīklā neiekļauj.","Weitere {count} ausgewählte Sagen haben keine Ortskoordinaten und sind nicht im Netzwerk enthalten.","Additional selected legends without a mapped place: {count}. They are excluded from this network."
+"map.networkOpenUnmapped","Skatīt teikas bez koordinātām","Sagen ohne Koordinaten anzeigen","View unlocated legends"
+"map.networkStatLegends","Teikas","Sagen","Legends"
+"map.filterAll.translation","Visas","Alle","All"
+"map.filterTranslation","Tulkojums","Übersetzung","Translation"
+"map.searchTranslation","Meklēt…","Suchen…","Search…"
+"map.translationTag","Tulkojums: {value}","Übersetzung: {value}","Translation: {value}"
+"map.undatedNote","{count} teikas ({percent}%) nav datētas","{count} Sagen ({percent}%) sind undatiert","{count} legends ({percent}%) are undated"
+"map.translation.translated","Tulkojums vācu valodā","Deutsche Übersetzung","German translation"
+"map.translation.latvian-only","Tikai latviešu valodā","Nur Lettisch","Latvian only"
+"map.unlocatedCount","{count} teikas kartē neiekļauj – nav koordinātu","{count} Sagen ohne Koordinaten sind nicht auf der Karte","{count} legends excluded from the map – no coordinates"
+"map.unlocatedCountShort","{count} bez koordinātām","{count} ohne Koordinaten","{count} unlocated"
+"map.coordinateCountDetails","Atlasē {mapped} teikām ir koordinātas, {unmapped} nav vietas ar koordinātām. Skatīt teikas bez koordinātām.","{mapped} Sagen mit und {unmapped} ohne Koordinaten in der Auswahl. Sagen ohne Koordinaten anzeigen.","In the selection, {mapped} legends have coordinates and {unmapped} lack a mapped place. View legends without coordinates."
+"map.mobileCount","{count} / {total} teikas","{count} / {total} Sagen","{count} / {total} legends"
+"map.colorSpectrum","Zils–zelta–koraļļu","Blau–Gold–Koralle","Blue–gold–coral"
+"map.colorCoral","Koraļļu","Koralle","Coral"
+"map.networkEdgeRecords","Biezāka līnija = vairāk teiku","Dickere Linie = mehr Sagen","Thicker line = more legends"
+"map.networkMethodMetadata","Kā veidots šis tīkls?","Wie entsteht dieses Netzwerk?","How is this network built?"
+"map.networkConnections","Saiknes","Verbindungen","Connections"
+"map.networkMetadataDetails","Saiknes izmanto datu kopā norādītās nodaļas un vietas. Tās neapliecina ceļojumus, tikšanās vai vēsturisku pārnesi. Teikas bez koordinātām tīklā neiekļauj.","Verbindungen beruhen auf Kapiteln und Orten im Datensatz. Sie belegen keine Reisen, Treffen oder historische Übertragung. Sagen ohne Koordinaten werden ausgeschlossen.","Connections use recorded chapters and places. They do not show travel, meetings or historical transmission. Collectors and narrators remain filters, not geographic nodes. Records without coordinates or an chapter are excluded. Click a line to see the shared types and legends."
+"map.networkMethod.plots","Kopīgas nodaļas starp vietām","Gemeinsame Kapitel zwischen Orten","Shared chapters between places"
+"map.networkExplanation.plots","Katrs punkts ir vieta ar koordinātām. Līnija nozīmē, ka abās vietās ir teikas vienā nodaļā. Tās biezums rāda kopīgo nodaļu skaitu.","Jeder Knoten ist ein Ort mit Koordinaten. Eine Linie bedeutet gemeinsame Kapitel. Ihre Dicke zeigt die Anzahl gemeinsamer Kapitel.","Every node is a place with coordinates in the dataset. A line means both places have legends with the same chapter. Its thickness shows the number of shared types, not a calculated similarity."
+"map.networkKind.place","Vieta","Ort","Place"
+"map.networkKind.collector","Pierakstītājs","Sammler","Collector"
+"map.networkKind.narrator","Teicējs","Erzähler","Narrator"
+"map.networkKind.category","Nodaļa","Kapitel","chapter"
+"map.networkEmpty","Atlasē nav vietu ar norādītu nodaļu. Maini filtrus.","Keine Orte mit Kapitelangaben in dieser Auswahl. Ändern Sie die Filter.","No places with a recorded chapter in the selection. Try different filters."
+"map.networkSharedTypes","Kopīgas nodaļas","Gemeinsame Kapitel","Shared chapters"
+"map.networkEdgeMLTypes","Biezāka līnija = vairāk kopīgu nodaļu","Dickere Linie = mehr gemeinsame Kapitel","Thicker line = more shared chapters"
+"map.networkSharedTypeCount","Kopīgas nodaļas: {count}","Gemeinsame Kapitel: {count}","Shared chapters: {count}"
+"map.networkTypeRecordCounts","Teiku skaits katrā nodaļā: {from} / {to}.","Sagen je Kapitel: {from} / {to}.","Legend counts for each type: {from} / {to}."
+"map.selectedThemeCount","{count} nodaļas","{count} Kapitel","{count} chapters"
+"map.selectedThemeCountOne","{count} nodaļa","{count} Kapitel","{count} chapter"
+"map.noSelectedValues","Nekas nav atlasīts","Nichts ausgewählt","None selected"
+"map.datedOnly","Tikai datētās teikas","Nur datierte Sagen","Dated legends only"
+"map.knownPlacesOnly","Tikai zināmās vietas","Nur bekannte Orte","Known places only"
+"map.networkOtherElements","Kad izvēlēta vieta","Bei ausgewähltem Ort","When a place is selected"
+"map.networkFadeOthers","Blāvināt pārējos punktus un līnijas","Andere Knoten und Linien abblenden","Fade other nodes and threads"
+"map.networkHideOthers","Paslēpt pārējos punktus un līnijas","Andere Knoten und Linien ausblenden","Hide other nodes and threads"
+"map.networkTitleCollectors","Kopīgu pierakstītāju tīkls","Netzwerk gemeinsamer Sammler","Network by shared collectors"
+"map.networkTitleTypes","Kopīgu nodaļu tīkls","Netzwerk gemeinsamer Kapitel","Network by shared chapters"
+"map.networkSharedCollectors","Kopīgi pierakstītāji","Gemeinsame Sammler","Shared collectors"
+"map.networkEdgeCollectors","Biezāka līnija = vairāk kopīgu pierakstītāju","Dickere Linie = mehr gemeinsame Sammler","Thicker line = more shared collectors"
+"map.networkSharedCollectorCount","{count} kopīgi pierakstītāji","{count} gemeinsame Sammler","{count} shared collectors"
+"map.networkCollectorRecordCounts","Skaits rāda katra pierakstītāja teikas vietās {from} / {to}. Viena teika var būt vairākās saiknēs.","Die Zahlen zeigen Sagen je Sammler in {from} / {to}. Eine Sage kann mehrere Verbindungen stützen.","For each collector, counts show supporting legends in {from} / {to}. A legend can support more than one connection."
+"map.networkPlaceCollectors","Šīs vietas teiku pierakstītāji","Sammler der Sagen dieses Ortes","Collectors named in this place’s legends"
+"map.networkSharedCollectorCountOne","{count} kopīgs pierakstītājs","{count} gemeinsamer Sammler","{count} shared collector"
+"map.networkSizeBy","Apļu izmēru nosaka","Kreisgröße nach","Size bubbles by"
+"map.networkSizeByLegends","Teiku skaits","Anzahl der Sagen","Number of legends"
+"map.networkSizeByConnections","Saikņu skaits","Anzahl der Verbindungen","Number of connections"
+"map.modePlaces","Vietas","Orte","Places"
+"map.connectedPlaces","Saistītās vietas","Verbundene Orte","Connected places"
+"map.placeNetworkRecords","{count} šīs vietas teikas piedalās izvēlētajā tīklā.","{count} Sagen dieses Ortes tragen zu diesem Netzwerk bei.","{count} of this place’s legends contribute to this network type."
+"map.networkStrongestOnly","Rādīt spēcīgākos 10% katrai vietai","Stärkste 10% je Ort anzeigen","Show strongest 10% for each place"
+"map.uniformSize","Vienāds izmērs","Einheitliche Größe","Uniform size"
+"map.sharedCoordinatesTitle","Vietu nosaukumi ar vienādām koordinātām","Ortsnamen mit gleichen Koordinaten","Place names at the same coordinates"
+"map.sharedCoordinatesGrouped","Šiem nosaukumiem datu kopā ir vienādas koordinātas, tādēļ tie apvienoti vienā aplī. Tas neapliecina, ka tie ir viena vieta. Sākotnējie nosaukumi saglabāti; skaits atbilst filtriem.","Diese Namen haben gleiche Koordinaten und teilen einen Kreis. Das bestätigt nicht, dass sie denselben Ort bezeichnen. Namen bleiben erhalten; Zahlen entsprechen den Filtern.","These place names have identical coordinates in the dataset and share one map bubble. The profile totals combine their records. This does not confirm that the names refer to the same place. Original names are preserved; the legend counts below reflect the current filters."
+"map.sharedCoordinatesSeparate","Šiem nosaukumiem datu kopā ir vienādas koordinātas. Tas neapliecina, ka tie ir viena vieta. Šis profils apraksta tikai atlasīto nosaukumu.","Diese Namen haben gleiche Koordinaten. Das bestätigt keine Ortsidentität. Dieses Profil beschreibt nur den ausgewählten Namen.","These place names have identical coordinates in the dataset. This does not confirm that they refer to the same place. This profile describes only the selected place name; the legend counts below reflect the current filters."
+"map.sharedCoordinatesSummary","Vienā aplī apvienoti {count} vietu nosaukumi ar vienādām koordinātām.","Ein Kreis umfasst {count} Ortsnamen mit gleichen Koordinaten.","One bubble groups {count} recorded place names with identical coordinates."
+"map.networkOverviewExplanation","Pilnais tīkls rāda visas atlasīto metadatu saiknes. Spēcīgākie 10% saglabā vismaz vienu saikni katrai saistītajai vietai, vērtējot kopīgos metadatus un teiku skaitu. Izvēloties vietu, redzamas visas tās saiknes. Eksports ietver pilno atlasīto tīklu.","Das vollständige Netzwerk zeigt alle Verbindungen. Die stärksten 10% erhalten mindestens eine Verbindung je verbundenem Ort, nach gemeinsamen Metadaten und Sagenzahl. Bei Ortsauswahl erscheinen alle Verbindungen. Der Export umfasst das gesamte gefilterte Netzwerk.","The full network shows all recorded connections. The strongest 10% retain at least one connection per connected place, ranked by shared metadata and supporting legends. Selecting a place reveals all its connections. Exports contain the complete filtered network."
+"about.filtersHelp","Par filtriem","Über die Filter","About filters"
+"about.exportsHelp","Par lejupielādi","Über Downloads","About downloads"
+"about.viewHelp","Par šo skatu","Über diese Ansicht","About this view"
+"about.networkColorsTitle","Tīkla krāsas un izmērs","Farben und Größe","Network colors and size"
+"exploration.helpTitle","Kartes un datu izpēte","Karten und Daten erkunden","Exploring maps and data"
+"exploration.helpText","Diagrammās un tīklos vari atlasīt sējumus, nodaļas, vietas un personas, skatīt atlasītos tekstus, kopēt atlases saiti un lejupielādēt metadatus. Gads var būt norādīts teikas metadatos vai avota publikācijā. Saiknes rāda kopīgus metadatus, nevis vēsturisku ietekmi. Karte saglabā datu kopas koordinātas; to precizitāte nav neatkarīgi pārbaudīta. Teikas bez koordinātām pieejamas atsevišķā atlasē.","Diagramme und Netzwerke ermöglichen eine Auswahl nach Bänden, Kapiteln, Orten und Personen, Textvorschauen, geteilte Links und Metadatenexporte. Jahre stammen aus Eintragsmetadaten oder Quellenpublikationen. Verbindungen zeigen gemeinsame Metadaten, keinen historischen Einfluss. Die Karte behält die Datensatzkoordinaten bei; sie wurden nicht unabhängig überprüft. Sagen ohne Koordinaten sind separat zugänglich.","Charts and networks offer selections by volume, chapter, place and person, text previews, shared links and metadata exports. Years come from record metadata or source publications. Connections show shared metadata, not historical influence. The map retains dataset coordinates; their precision has not been independently checked. Legends without coordinates remain available as a separate selection."
+"map.yearFrom","No gada","Ab Jahr","From year"
+"map.yearTo","Līdz gadam","Bis Jahr","To year"
+"about.dataHelp","Kāpēc teiku skaits atšķiras?","Warum unterscheiden sich die Sagenzahlen?","Why do legend counts differ?"
+"map.showUncertainty","Rādīt vietu nenoteiktību","Ortsunsicherheit anzeigen","Show location uncertainty"

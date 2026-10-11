@@ -1,0 +1,91 @@
+/* Teikas palette: ink and paper, with existing blue, violet and ochre accents.
+   Blue is an action colour; chart categories keep their own stable colours. */
+:root{
+ --ink:#17243a;--muted:#657080;--paper:#faf9f6;--surface:#f0f1f3;--raised:#fff;
+ --line:#d9dde3;--navy:#07182d;--blue:#155f8a;--accent:#155f8a;--focus:#65549a;
+ --palette-blue:#155f8a;--palette-violet:#65549a;--palette-ochre:#dfc35b;
+ --pin:#856612;--pin-soft:#f4e9b5;--interaction-green:var(--blue);--daily-green:var(--blue);--browse-green:var(--blue);
+ --ambient-blue:rgba(21,95,138,.05);--ambient-green:rgba(101,84,154,.035);--ambient-yellow:rgba(166,132,18,.04);
+ --action-fill:#155f8a;--action-ink:#fff;
+ --map-data-green-light:#155f8a;--map-data-green-dark:#9fc7e4;
+ --map-data-blue-light:#155f8a;--map-data-blue-dark:#9fc7e4;
+ --map-data-yellow-light:#856612;--map-data-yellow-dark:#dfc35b;
+}
+:root[data-theme=dark]{
+ --ink:#f3f2ef;--muted:#b3bac7;--paper:#101521;--surface:#1b2230;--raised:#202838;
+ --line:#384254;--navy:#0b101a;--blue:#9fc7e4;--accent:#9fc7e4;--focus:#aa9bea;
+ --pin:#dfc35b;--pin-soft:#342e20;--interaction-green:var(--blue);--daily-green:var(--blue);--browse-green:var(--blue);
+ --ambient-blue:rgba(21,95,138,.07);--ambient-green:rgba(101,84,154,.045);--ambient-yellow:rgba(166,132,18,.025);
+}
+:root:not([data-theme=dark]) body,:root[data-theme=dark] body{background:var(--paper)}
+:root .stats{--stat-green:var(--palette-violet);--place-blue:var(--palette-blue)}
+:root[data-theme=dark] .stats{--stat-green:#aa9bea;--place-blue:#9fc7e4}
+:root .browser-layout{--browse-green:var(--blue);--accent:var(--blue);--focus:#65549a}
+:root[data-theme=dark] .browser-layout{--browse-green:var(--blue);--accent:var(--blue);--focus:#aa9bea}
+:root body .daily-card{--daily-green:var(--blue)}
+:root .site-header nav a.active{border-color:var(--palette-violet)}
+:root .mini-switch button[aria-pressed=true]{border-color:var(--blue);color:var(--blue)}
+:root body .button.primary{background:var(--action-fill);color:var(--action-ink);box-shadow:none}
+:root .browse-hero,:root .about-hero{background:var(--paper)}
+:root body .map-stage[data-map-theme=light]{
+ --ink:#17243a;--muted:#657080;--paper:#faf9f6;--surface:#f0f1f3;--raised:#fff;
+ --line:#d9dde3;--blue:#155f8a;--accent:#155f8a;--focus:#65549a;--navy:#07182d;
+}
+:root body .map-stage[data-map-theme=dark]{
+ --ink:#f3f2ef;--muted:#b3bac7;--paper:#101521;--surface:#1b2230;--raised:#202838;
+ --line:#384254;--blue:#9fc7e4;--accent:#9fc7e4;--focus:#aa9bea;--navy:#0b101a;
+}
+:root:not([data-theme=dark]) .hero{background:radial-gradient(circle at 80% 25%,rgba(21,95,138,.1) 0 1px,transparent 2px) 0 0/39px 39px,var(--paper)}
+:root:not([data-theme=dark]) .hero:has(.home-map){background:var(--paper)}
+:root .legend-points .point-green{--point-fill:var(--palette-violet);fill:var(--point-fill)}
+:root[data-theme=dark] .legend-points .point-green{--point-fill:#aa9bea}
+
+/* Shared chart colours: volumes 13, 14 and 15 always use blue, violet, ochre. */
+:root body .ml-data-page .ml-research-dashboard,
+:root[data-theme=dark] body .ml-data-page .ml-research-dashboard{
+ --chart-blue:var(--palette-blue);--chart-slate:var(--palette-violet);--chart-rose:var(--palette-ochre);
+ --chart-card:var(--raised);--chart-grid:var(--line);
+}
+:root body .ml-data-page{--accent:var(--blue);--focus:#65549a}
+:root[data-theme=dark] body .ml-data-page{--focus:#aa9bea}
+:root body .ml-kpi{background:var(--raised);box-shadow:none}
+:root body .ml-dash-card{box-shadow:none}
+:root body .ml-kpi-icon{background:color-mix(in srgb,var(--tone),var(--raised) 90%);color:var(--tone)}
+:root[data-theme=dark] body .ml-kpi-icon{background:color-mix(in srgb,var(--tone),var(--raised) 65%);color:color-mix(in srgb,var(--tone),white 55%)}
+:root body .ml-mosaic-tile{
+ --mosaic-wash:color-mix(in srgb,var(--volume-color),var(--chart-card) 85%);
+ --mosaic-fade:color-mix(in srgb,var(--volume-color),var(--chart-card) 96%);
+ --mosaic-line:color-mix(in srgb,var(--volume-color),var(--line) 65%);
+ background:linear-gradient(135deg,var(--mosaic-wash),var(--mosaic-fade));
+ color:var(--ink);border:1px solid var(--chart-card);border-radius:7px;
+}
+:root[data-theme=dark] body .ml-mosaic-tile{
+ --mosaic-wash:color-mix(in srgb,var(--volume-color),var(--chart-card) 68%);
+ --mosaic-fade:color-mix(in srgb,var(--volume-color),var(--chart-card) 90%);
+ --mosaic-line:color-mix(in srgb,var(--volume-color),var(--line) 50%);
+}
+:root body .ml-mosaic-tile strong{color:var(--ink)}
+:root body .ml-mosaic-tile small{color:var(--muted)}
+:root body .ml-kpi.tone-rose .ml-kpi-icon{color:#856612}
+:root[data-theme=dark] body .ml-kpi.tone-rose .ml-kpi-icon{color:#dfc35b}
+:root body .ml-mosaic-tile:hover:not(.is-selected){
+ background:linear-gradient(135deg,var(--mosaic-wash),var(--mosaic-fade))!important;
+ box-shadow:inset 0 0 0 1px var(--mosaic-line)!important;
+}
+:root body .ml-mosaic-tile.is-selected{
+ background:linear-gradient(135deg,var(--mosaic-wash),var(--mosaic-fade))!important;
+ box-shadow:inset 0 0 0 2px var(--blue)!important;
+}
+:root body .ml-mosaic-tile:focus-visible{outline-color:var(--ink)!important}
+:root body .ml-collector-bar{background:var(--surface)}
+:root body .ml-collector-fill{background:color-mix(in srgb,var(--palette-blue),var(--raised) 78%)}
+:root[data-theme=dark] body .ml-collector-fill{background:color-mix(in srgb,var(--palette-blue),var(--raised) 35%)}
+:root[data-theme=dark] body .ml-county-chart .ml-facet-track>span{background:var(--blue)}
+:root[data-theme=dark] body .ml-translation-language .ml-ring{--tone:var(--blue)}
+:root[data-theme=dark] body .ml-volume-label{color:var(--ink)}
+:root body .ml-volume-bar>span{background:var(--volume-color)}
+:root[data-theme=dark] body .ml-volume-bar>span{background:color-mix(in srgb,var(--volume-color),white 30%)}
+
+/* Opaque, neutral surfaces keep search, menus and explanations crisp. */
+:root body :is(.ml-hover-tooltip,.network-tooltip){background:var(--raised);border-color:var(--line)}
+:root body .ml-data-view-switch button[aria-pressed=true]{background:var(--action-fill);color:var(--action-ink)}

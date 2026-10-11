@@ -6,7 +6,7 @@ import sourcesRaw from '../../teikas_json/sources.json';
 import linksRaw from '../../teikas_json/legend-sources.json';
 import manifestRaw from '../../teikas_json/dataset-manifest.json';
 
-export type Localized = { lv: string | null; de: string | null };
+export type Localized = { lv: string | null; de: string | null; en?: string | null };
 export type Legend = {
   id: string; volume: string; chapter: Localized; title: Localized; text: Localized;
   collectorId: string; narratorId: string | null; placeId: string | null;

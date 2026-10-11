@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {types,topics} from '../../ml-index/data';
+import '../../ml-index/style.css';
+import '../../styles/exploration.css';
+const base=import.meta.env.BASE_URL;
+---
+<BaseLayout title="Dati" active="data">
+ <div class="ml-page ml-data-page shell" data-i18n-skip>
+  <header class="ml-hero"><h1 data-data-title>Dati</h1></header>
+  <section id="ml-dashboard" aria-labelledby="ml-dashboard-title"><div id="ml-dashboard-content"></div></section>
+  <noscript><p>Datu izpētei nepieciešams JavaScript.</p></noscript>
+ </div>
+ <script type="application/json" id="ml-data" is:inline set:html={JSON.stringify({types,topics,base}).replace(/</g,'\u003c')}/>
+ <script>import '../../ml-index/data-main';const copy={lv:['Dati'],de:['Daten'],en:['Data']};const update=()=>{const words=copy[(document.documentElement.dataset.uiLang||'lv') as keyof typeof copy];['title'].forEach((key,i)=>{document.querySelector(`[data-data-${key}]`)!.textContent=words[i];});};update();window.addEventListener('ui-language-change',update);</script>
+</BaseLayout>

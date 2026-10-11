@@ -12,7 +12,8 @@
     "i18n:export": "node scripts/export-ui-i18n.mjs",
     "map:generate": "node scripts/generate-map-data.mjs",
     "test:data": ".venv/bin/python scripts/XLSXtoJSON-test/run_tests.py",
-    "data:generate": ".venv/bin/python scripts/XLSXtoJSON.py latvian_legends_master_data.xlsx teikas_json"
+    "data:generate": ".venv/bin/python scripts/XLSXtoJSON.py latvian_legends_master_data.xlsx teikas_json",
+    "test:exploration": "astro build && node --test tests/exploration.test.js"
   },
   "keywords": [],
   "author": "",

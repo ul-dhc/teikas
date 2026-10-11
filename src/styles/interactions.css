@@ -1,0 +1,61 @@
+/* Shared interaction vocabulary: quiet borders, a small neutral wash, no motion. */
+:root{
+ --hover-wash:color-mix(in srgb,var(--ink),transparent 97%);
+ --hover-line:color-mix(in srgb,var(--blue),var(--line) 65%);
+ --hover-shadow:none;
+ --interaction-wash:color-mix(in srgb,var(--ink),transparent 97%);
+ --interaction-line:color-mix(in srgb,var(--blue),var(--line) 65%);
+}
+:root[data-theme=dark]{
+ --hover-wash:color-mix(in srgb,var(--ink),transparent 96%);
+ --hover-line:color-mix(in srgb,var(--blue),var(--line) 65%);
+ --hover-shadow:none;
+ --interaction-wash:color-mix(in srgb,var(--ink),transparent 96%);
+ --interaction-line:color-mix(in srgb,var(--blue),var(--line) 65%);
+}
+:root body :is(button,a,summary,input,select,.stat,.feature,.daily-icon,.result-card,.ml-kpi,.ml-dash-card,.filter-sidebar,.timeline):hover{
+ transform:none!important;box-shadow:none!important;filter:none!important;text-shadow:none!important;
+}
+:root body :is(button,summary,input,select):hover:not(:disabled){border-color:var(--interaction-line)!important}
+:root body :is(button,summary):hover:where(:not(:disabled):not(.primary):not([aria-pressed=true]):not([aria-selected=true]):not([aria-current])){
+ background:var(--interaction-wash)!important;
+}
+:root body :is(a,button,summary):hover :is(.lucide,small,strong,b){filter:none!important;text-shadow:none!important}
+:root body a:hover:where(:not(.primary)){color:var(--blue)!important}
+:root body :is(.stat,.feature,.daily-icon,.result-card,.ml-kpi,.ml-dash-card):hover{
+ border-color:var(--interaction-line)!important;background:var(--raised)!important;
+}
+:root body .stats .stat:hover{border-width:.65px!important;border-style:solid!important}
+:root body .stats .stat:hover>.lucide{transform:none!important;filter:none!important}
+:root body :is(.filter-sidebar,.multi-panel,.timeline):hover{border-color:var(--line)!important;box-shadow:none!important}
+:root body :is(.ml-dash-card,.filter-sidebar):focus-within{box-shadow:none!important;transform:none!important;border-color:var(--line)!important}
+:root body :is(button,a,summary,input,select):focus-visible{outline:2px solid var(--blue)!important;outline-offset:2px!important}
+:root body :is(.ml-facet-track>span,.range-track,.ml-timeline-track>span){filter:none!important}
+:root body .legend-points circle:hover{filter:none!important;transform:none!important}
+:root body :is(.button,.read-full,.map-count):hover>.lucide{transform:none!important}
+
+/* Charts retain their category colours; only the pointed item changes subtly. */
+:root body .ml-mosaic-tile:hover:not(.is-selected){
+ background:color-mix(in srgb,var(--volume-color),var(--chart-card) 79%)!important;
+ box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--volume-color),var(--line) 60%)!important;
+}
+:root body .ml-mosaic-tile.is-selected{
+ background:color-mix(in srgb,var(--volume-color),var(--chart-card) 76%);
+ box-shadow:inset 0 0 0 1px var(--volume-color)!important;
+}
+:root body .ml-volume-cards button.is-hovered:not(.is-selected){background:var(--interaction-wash)!important;border-color:var(--interaction-line)!important}
+:root body .ml-pie-sector:is(:hover,.is-hovered){filter:none;stroke:var(--interaction-line);stroke-width:1.5}
+:root body .ml-pie-sector:is(:focus-visible,.is-selected){stroke:var(--ink);stroke-width:2}
+:root body .ml-pie-sector,
+:root body .ml-pie-sector:is(:hover,:focus,:focus-visible){outline:none!important;box-shadow:none!important}
+
+/* All custom hover labels share compact type and a neutral, opaque surface. */
+:root body :is(.ml-hover-tooltip,.network-tooltip){
+ padding:.4rem .6rem;border:1px solid var(--line);border-radius:5px;
+ background:var(--raised);color:var(--ink);
+ box-shadow:0 2px 8px color-mix(in srgb,var(--ink),transparent 92%);
+ backdrop-filter:none;-webkit-backdrop-filter:none;
+ font:400 .75rem/1.4 var(--sans);max-width:min(280px,calc(100vw - 16px));
+}
+:root body :is(.ml-hover-tooltip,.network-tooltip) strong{font-size:inherit;font-weight:500}
+@media(prefers-reduced-motion:reduce){:root body :is(button,a,summary,input,select,.stat,.feature,.daily-icon,.result-card,.ml-dash-card){transition:none}}

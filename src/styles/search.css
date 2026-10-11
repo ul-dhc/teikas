@@ -1,0 +1,22 @@
+/* Every search field uses the homepage control, including compact filter panels. */
+:root body input[type="search"]{
+ width:100%;min-width:0;height:40px;box-sizing:border-box;
+ padding:0 1.1rem;border:1px solid var(--line);border-radius:999px;
+ background:color-mix(in srgb,var(--raised),transparent 5%);color:var(--ink);
+ font:400 1rem var(--sans);line-height:normal;
+ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+ transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+:root body input[type="search"]::placeholder{
+ font-size:.86rem;font-weight:400;
+ color:color-mix(in srgb,var(--muted),transparent 24%);opacity:1;
+}
+:root[data-theme=dark] body input[type="search"]{background:var(--raised);border-color:#3a536e}
+:root[data-theme=dark] body input[type="search"]::placeholder{color:color-mix(in srgb,var(--muted),transparent 18%)}
+:root body input[type="search"]:hover{
+ border-color:color-mix(in srgb,var(--accent),var(--line) 35%);box-shadow:none;
+}
+:root body input[type="search"]:focus{
+ border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent),transparent 86%);outline:0;
+}
+@media(prefers-reduced-motion:reduce){:root body input[type="search"]{transition:none}}

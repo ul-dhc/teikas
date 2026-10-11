@@ -901,14 +901,14 @@
     "en": "Select a place on the map"
   },
   "map.noSelectionHelp": {
-    "lv": "Izvēlieties punktu vai kopu",
-    "de": " lai skatītu vietas informāciju.",
-    "en": "Wählen Sie einen Punkt oder Cluster aus"
+    "lv": "Izvēlies teiku, vietu vai kopu",
+    "de": "Wählen Sie eine Sage, einen Ort oder eine Gruppe",
+    "en": "Select a point or cluster"
   },
   "map.resultsInView": {
-    "lv": "Kartes redzamajā apgabalā: {count} teikas",
-    "de": "Im sichtbaren Kartenausschnitt: {count} Sagen",
-    "en": "Visible map area: {count} legends"
+    "lv": "Redzamajā kartes daļā: {count} / {total} teikas",
+    "de": "Im Kartenausschnitt: {count} / {total} Sagen",
+    "en": "Visible map area: {count} / {total} legends"
   },
   "map.openVisibleSelection": {
     "lv": "Atvērt kartes redzamajā apgabalā esošās {count} teikas jaunā logā",
@@ -1011,9 +1011,9 @@
     "en": "Themes–places"
   },
   "map.showUnmapped": {
-    "lv": "Rādīt 314 nekartētās teikas līcī",
-    "de": "314 nicht kartierbare Sagen im Golf anzeigen",
-    "en": "Show 314 unmapped legends in the gulf"
+    "lv": "Rādīt teikas bez koordinātām",
+    "de": "Sagen ohne Koordinaten anzeigen",
+    "en": "Show legends without coordinates"
   },
   "map.unmappedTitle": {
     "lv": "Nekartētās teikas",
@@ -1021,9 +1021,9 @@
     "en": "Unmapped legends"
   },
   "map.unmappedExplanation": {
-    "lv": "Šīm teikām pierakstīšanas vieta nav zināma. Punkts Rīgas jūras līcī ir simboliska vietas norāde.",
-    "de": "Der Aufzeichnungsort dieser Sagen ist unbekannt. Der Punkt im Rigaer Meerbusen ist eine symbolische Ortsangabe.",
-    "en": "The recording place of these legends is unknown. The point in the Gulf of Riga is a symbolic location marker."
+    "lv": "Šīm teikām nav koordinātu. Punkts Rīgas līcī ir simbolisks apkopojums, nevis dokumentēta vieta.",
+    "de": "Diese Sagen haben keine Koordinaten. Der Punkt im Rigaischen Meerbusen ist eine symbolische Sammlung, kein dokumentierter Ort.",
+    "en": "These legends have no coordinates. The marker in the Gulf of Riga is a symbolic collection, not a recorded location."
   },
   "map.networkLegend.narrators": {
     "lv": "Līnijas savieno vietas ar kopīgiem teicējiem.",
@@ -1046,9 +1046,9 @@
     "en": "Visualization type"
   },
   "map.modePoints": {
-    "lv": "Punkti",
-    "de": "Punkte",
-    "en": "Dots"
+    "lv": "Teikas",
+    "de": "Sagen",
+    "en": "Legends"
   },
   "map.modeClusters": {
     "lv": "Kopas",
@@ -1216,9 +1216,9 @@
     "en": "Narrator"
   },
   "map.timeRange": {
-    "lv": "Laika nogrieznis",
-    "de": "Zeitraum",
-    "en": "Time range"
+    "lv": "Ieraksta vai avota gads",
+    "de": "Jahr des Eintrags oder der Quelle",
+    "en": "Record or source year"
   },
   "map.fromYear": {
     "lv": "No",
@@ -1270,7 +1270,7 @@
     "de": "Ort suchen…",
     "en": "Search places…"
   },
-  "map.searchGenders": { 
+  "map.searchGenders": {
     "lv": "Meklēt dzimumu…",
     "de": "Geschlecht suchen…",
     "en": "Search gender…"
@@ -1458,7 +1458,11 @@
   "map.networkFocusRelated": { "lv": "Tikai saistītās vietas", "de": "Nur verbundene Orte", "en": "Connected places only" },
   "map.comparePlaces": { "lv": "Salīdzināt vietas", "de": "Orte vergleichen", "en": "Compare places" },
   "map.networkBuiltFrom": { "lv": "Tīklojums veidots no {count} atlasītām teikām", "de": "Netzwerk aus {count} ausgewählten Sagen", "en": "Network built from {count} selected legends" },
-  "map.networkStatus": { "lv": "{legends} teikas · {places} vietas · {edges} saiknes", "de": "{legends} Sagen · {places} Orte · {edges} Beziehungen", "en": "{legends} legends · {places} places · {edges} relationships" },
+  "map.networkStatus": {
+    "lv": "{legends} teikas · {places} vietas · {edges} saiknes",
+    "de": "{legends} Sagen · {places} Orte · {edges} Verbindungen",
+    "en": "{legends} legends · {places} nodes · {edges} relationships"
+  },
   "map.networkNodeSize": { "lv": "Lielāks mezgls = vairāk teiku", "de": "Größerer Knoten = mehr Sagen", "en": "Larger node = more legends" },
   "map.networkEdgeStrength": { "lv": "Biezāka saikne = lielāka līdzība", "de": "Stärkere Linie = größere Ähnlichkeit", "en": "Thicker line = greater similarity" },
   "map.networkMethodAction": { "lv": "Kā tiek aprēķināta līdzība?", "de": "Wie wird Ähnlichkeit berechnet?", "en": "How is similarity calculated?" },
@@ -1485,5 +1489,460 @@
   "map.chooseSecondPlace": { "lv": "Izvēlieties otru vietu salīdzinājumam.", "de": "Wählen Sie einen zweiten Ort für den Vergleich.", "en": "Choose a second place to compare." },
   "map.onlyIn": { "lv": "Tikai — {place}", "de": "Nur in {place}", "en": "Only in {place}" },
   "map.shared": { "lv": "Kopīgais", "de": "Gemeinsam", "en": "Shared" },
-  "map.openComparisonLegends": { "lv": "Atvērt salīdzinājuma teikas", "de": "Sagen des Vergleichs öffnen", "en": "Open comparison legends" }
+  "map.openComparisonLegends": { "lv": "Atvērt salīdzinājuma teikas", "de": "Sagen des Vergleichs öffnen", "en": "Open comparison legends" },
+  "map.networkSettings": {
+    "lv": "Tīkla iestatījumi",
+    "de": "Netzwerkeinstellungen",
+    "en": "Network settings"
+  },
+  "map.profile.place": {
+    "lv": "Vietas profils",
+    "de": "Ortsprofil",
+    "en": "Place profile"
+  },
+  "map.profile.collector": {
+    "lv": "Pierakstītāja profils",
+    "de": "Sammlerprofil",
+    "en": "Collector profile"
+  },
+  "map.profile.narrator": {
+    "lv": "Teicēja profils",
+    "de": "Erzählerprofil",
+    "en": "Narrator profile"
+  },
+  "map.profile.category": {
+    "lv": "Nodaļas profils",
+    "de": "Kapitelprofil",
+    "en": "chapter profile"
+  },
+  "map.profile.legend": {
+    "lv": "Teikas profils",
+    "de": "Sagenprofil",
+    "en": "Legend profile"
+  },
+  "map.profile.connection": {
+    "lv": "Saiknes profils",
+    "de": "Verbindungsprofil",
+    "en": "Connection profile"
+  },
+  "map.basemapOpenDark": {
+    "lv": "Tumšs",
+    "de": "Dunkel",
+    "en": "Dark"
+  },
+  "map.basemapFiord": {
+    "lv": "Fiord",
+    "de": "Fiord",
+    "en": "Fiord"
+  },
+  "map.basemapPositron": {
+    "lv": "Positron",
+    "de": "Positron",
+    "en": "Positron"
+  },
+  "map.basemapOSM": {
+    "lv": "OpenStreetMap",
+    "de": "OpenStreetMap",
+    "en": "OpenStreetMap"
+  },
+  "map.enterFullscreen": {
+    "lv": "Skatīt karti pilnekrānā",
+    "de": "Karte im Vollbild anzeigen",
+    "en": "View map full screen"
+  },
+  "map.exitFullscreen": {
+    "lv": "Iziet no pilnekrāna",
+    "de": "Vollbild verlassen",
+    "en": "Exit full screen"
+  },
+  "map.networkShowAll": {
+    "lv": "Rādīt visas saiknes",
+    "de": "Alle Verbindungen anzeigen",
+    "en": "Show all connections"
+  },
+  "map.networkStrongestConnections": {
+    "lv": "Redzamas {shown} no {total} saiknēm – spēcīgākie 10% katrai vietai",
+    "de": "{shown} von {total} Verbindungen – stärkste 10% je Ort",
+    "en": "Showing {shown} of {total} connections – the strongest 10% for each place"
+  },
+  "map.networkVisibleConnections": {
+    "lv": "Redzamas {shown} no {total} saiknēm",
+    "de": "{shown} von {total} Verbindungen",
+    "en": "Showing {shown} of {total} connections"
+  },
+  "map.networkOverviewHint": {
+    "lv": "Izvēlies vietu, lai redzētu visas tās saiknes.",
+    "de": "Wählen Sie einen Ort, um alle Verbindungen zu sehen.",
+    "en": "Select a place to see all its connections."
+  },
+  "map.networkBubbleSize": {
+    "lv": "Apļu izmērs",
+    "de": "Kreisgröße",
+    "en": "Bubble size"
+  },
+  "map.networkThreadIntensity": {
+    "lv": "Līniju intensitāte",
+    "de": "Linienintensität",
+    "en": "Thread intensity"
+  },
+  "map.networkColorCollector": {
+    "lv": "Pierakstītājs",
+    "de": "Sammler",
+    "en": "Collector"
+  },
+  "map.networkMappedLegends": {
+    "lv": "Teikas ar koordinātām",
+    "de": "Sagen mit Koordinaten",
+    "en": "Mapped legends"
+  },
+  "map.networkUnmappedCollector": {
+    "lv": "Vēl {count} atlasītām teikām nav vietas ar koordinātām. Tās tīklā neiekļauj.",
+    "de": "Weitere {count} ausgewählte Sagen haben keine Ortskoordinaten und sind nicht im Netzwerk enthalten.",
+    "en": "Additional selected legends without a mapped place: {count}. They are excluded from this network."
+  },
+  "map.networkOpenUnmapped": {
+    "lv": "Skatīt teikas bez koordinātām",
+    "de": "Sagen ohne Koordinaten anzeigen",
+    "en": "View unlocated legends"
+  },
+  "map.networkStatLegends": {
+    "lv": "Teikas",
+    "de": "Sagen",
+    "en": "Legends"
+  },
+  "map.filterAll.translation": {
+    "lv": "Visas",
+    "de": "Alle",
+    "en": "All"
+  },
+  "map.filterTranslation": {
+    "lv": "Tulkojums",
+    "de": "Übersetzung",
+    "en": "Translation"
+  },
+  "map.searchTranslation": {
+    "lv": "Meklēt…",
+    "de": "Suchen…",
+    "en": "Search…"
+  },
+  "map.translationTag": {
+    "lv": "Tulkojums: {value}",
+    "de": "Übersetzung: {value}",
+    "en": "Translation: {value}"
+  },
+  "map.undatedNote": {
+    "lv": "{count} teikas ({percent}%) nav datētas",
+    "de": "{count} Sagen ({percent}%) sind undatiert",
+    "en": "{count} legends ({percent}%) are undated"
+  },
+  "map.translation.translated": {
+    "lv": "Tulkojums vācu valodā",
+    "de": "Deutsche Übersetzung",
+    "en": "German translation"
+  },
+  "map.translation.latvian-only": {
+    "lv": "Tikai latviešu valodā",
+    "de": "Nur Lettisch",
+    "en": "Latvian only"
+  },
+  "map.unlocatedCount": {
+    "lv": "{count} teikas kartē neiekļauj – nav koordinātu",
+    "de": "{count} Sagen ohne Koordinaten sind nicht auf der Karte",
+    "en": "{count} legends excluded from the map – no coordinates"
+  },
+  "map.unlocatedCountShort": {
+    "lv": "{count} bez koordinātām",
+    "de": "{count} ohne Koordinaten",
+    "en": "{count} unlocated"
+  },
+  "map.coordinateCountDetails": {
+    "lv": "Atlasē {mapped} teikām ir koordinātas, {unmapped} nav vietas ar koordinātām. Skatīt teikas bez koordinātām.",
+    "de": "{mapped} Sagen mit und {unmapped} ohne Koordinaten in der Auswahl. Sagen ohne Koordinaten anzeigen.",
+    "en": "In the selection, {mapped} legends have coordinates and {unmapped} lack a mapped place. View legends without coordinates."
+  },
+  "map.mobileCount": {
+    "lv": "{count} / {total} teikas",
+    "de": "{count} / {total} Sagen",
+    "en": "{count} / {total} legends"
+  },
+  "map.colorSpectrum": {
+    "lv": "Zils–zelta–koraļļu",
+    "de": "Blau–Gold–Koralle",
+    "en": "Blue–gold–coral"
+  },
+  "map.colorCoral": {
+    "lv": "Koraļļu",
+    "de": "Koralle",
+    "en": "Coral"
+  },
+  "map.networkEdgeRecords": {
+    "lv": "Biezāka līnija = vairāk teiku",
+    "de": "Dickere Linie = mehr Sagen",
+    "en": "Thicker line = more legends"
+  },
+  "map.networkMethodMetadata": {
+    "lv": "Kā veidots šis tīkls?",
+    "de": "Wie entsteht dieses Netzwerk?",
+    "en": "How is this network built?"
+  },
+  "map.networkConnections": {
+    "lv": "Saiknes",
+    "de": "Verbindungen",
+    "en": "Connections"
+  },
+  "map.networkMetadataDetails": {
+    "lv": "Saiknes izmanto datu kopā norādītās nodaļas un vietas. Tās neapliecina ceļojumus, tikšanās vai vēsturisku pārnesi. Teikas bez koordinātām tīklā neiekļauj.",
+    "de": "Verbindungen beruhen auf Kapiteln und Orten im Datensatz. Sie belegen keine Reisen, Treffen oder historische Übertragung. Sagen ohne Koordinaten werden ausgeschlossen.",
+    "en": "Connections use recorded chapters and places. They do not show travel, meetings or historical transmission. Collectors and narrators remain filters, not geographic nodes. Records without coordinates or an chapter are excluded. Click a line to see the shared types and legends."
+  },
+  "map.networkMethod.plots": {
+    "lv": "Kopīgas nodaļas starp vietām",
+    "de": "Gemeinsame Kapitel zwischen Orten",
+    "en": "Shared chapters between places"
+  },
+  "map.networkExplanation.plots": {
+    "lv": "Katrs punkts ir vieta ar koordinātām. Līnija nozīmē, ka abās vietās ir teikas vienā nodaļā. Tās biezums rāda kopīgo nodaļu skaitu.",
+    "de": "Jeder Knoten ist ein Ort mit Koordinaten. Eine Linie bedeutet gemeinsame Kapitel. Ihre Dicke zeigt die Anzahl gemeinsamer Kapitel.",
+    "en": "Every node is a place with coordinates in the dataset. A line means both places have legends with the same chapter. Its thickness shows the number of shared types, not a calculated similarity."
+  },
+  "map.networkKind.place": {
+    "lv": "Vieta",
+    "de": "Ort",
+    "en": "Place"
+  },
+  "map.networkKind.collector": {
+    "lv": "Pierakstītājs",
+    "de": "Sammler",
+    "en": "Collector"
+  },
+  "map.networkKind.narrator": {
+    "lv": "Teicējs",
+    "de": "Erzähler",
+    "en": "Narrator"
+  },
+  "map.networkKind.category": {
+    "lv": "Nodaļa",
+    "de": "Kapitel",
+    "en": "chapter"
+  },
+  "map.networkEmpty": {
+    "lv": "Atlasē nav vietu ar norādītu nodaļu. Maini filtrus.",
+    "de": "Keine Orte mit Kapitelangaben in dieser Auswahl. Ändern Sie die Filter.",
+    "en": "No places with a recorded chapter in the selection. Try different filters."
+  },
+  "map.networkSharedTypes": {
+    "lv": "Kopīgas nodaļas",
+    "de": "Gemeinsame Kapitel",
+    "en": "Shared chapters"
+  },
+  "map.networkEdgeMLTypes": {
+    "lv": "Biezāka līnija = vairāk kopīgu nodaļu",
+    "de": "Dickere Linie = mehr gemeinsame Kapitel",
+    "en": "Thicker line = more shared chapters"
+  },
+  "map.networkSharedTypeCount": {
+    "lv": "Kopīgas nodaļas: {count}",
+    "de": "Gemeinsame Kapitel: {count}",
+    "en": "Shared chapters: {count}"
+  },
+  "map.networkTypeRecordCounts": {
+    "lv": "Teiku skaits katrā nodaļā: {from} / {to}.",
+    "de": "Sagen je Kapitel: {from} / {to}.",
+    "en": "Legend counts for each type: {from} / {to}."
+  },
+  "map.selectedThemeCount": {
+    "lv": "{count} nodaļas",
+    "de": "{count} Kapitel",
+    "en": "{count} chapters"
+  },
+  "map.selectedThemeCountOne": {
+    "lv": "{count} nodaļa",
+    "de": "{count} Kapitel",
+    "en": "{count} chapter"
+  },
+  "map.noSelectedValues": {
+    "lv": "Nekas nav atlasīts",
+    "de": "Nichts ausgewählt",
+    "en": "None selected"
+  },
+  "map.datedOnly": {
+    "lv": "Tikai datētās teikas",
+    "de": "Nur datierte Sagen",
+    "en": "Dated legends only"
+  },
+  "map.knownPlacesOnly": {
+    "lv": "Tikai zināmās vietas",
+    "de": "Nur bekannte Orte",
+    "en": "Known places only"
+  },
+  "map.networkOtherElements": {
+    "lv": "Kad izvēlēta vieta",
+    "de": "Bei ausgewähltem Ort",
+    "en": "When a place is selected"
+  },
+  "map.networkFadeOthers": {
+    "lv": "Blāvināt pārējos punktus un līnijas",
+    "de": "Andere Knoten und Linien abblenden",
+    "en": "Fade other nodes and threads"
+  },
+  "map.networkHideOthers": {
+    "lv": "Paslēpt pārējos punktus un līnijas",
+    "de": "Andere Knoten und Linien ausblenden",
+    "en": "Hide other nodes and threads"
+  },
+  "map.networkTitleCollectors": {
+    "lv": "Kopīgu pierakstītāju tīkls",
+    "de": "Netzwerk gemeinsamer Sammler",
+    "en": "Network by shared collectors"
+  },
+  "map.networkTitleTypes": {
+    "lv": "Kopīgu nodaļu tīkls",
+    "de": "Netzwerk gemeinsamer Kapitel",
+    "en": "Network by shared chapters"
+  },
+  "map.networkSharedCollectors": {
+    "lv": "Kopīgi pierakstītāji",
+    "de": "Gemeinsame Sammler",
+    "en": "Shared collectors"
+  },
+  "map.networkEdgeCollectors": {
+    "lv": "Biezāka līnija = vairāk kopīgu pierakstītāju",
+    "de": "Dickere Linie = mehr gemeinsame Sammler",
+    "en": "Thicker line = more shared collectors"
+  },
+  "map.networkSharedCollectorCount": {
+    "lv": "{count} kopīgi pierakstītāji",
+    "de": "{count} gemeinsame Sammler",
+    "en": "{count} shared collectors"
+  },
+  "map.networkCollectorRecordCounts": {
+    "lv": "Skaits rāda katra pierakstītāja teikas vietās {from} / {to}. Viena teika var būt vairākās saiknēs.",
+    "de": "Die Zahlen zeigen Sagen je Sammler in {from} / {to}. Eine Sage kann mehrere Verbindungen stützen.",
+    "en": "For each collector, counts show supporting legends in {from} / {to}. A legend can support more than one connection."
+  },
+  "map.networkPlaceCollectors": {
+    "lv": "Šīs vietas teiku pierakstītāji",
+    "de": "Sammler der Sagen dieses Ortes",
+    "en": "Collectors named in this place’s legends"
+  },
+  "map.networkSharedCollectorCountOne": {
+    "lv": "{count} kopīgs pierakstītājs",
+    "de": "{count} gemeinsamer Sammler",
+    "en": "{count} shared collector"
+  },
+  "map.networkSizeBy": {
+    "lv": "Apļu izmēru nosaka",
+    "de": "Kreisgröße nach",
+    "en": "Size bubbles by"
+  },
+  "map.networkSizeByLegends": {
+    "lv": "Teiku skaits",
+    "de": "Anzahl der Sagen",
+    "en": "Number of legends"
+  },
+  "map.networkSizeByConnections": {
+    "lv": "Saikņu skaits",
+    "de": "Anzahl der Verbindungen",
+    "en": "Number of connections"
+  },
+  "map.modePlaces": {
+    "lv": "Vietas",
+    "de": "Orte",
+    "en": "Places"
+  },
+  "map.connectedPlaces": {
+    "lv": "Saistītās vietas",
+    "de": "Verbundene Orte",
+    "en": "Connected places"
+  },
+  "map.placeNetworkRecords": {
+    "lv": "{count} šīs vietas teikas piedalās izvēlētajā tīklā.",
+    "de": "{count} Sagen dieses Ortes tragen zu diesem Netzwerk bei.",
+    "en": "{count} of this place’s legends contribute to this network type."
+  },
+  "map.networkStrongestOnly": {
+    "lv": "Rādīt spēcīgākos 10% katrai vietai",
+    "de": "Stärkste 10% je Ort anzeigen",
+    "en": "Show strongest 10% for each place"
+  },
+  "map.uniformSize": {
+    "lv": "Vienāds izmērs",
+    "de": "Einheitliche Größe",
+    "en": "Uniform size"
+  },
+  "map.sharedCoordinatesTitle": {
+    "lv": "Vietu nosaukumi ar vienādām koordinātām",
+    "de": "Ortsnamen mit gleichen Koordinaten",
+    "en": "Place names at the same coordinates"
+  },
+  "map.sharedCoordinatesGrouped": {
+    "lv": "Šiem nosaukumiem datu kopā ir vienādas koordinātas, tādēļ tie apvienoti vienā aplī. Tas neapliecina, ka tie ir viena vieta. Sākotnējie nosaukumi saglabāti; skaits atbilst filtriem.",
+    "de": "Diese Namen haben gleiche Koordinaten und teilen einen Kreis. Das bestätigt nicht, dass sie denselben Ort bezeichnen. Namen bleiben erhalten; Zahlen entsprechen den Filtern.",
+    "en": "These place names have identical coordinates in the dataset and share one map bubble. The profile totals combine their records. This does not confirm that the names refer to the same place. Original names are preserved; the legend counts below reflect the current filters."
+  },
+  "map.sharedCoordinatesSeparate": {
+    "lv": "Šiem nosaukumiem datu kopā ir vienādas koordinātas. Tas neapliecina, ka tie ir viena vieta. Šis profils apraksta tikai atlasīto nosaukumu.",
+    "de": "Diese Namen haben gleiche Koordinaten. Das bestätigt keine Ortsidentität. Dieses Profil beschreibt nur den ausgewählten Namen.",
+    "en": "These place names have identical coordinates in the dataset. This does not confirm that they refer to the same place. This profile describes only the selected place name; the legend counts below reflect the current filters."
+  },
+  "map.sharedCoordinatesSummary": {
+    "lv": "Vienā aplī apvienoti {count} vietu nosaukumi ar vienādām koordinātām.",
+    "de": "Ein Kreis umfasst {count} Ortsnamen mit gleichen Koordinaten.",
+    "en": "One bubble groups {count} recorded place names with identical coordinates."
+  },
+  "map.networkOverviewExplanation": {
+    "lv": "Pilnais tīkls rāda visas atlasīto metadatu saiknes. Spēcīgākie 10% saglabā vismaz vienu saikni katrai saistītajai vietai, vērtējot kopīgos metadatus un teiku skaitu. Izvēloties vietu, redzamas visas tās saiknes. Eksports ietver pilno atlasīto tīklu.",
+    "de": "Das vollständige Netzwerk zeigt alle Verbindungen. Die stärksten 10% erhalten mindestens eine Verbindung je verbundenem Ort, nach gemeinsamen Metadaten und Sagenzahl. Bei Ortsauswahl erscheinen alle Verbindungen. Der Export umfasst das gesamte gefilterte Netzwerk.",
+    "en": "The full network shows all recorded connections. The strongest 10% retain at least one connection per connected place, ranked by shared metadata and supporting legends. Selecting a place reveals all its connections. Exports contain the complete filtered network."
+  },
+  "about.filtersHelp": {
+    "lv": "Par filtriem",
+    "de": "Über die Filter",
+    "en": "About filters"
+  },
+  "about.exportsHelp": {
+    "lv": "Par lejupielādi",
+    "de": "Über Downloads",
+    "en": "About downloads"
+  },
+  "about.viewHelp": {
+    "lv": "Par šo skatu",
+    "de": "Über diese Ansicht",
+    "en": "About this view"
+  },
+  "about.networkColorsTitle": {
+    "lv": "Tīkla krāsas un izmērs",
+    "de": "Farben und Größe",
+    "en": "Network colors and size"
+  },
+  "exploration.helpTitle": {
+    "lv": "Kartes un datu izpēte",
+    "de": "Karten und Daten erkunden",
+    "en": "Exploring maps and data"
+  },
+  "exploration.helpText": {
+    "lv": "Diagrammās un tīklos vari atlasīt sējumus, nodaļas, vietas un personas, skatīt atlasītos tekstus, kopēt atlases saiti un lejupielādēt metadatus. Gads var būt norādīts teikas metadatos vai avota publikācijā. Saiknes rāda kopīgus metadatus, nevis vēsturisku ietekmi. Karte saglabā datu kopas koordinātas; to precizitāte nav neatkarīgi pārbaudīta. Teikas bez koordinātām pieejamas atsevišķā atlasē.",
+    "de": "Diagramme und Netzwerke ermöglichen eine Auswahl nach Bänden, Kapiteln, Orten und Personen, Textvorschauen, geteilte Links und Metadatenexporte. Jahre stammen aus Eintragsmetadaten oder Quellenpublikationen. Verbindungen zeigen gemeinsame Metadaten, keinen historischen Einfluss. Die Karte behält die Datensatzkoordinaten bei; sie wurden nicht unabhängig überprüft. Sagen ohne Koordinaten sind separat zugänglich.",
+    "en": "Charts and networks offer selections by volume, chapter, place and person, text previews, shared links and metadata exports. Years come from record metadata or source publications. Connections show shared metadata, not historical influence. The map retains dataset coordinates; their precision has not been independently checked. Legends without coordinates remain available as a separate selection."
+  },
+  "map.yearFrom": {
+    "lv": "No gada",
+    "de": "Ab Jahr",
+    "en": "From year"
+  },
+  "map.yearTo": {
+    "lv": "Līdz gadam",
+    "de": "Bis Jahr",
+    "en": "To year"
+  },
+  "about.dataHelp": {
+    "lv": "Kāpēc teiku skaits atšķiras?",
+    "de": "Warum unterscheiden sich die Sagenzahlen?",
+    "en": "Why do legend counts differ?"
+  },
+  "map.showUncertainty": {
+    "lv": "Rādīt vietu nenoteiktību",
+    "de": "Ortsunsicherheit anzeigen",
+    "en": "Show location uncertainty"
+  }
 }
