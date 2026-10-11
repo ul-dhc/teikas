@@ -3,7 +3,7 @@ import * as maplibregl from "maplibre-gl";
 import { createElement, Maximize, Minimize, MapPin } from "lucide";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-csp-worker.js?worker&url";
 maplibregl.setWorkerUrl(workerUrl);
-import { buildMetadataNetwork, strongestConnectionIds } from "./networks.js";
+import { buildMetadataNetwork, strongestConnectionIds, indexNetworkEdges, networkRenderCollection, visibleNetworkEdges } from "./networks.js";
 import { installUncertaintyStrokes } from "./uncertainty";
 import { placeProfileMarkup } from "./place-profile";
 import type { LegendProperties, MapDataset, PlaceProperties, NetworkEdge, NetworkNode } from "./types";
@@ -786,7 +786,7 @@ const applyFilters = (save = true) => {
     geometry: { type: "Point", coordinates: [23.65, 57.35] },
     properties: { id: "unmapped", count: filteredUnmappedLegends.length },
   } as any);
-  if (map.getSource("network")) recalculateNetwork();
+  if (mapMode === "network" && map.getSource("network")) recalculateNetwork();
   syncFilterInterface();
   updateCount();
   if (selectedId && (legendMapActive() || clusterDetailActive())) renderPointPlace(selectedId, selectedPointCenter);
@@ -974,7 +974,12 @@ const networkCollectorColor = (name: string) => {
   const hash = [...name.trim()].reduce((total, character) => ((total << 5) - total + character.charCodeAt(0)) | 0, 0);
   return colors.category[Math.abs(hash) % colors.category.length];
 };
-const networkSingleColor = () => css(`--map-data-${networkPalette}-${colors.dark ? "dark" : "light"}`);
+const singleNetworkColors = new Map<string, string>();
+const networkSingleColor = () => {
+  const token = `--map-data-${networkPalette}-${colors.dark ? "dark" : "light"}`;
+  if (!singleNetworkColors.has(token)) singleNetworkColors.set(token, css(token));
+  return singleNetworkColors.get(token)!;
+};
 const networkColorFor = (node: NetworkNode) => {
   if (networkColor.value === "single") return networkSingleColor();
   if (networkColor.value === "collector") return networkCollectorColor(node.kind === "collector" ? node.name : networkCollectorFor(node.legendIds));
@@ -986,6 +991,15 @@ const networkThemeFor = (ids: string[]) => {
   const counts = new Map<string, number>();
   ids.forEach(id => { const theme = networkLegendProperties.get(id)?.themeLv; if (theme) counts.set(theme, (counts.get(theme) || 0) + 1); });
   return [...counts].sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0]))[0]?.[0] || "";
+};
+let edgeColors = new WeakMap<NetworkEdge, string>();
+const networkEdgeColor = (edge: NetworkEdge) => {
+  let color = edgeColors.get(edge);
+  if (!color) {
+    color = networkColor.value === "single" ? networkSingleColor() : networkColor.value === "collector" ? networkCollectorColor(networkCollectorFor(edge.legendIds || [])) : networkCollectorColor(networkType.value === "collectors" ? networkThemeFor(edge.legendIds || []) : edge.strongest[0]?.plot || "");
+    edgeColors.set(edge, color);
+  }
+  return color;
 };
 const graphCollections = () => ({
   nodes: {
@@ -1003,15 +1017,29 @@ const graphCollections = () => ({
       type: "Feature",
       id: edge.id,
       geometry: { type: "LineString", coordinates: edge.coordinates },
-      properties: { id: edge.id, color: networkColor.value === "single" ? networkSingleColor() : networkColor.value === "collector" ? networkCollectorColor(networkCollectorFor(edge.legendIds || [])) : networkCollectorColor(networkType.value === "collectors" ? networkThemeFor(edge.legendIds || []) : edge.strongest[0]?.plot || ""), fromId: edge.fromId, toId: edge.toId, count: edge.count || 0, legendIds: (edge.legendIds || []).join(","), relationshipType: networkType.value, sharedCount: edge.sharedCount, strongest: JSON.stringify(edge.strongest) },
+      properties: { id: edge.id, color: networkEdgeColor(edge), fromId: edge.fromId, toId: edge.toId, count: edge.count || 0, legendIds: (edge.legendIds || []).join(","), relationshipType: networkType.value, sharedCount: edge.sharedCount, strongest: JSON.stringify(edge.strongest) },
     })),
   },
 });
 let overviewConnections = new Set<string>();
+let overviewEdges: NetworkEdge[] = [];
+let adjacentEdges = new Map<string, NetworkEdge[]>();
+let renderedNetworkKey = "";
+let networkFocusFrame = 0;
+const scheduleNetworkFocus = () => {
+  if (networkFocusFrame) return;
+  networkFocusFrame = requestAnimationFrame(() => {
+    networkFocusFrame = 0;
+    applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
+  });
+};
 const publishNetwork = () => {
-  const collections = graphCollections();
-  (map.getSource("network") as maplibregl.GeoJSONSource)?.setData({ ...collections.edges, features: collections.edges.features.map((feature, index) => ({ ...feature, properties: { ...feature.properties, strength: networkEdges[index].strength, overview: overviewConnections.has(feature.properties.id) } })) } as any);
-  (map.getSource("network-nodes") as maplibregl.GeoJSONSource)?.setData(collections.nodes as any);
+  renderedNetworkKey = "";
+  const nodes = { type: "FeatureCollection", features: networkNodes.map(node => ({
+    type: "Feature", id: node.id, geometry: { type: "Point", coordinates: node.coordinates },
+    properties: { id: node.id, name: node.name, count: node.count, connectionCount: node.connectionCount, color: node.color },
+  })) };
+  (map.getSource("network-nodes") as maplibregl.GeoJSONSource)?.setData(nodes as any);
   networkContext.textContent = tr("map.networkBuiltFrom", { count: formatter().format(networkRecordCount) });
   const label = page.querySelector<HTMLElement>('[data-i18n="map.networkEdgeStrength"], [data-i18n="map.networkEdgeRecords"], [data-i18n="map.networkEdgeMLTypes"], [data-i18n="map.networkEdgeCollectors"]');
   if (label) { label.dataset.i18n = networkType.value === "collectors" ? "map.networkEdgeCollectors" : "map.networkEdgeMLTypes"; label.textContent = tr(label.dataset.i18n); }
@@ -1027,40 +1055,53 @@ const publishNetwork = () => {
 // Use the complete dataset as the visual reference, so filtering never rescales
 // an unchanged relationship or degree to look stronger than it was before.
 const networkScaleReferences = new Map<string, {maxWeight: number; maxConnections: number}>();
-const networkScaleReference = () => {
+const completeNetworks = new Map<string, ReturnType<typeof buildMetadataNetwork>>();
+const graphOverviews = new WeakMap<ReturnType<typeof buildMetadataNetwork>, Set<string>>();
+const selectedNetworks = new Map<string, { features: typeof filteredFeatures; graph: ReturnType<typeof buildMetadataNetwork>; overview: Set<string> }>();
+const completeNetwork = () => {
   const type = networkType.value;
-  if (!networkScaleReferences.has(type)) {
-    const complete = buildMetadataNetwork(type, dataset.legends.features);
+  if (!completeNetworks.has(type)) {
+    const graph = buildMetadataNetwork(type, dataset.legends.features);
+    completeNetworks.set(type, graph);
     networkScaleReferences.set(type, {
-      maxWeight: Math.max(1, ...complete.edges.map(edge => edge.sharedCount)),
-      maxConnections: Math.max(1, ...complete.nodes.map(node => node.connectionCount)),
+      maxWeight: graph.edges.reduce((max, edge) => Math.max(max, edge.sharedCount), 1),
+      maxConnections: graph.nodes.reduce((max, node) => Math.max(max, node.connectionCount), 1),
     });
   }
-  return networkScaleReferences.get(type)!;
+  return completeNetworks.get(type)!;
+};
+const recolorNetwork = () => {
+  edgeColors = new WeakMap();
+  networkNodes.forEach(node => node.color = networkColorFor(node));
+  if (mapMode === "network") publishNetwork();
 };
 const recalculateNetwork = () => {
-  const graph = buildMetadataNetwork(networkType.value, filteredFeatures);
+  const complete = completeNetwork();
+  let selected = selectedNetworks.get(networkType.value);
+  if (!selected || selected.features !== filteredFeatures) {
+    const graph = filteredFeatures.length === dataset.legends.features.length ? complete : buildMetadataNetwork(networkType.value, filteredFeatures);
+    if (!graphOverviews.has(graph)) graphOverviews.set(graph, strongestConnectionIds(graph.edges));
+    selected = { features: filteredFeatures, graph, overview: graphOverviews.get(graph)! };
+    selectedNetworks.set(networkType.value, selected);
+  }
+  const graph = selected.graph;
   page.querySelector<HTMLAnchorElement>("[data-network-method]")!.href = `${base}par-projektu/#dati`;
   networkRecordCount = graph.recordCount;
-  const {maxWeight} = networkScaleReference();
+  const { maxWeight } = networkScaleReferences.get(networkType.value)!;
   hoveredNetworkNode = null;
   networkTooltip.hidden = true;
   networkNodes = graph.nodes.map(node => ({ ...node, color: networkColorFor(node as NetworkNode) })) as NetworkNode[];
   networkEdges = graph.edges.map(edge => ({ ...edge, strength: Math.sqrt(edge.sharedCount / maxWeight) }));
-  overviewConnections = strongestConnectionIds(networkEdges);
+  edgeColors = new WeakMap();
+  overviewConnections = selected.overview;
+  overviewEdges = networkEdges.filter(edge => overviewConnections.has(edge.id));
+  adjacentEdges = indexNetworkEdges(networkEdges);
   publishNetwork();
 };
-const relatedNodeIds = (id: string) => {
-  const ids = new Set([id]);
-  networkEdges.forEach((edge) => {
-    if (edge.fromId === id) ids.add(edge.toId);
-    if (edge.toId === id) ids.add(edge.fromId);
-  });
-  return [...ids];
-};
+const relatedNodeIds = (id: string) => [id, ...(adjacentEdges.get(id) || []).map(edge => edge.fromId === id ? edge.toId : edge.fromId)];
 const networkBubbleRadius = () => {
   const radius = networkSizeBy.value === "connections"
-    ? ["interpolate", ["linear"], ["sqrt", ["get", "connectionCount"]], 0, 2, Math.sqrt(networkScaleReference().maxConnections), 10]
+    ? ["interpolate", ["linear"], ["sqrt", ["get", "connectionCount"]], 0, 2, Math.sqrt((networkScaleReferences.get(networkType.value)?.maxConnections || 1)), 10]
     : ["interpolate", ["linear"], ["sqrt", ["get", "count"]], 2, 3, 17, 10];
   return ["*", radius, Number(networkSize.value) / 100];
 };
@@ -1069,13 +1110,15 @@ const applyNetworkFocus = (hoveredId: string | null) => {
   const id = activeNetworkNode || hoveredId;
   const focused = id && (hoveredNetworkNode || activeNetworkNode), related = focused ? relatedNodeIds(id!) : [];
   const incident = ["any", ["==", ["get", "fromId"], id], ["==", ["get", "toId"], id]], hideOthers = focused && networkOthers.value === "hide";
-  const edgeFilter = hideOthers ? incident : networkStrongestOnly.checked ? focused ? ["any", ["==", ["get", "overview"], true], incident] : ["==", ["get", "overview"], true] : null;
-  const nodeFilter = hideOthers ? ["in", ["get", "id"], ["literal", related]] : null;
-  for (const layer of ["network-nodes", "network-node-hit", "network-node-labels"]) if (map.getLayer(layer)) map.setFilter(layer, nodeFilter as any);
-  map.setFilter("network", edgeFilter as any);
-  map.setFilter("network-halo", edgeFilter as any);
-  const shown = hideOthers ? networkEdges.filter(edge => edge.fromId === id || edge.toId === id).length : networkStrongestOnly.checked ? networkEdges.filter(edge => overviewConnections.has(edge.id) || focused && (edge.fromId === id || edge.toId === id)).length : networkEdges.length;
-  networkVisibility.textContent = tr(!focused && networkStrongestOnly.checked ? "map.networkStrongestConnections" : "map.networkVisibleConnections", { shown: formatter().format(shown), total: formatter().format(networkEdges.length) });
+  const key = JSON.stringify([focused ? id : null, networkStrongestOnly.checked, Boolean(hideOthers)]);
+  if (key !== renderedNetworkKey) {
+    const shownEdges = visibleNetworkEdges(networkEdges, overviewEdges, adjacentEdges, focused ? id : null, networkStrongestOnly.checked, Boolean(hideOthers));
+    (map.getSource("network") as maplibregl.GeoJSONSource).setData(networkRenderCollection(shownEdges, networkEdgeColor) as any);
+    renderedNetworkKey = key;
+    networkVisibility.textContent = tr(!focused && networkStrongestOnly.checked ? "map.networkStrongestConnections" : "map.networkVisibleConnections", { shown: formatter().format(shownEdges.length), total: formatter().format(networkEdges.length) });
+    const nodeFilter = hideOthers ? ["in", ["get", "id"], ["literal", related]] : null;
+    for (const layer of ["network-nodes", "network-node-hit", "network-node-labels"]) if (map.getLayer(layer)) map.setFilter(layer, nodeFilter as any);
+  }
   const stroke = colors.dark ? 0.62 : 0.66, dimmed = colors.dark ? 0.16 : 0.22;
   const edgeColor = ["get", "color"];
   map.setPaintProperty("network", "line-color", edgeColor as any);
@@ -1113,7 +1156,7 @@ const renderNetworkNodePanel = (id: string) => {
   const node = networkNodes.find((item) => item.id === id);
   if (!node) return;
   activeNetworkNode = id;
-  const related = networkEdges.filter((edge) => edge.fromId === id || edge.toId === id)
+  const related = [...(adjacentEdges.get(id) || [])]
     .sort((a, b) => b.sharedCount - a.sharedCount);
   const escapeText = (value: string) => value.replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]!);
   const relatedList = related.slice(0, 5).map((edge) => {
@@ -1200,6 +1243,7 @@ const setMapMode = (mode: string, save = true) => {
         mode === visibleMode ? "visible" : "none",
       );
   syncPointStyleLayers();
+  if (mode === "network" && map.getSource("network")) recalculateNetwork();
   if (map.getLayer("point-links")) applyTheme(true);
   clusterDetailRendered = clusterDetailActive();
   for (const id of ["network-halo", "network", "network-nodes", "network-node-hit", "network-selected-ring", "network-selected-label"])
@@ -1348,7 +1392,7 @@ const applyTheme = (preserveMapPalette = false) => {
     11,
     colors.dark ? 0.7 : 0.62,
   ]);
-  if (networkNodes.length) recalculateNetwork();
+  if (!preserveMapPalette && networkNodes.length) recolorNetwork();
   pointSpreadZoom = -1;
   updatePointSources();
   syncPointStyleLayers();
@@ -2039,8 +2083,8 @@ map.on("mouseenter", "network-node-hit", (event) => {
   const properties = event.features?.[0]?.properties as { id?: string } | undefined, node = networkNodes.find((item) => item.id === properties?.id);
   if (!node) return;
   hoveredNetworkNode = node.id;
-  applyNetworkFocus(node.id);
-  const related = networkEdges.filter((edge) => edge.fromId === node.id || edge.toId === node.id).length;
+  scheduleNetworkFocus();
+  const related = (adjacentEdges.get(node.id) || []).length;
   networkTooltip.hidden = false;
   networkTooltip.innerHTML = `<strong>${node.name}</strong><span>${networkKindLabel(node)}</span><span>${tr("map.networkLegendCount", { count: formatter().format(node.count) })}</span><span>${tr("map.networkPlotCount", { count: formatter().format(node.plotCount) })}</span><span>${tr("map.networkRelatedCount", { count: formatter().format(related) })}</span>`;
 });
@@ -2053,7 +2097,7 @@ map.on("mouseleave", "network-node-hit", () => {
   unmappedSelected = false;
   map.setFeatureState({ source: "unmapped", id: "unmapped" }, { selected: false, hovered: false });
   networkTooltip.hidden = true;
-  applyNetworkFocus(activeNetworkNode);
+  scheduleNetworkFocus();
 });
 map.on("click", "network-node-hit", (event) => {
   const id = String(event.features?.[0]?.properties?.id || "");
@@ -2176,15 +2220,15 @@ networkStrongestOnly.addEventListener("change", () => {
   applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
   updateUrl();
 });
+networkSize.addEventListener("change", () => updateUrl());
 networkSize.addEventListener("input", () => {
   networkSizeOutput.value = `${networkSize.value}%`;
-  applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
-  updateUrl();
+  scheduleNetworkFocus();
 });
+networkIntensity.addEventListener("change", () => updateUrl());
 networkIntensity.addEventListener("input", () => {
   networkIntensityOutput.value = `${networkIntensity.value}%`;
-  applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
-  updateUrl();
+  scheduleNetworkFocus();
 });
 page.querySelectorAll<HTMLInputElement>('[name="places-size-by"]').forEach(input => input.addEventListener("change", () => {
   if (!input.checked) return;
@@ -2250,11 +2294,11 @@ networkSizeBy.addEventListener("change", () => {
   syncNetworkChoices();
   updateUrl();
 });
-networkColor.addEventListener("change", () => { recalculateNetwork(); updateUrl(); });
+networkColor.addEventListener("change", () => { recolorNetwork(); updateUrl(); });
 page.querySelectorAll<HTMLInputElement>('[name="network-palette"]').forEach(input => input.addEventListener("change", () => {
   if (!input.checked) return;
   networkPalette = input.value;
-  recalculateNetwork();
+  recolorNetwork();
   syncNetworkChoices();
   updateUrl();
 }));

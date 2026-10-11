@@ -67,3 +67,32 @@ export function strongestConnectionIds(edges) {
   }
   return selected;
 }
+
+// Index once per graph, rather than scanning every edge on each hover.
+export function indexNetworkEdges(edges) {
+  const adjacent = new Map();
+  for (const edge of edges) for (const id of [edge.fromId, edge.toId]) {
+    if (!adjacent.has(id)) adjacent.set(id, []);
+    adjacent.get(id).push(edge);
+  }
+  return adjacent;
+}
+
+// Rendering carries only visible geometry and style data. The complete graph
+// remains available separately for record selections, details and exports.
+export function networkRenderCollection(edges, colorFor) {
+  return { type: 'FeatureCollection', features: edges.map(edge => ({
+    type: 'Feature', id: edge.id,
+    geometry: { type: 'LineString', coordinates: edge.coordinates },
+    properties: { id: edge.id, fromId: edge.fromId, toId: edge.toId, color: colorFor(edge), strength: edge.strength },
+  })) };
+}
+
+export function visibleNetworkEdges(edges, overview, adjacent, focus, strongestOnly, hideOthers) {
+  const incident = focus ? adjacent.get(focus) || [] : [];
+  if (focus && hideOthers) return incident;
+  if (!strongestOnly) return edges;
+  const selected = new Map(overview.map(edge => [edge.id, edge]));
+  for (const edge of incident) selected.set(edge.id, edge);
+  return [...selected.values()];
+}

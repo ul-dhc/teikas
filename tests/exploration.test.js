@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {flattenTypes, selectRecords, selectionLink, UNKNOWN} from '../src/ml-index/statistics.js';
 import {buildRelationships, relationshipSelection, buildHierarchy} from '../src/ml-index/network-data.js';
 import {encodeSelection,decodeSelection} from '../src/lib/selection.js';
-import {buildMetadataNetwork} from '../src/map/networks.js';
+import {buildMetadataNetwork, strongestConnectionIds, indexNetworkEdges, visibleNetworkEdges, networkRenderCollection} from '../src/map/networks.js';
 import {treemap} from '../src/ml-index/treemap.js';
 const embedded=(file,id)=>JSON.parse(readFileSync(file,'utf8').match(new RegExp(`<script[^>]*id="${id}"[^>]*>(.*?)</script>`,'s'))[1]);
 const dashboard=embedded('build/dati/index.html','ml-data');
@@ -71,4 +71,27 @@ test('compact selections round-trip the full corpus and only expand known source
  assert.deepEqual(decodeSelection(encoded,rows).sort(),rows.map(r=>r.id).sort());
  assert.deepEqual(decodeSelection('000000000~999999999',rows).sort(),rows.map(r=>r.id).sort());
  assert.deepEqual(decodeSelection('not-a-record',rows),[]);
+});
+
+test('lightweight network rendering preserves all focused relationships and full exports', () => {
+ const graph = buildMetadataNetwork('plots', map.legends.features);
+ const original = JSON.stringify(graph);
+ const ids = strongestConnectionIds(graph.edges);
+ const overview = graph.edges.filter(edge => ids.has(edge.id));
+ const adjacent = indexNetworkEdges(graph.edges);
+ const focus = graph.nodes.reduce((a,b) => a.connectionCount > b.connectionCount ? a : b).id;
+ const incident = graph.edges.filter(edge => edge.fromId === focus || edge.toId === focus);
+ assert.deepEqual(adjacent.get(focus), incident);
+ const shown = visibleNetworkEdges(graph.edges, overview, adjacent, focus, true, false);
+ assert.deepEqual(new Set(shown.map(edge => edge.id)), new Set([...overview,...incident].map(edge => edge.id)));
+ assert.deepEqual(visibleNetworkEdges(graph.edges, overview, adjacent, focus, true, true), incident);
+ assert.equal(visibleNetworkEdges(graph.edges, overview, adjacent, null, false, false), graph.edges);
+ const rendered = networkRenderCollection(shown, () => '#155f8a');
+ for(let i=0;i<shown.length;i++) {
+  assert.equal(rendered.features[i].properties.id, shown[i].id);
+  assert.deepEqual(rendered.features[i].geometry.coordinates, shown[i].coordinates);
+  assert.ok(!('legendIds' in rendered.features[i].properties));
+ }
+ assert.equal(JSON.stringify(graph), original);
+ assert.ok(JSON.stringify(rendered).length < original.length / 4);
 });
