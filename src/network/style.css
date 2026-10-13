@@ -201,7 +201,7 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 .ml-network-tools{display:flex;min-height:38px;align-items:center;gap:3px;padding:3px 4px;border:1px solid var(--line);background:color-mix(in srgb,var(--chart-card) 92%,transparent)}
 .ml-network-tools button{display:inline-flex!important;min-width:30px!important;min-height:30px!important;height:30px;align-items:center;justify-content:center;gap:5px;padding:0 7px!important;border:0!important;border-radius:0!important;background:transparent!important;color:var(--muted)!important;font-size:10px}
 .ml-network-tools button:hover,.ml-network-tools button[aria-pressed=true]{color:var(--ink)!important;background:var(--raised)!important}
-.ml-network-tools button[data-network-action=labels][aria-pressed=true]{color:var(--pin,#cfad57)!important;background:color-mix(in srgb,var(--pin,#cfad57) 14%,var(--chart-card))!important}
+.ml-network-tools button[data-network-action=labels][data-label-mode=active]{color:var(--pin,#cfad57)!important;background:color-mix(in srgb,var(--pin,#cfad57) 14%,var(--chart-card))!important}
 .ml-network-tools svg{width:14px!important;height:14px!important}
 .ml-network-tools>output{min-width:36px;font-size:10px;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted)}
 .ml-network-scale{position:relative}.ml-network-scale-popover{position:absolute;top:calc(100% + 9px);left:0;z-index:20;width:180px;padding:12px;border:1px solid var(--line);border-radius:7px;background:var(--chart-card);box-shadow:0 8px 24px #0002;font-size:11px}
@@ -403,5 +403,3 @@ body.ml-network-presented{overflow:hidden}
 .ml-network-workspace{--network-free-edge-alpha:.3;--network-idle-edge-width:.75px}
 :root[data-theme=dark] .ml-network-workspace{--network-free-edge-alpha:.26;--network-idle-edge-width:.75px}
 .ml-network-svg.layout-free:not(.has-selection) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:var(--thread-color);--edge-opacity:var(--network-free-edge-alpha);stroke-width:var(--network-idle-edge-width)}
-
-.ml-network-workspace button[data-label-mode=active]{color:var(--ink);background:var(--control-selected-bg);border-color:var(--control-selected-line)}

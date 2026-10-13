@@ -28,38 +28,3 @@ const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\
     updateHeading();window.addEventListener('ui-language-change',updateHeading);
   </script>
 </BaseLayout>
-
-
-
-<style is:global>
-.ml-data-page .ml-hero{display:flex;align-items:center;flex-wrap:wrap;gap:.65rem 1rem;margin-bottom:1rem}
-.ml-data-page .ml-hero h1{margin:0}
-</style>
-
-<style is:global>
-.ml-data-page:has(#ml-dashboard){padding-top:.8rem}
-.ml-data-page .ml-hero{margin-bottom:.65rem!important}
-.ml-data-page .ml-hero h1{font-size:1.75rem!important;line-height:1.15;margin:0!important}
-.ml-data-page .data-overview-tabs{display:flex;width:fit-content;border:1px solid var(--line);margin:0 0 .45rem;padding:3px;gap:3px;background:var(--paper);border-color:color-mix(in srgb,var(--blue) 45%,var(--line));border-radius:var(--radius)}
-.ml-data-page .data-overview-tabs a{display:inline-flex;align-items:center;text-decoration:none;justify-content:center;min-height:40px;min-width:120px;padding:.5rem 1rem;gap:.5rem;font-size:.85rem;font-weight:600;line-height:1.25;color:var(--blue);border-radius:calc(var(--radius) - 4px)}
-.ml-data-page .data-overview-tabs a:hover{background:color-mix(in srgb,var(--blue) 12%,var(--paper))}
-.ml-data-page .data-overview-tabs a[aria-current=page]{background:var(--blue);color:var(--paper)}
-.ml-data-page .data-overview-tabs svg{width:1rem;height:1rem}
-.ml-data-page .ml-data-view-switch{display:none}
-.ml-data-page .ml-research-intro{position:static}
-.ml-data-page .ml-research-heading{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:.45rem 1.5rem;margin-bottom:.85rem}
-.ml-data-page .ml-research-heading p{font-size:.75rem;line-height:1.5;margin:0;max-width:680px}
-.ml-data-page .ml-research-actions{margin-left:auto}
-.ml-data-page .data-help-footer{display:flex;justify-content:flex-end;margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--line)}
-.ml-data-page .data-help-footer .context-help{font-size:.75rem;color:var(--muted)}
-@media(max-width:600px){
-.ml-data-page .data-overview-tabs{width:100%}
-.ml-data-page .data-overview-tabs a{flex:1;min-width:0}
-.ml-data-page .ml-research-actions{width:100%;margin-left:0;justify-content:flex-start}
-}
-</style>
-
-<style is:global>
-.ml-data-page:has(#ml-dashboard) .ml-hero{margin-bottom:0!important;gap:0}
-.ml-data-page .ml-hero #ml-title-filters:empty{display:none}
-</style>

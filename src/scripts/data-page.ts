@@ -1,3 +1,4 @@
+import workspaceStyle from '../styles/data-workspace.css?inline';
 // Keep the established Teikas overview and the full network explorer independent.
 // Each view loads its own styles so one dashboard cannot override the other.
 const view = location.hash === '#network' ? 'network' : 'overview';
@@ -47,12 +48,12 @@ updateTabs(); window.addEventListener('ui-language-change', updateTabs);
 async function start() {
   const style = document.createElement('style');
   if (view === 'network') {
-    style.textContent = (await import('../network/style.css?inline')).default;
+    style.textContent = (await import('../network/style.css?inline')).default + '\n' + workspaceStyle;
     document.head.append(style);
     await import('../network/main');
   } else {
     const [overviewStyle, explorationStyle] = await Promise.all([import('../ml-index/style.css?inline'), import('../styles/exploration.css?inline')]);
-    style.textContent = overviewStyle.default + '\n' + explorationStyle.default;
+    style.textContent = overviewStyle.default + '\n' + explorationStyle.default + '\n' + workspaceStyle;
     document.head.append(style);
     document.querySelector<HTMLElement>('.data-overview-tabs')!.hidden = false;
     await import('../ml-index/data-main');
