@@ -2,10 +2,11 @@
 // Keep the original IDs so saved views and shared links retain their palette.
 export const paletteFields = ['county', 'collector', 'narrator', 'typeId', 'topic', 'place'];
 export const networkPalettes = [
-  // Purvs: ink blue, water, moss and cool violet.
-  { id: 'sagn', name: 'Purvs', source: 'Teikas · platform colours',
-    light: ['#164f78', '#43897d', '#7c769c', '#276f9e', '#625cab', '#65738a'],
-    dark: ['#9bb5d5', '#80b8aa', '#b3a8ce', '#88a8ce', '#a79cde', '#b1bfd0'] },
+  // Purvs in autumn: pool blue, moss green, amber orange, reed gold,
+  // heather violet and bog-water teal, in category order.
+  { id: 'sagn', name: 'Purvs', source: 'Teikas · autumn bog',
+    light: ['#356b8c', '#657b2b', '#c46718', '#9c8009', '#86609d', '#218579'],
+    dark: ['#6fb5d0', '#a9bf54', '#df7b2b', '#e8ca53', '#c294da', '#58c8b0'] },
   // Krustceles: electric, highly saturated colours, luminous after dark.
   { id: 'nordlys', name: 'Krustceles', source: 'Teikas · neon',
     light: ['#7038ff', '#00bbd4', '#f020b8', '#72c900', '#2460ff', '#00a880'],

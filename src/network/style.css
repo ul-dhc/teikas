@@ -234,15 +234,17 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 .ml-network-inspector{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0 .2rem;border-top:1px solid var(--line)}
 .ml-network-inspector h3{font:400 1.1rem/1.4 var(--serif);margin:0;overflow-wrap:anywhere}.ml-network-inspector p{font-size:.73rem;color:var(--muted);margin:.4rem 0}
 .ml-network-inspector>div:last-child{display:flex;gap:.4rem;flex-wrap:wrap}.ml-network-inspector button[data-network-action=texts]{background:transparent;color:var(--ink);border-color:var(--control-selected-line)}
-.ml-network-surface:fullscreen{background:var(--chart-card);overflow:auto;padding:1.5rem}.ml-network-surface:fullscreen .ml-network-stage{height:75vh;max-height:75vh}
+
 @media(max-width:1100px){.has-text-panel .ml-network-workspace{grid-template-columns:1fr}.has-text-panel .ml-network-filters{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}.has-text-panel .ml-network-filters h3,.has-text-panel .ml-network-filters>p{grid-column:1/-1}}
 @media(max-width:700px){.ml-network-workspace{grid-template-columns:1fr}.ml-network-filters{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:0 .75rem}.ml-network-filters h3,.ml-network-filters>p{grid-column:1/-1}.ml-network-surface{padding:.75rem}.ml-network-inspector{flex-direction:column;align-items:start}.ml-network-tools button{min-width:40px;min-height:40px}.ml-network-toolbar>label{flex-basis:115px}.ml-network-legend{width:100%;margin-top:.5rem}.ml-network-stage{height:max(460px,75dvh);min-height:460px}.ml-network-tools input{width:55px}}
 .ml-network-svg.layout-free.labels-contextual .ml-network-node text{opacity:0}
 .ml-network-svg.layout-free.labels-contextual .ml-network-node:hover text,.ml-network-svg.layout-free.labels-contextual .ml-network-node:focus-visible text,.ml-network-svg.layout-free.labels-contextual .ml-network-node.is-active text{opacity:1}
 @media(max-width:700px){.ml-page .ml-network-svg{touch-action:pan-y}}
-body.ml-network-presented{overflow:hidden}
-.ml-network-workspace.is-presentation{position:fixed;inset:0;z-index:150;background:var(--chart-card);overflow:auto;border-radius:0}
-.ml-network-workspace.is-presentation .ml-network-stage{height:calc(100dvh - 150px);max-height:none;min-height:480px}
+html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
+.ml-network-workspace.is-presentation .ml-network-stage{position:fixed;inset:0;z-index:180;width:100%;height:100dvh;max-height:none;min-height:0;border:0;border-radius:0}
+.ml-network-fullscreen{position:absolute;right:10px;bottom:10px;z-index:3;display:grid;place-items:center;width:36px;height:36px;padding:8px;border:0;border-radius:5px;background:transparent;color:var(--muted);cursor:pointer}
+.ml-network-fullscreen .lucide{width:18px;height:18px}
+.ml-network-fullscreen:hover{color:var(--ink)}
 /* NSRD settings layout, adapted only to the host theme variables. */
 .ml-network-workspace{position:relative}
 .ml-network-settings{position:fixed;top:88px;right:18px;z-index:170;width:min(340px,calc(100vw - 36px));max-height:calc(100dvh - 106px);overflow-y:auto;border:1px solid var(--line);border-radius:12px;padding:18px;background:color-mix(in srgb,var(--chart-card) 96%,transparent);box-shadow:0 18px 60px #0003}
@@ -274,7 +276,7 @@ body.ml-network-presented{overflow:hidden}
 .ml-network-legend.shape-category .field-typeId b{border-radius:2px}.ml-network-legend.shape-category .field-topic b{clip-path:polygon(50% 0,100% 100%,0 100%);border-radius:0}.ml-network-legend.shape-category .field-county b,.ml-network-legend.shape-category .field-place b{clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);border-radius:0}
 .ml-network-tools>[data-network-action=labels]{margin-inline:3px;border-inline:1px solid var(--line)!important}.ml-network-tools>[data-network-action=scatter]{margin-right:3px;border-right:1px solid var(--line)!important}
 .ml-network-settings .ml-mobile-scale-setting,.ml-mobile-filter-close,.ml-network-filter-scrim{display:none!important}
-@media(max-width:700px){.ml-network-tools .ml-network-scale,.ml-network-tools>output,.ml-network-tools>button:not([data-network-action=labels]):not([data-network-action=fullscreen]):not([data-network-action=scatter]){display:none!important}.ml-network-settings .ml-mobile-scale-setting{display:block!important}.ml-network-filters{position:fixed;inset:76px auto 0 0;z-index:165;width:min(320px,calc(100vw - 30px));display:block;overflow:auto;overscroll-behavior:contain;background:var(--chart-card);border-right:1px solid var(--line)}.ml-network-filters h3{display:flex;align-items:center}.ml-mobile-filter-close{display:flex!important;margin-left:auto;min-width:30px!important;min-height:30px!important;padding:4px!important}.ml-network-filter-scrim:not([hidden]){display:block!important;position:fixed;inset:0;z-index:164;background:#0003!important;border:0!important;border-radius:0!important}.ml-network-tools{flex-wrap:wrap;max-width:100%}.ml-network-workspace.is-presentation .ml-network-filters{top:0}.ml-network-settings select{height:44px}}
+@media(max-width:700px){.ml-network-tools .ml-network-scale,.ml-network-tools>output,.ml-network-tools>button:not([data-network-action=labels]):not([data-network-action=scatter]){display:none!important}.ml-network-settings .ml-mobile-scale-setting{display:block!important}.ml-network-filters{position:fixed;inset:76px auto 0 0;z-index:165;width:min(320px,calc(100vw - 30px));display:block;overflow:auto;overscroll-behavior:contain;background:var(--chart-card);border-right:1px solid var(--line)}.ml-network-filters h3{display:flex;align-items:center}.ml-mobile-filter-close{display:flex!important;margin-left:auto;min-width:30px!important;min-height:30px!important;padding:4px!important}.ml-network-filter-scrim:not([hidden]){display:block!important;position:fixed;inset:0;z-index:164;background:#0003!important;border:0!important;border-radius:0!important}.ml-network-tools{flex-wrap:wrap;max-width:100%}.ml-network-settings select{height:44px}}
 
 /* Data dropdowns use the same surfaces and accents when open as when closed. */
 .ml-select{position:relative;display:inline-flex;min-width:0;width:100%;vertical-align:middle}
@@ -403,3 +405,5 @@ body.ml-network-presented{overflow:hidden}
 .ml-network-workspace{--network-free-edge-alpha:.3;--network-idle-edge-width:.75px}
 :root[data-theme=dark] .ml-network-workspace{--network-free-edge-alpha:.26;--network-idle-edge-width:.75px}
 .ml-network-svg.layout-free:not(.has-selection) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:var(--thread-color);--edge-opacity:var(--network-free-edge-alpha);stroke-width:var(--network-idle-edge-width)}
+
+.ml-page .is-presentation .ml-network-svg{touch-action:none}

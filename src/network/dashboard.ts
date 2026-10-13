@@ -177,7 +177,8 @@ export function createDashboard(options: Options) {
   const stage=root.querySelector('.ml-network-stage');if(stage&&!network.graphChanged){stage.scrollTop=stageScroll.top;stage.scrollLeft=stageScroll.left;}
   const modal=!networkEnabled&&panelOpen&&document.getElementById('ml-dashboard')?.hidden===false&&matchMedia('(max-width:950px)').matches;
   document.querySelectorAll<HTMLElement>('.ml-dashboard-canvas,.site-header,.ml-hero,.ml-view-switch,.ml-method,.site-footer').forEach(element=>element.inert=modal);
-  document.querySelectorAll<HTMLElement>('.ml-research-heading,.ml-data-view-switch,.ml-dashboard-filters,.site-header,.ml-hero,.site-footer').forEach(element=>element.inert=modal||network.presentation);
+  document.querySelectorAll<HTMLElement>('.ml-research-heading,.ml-data-view-switch,.data-overview-tabs,.data-help-footer,.ml-dashboard-filters,.site-header,.ml-hero,.site-footer,.skip-link').forEach(element=>element.inert=modal||network.presentation);
+  document.querySelectorAll<HTMLElement>('.ml-network-filters,.ml-network-filter-scrim,.ml-network-toolbar,.ml-network-coverage,.ml-network-caption,.ml-network-inspector').forEach(element=>element.inert=network.presentation);
   document.body.classList.toggle('ml-network-presented',network.presentation);
   document.body.classList.toggle('ml-panel-visible',modal);
   document.documentElement.classList.toggle('ml-modal-open',modal);
