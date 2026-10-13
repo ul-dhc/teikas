@@ -68,7 +68,7 @@
 .ml-data-page .ml-county-chart{grid-column:span 4}
 .ml-data-page .ml-translation-chart{grid-column:span 12}
 .ml-volume-layout{display:flex;align-items:center;gap:1.2rem;margin-top:1rem}
-.ml-volume-pie{width:clamp(90px,12vw,160px);aspect-ratio:1;flex-shrink:0;border-radius:50%;box-shadow:0 0 0 4px var(--chart-card),0 0 0 5px var(--line)}
+.ml-volume-pie{width:clamp(90px,12vw,160px);aspect-ratio:1;flex-shrink:0;border-radius:50%}
 .ml-volume-cards{flex:1;min-width:0;gap:.5rem}
 .ml-volume-cards button{padding:.65rem .7rem;gap:.2rem .5rem}
 .ml-volume-cards button>span{font-size:.9rem}
@@ -101,9 +101,13 @@
 
 /* The pie and its bar legend are paired filter controls in volume order. */
 .ml-volume-pie{display:block;overflow:visible}
-.ml-pie-sector{fill:var(--volume-color);stroke:var(--chart-card);stroke-width:1.5;cursor:pointer;transition:filter .15s ease,stroke .15s ease}
-.ml-pie-sector:hover,.ml-pie-sector.is-hovered{filter:brightness(1.12);stroke:var(--ink);stroke-width:2}
-.ml-pie-sector.is-selected,.ml-pie-sector:focus-visible{stroke:var(--accent);stroke-width:3;outline:none}
+.ml-pie-sector{fill:color-mix(in srgb,var(--volume-color) 68%,var(--chart-card));stroke:var(--chart-card);stroke-width:.75;cursor:pointer;outline:none;transition:fill .2s ease,filter .2s ease,stroke .2s ease}
+/* Selection keeps the proportions intact and quiets the other volumes. */
+.ml-volume-pie:has(.is-selected) .ml-pie-sector:not(.is-selected),
+.ml-volume-pie:has(.is-hovered) .ml-pie-sector:not(.is-hovered):not(.is-selected){fill:color-mix(in srgb,var(--volume-color) 22%,var(--chart-card))}
+.ml-volume-pie .ml-pie-sector.is-selected{fill:color-mix(in srgb,var(--volume-color) 80%,var(--chart-card));filter:drop-shadow(0 0 4px color-mix(in srgb,var(--volume-color) 24%,transparent))}
+.ml-volume-pie .ml-pie-sector:is(:hover,.is-hovered){fill:color-mix(in srgb,var(--volume-color) 76%,var(--chart-card));filter:drop-shadow(0 0 5px color-mix(in srgb,var(--volume-color) 20%,transparent))}
+.ml-volume-pie .ml-pie-sector:focus-visible{stroke:var(--blue);stroke-width:1.25}
 .ml-volume-cards button{border:1px solid var(--line);border-left-width:1px;padding:.6rem .7rem;gap:.2rem .5rem}
 .ml-volume-cards button>.ml-volume-label{font:400 .9rem var(--serif)}
 .ml-volume-cards strong{grid-column:2;grid-row:1;font-size:1.05rem}

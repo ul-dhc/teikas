@@ -1,5 +1,5 @@
 /* Shared Data heading, tabs and spacing for both renderers. */
-.ml-data-page:has(#ml-dashboard){padding-top:.8rem}
+:root .ml-data-page:has(#ml-dashboard){padding-top:.8rem}
 .ml-data-page .ml-hero h1{font-size:1.75rem!important;line-height:1.15;margin:0!important}
 .ml-data-page .data-overview-tabs{display:flex;width:fit-content;border:1px solid var(--line);margin:0 0 .45rem;padding:3px;gap:3px;background:var(--paper);border-color:color-mix(in srgb,var(--blue) 45%,var(--line));border-radius:var(--radius)}
 .ml-data-page .data-overview-tabs a{display:inline-flex;align-items:center;text-decoration:none;justify-content:center;min-height:40px;min-width:120px;padding:.5rem 1rem;gap:.5rem;font-size:.85rem;font-weight:600;line-height:1.25;color:var(--blue);border-radius:calc(var(--radius) - 4px)}
@@ -20,7 +20,7 @@
 .ml-data-page{--data-section-gap:1rem}
 .ml-data-page .ml-hero{display:flex;align-items:center;flex-wrap:wrap;gap:0;max-width:none;margin-bottom:0!important}
 .ml-data-page .ml-hero #ml-title-filters:empty{display:none}
-.ml-data-page .ml-research-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:.5rem 1.5rem;margin:0 0 var(--data-section-gap)}
+.ml-data-page .ml-research-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;min-height:2.75rem;gap:.5rem 1.5rem;margin:0 0 var(--data-section-gap)}
 .ml-data-page .ml-research-intro{position:static}
 .ml-data-page #ml-stats-status:empty{display:none}
-@media(max-width:900px){.ml-data-page .ml-research-heading{grid-template-columns:minmax(0,1fr)}.ml-data-page .ml-research-actions{margin-left:0;justify-content:flex-start}}
+@media(max-width:900px){.ml-data-page .ml-research-heading{grid-template-columns:minmax(0,1fr);min-height:0}.ml-data-page .ml-research-actions{margin-left:0;justify-content:flex-start}}

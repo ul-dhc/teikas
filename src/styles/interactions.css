@@ -44,10 +44,7 @@
  box-shadow:inset 0 0 0 1px var(--volume-color)!important;
 }
 :root body .ml-volume-cards button.is-hovered:not(.is-selected){background:var(--interaction-wash)!important;border-color:var(--interaction-line)!important}
-:root body .ml-pie-sector:is(:hover,.is-hovered){filter:none;stroke:var(--interaction-line);stroke-width:1.5}
-:root body .ml-pie-sector:is(:focus-visible,.is-selected){stroke:var(--ink);stroke-width:2}
-:root body .ml-pie-sector,
-:root body .ml-pie-sector:is(:hover,:focus,:focus-visible){outline:none!important;box-shadow:none!important}
+
 
 
 
