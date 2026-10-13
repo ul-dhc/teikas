@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {flattenTypes,selectionLink,UNKNOWN} from '../src/network/statistics.js';
 import {buildRelationships,buildFreeNetwork,relationshipSelection} from '../src/network/network-data.js';
-const html=readFileSync(new URL('../build/dati/tikls/index.html',import.meta.url),'utf8');
+const html=readFileSync(new URL('../build/dati/index.html',import.meta.url),'utf8');
 const payload=JSON.parse(html.match(/<script[^>]*id="ml-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
 const rows=flattenTypes(payload.types);
 const legends=JSON.parse(readFileSync(new URL('../teikas_json/legends.json',import.meta.url),'utf8'));
