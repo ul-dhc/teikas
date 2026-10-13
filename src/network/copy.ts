@@ -3,7 +3,7 @@ export const networkCopy = {
     "overview": "Pārskats",
     "network": "Tīkls",
     "title": "Saistības teiku krājumā",
-    "hint": "Izpēti dokumentētās saistības starp personām, vietām un teiku tēmām.",
+    "hint": "Izpēti saiknes starp personām, vietām un teiku tēmām.",
     "filters": "Filtri",
     "layout": "Izkārtojums",
     "free": "Brīvs",

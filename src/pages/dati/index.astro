@@ -7,7 +7,7 @@ const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\
 ---
 <BaseLayout title="Dati" active="data" description="Teiku krājuma pārskats un saistību tīkls: personas, vietas, tēmas un sējumi.">
   <div class="ml-page ml-data-page shell" data-i18n-skip>
-    <header class="ml-hero"><h1 data-network-page-title>Dati</h1><div id="ml-title-filters"></div></header>
+    <header class="ml-hero"><h1 class="sr-only" data-network-page-title>Dati</h1><div id="ml-title-filters"></div></header>
     <nav class="data-overview-tabs" aria-label="Datu skati">
       <a href={`${base}dati/#overview`} data-data-view="overview"><i data-lucide="chart-no-axes-column"></i><span data-overview-tab>Pārskats</span></a>
       <a href={`${base}dati/#network`} data-data-view="network"><i data-lucide="network"></i><span data-network-tab>Tīkls</span></a>
@@ -57,4 +57,9 @@ const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\
 .ml-data-page .data-overview-tabs a{flex:1;min-width:0}
 .ml-data-page .ml-research-actions{width:100%;margin-left:0;justify-content:flex-start}
 }
+</style>
+
+<style is:global>
+.ml-data-page:has(#ml-dashboard) .ml-hero{margin-bottom:0!important;gap:0}
+.ml-data-page .ml-hero #ml-title-filters:empty{display:none}
 </style>
