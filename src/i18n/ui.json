@@ -2134,5 +2134,105 @@
     "lv": "Nosaukumi saglabā datu kopas rakstību; varianti var parādīties atsevišķi. Nezināmais apzīmē trūkstošus metadatus, nevis vienu personu.",
     "de": "Namen behalten ihre Schreibweise aus dem Datensatz; Varianten können getrennt erscheinen. Unbekannt bezeichnet fehlende Metadaten, nicht eine einzelne Person.",
     "en": "Names retain their dataset spelling; variants may appear separately. Unknown indicates missing metadata, not a single person."
+  },
+  "themes.title": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "themes.intro": {
+    "lv": "Pārlūko teikas pēc krājuma nodaļām un apakšnodaļām.",
+    "de": "Entdecke Sagen nach Kapiteln und Unterkapiteln der Sammlung.",
+    "en": "Explore legends by the collection’s chapters and subsections."
+  },
+  "themes.chapters": {
+    "lv": "nodaļas",
+    "de": "Kapitel",
+    "en": "chapters"
+  },
+  "themes.sections": {
+    "lv": "apakšnodaļas",
+    "de": "Unterkapitel",
+    "en": "subsections"
+  },
+  "themes.records": {
+    "lv": "teikas",
+    "de": "Sagen",
+    "en": "legends"
+  },
+  "themes.search": {
+    "lv": "Meklēt tēmu vai nosaukumu…",
+    "de": "Thema oder Titel suchen…",
+    "en": "Search themes or titles…"
+  },
+  "themes.order": {
+    "lv": "Secība",
+    "de": "Reihenfolge",
+    "en": "Order"
+  },
+  "themes.collectionOrder": {
+    "lv": "Krājuma secībā",
+    "de": "Sammlungsreihenfolge",
+    "en": "Collection order"
+  },
+  "themes.alphabetical": {
+    "lv": "Alfabētiski",
+    "de": "Alphabetisch",
+    "en": "Alphabetical"
+  },
+  "themes.expand": {
+    "lv": "Izvērst visas",
+    "de": "Alle aufklappen",
+    "en": "Expand all"
+  },
+  "themes.collapse": {
+    "lv": "Sakļaut visas",
+    "de": "Alle zuklappen",
+    "en": "Collapse all"
+  },
+  "themes.viewTheme": {
+    "lv": "Skatīt tēmu",
+    "de": "Thema erkunden",
+    "en": "Explore theme"
+  },
+  "themes.texts": {
+    "lv": "Teksti",
+    "de": "Texte",
+    "en": "Texts"
+  },
+  "themes.network": {
+    "lv": "Tīkls",
+    "de": "Netzwerk",
+    "en": "Network"
+  },
+  "themes.overview": {
+    "lv": "Datu pārskats",
+    "de": "Datenübersicht",
+    "en": "Data overview"
+  },
+  "themes.empty": {
+    "lv": "Neviena tēma nav atrasta. Maini meklējamo vārdu.",
+    "de": "Keine Themen gefunden. Ändere den Suchbegriff.",
+    "en": "No themes found. Try another search term."
+  },
+  "themes.method": {
+    "lv": "Tēmu dalījums un nosaukumi saglabā Pētera Šmita krājuma nodaļas un apakšnodaļas.",
+    "de": "Die Gliederung und Titel folgen den Kapiteln und Unterkapiteln der Sammlung von Pēteris Šmits.",
+    "en": "The organization and titles follow the chapters and subsections of Pēteris Šmits’s collection."
+  },
+  "themes.volume": {
+    "lv": "{value}. sējums",
+    "de": "Band {value}",
+    "en": "Volume {value}"
+  },
+  "themes.scope": {
+    "lv": "Tēma: {value}",
+    "de": "Thema: {value}",
+    "en": "Theme: {value}"
+  },
+  "themes.all": {
+    "lv": "Visas tēmas",
+    "de": "Alle Themen",
+    "en": "All themes"
   }
 }
