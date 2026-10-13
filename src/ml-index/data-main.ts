@@ -2,7 +2,7 @@ import {createDashboard} from './dashboard';
 import type {types as collection, topics as topicData} from './data';
 type Type=typeof collection[number];
 type Topic=typeof topicData[number];
-const {types,topics,base}=JSON.parse(document.getElementById('ml-data')!.textContent!) as {types:Type[];topics:Topic[];base:string};
+const {types,topics,base}=JSON.parse((document.getElementById('overview-data') || document.getElementById('ml-data'))!.textContent!) as {types:Type[];topics:Topic[];base:string};
 const lang=()=> (document.documentElement.dataset.uiLang||'lv') as 'lv'|'de'|'en';
 let selectedTopic:Topic|undefined;
 let selectedType:Type|undefined;
@@ -19,7 +19,7 @@ function sync(push=false){
  dashboard.write(params);
  if(selectedTopic)params.set('topic',selectedTopic.id);
  if(selectedType)params.set('type',codeKey(selectedType));
- history[push?'pushState':'replaceState']({},'',location.pathname+(params.size?'?'+params:''));
+ history[push?'pushState':'replaceState']({},'',location.pathname+(params.size?'?'+params:'')+'#overview');
 }
 function render(){dashboard.render({topic:selectedTopic,type:selectedType});}
 window.addEventListener('ui-language-change',render);
