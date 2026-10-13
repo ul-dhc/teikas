@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {flattenTypes,selectionLink,UNKNOWN} from '../src/network/statistics.js';
-import {buildRelationships,buildFreeNetwork,relationshipSelection} from '../src/network/network-data.js';
+import {buildRelationships,buildFreeNetwork,relationshipSelection,nodeConnectionSizes,nodeId} from '../src/network/network-data.js';
 const html=readFileSync(new URL('../build/dati/index.html',import.meta.url),'utf8');
 const payload=JSON.parse(html.match(/<script[^>]*id="ml-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
 const rows=flattenTypes(payload.types);
@@ -25,4 +25,16 @@ test('node limit, source categories and explorer URLs preserve exact selection',
  const graph=buildRelationships(rows,'collector','typeId',12);assert.ok(graph.nodes.length<=24);assert.ok(graph.represented<rows.length);assert.equal(graph.represented,new Set(graph.edges.flatMap(e=>e.recordIds)).size);
  const graphAll=buildFreeNetwork(rows,['county','collector','narrator','typeId','topic','place']);assert.equal(graphAll.edges.reduce((sum,e)=>sum+e.recordIds.length,0),legends.length*15);
  const selection=rows.filter(r=>r.county==='place-0001');assert.equal(new URL(selectionLink('/teikas/',selection),'http://localhost').pathname,'/teikas/teksti/');assert.deepEqual(new URL(selectionLink('/teikas/',selection),'http://localhost').searchParams.get('selection').split(','),selection.map(r=>r.id));
+});
+
+test('single-category sizes use distinct connections to hidden metadata, not visible degree or duplicate records',()=>{
+ const sample=[
+  {id:'1',collector:'A',county:'X',narrator:'N',typeId:'T',topic:'V',place:'S'},
+  {id:'2',collector:'A',county:'Y',narrator:'N',typeId:'T',topic:'V',place:'S'},
+  {id:'3',collector:'B',county:'X',narrator:'N',typeId:'T',topic:'V',place:'S'},
+ ];
+ const visible=buildFreeNetwork(sample,['collector']);assert.equal(visible.edges.length,0);
+ const sizes=nodeConnectionSizes(sample),a=sizes.get(nodeId('collector','A')),b=sizes.get(nodeId('collector','B'));
+ assert.equal(a.connectionCount,6);assert.equal(b.connectionCount,5);assert.ok(a.connectionShare>b.connectionShare);
+ const repeated=nodeConnectionSizes([...sample,{...sample[0],id:'4'}]);assert.deepEqual(repeated.get(nodeId('collector','A')),a);
 });

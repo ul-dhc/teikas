@@ -66,3 +66,11 @@ export function buildFreeNetwork(rows,fields=defaultFreeFields) {
  }
  return {nodes:[...nodes.values()],edges:[...edges.values()],represented:enabled.length?rows.length:0,totalNodes:nodes.size};
 }
+
+// Count distinct neighbouring metadata values across all categories, including hidden ones.
+export function nodeConnectionSizes(rows) {
+ const full=buildFreeNetwork(rows,freeFields),counts=new Map(),maximum=new Map();
+ for(const edge of full.edges)for(const id of [edge.source,edge.target])counts.set(id,(counts.get(id)||0)+1);
+ for(const node of full.nodes)maximum.set(node.field,Math.max(maximum.get(node.field)||0,counts.get(node.id)||0));
+ return new Map(full.nodes.map(node=>[node.id,{connectionCount:counts.get(node.id)||0,connectionShare:(counts.get(node.id)||0)/(maximum.get(node.field)||1)}]));
+}

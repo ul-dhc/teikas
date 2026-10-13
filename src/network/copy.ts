@@ -528,3 +528,9 @@ export const extraCopy = {
     }
   }
 } as const;
+
+export const nodeSizeCopy={
+ lv:{label:'Mezglu izmērs',uniform:'Vienāds visiem',connections:'Pēc saikņu skaita',hint:'Saiknes skaita arī ar paslēptajām kategorijām. Izmērus salīdzina katras kategorijas ietvaros.'},
+ de:{label:'Knotengröße',uniform:'Alle gleich',connections:'Nach Verbindungszahl',hint:'Verbindungen zu ausgeblendeten Kategorien zählen mit. Größen werden innerhalb jeder Kategorie verglichen.'},
+ en:{label:'Node size',uniform:'Equal for all',connections:'By connection count',hint:'Connections to hidden categories are included. Sizes are compared within each category.'},
+};

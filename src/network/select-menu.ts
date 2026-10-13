@@ -130,7 +130,7 @@ export function enhanceSelects(root: HTMLElement) {
     trigger.setAttribute('aria-label', select.getAttribute('aria-label') || label?.textContent?.trim() || 'Select');
     const value = document.createElement('span'); value.className='ml-select-value'; value.textContent = select.selectedOptions[0]?.textContent || '';
     const icon = document.createElement('i'); icon.dataset.lucide = 'chevron-down'; trigger.append(value, icon);
-    if(select.hasAttribute('data-network-filter')){const caption=document.createElement('span');caption.className='ml-select-label';caption.textContent=trigger.getAttribute('aria-label');trigger.prepend(caption);}
+    if(select.hasAttribute('data-network-filter')||select.dataset.networkSetting==='sizeMode'){const caption=document.createElement('span');caption.className='ml-select-label';caption.textContent=trigger.getAttribute('aria-label');trigger.prepend(caption);}
     trigger.disabled = select.disabled;
     select.before(wrapper); wrapper.append(select, trigger);
     select.classList.add('ml-native-select'); select.tabIndex = -1; select.setAttribute('aria-hidden', 'true');

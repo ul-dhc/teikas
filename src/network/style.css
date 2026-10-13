@@ -219,14 +219,14 @@ html.ml-modal-open,html.ml-modal-open body{overflow:hidden}
 .ml-network-node .node-mark{fill:var(--node-color);opacity:.52;stroke:transparent!important;stroke-width:0!important;filter:none;vector-effect:non-scaling-stroke;transition:opacity .22s}
 .ml-network-node.is-active .node-mark{opacity:.65;filter:saturate(1.05)}.ml-network-node.is-selected .node-mark{opacity:.76;filter:saturate(1.1)}
 .ml-network-node:focus-visible text{text-decoration:underline;text-underline-offset:3px}
-.ml-network-node.is-muted{opacity:calc(var(--depth-opacity,1)*.12)}
+.ml-network-node.is-muted{opacity:calc(max(.7,var(--depth-opacity,1))*.58)}
 .ml-network-node text{fill:var(--ink);font-family:var(--sans);font-weight:500;paint-order:stroke;stroke:var(--chart-card);stroke-width:2px;stroke-linejoin:round;pointer-events:none}
 .ml-network-svg.layout-bipartite text{stroke-width:.75px}
 .ml-network-svg.labels-contextual .ml-network-node text{opacity:0}.ml-network-svg.labels-contextual .ml-network-node:hover text,.ml-network-svg.labels-contextual .ml-network-node:focus-visible text,.ml-network-svg.labels-contextual .ml-network-node.is-active text{opacity:1}
-.ml-network-edge .ml-edge-base{fill:none;stroke:color-mix(in srgb,var(--thread-color) 22%,transparent);--edge-opacity:.3;pointer-events:none}
+.ml-network-edge .ml-edge-base{fill:none;stroke:var(--thread-color);--edge-opacity:var(--network-structured-edge-alpha);pointer-events:none}
 .ml-network-edge.is-active .ml-edge-base{stroke:color-mix(in srgb,var(--thread-color) 78%,var(--ink));--edge-opacity:.78}
-.ml-network-svg.has-selection .ml-network-edge:not(.is-active) .ml-edge-base{stroke:color-mix(in srgb,var(--thread-color) 30%,transparent);--edge-opacity:.22}
-.ml-network-svg:not(.layout-free) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:color-mix(in srgb,var(--thread-color) 46%,transparent);--edge-opacity:.1}
+.ml-network-svg:not(.layout-free) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:var(--thread-color);--edge-opacity:var(--network-structured-edge-alpha)}
+.ml-network-svg.has-selection .ml-network-edge:not(.is-active) .ml-edge-base{stroke:var(--thread-color);--edge-opacity:var(--network-muted-edge-alpha)}
 .ml-edge-flow{fill:none;stroke:color-mix(in srgb,var(--thread-color) 68%,transparent);stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-width:.72px;--edge-opacity:.34;vector-effect:non-scaling-stroke;pointer-events:none}
 .ml-network-edge.is-active .ml-edge-flow{stroke:color-mix(in srgb,var(--thread-color) 90%,var(--ink));--edge-opacity:.94}
 .ml-network-svg.animation-rain .ml-edge-flow{stroke-dasharray:1.15 5.25;--edge-opacity:.72;animation:ml-network-rain var(--rain-duration) linear var(--rain-delay) infinite}
@@ -323,9 +323,9 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 .ml-network-edges :is(.ml-edge-base,.ml-edge-flow){opacity:clamp(0,calc(var(--edge-opacity,1) * var(--thread-brightness,1)),1)}
 
 /* Keep the selected node distinct even when it connects to most of the graph. */
-.ml-network-svg.has-selection .ml-network-node.is-active:not(.is-selected) .node-mark{opacity:.3;filter:none}
+.ml-network-svg.has-selection .ml-network-node.is-active:not(.is-selected) .node-mark{opacity:.56;filter:none}
 .ml-network-svg.has-selection .ml-network-node.is-selected .node-mark{opacity:.8;filter:saturate(1.1)}
-.ml-network-svg.has-selection .ml-network-node.is-active:not(.is-selected) text{opacity:.55}
+.ml-network-svg.has-selection .ml-network-node.is-active:not(.is-selected) text{opacity:.82}
 .ml-network-svg.has-selection .ml-network-node.is-selected text{opacity:1;font-weight:650}
 
 /* Compact Data workspace heading; the guide provides the introductory copy. */
@@ -401,9 +401,25 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 /* Keep structured connections light; selected relationships remain prominent. */
 .ml-network-svg:not(.layout-free) .ml-network-edge:not(.is-active) .ml-edge-flow{--edge-opacity:.095}
 
-/* Single connections need more contrast against the light canvas. */
-.ml-network-workspace{--network-free-edge-alpha:.3;--network-idle-edge-width:.75px}
-:root[data-theme=dark] .ml-network-workspace{--network-free-edge-alpha:.26;--network-idle-edge-width:.75px}
+/* Shared canvas/SVG opacity: dim context remains visible in every palette. */
+.ml-network-workspace{--network-free-edge-alpha:.3;--network-structured-edge-alpha:.1;--network-muted-edge-alpha:.09;--network-idle-edge-width:.75px}
+:root[data-theme=dark] .ml-network-workspace{--network-free-edge-alpha:.26;--network-structured-edge-alpha:.12;--network-muted-edge-alpha:.11;--network-idle-edge-width:.75px}
 .ml-network-svg.layout-free:not(.has-selection) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:var(--thread-color);--edge-opacity:var(--network-free-edge-alpha);stroke-width:var(--network-idle-edge-width)}
 
 .ml-page .is-presentation .ml-network-svg{touch-action:none}
+
+/* Active selections sit directly above the visualization border. */
+.ml-network-surface>.ml-dashboard-filters{justify-content:flex-end;min-height:0;margin:0 0 .5rem;gap:.4rem}
+.ml-network-surface>.ml-dashboard-filters:empty{display:none}
+
+.ml-network-surface>.ml-dashboard-filters button[data-remove-filter]{border-radius:20px;padding:.35rem .65rem;min-height:0;font-size:.73rem}
+.ml-network-surface>.ml-dashboard-filters .ml-reset{margin-left:0}
+
+.ml-network-edge:not(.is-active) .ml-edge-base{stroke-width:var(--network-idle-edge-width)}
+
+.ml-network-filters .ml-network-size-hint{font-size:10px;line-height:1.45;margin:0 0 .75rem;color:var(--muted)}
+
+.platform-filter-panel .ml-network-size-field .ml-select-trigger{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem .5rem;border-radius:20px}
+.ml-network-size-field .ml-select-label{grid-column:1;grid-row:1}
+.platform-filter-panel .ml-network-size-field .ml-select-value{grid-column:1;grid-row:2;margin-left:0;text-align:left}
+.ml-network-size-field .ml-select-trigger>svg{grid-column:2;grid-row:1/3}

@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {layoutNetwork,cameraPoint,pinchCamera,echoDistances,scatterNetwork} from '../src/network/network-layout.js';
+import {layoutNetwork,nodeRadius,cameraPoint,pinchCamera,echoDistances,scatterNetwork} from '../src/network/network-layout.js';
 import {relationshipSelection} from '../src/network/network-data.js';
 const graph={nodes:[{id:'a',field:'county',value:'A',count:2},{id:'b',field:'typeId',value:'B',count:2},{id:'c',field:'topic',value:'C',count:2}],edges:[{source:'a',target:'b',recordIds:['1','2']},{source:'b',target:'c',recordIds:['1','2']}]};
 test('NSRD hierarchical rows preserve every selected category and weighted degree',()=>{
@@ -38,5 +38,13 @@ test('spreading structured layouts keeps category rows and columns intact',()=>{
   const spread=scatterNetwork({nodes,edges:[{source:'a',target:'c'}]},current,layout,1);
   for(const node of nodes)assert.equal(spread.get(node.id)[layout==='bipartite'?'x':'y'],node[layout==='bipartite'?'x':'y']);
   assert.ok(nodes.some(n=>spread.get(n.id).x!==n.x||spread.get(n.id).y!==n.y));
+ }
+});
+
+test('uniform radii are equal while connection sizes preserve differences in an isolated category',()=>{
+ const small={degree:0,connectionShare:.01},large={degree:0,connectionShare:1};
+ for(const layout of ['free','hierarchical','bipartite']){
+  assert.equal(nodeRadius(small,layout,'uniform'),nodeRadius(large,layout,'uniform'));
+  assert.ok(nodeRadius(small,layout,'connections')<nodeRadius(large,layout,'connections'));
  }
 });

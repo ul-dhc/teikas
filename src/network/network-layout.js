@@ -2,7 +2,11 @@
 // Metadata adaptation: field replaces type; recordIds supplies weighted degree.
 import {motionHash} from './network-motion.js';
 export const viewport={width:900,height:570,x:450,y:285};
-export const nodeRadius=(node,layout)=>layout==='free'?Math.min(27,6+Math.sqrt(node.degree)*2.2):Math.min(15,3.5+Math.sqrt(node.degree)*1.45);
+export const nodeRadius=(node,layout,sizeMode)=>{
+ if(sizeMode==='uniform')return layout==='free'?9:6;
+ if(sizeMode==='connections')return layout==='free'?6+21*Math.sqrt(node.connectionShare||0):3.5+11.5*Math.sqrt(node.connectionShare||0);
+ return layout==='free'?Math.min(27,6+Math.sqrt(node.degree)*2.2):Math.min(15,3.5+Math.sqrt(node.degree)*1.45);
+};
 export function layoutNetwork(graph,layout,fields){
  const degrees=new Map();
  for(const edge of graph.edges)for(const id of [edge.source,edge.target])degrees.set(id,(degrees.get(id)||0)+edge.recordIds.length);

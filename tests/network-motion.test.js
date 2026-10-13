@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { positionWithMotion } from '../src/network/network-motion.js';
+import { positionWithMotion, motionAmplitudeScale } from '../src/network/network-motion.js';
 const base = { x: 500, y: 320 };
 test('movement is individual and consistent at every collection size', () => {
   for (const mode of ['drift', 'chaos', 'orbit']) {
@@ -24,4 +24,16 @@ test('zero intensity remains at rest; Orbit depth stays positive and bounded', (
     assert.ok(p.opacity >= 0.26 && p.opacity <= 1);
     assert.ok(Number.isFinite(p.x) && Number.isFinite(p.y));
   }
+});
+
+test('shrinking the view preserves visible drift and chaos movement without changing speed', () => {
+  for (const mode of ['drift', 'chaos']) for (const t of [1000, 10000, 20000]) {
+    const normal=positionWithMotion('legend:1',base,t,mode);
+    const small=positionWithMotion('legend:1',base,t,mode,1,undefined,motionAmplitudeScale(.5));
+    assert.ok(Math.abs((small.x-base.x)*.5-(normal.x-base.x))<.002);
+    assert.ok(Math.abs((small.y-base.y)*.5-(normal.y-base.y))<.002);
+  }
+  assert.equal(motionAmplitudeScale(.1),2.5);
+  assert.equal(motionAmplitudeScale(2),1);
+  assert.equal(motionAmplitudeScale(0),1);
 });
