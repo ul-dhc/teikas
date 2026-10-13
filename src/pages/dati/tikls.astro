@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {types,topics,metadataLabels} from '../../network/data';
+import '../../network/style.css';
+const base=import.meta.env.BASE_URL;
+const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\\u003c');
+---
+<BaseLayout title="Tīkls" active="data" description="Teiku krājuma saistību tīkls: personas, vietas, tēmas un sējumi.">
+  <div class="ml-page ml-data-page shell" data-i18n-skip>
+    <header class="ml-hero"><h1 data-network-page-title>Dati</h1><a class="context-help" href={`${base}par-projektu/#tikls`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-network-guide>Palīdzība tīkla izpētei</span></a></header>
+    <section id="ml-dashboard" aria-labelledby="ml-dashboard-title"><div id="ml-dashboard-content"></div></section>
+    <noscript><p>Tīkla izpētei nepieciešams JavaScript.</p></noscript>
+  </div>
+  <script type="application/json" id="ml-data" is:inline set:html={payload}/>
+  <script>
+    import '../../network/main';
+    const updateHeading=()=>{const lang=document.documentElement.dataset.uiLang;document.querySelector('[data-network-page-title]')!.textContent=lang==='de'?'Daten':lang==='en'?'Data':'Dati'};
+    const updateGuide=()=>{const lang=document.documentElement.dataset.uiLang;document.querySelector('[data-network-guide]')!.textContent=lang==='de'?'Hilfe zur Netzwerkerkundung':lang==='en'?'Network exploration guide':'Palīdzība tīkla izpētei'};
+    updateGuide();window.addEventListener('ui-language-change',updateGuide);
+    updateHeading();window.addEventListener('ui-language-change',updateHeading);
+  </script>
+</BaseLayout>

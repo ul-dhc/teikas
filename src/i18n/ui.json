@@ -1944,5 +1944,30 @@
     "lv": "Rādīt vietu nenoteiktību",
     "de": "Ortsunsicherheit anzeigen",
     "en": "Show location uncertainty"
+  },
+  "network.nav": {
+    "lv": "Tīkls",
+    "de": "Netzwerk",
+    "en": "Network"
+  },
+  "network.overview": {
+    "lv": "Pārskats",
+    "de": "Übersicht",
+    "en": "Overview"
+  },
+  "network.guideTitle": {
+    "lv": "Tīkla izpēte",
+    "de": "Netzwerkerkundung",
+    "en": "Network exploration"
+  },
+  "network.guideUse": {
+    "lv": "Sadaļā Dati → Tīkls vari izvēlēties kategorijas, filtrēt krājumu un skatīt saistības brīvajā, hierarhiskajā vai divdaļu izkārtojumā. Klikšķis uz mezgla vai līnijas atlasa saistītās teikas; tekstu panelis parāda šo atlasi. Vairāku mezglu izvēlē vari apvienot jebkura mezgla teikas vai atstāt tikai visiem mezgliem kopīgās teikas.",
+    "de": "Unter Daten → Netzwerk kannst du Kategorien auswählen, die Sammlung filtern und Verbindungen im freien, hierarchischen oder bipartiten Layout erkunden. Ein Klick auf einen Knoten oder eine Linie wählt die zugehörigen Sagen aus. Bei mehreren Knoten kannst du die Vereinigungsmenge oder nur die gemeinsamen Sagen auswählen.",
+    "en": "Under Data → Network, choose categories, filter the collection and explore connections in free, hierarchical or bipartite layouts. Clicking a node or line selects the associated legends; the text panel shows this selection. Multi-node selection supports either the union or intersection of their legends."
+  },
+  "network.guideMeaning": {
+    "lv": "Saistība nozīmē, ka metadatu vērtības sastopamas vienā teikā. Tā nepierāda cilvēku kontaktus, ceļojumus vai vēsturisku ietekmi. Nezināmais apzīmē trūkstošus metadatus. Avotu kategorijā izmantots pirmais normalizētais primārais avots; datējumi var ietvert gan pierakstīšanas, gan avotu publicēšanas gadus.",
+    "de": "Eine Verbindung bedeutet, dass Metadatenwerte in derselben Sage vorkommen. Sie belegt keine Kontakte, Reisen oder historischen Einflüsse. Unbekannt bezeichnet fehlende Metadaten. Quellen zeigen die erste normalisierte Primärquelle; Datierungen können Aufzeichnungs- und Publikationsjahre umfassen.",
+    "en": "A connection means that metadata values occur in the same legend. It does not prove personal contacts, travel or historical influence. Unknown means missing metadata. Sources use the first normalized primary source; dates may include both recording and source publication years."
   }
 }
