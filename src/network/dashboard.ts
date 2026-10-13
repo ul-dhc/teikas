@@ -173,7 +173,7 @@ export function createDashboard(options: Options) {
   if(view==='network'){const panel=root.querySelector('.ml-network-texts');if(panel)root.querySelector('.ml-network-surface')?.append(panel);}
   if(titleFilters)titleFilters.innerHTML=view==='network'?'':chips();
   if(view==='network'){
-   root.querySelector('.ml-network-stage')?.insertAdjacentHTML('beforebegin',chips());
+   root.querySelector('.ml-network-workspace')?.insertAdjacentHTML('afterbegin',chips());
   }
   network.mount(root);
   enhanceSelects(root);

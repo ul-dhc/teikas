@@ -409,11 +409,11 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 
 .ml-page .is-presentation .ml-network-svg{touch-action:none}
 
-/* Active selections sit directly above the visualization border. */
-.ml-network-surface>.ml-dashboard-filters{justify-content:flex-end;min-height:0;margin:0 0 .5rem;gap:.4rem}
-.ml-network-surface>.ml-dashboard-filters:empty{display:none}
-
-.ml-network-surface>.ml-dashboard-filters button[data-remove-filter]{border-radius:20px;padding:.35rem .65rem;min-height:0;font-size:.73rem}
-.ml-network-surface>.ml-dashboard-filters .ml-reset{margin-left:0}
-
-.ml-network-edge:not(.is-active) .ml-edge-base{stroke-width:var(--network-idle-edge-width)}
+/* Active selections sit outside the visualization card, in the existing heading gap. */
+.ml-network-workspace>.ml-dashboard-filters{position:absolute;right:0;bottom:calc(100% + .5rem);display:flex;justify-content:flex-end;flex-wrap:nowrap;max-width:calc(100% - 256px);min-height:0;margin:0;gap:.4rem;overflow-x:auto;scrollbar-width:thin}
+.ml-network-workspace.filters-collapsed>.ml-dashboard-filters{max-width:100%}
+.ml-network-workspace>.ml-dashboard-filters:empty{display:none}
+.ml-network-workspace>.ml-dashboard-filters button{flex-shrink:0;white-space:nowrap}
+.ml-network-workspace>.ml-dashboard-filters button[data-remove-filter]{border-radius:20px;padding:.35rem .65rem;min-height:0;font-size:.73rem}
+.ml-network-workspace>.ml-dashboard-filters .ml-reset{margin-left:0;background:transparent;border:0}
+@media(max-width:900px){.ml-network-workspace>.ml-dashboard-filters{position:static;grid-column:1/-1;max-width:100%;width:100%;justify-content:flex-end}}
