@@ -2,11 +2,12 @@
 // Keep the original IDs so saved views and shared links retain their palette.
 export const paletteFields = ['county', 'collector', 'narrator', 'typeId', 'topic', 'place'];
 export const networkPalettes = [
-  // Purvs in autumn: pool blue, moss green, amber orange, reed gold,
-  // heather violet and bog-water teal, in category order.
-  { id: 'sagn', name: 'Purvs', source: 'Teikas · autumn bog',
-    light: ['#356b8c', '#657b2b', '#c46718', '#9c8009', '#86609d', '#218579'],
-    dark: ['#6fb5d0', '#a9bf54', '#df7b2b', '#e8ca53', '#c294da', '#58c8b0'] },
+  // Vadātājs: the original Norwegian Troll palette, in the same category order.
+  // Source: norwegian legends/src/ml-index/network-palettes.js.
+  { id: 'sagn', name: 'Vadātājs', source: 'Norske sagn · Troll · embers and stone',
+    bipartiteThread: { light: '#9c6150', dark: '#c18a76' },
+    light: ['#cc4824', '#7b293e', '#bd8215', '#665a51', '#a14f1b', '#d16a70'],
+    dark: ['#f06a35', '#bf526c', '#edb343', '#a8998a', '#d38b48', '#ed9698'] },
   // Krustceles: electric, highly saturated colours, luminous after dark.
   { id: 'nordlys', name: 'Krustceles', source: 'Teikas · neon',
     light: ['#7038ff', '#00bbd4', '#f020b8', '#72c900', '#2460ff', '#00a880'],
