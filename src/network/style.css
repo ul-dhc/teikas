@@ -376,3 +376,22 @@ body.ml-network-presented{overflow:hidden}
 .ml-data-page input[type=checkbox]::before{content:"";display:block;width:13px!important;height:13px!important;border:0!important;transform:none!important;background:var(--checkbox-color);mask:url('./check.svg') center/contain no-repeat;opacity:0;transition:opacity .14s ease}
 .ml-data-page input[type=checkbox]:checked::before{opacity:1}.ml-data-page input[type=checkbox]:checked{border-color:var(--checkbox-color);box-shadow:none}.ml-data-page input[type=checkbox]:focus-visible{outline:2px solid var(--checkbox-color);outline-offset:3px}
 .ml-data-page .context-help{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);font-size:.75rem;text-decoration:none;line-height:1.5;padding:.4rem 0}.ml-data-page .context-help .lucide{width:17px;height:17px;flex-shrink:0}.ml-data-page .context-help:hover{color:var(--blue);text-decoration:underline;text-underline-offset:.2em}.ml-data-page .context-help:focus-visible{outline:2px solid var(--pin);outline-offset:3px}
+
+/* Active filters share the title row on wide screens. */
+.ml-data-page .ml-hero{flex-wrap:wrap}
+.ml-data-page .ml-hero .context-help{flex-shrink:0}
+#ml-title-filters{flex:1 1 100%;min-width:0}
+#ml-title-filters .ml-dashboard-filters{margin:0;gap:.4rem;justify-content:flex-start}
+#ml-title-filters .ml-dashboard-filters:empty{display:none}
+#ml-title-filters:has(.ml-dashboard-filters:empty){display:none}
+#ml-title-filters .ml-reset{margin-left:0;flex-shrink:0}
+.ml-dashboard-filters [data-filter-category]{--chip-tone:#326a91;color:color-mix(in srgb,var(--chip-tone) 72%,var(--ink));border-color:color-mix(in srgb,var(--chip-tone) 40%,var(--line));background:color-mix(in srgb,var(--chip-tone) 12%,var(--raised));max-width:100%;white-space:normal;text-align:left}
+.ml-dashboard-filters [data-filter-category=topic]{--chip-tone:#416fa0}
+.ml-dashboard-filters [data-filter-category=type]{--chip-tone:#a88317}
+.ml-dashboard-filters [data-filter-category=county]{--chip-tone:#bc6236}
+.ml-dashboard-filters [data-filter-category=collector]{--chip-tone:#708339}
+.ml-dashboard-filters [data-filter-category=narrator]{--chip-tone:#a34472}
+.ml-dashboard-filters [data-filter-category=translation]{--chip-tone:#7264ad}
+.ml-dashboard-filters [data-filter-category=decade]{--chip-tone:#338c92}
+:root[data-theme=dark] .ml-dashboard-filters [data-filter-category]{color:color-mix(in srgb,var(--chip-tone) 48%,var(--ink));background:color-mix(in srgb,var(--chip-tone) 15%,var(--raised))}
+@media(min-width:1000px){#ml-title-filters{flex:1 1 0;margin-left:auto}#ml-title-filters .ml-dashboard-filters{justify-content:flex-end;flex-wrap:nowrap}#ml-title-filters .ml-dashboard-filters button{min-width:0}}

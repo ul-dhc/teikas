@@ -7,7 +7,7 @@ const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\
 ---
 <BaseLayout title="Tīkls" active="data" description="Teiku krājuma saistību tīkls: personas, vietas, tēmas un sējumi.">
   <div class="ml-page ml-data-page shell" data-i18n-skip>
-    <header class="ml-hero"><h1 data-network-page-title>Dati</h1><a class="context-help" href={`${base}par-projektu/#tikls`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-network-guide>Palīdzība tīkla izpētei</span></a></header>
+    <header class="ml-hero"><h1 data-network-page-title>Dati</h1><a class="context-help" href={`${base}par-projektu/#tikls`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-network-guide>Palīdzība tīkla izpētei</span></a><div id="ml-title-filters"></div></header>
     <section id="ml-dashboard" aria-labelledby="ml-dashboard-title"><div id="ml-dashboard-content"></div></section>
     <noscript><p>Tīkla izpētei nepieciešams JavaScript.</p></noscript>
   </div>
