@@ -38,6 +38,7 @@ const reloadView = () => { if ((location.hash === '#network' ? 'network' : 'over
 window.addEventListener('popstate', reloadView);
 window.addEventListener('hashchange', reloadView);
 const updateTabs = () => {
+  document.querySelectorAll<HTMLAnchorElement>('.data-overview-tabs a').forEach(link=>link.setAttribute('aria-current',link.dataset.dataView===view?'page':'false'));
   const lang = document.documentElement.dataset.uiLang;
   document.querySelector('[data-overview-tab]')!.textContent = lang === 'de' ? 'Übersicht' : lang === 'en' ? 'Overview' : 'Pārskats';
   document.querySelector('[data-network-tab]')!.textContent = lang === 'de' ? 'Netzwerk' : lang === 'en' ? 'Network' : 'Tīkls';
