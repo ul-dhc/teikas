@@ -835,5 +835,3 @@ body{background:
   .pagination-row .page-jump{grid-column:1;grid-row:3;justify-content:flex-end}
   .pagination-row .page-size{grid-column:2;grid-row:3;width:auto;justify-content:flex-start}
 }
-
-.data-nav{position:relative;height:100%;display:flex;align-items:center}.data-nav summary{height:100%;display:flex;align-items:center;cursor:pointer;border-bottom:3px solid transparent;padding-top:3px;list-style:none}.data-nav summary::-webkit-details-marker{display:none}.data-nav summary.active,.data-nav[open] summary{color:var(--interaction-green,var(--blue));border-bottom-color:var(--interaction-green,var(--accent))}.data-nav-menu{position:absolute;top:100%;left:0;min-width:150px;background:var(--raised);border:1px solid var(--line);border-radius:0 0 8px 8px;padding:.5rem;box-shadow:0 8px 20px #0002}.site-header nav .data-nav-menu a{height:auto;display:block;padding:.5rem .7rem;border:0;border-radius:4px}.data-nav-menu a:hover{background:var(--surface)}

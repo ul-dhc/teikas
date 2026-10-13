@@ -30,7 +30,7 @@ const base = import.meta.env.BASE_URL;
         <a class:list={[{ active: active === 'browse' }]} href={`${base}teksti/`} data-nav-key="texts">Teksti</a>
         <a class:list={[{ active: active === 'map' }]} href={`${base}karte/`} data-nav-key="map">Karte</a>
         <span class="nav-muted" title="Paredzēts nākamajam posmam" data-nav-key="persons">Personas</span>
-        <details class="data-nav"><summary class:list={[{active:active === 'data'}]} data-nav-key="data">Dati</summary><div class="data-nav-menu"><a href={`${base}dati/#overview`} data-i18n="network.overview">Pārskats</a><a href={`${base}dati/#network`} data-i18n="network.nav">Tīkls</a></div></details>
+        <a class:list={[{ active: active === 'data' }]} href={`${base}dati/#overview`} data-nav-key="data">Dati</a>
         <a class:list={[{ active: active === 'about' }]} href={`${base}par-projektu/`} data-nav-key="about">Par projektu</a>
       </nav>
       <div class="header-tools">
