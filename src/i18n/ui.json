@@ -692,7 +692,7 @@
   "about.title": {
     "lv": "Latviešu teiku digitālā platforma",
     "de": "Digitale Plattform für lettische Sagen",
-    "en": "Digital Platform for Latvian Legends"
+    "en": "Teikas. Digital Platform for Latvian Legends"
   },
   "about.goalTitle": {
     "lv": "Projekta mērķis",
@@ -2234,5 +2234,70 @@
     "lv": "Visas tēmas",
     "de": "Alle Themen",
     "en": "All themes"
+  },
+  "about.intro": {
+    "lv": "Šī digitālā platforma šobrīd piedāvā iepazīt {count} latviešu teikas, kas publicētas folklorista Pētera Šmita apkopotajā 15 sējumu izdevumā “Latviešu pasakas un teikas” – līdz šim lielākajā latviešu vēstītājfolkloras krājumā, kas izdots no 1925. līdz 1937. gadam. Teiku tekstiem tiek piedāvāts tulkojums vācu valodā, un drīzumā tiks pievienotas anotācijas angļu valodā.",
+    "de": "Diese digitale Plattform bietet derzeit Zugang zu {count} lettischen Sagen aus der von dem Volkskundler Pēteris Šmits zusammengestellten 15-bändigen Ausgabe „Latviešu pasakas un teikas“ (Lettische Märchen und Sagen). Die von 1925 bis 1937 erschienene Ausgabe ist bis heute die umfangreichste Sammlung lettischer Erzählfolklore. Die Sagentexte sind auch in deutscher Übersetzung verfügbar; englische Annotationen werden in Kürze ergänzt.",
+    "en": "This digital platform currently provides access to {count} Latvian legends from the 15-volume collection “Latviešu pasakas un teikas” (Latvian Folktales and Legends), compiled by folklorist Pēteris Šmits and issued between 1925 and 1937. It remains the largest collection of Latvian narrative folklore. German translations of the legends are available, and English annotations will be added soon."
+  },
+  "about.goalText": {
+    "lv": "Projekta mērķis ir izstrādāt jaunu digitālo versiju Pētera Šmita “Latviešu pasaku un teiku” krājumam, pilnveidojot un papildinot metadatus, kā arī izstrādājot rīkus teiku analīzei un datu vizualizācijai. Tuvākajā laikā plānots šo resursu sasaistīt ar LU LFMI Latviešu folkloras krātuves digitālo arhīvu ",
+    "de": "Ziel des Projekts ist eine neue digitale Fassung von Pēteris Šmits’ Sammlung „Latviešu pasakas un teikas“. Dazu werden die Metadaten verbessert und ergänzt sowie Werkzeuge zur Analyse der Sagen und zur Datenvisualisierung entwickelt. In nächster Zeit soll die Plattform mit dem digitalen Archiv des Lettischen Folklorearchivs am Institut für Literatur, Folklore und Kunst der Universität Lettlands verknüpft werden: ",
+    "en": "The project aims to create a new digital edition of Pēteris Šmits’s “Latviešu pasakas un teikas” collection by improving and enriching its metadata and developing tools for analysing legends and visualising data. The platform is to be linked soon to the digital archive of the Archives of Latvian Folklore at the University of Latvia’s Institute of Literature, Folklore and Art: "
+  },
+  "about.translationBefore": {
+    "lv": "Krājumam pastāv pilns tulkojums vācu valodā, kas glabājas Vācijā Getingenas Zinātņu akadēmijas pētniecības centra ",
+    "de": "Eine vollständige deutsche Übersetzung der Sammlung wird im Archiv der Forschungsstelle ",
+    "en": "A complete German translation of the collection is held in the archive of the "
+  },
+  "about.translationAfter": {
+    "lv": " arhīvā. Tulkojums veikts 20. gadsimta 60. gadu beigās un 70. gadu sākumā, iekļaujot iepriekšējos tulkojumus, un tas ir līdz šim lielākais latviešu folkloras tekstu tulkojums citā valodā. Šajā digitālajā platformā izmantots teiku tekstu tulkojums.",
+    "de": " der Akademie der Wissenschaften zu Göttingen in Deutschland aufbewahrt. Sie entstand Ende der 1960er und Anfang der 1970er Jahre unter Einbeziehung früherer Übersetzungen und ist bis heute die umfangreichste Übersetzung lettischer Folkloretexte in eine andere Sprache. Diese Plattform verwendet die Übersetzung der Sagentexte.",
+    "en": " research centre at the Göttingen Academy of Sciences and Humanities in Germany. Produced in the late 1960s and early 1970s, incorporating earlier translations, it remains the largest translation of Latvian folklore texts into another language. This platform uses the translations of the legends."
+  },
+  "about.previousFirst": {
+    "lv": "Pētera Šmita “Latviešu pasakām un teikām” ir izstrādātas vairākas digitālās versijas. Pirmā no tām pieejama jau kopš 1998. gada, kad krājumu digitalizēja LU MII Mākslīgā intelekta laboratorija.",
+    "de": "Von Pēteris Šmits’ „Latviešu pasakas un teikas“ wurden mehrere digitale Fassungen erstellt. Die erste ist seit 1998 verfügbar, als das Labor für künstliche Intelligenz am Institut für Mathematik und Informatik der Universität Lettlands die Sammlung digitalisierte.",
+    "en": "Several digital versions of Pēteris Šmits’s “Latviešu pasakas un teikas” have been created. The first has been available since 1998, when the Artificial Intelligence Laboratory at the University of Latvia’s Institute of Mathematics and Computer Science digitised the collection."
+  },
+  "about.previousSecond": {
+    "lv": "Krājuma 13.–15. sējumam, kuros apkopotas teikas, 2012. gadā tika publicēts uzlabots resurss. Tajā bija iekļauti arī teiku tulkojumi vācu valodā, taču resurss vairs nav pieejams ārpus interneta arhivēšanas rīkiem. Projektu īstenoja LU LFMI Latviešu folkloras krātuves un LU MII Mākslīgā intelekta laboratorijas pētnieki, un tieši šai digitālajai versijai sagatavotie dati izmantoti šīs platformas izstrādē.",
+    "de": "Für die Bände 13–15, die die Sagen enthalten, wurde 2012 eine verbesserte digitale Fassung veröffentlicht. Sie umfasste auch deutsche Übersetzungen der Sagen, ist heute jedoch nur noch über Webarchive zugänglich. Das Projekt wurde von Forschenden des Lettischen Folklorearchivs am Institut für Literatur, Folklore und Kunst sowie des Labors für künstliche Intelligenz am Institut für Mathematik und Informatik der Universität Lettlands umgesetzt. Die für diese Fassung aufbereiteten Daten bilden die Grundlage dieser Plattform.",
+    "en": "An improved digital resource for volumes 13–15, which contain the legends, was published in 2012. It also included German translations, but is now accessible only through web archives. The project was carried out by researchers from the Archives of Latvian Folklore at the University of Latvia’s Institute of Literature, Folklore and Art and the Artificial Intelligence Laboratory at its Institute of Mathematics and Computer Science. The data prepared for that edition were used to develop this platform."
+  },
+  "about.supportBefore": {
+    "lv": "Digitālā teiku platforma tiek veidota LU Humanitāro zinātņu fakultātes Digitālo humanitāro zinātņu centrā ar Valsts pētījumu programmas “Letonika latviskas un eiropeiskas sabiedrības attīstībai” projekta ",
+    "de": "Die digitale Sagenplattform wird am Zentrum für Digital Humanities der Fakultät für Geisteswissenschaften der Universität Lettlands entwickelt. Sie wird durch das Projekt ",
+    "en": "The digital legends platform is being developed at the Digital Humanities Centre in the University of Latvia’s Faculty of Humanities, with support from the project "
+  },
+  "about.supportProject": {
+    "lv": "“Latviskā identitāte un zināšanu stratēģijas kā sabiedrības noturības resurss”",
+    "de": "„Lettische Identität und Wissensstrategien als Ressource gesellschaftlicher Resilienz“",
+    "en": "“Latvian Identity and Knowledge Strategies as a Resource for Societal Resilience”"
+  },
+  "about.supportAfter": {
+    "lv": " (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) atbalstu.",
+    "de": " (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) im Rahmen des staatlichen Forschungsprogramms „Letonika für die Entwicklung einer lettischen und europäischen Gesellschaft“ gefördert.",
+    "en": " (NAMS; No. VPP-IZM-LETONIKA-2025/1-0008), part of the national research programme “Letonika for the Development of a Latvian and European Society”."
+  },
+  "about.logosLabel": {
+    "lv": "Projekta veidotājs un atbalstītājs",
+    "de": "Projektträger und Förderer",
+    "en": "Project developer and funder"
+  },
+  "about.dhcName": {
+    "lv": "LU Digitālo humanitāro zinātņu centrs",
+    "de": "Zentrum für Digital Humanities der Universität Lettlands",
+    "en": "University of Latvia Digital Humanities Centre"
+  },
+  "about.programmeName": {
+    "lv": "Valsts pētījumu programma",
+    "de": "Staatliches Forschungsprogramm",
+    "en": "National research programme"
+  },
+  "about.description": {
+    "lv": "Par Pētera Šmita latviešu teiku digitālo platformu, tās avotiem, mērķiem un veidotājiem.",
+    "de": "Über die digitale Plattform für Pēteris Šmits’ lettische Sagen, ihre Quellen, Ziele und das Projektteam.",
+    "en": "About the digital platform for Pēteris Šmits’s Latvian legends, its sources, aims and project team."
   }
 }

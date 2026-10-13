@@ -9,8 +9,8 @@ const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\
   <div class="ml-page ml-data-page shell" data-i18n-skip>
     <header class="ml-hero"><h1 class="sr-only" data-network-page-title>Dati</h1><div id="ml-title-filters"></div></header>
     <nav class="data-overview-tabs" aria-label="Datu skati">
-      <a href={`${base}dati/#overview`} data-data-view="overview"><i data-lucide="chart-no-axes-column"></i><span data-overview-tab>Pārskats</span></a>
       <a href={`${base}dati/#network`} data-data-view="network"><i data-lucide="network"></i><span data-network-tab>Tīkls</span></a>
+      <a href={`${base}dati/#overview`} data-data-view="overview"><i data-lucide="chart-no-axes-column"></i><span data-overview-tab>Pārskats</span></a>
     </nav>
     <section id="ml-dashboard" aria-labelledby="ml-dashboard-title"><div id="ml-dashboard-content"></div></section>
     <div class="data-help-footer"><a class="context-help" href={`${base}par-projektu/#tikls`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-network-guide>Palīdzība tīkla izpētei</span></a></div>
@@ -23,7 +23,7 @@ const payload=JSON.stringify({types,topics,metadataLabels,base}).replace(/</g,'\
     const updateHeading=()=>{const lang=document.documentElement.dataset.uiLang;document.querySelector('[data-network-page-title]')!.textContent=lang==='de'?'Daten':lang==='en'?'Data':'Dati'};
     const updateGuide=()=>{const lang=document.documentElement.dataset.uiLang;document.querySelector('[data-network-guide]')!.textContent=lang==='de'?'Hilfe zur Datenerkundung':lang==='en'?'Data exploration guide':'Palīdzība datu izpētei'};
     const guideLink=document.querySelector<HTMLAnchorElement>('.context-help')!;
-    if(location.hash!=='#network')guideLink.href=guideLink.href.replace('#tikls','#dati');
+    if(location.hash==='#overview')guideLink.href=guideLink.href.replace('#tikls','#dati');
     updateGuide();window.addEventListener('ui-language-change',updateGuide);
     updateHeading();window.addEventListener('ui-language-change',updateHeading);
   </script>

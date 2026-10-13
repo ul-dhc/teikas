@@ -15,36 +15,36 @@ const base = import.meta.env.BASE_URL;
     <div class="shell about-shell">
       <a class="back-link icon-link" href={base}><i data-lucide="arrow-left"></i> Atpakaļ</a>
       <div class="eyebrow">Par projektu</div>
-      <h1>Latviešu teiku digitālā platforma</h1>
+      <h1 data-i18n="about.title">Latviešu teiku digitālā platforma</h1>
     </div>
   </header>
 
   <article class="about-content shell">
     <div class="about-main">
-      <p class="about-intro">Šī digitālā platforma šobrīd piedāvā iepazīt {legendCount} latviešu teikas, kas publicētas folklorista Pētera Šmita apkopotajā 15 sējumu izdevumā “Latviešu pasakas un teikas” – līdz šim lielākajā latviešu vēstītājfolkloras krājumā, kas publicēts no 1925. līdz 1937. gadam. Teiku tekstiem tiek piedāvāts tulkojums vācu valodā, un drīzumā tiks pievienotas anotācijas angļu valodā.</p>
+      <p class="about-intro" data-about-intro data-count={legends.length} data-i18n-skip>Šī digitālā platforma šobrīd piedāvā iepazīt {legendCount} latviešu teikas, kas publicētas folklorista Pētera Šmita apkopotajā 15 sējumu izdevumā “Latviešu pasakas un teikas” – līdz šim lielākajā latviešu vēstītājfolkloras krājumā, kas izdots no 1925. līdz 1937. gadam. Teiku tekstiem tiek piedāvāts tulkojums vācu valodā, un drīzumā tiks pievienotas anotācijas angļu valodā.</p>
 
       <h2>Projekta mērķis</h2>
-      <p>Projekta mērķis ir izstrādāt jaunu digitālo versiju Pētera Šmita “Latviešu pasaku un teiku” krājumam, pilnveidojot un papildinot metadatus, kā arī izstrādājot rīkus teiku analīzei un datu vizualizācijai. Tuvākajā laikā plānots šo resursu sasaistīt ar LU LFMI Latviešu folkloras krātuves digitālo arhīvu <a href="https://garamantas.lv/" target="_blank" rel="noopener noreferrer">garamantas.lv</a>.</p>
+      <p><span data-i18n="about.goalText">Projekta mērķis ir izstrādāt jaunu digitālo versiju Pētera Šmita “Latviešu pasaku un teiku” krājumam, pilnveidojot un papildinot metadatus, kā arī izstrādājot rīkus teiku analīzei un datu vizualizācijai. Tuvākajā laikā plānots šo resursu sasaistīt ar LU LFMI Latviešu folkloras krātuves digitālo arhīvu </span><a href="https://garamantas.lv/" target="_blank" rel="noopener noreferrer">garamantas.lv</a>.</p>
 
       <h2>Tulkojums vācu valodā</h2>
-      <p>Krājumam pastāv pilns tulkojums vācu valodā, kas glabājas Vācijā Getingenas Zinātņu akadēmijas pētniecības centra <span lang="de">“Enzyklopädie des Märchens”</span> arhīvā. Tulkojums veikts 20. gadsimta 60. gadu beigās un 70. gadu sākumā, iekļaujot iepriekšējos tulkojumus, un tas ir līdz šim lielākais latviešu folkloras tekstu tulkojums citā valodā. Šajā digitālajā platformā izmantots teiku tekstu tulkojums.</p>
+      <p><span data-i18n="about.translationBefore">Krājumam pastāv pilns tulkojums vācu valodā, kas glabājas Vācijā Getingenas Zinātņu akadēmijas pētniecības centra </span><span lang="de">“Enzyklopädie des Märchens”</span><span data-i18n="about.translationAfter"> arhīvā. Tulkojums veikts 20. gadsimta 60. gadu beigās un 70. gadu sākumā, iekļaujot iepriekšējos tulkojumus, un tas ir līdz šim lielākais latviešu folkloras tekstu tulkojums citā valodā. Šajā digitālajā platformā izmantots teiku tekstu tulkojums.</span></p>
 
       <h2>Iepriekšējās digitālās versijas</h2>
-      <p>Pētera Šmita “Latviešu pasakām un teikām” ir izstrādātas vairākas digitālās versijas. Pirmā no tām pieejama jau kopš 1998. gada, kad krājumu digitalizēja LU MII Mākslīgā intelekta laboratorija.</p>
-      <p>Krājuma 13.–15. sējumam, kuros apkopotas teikas, 2012. gadā tika publicēts uzlabots resurss. Tajā bija iekļauti arī teiku tulkojumi vācu valodā, taču resurss vairs nav pieejams ārpus interneta arhivēšanas rīkiem. Projektu īstenoja LU LFMI Latviešu folkloras krātuves un LU MII Mākslīgā intelekta laboratorijas pētnieki, un tieši šai digitālajai versijai sagatavotie dati izmantoti šīs platformas izstrādē.</p>
+      <p><span data-i18n="about.previousFirst">Pētera Šmita “Latviešu pasakām un teikām” ir izstrādātas vairākas digitālās versijas. Pirmā no tām pieejama jau kopš 1998. gada, kad krājumu digitalizēja LU MII Mākslīgā intelekta laboratorija.</span></p>
+      <p><span data-i18n="about.previousSecond">Krājuma 13.–15. sējumam, kuros apkopotas teikas, 2012. gadā tika publicēts uzlabots resurss. Tajā bija iekļauti arī teiku tulkojumi vācu valodā, taču resurss vairs nav pieejams ārpus interneta arhivēšanas rīkiem. Projektu īstenoja LU LFMI Latviešu folkloras krātuves un LU MII Mākslīgā intelekta laboratorijas pētnieki, un tieši šai digitālajai versijai sagatavotie dati izmantoti šīs platformas izstrādē.</span></p>
 
       <h2>Veidotāji un atbalsts</h2>
-      <p>Digitālā teiku platforma tiek veidota LU Humanitāro zinātņu fakultātes Digitālo humanitāro zinātņu centrā ar Valsts pētījumu programmas “Letonika latviskas un eiropeiskas sabiedrības attīstībai” projekta <a href="https://lulfmi.lv/petijumi/projekti/nams-latviska-identitate-un-zinasanu-strategijas-ka-sabiedribas-noturibas-resurss" target="_blank" rel="noopener noreferrer">“Latviskā identitāte un zināšanu stratēģijas kā sabiedrības noturības resurss”</a> (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) atbalstu.</p>
+      <p><span data-i18n="about.supportBefore">Digitālā teiku platforma tiek veidota LU Humanitāro zinātņu fakultātes Digitālo humanitāro zinātņu centrā ar Valsts pētījumu programmas “Letonika latviskas un eiropeiskas sabiedrības attīstībai” projekta </span><a href="https://lulfmi.lv/petijumi/projekti/nams-latviska-identitate-un-zinasanu-strategijas-ka-sabiedribas-noturibas-resurss" target="_blank" rel="noopener noreferrer"><span data-i18n="about.supportProject">“Latviskā identitāte un zināšanu stratēģijas kā sabiedrības noturības resurss”</span></a><span data-i18n="about.supportAfter"> (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) atbalstu.</span></p>
     </div>
 
-    <section class="funding-logos" aria-label="Projekta veidotājs un atbalstītājs">
-      <a href="https://ul-dhc.github.io/" class="institution-logo dhc-logo" target="_blank" rel="noopener noreferrer" aria-label="LU Digitālo humanitāro zinātņu centrs">
+    <section class="funding-logos" aria-label="Projekta veidotājs un atbalstītājs" data-i18n-aria-label="about.logosLabel">
+      <a href="https://ul-dhc.github.io/" class="institution-logo dhc-logo" target="_blank" rel="noopener noreferrer" aria-label="LU Digitālo humanitāro zinātņu centrs" data-i18n-aria-label="about.dhcName">
         <img class="logo-lv logo-light" src={`${base}assets/logos/dhc-lv.png`} alt="LU Digitālo humanitāro zinātņu centrs" />
         <img class="logo-en logo-light" src={`${base}assets/logos/dhc-en.png`} alt="University of Latvia Digital Humanities Centre" />
         <img class="logo-lv logo-dark" src={`${base}assets/logos/dhc-lv-white.png`} alt="" />
         <img class="logo-en logo-dark" src={`${base}assets/logos/dhc-en-white.png`} alt="" />
       </a>
-      <a href="https://www.lzp.gov.lv/" class="institution-logo vpp-logo" target="_blank" rel="noopener noreferrer" aria-label="Valsts pētījumu programma">
+      <a href="https://www.lzp.gov.lv/" class="institution-logo vpp-logo" target="_blank" rel="noopener noreferrer" aria-label="Valsts pētījumu programma" data-i18n-aria-label="about.programmeName">
         <img class="logo-lv logo-light" src={`${base}assets/logos/vpp-lv.png`} alt="VPP – Valsts pētījumu programma" />
         <img class="logo-en logo-light" src={`${base}assets/logos/vpp-en.png`} alt="SRP – State Research Programme" />
         <img class="logo-lv logo-dark" src={`${base}assets/logos/vpp-lv-white.png`} alt="" />
@@ -66,4 +66,16 @@ const base = import.meta.env.BASE_URL;
       </section>
     </div>
   </article>
+  <script>
+    import ui from '../i18n/ui.json';
+    const updateAboutIntro=()=>{
+      const element=document.querySelector<HTMLElement>('[data-about-intro]')!;
+      const lang=(document.documentElement.dataset.uiLang||'lv') as 'lv'|'de'|'en';
+      const count=new Intl.NumberFormat(lang).format(Number(element.dataset.count));
+      element.textContent=ui['about.intro'][lang].replace('{count}',count);
+      document.title=ui['about.label'][lang]+' – Teikas';
+      document.querySelector('meta[name="description"]')?.setAttribute('content',ui['about.description'][lang]);
+    };
+    updateAboutIntro();window.addEventListener('ui-language-change',updateAboutIntro);
+  </script>
 </BaseLayout>

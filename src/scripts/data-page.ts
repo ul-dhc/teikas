@@ -1,8 +1,8 @@
 import workspaceStyle from '../styles/data-workspace.css?inline';
 // Keep the established Teikas overview and the full network explorer independent.
 // Each view loads its own styles so one dashboard cannot override the other.
-const view = location.hash === '#network' ? 'network' : 'overview';
-if (!location.hash) history.replaceState({}, '', location.pathname + location.search + '#overview');
+const view = location.hash === '#overview' ? 'overview' : 'network';
+if (!location.hash) history.replaceState({}, '', location.pathname + location.search + '#network');
 const data = JSON.parse(document.getElementById('ml-data')!.textContent!);
 const overview = JSON.parse(document.getElementById('overview-data')!.textContent!);
 function tabUrl(target: string) {
@@ -35,7 +35,7 @@ document.addEventListener('click', event => {
   const target = link.dataset.dataView!;
   if (target !== view) { history.pushState({}, '', tabUrl(target)); location.reload(); }
 }, true);
-const reloadView = () => { if ((location.hash === '#network' ? 'network' : 'overview') !== view) location.reload(); };
+const reloadView = () => { if ((location.hash === '#overview' ? 'overview' : 'network') !== view) location.reload(); };
 window.addEventListener('popstate', reloadView);
 window.addEventListener('hashchange', reloadView);
 const updateTabs = () => {
