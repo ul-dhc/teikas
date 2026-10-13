@@ -10,11 +10,13 @@ export const networkPalettes = [
   { id: 'nordlys', name: 'Krustceles', source: 'Teikas · neon',
     light: ['#7038ff', '#00bbd4', '#f020b8', '#72c900', '#2460ff', '#00a880'],
     dark: ['#b08aff', '#29edff', '#ff58d6', '#b5ff39', '#669aff', '#42d8b4'] },
-  // Mežs: mint, forest green, berries, moss, violet and water.
+  // Mežs: lake blue (places), spruce (collectors), lingonberry (narrators),
+  // cloudberry gold (themes), woodland violet (volumes), spring cyan (sources).
+  // Distinct hue families keep overlapping categories recognisable in both themes.
   { id: 'troll', name: 'Mežs', source: 'Teikas · forest',
     bipartiteThread: { light: '#397c83', dark: '#86c8ce' },
-    light: ['#27795d', '#146b35', '#9b354b', '#5d8b41', '#7055a3', '#318e99'],
-    dark: ['#78c6a3', '#42b86f', '#dd788b', '#a0c57b', '#b29ae3', '#79cbd5'] },
+    light: ['#345da8', '#19713e', '#ae3453', '#a77b08', '#7952ad', '#087f8c'],
+    dark: ['#7ca9ef', '#60ba7d', '#ef8098', '#e9c558', '#b69aeb', '#53cbd3'] },
   // Krēsla: rose, mint, lilac and blue; deliberately soft in both themes.
   { id: 'huldra', name: 'Krēsla', source: 'Teikas · pastels',
     light: ['#dfa3b8', '#9ac9b3', '#b3a2d8', '#98bfe2', '#a4aedf', '#9fcdd3'],
