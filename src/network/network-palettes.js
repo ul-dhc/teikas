@@ -2,12 +2,12 @@
 // Keep the original IDs so saved views and shared links retain their palette.
 export const paletteFields = ['county', 'collector', 'narrator', 'typeId', 'topic', 'place'];
 export const networkPalettes = [
-  // Vadātājs: the original Norwegian Troll palette, in the same category order.
+  // Vadātājs: Norwegian Troll colours with cool teal themes replacing beige.
   // Source: norwegian legends/src/ml-index/network-palettes.js.
   { id: 'sagn', name: 'Vadātājs', source: 'Norske sagn · Troll · embers and stone',
     bipartiteThread: { light: '#9c6150', dark: '#c18a76' },
-    light: ['#cc4824', '#7b293e', '#bd8215', '#665a51', '#a14f1b', '#d16a70'],
-    dark: ['#f06a35', '#bf526c', '#edb343', '#a8998a', '#d38b48', '#ed9698'] },
+    light: ['#cc4824', '#7b293e', '#bd8215', '#287f8e', '#a14f1b', '#d16a70'],
+    dark: ['#f06a35', '#bf526c', '#edb343', '#65c7d4', '#d38b48', '#ed9698'] },
   // Krustceles: electric, highly saturated colours, luminous after dark.
   { id: 'nordlys', name: 'Krustceles', source: 'Teikas · neon',
     light: ['#7038ff', '#00bbd4', '#f020b8', '#72c900', '#2460ff', '#00a880'],
