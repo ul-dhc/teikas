@@ -87,5 +87,5 @@
 :root[data-theme=dark] body .ml-volume-bar>span{background:color-mix(in srgb,var(--volume-color),white 30%)}
 
 /* Opaque, neutral surfaces keep search, menus and explanations crisp. */
-:root body :is(.ml-hover-tooltip,.network-tooltip){background:var(--raised);border-color:var(--line)}
+
 :root body .ml-data-view-switch button[aria-pressed=true]{background:var(--action-fill);color:var(--action-ink)}

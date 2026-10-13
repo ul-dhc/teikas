@@ -2,23 +2,23 @@
 // Keep the original IDs so saved views and shared links retain their palette.
 export const paletteFields = ['county', 'collector', 'narrator', 'typeId', 'topic', 'place'];
 export const networkPalettes = [
-  // Purvs: the platform's ink blue, water, moss and muted gold.
+  // Purvs: ink blue, water, moss and cool violet.
   { id: 'sagn', name: 'Purvs', source: 'Teikas · platform colours',
-    light: ['#164f78', '#43897d', '#7c769c', '#276f9e', '#ad8940', '#65738a'],
-    dark: ['#9bb5d5', '#80b8aa', '#b3a8ce', '#88a8ce', '#cfad57', '#b1bfd0'] },
+    light: ['#164f78', '#43897d', '#7c769c', '#276f9e', '#625cab', '#65738a'],
+    dark: ['#9bb5d5', '#80b8aa', '#b3a8ce', '#88a8ce', '#a79cde', '#b1bfd0'] },
   // Krustceles: electric, highly saturated colours, luminous after dark.
   { id: 'nordlys', name: 'Krustceles', source: 'Teikas · neon',
-    light: ['#7038ff', '#00bbd4', '#f020b8', '#72c900', '#ff7400', '#2460ff'],
-    dark: ['#b08aff', '#29edff', '#ff58d6', '#b5ff39', '#ffab32', '#669aff'] },
-  // Mežs: autumn leaves, berries, bark and olive foliage.
-  { id: 'troll', name: 'Mežs', source: 'Teikas · autumn',
-    bipartiteThread: { light: '#a65329', dark: '#e3a36c' },
-    light: ['#c45323', '#85852d', '#9b354b', '#d49b28', '#79503a', '#b87735'],
-    dark: ['#ee8b4b', '#b5bd59', '#dd788b', '#f1c75b', '#bd9273', '#e7ae68'] },
-  // Krēsla: rose, mint, lilac and peach; deliberately soft in both themes.
+    light: ['#7038ff', '#00bbd4', '#f020b8', '#72c900', '#2460ff', '#00a880'],
+    dark: ['#b08aff', '#29edff', '#ff58d6', '#b5ff39', '#669aff', '#42d8b4'] },
+  // Mežs: mint, forest green, berries, moss, violet and water.
+  { id: 'troll', name: 'Mežs', source: 'Teikas · forest',
+    bipartiteThread: { light: '#397c83', dark: '#86c8ce' },
+    light: ['#27795d', '#146b35', '#9b354b', '#5d8b41', '#7055a3', '#318e99'],
+    dark: ['#78c6a3', '#42b86f', '#dd788b', '#a0c57b', '#b29ae3', '#79cbd5'] },
+  // Krēsla: rose, mint, lilac and blue; deliberately soft in both themes.
   { id: 'huldra', name: 'Krēsla', source: 'Teikas · pastels',
-    light: ['#dfa3b8', '#9ac9b3', '#b3a2d8', '#98bfe2', '#edbb98', '#d6ce98'],
-    dark: ['#f0bbcf', '#b8e1cc', '#cebfed', '#bddaf3', '#f5d2b7', '#e9e1b5'] },
+    light: ['#dfa3b8', '#9ac9b3', '#b3a2d8', '#98bfe2', '#a4aedf', '#9fcdd3'],
+    dark: ['#f0bbcf', '#b8e1cc', '#cebfed', '#bddaf3', '#c2caf3', '#bfe6eb'] },
 ];
 export function paletteVariables(id) {
   const palette = networkPalettes.find(item => item.id === id) || networkPalettes.find(item => item.id === 'troll');

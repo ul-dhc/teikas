@@ -395,3 +395,13 @@ body.ml-network-presented{overflow:hidden}
 .ml-dashboard-filters [data-filter-category=decade]{--chip-tone:#338c92}
 :root[data-theme=dark] .ml-dashboard-filters [data-filter-category]{color:color-mix(in srgb,var(--chip-tone) 48%,var(--ink));background:color-mix(in srgb,var(--chip-tone) 15%,var(--raised))}
 @media(min-width:1000px){#ml-title-filters{flex:1 1 0;margin-left:auto}#ml-title-filters .ml-dashboard-filters{justify-content:flex-end;flex-wrap:nowrap}#ml-title-filters .ml-dashboard-filters button{min-width:0}}
+
+/* Keep structured connections light; selected relationships remain prominent. */
+.ml-network-svg:not(.layout-free) .ml-network-edge:not(.is-active) .ml-edge-flow{--edge-opacity:.095}
+
+/* Single connections need more contrast against the light canvas. */
+.ml-network-workspace{--network-free-edge-alpha:.3;--network-idle-edge-width:.75px}
+:root[data-theme=dark] .ml-network-workspace{--network-free-edge-alpha:.26;--network-idle-edge-width:.75px}
+.ml-network-svg.layout-free:not(.has-selection) .ml-network-edge:not(.is-active) .ml-edge-base{stroke:var(--thread-color);--edge-opacity:var(--network-free-edge-alpha);stroke-width:var(--network-idle-edge-width)}
+
+.ml-network-workspace button[data-label-mode=active]{color:var(--ink);background:var(--control-selected-bg);border-color:var(--control-selected-line)}

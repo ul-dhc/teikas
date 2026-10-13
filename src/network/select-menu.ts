@@ -29,7 +29,7 @@ function choose(index: number) {
   close();
   select.selectedIndex = index;
   const trigger = labels.get(select)!;
-  trigger.querySelector('span')!.textContent = select.selectedOptions[0]?.textContent || '';
+  trigger.querySelector('.ml-select-value')!.textContent = select.selectedOptions[0]?.textContent || '';
   select.dispatchEvent(new Event('change', { bubbles: true }));
   // Dashboard changes rebuild the controls, so focus the new equivalent trigger.
   const replacement = select.id ? document.getElementById(select.id) as HTMLSelectElement :
@@ -39,7 +39,7 @@ function choose(index: number) {
 function open(select: HTMLSelectElement, trigger: HTMLButtonElement) {
   close(); search = '';
   const menu = document.createElement('div');
-  menu.className = 'ml-select-menu';
+  menu.className = select.hasAttribute('data-network-filter')?'ml-select-menu platform-filter-menu':'ml-select-menu';
   const list = document.createElement('div'); list.className = 'ml-select-options';
   list.id = trigger.getAttribute('aria-controls')!;
   list.setAttribute('role', 'listbox'); list.setAttribute('aria-label', trigger.getAttribute('aria-label')!);
@@ -128,8 +128,9 @@ export function enhanceSelects(root: HTMLElement) {
     const label = select.closest('label')?.cloneNode(true) as HTMLElement | undefined;
     label?.querySelectorAll('select, input, button').forEach(element => element.remove());
     trigger.setAttribute('aria-label', select.getAttribute('aria-label') || label?.textContent?.trim() || 'Select');
-    const value = document.createElement('span'); value.textContent = select.selectedOptions[0]?.textContent || '';
+    const value = document.createElement('span'); value.className='ml-select-value'; value.textContent = select.selectedOptions[0]?.textContent || '';
     const icon = document.createElement('i'); icon.dataset.lucide = 'chevron-down'; trigger.append(value, icon);
+    if(select.hasAttribute('data-network-filter')){const caption=document.createElement('span');caption.className='ml-select-label';caption.textContent=trigger.getAttribute('aria-label');trigger.prepend(caption);}
     trigger.disabled = select.disabled;
     select.before(wrapper); wrapper.append(select, trigger);
     select.classList.add('ml-native-select'); select.tabIndex = -1; select.setAttribute('aria-hidden', 'true');

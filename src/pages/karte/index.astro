@@ -16,7 +16,7 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
 <BaseLayout title="Karte" active="map">
   <article class="map-page" data-map-page data-base={base} data-undated-count={mapUndatedCount} data-undated-percent={mapUndatedPercent}>
     <div class="map-workspace browser-layout browser">
-    <aside class="filter-sidebar map-filters" data-map-filters>
+    <aside class="platform-filter-panel filter-sidebar map-filters" data-map-filters>
       <button class="mobile-filter-toggle" type="button" data-map-mobile-filter-toggle aria-expanded="false" aria-controls="map-filters"><span><i data-lucide="sliders-horizontal"></i><span data-i18n="map.filters">Filtri</span></span><i data-lucide="chevron-down"></i></button>
       <form id="map-filters">
         <div class="filter-title"><h2 data-i18n="map.filters">Filtri</h2><a class="context-help context-help-icon"  href={`${base}par-projektu/#dati`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.filtersHelp">Par filtriem</span></a><button class="text-button clear-filters" type="button" data-map-filter-clear hidden><i data-lucide="rotate-ccw"></i><span data-i18n="map.clearFiltersLong">Notīrīt filtrus</span></button></div>
@@ -29,7 +29,7 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
       </form>
       <details class="download-menu" data-map-download data-disabled="true"><summary aria-disabled="true"><i data-lucide="download"></i><span data-i18n="map.download">Lejupielādēt</span><i data-lucide="chevron-down"></i></summary><div class="download-options"><a class="context-help"  href={`${base}par-projektu/#dati`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.exportsHelp">Par lejupielādi</span></a><div class="download-formats"><button type="button" data-map-export="csv" disabled>CSV</button><button type="button" data-map-export="geojson" disabled>GeoJSON</button><button type="button" data-map-export="graphml" disabled>GraphML</button></div></div></details><a class="map-alternative-link" href={`${base}teksti/`} data-i18n="map.accessibleAlternative">Izmantojiet tekstu pārlūku kā kartes tekstuālo alternatīvu.</a><p class="download-hint" data-map-download-hint data-i18n="map.downloadHint">Lai lejupielādētu, vispirms veiciet atlasi.</p>
     </aside>
-    <button type="button" class="map-filter-collapse" data-map-filter-collapse aria-expanded="true" aria-controls="map-filters" aria-label="Skjul filtre" title="Skjul filtre"><i data-lucide="chevron-left"></i></button>
+    <button type="button" class="map-filter-collapse" data-map-filter-collapse aria-expanded="true" aria-controls="map-filters" aria-label="Skjul filtre" data-tooltip="Skjul filtre"><i data-lucide="chevron-left"></i></button>
     <section
       class="map-stage"
       aria-label="Kart over sagn"
@@ -163,7 +163,6 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
         </div>
       </div>
 
-      <div class="network-tooltip" data-network-tooltip hidden></div>
       <div class="heat-controls" data-heat-controls hidden>
         <label
           ><span data-i18n="map.intensity">Intensitāte</span><input

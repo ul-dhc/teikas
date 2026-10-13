@@ -49,13 +49,6 @@
 :root body .ml-pie-sector,
 :root body .ml-pie-sector:is(:hover,:focus,:focus-visible){outline:none!important;box-shadow:none!important}
 
-/* All custom hover labels share compact type and a neutral, opaque surface. */
-:root body :is(.ml-hover-tooltip,.network-tooltip){
- padding:.4rem .6rem;border:1px solid var(--line);border-radius:5px;
- background:var(--raised);color:var(--ink);
- box-shadow:0 2px 8px color-mix(in srgb,var(--ink),transparent 92%);
- backdrop-filter:none;-webkit-backdrop-filter:none;
- font:400 .75rem/1.4 var(--sans);max-width:min(280px,calc(100vw - 16px));
-}
-:root body :is(.ml-hover-tooltip,.network-tooltip) strong{font-size:inherit;font-weight:500}
+
+
 @media(prefers-reduced-motion:reduce){:root body :is(button,a,summary,input,select,.stat,.feature,.daily-icon,.result-card,.ml-dash-card){transition:none}}

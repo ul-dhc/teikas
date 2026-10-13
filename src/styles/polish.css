@@ -445,10 +445,12 @@ body{background:
 .filter-sidebar .multi-options input{accent-color:var(--browse-green)}
 .filter-sidebar .multi-options label:hover{background:color-mix(in srgb,var(--browse-green),transparent 93%)}
 
-.stats .stat,.stats .stat:nth-child(1),.stats .stat:nth-child(2),.stats .stat:nth-child(3),.stats .stat:nth-child(4),:root[data-theme=dark] .stats .stat,:root[data-theme=dark] .stats .stat:nth-child(1),:root[data-theme=dark] .stats .stat:nth-child(2),:root[data-theme=dark] .stats .stat:nth-child(3),:root[data-theme=dark] .stats .stat:nth-child(4){border:.65px solid var(--line);border-top:2px solid color-mix(in srgb,var(--stat-outline),transparent 12%)}
-.stats .stat:hover,.stats .stat:nth-child(2):hover,.stats .stat:nth-child(3):hover,.stats .stat:nth-child(4):hover,:root[data-theme=dark] .stats .stat:hover{border:.65px solid color-mix(in srgb,var(--line),var(--stat-outline) 18%);border-top:2px solid var(--stat-outline)}
-:root:not([data-theme=dark]) .stats .stat:hover{border:.65px solid color-mix(in srgb,var(--line),var(--stat-outline) 18%);border-top:2px solid var(--stat-outline)}
-.stats .stat:hover,.stats .stat:nth-child(2):hover,.stats .stat:nth-child(3):hover,.stats .stat:nth-child(4):hover,:root[data-theme=dark] .stats .stat:hover{transform:translateY(-2px);border:1px solid color-mix(in srgb,var(--stat-outline),transparent 14%);background:color-mix(in srgb,var(--raised),var(--stat-outline) 5%);box-shadow:0 14px 34px color-mix(in srgb,var(--stat-outline),transparent 88%),inset 0 1px 0 color-mix(in srgb,#fff,transparent 78%)}
+/* Quiet statistic cards: only the thin outline changes on hover. */
+:root body .stats .stat:nth-child(n){border:.65px solid var(--line)!important;background:var(--raised)!important;box-shadow:none!important;transform:none!important;transition:border-color .18s ease}
+:root body .stats .stat:nth-child(n):hover{border-color:color-mix(in srgb,var(--stat-outline) 35%,var(--line))!important;background:var(--raised)!important;box-shadow:none!important;transform:none!important}
+:root body .stats .stat:nth-child(n):hover strong{color:var(--ink);text-shadow:none}
+:root body .stats .stat:nth-child(n):hover>.lucide{transform:none;filter:none}
+@media(prefers-reduced-motion:reduce){:root body .stats .stat:nth-child(n){transition:none}}
 @media(max-width:600px){.stats .stat{min-height:104px;padding:1rem;grid-template-columns:38px 1fr}.stats .stat strong{font-size:1.9rem}.stats .stat>.lucide{width:29px;height:29px}}
 
 /* Final interaction refinements */

@@ -1,3 +1,4 @@
+import {hidePlatformTooltip as hideTooltip} from '../scripts/tooltips';
 import {dashboardCopy} from './dashboard-copy';
 import {treemap} from './treemap.js';
 import {flattenTypes, selectRecords, countsBy, selectionLink, UNKNOWN} from './statistics.js';
@@ -14,22 +15,6 @@ export function createDashboard(options: Options) {
  const {types,topics,base,lang} = options;
  const all = flattenTypes(types) as Row[];
  const root = document.getElementById('ml-dashboard-content')!;
- const tooltip=document.createElement('div');
- tooltip.className='ml-hover-tooltip';tooltip.id='ml-dashboard-tooltip';tooltip.setAttribute('role','tooltip');tooltip.hidden=true;document.body.append(tooltip);
- let tooltipTarget:Element|null=null;
- function hideTooltip(){tooltip.hidden=true;tooltipTarget?.removeAttribute('aria-describedby');tooltipTarget=null;}
- function showTooltip(target:Element){
-  hideTooltip();tooltipTarget=target;tooltip.textContent=target.getAttribute('data-tooltip');tooltip.hidden=false;target.setAttribute('aria-describedby',tooltip.id);
-  const pie=target.closest('.ml-volume-pie'),rect=(pie||target).getBoundingClientRect(),box=tooltip.getBoundingClientRect();
-  tooltip.style.left=`${Math.max(8,Math.min(innerWidth-box.width-8,rect.left+rect.width/2-box.width/2))}px`;
-  tooltip.style.top=`${pie&&rect.bottom+box.height+16<innerHeight?rect.bottom+8:rect.top>box.height+16?rect.top-box.height-8:Math.min(innerHeight-box.height-8,rect.bottom+8)}px`;
- }
- root.addEventListener('pointerover',event=>{const target=(event.target as Element).closest('[data-tooltip]');if(target&&target!==tooltipTarget)showTooltip(target);});
- root.addEventListener('pointerout',event=>{if(tooltipTarget&&!tooltipTarget.contains((event as PointerEvent).relatedTarget as Node))hideTooltip();});
- root.addEventListener('focusin',event=>{const target=(event.target as Element).closest('[data-tooltip]');if(target)showTooltip(target);});
- root.addEventListener('focusout',hideTooltip);
- window.addEventListener('scroll',()=>{const target=tooltipTarget;if(target&&target===document.activeElement){const rect=target.getBoundingClientRect();if(rect.bottom>0&&rect.top<innerHeight)showTooltip(target);else hideTooltip();}else hideTooltip();},true);window.addEventListener('resize',hideTooltip);
- root.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
  const tr = (key:keyof typeof dashboardCopy.en) => dashboardCopy[lang()][key];
  const esc = (value:unknown) => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
  const name = (type:Type) => lang()==='de'?(type.de||type.lv):type.lv;
