@@ -2124,5 +2124,15 @@
     "lv": "Norwegian folk legends ir saistīta norvēģu teiku digitālā platforma. Abus resursus vieno pieeja teiku lasīšanai, metadatu izpētei un vizualizācijām. Norvēģu resurss ir pielāgots no Teiku platformas, lai izmēģinātu tās atkārtotu izmantošanu citām datu kopām ar līdzīgu struktūru. Katrs resurss izmanto savu datu kopu.",
     "en": "Norwegian folk legends is a related digital platform for Norwegian legends. The two resources share an approach to reading legends, exploring metadata and visualisation. The Norwegian resource was adapted from the Teikas platform to test its reuse for other datasets with a similar structure. Each resource uses its own dataset.",
     "de": "Norwegian folk legends ist eine verwandte digitale Plattform für norwegische Sagen. Beide Ressourcen verbindet ein Ansatz zum Lesen von Sagen, zur Erkundung von Metadaten und zur Visualisierung. Die norwegische Ressource wurde auf Grundlage der Teikas-Plattform angepasst, um deren Wiederverwendbarkeit für andere Datensätze mit ähnlicher Struktur zu erproben. Jede Ressource verwendet ihren eigenen Datensatz."
+  },
+  "guide.metadataTitle": {
+    "lv": "Nosaukumi un nezināmās vērtības",
+    "de": "Namen und unbekannte Werte",
+    "en": "Names and unknown values"
+  },
+  "guide.metadataText": {
+    "lv": "Nosaukumi saglabā datu kopas rakstību; varianti var parādīties atsevišķi. Nezināmais apzīmē trūkstošus metadatus, nevis vienu personu.",
+    "de": "Namen behalten ihre Schreibweise aus dem Datensatz; Varianten können getrennt erscheinen. Unbekannt bezeichnet fehlende Metadaten, nicht eine einzelne Person.",
+    "en": "Names retain their dataset spelling; variants may appear separately. Unknown indicates missing metadata, not a single person."
   }
 }

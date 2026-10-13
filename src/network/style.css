@@ -417,10 +417,3 @@ html:has(body.ml-network-presented),body.ml-network-presented{overflow:hidden}
 .ml-network-surface>.ml-dashboard-filters .ml-reset{margin-left:0}
 
 .ml-network-edge:not(.is-active) .ml-edge-base{stroke-width:var(--network-idle-edge-width)}
-
-.ml-network-filters .ml-network-size-hint{font-size:10px;line-height:1.45;margin:0 0 .75rem;color:var(--muted)}
-
-.platform-filter-panel .ml-network-size-field .ml-select-trigger{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem .5rem;border-radius:20px}
-.ml-network-size-field .ml-select-label{grid-column:1;grid-row:1}
-.platform-filter-panel .ml-network-size-field .ml-select-value{grid-column:1;grid-row:2;margin-left:0;text-align:left}
-.ml-network-size-field .ml-select-trigger>svg{grid-column:2;grid-row:1/3}
