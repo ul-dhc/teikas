@@ -49,6 +49,20 @@ for (const link of legendSources) {
   list.push(link);
   linksByLegend.set(link.legendId, list);
 }
+const legendsByPerson = new Map<string, Legend[]>();
+for (const legend of legends) {
+  if (legend.collectorId) {
+    const collectorList = legendsByPerson.get(legend.collectorId) ?? [];
+    collectorList.push(legend);
+    legendsByPerson.set(legend.collectorId, collectorList);
+  }
+  if (legend.narratorId) {
+    const narratorList = legendsByPerson.get(legend.narratorId) ?? [];
+    narratorList.push(legend);
+    legendsByPerson.set(legend.narratorId, narratorList);
+  }
+}
+
 
 export function resolveLegend(legend: Legend) {
   const relations = (linksByLegend.get(legend.id) ?? []).map((relation) => ({ relation, source: sourcesById.get(relation.sourceId)! }));
@@ -95,11 +109,13 @@ const browseCollectors = collectors.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Pierakstītājs",
   gender: person.gender,
+  selection: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')),
 }));
 const browseNarrators = narrators.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Teicējs",
   gender: person.gender,
+  selection: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')),
 }));
 export const browsePersons = [...browseNarrators, ...browseCollectors];
 
