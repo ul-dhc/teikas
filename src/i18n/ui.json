@@ -692,7 +692,7 @@
   "about.title": {
     "lv": "Latviešu teiku digitālā platforma",
     "de": "Digitale Plattform für lettische Sagen",
-    "en": "Digital Platform for Latvian Legends"
+    "en": "Teikas. Digital Platform for Latvian Legends"
   },
   "about.goalTitle": {
     "lv": "Projekta mērķis",
@@ -1944,5 +1944,360 @@
     "lv": "Rādīt vietu nenoteiktību",
     "de": "Ortsunsicherheit anzeigen",
     "en": "Show location uncertainty"
+  },
+  "network.nav": {
+    "lv": "Tīkls",
+    "de": "Netzwerk",
+    "en": "Network"
+  },
+  "network.overview": {
+    "lv": "Pārskats",
+    "de": "Übersicht",
+    "en": "Overview"
+  },
+  "network.guideTitle": {
+    "lv": "Tīkla izpēte",
+    "de": "Netzwerkerkundung",
+    "en": "Network exploration"
+  },
+  "network.guideUse": {
+    "lv": "Sadaļā Dati → Tīkls vari izvēlēties kategorijas, filtrēt krājumu un skatīt saistības brīvajā, hierarhiskajā vai divdaļu izkārtojumā. Klikšķis uz mezgla vai līnijas atlasa saistītās teikas; tekstu panelis parāda šo atlasi. Vairāku mezglu izvēlē vari apvienot jebkura mezgla teikas vai atstāt tikai visiem mezgliem kopīgās teikas.",
+    "de": "Unter Daten → Netzwerk kannst du Kategorien auswählen, die Sammlung filtern und Verbindungen im freien, hierarchischen oder bipartiten Layout erkunden. Ein Klick auf einen Knoten oder eine Linie wählt die zugehörigen Sagen aus. Bei mehreren Knoten kannst du die Vereinigungsmenge oder nur die gemeinsamen Sagen auswählen.",
+    "en": "Under Data → Network, choose categories, filter the collection and explore connections in free, hierarchical or bipartite layouts. Clicking a node or line selects the associated legends; the text panel shows this selection. Multi-node selection supports either the union or intersection of their legends."
+  },
+  "network.guideMeaning": {
+    "lv": "Saistība nozīmē, ka metadatu vērtības sastopamas vienā teikā. Tā nepierāda cilvēku kontaktus, ceļojumus vai vēsturisku ietekmi. Nezināmais apzīmē trūkstošus metadatus. Avotu kategorijā izmantots pirmais normalizētais primārais avots; datējumi var ietvert gan pierakstīšanas, gan avotu publicēšanas gadus.",
+    "de": "Eine Verbindung bedeutet, dass Metadatenwerte in derselben Sage vorkommen. Sie belegt keine Kontakte, Reisen oder historischen Einflüsse. Unbekannt bezeichnet fehlende Metadaten. Quellen zeigen die erste normalisierte Primärquelle; Datierungen können Aufzeichnungs- und Publikationsjahre umfassen.",
+    "en": "A connection means that metadata values occur in the same legend. It does not prove personal contacts, travel or historical influence. Unknown means missing metadata. Sources use the first normalized primary source; dates may include both recording and source publication years."
+  },
+  "guide.title": {
+    "lv": "Dati un platformas lietošana",
+    "en": "Data and using the platform",
+    "de": "Daten und Nutzung der Plattform"
+  },
+  "guide.intro": {
+    "lv": "Ceļvedis teiku krājuma izpētei: ko rāda dati, kā lietot vizualizācijas un kā interpretēt atrastās saistības.",
+    "en": "A guide to exploring the collection: what the data shows, how to use the visualisations and how to interpret connections.",
+    "de": "Ein Leitfaden zur Erkundung der Sammlung: Was die Daten zeigen, wie die Visualisierungen funktionieren und wie Verbindungen zu verstehen sind."
+  },
+  "guide.dati": {
+    "lv": "Dati un metadati",
+    "en": "Data and metadata",
+    "de": "Daten und Metadaten"
+  },
+  "guide.karte": {
+    "lv": "Karte",
+    "en": "Map",
+    "de": "Karte"
+  },
+  "guide.tikls": {
+    "lv": "Pārskats un tīkls",
+    "en": "Overview and network",
+    "de": "Übersicht und Netzwerk"
+  },
+  "guide.atlase": {
+    "lv": "Atlase un lejupielāde",
+    "en": "Selection and downloads",
+    "de": "Auswahl und Download"
+  },
+  "guide.corpusTitle": {
+    "lv": "Kas ir iekļauts?",
+    "en": "What is included?",
+    "de": "Was ist enthalten?"
+  },
+  "guide.corpusText": {
+    "lv": "Platformā apkopotas Pētera Šmita “Latviešu pasaku un teiku” 13.–15. sējuma teikas. Katram ierakstam līdzās tekstam pieejami metadati: sējums un nodaļa jeb tēma, vieta, pierakstītājs, teicējs un avots, ciktāl šī informācija ir norādīta datu kopā. Tēmas atbilst krājuma nodaļām, nevis automātiski noteiktām teksta tēmām.",
+    "en": "The platform contains legends from volumes 13–15 of Pēteris Šmits’ Latvian Folktales and Legends. Each record combines text with metadata: volume and chapter or theme, place, collector, narrator and source, where available in the dataset. Themes follow the collection’s chapters; they are not automatically inferred from the texts.",
+    "de": "Die Plattform enthält Sagen aus den Bänden 13–15 von Pēteris Šmits’ Lettischen Märchen und Sagen. Jeder Eintrag verbindet den Text mit Metadaten: Band, Kapitel bzw. Thema, Ort, Sammler, Erzähler und Quelle, soweit im Datensatz angegeben. Die Themen entsprechen den Kapiteln der Sammlung und werden nicht automatisch aus den Texten abgeleitet."
+  },
+  "guide.limitsTitle": {
+    "lv": "Trūkstošie dati un datējumi",
+    "en": "Missing information and dates",
+    "de": "Fehlende Angaben und Datierungen"
+  },
+  "guide.limitsText": {
+    "lv": "Metadati nav vienlīdz pilnīgi visām teikām. “Nav norādīts” apzīmē trūkstošu informāciju, nevis vienu kopīgu personu vai vietu. Gads var attiekties uz teikas pierakstīšanu vai avota publikāciju. Tāpēc datu sadalījums raksturo digitalizēto krājumu un tā dokumentējumu, nevis visu teiku tradīciju vai tās izplatību sabiedrībā.",
+    "en": "Metadata completeness varies between legends. “Not specified” means missing information, not a single shared person or place. A year may refer to recording or source publication. Distributions therefore describe the digitised collection and its documentation, rather than the whole legend tradition or its prevalence in society.",
+    "de": "Die Vollständigkeit der Metadaten variiert. „Nicht angegeben“ bezeichnet fehlende Informationen und keine gemeinsame Person oder keinen gemeinsamen Ort. Ein Jahr kann sich auf die Aufzeichnung oder die Veröffentlichung einer Quelle beziehen. Verteilungen beschreiben somit die digitalisierte Sammlung und ihre Dokumentation, nicht die gesamte Sagentradition oder deren Verbreitung in der Gesellschaft."
+  },
+  "guide.mapViewsTitle": {
+    "lv": "Vietas, punkti un blīvums",
+    "en": "Places, points and density",
+    "de": "Orte, Punkte und Dichte"
+  },
+  "guide.mapViewsText": {
+    "lv": "Kartē var pārslēgt vietu un teiku punktu skatus, punktu kopas, blīvuma karti un metadatu saistību tīklus. Punktu kopas apvieno tuvumā esošus ierakstus atkarībā no pietuvinājuma. Blīvuma karte izceļ ierakstu koncentrāciju; tās izskats mainās līdz ar mērogu un iestatījumiem. Krāsas jālasa kopā ar attiecīgā skata leģendu.",
+    "en": "The map offers place and legend point views, clusters, a density map and metadata networks. Clusters group nearby records according to the zoom level. The density map highlights concentrations of records; its appearance changes with scale and settings. Read colours together with the legend for the selected view.",
+    "de": "Die Karte bietet Ansichten für Orte und Sagenpunkte, Punktgruppen, eine Dichtekarte und Metadatennetzwerke. Punktgruppen fassen nahe Einträge abhängig vom Zoom zusammen. Die Dichtekarte hebt Konzentrationen von Einträgen hervor; ihr Erscheinungsbild ändert sich mit Maßstab und Einstellungen. Farben sind anhand der Legende der jeweiligen Ansicht zu lesen."
+  },
+  "guide.coordinatesTitle": {
+    "lv": "Koordinātas un kartes robežas",
+    "en": "Coordinates and map limitations",
+    "de": "Koordinaten und Grenzen der Karte"
+  },
+  "guide.coordinatesText": {
+    "lv": "Kartes dati šobrīd vēl tiek pilnveidoti: vietu piesaiste un koordinātas var tikt precizētas. Karte izmanto datu kopā pieejamās koordinātas; to precizitāte nav neatkarīgi pārbaudīta. Punkts var apzīmēt vietu vai plašāku teritoriju, nevis precīzu teikas notikuma vietu. Teikas bez koordinātām nav redzamas kā punkti, taču ir pieejamas atsevišķā atlasē un tekstu pārlūkā. Tukšs kartes apgabals nenozīmē, ka tur nav bijis teiku.",
+    "en": "The map data is still being improved: place assignments and coordinates may be revised. The map uses coordinates available in the dataset; their accuracy has not been independently verified. A point may represent a place or wider area rather than the exact location of a narrated event. Legends without coordinates do not appear as points but remain available in a separate selection and the text browser. An empty area does not mean that no legends existed there.",
+    "de": "Die Kartendaten werden derzeit weiter verbessert: Ortszuordnungen und Koordinaten können präzisiert werden. Die Karte verwendet die Koordinaten des Datensatzes; ihre Genauigkeit wurde nicht unabhängig geprüft. Ein Punkt kann einen Ort oder ein größeres Gebiet statt des genauen Schauplatzes darstellen. Sagen ohne Koordinaten erscheinen nicht als Punkte, bleiben aber in einer eigenen Auswahl und im Textbrowser zugänglich. Eine leere Kartenfläche bedeutet nicht, dass es dort keine Sagen gab."
+  },
+  "guide.overviewTitle": {
+    "lv": "Pārskata diagrammas",
+    "en": "Overview charts",
+    "de": "Diagramme der Übersicht"
+  },
+  "guide.overviewText": {
+    "lv": "Sadaļā Dati ir divas cilnes: Pārskats un Tīkls. Pārskatā redzami krājuma rādītāji un metadatu sadalījumi. Izmantojot filtrus, vari sašaurināt aplūkoto teiku kopu un salīdzināt tās raksturojumu. Skaitļi attiecas uz pašreizējo atlasi; interpretējot tos, jāņem vērā trūkstošie metadati un datējumu atšķirīgā nozīme.",
+    "en": "Data has two tabs: Overview and Network. Overview shows collection metrics and metadata distributions. Filters narrow the set of legends being explored. Counts refer to the current selection; interpretation should account for missing metadata and the different meanings of dates.",
+    "de": "Der Bereich Daten hat zwei Registerkarten: Übersicht und Netzwerk. Die Übersicht zeigt Kennzahlen der Sammlung und Verteilungen der Metadaten. Filter grenzen die betrachtete Auswahl ein. Zahlen beziehen sich auf die aktuelle Auswahl; fehlende Metadaten und unterschiedliche Bedeutungen von Datierungen sind dabei zu berücksichtigen."
+  },
+  "guide.connectionsTitle": {
+    "lv": "Ko nozīmē tīkla saistība?",
+    "en": "What does a network connection mean?",
+    "de": "Was bedeutet eine Netzwerkverbindung?"
+  },
+  "guide.connectionsText": {
+    "lv": "Mezgli attēlo metadatu vērtības, piemēram, vietas, personas, tēmas un sējumus. Līnija savieno vērtības, kas sastopamas vienā teikā; biezāka līnija nozīmē vairāk kopīgu teiku. Saistība nepierāda personu kontaktus, ceļojumus, vēsturisku ietekmi vai tekstu līdzību. Avotu kategorijā izmantots pirmais normalizētais primārais avots, tāpēc tīkls neatspoguļo visas iespējamās avotu atsauces.",
+    "en": "Nodes represent metadata values such as places, people, themes and volumes. A line joins values occurring in the same legend; a thicker line means more shared legends. A connection does not establish personal contact, travel, historical influence or textual similarity. The source category uses the first normalised primary source, so the network does not capture every possible source reference.",
+    "de": "Knoten stehen für Metadatenwerte wie Orte, Personen, Themen und Bände. Eine Linie verbindet Werte, die in derselben Sage vorkommen; eine dickere Linie bedeutet mehr gemeinsame Sagen. Eine Verbindung belegt weder persönliche Kontakte, Reisen oder historischen Einfluss noch Textähnlichkeit. Die Quellenkategorie verwendet die erste normalisierte Primärquelle und erfasst daher nicht alle möglichen Quellenverweise."
+  },
+  "guide.scopeTitle": {
+    "lv": "Vai redzamas visas saistības?",
+    "en": "Are all connections visible?",
+    "de": "Sind alle Verbindungen sichtbar?"
+  },
+  "guide.scopeText": {
+    "lv": "Tīkls tiek veidots no platformā iekļautajām teikām, ņemot vērā aktīvos filtrus un izvēlētās metadatu kategorijas. Sākotnēji redzamas vietas, pierakstītāji, tēmas un sējumi; teicējus un avotus vari pievienot. Divdaļu skatā salīdzina divas izvēlētas kategorijas. Tāpēc pašreizējais attēls nav visu iespējamo saistību pilns attēlojums. Zem tīkla norādītais teiku, mezglu un saistību skaits palīdz novērtēt redzamā apjomu.",
+    "en": "The network is built from the platform’s legends, subject to active filters and selected metadata categories. Initially it shows places, collectors, themes and volumes; narrators and sources can be added. The bipartite view compares two selected categories. The current view is therefore not a complete picture of every possible connection. Counts of legends, nodes and connections below the network indicate its scope.",
+    "de": "Das Netzwerk wird aus den Sagen der Plattform unter Berücksichtigung aktiver Filter und gewählter Metadatenkategorien erstellt. Anfangs zeigt es Orte, Sammler, Themen und Bände; Erzähler und Quellen lassen sich ergänzen. Die zweiteilige Ansicht vergleicht zwei gewählte Kategorien. Die aktuelle Ansicht bildet daher nicht jede mögliche Verbindung ab. Die Zahlen der Sagen, Knoten und Verbindungen unter dem Netzwerk zeigen dessen Umfang."
+  },
+  "guide.layoutsTitle": {
+    "lv": "Izkārtojumi, krāsas un kustība",
+    "en": "Layouts, colours and motion",
+    "de": "Anordnungen, Farben und Bewegung"
+  },
+  "guide.layoutsText": {
+    "lv": "Brīvais, hierarhiskais un divdaļu izkārtojums piedāvā atšķirīgus vienu un to pašu saistību lasīšanas veidus. Mezgla novietojums pats par sevi nenorāda ģeogrāfiju vai hronoloģiju. Krāsas atšķir metadatu kategorijas; paletes “Mežs” (noklusējums), “Purvs”, “Krustceles” un “Krēsla” maina izskatu, nevis datus. Animācijas palīdz sekot atlasītajām saistībām un nav vēsturisku procesu attēlojums.",
+    "en": "Free, hierarchical and bipartite layouts offer different ways to read the same connections. A node’s position does not itself indicate geography or chronology. Colours distinguish metadata categories; the palettes Mežs (default), Purvs, Krustceles and Krēsla change appearance, not data. Animations help trace selected connections and do not represent historical processes.",
+    "de": "Freie, hierarchische und zweiteilige Anordnungen bieten verschiedene Lesarten derselben Verbindungen. Die Position eines Knotens bezeichnet für sich genommen weder Geografie noch Chronologie. Farben unterscheiden Metadatenkategorien; die Paletten Mežs (Standard), Purvs, Krustceles und Krēsla ändern die Darstellung, nicht die Daten. Animationen helfen, ausgewählten Verbindungen zu folgen, und stellen keine historischen Prozesse dar."
+  },
+  "guide.selectionTitle": {
+    "lv": "No vizualizācijas pie teksta",
+    "en": "From visualisation to text",
+    "de": "Von der Visualisierung zum Text"
+  },
+  "guide.selectionText": {
+    "lv": "Klikšķis uz tīkla mezgla vai līnijas atver saistīto teiku priekšskatījumu. Atlasot vairākus mezglus, vari apvienot ar jebkuru no tiem saistītās teikas vai atstāt tikai visiem kopīgās. Priekšskatījumā pieejami latviešu un vācu teksti, arī paralēli, ja tulkojums ir pieejams. Visu atlasi vari atvērt tekstu pārlūkā, lai turpinātu lasīšanu. Aktīvo filtru etiķetes ļauj noņemt atsevišķus ierobežojumus; atiestatīšana atjauno sākotnējo skatu.",
+    "en": "Click a network node or line to preview the related legends. With multiple nodes selected, combine legends linked to any of them or keep only those shared by all. The preview offers Latvian and German texts, including parallel reading where translations are available. Open the full selection in the text browser to continue reading. Active filter labels let you remove individual restrictions; reset restores the initial view.",
+    "de": "Ein Klick auf einen Netzwerkknoten oder eine Linie öffnet eine Vorschau der zugehörigen Sagen. Bei mehreren Knoten lassen sich die mit irgendeinem davon verbundenen Sagen vereinen oder nur die allen gemeinsamen behalten. Die Vorschau bietet lettische und deutsche Texte, auch parallel, sofern Übersetzungen vorhanden sind. Die gesamte Auswahl lässt sich im Textbrowser öffnen. Aktive Filter können einzeln entfernt werden; Zurücksetzen stellt die Ausgangsansicht wieder her."
+  },
+  "guide.exportsTitle": {
+    "lv": "Dalīšanās un datu lejupielāde",
+    "en": "Sharing and downloading data",
+    "de": "Teilen und Herunterladen"
+  },
+  "guide.exportsText": {
+    "lv": "Atlases saite ļauj atgriezties pie saglabātajiem filtriem un dalīties ar skatījumu. Lejupielādes saturs ir atkarīgs no pašreizējās atlases un izmantotā rīka: CSV ir piemērots metadatu tabulām, savukārt kartes lejupielāde piedāvā arī GeoJSON un GraphML. Pirms salīdzināšanas pārbaudi atlases apjomu un filtrus. Pilnā publicētā datu kopa ar bibliogrāfisko atsauci ir pieejama šīs lapas sadaļā “Datu kopas”.",
+    "en": "A selection link lets you return to saved filters and share a view. Download content depends on the current selection and tool: CSV is suitable for metadata tables, while the map also offers GeoJSON and GraphML. Before comparing results, check the selection size and filters. The published dataset and its bibliographic reference are linked in the Data sets section of this page.",
+    "de": "Ein Auswahllink ermöglicht die Rückkehr zu gespeicherten Filtern und das Teilen einer Ansicht. Der Inhalt eines Downloads hängt von der aktuellen Auswahl und dem Werkzeug ab: CSV eignet sich für Metadatentabellen; die Karte bietet zusätzlich GeoJSON und GraphML. Prüfen Sie vor Vergleichen den Umfang der Auswahl und die Filter. Der veröffentlichte Datensatz mit bibliografischer Angabe ist im Abschnitt Datensätze dieser Seite verlinkt."
+  },
+  "guide.openTitle": {
+    "lv": "Atvērtais kods",
+    "en": "Open source",
+    "de": "Open Source"
+  },
+  "guide.openText": {
+    "lv": "Platforma ir atvērtā koda projekts. Tās pirmkods ir pieejams GitHub, kur var iepazīt risinājumus, sekot izmaiņām un ziņot par kļūdām.",
+    "en": "The platform is an open-source project. Its source code is available on GitHub, where you can explore the implementation, follow changes and report issues.",
+    "de": "Die Plattform ist ein Open-Source-Projekt. Ihr Quellcode ist auf GitHub verfügbar. Dort können Sie die Umsetzung erkunden, Änderungen verfolgen und Fehler melden."
+  },
+  "guide.openLink": {
+    "lv": "Teiku pirmkods GitHub",
+    "en": "Teikas source code on GitHub",
+    "de": "Teikas-Quellcode auf GitHub"
+  },
+  "guide.relatedTitle": {
+    "lv": "Saistītais resurss",
+    "en": "Related resource",
+    "de": "Verwandte Ressource"
+  },
+  "guide.relatedText": {
+    "lv": "Norwegian folk legends ir saistīta norvēģu teiku digitālā platforma. Abus resursus vieno pieeja teiku lasīšanai, metadatu izpētei un vizualizācijām. Norvēģu resurss ir pielāgots no Teiku platformas, lai izmēģinātu tās atkārtotu izmantošanu citām datu kopām ar līdzīgu struktūru. Katrs resurss izmanto savu datu kopu.",
+    "en": "Norwegian folk legends is a related digital platform for Norwegian legends. The two resources share an approach to reading legends, exploring metadata and visualisation. The Norwegian resource was adapted from the Teikas platform to test its reuse for other datasets with a similar structure. Each resource uses its own dataset.",
+    "de": "Norwegian folk legends ist eine verwandte digitale Plattform für norwegische Sagen. Beide Ressourcen verbindet ein Ansatz zum Lesen von Sagen, zur Erkundung von Metadaten und zur Visualisierung. Die norwegische Ressource wurde auf Grundlage der Teikas-Plattform angepasst, um deren Wiederverwendbarkeit für andere Datensätze mit ähnlicher Struktur zu erproben. Jede Ressource verwendet ihren eigenen Datensatz."
+  },
+  "guide.metadataTitle": {
+    "lv": "Nosaukumi un nezināmās vērtības",
+    "de": "Namen und unbekannte Werte",
+    "en": "Names and unknown values"
+  },
+  "guide.metadataText": {
+    "lv": "Nosaukumi saglabā datu kopas rakstību; varianti var parādīties atsevišķi. Nezināmais apzīmē trūkstošus metadatus, nevis vienu personu.",
+    "de": "Namen behalten ihre Schreibweise aus dem Datensatz; Varianten können getrennt erscheinen. Unbekannt bezeichnet fehlende Metadaten, nicht eine einzelne Person.",
+    "en": "Names retain their dataset spelling; variants may appear separately. Unknown indicates missing metadata, not a single person."
+  },
+  "themes.title": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "themes.intro": {
+    "lv": "Pārlūko teikas pēc krājuma nodaļām un apakšnodaļām.",
+    "de": "Entdecke Sagen nach Kapiteln und Unterkapiteln der Sammlung.",
+    "en": "Explore legends by the collection’s chapters and subsections."
+  },
+  "themes.chapters": {
+    "lv": "nodaļas",
+    "de": "Kapitel",
+    "en": "chapters"
+  },
+  "themes.sections": {
+    "lv": "apakšnodaļas",
+    "de": "Unterkapitel",
+    "en": "subsections"
+  },
+  "themes.records": {
+    "lv": "teikas",
+    "de": "Sagen",
+    "en": "legends"
+  },
+  "themes.search": {
+    "lv": "Meklēt tēmu vai nosaukumu…",
+    "de": "Thema oder Titel suchen…",
+    "en": "Search themes or titles…"
+  },
+  "themes.order": {
+    "lv": "Secība",
+    "de": "Reihenfolge",
+    "en": "Order"
+  },
+  "themes.collectionOrder": {
+    "lv": "Krājuma secībā",
+    "de": "Sammlungsreihenfolge",
+    "en": "Collection order"
+  },
+  "themes.alphabetical": {
+    "lv": "Alfabētiski",
+    "de": "Alphabetisch",
+    "en": "Alphabetical"
+  },
+  "themes.expand": {
+    "lv": "Izvērst visas",
+    "de": "Alle aufklappen",
+    "en": "Expand all"
+  },
+  "themes.collapse": {
+    "lv": "Sakļaut visas",
+    "de": "Alle zuklappen",
+    "en": "Collapse all"
+  },
+  "themes.viewTheme": {
+    "lv": "Skatīt tēmu",
+    "de": "Thema erkunden",
+    "en": "Explore theme"
+  },
+  "themes.texts": {
+    "lv": "Teksti",
+    "de": "Texte",
+    "en": "Texts"
+  },
+  "themes.network": {
+    "lv": "Tīkls",
+    "de": "Netzwerk",
+    "en": "Network"
+  },
+  "themes.overview": {
+    "lv": "Datu pārskats",
+    "de": "Datenübersicht",
+    "en": "Data overview"
+  },
+  "themes.empty": {
+    "lv": "Neviena tēma nav atrasta. Maini meklējamo vārdu.",
+    "de": "Keine Themen gefunden. Ändere den Suchbegriff.",
+    "en": "No themes found. Try another search term."
+  },
+  "themes.method": {
+    "lv": "Tēmu dalījums un nosaukumi saglabā Pētera Šmita krājuma nodaļas un apakšnodaļas.",
+    "de": "Die Gliederung und Titel folgen den Kapiteln und Unterkapiteln der Sammlung von Pēteris Šmits.",
+    "en": "The organization and titles follow the chapters and subsections of Pēteris Šmits’s collection."
+  },
+  "themes.volume": {
+    "lv": "{value}. sējums",
+    "de": "Band {value}",
+    "en": "Volume {value}"
+  },
+  "themes.scope": {
+    "lv": "Tēma: {value}",
+    "de": "Thema: {value}",
+    "en": "Theme: {value}"
+  },
+  "themes.all": {
+    "lv": "Visas tēmas",
+    "de": "Alle Themen",
+    "en": "All themes"
+  },
+  "about.intro": {
+    "lv": "Šī digitālā platforma šobrīd piedāvā iepazīt {count} latviešu teikas, kas publicētas folklorista Pētera Šmita apkopotajā 15 sējumu izdevumā “Latviešu pasakas un teikas” – līdz šim lielākajā latviešu vēstītājfolkloras krājumā, kas izdots no 1925. līdz 1937. gadam. Teiku tekstiem tiek piedāvāts tulkojums vācu valodā, un drīzumā tiks pievienotas anotācijas angļu valodā.",
+    "de": "Diese digitale Plattform bietet derzeit Zugang zu {count} lettischen Sagen aus der von dem Volkskundler Pēteris Šmits zusammengestellten 15-bändigen Ausgabe „Latviešu pasakas un teikas“ (Lettische Märchen und Sagen). Die von 1925 bis 1937 erschienene Ausgabe ist bis heute die umfangreichste Sammlung lettischer Erzählfolklore. Die Sagentexte sind auch in deutscher Übersetzung verfügbar; englische Annotationen werden in Kürze ergänzt.",
+    "en": "This digital platform currently provides access to {count} Latvian legends from the 15-volume collection “Latviešu pasakas un teikas” (Latvian Folktales and Legends), compiled by folklorist Pēteris Šmits and issued between 1925 and 1937. It remains the largest collection of Latvian narrative folklore. German translations of the legends are available, and English annotations will be added soon."
+  },
+  "about.goalText": {
+    "lv": "Projekta mērķis ir izstrādāt jaunu digitālo versiju Pētera Šmita “Latviešu pasaku un teiku” krājumam, pilnveidojot un papildinot metadatus, kā arī izstrādājot rīkus teiku analīzei un datu vizualizācijai. Tuvākajā laikā plānots šo resursu sasaistīt ar LU LFMI Latviešu folkloras krātuves digitālo arhīvu ",
+    "de": "Ziel des Projekts ist eine neue digitale Fassung von Pēteris Šmits’ Sammlung „Latviešu pasakas un teikas“. Dazu werden die Metadaten verbessert und ergänzt sowie Werkzeuge zur Analyse der Sagen und zur Datenvisualisierung entwickelt. In nächster Zeit soll die Plattform mit dem digitalen Archiv des Lettischen Folklorearchivs am Institut für Literatur, Folklore und Kunst der Universität Lettlands verknüpft werden: ",
+    "en": "The project aims to create a new digital edition of Pēteris Šmits’s “Latviešu pasakas un teikas” collection by improving and enriching its metadata and developing tools for analysing legends and visualising data. The platform is to be linked soon to the digital archive of the Archives of Latvian Folklore at the University of Latvia’s Institute of Literature, Folklore and Art: "
+  },
+  "about.translationBefore": {
+    "lv": "Krājumam pastāv pilns tulkojums vācu valodā, kas glabājas Vācijā Getingenas Zinātņu akadēmijas pētniecības centra ",
+    "de": "Eine vollständige deutsche Übersetzung der Sammlung wird im Archiv der Forschungsstelle ",
+    "en": "A complete German translation of the collection is held in the archive of the "
+  },
+  "about.translationAfter": {
+    "lv": " arhīvā. Tulkojums veikts 20. gadsimta 60. gadu beigās un 70. gadu sākumā, iekļaujot iepriekšējos tulkojumus, un tas ir līdz šim lielākais latviešu folkloras tekstu tulkojums citā valodā. Šajā digitālajā platformā izmantots teiku tekstu tulkojums.",
+    "de": " der Akademie der Wissenschaften zu Göttingen in Deutschland aufbewahrt. Sie entstand Ende der 1960er und Anfang der 1970er Jahre unter Einbeziehung früherer Übersetzungen und ist bis heute die umfangreichste Übersetzung lettischer Folkloretexte in eine andere Sprache. Diese Plattform verwendet die Übersetzung der Sagentexte.",
+    "en": " research centre at the Göttingen Academy of Sciences and Humanities in Germany. Produced in the late 1960s and early 1970s, incorporating earlier translations, it remains the largest translation of Latvian folklore texts into another language. This platform uses the translations of the legends."
+  },
+  "about.previousFirst": {
+    "lv": "Pētera Šmita “Latviešu pasakām un teikām” ir izstrādātas vairākas digitālās versijas. Pirmā no tām pieejama jau kopš 1998. gada, kad krājumu digitalizēja LU MII Mākslīgā intelekta laboratorija.",
+    "de": "Von Pēteris Šmits’ „Latviešu pasakas un teikas“ wurden mehrere digitale Fassungen erstellt. Die erste ist seit 1998 verfügbar, als das Labor für künstliche Intelligenz am Institut für Mathematik und Informatik der Universität Lettlands die Sammlung digitalisierte.",
+    "en": "Several digital versions of Pēteris Šmits’s “Latviešu pasakas un teikas” have been created. The first has been available since 1998, when the Artificial Intelligence Laboratory at the University of Latvia’s Institute of Mathematics and Computer Science digitised the collection."
+  },
+  "about.previousSecond": {
+    "lv": "Krājuma 13.–15. sējumam, kuros apkopotas teikas, 2012. gadā tika publicēts uzlabots resurss. Tajā bija iekļauti arī teiku tulkojumi vācu valodā, taču resurss vairs nav pieejams ārpus interneta arhivēšanas rīkiem. Projektu īstenoja LU LFMI Latviešu folkloras krātuves un LU MII Mākslīgā intelekta laboratorijas pētnieki, un tieši šai digitālajai versijai sagatavotie dati izmantoti šīs platformas izstrādē.",
+    "de": "Für die Bände 13–15, die die Sagen enthalten, wurde 2012 eine verbesserte digitale Fassung veröffentlicht. Sie umfasste auch deutsche Übersetzungen der Sagen, ist heute jedoch nur noch über Webarchive zugänglich. Das Projekt wurde von Forschenden des Lettischen Folklorearchivs am Institut für Literatur, Folklore und Kunst sowie des Labors für künstliche Intelligenz am Institut für Mathematik und Informatik der Universität Lettlands umgesetzt. Die für diese Fassung aufbereiteten Daten bilden die Grundlage dieser Plattform.",
+    "en": "An improved digital resource for volumes 13–15, which contain the legends, was published in 2012. It also included German translations, but is now accessible only through web archives. The project was carried out by researchers from the Archives of Latvian Folklore at the University of Latvia’s Institute of Literature, Folklore and Art and the Artificial Intelligence Laboratory at its Institute of Mathematics and Computer Science. The data prepared for that edition were used to develop this platform."
+  },
+  "about.supportBefore": {
+    "lv": "Digitālā teiku platforma tiek veidota LU Humanitāro zinātņu fakultātes Digitālo humanitāro zinātņu centrā ar Valsts pētījumu programmas “Letonika latviskas un eiropeiskas sabiedrības attīstībai” projekta ",
+    "de": "Die digitale Sagenplattform wird am Zentrum für Digital Humanities der Fakultät für Geisteswissenschaften der Universität Lettlands entwickelt. Sie wird durch das Projekt ",
+    "en": "The digital legends platform is being developed at the Digital Humanities Centre in the University of Latvia’s Faculty of Humanities, with support from the project "
+  },
+  "about.supportProject": {
+    "lv": "“Latviskā identitāte un zināšanu stratēģijas kā sabiedrības noturības resurss”",
+    "de": "„Lettische Identität und Wissensstrategien als Ressource gesellschaftlicher Resilienz“",
+    "en": "“Latvian Identity and Knowledge Strategies as a Resource for Societal Resilience”"
+  },
+  "about.supportAfter": {
+    "lv": " (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) atbalstu.",
+    "de": " (NAMS; Nr. VPP-IZM-LETONIKA-2025/1-0008) im Rahmen des staatlichen Forschungsprogramms „Letonika für die Entwicklung einer lettischen und europäischen Gesellschaft“ gefördert.",
+    "en": " (NAMS; No. VPP-IZM-LETONIKA-2025/1-0008), part of the national research programme “Letonika for the Development of a Latvian and European Society”."
+  },
+  "about.logosLabel": {
+    "lv": "Projekta veidotājs un atbalstītājs",
+    "de": "Projektträger und Förderer",
+    "en": "Project developer and funder"
+  },
+  "about.dhcName": {
+    "lv": "LU Digitālo humanitāro zinātņu centrs",
+    "de": "Zentrum für Digital Humanities der Universität Lettlands",
+    "en": "University of Latvia Digital Humanities Centre"
+  },
+  "about.programmeName": {
+    "lv": "Valsts pētījumu programma",
+    "de": "Staatliches Forschungsprogramm",
+    "en": "National research programme"
+  },
+  "about.description": {
+    "lv": "Par Pētera Šmita latviešu teiku digitālo platformu, tās avotiem, mērķiem un veidotājiem.",
+    "de": "Über die digitale Plattform für Pēteris Šmits’ lettische Sagen, ihre Quellen, Ziele und das Projektteam.",
+    "en": "About the digital platform for Pēteris Šmits’s Latvian legends, its sources, aims and project team."
   }
 }

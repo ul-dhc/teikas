@@ -1,3 +1,4 @@
+import {hidePlatformTooltip as hideTooltip} from '../scripts/tooltips';
 import {dashboardCopy} from './dashboard-copy';
 import {treemap} from './treemap.js';
 import {flattenTypes, selectRecords, countsBy, selectionLink, UNKNOWN} from './statistics.js';
@@ -14,22 +15,6 @@ export function createDashboard(options: Options) {
  const {types,topics,base,lang} = options;
  const all = flattenTypes(types) as Row[];
  const root = document.getElementById('ml-dashboard-content')!;
- const tooltip=document.createElement('div');
- tooltip.className='ml-hover-tooltip';tooltip.id='ml-dashboard-tooltip';tooltip.setAttribute('role','tooltip');tooltip.hidden=true;document.body.append(tooltip);
- let tooltipTarget:Element|null=null;
- function hideTooltip(){tooltip.hidden=true;tooltipTarget?.removeAttribute('aria-describedby');tooltipTarget=null;}
- function showTooltip(target:Element){
-  hideTooltip();tooltipTarget=target;tooltip.textContent=target.getAttribute('data-tooltip');tooltip.hidden=false;target.setAttribute('aria-describedby',tooltip.id);
-  const pie=target.closest('.ml-volume-pie'),rect=(pie||target).getBoundingClientRect(),box=tooltip.getBoundingClientRect();
-  tooltip.style.left=`${Math.max(8,Math.min(innerWidth-box.width-8,rect.left+rect.width/2-box.width/2))}px`;
-  tooltip.style.top=`${pie&&rect.bottom+box.height+16<innerHeight?rect.bottom+8:rect.top>box.height+16?rect.top-box.height-8:Math.min(innerHeight-box.height-8,rect.bottom+8)}px`;
- }
- root.addEventListener('pointerover',event=>{const target=(event.target as Element).closest('[data-tooltip]');if(target&&target!==tooltipTarget)showTooltip(target);});
- root.addEventListener('pointerout',event=>{if(tooltipTarget&&!tooltipTarget.contains((event as PointerEvent).relatedTarget as Node))hideTooltip();});
- root.addEventListener('focusin',event=>{const target=(event.target as Element).closest('[data-tooltip]');if(target)showTooltip(target);});
- root.addEventListener('focusout',hideTooltip);
- window.addEventListener('scroll',()=>{const target=tooltipTarget;if(target&&target===document.activeElement){const rect=target.getBoundingClientRect();if(rect.bottom>0&&rect.top<innerHeight)showTooltip(target);else hideTooltip();}else hideTooltip();},true);window.addEventListener('resize',hideTooltip);
- root.addEventListener('keydown',event=>{if(event.key==='Escape')hideTooltip();});
  const tr = (key:keyof typeof dashboardCopy.en) => dashboardCopy[lang()][key];
  const esc = (value:unknown) => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
  const name = (type:Type) => lang()==='de'?(type.de||type.lv):type.lv;
@@ -115,7 +100,7 @@ export function createDashboard(options: Options) {
    const path=count===total?'M 100 4 A 96 96 0 1 1 100 196 A 96 96 0 1 1 100 4 Z':`M 100 100 L ${point(start)} A 96 96 0 ${angle-start>Math.PI?1:0} 1 ${point(angle)} Z`;
    return `<path d="${path}" class="ml-pie-sector ${tone(topic)} ${scope.topic?.id===topic.id?'is-selected':''}" role="button" tabindex="0" data-facet="topic" data-value="${esc(topic.id)}" aria-pressed="${scope.topic?.id===topic.id}" aria-label="${esc(description(topic,count))}" data-tooltip="${esc(description(topic,count))}"/>`;
   }).join('');
-  return `<section class="ml-dash-card ml-topic-chart">${chartHeading(tr('topics'))}<p class="ml-chart-subtitle">${tr('volumeCaption')}</p><div class="ml-volume-layout"><svg class="ml-volume-pie" viewBox="0 0 200 200" role="group" aria-label="${tr('topics')}"><circle cx="100" cy="100" r="96" fill="var(--line)"/>${sectors}</svg><ol class="ml-volume-cards">${ordered.map(topic=>{const count=counts.get(topic.id)||0;return `<li><button type="button" class="${tone(topic)} ${scope.topic?.id===topic.id?'is-selected':''}" data-facet="topic" data-value="${esc(topic.id)}" aria-pressed="${scope.topic?.id===topic.id}" data-tooltip="${esc(description(topic,count))}" style="--volume-share:${count/max*100}%" ${!count&&scope.topic?.id!==topic.id?'disabled':''}><span class="ml-volume-label">${esc(topic[lang()])}</span><strong>${count}</strong><small>${percent(count)}%</small><span class="ml-volume-bar" aria-hidden="true"><span></span></span></button></li>`}).join('')}</ol></div></section>`;
+  return `<section class="ml-dash-card ml-topic-chart">${chartHeading(tr('topics'))}<p class="ml-chart-subtitle">${tr('volumeCaption')}</p><div class="ml-volume-layout"><svg class="ml-volume-pie" viewBox="0 0 200 200" role="group" aria-label="${tr('topics')}"><circle cx="100" cy="100" r="96" fill="var(--chart-card)"/>${sectors}</svg><ol class="ml-volume-cards">${ordered.map(topic=>{const count=counts.get(topic.id)||0;return `<li><button type="button" class="${tone(topic)} ${scope.topic?.id===topic.id?'is-selected':''}" data-facet="topic" data-value="${esc(topic.id)}" aria-pressed="${scope.topic?.id===topic.id}" data-tooltip="${esc(description(topic,count))}" style="--volume-share:${count/max*100}%" ${!count&&scope.topic?.id!==topic.id?'disabled':''}><span class="ml-volume-label">${esc(topic[lang()])}</span><strong>${count}</strong><small>${percent(count)}%</small><span class="ml-volume-bar" aria-hidden="true"><span></span></span></button></li>`}).join('')}</ol></div></section>`;
  }
  function typesChart() {
   const counts=countsBy(cohort('type'),'typeId') as Map<string,number>;
@@ -177,7 +162,7 @@ export function createDashboard(options: Options) {
   scope=nextScope;
   const rows=cohort();
   const selectedRows=resultRows();
-  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading"><div><h2 id="ml-dashboard-title" tabindex="-1">${tr('title')}</h2><p>${tr('hint')}</p></div><div class="ml-research-actions"><button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" data-tooltip="${tr('share')}"><i data-lucide="link"></i></button><button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button></div></header><p id="ml-stats-status" role="status"></p>${chips()}${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${namedChart('collector',tr('collectors'))}${typesChart()}${namedChart('county',tr('counties'))}${translationChart()}</div>${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
+  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading"><div><h2 id="ml-dashboard-title" class="${root.closest('.ml-data-page')?'sr-only':''}" tabindex="-1">${tr('title')}</h2><p>${tr('hint')}</p></div><div class="ml-research-actions"><button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" data-tooltip="${tr('share')}"><i data-lucide="link"></i></button><button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button></div></header><p id="ml-stats-status" role="status"></p>${chips()}${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${namedChart('collector',tr('collectors'))}${typesChart()}${namedChart('county',tr('counties'))}${translationChart()}</div>${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
   const modal=panelOpen&&document.getElementById('ml-dashboard')?.hidden===false&&matchMedia('(max-width:950px)').matches;
   document.querySelectorAll<HTMLElement>('.ml-dashboard-canvas,.site-header,.ml-hero,.ml-view-switch,.ml-method,.site-footer').forEach(element=>element.inert=modal);
   document.body.classList.toggle('ml-panel-visible',modal);

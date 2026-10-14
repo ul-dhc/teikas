@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { themes, subsectionCount } from '../../lib/themes';
+import { legends } from '../../lib/data';
+const base = import.meta.env.BASE_URL;
+const textHref = (id: string) => `${base}teksti/?${new URLSearchParams({section:id})}`;
+const dataHref = (theme: (typeof themes)[number], view: string) => {
+  const type = view === 'network' ? theme.code : JSON.stringify([theme.volume, theme.title.lv]);
+  const params = new URLSearchParams({type});
+  if (view === 'network') {
+    params.set('layout','free');
+    params.set('categories','county,collector,typeId,narrator');
+  }
+  return `${base}dati/?${params}#${view}`;
+};
+---
+<BaseLayout title="Tēmas" active="themes">
+  <section class="shell themes-page">
+    <header class="themes-hero">
+      <h1 data-i18n="themes.title">Tēmas</h1>
+      <p class="lede" data-i18n="themes.intro">Pārlūko teikas pēc krājuma nodaļām un apakšnodaļām.</p>
+      <p class="themes-stats"><span><strong>{themes.length}</strong> <span data-i18n="themes.chapters">nodaļas</span></span><span><strong>{subsectionCount}</strong> <span data-i18n="themes.sections">apakšnodaļas</span></span><span><strong>{legends.length.toLocaleString('lv-LV')}</strong> <span data-i18n="themes.records">teikas</span></span></p>
+    </header>
+    <div class="themes-controls">
+      <label class="field themes-search"><span class="sr-only" data-i18n="themes.search">Meklēt tēmu vai nosaukumu…</span><input type="search" data-theme-search placeholder="Meklēt tēmu vai nosaukumu…" data-i18n-placeholder="themes.search" autocomplete="off" /></label>
+      <label class="themes-sort"><span class="sr-only" data-i18n="themes.order">Secība</span><select data-theme-sort><option value="collection" data-i18n="themes.collectionOrder">Krājuma secībā</option><option value="alphabetical" data-i18n="themes.alphabetical">Alfabētiski</option></select></label>
+      <div class="themes-expand"><button type="button" data-expand-all data-i18n="themes.expand">Izvērst visas</button><button type="button" data-collapse-all data-i18n="themes.collapse">Sakļaut visas</button></div>
+    </div>
+    <div class="themes-toc" data-theme-list>
+      {themes.map(theme => <details class="theme-chapter" data-theme-id={theme.id} data-volume={theme.volume} data-title-lv={theme.title.lv || ''} data-title-de={theme.title.de || theme.title.lv || ''}>
+        <summary><i data-lucide="chevron-down"></i><span class="theme-name" data-i18n-skip data-theme-name>{theme.title.lv}</span><span class="theme-volume" data-volume-label></span><span class="theme-count">{theme.count.toLocaleString('lv-LV')} <span data-i18n="themes.records">teikas</span></span></summary>
+        <div class="theme-body">
+          <nav class="theme-actions" aria-label="Skatīt tēmu" data-i18n-ariaLabel="themes.viewTheme">
+            <a href={textHref(theme.id)}><i data-lucide="list"></i><span data-i18n="themes.texts">Teksti</span><i data-lucide="arrow-right"></i></a>
+            <a href={dataHref(theme,'network')}><i data-lucide="network"></i><span data-i18n="themes.network">Tīkls</span></a>
+            <a href={dataHref(theme,'overview')}><i data-lucide="chart-no-axes-column"></i><span data-i18n="themes.overview">Datu pārskats</span></a>
+          </nav>
+          <ul class="theme-sections">{theme.sections.map(section => <li data-theme-section data-title-lv={section.title.lv || ''} data-title-de={section.title.de || section.title.lv || ''}><a href={textHref(section.id)}><span data-i18n-skip data-section-name>{section.title.lv}</span><span class="section-count">{section.count.toLocaleString('lv-LV')}<i data-lucide="arrow-right"></i></span></a></li>)}</ul>
+        </div>
+      </details>)}
+    </div>
+    <p class="themes-empty" data-theme-empty hidden role="status" data-i18n="themes.empty">Neviena tēma nav atrasta. Maini meklējamo vārdu.</p>
+    <p class="themes-method" data-i18n="themes.method">Tēmu dalījums un nosaukumi saglabā Pētera Šmita krājuma nodaļas un apakšnodaļas.</p>
+  </section>
+  <script>
+    const list = document.querySelector<HTMLElement>('[data-theme-list]')!;
+    const chapters = [...list.querySelectorAll<HTMLDetailsElement>('[data-theme-id]')];
+    const search = document.querySelector<HTMLInputElement>('[data-theme-search]')!;
+    const sort = document.querySelector<HTMLSelectElement>('[data-theme-sort]')!;
+    const empty = document.querySelector<HTMLElement>('[data-theme-empty]')!;
+    const storageKey = 'teikas-themes-state';
+    const params = new URLSearchParams(location.search);
+    let saved: {open?: string[]; q?: string; sort?: string; scroll?: number} = {};
+    try { saved = JSON.parse(sessionStorage.getItem(storageKey) || '{}'); } catch {}
+    const opened = new Set(params.has('open') ? (params.get('open') || '').split(',') : saved.open || []);
+    search.value = params.get('q') ?? saved.q ?? '';
+    sort.value = (params.get('sort') ?? saved.sort) === 'alphabetical' ? 'alphabetical' : 'collection';
+    const fold = (value: string) => value.toLocaleLowerCase('lv').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const tr = (key: string, values: Record<string,string> = {}) => (window as any).teikasT(key, values) as string;
+    let rendering = false, searchExpanded = true;
+    function label(element: HTMLElement) { return document.documentElement.dataset.uiLang === 'de' ? element.dataset.titleDe! : element.dataset.titleLv!; }
+    function highlight(element: HTMLElement, value: string, term: string) {
+      element.replaceChildren();
+      const index = term ? fold(value).indexOf(term) : -1;
+      if (index < 0) { element.textContent = value; return; }
+      const mark = document.createElement('mark'); mark.textContent = value.slice(index, index + term.length);
+      element.append(value.slice(0,index), mark, value.slice(index + term.length));
+    }
+    function save() {
+      sessionStorage.setItem(storageKey, JSON.stringify({open:[...opened], q:search.value, sort:sort.value, scroll:window.scrollY}));
+      const url = new URL(location.href);
+      search.value ? url.searchParams.set('q',search.value) : url.searchParams.delete('q');
+      url.searchParams.set('open',[...opened].join(','));
+      sort.value === 'alphabetical' ? url.searchParams.set('sort',sort.value) : url.searchParams.delete('sort');
+      history.replaceState(history.state,'',url);
+    }
+    function render() {
+      rendering = true;
+      const term = fold(search.value.trim());
+      const ordered = [...chapters].sort((a,b) => sort.value === 'alphabetical' ? label(a).localeCompare(label(b),document.documentElement.lang) : a.dataset.themeId!.localeCompare(b.dataset.themeId!));
+      for (const chapter of ordered) {
+        const parentMatches = !term || fold(`${chapter.dataset.titleLv} ${chapter.dataset.titleDe}`).includes(term);
+        let matches = 0;
+        for (const row of chapter.querySelectorAll<HTMLElement>('[data-theme-section]')) {
+          row.hidden = !parentMatches && !fold(`${row.dataset.titleLv} ${row.dataset.titleDe}`).includes(term);
+          if (!row.hidden) matches++;
+          highlight(row.querySelector<HTMLElement>('[data-section-name]')!,label(row),term);
+        }
+        chapter.hidden = !matches;
+        const shouldOpen = !!term && searchExpanded && !chapter.hidden || opened.has(chapter.dataset.themeId!);
+        if (chapter.open !== shouldOpen) chapter.open = shouldOpen;
+        highlight(chapter.querySelector<HTMLElement>('[data-theme-name]')!,label(chapter),term);
+        chapter.querySelector<HTMLElement>('[data-volume-label]')!.textContent = tr('themes.volume',{value:chapter.dataset.volume!});
+        list.append(chapter);
+      }
+      empty.hidden = chapters.some(chapter => !chapter.hidden);
+      rendering = false;
+    }
+    chapters.forEach(chapter => chapter.addEventListener('toggle', () => {
+      if (rendering || search.value.trim()) return;
+      chapter.open ? opened.add(chapter.dataset.themeId!) : opened.delete(chapter.dataset.themeId!);
+      save();
+    }));
+    search.addEventListener('input',()=>{searchExpanded=true;render();save();});
+    sort.addEventListener('change',()=>{render();save();});
+    document.querySelector('[data-expand-all]')!.addEventListener('click',()=>{chapters.filter(chapter=>!chapter.hidden).forEach(chapter=>{opened.add(chapter.dataset.themeId!);chapter.open=true;});save();});
+    document.querySelector('[data-collapse-all]')!.addEventListener('click',()=>{opened.clear();searchExpanded=false;render();save();});
+    window.addEventListener('ui-language-change',render);
+    window.addEventListener('pagehide',save);
+    render();
+    if ((performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming)?.type === 'back_forward' && saved.scroll) requestAnimationFrame(()=>window.scrollTo(0,saved.scroll!));
+  </script>
+  <style>
+    .themes-page{padding-block:3rem 4rem}.themes-hero h1{font:500 clamp(2.8rem,5vw,4.3rem)/1.1 var(--serif);margin:0 0 1rem}.themes-hero .lede{max-width:48rem}.themes-stats{display:flex;gap:1.6rem;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin:1.5rem 0 2.3rem}.themes-stats strong{color:var(--ink);font-variant-numeric:tabular-nums}
+    .themes-controls{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.2rem}.themes-search{flex:1;max-width:32rem;min-width:15rem}.themes-search input{border-radius:999px}.themes-sort select{padding:.65rem .7rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--raised);color:var(--ink);font:inherit;font-size:.85rem}.themes-expand{display:flex;gap:1rem;margin-left:auto}.themes-expand button{padding:.5rem 0;background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:4px;font-size:.8rem}
+    .theme-chapter{border-top:1px solid var(--line)}.theme-chapter:last-child{border-bottom:1px solid var(--line)}.theme-chapter>summary{display:flex;gap:1rem;align-items:center;padding:1.15rem 1rem;cursor:pointer;list-style:none;background:var(--surface)}.theme-chapter>summary::-webkit-details-marker{display:none}.theme-chapter>summary>i,.theme-chapter>summary>svg{width:1rem;height:1rem;flex:none;transform:rotate(-90deg)}.theme-chapter[open]>summary>svg{transform:rotate(0)}.theme-name{font:500 1.45rem/1.3 var(--serif);flex:1}.theme-volume,.theme-count{color:var(--muted);font-size:.8rem;white-space:nowrap}.theme-volume{margin-right:2rem}.theme-count{min-width:6rem;text-align:right;font-variant-numeric:tabular-nums}.theme-body{padding:.35rem 1rem 1.25rem 3rem}.theme-actions{display:flex;justify-content:flex-end;gap:1.4rem;flex-wrap:wrap;padding:.85rem 0;font-size:.8rem}.theme-actions a{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);text-decoration:none}.theme-actions a:first-child{color:var(--blue)}.theme-actions a:hover{text-decoration:underline;text-underline-offset:4px}.theme-actions svg{width:1rem;height:1rem}.theme-sections{list-style:none;padding:0;margin:0}.theme-sections li{border-top:1px solid var(--line)}.theme-sections a{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 0;text-decoration:none;font-size:.95rem}.theme-sections a:hover{color:var(--blue)}.section-count{display:flex;align-items:center;gap:1.2rem;color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums}.section-count svg{width:1rem;height:1rem}.themes-empty{padding:2rem 0;color:var(--muted)}.themes-method{max-width:48rem;color:var(--muted);font-size:.85rem;margin-top:2rem}.themes-page :global(mark){background:color-mix(in srgb,var(--focus),transparent 75%);color:inherit}.themes-page :is(a,button,input,select,summary):focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+    @media(max-width:650px){.themes-page{padding-top:2rem}.themes-search{max-width:none;flex-basis:100%}.themes-expand{gap:.8rem}.theme-chapter>summary{gap:.65rem;padding:1rem .7rem;flex-wrap:wrap}.theme-name{font-size:1.2rem}.theme-volume{display:block;order:4;flex-basis:100%;margin:0 0 0 1.65rem;font-size:.7rem}.theme-count{min-width:auto}.theme-body{padding:.3rem .7rem 1rem 2.35rem}.theme-actions{justify-content:flex-start;gap:1rem;font-size:.75rem}.theme-sections a{font-size:.9rem}.section-count{gap:.65rem}.themes-sort select{max-width:10rem}.themes-stats{gap:1rem}}
+  </style>
+</BaseLayout>

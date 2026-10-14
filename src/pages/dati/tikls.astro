@@ -1,0 +1,4 @@
+---
+const destination = `${import.meta.env.BASE_URL}dati/`;
+---
+<html lang="lv"><head><meta charset="utf-8"/><title>Tīkls – Teikas</title><script is:inline define:vars={{destination}}>location.replace(destination + location.search + (location.hash === '#overview' ? '#overview' : '#network'));</script><noscript><meta http-equiv="refresh" content={`0;url=${destination}#network`}/></noscript></head><body><a href={`${destination}#network`}>Atvērt tīklu</a></body></html>

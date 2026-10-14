@@ -1,0 +1,5 @@
+/* One surface for control, chart and map hover explanations. */
+.platform-tooltip{position:fixed;z-index:1000;display:grid;gap:.15rem;width:max-content;max-width:min(280px,calc(100vw - 16px));padding:.45rem .65rem;border:1px solid color-mix(in srgb,var(--blue) 25%,var(--line));border-radius:8px;background:var(--raised);color:var(--ink);box-shadow:0 4px 14px color-mix(in srgb,var(--navy),transparent 86%);font:400 .75rem/1.4 var(--sans);overflow-wrap:anywhere;pointer-events:none}
+.platform-tooltip strong{font:600 .75rem/1.4 var(--sans)}
+.platform-tooltip strong~span{color:var(--muted)}
+.platform-tooltip[hidden]{display:none}

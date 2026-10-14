@@ -453,3 +453,23 @@
 "map.yearTo","Līdz gadam","Bis Jahr","To year"
 "about.dataHelp","Kāpēc teiku skaits atšķiras?","Warum unterscheiden sich die Sagenzahlen?","Why do legend counts differ?"
 "map.showUncertainty","Rādīt vietu nenoteiktību","Ortsunsicherheit anzeigen","Show location uncertainty"
+themes.title,Tēmas,Themen,Themes
+themes.intro,Pārlūko teikas pēc krājuma nodaļām un apakšnodaļām.,Entdecke Sagen nach Kapiteln und Unterkapiteln der Sammlung.,Explore legends by the collection’s chapters and subsections.
+themes.chapters,nodaļas,Kapitel,chapters
+themes.sections,apakšnodaļas,Unterkapitel,subsections
+themes.records,teikas,Sagen,legends
+themes.search,Meklēt tēmu vai nosaukumu…,Thema oder Titel suchen…,Search themes or titles…
+themes.order,Secība,Reihenfolge,Order
+themes.collectionOrder,Krājuma secībā,Sammlungsreihenfolge,Collection order
+themes.alphabetical,Alfabētiski,Alphabetisch,Alphabetical
+themes.expand,Izvērst visas,Alle aufklappen,Expand all
+themes.collapse,Sakļaut visas,Alle zuklappen,Collapse all
+themes.viewTheme,Skatīt tēmu,Thema erkunden,Explore theme
+themes.texts,Teksti,Texte,Texts
+themes.network,Tīkls,Netzwerk,Network
+themes.overview,Datu pārskats,Datenübersicht,Data overview
+themes.empty,Neviena tēma nav atrasta. Maini meklējamo vārdu.,Keine Themen gefunden. Ändere den Suchbegriff.,No themes found. Try another search term.
+themes.method,Tēmu dalījums un nosaukumi saglabā Pētera Šmita krājuma nodaļas un apakšnodaļas.,Die Gliederung und Titel folgen den Kapiteln und Unterkapiteln der Sammlung von Pēteris Šmits.,The organization and titles follow the chapters and subsections of Pēteris Šmits’s collection.
+themes.volume,{value}. sējums,Band {value},Volume {value}
+themes.scope,Tēma: {value},Thema: {value},Theme: {value}
+themes.all,Visas tēmas,Alle Themen,All themes

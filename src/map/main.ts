@@ -1,3 +1,4 @@
+import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
 import {encodeSelection} from '../lib/selection.js';
 import * as maplibregl from "maplibre-gl";
 import { createElement, Maximize, Minimize, MapPin } from "lucide";
@@ -19,7 +20,6 @@ const page = document.querySelector<HTMLElement>("[data-map-page]")!,
   pointControls = page.querySelector<HTMLElement>("[data-point-controls]")!,
   networkToolbar = page.querySelector<HTMLDetailsElement>("[data-network-toolbar]")!,
   networkContext = page.querySelector<HTMLElement>("[data-network-context]")!,
-  networkTooltip = page.querySelector<HTMLElement>("[data-network-tooltip]")!,
   heatInput = page.querySelector<HTMLInputElement>(
     "[data-heat-intensity]",
   )!,
@@ -284,7 +284,7 @@ const navigationGroup = page.querySelector<HTMLElement>(".maplibregl-ctrl-top-ri
 centerMapButton.type = "button";
 centerMapButton.className = "map-center-control";
 centerMapButton.setAttribute("aria-label", tr("map.resetExtent"));
-centerMapButton.title = tr("map.resetExtent");
+centerMapButton.dataset.tooltip = tr("map.resetExtent");
 centerMapButton.innerHTML = '<i data-lucide="locate-fixed"></i>';
 (window as any).renderLucideIcons?.();
 const resetExtent = () => {
@@ -302,7 +302,7 @@ navigationGroup?.append(uncertaintyButton);
 const syncUncertaintyButton = () => {
  const label = tr("map.showUncertainty");
  uncertaintyButton.hidden = true;
- uncertaintyButton.title = label;
+ uncertaintyButton.dataset.tooltip = label;
  uncertaintyButton.setAttribute("aria-label", label);
  uncertaintyButton.setAttribute("aria-pressed", String(uncertaintyToggle.checked));
 };
@@ -319,7 +319,7 @@ navigationGroup?.append(fullscreenButton);
 const fullscreenActive = () => document.fullscreenElement === mapWorkspace || mapWorkspace.classList.contains("is-fullscreen");
 const syncFullscreen = () => {
   const active = fullscreenActive(), label = tr(active ? "map.exitFullscreen" : "map.enterFullscreen");
-  fullscreenButton.title = label;
+  fullscreenButton.dataset.tooltip = label;
   fullscreenButton.setAttribute("aria-label", label);
   fullscreenButton.setAttribute("aria-pressed", String(active));
   fullscreenButton.replaceChildren(createElement(active ? Minimize : Maximize, { width: 18, height: 18, "stroke-width": 1.8, "aria-hidden": "true" }));
@@ -356,7 +356,7 @@ for (const [selector, icon] of [[".maplibregl-ctrl-zoom-in", "plus"], [".maplibr
 requestAnimationFrame(() => {
   const label = tr("map.resetExtent");
   centerMapButton.setAttribute("aria-label", label);
-  centerMapButton.title = label;
+  centerMapButton.dataset.tooltip = label;
 });
 map.addControl(
   new maplibregl.AttributionControl({
@@ -457,8 +457,8 @@ const updateCount = () => {
   const unlocatedText = tr("map.unlocatedCount", { count: formatter().format(filteredUnmappedLegends.length) });
   unlocatedLink.querySelector("span")!.textContent = unlocatedText;
   unlocatedLink.href = `${base}teksti/?selection=${encodeURIComponent(encodeSelection(filteredUnmappedLegends.map(record => record.id)))}`;
-  unlocatedLink.title = tr("map.coordinateCountDetails", { mapped: formatter().format(filteredFeatures.length), unmapped: formatter().format(filteredUnmappedLegends.length) });
-  unlocatedLink.setAttribute("aria-label", unlocatedLink.title);
+  unlocatedLink.dataset.tooltip = tr("map.coordinateCountDetails", { mapped: formatter().format(filteredFeatures.length), unmapped: formatter().format(filteredUnmappedLegends.length) });
+  unlocatedLink.setAttribute("aria-label", unlocatedLink.dataset.tooltip!);
   countLabel.setAttribute("aria-disabled", String(visibleIds.length === 0));
   countLabel.setAttribute("aria-label", tr("map.openVisibleSelection", { count: formatter().format(value) }));
 };
@@ -500,7 +500,7 @@ const syncFilterInterface = () => {
   if (!activeFilterDisplay.hidden) {
     const clear = document.createElement("button");
     clear.type = "button"; clear.className = "network-filter-clear";
-    clear.title = tr("map.clearFiltersLong"); clear.setAttribute("aria-label", clear.title);
+    clear.dataset.tooltip = tr("map.clearFiltersLong"); clear.setAttribute("aria-label", clear.dataset.tooltip!);
     clear.innerHTML = '<i data-lucide="x"></i>';
     clear.addEventListener("click", () => filterClear.click());
     activeFilterDisplay.append(clear);
@@ -1046,9 +1046,9 @@ const publishNetwork = () => {
   const method = page.querySelector<HTMLElement>("[data-network-method] span")!;
   method.dataset.i18n = "map.networkMethodMetadata";
   method.textContent = tr(method.dataset.i18n);
-  method.parentElement!.title = method.textContent;
+  method.parentElement!.dataset.tooltip = method.textContent || "";
   if (activeNetworkNode && !networkNodes.some(node => node.id === activeNetworkNode)) { activeNetworkNode = null; panel.hidden = true; }
-  if (hoveredNetworkNode && !networkNodes.some(node => node.id === hoveredNetworkNode)) { hoveredNetworkNode = null; networkTooltip.hidden = true; }
+  if (hoveredNetworkNode && !networkNodes.some(node => node.id === hoveredNetworkNode)) { hoveredNetworkNode = null; hidePlatformTooltip(); }
   applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
   syncFilterInterface();
 };
@@ -1089,7 +1089,7 @@ const recalculateNetwork = () => {
   networkRecordCount = graph.recordCount;
   const { maxWeight } = networkScaleReferences.get(networkType.value)!;
   hoveredNetworkNode = null;
-  networkTooltip.hidden = true;
+  hidePlatformTooltip();
   networkNodes = graph.nodes.map(node => ({ ...node, color: networkColorFor(node as NetworkNode) })) as NetworkNode[];
   networkEdges = graph.edges.map(edge => ({ ...edge, strength: Math.sqrt(edge.sharedCount / maxWeight) }));
   edgeColors = new WeakMap();
@@ -2085,18 +2085,18 @@ map.on("mouseenter", "network-node-hit", (event) => {
   hoveredNetworkNode = node.id;
   scheduleNetworkFocus();
   const related = (adjacentEdges.get(node.id) || []).length;
-  networkTooltip.hidden = false;
-  networkTooltip.innerHTML = `<strong>${node.name}</strong><span>${networkKindLabel(node)}</span><span>${tr("map.networkLegendCount", { count: formatter().format(node.count) })}</span><span>${tr("map.networkPlotCount", { count: formatter().format(node.plotCount) })}</span><span>${tr("map.networkRelatedCount", { count: formatter().format(related) })}</span>`;
+  const rect=container.getBoundingClientRect();
+  showPlatformTooltip([node.name,networkKindLabel(node),tr("map.networkLegendCount", { count: formatter().format(node.count) }),tr("map.networkPlotCount", { count: formatter().format(node.plotCount) }),tr("map.networkRelatedCount", { count: formatter().format(related) })],{left:rect.left+event.point.x,top:rect.top+event.point.y,right:rect.left+event.point.x,bottom:rect.top+event.point.y,width:0,height:0});
 });
 map.on("mousemove", "network-node-hit", (event) => {
-  networkTooltip.style.left = `${event.point.x + 14}px`;
-  networkTooltip.style.top = `${event.point.y + 14}px`;
+  const rect=container.getBoundingClientRect();
+  movePlatformTooltip({left:rect.left+event.point.x,top:rect.top+event.point.y,right:rect.left+event.point.x,bottom:rect.top+event.point.y,width:0,height:0});
 });
 map.on("mouseleave", "network-node-hit", () => {
   hoveredNetworkNode = null;
   unmappedSelected = false;
   map.setFeatureState({ source: "unmapped", id: "unmapped" }, { selected: false, hovered: false });
-  networkTooltip.hidden = true;
+  hidePlatformTooltip();
   scheduleNetworkFocus();
 });
 map.on("click", "network-node-hit", (event) => {
@@ -2124,7 +2124,7 @@ const clearMapSelection = () => {
   updatePointCenterSelection();
   showPointLinks(null);
   applyNetworkFocus(null);
-  networkTooltip.hidden = true;
+  hidePlatformTooltip();
   renderPanel();
   updateUrl();
 };
@@ -2279,7 +2279,7 @@ networkToolbar.addEventListener("toggle", () => {
   if (!networkToolbar.open) networkToolbar.querySelectorAll<HTMLDetailsElement>("[data-network-choice]").forEach(choice => choice.open = false);
 });
 networkType.addEventListener("change", () => {
-  activeNetworkNode = null; hoveredNetworkNode = null; panel.hidden = true; networkTooltip.hidden = true;
+  activeNetworkNode = null; hoveredNetworkNode = null; panel.hidden = true; hidePlatformTooltip();
   recalculateNetwork();
   syncControls();
   updateUrl();
@@ -2391,7 +2391,7 @@ const syncFilterCollapseLabel = () => {
   const collapsed = mapWorkspace.classList.contains("filters-collapsed");
   const label = tr(collapsed ? "map.expandFilters" : "map.collapseFilters");
   filterCollapse.setAttribute("aria-label", label);
-  filterCollapse.title = label;
+  filterCollapse.dataset.tooltip = label;
   filterCollapse.setAttribute("aria-expanded", String(!collapsed));
 };
 filterCollapse.addEventListener("click", () => {
@@ -2482,7 +2482,7 @@ const translate = () => {
   syncFullscreen();
   const centerMapLabel = tr("map.resetExtent");
   centerMapButton.setAttribute("aria-label", centerMapLabel);
-  centerMapButton.title = centerMapLabel;
+  centerMapButton.dataset.tooltip = centerMapLabel;
   syncFilterCollapseLabel();
   filterPanel.querySelectorAll<HTMLElement>("[data-unknown-person-type]").forEach((label) => {
     const key = label.dataset.unknownPersonType as keyof typeof unknownPersonKey;

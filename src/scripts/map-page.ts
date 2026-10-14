@@ -1,3 +1,4 @@
+import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
 import maplibregl from "maplibre-gl";
 import type { LegendProperties, MapDataset, PlaceProperties, SimilarityEdge, SimilarityNode } from "../lib/map/types";
 const page = document.querySelector<HTMLElement>("[data-map-page]")!,
@@ -13,7 +14,6 @@ const page = document.querySelector<HTMLElement>("[data-map-page]")!,
   pointControls = page.querySelector<HTMLElement>("[data-point-controls]")!,
   networkToolbar = page.querySelector<HTMLElement>("[data-network-toolbar]")!,
   networkContext = page.querySelector<HTMLElement>("[data-network-context]")!,
-  networkTooltip = page.querySelector<HTMLElement>("[data-network-tooltip]")!,
   heatInput = page.querySelector<HTMLInputElement>(
     "[data-heat-intensity]",
   )!,
@@ -249,14 +249,14 @@ const navigationGroup = page.querySelector<HTMLElement>(".maplibregl-ctrl-top-ri
 centerMapButton.type = "button";
 centerMapButton.className = "map-center-control";
 centerMapButton.setAttribute("aria-label", tr("map.resetExtent"));
-centerMapButton.title = tr("map.resetExtent");
+centerMapButton.dataset.tooltip = tr("map.resetExtent");
 centerMapButton.innerHTML = '<span class="map-center-icon" aria-hidden="true"></span>';
 centerMapButton.addEventListener("click", () => map.easeTo({ center: [24.6359, 56.8962], zoom: 6.26, duration: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 450 }));
 navigationGroup?.append(centerMapButton);
 requestAnimationFrame(() => {
   const label = tr("map.resetExtent");
   centerMapButton.setAttribute("aria-label", label);
-  centerMapButton.title = label;
+  centerMapButton.dataset.tooltip = label;
 });
 map.addControl(
   new maplibregl.AttributionControl({
@@ -1834,18 +1834,18 @@ map.on("mouseenter", "network-nodes", (event) => {
   hoveredNetworkNode = node.id;
   applyNetworkFocus(node.id);
   const related = similarityEdges.filter((edge) => edge.fromId === node.id || edge.toId === node.id).length;
-  networkTooltip.hidden = false;
-  networkTooltip.innerHTML = `<strong>${node.name}</strong><span>${tr("map.networkLegendCount", { count: formatter().format(node.count) })}</span><span>${tr("map.networkPlotCount", { count: formatter().format(node.plotCount) })}</span><span>${tr("map.networkRelatedCount", { count: formatter().format(related) })}</span>`;
+  const rect=container.getBoundingClientRect();
+  showPlatformTooltip([node.name,tr("map.networkLegendCount", { count: formatter().format(node.count) }),tr("map.networkPlotCount", { count: formatter().format(node.plotCount) }),tr("map.networkRelatedCount", { count: formatter().format(related) })],{left:rect.left+event.point.x,top:rect.top+event.point.y,right:rect.left+event.point.x,bottom:rect.top+event.point.y,width:0,height:0});
 });
 map.on("mousemove", "network-nodes", (event) => {
-  networkTooltip.style.left = `${event.point.x + 14}px`;
-  networkTooltip.style.top = `${event.point.y + 14}px`;
+  const rect=container.getBoundingClientRect();
+  movePlatformTooltip({left:rect.left+event.point.x,top:rect.top+event.point.y,right:rect.left+event.point.x,bottom:rect.top+event.point.y,width:0,height:0});
 });
 map.on("mouseleave", "network-nodes", () => {
   hoveredNetworkNode = null;
   unmappedSelected = false;
   map.setFeatureState({ source: "unmapped", id: "unmapped" }, { selected: false, hovered: false });
-  networkTooltip.hidden = true;
+  hidePlatformTooltip();
   applyNetworkFocus(activeNetworkNode);
 });
 map.on("click", "network-nodes", (event) => {
@@ -1869,7 +1869,7 @@ const clearMapSelection = () => {
   updatePointCenterSelection();
   showPointLinks(null);
   applyNetworkFocus(null);
-  networkTooltip.hidden = true;
+  hidePlatformTooltip();
   renderPanel();
   updateUrl();
 };
@@ -2091,7 +2091,7 @@ const syncFilterCollapseLabel = () => {
   const collapsed = mapWorkspace.classList.contains("filters-collapsed");
   const label = tr(collapsed ? "map.expandFilters" : "map.collapseFilters");
   filterCollapse.setAttribute("aria-label", label);
-  filterCollapse.title = label;
+  filterCollapse.dataset.tooltip = label;
   filterCollapse.setAttribute("aria-expanded", String(!collapsed));
 };
 filterCollapse.addEventListener("click", () => {
@@ -2179,7 +2179,7 @@ new MutationObserver((records) => {
 const translate = () => {
   const centerMapLabel = tr("map.resetExtent");
   centerMapButton.setAttribute("aria-label", centerMapLabel);
-  centerMapButton.title = centerMapLabel;
+  centerMapButton.dataset.tooltip = centerMapLabel;
   syncFilterCollapseLabel();
   filterPanel.querySelectorAll<HTMLElement>("[data-unknown-person-type]").forEach((label) => {
     const key = label.dataset.unknownPersonType as keyof typeof unknownPersonKey;

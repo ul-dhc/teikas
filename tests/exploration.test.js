@@ -7,7 +7,7 @@ import {encodeSelection,decodeSelection} from '../src/lib/selection.js';
 import {buildMetadataNetwork, strongestConnectionIds, indexNetworkEdges, visibleNetworkEdges, networkRenderCollection} from '../src/map/networks.js';
 import {treemap} from '../src/ml-index/treemap.js';
 const embedded=(file,id)=>JSON.parse(readFileSync(file,'utf8').match(new RegExp(`<script[^>]*id="${id}"[^>]*>(.*?)</script>`,'s'))[1]);
-const dashboard=embedded('build/dati/index.html','ml-data');
+const dashboard=embedded('build/dati/index.html','overview-data');
 const map=embedded('build/karte/index.html','corpus-map-data');
 const rows=flattenTypes(dashboard.types);
 const originalMap=JSON.parse(readFileSync('src/data/map-data.json','utf8'));
