@@ -1049,7 +1049,7 @@ const networkTrace = createNetworkTrace({
   },
   finish: () => { networkMotionPlaying = false; networkMotionFinished = true; hidePlatformTooltip(); syncNetworkMotionPreference(); },
 });
-const networkMotionEnabled = () => networkMotionStarted && !reducedNetworkMotion.matches;
+const networkMotionEnabled = () => Boolean(activeNetworkNode) && networkMotionStarted && !reducedNetworkMotion.matches;
 const networkMotionOpacity = () => {
   const intensity = Number(networkIntensity.value) / 100;
   return intensity ? Math.min(.85, .4 + .3 * Math.sqrt(intensity)) : 0;
@@ -1216,6 +1216,11 @@ const networkKindLabel = (node: NetworkNode) => tr(`map.networkKind.${node.kind 
 const renderNetworkNodePanel = (id: string) => {
   const node = networkNodes.find((item) => item.id === id);
   if (!node) return;
+  if (activeNetworkNode !== id) {
+    networkMotionStarted = !reducedNetworkMotion.matches;
+    networkTraceKey = '';
+    renderedNetworkKey = '';
+  }
   activeNetworkNode = id;
   const related = [...(adjacentEdges.get(id) || [])]
     .sort((a, b) => b.sharedCount - a.sharedCount);
@@ -2297,8 +2302,8 @@ networkStrongestOnly.addEventListener("change", () => {
   updateUrl();
 });
 const syncNetworkMotionPreference = () => {
-  networkMotion.hidden = mapMode !== 'network';
-  networkMotion.disabled = reducedNetworkMotion.matches || !networkEdges.length;
+  networkMotion.hidden = mapMode !== 'network' || !activeNetworkNode;
+  networkMotion.disabled = !activeNetworkNode || reducedNetworkMotion.matches || !networkEdges.length;
   if (networkMotion.disabled) networkMotionPlaying = false;
   const key = reducedNetworkMotion.matches ? 'map.networkMotionReduced' : !networkEdges.length ? 'map.networkMotionEmpty' : networkMotionPlaying ? 'map.networkMotionPause' : networkMotionFinished ? 'map.networkMotionReplay' : 'map.networkMotionPlay';
   const label = tr(key);
@@ -2309,6 +2314,7 @@ const syncNetworkMotionPreference = () => {
   networkMotion.querySelector<HTMLElement>('[data-motion-pause]')!.toggleAttribute('hidden', !networkMotionPlaying);
 };
 networkMotion.addEventListener('click', () => {
+  if (!activeNetworkNode || reducedNetworkMotion.matches) return;
   if (!networkMotionStarted || networkMotionFinished) {
     networkMotionStarted = true;
     networkTraceKey = '';
