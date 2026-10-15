@@ -1,5 +1,6 @@
 import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
 import {encodeSelection} from '../lib/selection.js';
+import {createNetworkTrace} from './network-trace.js';
 import * as maplibregl from "maplibre-gl";
 import { createElement, Maximize, Minimize, MapPin } from "lucide";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-csp-worker.js?worker&url";
@@ -20,6 +21,7 @@ const page = document.querySelector<HTMLElement>("[data-map-page]")!,
   pointControls = page.querySelector<HTMLElement>("[data-point-controls]")!,
   networkToolbar = page.querySelector<HTMLDetailsElement>("[data-network-toolbar]")!,
   networkContext = page.querySelector<HTMLElement>("[data-network-context]")!,
+  networkMotion = page.querySelector<HTMLInputElement>("[data-network-motion]")!,
   heatInput = page.querySelector<HTMLInputElement>(
     "[data-heat-intensity]",
   )!,
@@ -1028,6 +1030,54 @@ let overviewConnections = new Set<string>();
 let overviewEdges: NetworkEdge[] = [];
 let adjacentEdges = new Map<string, NetworkEdge[]>();
 let renderedNetworkKey = "";
+const reducedNetworkMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let tracedNetworkEdges: NetworkEdge[] = [];
+let traceEdge: NetworkEdge | null = null;
+let traceProgress = 0;
+let networkTraceKey = '';
+const traceCollection = (features: any[] = []) => ({type: 'FeatureCollection', features}) as any;
+const networkTrace = createNetworkTrace({
+  show: ({edge, coordinates}: {edge: NetworkEdge; coordinates: number[][]}) => {
+    traceEdge = edge;
+    (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection([
+      {type: 'Feature', geometry: {type: 'LineString', coordinates}, properties: {}},
+    ]));
+  },
+  progress: (progress: number) => { traceProgress = progress; paintNetworkTrace(); },
+  complete: ({edge}: {edge: NetworkEdge}) => {
+    map.setFeatureState({source: 'network', id: edge.id}, {traceDrawn: true});
+    traceEdge = null;
+    (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection());
+  },
+});
+const networkMotionEnabled = () => networkMotion.checked && !reducedNetworkMotion.matches;
+const paintNetworkTrace = () => {
+  if (!traceEdge || !map.getLayer('network-trace')) return;
+  // A short transparent tip softly reveals the stroke without a moving marker.
+  const tip = Math.max(.00001, traceProgress), tail = Math.max(0, tip - .025);
+  map.setPaintProperty('network-trace', 'line-gradient', ['interpolate', ['linear'], ['line-progress'], tail, networkEdgeColor(traceEdge), tip, 'rgba(0,0,0,0)']);
+  const strength = Math.min(.75, Math.max(.1, traceEdge.strength));
+  const opacity = .12 + (strength - .1) / .65 * .4;
+  map.setPaintProperty('network-trace', 'line-opacity', Math.min(1, opacity * Number(networkIntensity.value) / 100));
+  map.setPaintProperty('network-trace', 'line-width', .65 + (strength - .1) / .65 * 1.95);
+};
+const resetNetworkTrace = () => {
+  networkTrace.pause();
+  traceEdge = null;
+  traceProgress = 0;
+  if (map.getSource('network')) map.removeFeatureState({source: 'network'});
+  (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection());
+  networkTrace.reset(tracedNetworkEdges);
+};
+const syncNetworkTrace = () => {
+  if (!map.getLayer('network-trace')) return;
+  const focused = Boolean(activeNetworkNode || hoveredNetworkNode);
+  const enabled = networkMotionEnabled() && mapMode === 'network';
+  map.setLayoutProperty('network-trace', 'visibility', enabled && !focused ? 'visible' : 'none');
+  paintNetworkTrace();
+  if (enabled && !focused && !document.hidden && !map.isMoving()) networkTrace.resume();
+  else networkTrace.pause();
+};
 let networkFocusFrame = 0;
 const scheduleNetworkFocus = () => {
   if (networkFocusFrame) return;
@@ -1117,6 +1167,11 @@ const applyNetworkFocus = (hoveredId: string | null) => {
   if (key !== renderedNetworkKey) {
     const shownEdges = visibleNetworkEdges(networkEdges, overviewEdges, adjacentEdges, focused ? id : null, networkStrongestOnly.checked, Boolean(hideOthers));
     (map.getSource("network") as maplibregl.GeoJSONSource).setData(networkRenderCollection(shownEdges, networkEdgeColor) as any);
+    if (!focused && networkMotionEnabled()) {
+      const traceKey = JSON.stringify([networkType.value, shownEdges.map((edge: NetworkEdge) => edge.id)]);
+      tracedNetworkEdges = shownEdges;
+      if (traceKey !== networkTraceKey) { networkTraceKey = traceKey; resetNetworkTrace(); }
+    }
     renderedNetworkKey = key;
     networkVisibility.textContent = tr(!focused && networkStrongestOnly.checked ? "map.networkStrongestConnections" : "map.networkVisibleConnections", { shown: formatter().format(shownEdges.length), total: formatter().format(networkEdges.length) });
     const nodeFilter = hideOthers ? ["in", ["get", "id"], ["literal", related]] : null;
@@ -1135,7 +1190,9 @@ const applyNetworkFocus = (hoveredId: string | null) => {
   const overviewOpacity = ["interpolate", ["linear"], ["get", "strength"], 0.1, 0.12, 0.75, 0.52];
   const edgeOpacity = focused ? ["case", incident, ["interpolate", ["linear"], ["get", "strength"], 0.1, 0.65, 0.75, 1], ["*", overviewOpacity, 0.18]] : overviewOpacity;
   const threadStrength = Number(networkIntensity.value) / 100;
-  map.setPaintProperty("network", "line-opacity", ["min", 1, ["*", edgeOpacity, threadStrength]] as any);
+  const reveal = networkMotionEnabled() && !focused ? ['case', ['boolean', ['feature-state', 'traceDrawn'], false], 1, .12] : 1;
+  map.setPaintProperty("network", "line-opacity", ["min", 1, ["*", edgeOpacity, threadStrength, reveal]] as any);
+  syncNetworkTrace();
   if (map.getLayer("network-node-labels")) map.setPaintProperty("network-node-labels", "text-opacity", focused ? ["case", ["in", ["get", "id"], ["literal", related]], 1, 0.15] : 0.85);
   for (const layer of ["network-selected-ring", "network-selected-label"]) {
     if (!map.getLayer(layer)) continue;
@@ -1260,6 +1317,7 @@ const setMapMode = (mode: string, save = true) => {
   if ((legendMapActive() || clusterDetailActive()) && Math.abs(map.getZoom() - pointSpreadZoom) >= 0.2) updatePointSources();
   syncControls();
   if (mode === "clusters") renderPanel();
+  syncNetworkTrace();
   if (save) updateUrl();
 };
 const applyTheme = (preserveMapPalette = false) => {
@@ -1476,6 +1534,9 @@ map.on("load", async () => {
     data: { type: "FeatureCollection", features: [] },
     promoteId: "id",
   });
+  map.addSource('network-trace', {
+    type: 'geojson', lineMetrics: true, data: traceCollection(),
+  });
   map.addSource("unmapped", {
     type: "geojson",
     promoteId: "id",
@@ -1625,6 +1686,16 @@ map.on("load", async () => {
         2.6,
       ],
       "line-blur": 0,
+    },
+  });
+  map.addLayer({
+    id: 'network-trace', type: 'line', source: 'network-trace',
+    layout: {visibility: 'none', 'line-cap': 'round', 'line-join': 'round'},
+    paint: {
+      'line-gradient': ['interpolate', ['linear'], ['line-progress'], 0, 'rgba(0,0,0,0)', 1, 'rgba(0,0,0,0)'],
+      'line-opacity': 0,
+      'line-width': ['interpolate', ['linear'], ['zoom'], 4, .9, 9, 1.5],
+      'line-opacity-transition': {duration: 0},
     },
   });
   map.addLayer({
@@ -2223,6 +2294,29 @@ networkStrongestOnly.addEventListener("change", () => {
   applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
   updateUrl();
 });
+const syncNetworkMotionPreference = () => {
+  networkMotion.disabled = reducedNetworkMotion.matches;
+  if (networkMotion.disabled) networkMotion.checked = false;
+  const hint = page.querySelector<HTMLElement>('[data-network-motion-hint]')!;
+  hint.dataset.i18n = networkMotion.disabled ? 'map.networkMotionReduced' : 'map.networkMotionHint';
+  hint.textContent = tr(hint.dataset.i18n);
+};
+networkMotion.addEventListener('change', () => {
+  networkTraceKey = '';
+  renderedNetworkKey = '';
+  resetNetworkTrace();
+  applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
+});
+reducedNetworkMotion.addEventListener('change', () => {
+  syncNetworkMotionPreference();
+  applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
+});
+document.addEventListener('visibilitychange', syncNetworkTrace);
+window.addEventListener('pagehide', () => networkTrace.pause());
+window.addEventListener('pageshow', syncNetworkTrace);
+map.on('movestart', () => networkTrace.pause());
+map.on('moveend', syncNetworkTrace);
+map.on('remove', () => networkTrace.pause());
 networkSize.addEventListener("change", () => updateUrl());
 networkSize.addEventListener("input", () => {
   networkSizeOutput.value = `${networkSize.value}%`;
@@ -2482,6 +2576,7 @@ new MutationObserver((records) => {
   }
 }).observe(document.documentElement, { attributes: true });
 const translate = () => {
+  syncNetworkMotionPreference();
   syncFullscreen();
   const centerMapLabel = tr("map.resetExtent");
   centerMapButton.setAttribute("aria-label", centerMapLabel);

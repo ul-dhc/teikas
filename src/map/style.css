@@ -646,6 +646,7 @@
 
 .network-context-row{display:flex;align-items:center;gap:.5rem}
 .network-context-row p{flex:1}
+.network-motion-control{display:grid;gap:.3rem}.network-settings-body .network-motion-control p{font-size:.68rem;line-height:1.5;color:var(--muted)}.network-motion-control input:disabled{opacity:.5}.network-motion-control:has(input:disabled) label{cursor:default;color:var(--muted)}
 .network-info-button{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--interaction-green);cursor:pointer}
 .network-info-button .lucide{width:17px;height:17px}
 .network-info-button:hover{background:color-mix(in srgb,var(--interaction-green),transparent 90%)}
