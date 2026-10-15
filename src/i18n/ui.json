@@ -1781,7 +1781,7 @@
     "en": "When a place is selected"
   },
   "map.networkFadeOthers": {
-    "lv": "Blāvināt pārējos punktus un līnijas",
+    "lv": "Rādīt pārējos punktus un līnijas",
     "de": "Andere Knoten und Linien abblenden",
     "en": "Fade other nodes and threads"
   },

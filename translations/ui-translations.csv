@@ -420,7 +420,7 @@
 "map.datedOnly","Tikai datētās teikas","Nur datierte Sagen","Dated legends only"
 "map.knownPlacesOnly","Tikai zināmās vietas","Nur bekannte Orte","Known places only"
 "map.networkOtherElements","Kad izvēlēta vieta","Bei ausgewähltem Ort","When a place is selected"
-"map.networkFadeOthers","Blāvināt pārējos punktus un līnijas","Andere Knoten und Linien abblenden","Fade other nodes and threads"
+"map.networkFadeOthers","Rādīt pārējos punktus un līnijas","Andere Knoten und Linien abblenden","Fade other nodes and threads"
 "map.networkHideOthers","Paslēpt pārējos punktus un līnijas","Andere Knoten und Linien ausblenden","Hide other nodes and threads"
 "map.networkTitleCollectors","Kopīgu pierakstītāju tīkls","Netzwerk gemeinsamer Sammler","Network by shared collectors"
 "map.networkTitleTypes","Kopīgu nodaļu tīkls","Netzwerk gemeinsamer Kapitel","Network by shared chapters"
