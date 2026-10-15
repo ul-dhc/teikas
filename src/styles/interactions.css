@@ -21,7 +21,7 @@
  background:var(--interaction-wash)!important;
 }
 :root body :is(a,button,summary):hover :is(.lucide,small,strong,b){filter:none!important;text-shadow:none!important}
-:root body a:hover:where(:not(.primary)){color:var(--blue)!important}
+:root body a:hover:where(:not(.primary)){color:var(--link-hover-color,var(--blue))!important}
 :root body :is(.stat,.feature,.daily-icon,.result-card,.ml-kpi,.ml-dash-card):hover{
  border-color:var(--interaction-line)!important;background:var(--raised)!important;
 }
