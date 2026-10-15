@@ -646,7 +646,7 @@
 
 .network-context-row{display:flex;align-items:center;gap:.5rem}
 .network-context-row p{flex:1}
-.network-motion-control{display:grid;gap:.3rem}.network-settings-body .network-motion-control p{font-size:.68rem;line-height:1.5;color:var(--muted)}.network-motion-control input:disabled{opacity:.5}.network-motion-control:has(input:disabled) label{cursor:default;color:var(--muted)}
+.map-mode-row{display:flex;align-items:center;gap:.5rem;min-width:0}.map-network-play{width:40px;height:40px;flex:none;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--raised);color:var(--ink);box-shadow:0 8px 24px color-mix(in srgb,var(--navy),transparent 88%);cursor:pointer}.map-network-play svg{width:17px;height:17px}.map-network-play[hidden],.map-network-play [hidden]{display:none}.map-network-play:hover,.map-network-play[aria-pressed=true]{color:var(--interaction-green);border-color:var(--interaction-green)}.map-network-play:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.map-network-play:disabled{opacity:.45;cursor:default}@media(max-width:600px){.map-toolbar-primary{width:100%}.map-mode-row{width:100%;max-width:100%}.map-mode-row .map-mode{min-width:0;flex:1;overflow-x:auto;scrollbar-width:none}.map-mode-row .map-mode button{flex:none}}
 .network-info-button{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--interaction-green);cursor:pointer}
 .network-info-button .lucide{width:17px;height:17px}
 .network-info-button:hover{background:color-mix(in srgb,var(--interaction-green),transparent 90%)}

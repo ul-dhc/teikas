@@ -22,7 +22,7 @@ const page = document.querySelector<HTMLElement>("[data-map-page]")!,
   pointControls = page.querySelector<HTMLElement>("[data-point-controls]")!,
   networkToolbar = page.querySelector<HTMLDetailsElement>("[data-network-toolbar]")!,
   networkContext = page.querySelector<HTMLElement>("[data-network-context]")!,
-  networkMotion = page.querySelector<HTMLInputElement>("[data-network-motion]")!,
+  networkMotion = page.querySelector<HTMLButtonElement>("[data-network-motion]")!,
   heatInput = page.querySelector<HTMLInputElement>(
     "[data-heat-intensity]",
   )!,
@@ -1038,6 +1038,7 @@ let tracedNetworkEdges: NetworkEdge[] = [];
 let traceEdge: NetworkEdge | null = null;
 let traceProgress = 0;
 let networkTraceKey = '';
+let networkMotionStarted = false, networkMotionPlaying = false, networkMotionFinished = false;
 const traceCollection = (features: any[] = []) => ({type: 'FeatureCollection', features}) as any;
 const networkTrace = createNetworkTrace({
   show: ({edge, coordinates}: {edge: NetworkEdge; coordinates: number[][]}) => {
@@ -1052,34 +1053,38 @@ const networkTrace = createNetworkTrace({
     traceEdge = null;
     (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection());
   },
+  finish: () => { networkMotionPlaying = false; networkMotionFinished = true; syncNetworkMotionPreference(); },
 });
-const networkMotionEnabled = () => networkMotion.checked && !reducedNetworkMotion.matches;
+const networkMotionEnabled = () => networkMotionStarted && !reducedNetworkMotion.matches;
 const paintNetworkTrace = () => {
   if (!traceEdge || !map.getLayer('network-trace')) return;
   // A short transparent tip softly reveals the stroke without a moving marker.
   const tip = Math.max(.00001, traceProgress), tail = Math.max(0, tip - .025);
   map.setPaintProperty('network-trace', 'line-gradient', ['interpolate', ['linear'], ['line-progress'], tail, networkEdgeColor(traceEdge), tip, 'rgba(0,0,0,0)']);
   const strength = Math.min(.75, Math.max(.1, traceEdge.strength));
-  const opacity = .12 + (strength - .1) / .65 * .4;
-  map.setPaintProperty('network-trace', 'line-opacity', Math.min(1, opacity * Number(networkIntensity.value) / 100));
+  const intensity = Number(networkIntensity.value) / 100;
+  // Keep the active stroke legible at the default 15% without brightening the
+  // entire static network. Zero intensity still hides it completely.
+  map.setPaintProperty('network-trace', 'line-opacity', intensity ? Math.min(.85, .4 + .3 * Math.sqrt(intensity)) : 0);
   map.setPaintProperty('network-trace', 'line-width', .65 + (strength - .1) / .65 * 1.95);
 };
 const resetNetworkTrace = () => {
   networkTrace.pause();
   traceEdge = null;
   traceProgress = 0;
+  networkMotionFinished = false;
   if (map.getSource('network')) map.removeFeatureState({source: 'network'});
   (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection());
   networkTrace.reset(tracedNetworkEdges);
 };
 const syncNetworkTrace = () => {
   if (!map.getLayer('network-trace')) return;
-  const focused = Boolean(activeNetworkNode || hoveredNetworkNode);
   const enabled = networkMotionEnabled() && mapMode === 'network';
-  map.setLayoutProperty('network-trace', 'visibility', enabled && !focused ? 'visible' : 'none');
+  map.setLayoutProperty('network-trace', 'visibility', enabled ? 'visible' : 'none');
   paintNetworkTrace();
-  if (enabled && !focused && !document.hidden && !map.isMoving()) networkTrace.resume();
+  if (enabled && networkMotionPlaying && !document.hidden && !map.isMoving()) networkTrace.resume();
   else networkTrace.pause();
+  syncNetworkMotionPreference();
 };
 let networkFocusFrame = 0;
 const scheduleNetworkFocus = () => {
@@ -1163,16 +1168,16 @@ const networkBubbleRadius = () => {
 };
 const applyNetworkFocus = (hoveredId: string | null) => {
   if (!map.getLayer("network") || !map.getLayer("network-nodes")) return;
-  const id = activeNetworkNode || hoveredId;
+  const id = activeNetworkNode || (networkMotionEnabled() ? null : hoveredId);
   const focused = id && (hoveredNetworkNode || activeNetworkNode), related = focused ? relatedNodeIds(id!) : [];
   const incident = ["any", ["==", ["get", "fromId"], id], ["==", ["get", "toId"], id]], hideOthers = focused && networkOthers.value === "hide";
   const key = JSON.stringify([focused ? id : null, networkStrongestOnly.checked, Boolean(hideOthers)]);
   if (key !== renderedNetworkKey) {
     const shownEdges = visibleNetworkEdges(networkEdges, overviewEdges, adjacentEdges, focused ? id : null, networkStrongestOnly.checked, Boolean(hideOthers));
     (map.getSource("network") as maplibregl.GeoJSONSource).setData(networkRenderCollection(shownEdges, networkEdgeColor) as any);
-    if (!focused && networkMotionEnabled()) {
-      const traceKey = JSON.stringify([networkType.value, shownEdges.map((edge: NetworkEdge) => edge.id)]);
-      tracedNetworkEdges = shownEdges;
+    if (networkMotionEnabled()) {
+      tracedNetworkEdges = focused ? adjacentEdges.get(id!) || [] : shownEdges;
+      const traceKey = JSON.stringify([networkType.value, focused ? id : null, tracedNetworkEdges.map((edge: NetworkEdge) => edge.id)]);
       if (traceKey !== networkTraceKey) { networkTraceKey = traceKey; resetNetworkTrace(); }
     }
     renderedNetworkKey = key;
@@ -1193,7 +1198,7 @@ const applyNetworkFocus = (hoveredId: string | null) => {
   const overviewOpacity = ["interpolate", ["linear"], ["get", "strength"], 0.1, 0.12, 0.75, 0.52];
   const edgeOpacity = focused ? ["case", incident, ["interpolate", ["linear"], ["get", "strength"], 0.1, 0.65, 0.75, 1], ["*", overviewOpacity, 0.18]] : overviewOpacity;
   const threadStrength = Number(networkIntensity.value) / 100;
-  const reveal = networkMotionEnabled() && !focused ? ['case', ['boolean', ['feature-state', 'traceDrawn'], false], 1, .12] : 1;
+  const reveal = networkMotionEnabled() ? ['case', ['boolean', ['feature-state', 'traceDrawn'], false], 1, .08] : 1;
   map.setPaintProperty("network", "line-opacity", ["min", 1, ["*", edgeOpacity, threadStrength, reveal]] as any);
   syncNetworkTrace();
   if (map.getLayer("network-node-labels")) map.setPaintProperty("network-node-labels", "text-opacity", focused ? ["case", ["in", ["get", "id"], ["literal", related]], 1, 0.15] : 0.85);
@@ -2231,6 +2236,7 @@ const syncNetworkChoices = () => {
   });
 };
 const syncControls = () => {
+  syncNetworkMotionPreference();
   const viewHelp = page.querySelector<HTMLAnchorElement>("[data-map-method]")!;
   viewHelp.hidden = mapMode === "network";
   viewHelp.href = `${base}par-projektu/#dati`;
@@ -2298,19 +2304,29 @@ networkStrongestOnly.addEventListener("change", () => {
   updateUrl();
 });
 const syncNetworkMotionPreference = () => {
-  networkMotion.disabled = reducedNetworkMotion.matches;
-  if (networkMotion.disabled) networkMotion.checked = false;
-  const hint = page.querySelector<HTMLElement>('[data-network-motion-hint]')!;
-  hint.dataset.i18n = networkMotion.disabled ? 'map.networkMotionReduced' : 'map.networkMotionHint';
-  hint.textContent = tr(hint.dataset.i18n);
+  networkMotion.hidden = mapMode !== 'network';
+  networkMotion.disabled = reducedNetworkMotion.matches || !networkEdges.length;
+  if (networkMotion.disabled) networkMotionPlaying = false;
+  const key = reducedNetworkMotion.matches ? 'map.networkMotionReduced' : !networkEdges.length ? 'map.networkMotionEmpty' : networkMotionPlaying ? 'map.networkMotionPause' : networkMotionFinished ? 'map.networkMotionReplay' : 'map.networkMotionPlay';
+  const label = tr(key);
+  networkMotion.setAttribute('aria-label', label);
+  networkMotion.dataset.tooltip = label;
+  networkMotion.setAttribute('aria-pressed', String(networkMotionPlaying));
+  networkMotion.querySelector<HTMLElement>('[data-motion-play]')!.toggleAttribute('hidden', networkMotionPlaying);
+  networkMotion.querySelector<HTMLElement>('[data-motion-pause]')!.toggleAttribute('hidden', !networkMotionPlaying);
 };
-networkMotion.addEventListener('change', () => {
-  networkTraceKey = '';
-  renderedNetworkKey = '';
-  resetNetworkTrace();
+networkMotion.addEventListener('click', () => {
+  if (!networkMotionStarted || networkMotionFinished) {
+    networkMotionStarted = true;
+    networkTraceKey = '';
+    renderedNetworkKey = '';
+    resetNetworkTrace();
+  }
+  networkMotionPlaying = !networkMotionPlaying;
   applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
 });
 reducedNetworkMotion.addEventListener('change', () => {
+  if (reducedNetworkMotion.matches) { networkMotionPlaying = false; networkMotionStarted = false; }
   syncNetworkMotionPreference();
   applyNetworkFocus(activeNetworkNode || hoveredNetworkNode);
 });

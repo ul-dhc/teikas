@@ -38,6 +38,7 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
       <div class="corpus-map" data-map tabindex="0"></div>
       <div class="map-toolbar">
         <div class="map-toolbar-primary">
+          <div class="map-mode-row">
           <div
             class="map-mode"
             role="group"
@@ -70,6 +71,8 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
               data-i18n="map.modeNetwork">Tīklojums</button
             >
           </div>
+          <button type="button" class="map-network-play" data-network-motion aria-pressed="false" aria-label="Atskaņot tīkla animāciju" data-tooltip="Atskaņot tīkla animāciju" hidden><i data-lucide="play" data-motion-play></i><i data-lucide="pause" data-motion-pause hidden></i></button>
+          </div>
           <details class="layer-menu" data-layer-menu>
             <summary
               ><i data-lucide="settings-2"></i><span data-i18n="map.layers"
@@ -82,10 +85,6 @@ const mapUndatedPercent = Math.round((mapUndatedCount / (legendProperties.length
         <div class="network-settings-body">
         <div class="network-context-row"><p data-network-context></p><a class="network-info-button" data-network-method href={`${base}par-projektu/#dati`} target="_blank" rel="noopener"><i data-lucide="info"></i><span class="sr-only" data-i18n="map.networkMethodMetadata">Kā veidots šis tīkls?</span></a></div>
         <p data-network-visibility aria-live="polite"></p>
-        <div class="network-motion-control">
-          <label class="network-show-all"><input type="checkbox" data-network-motion aria-describedby="network-motion-hint" /><span data-i18n="map.networkMotion">Dinamisks skats</span></label>
-          <p id="network-motion-hint" data-network-motion-hint data-i18n="map.networkMotionHint">Saiknes lēni savienojas cita pēc citas, sākot ar spēcīgākajām.</p>
-        </div>
         <label class="network-show-all"><input type="checkbox" data-network-strongest-only /><span data-i18n="map.networkStrongestOnly">Rādīt spēcīgākos 10% katrai vietai</span></label>
         <div class="network-field"><span data-i18n="map.networkType">Tīkla veids</span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkSharedCollectors">Kopīgi pierakstītāji</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="collectors" data-i18n="map.networkSharedCollectors">Kopīgi pierakstītāji</button><button type="button" data-network-value="plots" data-i18n="map.networkSharedTypes">Kopīgas nodaļas</button></div><select data-network-type hidden><option value="plots">Felles ML-kategorier</option><option value="collectors" selected>Felles samlere</option></select></details></div>
         <div class="network-field"><span class="network-field-heading"><span data-i18n="map.networkColorBy">Krāsot pēc</span><a class="context-help context-help-icon"  href={`${base}par-projektu/#dati`} target="_blank" rel="noopener"><i data-lucide="info"></i><span data-i18n="about.networkColorsTitle">Tīkla krāsas un izmērs</span></a></span><details class="network-choice" data-network-choice><summary><span data-network-choice-label data-i18n="map.networkColorCollector">Pierakstītājs</span><i data-lucide="chevron-down"></i></summary><div><button type="button" data-network-value="collector" data-i18n="map.networkColorCollector">Pierakstītājs</button><button type="button" data-network-value="theme" data-i18n="map.networkColorTheme">Dominējošās tēmas</button><button type="button" data-network-value="single" data-i18n="map.networkColorSingle">Vienā krāsā</button></div><select data-network-color hidden><option value="collector" selected>Samler</option><option value="theme">Dominerende ML-kategori</option><option value="single">Én farge</option></select></details></div>

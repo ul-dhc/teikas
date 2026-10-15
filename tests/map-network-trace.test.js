@@ -14,23 +14,31 @@ test('trace follows genuine connections strongest first and covers every disconn
   assert.deepEqual(edges, original);
   assert.deepEqual(orderNetworkTrace([]), []);
 });
+test('equally strong connections start with a visible geographic span and skip coincident endpoints', () => {
+  const short = edge('short', '1', '2', 2), long = edge('long', '1', '8', 2);
+  const coincident = {...edge('same-point', '9', '10', 100), coordinates: [[25, 57], [25, 57]]};
+  assert.deepEqual(orderNetworkTrace([short, coincident, long]).map(step => step.edge.id), ['long', 'short']);
+});
 
 function harness() {
-  let callback, time = 0, progress = 0;
+  let callback, time = 0, progress = 0, finished = 0;
   const shown = [], completed = [];
   const trace = createNetworkTrace({
     show: step => shown.push(step.edge.id), progress: value => progress = value,
     complete: step => completed.push(step.edge.id),
+    finish: () => finished++,
     requestFrame: fn => {callback = fn; return 1;}, cancelFrame: () => {callback = null;},
   });
   const tick = (delta = 16) => {time += delta; const fn = callback; callback = null; fn?.(time);};
-  return {trace, tick, shown, completed, get progress() {return progress;}, get scheduled() {return Boolean(callback);}};
+  return {trace, tick, shown, completed, get finished() {return finished;}, get progress() {return progress;}, get scheduled() {return Boolean(callback);}};
 }
 
 test('strokes remain slow, pause without hidden-tab catch-up, and finish without looping', () => {
   const h = harness();
   h.trace.reset(edges.slice(0, 1)); h.trace.resume();
-  for (let i = 0; i < 100; i++) h.tick();
+  h.tick();
+  assert.deepEqual(h.shown, ['a'], 'Play begins drawing on the first frame');
+  for (let i = 0; i < 60; i++) h.tick();
   assert.deepEqual(h.shown, ['a']);
   assert.ok(h.progress > 0 && h.progress < .5);
   const before = h.progress;
@@ -40,6 +48,8 @@ test('strokes remain slow, pause without hidden-tab catch-up, and finish without
   for (let i = 0; i < TRACE_DRAW_MS / 16 + 5; i++) h.tick();
   assert.deepEqual(h.completed, ['a']);
   assert.equal(h.scheduled, false);
+  assert.equal(h.finished, 1, 'the button can switch to Replay when the drawing finishes');
+  h.trace.resume(); h.tick(); assert.equal(h.finished, 1);
 });
 
 test('replacing a filtered graph cancels the previous stroke and an empty graph schedules no animation', () => {

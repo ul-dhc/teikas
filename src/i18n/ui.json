@@ -2300,19 +2300,29 @@
     "de": "Über die digitale Plattform für Pēteris Šmits’ lettische Sagen, ihre Quellen, Ziele und das Projektteam.",
     "en": "About the digital platform for Pēteris Šmits’s Latvian legends, its sources, aims and project team."
   },
-  "map.networkMotion": {
-    "lv": "Dinamisks skats",
-    "de": "Dynamische Ansicht",
-    "en": "Dynamic view"
-  },
-  "map.networkMotionHint": {
-    "lv": "Saiknes lēni savienojas cita pēc citas, sākot ar spēcīgākajām.",
-    "de": "Die Verbindungen entstehen langsam nacheinander, beginnend mit den stärksten.",
-    "en": "Connections slowly unfold one by one, starting with the strongest."
-  },
   "map.networkMotionReduced": {
     "lv": "Animācija izslēgta atbilstoši ierīces samazinātas kustības iestatījumam.",
     "de": "Die Animation ist entsprechend der Geräteeinstellung für reduzierte Bewegung deaktiviert.",
     "en": "Animation is disabled to respect your device’s reduced motion setting."
+  },
+  "map.networkMotionPlay": {
+    "lv": "Atskaņot tīkla animāciju",
+    "de": "Netzwerkanimation abspielen",
+    "en": "Play network animation"
+  },
+  "map.networkMotionPause": {
+    "lv": "Apturēt tīkla animāciju",
+    "de": "Netzwerkanimation pausieren",
+    "en": "Pause network animation"
+  },
+  "map.networkMotionReplay": {
+    "lv": "Atkārtot tīkla animāciju",
+    "de": "Netzwerkanimation wiederholen",
+    "en": "Replay network animation"
+  },
+  "map.networkMotionEmpty": {
+    "lv": "Šajā atlasē nav savienojumu. Maini atlasi vai tīkla veidu.",
+    "de": "Diese Auswahl enthält keine Verbindungen. Ändere die Auswahl oder den Netzwerktyp.",
+    "en": "This selection has no connections. Change the selection or network type."
   }
 }

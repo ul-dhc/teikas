@@ -1,7 +1,10 @@
 // Follow real connections, strongest first. A depth-first walk keeps consecutive
 // strokes attached to an already reached place; disconnected components start last.
 export function orderNetworkTrace(edges) {
-  const ranked = [...edges].sort((a, b) => b.sharedCount - a.sharedCount || a.id.localeCompare(b.id));
+  // Equal-strength links with a longer geographic span are easier to see first.
+  // Coincident places remain in the analytical graph but have no line to draw.
+  const lengths = new Map(edges.map(edge => [edge.id, edge.coordinates.slice(1).reduce((sum, point, i) => sum + Math.hypot(point[0] - edge.coordinates[i][0], point[1] - edge.coordinates[i][1]), 0)]));
+  const ranked = edges.filter(edge => lengths.get(edge.id) > 0).sort((a, b) => b.sharedCount - a.sharedCount || lengths.get(b.id) - lengths.get(a.id) || a.id.localeCompare(b.id));
   const adjacent = new Map();
   for (const edge of ranked) for (const id of [edge.fromId, edge.toId]) {
     if (!adjacent.has(id)) adjacent.set(id, []);
@@ -33,14 +36,14 @@ export const TRACE_REST_MS = 550;
 
 // One small, separate source is updated per stroke, never the entire network per
 // frame. Hidden tabs and map interactions pause the clock without catching up.
-export function createNetworkTrace({ show, progress, complete, requestFrame = requestAnimationFrame, cancelFrame = cancelAnimationFrame }) {
+export function createNetworkTrace({ show, progress, complete, finish = () => {}, requestFrame = requestAnimationFrame, cancelFrame = cancelAnimationFrame }) {
   let steps = [], index = 0, elapsed = 0, lastTime = null, lastPaint = null, frame = 0, running = false, shown = false;
   const tick = (time) => {
     frame = 0;
     if (!running || index >= steps.length) return;
     if (lastTime !== null) elapsed += Math.min(64, Math.max(0, time - lastTime));
     lastTime = time;
-    const step = steps[index], wait = step.componentStart ? 1000 : TRACE_REST_MS;
+    const step = steps[index], wait = index === 0 ? 0 : step.componentStart ? 1000 : TRACE_REST_MS;
     if (elapsed >= wait) {
       if (!shown) { show(step); shown = true; }
       const t = Math.min(1, (elapsed - wait) / TRACE_DRAW_MS);
@@ -56,6 +59,7 @@ export function createNetworkTrace({ show, progress, complete, requestFrame = re
       }
     }
     if (index < steps.length) frame = requestFrame(tick);
+    else { running = false; finish(); }
   };
   const pause = () => {
     running = false;

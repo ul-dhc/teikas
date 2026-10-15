@@ -473,6 +473,8 @@ themes.method,Tēmu dalījums un nosaukumi saglabā Pētera Šmita krājuma noda
 themes.volume,{value}. sējums,Band {value},Volume {value}
 themes.scope,Tēma: {value},Thema: {value},Theme: {value}
 themes.all,Visas tēmas,Alle Themen,All themes
-"map.networkMotion","Dinamisks skats","Dynamische Ansicht","Dynamic view"
-"map.networkMotionHint","Saiknes lēni savienojas cita pēc citas, sākot ar spēcīgākajām.","Die Verbindungen entstehen langsam nacheinander, beginnend mit den stärksten.","Connections slowly unfold one by one, starting with the strongest."
 "map.networkMotionReduced","Animācija izslēgta atbilstoši ierīces samazinātas kustības iestatījumam.","Die Animation ist entsprechend der Geräteeinstellung für reduzierte Bewegung deaktiviert.","Animation is disabled to respect your device’s reduced motion setting."
+"map.networkMotionPlay","Atskaņot tīkla animāciju","Netzwerkanimation abspielen","Play network animation"
+"map.networkMotionPause","Apturēt tīkla animāciju","Netzwerkanimation pausieren","Pause network animation"
+"map.networkMotionReplay","Atkārtot tīkla animāciju","Netzwerkanimation wiederholen","Replay network animation"
+"map.networkMotionEmpty","Šajā atlasē nav savienojumu. Maini atlasi vai tīkla veidu.","Diese Auswahl enthält keine Verbindungen. Ändere die Auswahl oder den Netzwerktyp.","This selection has no connections. Change the selection or network type."
