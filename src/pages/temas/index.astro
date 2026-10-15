@@ -4,6 +4,7 @@ import { themes, subsectionCount } from '../../lib/themes';
 import { legends } from '../../lib/data';
 const base = import.meta.env.BASE_URL;
 const textHref = (id: string) => `${base}teksti/?${new URLSearchParams({section:id})}`;
+const mapHref = (theme: (typeof themes)[number]) => `${base}karte/?${new URLSearchParams({theme: theme.title.lv || '', volume: theme.volume})}`;
 const dataHref = (theme: (typeof themes)[number], view: string) => {
   const type = view === 'network' ? theme.code : JSON.stringify([theme.volume, theme.title.lv]);
   const params = new URLSearchParams({type});
@@ -32,6 +33,7 @@ const dataHref = (theme: (typeof themes)[number], view: string) => {
         <div class="theme-body">
           <nav class="theme-actions" aria-label="Skatīt tēmu" data-i18n-ariaLabel="themes.viewTheme">
             <a href={textHref(theme.id)}><i data-lucide="list"></i><span data-i18n="themes.texts">Teksti</span><i data-lucide="arrow-right"></i></a>
+            <a href={mapHref(theme)}><i data-lucide="map-pin"></i><span data-i18n="nav.map">Karte</span></a>
             <a href={dataHref(theme,'network')}><i data-lucide="network"></i><span data-i18n="themes.network">Tīkls</span></a>
             <a href={dataHref(theme,'overview')}><i data-lucide="chart-no-axes-column"></i><span data-i18n="themes.overview">Datu pārskats</span></a>
           </nav>
