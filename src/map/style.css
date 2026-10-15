@@ -728,7 +728,7 @@ body.map-fullscreen-active{overflow:hidden}
 @media(max-width:600px){.network-view-title{max-width:calc(100% - 1rem)}.network-active-filters{max-width:100%}.network-filter-chip{max-width:240px}}
 
 .uncertainty-key p{font-size:.78rem;line-height:1.6;color:var(--muted)}
-.place-coordinate-note button{border:0;background:transparent;color:var(--blue);padding:0;font:inherit;text-align:left;text-decoration:underline;text-underline-offset:.2em}
+.place-coordinate-note a{border:0;background:transparent;color:var(--blue);padding:0;font:inherit;text-align:left;text-decoration:underline;text-underline-offset:.2em}
 
 .map-uncertainty-control .lucide{width:18px;height:18px}
 .map-uncertainty-control[aria-pressed=true]{color:var(--interaction-green)!important;background:color-mix(in srgb,var(--interaction-green),transparent 90%)!important}

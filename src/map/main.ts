@@ -6,7 +6,7 @@ import workerUrl from "maplibre-gl/dist/maplibre-gl-csp-worker.js?worker&url";
 maplibregl.setWorkerUrl(workerUrl);
 import { buildMetadataNetwork, strongestConnectionIds, indexNetworkEdges, networkRenderCollection, visibleNetworkEdges } from "./networks.js";
 import { installUncertaintyStrokes } from "./uncertainty";
-import { placeProfileMarkup } from "./place-profile";
+import { placeProfileMarkup, placeProfileSelection, pointCoordinateKey } from "./place-profile";
 import type { LegendProperties, MapDataset, PlaceProperties, NetworkEdge, NetworkNode } from "./types";
 const page = document.querySelector<HTMLElement>("[data-map-page]")!,
   mapStage = page.querySelector<HTMLElement>(".map-stage")!,
@@ -243,7 +243,9 @@ const themeColors = (mapDark = document.documentElement.dataset.theme === "dark"
 const basemapPalette = (style: string) => (style === "dark" || style === "fiord") ? true : false;
 let colors = themeColors(basemapExplicit ? basemapPalette(basemapStyle.value) ?? document.documentElement.dataset.theme === "dark" : document.documentElement.dataset.theme === "dark"),
   selectedId = params.get("selectedPlace") || (params.get("place")?.startsWith("place-") ? params.get("place") : null),
-  selectedPointCenter = params.get("selectedCenter"),
+  selectedPointCenter = params.get("selectedCenter")?.includes("|") && selectedId
+    ? dataset.places.features.find(place => place.properties.id === selectedId)?.geometry.coordinates.join(",") || null
+    : params.get("selectedCenter"),
   moveTimer = 0;
 let pointLinkOpacity: unknown = 0.28,
   pointBubbleOpacity: unknown = 0,
@@ -609,7 +611,7 @@ const updatePointSources = () => {
   const zoom = map.getZoom(), displayStyle = effectivePointStyle(), overviewSpacing = Math.max(0, Math.min(1.6, (zoom - 6) * 0.35)), detailSpacing = Math.max(0, zoom - 9) * 0.85,
     spacing = 1.1 + overviewSpacing + detailSpacing, rayLength = displayStyle === "rays" ? 1.05 + Number(pointIntensity.value) / 360 : 1, groups = new Map<string, any[]>();
   filteredFeatures.forEach((feature) => {
-    const [longitude, latitude] = pointGroupCoordinates(feature), key = `${feature.properties.placeId}|${longitude.toFixed(6)}|${latitude.toFixed(6)}`;
+    const [longitude, latitude] = pointGroupCoordinates(feature), key = pointCoordinateKey([longitude, latitude]);
     const group = groups.get(key) || [];
     group.push(feature);
     groups.set(key, group);
@@ -795,12 +797,12 @@ const applyFilters = (save = true) => {
   if (save) updateUrl();
 };
 const sharedPlaceProfile = (placeId: string, name: string, options: {tone?: string; connections?: number; networkRecords?: number; extra?: string} = {}) => {
-  const locationPlaces = placesAtCoordinates(placeId), grouped = false;
-  const placeIds = new Set(grouped ? locationPlaces.map(place => place.properties.id) : [placeId]);
-  const records = filteredFeatures.filter(feature => placeIds.has(feature.properties.placeId)).map(feature => feature.properties as LegendProperties);
-  const recordedPlaces = locationPlaces.length > 1 ? locationPlaces.map(place => ({id: place.properties.id, name: place.properties.name,
-    count: filteredFeatures.filter(feature => feature.properties.placeId === place.properties.id).length})) : undefined;
-  return placeProfileMarkup({name, records, recordedPlaces, geography: dataset.places.features.find(place => place.properties.id === placeId)?.properties.geography, grouped, href: `${recordHref(records.map(record => record.id))}${grouped ? "" : `&place=${encodeURIComponent(placeId)}`}`, tone: options.tone || colors.green,
+  const locationPlaces = placesAtCoordinates(placeId), grouped = locationPlaces.length > 1 && options.connections === undefined;
+  const selection = placeProfileSelection(placeId, locationPlaces.map(place => place.properties), filteredFeatures.map(feature => feature.properties), grouped);
+  const { records } = selection;
+  const recordedPlaces = locationPlaces.length > 1 ? selection.recordedPlaces.map(place => ({...place, href: recordHref(place.legendIds)})) : undefined;
+  const profileName = grouped ? selection.recordedPlaces.filter(place => place.count > 0).map(place => place.name).join(" / ") : name;
+  return placeProfileMarkup({name: profileName, records, recordedPlaces, geography: grouped ? undefined : dataset.places.features.find(place => place.properties.id === placeId)?.properties.geography, grouped, href: `${recordHref(records.map(record => record.id))}${grouped ? "" : `&place=${encodeURIComponent(placeId)}`}`, tone: options.tone || colors.green,
     tr, format: count => formatter().format(count), english: document.documentElement.dataset.uiLang === "de",
     categoryColor: record => {
       if (!record.themeLv) return colors.categoryNeutral;
@@ -852,10 +854,11 @@ const renderLegend = (properties: LegendProperties) => {
 const renderPointPlace = (placeId: string, centerKey: string | null = null) => {
   if (selectedPointLegend) map.setFeatureState({ source: "legends", id: selectedPointLegend }, { selected: false });
   selectedPointLegend = null;
-  const records = filteredFeatures.filter((feature) => feature.properties.placeId === placeId), placeName = dataset.places.features.find(feature => feature.properties.id === placeId)?.properties.name;
+  const { records } = placeProfileSelection(placeId, placesAtCoordinates(placeId).map(place => place.properties), filteredFeatures.map(feature => feature.properties), true);
+  const placeName = dataset.places.features.find(feature => feature.properties.id === placeId)?.properties.name;
   if (!placeName || !records.length) return;
   selectedId = placeId;
-  selectedPointCenter = centerKey || [...pointDisplayFeatures.values()].find((feature) => feature.properties.placeId === placeId)?.properties.centerKey || null;
+  selectedPointCenter = centerKey || [...pointDisplayFeatures.values()].find((feature) => records.some(record => record.id === feature.properties.id))?.properties.centerKey || null;
   updatePointCenterSelection();
   showPointLinks(selectedPointCenter, true);
   panel.hidden = false;
@@ -2527,9 +2530,3 @@ uncertaintyToggle.addEventListener('change', () => {
  renderUncertainty();syncUncertaintyButton();updateUrl();
 });
 page.querySelector<HTMLElement>('[data-uncertainty-key]')!.hidden = !uncertaintyToggle.checked || mapMode === 'heatmap';
-panel.addEventListener('click', event => {
- const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-profile-place]');
- if (!button) return;
- if (mapMode === 'network') renderNetworkNodePanel(`place:${button.dataset.profilePlace!}`);
- else renderPointPlace(button.dataset.profilePlace!);
-});

@@ -2,12 +2,25 @@ import type { LegendProperties, PlaceGeography } from './types';
 
 const escape = (value: string) => value.replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[character]!);
 
+// A shared coordinate is a display group; source place identities stay separate.
+export const pointCoordinateKey = (coordinates: number[]) => coordinates.join(',');
+export function placeProfileSelection(placeId: string, places: {id: string; name: string}[], records: LegendProperties[], grouped: boolean) {
+  const placeIds = new Set(grouped ? places.map(place => place.id) : [placeId]);
+  return {
+    records: records.filter(record => placeIds.has(record.placeId)),
+    recordedPlaces: places.map(place => {
+      const legendIds = records.filter(record => record.placeId === place.id).map(record => record.id);
+      return {...place, count: legendIds.length, legendIds};
+    }),
+  };
+}
+
 // Every map view describes a place from the same filtered legend records.
 export function placeProfileMarkup(options: {
   name: string; records: LegendProperties[]; href: string; tone: string;
   tr: (key: string, values?: Record<string, string | number>) => string;
   format: (count: number) => string; categoryColor: (record: LegendProperties) => string;
-  english: boolean; geography?: PlaceGeography; recordedPlaces?: {id: string; name: string; count: number}[]; grouped?: boolean; connections?: number; networkRecords?: number; extra?: string;
+  english: boolean; geography?: PlaceGeography; recordedPlaces?: {id: string; name: string; count: number; href: string}[]; grouped?: boolean; connections?: number; networkRecords?: number; extra?: string;
 }) {
   const {name, records, href, tone, tr, format, categoryColor, english} = options;
   const themes = new Map<string, {record: LegendProperties; count: number}>();
@@ -25,7 +38,7 @@ export function placeProfileMarkup(options: {
     }
     if (record.narratorId || record.narrator) narrators.add(record.narratorId || record.narrator);
   }
-  const coordinateNote = options.recordedPlaces ? `<section class="network-profile-section place-coordinate-note"><h3>${tr('map.sharedCoordinatesTitle')}</h3><p class="map-panel-note">${tr(options.grouped ? 'map.sharedCoordinatesGrouped' : 'map.sharedCoordinatesSeparate')}</p><ul class="network-ranked">${options.recordedPlaces.map(place => `<li><button type="button" data-profile-place="${escape(place.id)}">${escape(place.name)}</button><strong>${format(place.count)}</strong></li>`).join('')}</ul></section>` : '';
+  const coordinateNote = options.recordedPlaces ? `<section class="network-profile-section place-coordinate-note"><h3>${tr('map.sharedCoordinatesTitle')}</h3><p class="map-panel-note">${tr(options.grouped ? 'map.sharedCoordinatesGrouped' : 'map.sharedCoordinatesSeparate')}</p><ul class="network-ranked">${options.recordedPlaces.map(place => `<li>${place.count ? `<a href="${escape(place.href)}">${escape(place.name)}</a>` : `<span>${escape(place.name)}</span>`}<strong>${format(place.count)}</strong></li>`).join('')}</ul></section>` : '';
   const geo = options.geography;
   const geographyNote = geo ? `<section class="network-profile-section place-geography"><h3>${tr('map.locationStatus')}</h3><p class="place-location-notice">${geo.verification !== 'authority_matched' || geo.mapUncertainty?.kind === 'area' || geo.mapUncertainty?.kind === 'ambiguous' ? '<i data-lucide="circle-alert"></i>' : ''}<span>${tr('map.location.' + geo.displayStatus)}</span></p>${geo.mapUncertainty && geo.mapUncertainty.kind !== 'none' ? `<p class="map-panel-note">${tr('map.uncertaintyReason.' + geo.mapUncertainty.reason)}</p>` : ''}<p class="map-panel-note">${tr(geo.verification === 'authority_matched' ? 'map.authorityMatchedNote' : geo.displayStatus === 'historical' ? 'map.historicalLocationNote' : 'map.unresolvedLocationNote')}</p>${geo.authority ? `<p class="map-panel-note"><a href="${escape(geo.authority.sourceUrl)}" target="_blank" rel="noopener">${escape(geo.authority.name)} · ${geo.authority.id}</a> · ${escape(geo.authority.featureType)}</p>` : `<p class="map-panel-note">${tr('map.editorialCoordinateSource')}</p>${geo.nameEvidence?.length ? `<p class="map-panel-note"><a href="${escape(geo.nameEvidence[0].sourceUrl)}" target="_blank" rel="noopener">SSB · ${escape(geo.nameEvidence[0].name)} · ${escape(geo.nameEvidence[0].code)}</a></p>` : ''}`}<a class="context-help" href="${escape(options.href.split('teksti/')[0])}par-projektu/#dati">${tr('map.locationMethod')}</a></section>` : '';
   const stats = [['map.legendCount', records.length], ['map.placeThemeCount', themes.size], ['map.narrators', narrators.size], ['map.collectors', collectors.size]] as const;
