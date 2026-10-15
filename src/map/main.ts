@@ -1050,12 +1050,13 @@ const networkTrace = createNetworkTrace({
   finish: () => { networkMotionPlaying = false; networkMotionFinished = true; hidePlatformTooltip(); syncNetworkMotionPreference(); },
 });
 const networkMotionEnabled = () => networkMotionStarted && !reducedNetworkMotion.matches;
+const networkMotionOpacity = () => {
+  const intensity = Number(networkIntensity.value) / 100;
+  return intensity ? Math.min(.85, .4 + .3 * Math.sqrt(intensity)) : 0;
+};
 const paintNetworkTrace = () => {
   if (!map.getLayer('network-trace')) return;
-  const intensity = Number(networkIntensity.value) / 100;
-  // Keep the active stroke legible at the default 15% without brightening the
-  // entire static network. Zero intensity still hides it completely.
-  map.setPaintProperty('network-trace', 'line-opacity', intensity ? Math.min(.85, .4 + .3 * Math.sqrt(intensity)) : 0);
+  map.setPaintProperty('network-trace', 'line-opacity', networkMotionOpacity());
 };
 const resetNetworkTrace = () => {
   networkTrace.pause();
@@ -1185,8 +1186,13 @@ const applyNetworkFocus = (hoveredId: string | null) => {
   const overviewOpacity = ["interpolate", ["linear"], ["get", "strength"], 0.1, 0.12, 0.75, 0.52];
   const edgeOpacity = focused ? ["case", incident, ["interpolate", ["linear"], ["get", "strength"], 0.1, 0.65, 0.75, 1], ["*", overviewOpacity, 0.18]] : overviewOpacity;
   const threadStrength = Number(networkIntensity.value) / 100;
-  const reveal = networkMotionEnabled() ? ['case', ['boolean', ['feature-state', 'traceDrawn'], false], 1, .08] : 1;
-  map.setPaintProperty("network", "line-opacity", ["min", 1, ["*", edgeOpacity, threadStrength, reveal]] as any);
+  // The growing overlay hands a completed edge to the base layer at exactly
+  // the same opacity. Unrevealed edges stay hidden until their stroke grows.
+  const opacity = networkMotionEnabled()
+    ? ['case', ['boolean', ['feature-state', 'traceDrawn'], false], networkMotionOpacity(), 0]
+    : ["min", 1, ["*", edgeOpacity, threadStrength]];
+  map.setPaintProperty("network", "line-opacity", opacity as any);
+  map.setPaintProperty("network", "line-opacity-transition", {duration: networkMotionEnabled() ? 0 : 300});
   syncNetworkTrace();
   if (map.getLayer("network-node-labels")) map.setPaintProperty("network-node-labels", "text-opacity", focused ? ["case", ["in", ["get", "id"], ["literal", related]], 1, 0.15] : 0.85);
   for (const layer of ["network-selected-ring", "network-selected-label"]) {
