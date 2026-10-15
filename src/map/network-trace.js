@@ -31,35 +31,70 @@ export function orderNetworkTrace(edges) {
   return result;
 }
 
-export const TRACE_DRAW_MS = 2200;
-export const TRACE_REST_MS = 550;
+export const NETWORK_FILL_MS = 5000;
 
-// One small, separate source is updated per stroke, never the entire network per
-// frame. Hidden tabs and map interactions pause the clock without catching up.
-export function createNetworkTrace({ show, progress, complete, finish = () => {}, requestFrame = requestAnimationFrame, cancelFrame = cancelAnimationFrame }) {
-  let steps = [], index = 0, elapsed = 0, lastTime = null, lastPaint = null, frame = 0, running = false, shown = false;
+const project = ([x, latitude]) => [x, Math.log(Math.tan(Math.PI / 4 + latitude * Math.PI / 360)) * 180 / Math.PI];
+const unproject = ([x, y]) => [x, (2 * Math.atan(Math.exp(y * Math.PI / 180)) - Math.PI / 2) * 180 / Math.PI];
+const distance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+
+/** @param {any[]} edges @param {string | null} [focusId] */
+export function networkTracePlan(edges, focusId = null) {
+  const ordered = focusId
+    ? edges.filter(edge => edge.fromId === focusId || edge.toId === focusId).map(edge => ({edge, coordinates: edge.fromId === focusId ? edge.coordinates : [...edge.coordinates].reverse()}))
+    : orderNetworkTrace(edges);
+  const steps = ordered.map(step => {
+    const projected = step.coordinates.map(project), cumulative = [0];
+    for (let i = 1; i < projected.length; i++) cumulative.push(cumulative[i - 1] + distance(projected[i - 1], projected[i]));
+    return {...step, projected, cumulative, length: cumulative[cumulative.length - 1]};
+  }).filter(step => step.length > 0);
+  const longest = Math.max(0, ...steps.map(step => step.length));
+  return steps.map((step, index) => ({...step,
+    start: focusId || steps.length === 1 ? 0 : index / (steps.length - 1) * 4000,
+    duration: focusId ? 1000 + 1000 * step.length / longest : 1000,
+  }));
+}
+
+export function partialTraceCoordinates(step, progress) {
+  if (progress >= 1) return step.coordinates;
+  const target = Math.max(0, progress) * step.length, coordinates = [step.coordinates[0]];
+  for (let i = 1; i < step.projected.length; i++) {
+    if (step.cumulative[i] < target) { coordinates.push(step.coordinates[i]); continue; }
+    const span = step.cumulative[i] - step.cumulative[i - 1];
+    const t = span ? (target - step.cumulative[i - 1]) / span : 0;
+    const from = step.projected[i - 1], to = step.projected[i];
+    coordinates.push(unproject([from[0] + (to[0] - from[0]) * t, from[1] + (to[1] - from[1]) * t]));
+    return coordinates;
+  }
+  return step.coordinates;
+}
+
+// Stagger overlapping strokes over a fixed five-second timeline. Only growing
+// geometry is sent to the small overlay source; completed edges use the base map.
+export function createNetworkTrace({ render, complete, finish = () => {}, requestFrame = requestAnimationFrame, cancelFrame = cancelAnimationFrame }) {
+  let steps = [], elapsed = 0, lastTime = null, lastPaint = null, frame = 0, running = false, finished = false;
+  let completed = new Set();
   const tick = (time) => {
     frame = 0;
-    if (!running || index >= steps.length) return;
-    if (lastTime !== null) elapsed += Math.min(64, Math.max(0, time - lastTime));
+    if (!running || !steps.length || finished) return;
+    if (lastTime !== null) elapsed += Math.max(0, time - lastTime);
     lastTime = time;
-    const step = steps[index], wait = index === 0 ? 0 : step.componentStart ? 1000 : TRACE_REST_MS;
-    if (elapsed >= wait) {
-      if (!shown) { show(step); shown = true; }
-      const t = Math.min(1, (elapsed - wait) / TRACE_DRAW_MS);
-      if (lastPaint === null || time - lastPaint >= 32 || t === 1) {
-        progress(t * t * (3 - 2 * t), step);
-        lastPaint = time;
+    const end = steps[steps.length - 1].end;
+    if (lastPaint === null || time - lastPaint >= 32 || elapsed >= end) {
+      const active = [];
+      for (const step of steps) {
+        const t = Math.min(1, Math.max(0, (elapsed - step.start) / step.duration));
+        if (t === 1) {
+          if (!completed.has(step.edge.id)) { completed.add(step.edge.id); complete(step); }
+        } else if (elapsed >= step.start) {
+          const eased = t * t * (3 - 2 * t);
+          active.push({edge: step.edge, coordinates: partialTraceCoordinates(step, eased)});
+        }
       }
-      if (t === 1) {
-        complete(step);
-        index++;
-        elapsed = 0;
-        shown = false;
-      }
+      render(active);
+      lastPaint = time;
     }
-    if (index < steps.length) frame = requestFrame(tick);
-    else { running = false; finish(); }
+    if (elapsed < end) frame = requestFrame(tick);
+    else { running = false; finished = true; finish(); }
   };
   const pause = () => {
     running = false;
@@ -68,13 +103,17 @@ export function createNetworkTrace({ show, progress, complete, finish = () => {}
     lastTime = null;
   };
   return {
-    reset(edges) { pause(); steps = orderNetworkTrace(edges); index = 0; elapsed = 0; lastPaint = null; shown = false; },
+    /** @param {any[]} edges @param {string | null} [focusId] */
+    reset(edges, focusId = null) {
+      pause(); steps = networkTracePlan(edges, focusId).map(step => ({...step, end: step.start + step.duration}));
+      // Focused strokes start together, so the longest duration determines the end.
+      steps.sort((a, b) => a.end - b.end);
+      elapsed = 0; lastPaint = null; completed = new Set(); finished = false;
+    },
     pause,
     resume() {
-      if (running || index >= steps.length) return;
-      running = true;
-      lastTime = null;
-      frame = requestFrame(tick);
+      if (running || finished || !steps.length) return;
+      running = true; lastTime = null; frame = requestFrame(tick);
     },
   };
 }

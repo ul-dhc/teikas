@@ -1035,47 +1035,34 @@ let adjacentEdges = new Map<string, NetworkEdge[]>();
 let renderedNetworkKey = "";
 const reducedNetworkMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let tracedNetworkEdges: NetworkEdge[] = [];
-let traceEdge: NetworkEdge | null = null;
-let traceProgress = 0;
 let networkTraceKey = '';
 let networkMotionStarted = false, networkMotionPlaying = false, networkMotionFinished = false;
 const traceCollection = (features: any[] = []) => ({type: 'FeatureCollection', features}) as any;
 const networkTrace = createNetworkTrace({
-  show: ({edge, coordinates}: {edge: NetworkEdge; coordinates: number[][]}) => {
-    traceEdge = edge;
-    (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection([
-      {type: 'Feature', geometry: {type: 'LineString', coordinates}, properties: {}},
-    ]));
+  render: (active: Array<{edge: NetworkEdge; coordinates: number[][]}>) => {
+    (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection(active.map(({edge, coordinates}) => (
+      {type: 'Feature', geometry: {type: 'LineString', coordinates}, properties: {color: networkEdgeColor(edge), strength: edge.strength}}
+    ))));
   },
-  progress: (progress: number) => { traceProgress = progress; paintNetworkTrace(); },
   complete: ({edge}: {edge: NetworkEdge}) => {
     map.setFeatureState({source: 'network', id: edge.id}, {traceDrawn: true});
-    traceEdge = null;
-    (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection());
   },
-  finish: () => { networkMotionPlaying = false; networkMotionFinished = true; syncNetworkMotionPreference(); },
+  finish: () => { networkMotionPlaying = false; networkMotionFinished = true; hidePlatformTooltip(); syncNetworkMotionPreference(); },
 });
 const networkMotionEnabled = () => networkMotionStarted && !reducedNetworkMotion.matches;
 const paintNetworkTrace = () => {
-  if (!traceEdge || !map.getLayer('network-trace')) return;
-  // A short transparent tip softly reveals the stroke without a moving marker.
-  const tip = Math.max(.00001, traceProgress), tail = Math.max(0, tip - .025);
-  map.setPaintProperty('network-trace', 'line-gradient', ['interpolate', ['linear'], ['line-progress'], tail, networkEdgeColor(traceEdge), tip, 'rgba(0,0,0,0)']);
-  const strength = Math.min(.75, Math.max(.1, traceEdge.strength));
+  if (!map.getLayer('network-trace')) return;
   const intensity = Number(networkIntensity.value) / 100;
   // Keep the active stroke legible at the default 15% without brightening the
   // entire static network. Zero intensity still hides it completely.
   map.setPaintProperty('network-trace', 'line-opacity', intensity ? Math.min(.85, .4 + .3 * Math.sqrt(intensity)) : 0);
-  map.setPaintProperty('network-trace', 'line-width', .65 + (strength - .1) / .65 * 1.95);
 };
 const resetNetworkTrace = () => {
   networkTrace.pause();
-  traceEdge = null;
-  traceProgress = 0;
   networkMotionFinished = false;
   if (map.getSource('network')) map.removeFeatureState({source: 'network'});
   (map.getSource('network-trace') as maplibregl.GeoJSONSource)?.setData(traceCollection());
-  networkTrace.reset(tracedNetworkEdges);
+  networkTrace.reset(tracedNetworkEdges, activeNetworkNode);
 };
 const syncNetworkTrace = () => {
   if (!map.getLayer('network-trace')) return;
@@ -1178,7 +1165,7 @@ const applyNetworkFocus = (hoveredId: string | null) => {
     if (networkMotionEnabled()) {
       tracedNetworkEdges = focused ? adjacentEdges.get(id!) || [] : shownEdges;
       const traceKey = JSON.stringify([networkType.value, focused ? id : null, tracedNetworkEdges.map((edge: NetworkEdge) => edge.id)]);
-      if (traceKey !== networkTraceKey) { networkTraceKey = traceKey; resetNetworkTrace(); }
+      if (traceKey !== networkTraceKey) { networkTraceKey = traceKey; resetNetworkTrace(); networkMotionPlaying = true; }
     }
     renderedNetworkKey = key;
     networkVisibility.textContent = tr(!focused && networkStrongestOnly.checked ? "map.networkStrongestConnections" : "map.networkVisibleConnections", { shown: formatter().format(shownEdges.length), total: formatter().format(networkEdges.length) });
@@ -1543,7 +1530,7 @@ map.on("load", async () => {
     promoteId: "id",
   });
   map.addSource('network-trace', {
-    type: 'geojson', lineMetrics: true, data: traceCollection(),
+    type: 'geojson', data: traceCollection(),
   });
   map.addSource("unmapped", {
     type: "geojson",
@@ -1700,9 +1687,9 @@ map.on("load", async () => {
     id: 'network-trace', type: 'line', source: 'network-trace',
     layout: {visibility: 'none', 'line-cap': 'round', 'line-join': 'round'},
     paint: {
-      'line-gradient': ['interpolate', ['linear'], ['line-progress'], 0, 'rgba(0,0,0,0)', 1, 'rgba(0,0,0,0)'],
+      'line-color': ['get', 'color'],
       'line-opacity': 0,
-      'line-width': ['interpolate', ['linear'], ['zoom'], 4, .9, 9, 1.5],
+      'line-width': ['interpolate', ['linear'], ['get', 'strength'], .1, .65, .75, 2.6],
       'line-opacity-transition': {duration: 0},
     },
   });
