@@ -1,3 +1,4 @@
+import {sectionScope} from '../lib/section-scope';
 import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
 import {encodeSelection} from '../lib/selection.js';
 import {createNetworkTrace} from './network-trace.js';
@@ -75,6 +76,7 @@ const dataset = JSON.parse(
       : key,
   formatter = () => new Intl.NumberFormat(document.documentElement.lang),
   params = new URLSearchParams(location.search);
+const subsection = sectionScope(params.get('section'));
 const placeUncertaintyById = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
 for (const feature of dataset.legends.features) (feature.properties as any).locationUncertain = ['area', 'ambiguous'].includes(placeUncertaintyById.get(feature.properties.placeId) || 'none') ? 1 : 0;
 const uncertaintyToggle = page.querySelector<HTMLInputElement>('[data-show-uncertainty]')!;
@@ -756,6 +758,7 @@ const updatePointCenterSelection = () => {
 const applyFilters = (save = true) => {
   const from = Number(yearFromInput.value), to = Number(yearToInput.value), timeFilterActive = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max;
   const matchesFilters = (properties: LegendProperties) => {
+    if (subsection && !properties.id.startsWith(subsection)) return false;
     const year = Number(properties.year);
     if (year ? timeFilterActive && (year < from || year > to) : !includeUndated.checked) return false;
     if (filterExplicit.narrator && !selectedFilters.narrator.has(properties.narrator || unknownPersonValue)) return false;

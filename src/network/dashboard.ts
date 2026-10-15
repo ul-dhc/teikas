@@ -1,3 +1,4 @@
+import {scopeRecordsToSection} from '../lib/section-scope';
 import { enhanceSelects } from './select-menu';
 import {createNetwork} from './network';
 import {dashboardCopy} from './copy';
@@ -10,7 +11,7 @@ type Filter = 'county' | 'collector' | 'narrator' | 'decade' | 'translation';
 type Filters = Partial<Record<Filter,string>>;
 type Row = Type['records'][number] & {typeId:string;code:string;typeLv:string;typeDe:string;topic:string};
 type Scope = {topic?:Topic;type?:Type};
-type Options = {types:Type[];topics:Topic[];base:string;lang:()=> 'lv'|'de'|'en';scopeChange:(topic?:Topic,type?:Type)=>void;stateChange:()=>void;metadataLabels:Record<string,Record<string,string>>};
+type Options = {section?:string;types:Type[];topics:Topic[];base:string;lang:()=> 'lv'|'de'|'en';scopeChange:(topic?:Topic,type?:Type)=>void;stateChange:()=>void;metadataLabels:Record<string,Record<string,string>>};
 export function createDashboard(options: Options) {
  const {types,topics,base,lang,metadataLabels} = options;
  const named=(field:string,value:string)=>metadataLabels[field]?.[value]||value;
@@ -35,7 +36,7 @@ export function createDashboard(options: Options) {
  let previewSize = 12;
  let typeQuery = '';
  let textMode = localStorage.getItem('teikas-network-content-mode') || 'parallel';
- const cohort = (skip='') => selectRecords(all,{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
+ const cohort = (skip='') => selectRecords(scopeRecordsToSection(all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
  const countUnique = (rows:Row[],field:'county'|'collector'|'narrator'|'typeId') => new Set(rows.map(row=>row[field]).filter(Boolean)).size;
  function read(params:URLSearchParams) {
   view=networkEnabled&&params.get('view')!=='overview'?'network':'overview';
