@@ -100,7 +100,7 @@ function excerpt(value: string | null, length = 420): string {
 
 export const browseRecords = legends.map((legend) => ({
   id: legend.id, volume: legend.volume, chapterLv: legend.chapter.lv ?? '', chapterDe: legend.chapter.de ?? '',
-  placeId: legend.placeId ?? '',
+  placeId: legend.placeId ?? '', collectorId: legend.collectorId ?? '', narratorId: legend.narratorId ?? '',
   titleLv: legend.title.lv ?? '', titleDe: legend.title.de ?? '', place: legend.placeId ? placesById.get(legend.placeId)?.name ?? '' : '',
   collector: displayPersonName(collectorsById.get(legend.collectorId)), narrator: legend.narratorId ? displayPersonName(narratorsById.get(legend.narratorId)) : '',
   year: legendYear(legend), excerptLv: excerpt(legend.text.lv), excerptDe: excerpt(legend.text.de),
@@ -109,13 +109,13 @@ const browseCollectors = collectors.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Pierakstītājs",
   gender: person.gender,
-  selection: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')),
+  selection: '?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&collector=', person.id),
 }));
 const browseNarrators = narrators.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Teicējs",
   gender: person.gender,
-  selection: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')),
+  selection: '?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&narrator=', person.id),
 }));
 export const browsePersons = [...browseNarrators, ...browseCollectors];
 
