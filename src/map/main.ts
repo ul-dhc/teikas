@@ -2527,6 +2527,23 @@ filterLayoutQuery.addEventListener("change", () => {
   requestAnimationFrame(() => map.resize());
 });
 syncFilterCollapseLabel();
+// Reserve the actual header/filter height rather than a fixed phone minimum.
+const sizeCompactMap = () => {
+  const headerHeight = document.querySelector<HTMLElement>('.site-header')?.offsetHeight || 0;
+  const statusHeight = mapWorkspace.querySelector<HTMLElement>('.map-status-bar')?.offsetHeight || 0;
+  mapWorkspace.style.setProperty('--compact-map-offset', `${headerHeight + filterPanel.offsetHeight + statusHeight + 24}px`);
+  requestAnimationFrame(() => map.resize());
+};
+const compactMapObserver = new ResizeObserver(sizeCompactMap);
+compactMapObserver.observe(filterPanel);
+const siteHeader = document.querySelector<HTMLElement>('.site-header');
+if (siteHeader) compactMapObserver.observe(siteHeader);
+sizeCompactMap();
+const mapPanelObserver = new ResizeObserver(() => {
+  const toolbarSpace = matchMedia('(max-height:500px)').matches ? 68 : 172;
+  mapStage.style.setProperty('--map-panel-space', `${Math.max(80, mapStage.clientHeight - toolbarSpace)}px`);
+});
+mapPanelObserver.observe(mapStage);
 const exportSelection = (format: "csv" | "geojson" | "graphml") => {
   const rows = [...filteredFeatures.map((feature) => feature.properties), ...filteredUnmappedLegends];
   const csv = ["id,place,record_or_source_year,chapter,narrator,collector,volume,translation", ...rows.map((row) => [row.id, row.placeName, row.year || "", row.themeLv, row.narrator, row.collector, row.volume, row.translation].map((value) => `"${String(value).replaceAll('"', '""')}"`).join(","))].join("\n");
