@@ -28,7 +28,6 @@ const base = import.meta.env.BASE_URL;
     <a class="skip-link" href="#saturs">Pāriet uz saturu</a>
     <header class="site-header">
       {active === 'home' ? <span class="wordmark-placeholder" aria-hidden="true"></span> : <a class="wordmark" href={base} aria-label="Teikas – sākumlapa">Teikas</a>}
-      {active === 'home' && <a class="wordmark mobile-wordmark" href={base} aria-label="Teikas – sākumlapa">Teikas</a>}
       <nav aria-label="Galvenā navigācija">
         <a class:list={[{ active: active === 'home' }]} href={base} data-nav-key="home">Sākums</a>
         <a class:list={[{ active: active === 'browse' }]} href={`${base}teksti/`} data-nav-key="texts">Teksti</a>
