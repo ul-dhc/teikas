@@ -30,10 +30,12 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
       <p class="themes-stats"><span><strong>{themes.length}</strong> <span data-i18n="themes.chapters">nodaļas</span></span><span><strong>{subsectionCount}</strong> <span data-i18n="themes.sections">apakšnodaļas</span></span><span><strong>{legends.length.toLocaleString('lv-LV')}</strong> <span data-i18n="themes.records">teikas</span></span></p>
     </header>
     <div class="themes-controls">
-      <label class="field themes-search"><span class="sr-only" data-i18n="themes.search">Meklēt tēmu vai nosaukumu…</span><input type="search" data-theme-search placeholder="Meklēt tēmu vai nosaukumu…" data-i18n-placeholder="themes.search" autocomplete="off" /></label>
+      <label class="field themes-search"><span class="sr-only" data-i18n="themes.searchCollection">Meklēt tēmās, tekstos un metadatos…</span><input type="search" data-theme-search placeholder="Meklēt tēmās, tekstos un metadatos…" data-i18n-placeholder="themes.searchCollection" aria-describedby="theme-search-help theme-search-status" autocomplete="off" /></label>
       <label class="themes-sort"><span class="sr-only" data-i18n="themes.order">Secība</span><select data-theme-sort><option value="collection" data-i18n="themes.collectionOrder">Krājuma secībā</option><option value="alphabetical" data-i18n="themes.alphabetical">Alfabētiski</option></select></label>
       <div class="themes-expand"><button type="button" data-expand-all data-i18n="themes.expand">Izvērst visas</button><button type="button" data-collapse-all data-i18n="themes.collapse">Sakļaut visas</button></div>
     </div>
+    <p class="themes-search-help" id="theme-search-help" data-i18n="themes.searchHelp">Meklē arī pilnajos teiku tekstos abās valodās, vietvārdos, personu vārdos, gados un avotu ziņās. Tekstu saites atver atrastās teikas.</p>
+    <p class="themes-search-status" id="theme-search-status" role="status" aria-live="polite" data-i18n-skip hidden></p>
     <div class="themes-toc" data-theme-list>
       {themes.map(theme => <details class="theme-chapter" data-theme-id={theme.id} data-volume={theme.volume} data-title-lv={theme.title.lv || ''} data-title-de={theme.title.de || theme.title.lv || ''}>
         <summary><i data-lucide="chevron-down"></i><span class="theme-name" data-i18n-skip data-theme-name>{theme.title.lv}</span><span class="theme-meta"><span class="theme-volume" data-volume-label></span><span class="theme-count">{theme.count.toLocaleString('lv-LV')} <span data-i18n="themes.records">teikas</span></span></span></summary>
@@ -41,7 +43,7 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
           <nav class="theme-actions" aria-label="Skatīt tēmu" data-i18n-ariaLabel="themes.viewTheme">
             {actions(theme).map(action => <a href={action.href} aria-label={action.label} data-tooltip={action.label} data-i18n-ariaLabel={action.key} data-i18n-dataTooltip={action.key}><i data-lucide={action.icon} aria-hidden="true"></i></a>)}
           </nav>
-          <ul class="theme-sections">{theme.sections.map(section => <li data-theme-section data-title-lv={section.title.lv || ''} data-title-de={section.title.de || section.title.lv || ''}>
+          <ul class="theme-sections">{theme.sections.map(section => <li data-theme-section data-section-id={section.id} data-title-lv={section.title.lv || ''} data-title-de={section.title.de || section.title.lv || ''}>
             <a class="section-name" href={textHref(section.id)} data-i18n-skip data-section-name>{section.title.lv}</a>
             <span class="section-count">{section.count.toLocaleString('lv-LV')}</span>
             <nav class="theme-actions section-actions" aria-label={section.title.lv} data-section-actions>
@@ -55,11 +57,22 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
     <p class="themes-method" data-i18n="themes.method">Tēmu dalījums un nosaukumi saglabā Pētera Šmita krājuma nodaļas un apakšnodaļas.</p>
   </section>
   <script>
+    import {normalizeThemeSearch, themeSearchTerms, searchThemeRecords, type ThemeSearchRecord} from '../../lib/theme-search';
+    import {encodeSelection} from '../../lib/selection.js';
     import ui from '../../i18n/ui.json';
     const list = document.querySelector<HTMLElement>('[data-theme-list]')!;
     const chapters = [...list.querySelectorAll<HTMLDetailsElement>('[data-theme-id]')];
     const search = document.querySelector<HTMLInputElement>('[data-theme-search]')!;
     const sort = document.querySelector<HTMLSelectElement>('[data-theme-sort]')!;
+    const status = document.querySelector<HTMLElement>('#theme-search-status')!;
+    const base = import.meta.env.BASE_URL;
+    const originalCounts = new Map([...list.querySelectorAll<HTMLElement>('.theme-count,.section-count')].map(element => [element,element.firstChild!.textContent!]));
+    const originalLinks = new Map([...list.querySelectorAll<HTMLAnchorElement>('a')].map(link => [link,link.getAttribute('href')!]));
+    let searchIndex: ThemeSearchRecord[] | null = null, pendingIndex: Promise<ThemeSearchRecord[]> | null = null, searchToken = 0;
+    const ensureIndex = () => pendingIndex ||= fetch(`${base}theme-search.json`).then(response => {
+      if (!response.ok) throw new Error(`Search index: ${response.status}`);
+      return response.json() as Promise<ThemeSearchRecord[]>;
+    }).then(records => searchIndex = records).catch(error => {pendingIndex=null;throw error;});
     const empty = document.querySelector<HTMLElement>('[data-theme-empty]')!;
     const storageKey = 'teikas-themes-state';
     const params = new URLSearchParams(location.search);
@@ -68,7 +81,7 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
     const opened = new Set(params.has('open') ? (params.get('open') || '').split(',') : saved.open || []);
     search.value = params.get('q') ?? saved.q ?? '';
     sort.value = (params.get('sort') ?? saved.sort) === 'alphabetical' ? 'alphabetical' : 'collection';
-    const fold = (value: string) => value.toLocaleLowerCase('lv').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const fold = normalizeThemeSearch;
     const tr = (key: string, values: Record<string,string> = {}) => {
       if (typeof (window as any).teikasT === 'function') return (window as any).teikasT(key, values) as string;
       const lang = document.documentElement.dataset.uiLang || 'lv';
@@ -94,26 +107,63 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
       sort.value === 'alphabetical' ? url.searchParams.set('sort',sort.value) : url.searchParams.delete('sort');
       history.replaceState(history.state,'',url);
     }
-    function render() {
+    function setTextLink(link: HTMLAnchorElement, ids: string[] | undefined) {
+      if (ids) {
+        const url = new URL(originalLinks.get(link)!, location.origin);
+        url.searchParams.set('selection', encodeSelection(ids));
+        link.href = url.href;
+      } else link.setAttribute('href', originalLinks.get(link)!);
+    }
+    async function render() {
+      const token = ++searchToken, query = search.value.trim(), terms = themeSearchTerms(query);
+      status.hidden = !query;
+      empty.hidden = true;
+      if (terms.length && !searchIndex) {
+        status.textContent = tr('themes.searchLoading');
+        list.setAttribute('aria-busy','true');
+        try { await ensureIndex(); }
+        catch {
+          if (token !== searchToken) return;
+          list.removeAttribute('aria-busy');
+          status.textContent = tr('themes.searchError');
+          return;
+        }
+      }
+      if (token !== searchToken) return;
+      list.removeAttribute('aria-busy');
+      const results = terms.length ? searchThemeRecords(searchIndex!, terms) : null;
       rendering = true;
-      const term = fold(search.value.trim());
+      const term = terms.length === 1 ? terms[0] : '';
       const ordered = [...chapters].sort((a,b) => sort.value === 'alphabetical' ? label(a).localeCompare(label(b),document.documentElement.lang) : a.dataset.themeId!.localeCompare(b.dataset.themeId!));
       for (const chapter of ordered) {
-        const parentMatches = !term || fold(`${chapter.dataset.titleLv} ${chapter.dataset.titleDe}`).includes(term);
+        const chapterIds = results?.chapters.get(chapter.dataset.themeId!);
+        const chapterCount = chapter.querySelector<HTMLElement>('.theme-count')!;
+        chapterCount.firstChild!.textContent = results ? `${chapterIds?.length || 0} ` : originalCounts.get(chapterCount)!;
+        const countLabel = chapterCount.querySelector<HTMLElement>('[data-i18n]')!;
+        countLabel.dataset.i18n = results && new Intl.PluralRules(document.documentElement.dataset.uiLang || 'lv').select(chapterIds?.length || 0) === 'one' ? 'themes.record' : 'themes.records';
+        countLabel.textContent = tr(countLabel.dataset.i18n);
         let matches = 0;
         for (const row of chapter.querySelectorAll<HTMLElement>('[data-theme-section]')) {
-          row.hidden = !parentMatches && !fold(`${row.dataset.titleLv} ${row.dataset.titleDe}`).includes(term);
+          const ids = results?.sections.get(row.dataset.sectionId!);
+          row.hidden = !!results && !ids;
           if (!row.hidden) matches++;
-          highlight(row.querySelector<HTMLElement>('[data-section-name]')!,label(row),term);
+          const sectionCount = row.querySelector<HTMLElement>('.section-count')!;
+          sectionCount.textContent = results ? String(ids?.length || 0) : originalCounts.get(sectionCount)!;
+          const nameLink = row.querySelector<HTMLAnchorElement>('[data-section-name]')!;
+          highlight(nameLink,label(row),term);
+          setTextLink(nameLink,ids);
+          setTextLink(row.querySelector<HTMLAnchorElement>('.section-actions a')!,ids);
           row.querySelector('nav')?.setAttribute('aria-label', label(row));
         }
+        setTextLink(chapter.querySelector<HTMLAnchorElement>('.theme-actions a')!,chapterIds);
         chapter.hidden = !matches;
-        const shouldOpen = !!term && searchExpanded && !chapter.hidden || opened.has(chapter.dataset.themeId!);
+        const shouldOpen = !!query && searchExpanded && !chapter.hidden || opened.has(chapter.dataset.themeId!);
         if (chapter.open !== shouldOpen) chapter.open = shouldOpen;
         highlight(chapter.querySelector<HTMLElement>('[data-theme-name]')!,label(chapter),term);
         chapter.querySelector<HTMLElement>('[data-volume-label]')!.textContent = tr('themes.volume',{value:chapter.dataset.volume!});
         list.append(chapter);
       }
+      status.textContent = results ? tr('themes.searchResults',{count:String(results.count),chapters:String(results.chapters.size)}) : '';
       empty.hidden = chapters.some(chapter => !chapter.hidden);
       rendering = false;
     }
@@ -122,7 +172,8 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
       chapter.open ? opened.add(chapter.dataset.themeId!) : opened.delete(chapter.dataset.themeId!);
       save();
     }));
-    search.addEventListener('input',()=>{searchExpanded=true;render();save();});
+    let searchTimer = 0;
+    search.addEventListener('input',()=>{searchToken++;searchExpanded=true;window.clearTimeout(searchTimer);searchTimer=window.setTimeout(()=>render(),150);save();});
     sort.addEventListener('change',()=>{render();save();});
     document.querySelector('[data-expand-all]')!.addEventListener('click',()=>{chapters.filter(chapter=>!chapter.hidden).forEach(chapter=>{opened.add(chapter.dataset.themeId!);chapter.open=true;});save();});
     document.querySelector('[data-collapse-all]')!.addEventListener('click',()=>{opened.clear();searchExpanded=false;render();save();});
@@ -143,6 +194,8 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
     .themes-sort select{padding:.65rem .9rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:.85rem}
     .themes-expand{display:flex;gap:1rem;margin-left:auto}
     .themes-expand button{padding:.5rem 0;background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:4px;font-size:.8rem}
+    .themes-search-help{max-width:56rem;font-size:.85rem;line-height:1.6;color:var(--muted);margin:-.25rem 0 1rem}
+    .themes-search-status{font-size:.9rem;color:var(--muted);margin:0 0 1rem}
     .themes-toc{display:grid;gap:.65rem}
     .theme-chapter{min-width:0;border:1px solid color-mix(in srgb,var(--line),transparent 28%);border-radius:24px;background:transparent;transition:border-color .15s ease}
     .theme-chapter[hidden]{display:none}

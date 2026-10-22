@@ -2324,5 +2324,31 @@
     "lv": "Šajā atlasē nav savienojumu. Maini atlasi vai tīkla veidu.",
     "de": "Diese Auswahl enthält keine Verbindungen. Ändere die Auswahl oder den Netzwerktyp.",
     "en": "This selection has no connections. Change the selection or network type."
-  }
+  },
+  "themes.searchCollection": {
+    "lv": "Meklēt tēmās, tekstos un metadatos…",
+    "de": "Themen, Texte und Metadaten durchsuchen…",
+    "en": "Search themes, texts and metadata…"
+  },
+  "themes.searchHelp": {
+    "lv": "Meklē arī pilnajos teiku tekstos abās valodās, vietvārdos, personu vārdos, gados un avotu ziņās. Tekstu saites atver atrastās teikas.",
+    "de": "Die Suche umfasst auch vollständige Sagentexte in beiden Sprachen, Orte, Personennamen, Jahreszahlen und Quellenangaben. Textlinks öffnen die gefundenen Sagen.",
+    "en": "Search also covers the full legend texts in both languages, places, people, years and sources. Text links open the matching legends."
+  },
+  "themes.searchLoading": {
+    "lv": "Ielādē meklēšanu tekstos un metadatos…",
+    "de": "Text- und Metadatensuche wird geladen…",
+    "en": "Loading text and metadata search…"
+  },
+  "themes.searchError": {
+    "lv": "Meklēšanu neizdevās ielādēt. Pārbaudi savienojumu un mēģini vēlreiz.",
+    "de": "Die Suche konnte nicht geladen werden. Prüfe die Verbindung und versuche es erneut.",
+    "en": "Search could not be loaded. Check your connection and try again."
+  },
+  "themes.searchResults": {
+    "lv": "Atrasto teiku skaits: {count}. Nodaļu skaits: {chapters}.",
+    "de": "Gefundene Sagen: {count}. Kapitel: {chapters}.",
+    "en": "Matching legends: {count}. Chapters: {chapters}."
+  },
+  "themes.record": {"lv":"teika","de":"Sage","en":"legend"}
 }

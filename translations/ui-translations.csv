@@ -478,3 +478,9 @@ themes.all,Visas tēmas,Alle Themen,All themes
 "map.networkMotionPause","Apturēt tīkla animāciju","Netzwerkanimation pausieren","Pause network animation"
 "map.networkMotionReplay","Atkārtot tīkla animāciju","Netzwerkanimation wiederholen","Replay network animation"
 "map.networkMotionEmpty","Šajā atlasē nav savienojumu. Maini atlasi vai tīkla veidu.","Diese Auswahl enthält keine Verbindungen. Ändere die Auswahl oder den Netzwerktyp.","This selection has no connections. Change the selection or network type."
+themes.searchCollection,"Meklēt tēmās, tekstos un metadatos…","Themen, Texte und Metadaten durchsuchen…","Search themes, texts and metadata…"
+themes.searchHelp,"Meklē arī pilnajos teiku tekstos abās valodās, vietvārdos, personu vārdos, gados un avotu ziņās. Tekstu saites atver atrastās teikas.","Die Suche umfasst auch vollständige Sagentexte in beiden Sprachen, Orte, Personennamen, Jahreszahlen und Quellenangaben. Textlinks öffnen die gefundenen Sagen.","Search also covers the full legend texts in both languages, places, people, years and sources. Text links open the matching legends."
+themes.searchLoading,Ielādē meklēšanu tekstos un metadatos…,Text- und Metadatensuche wird geladen…,Loading text and metadata search…
+themes.searchError,Meklēšanu neizdevās ielādēt. Pārbaudi savienojumu un mēģini vēlreiz.,Die Suche konnte nicht geladen werden. Prüfe die Verbindung und versuche es erneut.,Search could not be loaded. Check your connection and try again.
+themes.searchResults,Atrasto teiku skaits: {count}. Nodaļu skaits: {chapters}.,Gefundene Sagen: {count}. Kapitel: {chapters}.,Matching legends: {count}. Chapters: {chapters}.
+themes.record,teika,Sage,legend
