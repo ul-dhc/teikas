@@ -2350,5 +2350,20 @@
     "de": "Gefundene Sagen: {count}. Kapitel: {chapters}.",
     "en": "Matching legends: {count}. Chapters: {chapters}."
   },
-  "themes.record": {"lv":"teika","de":"Sage","en":"legend"}
+  "themes.record": {"lv":"teika","de":"Sage","en":"legend"},
+  "themes.searchNamesLabel": {
+    "lv": "Meklēt nodaļu un apakšnodaļu nosaukumos",
+    "de": "Kapitel- und Unterkapiteltitel durchsuchen",
+    "en": "Search chapter and subsection titles"
+  },
+  "themes.searchNamesPlaceholder": {
+    "lv": "Meklēt nosaukumos…",
+    "de": "Titel durchsuchen…",
+    "en": "Search titles…"
+  },
+  "themes.searchInTexts": {
+    "lv": "Meklēt arī teiku tekstos un metadatos",
+    "de": "Auch Sagentexte und Metadaten durchsuchen",
+    "en": "Also search legend texts and metadata"
+  }
 }

@@ -484,3 +484,6 @@ themes.searchLoading,Ielādē meklēšanu tekstos un metadatos…,Text- und Meta
 themes.searchError,Meklēšanu neizdevās ielādēt. Pārbaudi savienojumu un mēģini vēlreiz.,Die Suche konnte nicht geladen werden. Prüfe die Verbindung und versuche es erneut.,Search could not be loaded. Check your connection and try again.
 themes.searchResults,Atrasto teiku skaits: {count}. Nodaļu skaits: {chapters}.,Gefundene Sagen: {count}. Kapitel: {chapters}.,Matching legends: {count}. Chapters: {chapters}.
 themes.record,teika,Sage,legend
+themes.searchNamesLabel,Meklēt nodaļu un apakšnodaļu nosaukumos,Kapitel- und Unterkapiteltitel durchsuchen,Search chapter and subsection titles
+themes.searchNamesPlaceholder,Meklēt nosaukumos…,Titel durchsuchen…,Search titles…
+themes.searchInTexts,Meklēt arī teiku tekstos un metadatos,Auch Sagentexte und Metadaten durchsuchen,Also search legend texts and metadata
