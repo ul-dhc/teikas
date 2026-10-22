@@ -1,6 +1,6 @@
 // Editorial entry points into the original chapter hierarchy; source records stay unchanged.
 export const homeTopics = [
-  {id:'dievs-un-velns', chapters:['1301','1302','1401'], icon:'SunMoon', lv:'Dievs un velns', de:'Gott und Teufel', en:'God and the Devil'},
+  {id:'dievs-un-velns', chapters:['1301','1302','1401'], icon:'Eclipse', lv:'Dievs un velns', de:'Gott und Teufel', en:'God and the Devil'},
   {id:'raganas-un-burvji', chapters:['1503','1504'], icon:'Moon', lv:'Raganas un burvji', de:'Hexen und Zauberer', en:'Witches and Sorcerers'},
   {id:'veli-un-eni', chapters:['1402','1403'], icon:'Flame', lv:'Veļi un ēni', de:'Totengeister und Schatten', en:'Spirits of the Dead and Shadows'},
   {id:'vilkaci-vadataji-lietuveni', chapters:['1502','1404','1405'], icon:'Trees', lv:'Vilkači, vadātāji un lietuvēni', de:'Werwölfe, Irrgeister und Nachtmahre', en:'Werewolves, Misleading Spirits and Nightmares'},
