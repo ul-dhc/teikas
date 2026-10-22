@@ -1,9 +1,9 @@
 ---
-import { SunMoon, WandSparkles, Ghost, PawPrint, Flame, House, Gem, Mountain } from 'lucide';
+import { SunMoon, Moon, Flame, Trees, LineSquiggle, House, Shovel, Waves } from 'lucide';
 import { legends, collectorsById, narratorsById, displayPersonName } from '../lib/data';
 import { homeTopics, matchesHomeTopic } from '../lib/home-topics';
 import '../styles/home-topics.css';
-const icons = { SunMoon, WandSparkles, Ghost, PawPrint, Flame, House, Gem, Mountain };
+const icons = { SunMoon, Moon, Flame, Trees, LineSquiggle, House, Shovel, Waves };
 const topics = homeTopics.map(topic => {
   const records = legends.filter(record => matchesHomeTopic(record, topic));
   const collectorCount = new Set(records.filter(record => displayPersonName(collectorsById.get(record.collectorId))).map(record => record.collectorId)).size;
