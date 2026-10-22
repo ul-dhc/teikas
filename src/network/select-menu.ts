@@ -101,7 +101,8 @@ function open(select: HTMLSelectElement, trigger: HTMLButtonElement) {
   }
   const theme = getComputedStyle(trigger);
   ['--chart-card', '--raised', '--line', '--ink', '--muted', '--action-fill', '--action-ink', '--blue'].forEach(token => menu.style.setProperty(token, theme.getPropertyValue(token)));
-  document.body.append(menu);
+  // Keep dropdowns inside the active modal workspace for keyboard and assistive technology.
+  (trigger.closest('.ml-network-workspace.is-presentation') || document.body).append(menu);
   const rect = trigger.getBoundingClientRect(), gap = 6;
   const width = Math.min(Math.max(rect.width, 230), innerWidth - 20);
   menu.style.width = `${width}px`;
