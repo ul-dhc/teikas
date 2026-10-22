@@ -31,7 +31,6 @@
 :root body :is(.ml-dash-card,.filter-sidebar):focus-within{box-shadow:none!important;transform:none!important;border-color:var(--line)!important}
 :root body :is(button,a,summary,input,select):focus-visible{outline:2px solid var(--blue)!important;outline-offset:2px!important}
 :root body :is(.ml-facet-track>span,.range-track,.ml-timeline-track>span){filter:none!important}
-:root body .legend-points circle:hover{filter:none!important;transform:none!important}
 :root body :is(.button,.read-full,.map-count):hover>.lucide{transform:none!important}
 
 /* Charts retain their category colours; only the pointed item changes subtly. */
