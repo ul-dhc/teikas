@@ -8,7 +8,9 @@ const topics = homeTopics.map(topic => {
   const records = legends.filter(record => matchesHomeTopic(record, topic));
   const collectorCount = new Set(records.filter(record => displayPersonName(collectorsById.get(record.collectorId))).map(record => record.collectorId)).size;
   const narratorCount = new Set(records.filter(record => record.narratorId && displayPersonName(narratorsById.get(record.narratorId))).map(record => record.narratorId)).size;
-  return {...topic, count: records.length, collectorCount, narratorCount};
+  const filters = new URLSearchParams();
+  [...new Set(records.map(record => record.chapter.lv).filter((title): title is string => !!title))].forEach(title => filters.append('theme',title));
+  return {...topic, count: records.length, collectorCount, narratorCount, filters: filters.toString()};
 });
 ---
 <section class="section shell home-topics" aria-labelledby="topics-title" data-i18n-skip>
@@ -16,7 +18,7 @@ const topics = homeTopics.map(topic => {
     <h2 id="topics-title" data-topic-copy data-lv="Tēmas teiku krājumā" data-de="Themen der Sammlung" data-en="Themes in the Collection">Tēmas teiku krājumā</h2>
     <a class="icon-link topics-all" href={`${import.meta.env.BASE_URL}temas/`}><span data-topic-copy data-lv="Visas tēmas" data-de="Alle Themen" data-en="All Themes">Visas tēmas</span><i data-lucide="arrow-right" aria-hidden="true"></i></a>
   </div>
-  <div class="topic-blocks">{topics.map(topic => <a class="topic-block" href={`${import.meta.env.BASE_URL}teksti/?topic=${topic.id}`} data-topic-id={topic.id}>
+  <div class="topic-blocks">{topics.map(topic => <a class="topic-block" href={`${import.meta.env.BASE_URL}teksti/?${topic.filters}`} data-topic-id={topic.id}>
     <svg class="topic-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icons[topic.icon as keyof typeof icons].map(([Tag, attributes]) => <Tag {...attributes} />)}</svg>
     <h3 data-topic-copy data-lv={topic.lv} data-de={topic.de} data-en={topic.en}>{topic.lv}</h3>
     <div class="topic-totals">

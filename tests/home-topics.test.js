@@ -24,3 +24,25 @@ test('unknown or cleared homepage topic leaves the collection unrestricted',()=>
   assert.equal(records.filter(record=>matchesHomeTopic(record,getHomeTopic(value))).length,records.length);
  }
 });
+test('homepage cards activate existing theme filter values and preserve every intended legend',()=>{
+ const html=readFileSync(new URL('../build/index.html',import.meta.url),'utf8');
+ const cards=[...html.matchAll(/<a\b[^>]*class="topic-block"[^>]*>/g)].map(([tag])=>({
+  id:tag.match(/data-topic-id="([^"]+)"/)?.[1],href:tag.match(/href="([^"]+)"/)?.[1].replaceAll('&amp;','&'),
+ }));
+ assert.equal(cards.length,8);
+ for(const card of cards){
+  const topic=getHomeTopic(card.id),url=new URL(card.href,'https://example.org');
+  const titles=new Set(url.searchParams.getAll('theme'));
+  assert.ok(titles.size,card.id);
+  assert.equal(url.searchParams.has('topic'),false,'no independent homepage filter');
+  assert.equal(url.searchParams.has('section'),false,'no hidden chapter restriction');
+  assert.equal(url.searchParams.has('selection'),false,'no hidden record selection');
+  const actual=records.filter(record=>titles.has(record.chapter.lv)).map(record=>record.id);
+  const expected=records.filter(record=>matchesHomeTopic(record,topic)).map(record=>record.id);
+  assert.deepEqual(actual,expected,card.id);
+ }
+ const creatures=new URL(cards.find(card=>card.id==='vilkaci-vadataji-lietuveni').href,'https://example.org');
+ assert.deepEqual(creatures.searchParams.getAll('theme').sort(),['Vilkati','Vadātāji','Lietuvēni'].sort());
+ const waters=new URL(cards.find(card=>card.id==='udeni-kalni-akmeni').href,'https://example.org');
+ assert.equal(waters.searchParams.getAll('theme').length,1,'commas in a chapter title are not separators');
+});
