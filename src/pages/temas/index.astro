@@ -30,10 +30,11 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
       <p class="themes-stats"><span><strong>{themes.length}</strong> <span data-i18n="themes.chapters">nodaļas</span></span><span><strong>{subsectionCount}</strong> <span data-i18n="themes.sections">apakšnodaļas</span></span><span><strong>{legends.length.toLocaleString('lv-LV')}</strong> <span data-i18n="themes.records">teikas</span></span></p>
     </header>
     <div class="themes-controls">
-      <label class="field themes-search"><span class="sr-only" data-i18n="themes.search">Meklēt tēmu vai nosaukumu…</span><input type="search" data-theme-search placeholder="Meklēt tēmu vai nosaukumu…" data-i18n-placeholder="themes.search" autocomplete="off" /></label>
+      <label class="field themes-search"><span class="themes-search-label" data-i18n="themes.searchNamesLabel">Meklēt nodaļu un apakšnodaļu nosaukumos</span><input type="search" data-theme-search placeholder="Meklēt nosaukumos…" data-i18n-placeholder="themes.searchNamesPlaceholder" autocomplete="off" /></label>
       <label class="themes-sort"><span class="sr-only" data-i18n="themes.order">Secība</span><select data-theme-sort><option value="collection" data-i18n="themes.collectionOrder">Krājuma secībā</option><option value="alphabetical" data-i18n="themes.alphabetical">Alfabētiski</option></select></label>
       <div class="themes-expand"><button type="button" data-expand-all data-i18n="themes.expand">Izvērst visas</button><button type="button" data-collapse-all data-i18n="themes.collapse">Sakļaut visas</button></div>
     </div>
+    <p class="themes-text-search"><a class="icon-link" data-full-text-search href={`${base}teksti/`}><span data-i18n="themes.searchInTexts">Meklēt arī teiku tekstos un metadatos</span><i data-lucide="arrow-right" aria-hidden="true"></i></a></p>
     <div class="themes-toc" data-theme-list>
       {themes.map(theme => <details class="theme-chapter" data-theme-id={theme.id} data-volume={theme.volume} data-title-lv={theme.title.lv || ''} data-title-de={theme.title.de || theme.title.lv || ''}>
         <summary><i data-lucide="chevron-down"></i><span class="theme-name" data-i18n-skip data-theme-name>{theme.title.lv}</span><span class="theme-meta"><span class="theme-volume" data-volume-label></span><span class="theme-count">{theme.count.toLocaleString('lv-LV')} <span data-i18n="themes.records">teikas</span></span></span></summary>
@@ -59,6 +60,8 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
     const list = document.querySelector<HTMLElement>('[data-theme-list]')!;
     const chapters = [...list.querySelectorAll<HTMLDetailsElement>('[data-theme-id]')];
     const search = document.querySelector<HTMLInputElement>('[data-theme-search]')!;
+    const fullTextSearch = document.querySelector<HTMLAnchorElement>('[data-full-text-search]')!;
+    const textBrowserUrl = fullTextSearch.href;
     const sort = document.querySelector<HTMLSelectElement>('[data-theme-sort]')!;
     const empty = document.querySelector<HTMLElement>('[data-theme-empty]')!;
     const storageKey = 'teikas-themes-state';
@@ -96,7 +99,10 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
     }
     function render() {
       rendering = true;
-      const term = fold(search.value.trim());
+      const query = search.value.trim(), term = fold(query);
+      const url = new URL(textBrowserUrl);
+      if (query) url.searchParams.set('q',query);
+      fullTextSearch.href = url.href;
       const ordered = [...chapters].sort((a,b) => sort.value === 'alphabetical' ? label(a).localeCompare(label(b),document.documentElement.lang) : a.dataset.themeId!.localeCompare(b.dataset.themeId!));
       for (const chapter of ordered) {
         const parentMatches = !term || fold(`${chapter.dataset.titleLv} ${chapter.dataset.titleDe}`).includes(term);
@@ -139,6 +145,10 @@ const actions = (theme: (typeof themes)[number], section?: string) => [
     .themes-stats strong{color:var(--ink);font-variant-numeric:tabular-nums}
     .themes-controls{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
     .themes-search{flex:1;max-width:32rem;min-width:15rem}
+    .themes-search-label{display:block;font-size:.85rem;line-height:1.5;color:var(--muted);margin-bottom:.45rem}
+    .themes-text-search{margin:-.25rem 0 1.5rem;font-size:.9rem}
+    .themes-text-search a{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;max-width:100%}
+    .themes-text-search :global(svg){flex:none;width:1rem;height:1rem}
     .themes-search input{border-radius:999px}
     .themes-sort select{padding:.65rem .9rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:.85rem}
     .themes-expand{display:flex;gap:1rem;margin-left:auto}

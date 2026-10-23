@@ -8,6 +8,7 @@ import '../styles/filter-panels.css';
 import '../styles/search.css';
 import '../styles/interactions.css';
 import '../styles/palette.css';
+import '../styles/mobile.css';
 import uiTranslations from '../i18n/ui.json';
 const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitālā kolekcija', active = '' } = Astro.props;
 const base = import.meta.env.BASE_URL;
@@ -41,16 +42,46 @@ const base = import.meta.env.BASE_URL;
         <div class="font-tools" aria-label="Teksta izmērs"><button type="button" data-font-down aria-label="Samazināt burtus"><span aria-hidden="true">A</span><i data-lucide="minus"></i></button><button type="button" data-font-up aria-label="Palielināt burtus"><span aria-hidden="true">A</span><i data-lucide="plus"></i></button></div>
         <button class="icon-control theme-toggle" type="button" data-theme-toggle aria-label="Ieslēgt tumšo režīmu"><i data-theme-icon data-lucide="moon"></i></button>
       </div>
+      <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Galvenā navigācija"><i data-lucide="menu" aria-hidden="true"></i></button>
+      <div id="mobile-menu" class="mobile-menu" hidden></div>
     </header>
     <main id="saturs"><slot /></main>
     <footer class="site-footer"><div class="institution-credit"><a href="https://ul-dhc.github.io/" target="_blank" rel="noopener noreferrer">LU Digitālo humanitāro zinātņu centrs</a><span>, 2026</span></div></footer>
     <script>
       import {attachPlatformTooltips} from '../scripts/tooltips';
       attachPlatformTooltips();
-      import { createIcons, ChartScatter, Pause, Play, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, CalendarDays, ChartNoAxesColumn, CircleAlert, LocateFixed, MapPinOff, Circle, Eye, EyeOff, ListFilter, Maximize2, Minimize2, Scan, Type, ZoomIn, ZoomOut, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, FileStack, GitCompareArrows, Info, Layers, LayoutGrid, Link, List, MapPin, Minus, Moon, Network, NotebookPen, Pin, PinOff, Plus, Quote, RotateCcw, Settings2, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
-      const iconSet={ChartScatter,Pause,Play,ArrowDown,ArrowLeft,ArrowRight,ArrowUp,ArrowUpDown,CalendarDays,ChartNoAxesColumn,CircleAlert,LocateFixed,MapPinOff,Circle,Eye,EyeOff,ListFilter,Maximize2,Minimize2,Scan,Type,ZoomIn,ZoomOut,Check,ChevronDown,ChevronLeft,ChevronRight,Copy,Download,ExternalLink,FileStack,GitCompareArrows,Info,Layers,LayoutGrid,Link,List,MapPin,Minus,Moon,Network,NotebookPen,Pin,PinOff,Plus,Quote,RotateCcw,Settings2,SlidersHorizontal,Sun,UsersRound,X};
+      import { createIcons, Menu, ChartScatter, Pause, Play, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, CalendarDays, ChartNoAxesColumn, CircleAlert, LocateFixed, MapPinOff, Circle, Eye, EyeOff, ListFilter, Maximize2, Minimize2, Scan, Type, ZoomIn, ZoomOut, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, FileStack, GitCompareArrows, Info, Layers, LayoutGrid, Link, List, MapPin, Minus, Moon, Network, NotebookPen, Pin, PinOff, Plus, Quote, RotateCcw, Settings2, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
+      const iconSet={Menu,ChartScatter,Pause,Play,ArrowDown,ArrowLeft,ArrowRight,ArrowUp,ArrowUpDown,CalendarDays,ChartNoAxesColumn,CircleAlert,LocateFixed,MapPinOff,Circle,Eye,EyeOff,ListFilter,Maximize2,Minimize2,Scan,Type,ZoomIn,ZoomOut,Check,ChevronDown,ChevronLeft,ChevronRight,Copy,Download,ExternalLink,FileStack,GitCompareArrows,Info,Layers,LayoutGrid,Link,List,MapPin,Minus,Moon,Network,NotebookPen,Pin,PinOff,Plus,Quote,RotateCcw,Settings2,SlidersHorizontal,Sun,UsersRound,X};
       const renderIcons=()=>createIcons({icons:iconSet,attrs:{'aria-hidden':'true','stroke-width':'1.8'}});(window as any).renderLucideIcons=renderIcons;window.addEventListener('lucide-refresh',renderIcons);renderIcons();
       const doc=document.documentElement, store=localStorage;
+      const header=document.querySelector<HTMLElement>('.site-header')!;
+      const menuButton=header.querySelector<HTMLButtonElement>('.mobile-menu-toggle')!;
+      const menu=header.querySelector<HTMLElement>('#mobile-menu')!;
+      const nav=header.querySelector<HTMLElement>('nav')!;
+      const fontTools=header.querySelector<HTMLElement>('.font-tools')!;
+      const appearance=header.querySelector<HTMLElement>('.theme-toggle')!;
+      const movable=[nav,fontTools,appearance].map(element=>{
+        const marker=document.createComment('desktop header position');
+        element.before(marker); return {element,marker};
+      });
+      const compact=matchMedia('(max-width: 850px)');
+      const closeMenu=(restoreFocus=false)=>{
+        menu.hidden=true; menuButton.setAttribute('aria-expanded','false');
+        if(restoreFocus)menuButton.focus({preventScroll:true});
+      };
+      const syncHeader=()=>{
+        const focusInMenu=menu.contains(document.activeElement);
+        closeMenu();
+        movable.forEach(({element,marker})=>compact.matches?menu.append(element):marker.after(element));
+        if(focusInMenu&&compact.matches)menuButton.focus({preventScroll:true});
+      };
+      menuButton.addEventListener('click',()=>{const open=menu.hidden;menu.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));});
+      document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){event.preventDefault();closeMenu(true);}});
+      document.addEventListener('pointerdown',event=>{if(!menu.hidden&&!header.contains(event.target as Node))closeMenu();});
+      header.addEventListener('focusout',()=>{requestAnimationFrame(()=>{if(!header.contains(document.activeElement))closeMenu();});});
+      menu.addEventListener('click',event=>{if((event.target as Element).closest('a'))closeMenu();});
+      compact.addEventListener('change',syncHeader);syncHeader();
+
       const themeButton=document.querySelector<HTMLButtonElement>('[data-theme-toggle]')!;
       const applyTheme=(theme:string)=>{doc.dataset.theme=theme;store.setItem('teikas-theme',theme);themeButton.setAttribute('aria-label',theme==='dark'?'Ieslēgt gaišo režīmu':'Ieslēgt tumšo režīmu');themeButton.querySelector<HTMLElement>('[data-theme-icon]')!.dataset.lucide=theme==='dark'?'sun':'moon';renderIcons()};
       applyTheme(doc.dataset.theme||'light');themeButton.addEventListener('click',()=>applyTheme(doc.dataset.theme==='dark'?'light':'dark'));

@@ -182,7 +182,13 @@ export function createDashboard(options: Options) {
   const modal=!networkEnabled&&panelOpen&&document.getElementById('ml-dashboard')?.hidden===false&&matchMedia('(max-width:950px)').matches;
   document.querySelectorAll<HTMLElement>('.ml-dashboard-canvas,.site-header,.ml-hero,.ml-view-switch,.ml-method,.site-footer').forEach(element=>element.inert=modal);
   document.querySelectorAll<HTMLElement>('.ml-research-heading,.ml-data-view-switch,.data-overview-tabs,.data-help-footer,.ml-dashboard-filters,.site-header,.ml-hero,.site-footer,.skip-link').forEach(element=>element.inert=modal||network.presentation);
-  document.querySelectorAll<HTMLElement>('.ml-network-filters,.ml-network-filter-scrim,.ml-network-toolbar,.ml-network-coverage,.ml-network-caption,.ml-network-inspector').forEach(element=>element.inert=network.presentation);
+  // Presentation expands the whole workspace; only the surrounding page is inert.
+  const filterOverlay=network.presentation&&matchMedia('(max-width:850px)').matches&&!root.querySelector<HTMLElement>('.ml-network-filters')?.hidden;
+  root.querySelector<HTMLElement>('.ml-network-surface')?.toggleAttribute('inert',filterOverlay);
+  if(network.presentation){
+   const focusScope=root.querySelector<HTMLElement>(filterOverlay?'.ml-network-filters':'.ml-network-workspace');
+   if(!focusScope?.contains(document.activeElement))root.querySelector<HTMLElement>(filterOverlay?'.ml-mobile-filter-close':'[data-network-action="fullscreen"]')?.focus({preventScroll:true});
+  }
   document.body.classList.toggle('ml-network-presented',network.presentation);
   document.body.classList.toggle('ml-panel-visible',modal);
   document.documentElement.classList.toggle('ml-modal-open',modal);
@@ -280,5 +286,6 @@ export function createDashboard(options: Options) {
   if(event.key==='Escape'&&panelOpen&&document.getElementById('ml-dashboard')?.hidden===false){panelOpen=false;render();options.stateChange();root.querySelector<HTMLElement>(view==='network'?'[data-network-action="texts"]':'[data-toggle-texts]')?.focus({preventScroll:true});}
  });
  matchMedia('(max-width:950px)').addEventListener('change',()=>render());
+ matchMedia('(max-width:850px)').addEventListener('change',()=>render());
  return {read,write,render};
 }
