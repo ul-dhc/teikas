@@ -1,0 +1,48 @@
+.ml-data-page:has(.legend-exploration){padding-block:1.5rem 3rem}
+.legend-exploration{padding:1.4rem 0 3rem;color:var(--ink)}
+.legend-exploration-heading{margin-bottom:2rem;max-width:900px}
+.legend-eyebrow{margin:0 0 .5rem;color:var(--blue);font-size:.82rem}
+.legend-exploration-heading h2{font:400 clamp(1.8rem,3vw,2.7rem)/1.2 var(--serif);margin:0}
+.legend-exploration-heading h2 a{color:inherit;text-decoration:none}
+.legend-exploration-heading>p:not(.legend-eyebrow){color:var(--muted);font-size:.88rem;line-height:1.6}
+.legend-exploration-heading .legend-id{font-size:.75rem;margin:.5rem 0}
+.legend-exploration-actions{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1rem}
+.legend-exploration-actions a,.legend-hierarchy a,.legend-related-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.82rem;text-decoration:none}
+.legend-exploration h3{font:400 1.3rem/1.3 var(--serif);margin:0 0 1rem}
+.legend-hierarchy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.legend-hierarchy article,.legend-overview-details>section{border:1px solid var(--line);border-radius:14px;background:var(--raised);padding:1.2rem;min-width:0}
+.legend-hierarchy article>span,.legend-focal-node>span,.legend-person-node span{font-size:.75rem;color:var(--muted)}
+.legend-hierarchy h4{font:400 1.2rem/1.4 var(--serif);margin:.5rem 0;overflow-wrap:anywhere}
+.legend-hierarchy p{font-size:.85rem;color:var(--muted);margin:.75rem 0 1rem}
+.legend-hierarchy p strong{color:var(--ink);font-weight:600}
+.legend-overview-details{display:grid;grid-template-columns:1.3fr 1fr;gap:1rem;margin-top:1.5rem}
+.legend-overview-details dl{margin:0}.legend-overview-details dl>div{display:grid;grid-template-columns:minmax(120px,.7fr) 1fr;gap:1rem;padding:.75rem 0;border-top:1px solid var(--line);font-size:.85rem}
+.legend-overview-details dt{color:var(--muted)}.legend-overview-details dd{margin:0;overflow-wrap:anywhere}
+.legend-overview-details li,.legend-overview-details p{font-size:.85rem;line-height:1.6;overflow-wrap:anywhere}
+.legend-overview-details ul{margin:0;padding-left:1.2rem}
+.legend-network-count{font-size:.85rem;color:var(--muted)}.legend-network-count strong{color:var(--ink)}
+.legend-person-network{position:relative;padding:1.5rem 2rem 2rem;border:1px solid var(--line);border-radius:16px;background:var(--raised);overflow:hidden}
+.legend-person-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.legend-person-lines path{fill:none;stroke:var(--blue);stroke-width:1.5;opacity:.55}
+.legend-person-lines .line-narrator{stroke:var(--palette-ochre)}
+.legend-focal-node{position:relative;z-index:1;width:min(430px,100%);margin:0 auto;padding:1.1rem 1.3rem;border:2px solid var(--focus);border-radius:14px;background:var(--surface);box-shadow:0 0 0 4px color-mix(in srgb,var(--focus),transparent 88%)}
+.legend-focal-node h3{margin:.4rem 0;font-size:1.25rem}.legend-focal-node small{color:var(--muted)}
+.legend-person-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5rem;margin-top:3rem}
+.legend-person-branch{min-width:0}.legend-person-node{position:relative;display:flex;align-items:center;gap:.75rem;background:var(--surface);border:1px solid var(--blue);border-radius:12px;padding:1rem}
+.legend-person-node h3{font:500 1rem/1.4 var(--sans);margin:.25rem 0 0}.legend-person-node>.lucide{width:24px;height:24px;color:var(--blue)}
+.branch-narrator .legend-person-node{border-color:var(--palette-ochre)}.branch-narrator .legend-person-node>.lucide{color:var(--palette-ochre)}
+.legend-branch-caption{position:relative;margin:1.2rem 0 .7rem;font-size:.8rem;color:var(--muted)}
+.legend-person-branch ol{list-style:none;display:grid;gap:.6rem;margin:0;padding:0}
+.legend-person-branch li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.legend-person-branch li a{display:flex;flex-direction:column;gap:.4rem;padding:.8rem 1rem;color:var(--ink);text-decoration:none;font-size:.9rem;line-height:1.4}
+.legend-person-branch li a:hover{color:var(--interaction-green)}.legend-person-branch li small{font-size:.72rem;color:var(--muted)}
+.legend-person-branch button{position:relative;padding:.65rem 1rem;margin-top:1rem;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--blue);cursor:pointer}
+.legend-no-people,.legend-missing-person{position:relative;color:var(--muted);font-size:.85rem;line-height:1.6}
+.legend-related-link{margin-top:1rem}
+@media(max-width:700px){.legend-hierarchy,.legend-overview-details{grid-template-columns:1fr}.legend-person-branches{grid-template-columns:1fr;gap:2.5rem}.legend-person-network{padding:1.2rem 1.5rem}.legend-overview-details dl>div{grid-template-columns:1fr;gap:.3rem}.legend-exploration-actions{gap:.8rem}}
+
+.legend-person-branch.branch-collector{grid-column:1;grid-row:1}
+.legend-person-branch.branch-narrator{grid-column:2;grid-row:1}
+.legend-person-unknown{color:var(--muted);font-size:.85rem;align-self:start;padding:1rem;border:1px dashed var(--line);border-radius:12px}
+.unknown-narrator{grid-column:2;grid-row:1}.unknown-collector{grid-column:1;grid-row:1}
+@media(max-width:700px){.legend-person-branch.branch-collector,.legend-person-branch.branch-narrator,.legend-person-unknown{grid-column:1;grid-row:auto}}

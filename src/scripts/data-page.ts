@@ -7,6 +7,7 @@ const data = JSON.parse(document.getElementById('ml-data')!.textContent!);
 const overview = JSON.parse(document.getElementById('overview-data')!.textContent!);
 function tabUrl(target: string) {
   const params = new URLSearchParams(location.search);
+  if(params.has('legend'))return location.pathname+'?'+new URLSearchParams({legend:params.get('legend')!})+'#'+target;
   if (target !== view) {
     const chapter = params.get('type');
     if (chapter) {
@@ -39,7 +40,7 @@ const reloadView = () => { if ((location.hash === '#overview' ? 'overview' : 'ne
 window.addEventListener('popstate', reloadView);
 window.addEventListener('hashchange', reloadView);
 const updateTabs = () => {
-  document.querySelectorAll<HTMLAnchorElement>('.data-overview-tabs a').forEach(link=>link.setAttribute('aria-current',link.dataset.dataView===view?'page':'false'));
+  document.querySelectorAll<HTMLAnchorElement>('.data-overview-tabs a').forEach(link=>{link.setAttribute('aria-current',link.dataset.dataView===view?'page':'false');link.href=tabUrl(link.dataset.dataView!);});
   const lang = document.documentElement.dataset.uiLang;
   document.querySelector('[data-overview-tab]')!.textContent = lang === 'de' ? 'Übersicht' : lang === 'en' ? 'Overview' : 'Pārskats';
   document.querySelector('[data-network-tab]')!.textContent = lang === 'de' ? 'Netzwerk' : lang === 'en' ? 'Network' : 'Tīkls';
@@ -47,6 +48,12 @@ const updateTabs = () => {
 updateTabs(); window.addEventListener('ui-language-change', updateTabs);
 async function start() {
   const style = document.createElement('style');
+  const legendId=new URLSearchParams(location.search).get('legend');
+  if(legendId&&data.types.some((type:any)=>type.records.some((record:any)=>record.id===legendId))){
+    style.textContent=(await import('../styles/legend-exploration.css?inline')).default+'\n'+workspaceStyle;document.head.append(style);
+    const {renderLegendExploration}=await import('./legend-exploration');
+    renderLegendExploration(data,legendId,view);return;
+  }
   if (view === 'network') {
     style.textContent = (await import('../network/style.css?inline')).default + '\n' + workspaceStyle;
     document.head.append(style);

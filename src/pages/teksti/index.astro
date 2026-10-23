@@ -48,8 +48,11 @@ const unknownPersonValue = '__unknown__';
     const initialThemes=initialFilters.has('theme')?initialFilters.getAll('theme'):legacyTopic?[...new Set(data.filter(record=>legacyTopic.chapters.includes(record.id.slice(0,4))).map(record=>record.chapterLv))]:[];
     initialThemes.filter(value=>knownThemes.has(value)).forEach(value=>selectedThemes.add(value));
     if(selectedThemes.size||initialThemes.includes(''))explicitSelections.add('theme');
+    initialFilters.getAll('volume').filter(value=>data.some(record=>record.volume===value)).forEach(value=>selectedVolumes.add(value));
+    if(selectedVolumes.size)explicitSelections.add('volume');
     function syncThemeUrl(){
-      const url=new URL(location.href);url.searchParams.delete('topic');url.searchParams.delete('theme');
+      const url=new URL(location.href);url.searchParams.delete('topic');url.searchParams.delete('theme');url.searchParams.delete('volume');
+      if(explicitSelections.has('volume'))selectedVolumes.forEach(value=>url.searchParams.append('volume',value));
       if(explicitSelections.has('theme')){if(selectedThemes.size)selectedThemes.forEach(value=>url.searchParams.append('theme',value));else url.searchParams.append('theme','');}
       if(url.href!==location.href)history.replaceState(history.state,'',url);
     }

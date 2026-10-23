@@ -9,20 +9,20 @@ export function relatedLegendRecords(records, legendId) {
 }
 export function legendDataHref(base, record, view) {
  const params=new URLSearchParams({legend:record.id});
- if(view==='network') {
-  params.set('layout','free');
-  params.set('categories','collector,narrator');
-  const nodes=[
-   ...(record.collector && record.collectorId ? [{field:'collector',value:record.collectorId}] : []),
-   ...(record.narrator && record.narratorId ? [{field:'narrator',value:record.narratorId}] : []),
-  ];
-  if(nodes.length)params.set('connection',JSON.stringify({kind:'nodes',nodes,logic:'any'}));
- }
  return `${base}dati/?${params}#${view}`;
 }
 
-export const legendContextHint={
- lv:'Teikas, kas saistītas ar šīs teikas pierakstītāju vai teicēju.',
- de:'Sagen, die mit dem Sammler oder Erzähler dieser Sage verbunden sind.',
- en:'Legends connected through this legend’s collector or narrator.',
-};
+// A focal legend stays distinct from the records reached through each person.
+export function legendBranches(records, legendId) {
+ const source=records.find(record=>record.id===legendId);
+ if(!source)return [];
+ return ['collector','narrator'].filter(field=>source[field]&&source[field]!=='__unknown__').map(field=>({
+  field,value:source[field],records:records.filter(record=>record.id!==legendId&&record[field]===source[field]),
+ }));
+}
+export function legendOverview(records, legendId) {
+ const source=records.find(record=>record.id===legendId);
+ if(!source)return null;
+ const count=predicate=>records.filter(predicate).length;
+ return {source,volumeCount:count(record=>record.topic===source.topic),chapterCount:count(record=>record.id.slice(0,4)===source.id.slice(0,4)),subsectionCount:count(record=>record.id.slice(0,6)===source.id.slice(0,6)),relatedCount:new Set(legendBranches(records,legendId).flatMap(branch=>branch.records.map(record=>record.id))).size};
+}

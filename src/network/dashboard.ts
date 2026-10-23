@@ -1,4 +1,3 @@
-import {relatedLegendRecords,legendContextHint} from '../lib/legend-context.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
 import { enhanceSelects } from './select-menu';
 import {createNetwork} from './network';
@@ -20,7 +19,7 @@ export function createDashboard(options: Options) {
  const root = document.getElementById('ml-dashboard-content')!;
  const networkEnabled=!!root.closest('.ml-data-page');
  const titleFilters=document.getElementById('ml-title-filters');
- titleFilters?.addEventListener('click',event=>{const button=(event.target as Element).closest<HTMLElement>('button');if(!button)return;if(button.dataset.removeFilter)remove(button.dataset.removeFilter);else if(button.hasAttribute('data-reset-stats')){network.reset();filters={};legendContext='';typeQuery='';options.scopeChange(undefined,undefined);}});
+ titleFilters?.addEventListener('click',event=>{const button=(event.target as Element).closest<HTMLElement>('button');if(!button)return;if(button.dataset.removeFilter)remove(button.dataset.removeFilter);else if(button.hasAttribute('data-reset-stats')){network.reset();filters={};typeQuery='';options.scopeChange(undefined,undefined);}});
  let view=networkEnabled?'network':'overview';
  const network=createNetwork({types,topics,lang,metadataLabels,sync:options.stateChange,change:()=>{previewSize=12;render();options.stateChange();}});
  network.attach(root);
@@ -32,18 +31,16 @@ export function createDashboard(options: Options) {
  const sortFields=['topic','type','county','collector'];
  let sorts:Record<string,Sort> = {};
  let filters:Filters = {};
- let legendContext = '';
  let scope:Scope = {};
  let panelOpen = false;
  let previewSize = 12;
  let typeQuery = '';
  let textMode = localStorage.getItem('teikas-network-content-mode') || 'parallel';
- const cohort = (skip='') => selectRecords(scopeRecordsToSection(legendContext?relatedLegendRecords(all,legendContext):all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
+ const cohort = (skip='') => selectRecords(scopeRecordsToSection(all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
  const countUnique = (rows:Row[],field:'county'|'collector'|'narrator'|'typeId') => new Set(rows.map(row=>row[field]).filter(Boolean)).size;
  function read(params:URLSearchParams) {
   view=networkEnabled&&params.get('view')!=='overview'?'network':'overview';
   network.read(params);
-  legendContext=all.some(row=>row.id===params.get('legend'))?params.get('legend')!:'';
   filters = {};
   sorts = {};
   for(const field of sortFields){const value=params.get(`sort_${field}`);if(value&&['count-desc','count-asc','name',...(field==='type'?['code']:[])].includes(value))sorts[field]=value as Sort;}
@@ -59,7 +56,6 @@ export function createDashboard(options: Options) {
   typeQuery=''; previewSize=12;
  }
  function write(params:URLSearchParams) {
-  if(legendContext)params.set('legend',legendContext);
   if(networkEnabled&&view==='network'){params.set('view','network');network.write(params);}
   for (const [field,value] of Object.entries(filters)) if(value)params.set(field,value);
   if(panelOpen)params.set('texts','1');
@@ -140,7 +136,6 @@ export function createDashboard(options: Options) {
  }
  function chips() {
   const choices:Array<{field:string;value:string;label:string}>=[];
-  if(legendContext){const record=all.find(row=>row.id===legendContext)!;choices.push({field:'legend',value:legendContext,label:`${tr('selection')}: ${lang()==='de'?(record.titleDe||record.titleLv):record.titleLv} (${record.id})`});}
   if(scope.topic)choices.push({field:'topic',value:scope.topic.id,label:scope.topic[lang()]});
   if(scope.type)choices.push({field:'type',value:key(scope.type),label:name(scope.type)});
   for(const [field,value] of Object.entries(filters))choices.push({field,value:value!,label:label(field as Filter,value!)});
@@ -175,7 +170,7 @@ export function createDashboard(options: Options) {
   const networkHtml=view==='network'?network.render(rows,networkFilters(),panelOpen,`<button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button>`):'';
   const selectedRows=resultRows();
   const periods=[...new Set(all.filter(row=>row.year).map(row=>String(Math.floor(Number(row.year)/10)*10)))].sort();
-  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen&&!networkEnabled?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading">${networkEnabled?`<div class="ml-data-view-switch" role="group" aria-label="${network.copy().network}">${['network','overview'].map(mode=>`<a href="${base}dati/${location.search}#${mode}" data-data-view="${mode}" aria-current="${view===mode?'page':'false'}"><i data-lucide="${mode==='overview'?'chart-no-axes-column':'network'}"></i>${mode==='overview'?network.copy().overview:network.copy().network}</a>`).join('')}</div>`:''}<div class="ml-research-intro"><h2 id="ml-dashboard-title" class="${networkEnabled?'sr-only':''}" tabindex="-1">${view==='network'?network.copy().title:tr('title')}</h2><p>${legendContext?legendContextHint[lang()]:view==='network'?network.copy().hint:tr('hint')}</p></div>${view==='network'?'':`<div class="ml-research-actions">${view==='network'?'':`<label class="ml-period-control"><span class="sr-only">${tr('period')}</span><select id="ml-period"><option value="">${tr('allYears')}</option>${periods.map(period=>`<option value="${period}" ${filters.decade===period?'selected':''}>${period}–${Number(period)+9}</option>`).join('')}<option value="undated" ${filters.decade==='undated'?'selected':''}>${tr('undated')}</option></select></label>`}<button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" data-tooltip="${tr('share')}"><i data-lucide="link"></i></button>${view==='network'?'':`<button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button>`}</div>`}</header><p id="ml-stats-status" role="status"></p>${titleFilters||view==='network'?'':chips()}${view==='network'?networkHtml:`${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${typesChart()}${namedChart('county',tr('counties'))}${datesChart()}${namedChart('collector',tr('collectors'))}${translationChart()}</div>`}${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
+  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen&&!networkEnabled?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading">${networkEnabled?`<div class="ml-data-view-switch" role="group" aria-label="${network.copy().network}">${['network','overview'].map(mode=>`<a href="${base}dati/${location.search}#${mode}" data-data-view="${mode}" aria-current="${view===mode?'page':'false'}"><i data-lucide="${mode==='overview'?'chart-no-axes-column':'network'}"></i>${mode==='overview'?network.copy().overview:network.copy().network}</a>`).join('')}</div>`:''}<div class="ml-research-intro"><h2 id="ml-dashboard-title" class="${networkEnabled?'sr-only':''}" tabindex="-1">${view==='network'?network.copy().title:tr('title')}</h2><p>${view==='network'?network.copy().hint:tr('hint')}</p></div>${view==='network'?'':`<div class="ml-research-actions">${view==='network'?'':`<label class="ml-period-control"><span class="sr-only">${tr('period')}</span><select id="ml-period"><option value="">${tr('allYears')}</option>${periods.map(period=>`<option value="${period}" ${filters.decade===period?'selected':''}>${period}–${Number(period)+9}</option>`).join('')}<option value="undated" ${filters.decade==='undated'?'selected':''}>${tr('undated')}</option></select></label>`}<button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" data-tooltip="${tr('share')}"><i data-lucide="link"></i></button>${view==='network'?'':`<button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button>`}</div>`}</header><p id="ml-stats-status" role="status"></p>${titleFilters||view==='network'?'':chips()}${view==='network'?networkHtml:`${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${typesChart()}${namedChart('county',tr('counties'))}${datesChart()}${namedChart('collector',tr('collectors'))}${translationChart()}</div>`}${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
   if(view==='network'){const panel=root.querySelector('.ml-network-texts');if(panel)root.querySelector('.ml-network-surface')?.append(panel);}
   if(titleFilters)titleFilters.innerHTML=view==='network'?'':chips();
   if(view==='network'){
@@ -216,7 +211,6 @@ export function createDashboard(options: Options) {
  }
  function remove(field:string) {
   network.reset();
-  if(field==='legend'){legendContext='';update();return;}
   if(field==='topic'){options.scopeChange(undefined,undefined);return;}
   if(field==='type'){options.scopeChange(scope.topic,undefined);return;}
   delete filters[field as Filter];update();
@@ -254,7 +248,7 @@ export function createDashboard(options: Options) {
   if(button.dataset.sortOption){const field=button.dataset.sortOption;sorts[field]=button.dataset.sortValue as Sort;render();options.stateChange();root.querySelector<HTMLElement>(`[data-sort="${field}"]`)?.focus({preventScroll:true});return;}
   if(button.dataset.facet){const field=button.dataset.facet,value=button.dataset.value!;toggle(field,value);root.querySelector<HTMLElement>(`[data-facet="${CSS.escape(field)}"][data-value="${CSS.escape(value)}"]`)?.focus({preventScroll:true});return;}
   if(button.dataset.removeFilter){remove(button.dataset.removeFilter);return;}
-  if(button.hasAttribute('data-reset-stats')){network.reset();filters={};legendContext='';typeQuery='';options.scopeChange(undefined,undefined);return;}
+  if(button.hasAttribute('data-reset-stats')){network.reset();filters={};typeQuery='';options.scopeChange(undefined,undefined);return;}
   if(button.hasAttribute('data-toggle-texts')||button.hasAttribute('data-close-texts')){
    const closing=panelOpen;panelOpen=!closing;render();options.stateChange();
    const target=closing?root.querySelector<HTMLElement>(view==='network'?'[data-network-action="texts"]':'[data-toggle-texts]'):root.querySelector<HTMLElement>('[data-close-texts]');if(networkEnabled&&!closing)root.querySelector<HTMLElement>('.ml-inline-texts')?.scrollIntoView({block:'start',behavior:'instant'});target?.focus({preventScroll:true});return;

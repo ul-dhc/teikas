@@ -24,13 +24,12 @@ test('unmapped profiles explain missing coordinates without inventing a map poin
  assert.doesNotMatch(page,/data-profile-map-canvas/);
  assert.doesNotMatch(page,/data-coordinates=/);
 });
-test('profile network and overview icons preserve the exact legend and both documented person identities',()=>{
+test('profile network and overview icons preserve one focal legend',()=>{
  const record=legends.find(r=>r.id==='130102005');
  const links=[...html(record.id).matchAll(/<a\b[^>]*class="copy-icon detail-context-link"[^>]*>/g)].map(([tag])=>attributes(tag));
  assert.equal(links.length,2);
  const urls=links.map(link=>new URL(link.href,'https://example.org'));
  for(const url of urls){assert.equal(url.searchParams.get('legend'),record.id);assert.equal(url.pathname,'/teikas/dati/');}
  assert.deepEqual(urls.map(url=>url.hash),['#network','#overview']);
- assert.equal(urls[0].searchParams.get('categories'),'collector,narrator');
- assert.deepEqual(JSON.parse(urls[0].searchParams.get('connection')).nodes,[{field:'collector',value:record.collectorId},{field:'narrator',value:record.narratorId}]);
+ for(const url of urls)assert.deepEqual([...url.searchParams],[['legend',record.id]]);
 });
