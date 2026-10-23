@@ -227,7 +227,11 @@ body{background:
   font-size: .74rem;
   display: flex;
 }
-.read-full-person .open-new {grid-row: 3}
+.read-full-person nav {
+  display: flex;
+  gap:.75rem;
+  margin-top: 0.25rem;
+}
 
 .read-full .lucide, .read-full-person .lucide{width:15px;height:15px;transition:transform .16s ease}
 .read-full:hover{color:var(--accent)}

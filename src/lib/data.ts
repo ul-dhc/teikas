@@ -168,20 +168,22 @@ const browseCollectors = collectors.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Pierakstītājs",
   gender: person.gender,
-  selection: '?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&collector=', person.id),
+  textHref: 'teksti/?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&collector=', person.id),
   legendIds: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '',
   themes: createThemeList(person),
   places: createPlaceList(person),
   persons: createNarratorList(person),
+  mapHref: 'karte/?'+ new URLSearchParams({collectorMode: 'selection', collector: person.fullName ?? '__unknown__'}),
 }));
 const browseNarrators = narrators.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Teicējs",
   gender: person.gender,
-  selection: '?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&narrator=', person.id),
+  textHref: 'teksti/?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&narrator=', person.id),
   themes: createThemeList(person),
   places: createPlaceList(person),
   persons: createCollectorList(person),
+  mapHref: 'karte/?'+ new URLSearchParams({collectorMode: 'selection', collector: person.fullName ?? '__unknown__'}),
 }));
 export const browsePersons = [...browseNarrators, ...browseCollectors];
 
