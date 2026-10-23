@@ -204,6 +204,7 @@ body{background:
 
 .read-full{display:none;align-items:center;gap:.4rem;width:max-content;color:var(--blue);font-size:.78rem;font-weight:450;text-decoration:none}
 .read-full-person{display:none;height:max-content;;gap:.6rem;font-size:.78rem;font-weight:450;text-decoration:none}
+@media(max-width:850px){.read-full-person{grid-template-columns:1fr !important}}
 .read-full-person .person-stat {
   border:1px solid var(--line);
   background:0 0;
