@@ -77,6 +77,7 @@ const dataset = JSON.parse(
   formatter = () => new Intl.NumberFormat(document.documentElement.lang),
   params = new URLSearchParams(location.search);
 const subsection = sectionScope(params.get('section'));
+let legendContext = [...dataset.legends.features.map(feature=>feature.properties),...dataset.unmappedLegends].find(record=>record.id===params.get('legend'))?.id || '';
 const placeUncertaintyById = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
 for (const feature of dataset.legends.features) (feature.properties as any).locationUncertain = ['area', 'ambiguous'].includes(placeUncertaintyById.get(feature.properties.placeId) || 'none') ? 1 : 0;
 const uncertaintyToggle = page.querySelector<HTMLInputElement>('[data-show-uncertainty]')!;
@@ -429,6 +430,7 @@ const updateUrl = (push = false) => {
       url.searchParams.delete(key);
     }
   }
+  if(legendContext)url.searchParams.set('legend',legendContext);else url.searchParams.delete('legend');
   url.searchParams.set("yearFrom", yearFromInput.value);
   url.searchParams.set("yearTo", yearToInput.value);
   url.searchParams.set("undated", includeUndated.checked ? "1" : "0");
@@ -469,7 +471,7 @@ const updateCount = () => {
   countLabel.setAttribute("aria-label", tr("map.openVisibleSelection", { count: formatter().format(value) }));
 };
 const syncFilterInterface = () => {
-  let active = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max || !includeUndated.checked || !includeUnknownPlace.checked || Object.values(personFilterExplicit).some(Boolean);
+  let active = Boolean(legendContext) || yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max || !includeUndated.checked || !includeUnknownPlace.checked || Object.values(personFilterExplicit).some(Boolean);
   for (const key of filterKeys) {
     const count = selectedFilters[key].size;
     active ||= filterExplicit[key];
@@ -485,6 +487,7 @@ const syncFilterInterface = () => {
     chip.append(summary, list);
     activeFilterDisplay.append(chip);
   };
+  if(legendContext){const record=allLegendProperties.find(record=>record.id===legendContext)!;addFilterChip('ID',[legendContext],`${legendContext} · ${document.documentElement.dataset.uiLang==='de'?(record.titleDe||record.titleLv):record.titleLv}`);}
   for (const key of filterKeys) {
     if (!filterExplicit[key]) continue;
     const label = filterPanel.querySelector<HTMLElement>(`[data-map-filter="${key}"] > summary > span`)!.textContent || key;
@@ -758,6 +761,7 @@ const updatePointCenterSelection = () => {
 const applyFilters = (save = true) => {
   const from = Number(yearFromInput.value), to = Number(yearToInput.value), timeFilterActive = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max;
   const matchesFilters = (properties: LegendProperties) => {
+    if(legendContext && properties.id!==legendContext)return false;
     if (subsection && !properties.id.startsWith(subsection)) return false;
     const year = Number(properties.year);
     if (year ? timeFilterActive && (year < from || year > to) : !includeUndated.checked) return false;
@@ -2480,6 +2484,7 @@ filterPanel.querySelectorAll<HTMLButtonElement>("[data-map-select-all], [data-ma
   applyFilters();
 }));
 filterClear.addEventListener("click", () => {
+  legendContext = "";
   for (const key of filterKeys) selectedFilters[key].clear();
   filterKeys.forEach((key) => filterExplicit[key] = false);
   personFilterKeys.forEach((key) => personFilterExplicit[key] = false);

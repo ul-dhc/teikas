@@ -853,3 +853,18 @@ body{background:
 }
 
 @media(prefers-reduced-motion:reduce){.home-map-light{transition:none}}
+
+/* Expanded legend cards expose the full text and contextual views. */
+.legend-browser[data-view=grid] .result-card{align-self:start}
+.legend-browser[data-view=grid] .result-card.is-expanded .result-excerpt,
+.legend-browser[data-view=grid] .result-card.is-expanded .result-excerpt>span{display:block;-webkit-line-clamp:unset;overflow:visible}
+.legend-browser .card-read-actions{flex-wrap:wrap}
+.legend-browser .legend-context-actions{display:none;align-items:center;gap:.25rem;margin-left:auto}
+.legend-browser[data-view=grid] .result-card.is-expanded .legend-context-actions{display:flex;grid-column:1/-1;grid-row:2}
+.legend-browser[data-view=grid] .result-card.is-expanded .result-excerpt{grid-row:3}
+.legend-browser[data-view=grid] .result-card.is-expanded .card-read-actions{grid-row:4}
+.legend-browser[data-view=grid] .result-card.is-expanded .card-location{grid-row:5}
+.legend-browser[data-view=grid] .result-card.is-expanded .card-people{grid-row:6}
+.legend-browser .legend-context-actions a{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border-radius:999px;color:var(--muted);text-decoration:none}
+.legend-browser .legend-context-actions a:is(:hover,:focus-visible){color:var(--palette-ochre);text-decoration:none}
+.legend-browser .legend-context-actions .lucide{width:1.1rem;height:1.1rem;pointer-events:none}

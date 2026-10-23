@@ -1,3 +1,4 @@
+import {relatedLegendRecords,legendContextHint} from '../lib/legend-context.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
 import {hidePlatformTooltip as hideTooltip} from '../scripts/tooltips';
 import {dashboardCopy} from './dashboard-copy';
@@ -24,15 +25,17 @@ export function createDashboard(options: Options) {
  const sortFields=['type','county','collector'];
  let sorts:Record<string,Sort> = {};
  let filters:Filters = {};
+ let legendContext = '';
  let scope:Scope = {};
  let panelOpen = false;
  let previewSize = 12;
  let typeQuery = '';
  const expandedLists=new Set<string>();
  let textMode = localStorage.getItem('teikas-content-mode') || 'parallel';
- const cohort = (skip='') => selectRecords(scopeRecordsToSection(all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
+ const cohort = (skip='') => selectRecords(scopeRecordsToSection(legendContext?relatedLegendRecords(all,legendContext):all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
  const countUnique = (rows:Row[],field:'county'|'collector'|'narrator'|'typeId') => new Set(rows.map(row=>row[field]).filter(Boolean)).size;
  function read(params:URLSearchParams) {
+  legendContext=all.some(row=>row.id===params.get('legend'))?params.get('legend')!:'';
   filters = {};
   sorts = {};
   for(const field of sortFields){const value=params.get(`sort_${field}`);if(value&&['count-desc','count-asc','name',...(field==='type'?['code']:[])].includes(value))sorts[field]=value as Sort;}
@@ -47,6 +50,7 @@ export function createDashboard(options: Options) {
   typeQuery=''; previewSize=12;
  }
  function write(params:URLSearchParams) {
+  if(legendContext)params.set('legend',legendContext);
   for (const [field,value] of Object.entries(filters)) if(value)params.set(field,value);
   if(panelOpen)params.set('texts','1');
   for(const [field,value] of Object.entries(sorts))if(value!=='count-desc')params.set(`sort_${field}`,value);
@@ -139,6 +143,7 @@ export function createDashboard(options: Options) {
  }
  function chips() {
   const choices:Array<{field:string;value:string;label:string}>=[];
+  if(legendContext){const record=all.find(row=>row.id===legendContext)!;choices.push({field:'legend',value:legendContext,label:`${tr('selection')}: ${lang()==='de'?(record.titleDe||record.titleLv):record.titleLv} (${record.id})`});}
   if(scope.topic)choices.push({field:'topic',value:scope.topic.id,label:scope.topic[lang()]});
   if(scope.type)choices.push({field:'type',value:key(scope.type),label:name(scope.type)});
   for(const [field,value] of Object.entries(filters))choices.push({field,value:value!,label:label(field as Filter,value!)});
@@ -163,7 +168,7 @@ export function createDashboard(options: Options) {
   scope=nextScope;
   const rows=cohort();
   const selectedRows=resultRows();
-  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading"><div><h2 id="ml-dashboard-title" class="${root.closest('.ml-data-page')?'sr-only':''}" tabindex="-1">${tr('title')}</h2><p>${tr('hint')}</p></div><div class="ml-research-actions"><button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" data-tooltip="${tr('share')}"><i data-lucide="link"></i></button><button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button></div></header><p id="ml-stats-status" role="status"></p>${chips()}${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${namedChart('collector',tr('collectors'))}${typesChart()}${namedChart('county',tr('counties'))}${translationChart()}</div>${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
+  root.innerHTML=`<div class="ml-research-dashboard ${panelOpen?'has-text-panel':''}"><div class="ml-dashboard-canvas"><header class="ml-research-heading"><div><h2 id="ml-dashboard-title" class="${root.closest('.ml-data-page')?'sr-only':''}" tabindex="-1">${tr('title')}</h2><p>${legendContext?legendContextHint[lang()]:tr('hint')}</p></div><div class="ml-research-actions"><button type="button" data-export-stats ${!rows.length?'disabled':''}><i data-lucide="download"></i>${tr('csv')}</button><button type="button" data-share-stats aria-label="${tr('share')}" data-tooltip="${tr('share')}"><i data-lucide="link"></i></button><button type="button" data-toggle-texts class="ml-show-texts" aria-expanded="${panelOpen}"><i data-lucide="list"></i><span>${tr('texts')}</span><b>${selectedRows.length}</b></button></div></header><p id="ml-stats-status" role="status"></p>${chips()}${metrics(rows)}<div class="ml-research-grid">${topicsChart()}${namedChart('collector',tr('collectors'))}${typesChart()}${namedChart('county',tr('counties'))}${translationChart()}</div>${!rows.length?`<div class="ml-zero-state" role="status"><strong>${tr('noRecords')}</strong><p>${tr('emptyHint')}</p><button type="button" data-reset-stats>${tr('reset')}</button></div>`:''}</div>${textPanel(selectedRows)}</div>`;
   const modal=panelOpen&&document.getElementById('ml-dashboard')?.hidden===false&&matchMedia('(max-width:950px)').matches;
   document.querySelectorAll<HTMLElement>('.ml-dashboard-canvas,.site-header,.ml-hero,.ml-view-switch,.ml-method,.site-footer').forEach(element=>element.inert=modal);
   document.body.classList.toggle('ml-panel-visible',modal);
@@ -186,6 +191,7 @@ export function createDashboard(options: Options) {
   update();
  }
  function remove(field:string) {
+  if(field==='legend'){legendContext='';update();return;}
   
   if(field==='topic'){options.scopeChange(undefined,undefined);return;}
   if(field==='type'){options.scopeChange(scope.topic,undefined);return;}
@@ -229,7 +235,7 @@ export function createDashboard(options: Options) {
   if(button.dataset.sortOption){const field=button.dataset.sortOption;sorts[field]=button.dataset.sortValue as Sort;render();options.stateChange();root.querySelector<HTMLElement>(`[data-sort="${field}"]`)?.focus({preventScroll:true});return;}
   if(button.dataset.facet){const field=button.dataset.facet,value=button.dataset.value!;toggle(field,value);root.querySelector<HTMLElement>(`[data-facet="${CSS.escape(field)}"][data-value="${CSS.escape(value)}"]`)?.focus({preventScroll:true});return;}
   if(button.dataset.removeFilter){remove(button.dataset.removeFilter);return;}
-  if(button.hasAttribute('data-reset-stats')){filters={};typeQuery='';options.scopeChange(undefined,undefined);return;}
+  if(button.hasAttribute('data-reset-stats')){filters={};legendContext='';typeQuery='';options.scopeChange(undefined,undefined);return;}
   if(button.hasAttribute('data-toggle-texts')||button.hasAttribute('data-close-texts')){
    const closing=panelOpen;panelOpen=!closing;render();options.stateChange();
    const target=closing?root.querySelector<HTMLElement>('[data-toggle-texts]'):root.querySelector<HTMLElement>('[data-close-texts]');target?.focus({preventScroll:true});return;
