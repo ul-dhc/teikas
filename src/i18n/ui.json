@@ -174,10 +174,25 @@
     "de": "Personenbrowser",
     "en": "Person browser"
   },
-  "browser.introPersons": {
-    "lv": "Meklējiet, salīdziniet un piespraudiet personas, pie kurām vēlaties atgriezties.",
-    "de": "Suchen, vergleichen und merken Sie Personen, zu denen Sie zurückkehren möchten.",
-    "en": "Search, compare and pin persons you would like to revisit."
+  "browser.personThemeCount": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "browser.personPlaceCount": {
+    "lv": "Vietas",
+    "de": "Orte",
+    "en": "Places"
+  },
+  "browser.personCollectorCount": {
+    "lv": "Pierakstītāji",
+    "de": "Aufzeichnende",
+    "en": "Collectors"
+  },
+  "browser.personNarratorCount": {
+    "lv": "Teicēji",
+    "de": "Erzählende",
+    "en": "Narrators"
   },
   "filters.title": {
     "lv": "Filtri",

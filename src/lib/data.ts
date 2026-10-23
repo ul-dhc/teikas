@@ -98,6 +98,64 @@ function excerpt(value: string | null, length = 420): string {
   return clean.length > length ? `${clean.slice(0, length).trimEnd()}…` : clean;
 }
 
+export function createPlaceList(person: Person): string {
+  const placeIds = new Set(legendsByPerson.get(person.id)?.map((legend) => (placesById.get(legend.placeId ?? '')?.id ?? 'unknown')));
+  var placeList = [] as string[][];
+  placeIds.forEach(place => {
+    if (person.id.includes('collector')) {
+      if (place == 'unknown') { placeList.push(['Nezināma vieta', legendsByPerson.get(person.id)?.filter((l) => l.collectorId == person.id && !l.placeId)?.length.toString() ?? '0']); }
+      else { placeList.push([placesById.get(place)?.name.replaceAll(',', '!') ?? '', legendsByPerson.get(person.id)?.filter((l) => l.collectorId == person.id && place == (l.placeId ?? ''))?.length.toString() ?? '0']); }
+    } else {
+      if (place == 'unknown') { placeList.push(['Nezināma vieta', legendsByPerson.get(person.id)?.filter((l) => l.narratorId == person.id && !l.placeId)?.length.toString() ?? '0']); }
+      else { placeList.push([placesById.get(place)?.name.replaceAll(',', '!') ?? '', legendsByPerson.get(person.id)?.filter((l) => l.narratorId == person.id && place == (l.placeId ?? ''))?.length.toString() ?? '0']); }
+    }
+  });
+  placeList.sort(function(a, b) { if (a[1] === b[1]) { return 0; } else { return (parseInt(a[1]) > parseInt(b[1])) ? -1 : 1; } });
+  var placeStrings = [] as string[];
+  placeList.forEach((legend) => (placeStrings.push(legend[0] + ':' + legend[1])));
+  return placeStrings.join(',') ?? '';
+}
+export function createNarratorList(person: Person): string {
+  const narratorIds = new Set(legendsByPerson.get(person.id)?.map((legend) => (narratorsById.get(legend.narratorId ?? '')?.id ?? 'unknown')));
+  var narratorList = [] as string[][];
+  narratorIds.forEach(narrator => {
+    if (narrator == 'unknown') { narratorList.push(['Nezināms teicējs', legendsByPerson.get(person.id)?.filter((l) => l.collectorId == person.id && !l.narratorId)?.length.toString() ?? '0']); }
+    else { narratorList.push([narratorsById.get(narrator)?.fullName.replaceAll(',', '!') ?? '', legendsByPerson.get(person.id)?.filter((l) => l.collectorId == person.id && narrator == (l.narratorId ?? ''))?.length.toString() ?? '0']); }
+  });
+  narratorList.sort(function(a, b) { if (a[1] === b[1]) { return 0; } else { return (parseInt(a[1]) > parseInt(b[1])) ? -1 : 1; } });
+  var narratorStrings = [] as string[];
+  narratorList.forEach((legend) => (narratorStrings.push(legend[0] + ':' + legend[1])));
+  return narratorStrings.join(',') ?? '';
+}
+export function createCollectorList(person: Person): string {
+  const collectorIds = new Set(legendsByPerson.get(person.id)?.map((legend) => (collectorsById.get(legend.collectorId ?? '')?.id ?? 'unknown')));
+  var collectorList = [] as string[][];
+  collectorIds.forEach(collector => {
+    if (collector == 'unknown') { collectorList.push(['Nezināms pierakstītājs', legendsByPerson.get(person.id)?.filter((l) => l.narratorId == person.id && !l.collectorId)?.length.toString() ?? '0']); }
+    else { collectorList.push([collectorsById.get(collector)?.fullName.replaceAll(',', '!') ?? '', legendsByPerson.get(person.id)?.filter((l) => l.narratorId == person.id && collector == (l.collectorId ?? ''))?.length.toString() ?? '0']); }
+  });
+  collectorList.sort(function(a, b) { if (a[1] === b[1]) { return 0; } else { return (parseInt(a[1]) > parseInt(b[1])) ? -1 : 1; } });
+  var collectorStrings = [] as string[];
+  collectorList.forEach((legend) => (collectorStrings.push(legend[0] + ':' + legend[1])));
+  return collectorStrings.join(',') ?? '';
+}
+export function createThemeList(person: Person): string {
+  const themeNames = new Set(legendsByPerson.get(person.id)?.map((legend) => (legend.chapter.lv + ':' + legend.chapter.de)));
+  var themeList = [] as string[][];
+  themeNames.forEach(theme => {
+    const themeLv = theme.split(':')[0];
+    if (person.id.includes('collector')) {
+      themeList.push([theme?.replaceAll(',', '!') ?? '', legendsByPerson.get(person.id)?.filter((l) => l.collectorId == person.id && themeLv == l.chapter.lv)?.length.toString() ?? '0']);
+    } else {
+      themeList.push([theme?.replaceAll(',', '!') ?? '', legendsByPerson.get(person.id)?.filter((l) => l.narratorId == person.id && themeLv == l.chapter.lv)?.length.toString() ?? '0']);
+    }
+  });
+  themeList.sort(function(a, b) { if (a[1] === b[1]) { return 0; } else { return (parseInt(a[1]) > parseInt(b[1])) ? -1 : 1; } });
+  var themeStrings = [] as string[];
+  themeList.forEach((legend) => (themeStrings.push(legend[0] + ':' + legend[1])));
+  return themeStrings.join(',') ?? '';
+}
+
 export const browseRecords = legends.map((legend) => ({
   id: legend.id, volume: legend.volume, chapterLv: legend.chapter.lv ?? '', chapterDe: legend.chapter.de ?? '',
   placeId: legend.placeId ?? '', collectorId: legend.collectorId ?? '', narratorId: legend.narratorId ?? '',
@@ -105,17 +163,25 @@ export const browseRecords = legends.map((legend) => ({
   collector: displayPersonName(collectorsById.get(legend.collectorId)), narrator: legend.narratorId ? displayPersonName(narratorsById.get(legend.narratorId)) : '',
   year: legendYear(legend), excerptLv: excerpt(legend.text.lv), excerptDe: excerpt(legend.text.de),
 }));
+
 const browseCollectors = collectors.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Pierakstītājs",
   gender: person.gender,
   selection: '?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&collector=', person.id),
+  legendIds: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '',
+  themes: createThemeList(person),
+  places: createPlaceList(person),
+  persons: createNarratorList(person),
 }));
 const browseNarrators = narrators.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
   type: "Teicējs",
   gender: person.gender,
   selection: '?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&narrator=', person.id),
+  themes: createThemeList(person),
+  places: createPlaceList(person),
+  persons: createCollectorList(person),
 }));
 export const browsePersons = [...browseNarrators, ...browseCollectors];
 
