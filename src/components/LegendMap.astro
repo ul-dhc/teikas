@@ -1,0 +1,79 @@
+---
+import 'maplibre-gl/dist/maplibre-gl.css';
+type Props={coordinates:[number,number]|null;placeName:string;href:string;uncertain?:boolean};
+const {coordinates,placeName,href,uncertain=false}=Astro.props;
+---
+<section class="legend-location" data-profile-map data-base={import.meta.env.BASE_URL} data-coordinates={coordinates?JSON.stringify(coordinates):undefined} aria-labelledby="legend-map-title">
+  <header class="legend-location-heading">
+    <div><h2 id="legend-map-title" data-i18n="nav.map">Karte</h2>{placeName && <p>{placeName}</p>}</div>
+    <a class="legend-location-open" href={href} aria-label="Atvērt karti" data-profile-map-open data-tooltip="Atvērt karti"><i data-lucide="maximize-2" aria-hidden="true"></i></a>
+  </header>
+  {coordinates ? <>
+    <div class="legend-location-map" data-profile-map-canvas role="region" aria-label="Karte" data-i18n-ariaLabel="nav.map"></div>
+    {uncertain && <p class="legend-location-note" data-profile-map-uncertain>Vietas novietojums ir aptuvens.</p>}
+    <p class="legend-location-note" data-profile-map-error hidden>Karti neizdevās ielādēt. Atveriet pilno karti.</p>
+  </> : <p class="legend-location-empty"><i data-lucide="map-pin-off" aria-hidden="true"></i><span data-profile-map-missing>Šai teikai nav zināmu koordinātu.</span></p>}
+</section>
+<script>
+  const copy={
+    lv:{open:'Atvērt karti',missing:'Šai teikai nav zināmu koordinātu.',uncertain:'Vietas novietojums ir aptuvens.',error:'Karti neizdevās ielādēt. Atveriet pilno karti.'},
+    de:{open:'Karte öffnen',missing:'Für diese Sage sind keine Koordinaten bekannt.',uncertain:'Die Lage des Ortes ist ungefähr.',error:'Die Karte konnte nicht geladen werden. Öffnen Sie die vollständige Karte.'},
+    en:{open:'Open map',missing:'No coordinates are known for this legend.',uncertain:'The location is approximate.',error:'The map could not be loaded. Open the full map.'},
+  };
+  const lang=()=>{const value=document.documentElement.dataset.uiLang;return value==='de'||value==='en'?value:'lv'};
+  for(const section of document.querySelectorAll<HTMLElement>('[data-profile-map]')){
+    const translate=()=>{
+      const labels=copy[lang()];
+      for(const key of ['missing','uncertain','error'] as const){const node=section.querySelector<HTMLElement>(`[data-profile-map-${key}]`);if(node)node.textContent=labels[key]}
+      const open=section.querySelector<HTMLAnchorElement>('[data-profile-map-open]')!;
+      open.setAttribute('aria-label',labels.open);open.dataset.tooltip=labels.open;
+      const zoomIn=section.querySelector<HTMLButtonElement>('.maplibregl-ctrl-zoom-in');
+      const zoomOut=section.querySelector<HTMLButtonElement>('.maplibregl-ctrl-zoom-out');
+      for(const [button,key] of [[zoomIn,'map.zoomIn'],[zoomOut,'map.zoomOut']] as const){
+        const label=(window as any).teikasT?.(key);
+        if(button&&label){button.setAttribute('aria-label',label);button.title=label}
+      }
+    };
+    translate();window.addEventListener('ui-language-change',translate);
+    const canvas=section.querySelector<HTMLElement>('[data-profile-map-canvas]');
+    if(!canvas)continue;
+    let map:import('maplibre-gl').Map|undefined;
+    let loading=false;
+    const style=()=>`${section.dataset.base}data/map/openfreemap-${document.documentElement.dataset.theme==='dark'?'dark':'positron'}.json`;
+    const showError=()=>{section.querySelector<HTMLElement>('[data-profile-map-error]')!.hidden=false};
+    const load=async()=>{
+      if(loading)return;loading=true;
+      try{
+        const {default:maplibregl}=await import('maplibre-gl');
+        const coordinates=JSON.parse(section.dataset.coordinates!) as [number,number];
+        map=new maplibregl.Map({container:canvas,style:style(),center:coordinates,zoom:7,cooperativeGestures:true,attributionControl:{compact:false}});
+        map.scrollZoom.disable();map.touchZoomRotate.disableRotation();
+        map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+        const marker=document.createElement('span');marker.className='legend-location-marker';
+        marker.setAttribute('role','img');marker.setAttribute('aria-label',section.querySelector('.legend-location-heading p')?.textContent||copy[lang()].open);
+        new maplibregl.Marker({element:marker}).setLngLat(coordinates).addTo(map);
+        const resize=new ResizeObserver(()=>map?.resize());resize.observe(canvas);
+        map.on('load',()=>{translate();map?.resize();section.dataset.mapReady='true'});
+        map.on('error',showError);
+        const theme=new MutationObserver(()=>map?.setStyle(style()));
+        theme.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+      }catch{showError()}
+    };
+    const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();void load()}},{rootMargin:'200px'});
+    observer.observe(canvas);
+  }
+</script>
+<style>
+  .legend-location{min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--raised);overflow:hidden}
+  .legend-location-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1rem}
+  .legend-location-heading h2{margin:0;font:400 1.2rem/1.3 var(--serif)}
+  .legend-location-heading p{margin:.2rem 0 0;color:var(--muted);font:.8rem/1.4 var(--sans)}
+  .legend-location-open{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;color:var(--muted);text-decoration:none}
+  .legend-location-open:hover{color:var(--interaction-green)}
+  .legend-location-map{height:220px;background:var(--surface)}
+  .legend-location-note{margin:0;padding:.65rem 1rem;color:var(--muted);font:.76rem/1.5 var(--sans)}
+  .legend-location-empty{display:flex;align-items:center;gap:.65rem;margin:0;padding:.4rem 1rem 1.1rem;color:var(--muted);font:.84rem/1.5 var(--sans)}
+  .legend-location-empty :global(.lucide){flex:none;width:20px;height:20px}
+  .legend-location :global(.legend-location-marker){width:16px;height:16px;border:3px solid var(--raised);border-radius:50%;background:var(--blue);box-shadow:0 0 0 2px var(--blue),0 2px 10px #0004}
+  .legend-location :global(.maplibregl-canvas:focus-visible){outline:2px solid var(--focus);outline-offset:-2px}
+</style>
