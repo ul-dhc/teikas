@@ -1,3 +1,4 @@
+import {legendFocusOpacity} from './legend-focus.js';
 import {sectionScope} from '../lib/section-scope';
 import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
 import {encodeSelection} from '../lib/selection.js';
@@ -90,7 +91,7 @@ const requestedLayers = new Set(
     Number(params.get("lat")) || 56.8962,
   ],
   initialZoom = Number(params.get("z")) || 6.26;
-let mapMode = ["places", "points", "clusters", "heatmap", "network"].includes(params.get("mode") || "") ? params.get("mode")! : "points";
+let mapMode = legendContext ? "points" : ["places", "points", "clusters", "heatmap", "network"].includes(params.get("mode") || "") ? params.get("mode")! : "points";
 const filterKeys = ["theme", "narrator", "collector", "place", "volume", "translation"] as const,
   selectedFilters = Object.fromEntries(filterKeys.map((key) => [key, new Set((params.get(key) || "").split("|").filter((value) => value && !(key === "place" && value.startsWith("place-"))))])) as Record<(typeof filterKeys)[number], Set<string>>;
 const unknownPersonValue = "__unknown__", personFilterKeys = ["narrator", "collector"] as const,
@@ -166,7 +167,7 @@ let pointColorBy = ["single", "theme", "narrator", "collector"].includes(params.
 page.querySelector<HTMLInputElement>(`[data-point-color-by] input[value="${pointColorBy}"]`)!.checked = true;
 let placesSizeBy = params.get("placesSizeBy") === "uniform" ? "uniform" : "legends";
 page.querySelector<HTMLInputElement>(`[name="places-size-by"][value="${placesSizeBy}"]`)!.checked = true;
-let pointStyle = params.get("pointStyle") === "rays" ? "rays" : "bubbles";
+let pointStyle = legendContext ? "rays" : params.get("pointStyle") === "rays" ? "rays" : "bubbles";
 page.querySelector<HTMLInputElement>(`[data-point-style-choice] input[value="${pointStyle}"]`)!.checked = true;
 const syncPointStyleText = () => {
   const pointText = page.querySelector<HTMLElement>(".point-key span:last-child")!, noteText = page.querySelector<HTMLElement>(".overlap-key")!, pointKey = pointStyle === "rays" ? "map.rayLegend" : "map.bubbleLegend", noteKey = pointStyle === "rays" ? "map.rayExplanation" : "map.bubbleExplanation";
@@ -247,11 +248,12 @@ const themeColors = (mapDark = document.documentElement.dataset.theme === "dark"
 };
 const basemapPalette = (style: string) => (style === "dark" || style === "fiord") ? true : false;
 let colors = themeColors(basemapExplicit ? basemapPalette(basemapStyle.value) ?? document.documentElement.dataset.theme === "dark" : document.documentElement.dataset.theme === "dark"),
-  selectedId = params.get("selectedPlace") || (params.get("place")?.startsWith("place-") ? params.get("place") : null),
+  selectedId = legendContext ? null : params.get("selectedPlace") || (params.get("place")?.startsWith("place-") ? params.get("place") : null),
   selectedPointCenter = params.get("selectedCenter")?.includes("|") && selectedId
     ? dataset.places.features.find(place => place.properties.id === selectedId)?.geometry.coordinates.join(",") || null
     : params.get("selectedCenter"),
   moveTimer = 0;
+let pointFocusOpacity:unknown=.5,pointFocusWidth:unknown=1;
 let pointLinkOpacity: unknown = 0.28,
   pointBubbleOpacity: unknown = 0,
   pointBubbleStrokeOpacity: unknown = 0.76;
@@ -471,7 +473,7 @@ const updateCount = () => {
   countLabel.setAttribute("aria-label", tr("map.openVisibleSelection", { count: formatter().format(value) }));
 };
 const syncFilterInterface = () => {
-  let active = Boolean(legendContext) || yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max || !includeUndated.checked || !includeUnknownPlace.checked || Object.values(personFilterExplicit).some(Boolean);
+  let active = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max || !includeUndated.checked || !includeUnknownPlace.checked || Object.values(personFilterExplicit).some(Boolean);
   for (const key of filterKeys) {
     const count = selectedFilters[key].size;
     active ||= filterExplicit[key];
@@ -487,7 +489,6 @@ const syncFilterInterface = () => {
     chip.append(summary, list);
     activeFilterDisplay.append(chip);
   };
-  if(legendContext){const record=allLegendProperties.find(record=>record.id===legendContext)!;addFilterChip('ID',[legendContext],`${legendContext} · ${document.documentElement.dataset.uiLang==='de'?(record.titleDe||record.titleLv):record.titleLv}`);}
   for (const key of filterKeys) {
     if (!filterExplicit[key]) continue;
     const label = filterPanel.querySelector<HTMLElement>(`[data-map-filter="${key}"] > summary > span`)!.textContent || key;
@@ -717,6 +718,7 @@ const selectPointLegend = (legendId: string | null) => {
   selectedPointLegend = legendId;
   if (legendId) map.setFeatureState({ source: "legends", id: legendId }, { selected: true });
   showPointLegendLink(legendId, true);
+  updatePointCenterSelection();
 };
 const placesRadiusExpression = () => ["*", placesSizeBy === "uniform" ? 6 : ["min", 24, ["+", 4, ["*", 2, ["-", ["sqrt", ["get", "count"]], 1]]]], Number(placesSize.value) / 100];
 const syncPlaceExpansion = () => {
@@ -728,10 +730,12 @@ const updatePointCenterSelection = () => {
   syncPlaceExpansion();
   if (!map.getLayer("point-place-centers")) return;
   const selected = selectedPointCenter || "", displayStyle = effectivePointStyle(), detailActive = clusterDetailActive();
-  const focusedOpacity = (base: unknown, dimmed: number) => selectedPointCenter ? ["case", ["any", ["boolean", ["feature-state", "hovered"], false], ["boolean", ["feature-state", "selected"], false]], base, ["==", ["get", "centerKey"], selected], base, ["*", base, dimmed]] : base;
-  map.setPaintProperty("point-links", "line-opacity", focusedOpacity(pointLinkOpacity, displayStyle === "rays" ? 0.24 : 0.3) as never);
+  const focusedOpacity=(base:unknown,dimmed:number)=>legendFocusOpacity(base,{legendId:selectedPointLegend,centerKey:selectedPointCenter,legendCenterKey:selectedPointLegend?pointDisplayFeatures.get(selectedPointLegend)?.properties.centerKey:null},dimmed);
+  map.setPaintProperty("point-links", "line-opacity", focusedOpacity(pointLinkOpacity, selectedPointLegend ? 0.4 : displayStyle === "rays" ? 0.24 : 0.3) as never);
   map.setPaintProperty("point-end-bubbles", "circle-opacity", focusedOpacity(pointBubbleOpacity, 0.3) as never);
   map.setPaintProperty("point-end-bubbles", "circle-stroke-opacity", focusedOpacity(pointBubbleStrokeOpacity, 0.34) as never);
+  map.setPaintProperty('point-focus-links','line-opacity',selectedPointLegend?['case',['==',['get','id'],selectedPointLegend],1,pointFocusOpacity] as never:pointFocusOpacity as never);
+  map.setPaintProperty('point-focus-links','line-width',selectedPointLegend?['case',['==',['get','id'],selectedPointLegend],2.8,pointFocusWidth] as never:pointFocusWidth as never);
   const strength = Number(pointIntensity.value) / 100;
   const scale = (opacity: number) => Math.min(1, opacity * strength);
   // The place anchor responds to intensity, with a visibility boost over its records.
@@ -746,6 +750,10 @@ const updatePointCenterSelection = () => {
   map.setPaintProperty("point-place-centers", "circle-stroke-opacity", mapMode === "places" ? mainStroke(colors.dark ? 0.76 : 0.82) : detailActive
     ? ["case", ["==", ["get", "centerKey"], selected], mainStroke(1), selectedPointCenter ? mainStroke(0.46) : mainStroke(0.84)]
     : ["case", ["==", ["get", "centerKey"], selected], mainStroke(0.95), selectedPointCenter ? mainStroke(colors.dark ? 0.24 : 0.28) : mainStroke(colors.dark ? 0.76 : 0.82)]);
+  if(selectedPointLegend){
+    const center=pointDisplayFeatures.get(selectedPointLegend)?.properties.centerKey||'';
+    map.setPaintProperty('point-place-centers','circle-stroke-opacity',['case',['==',['get','centerKey'],center],mainStroke(colors.dark ? .76 : .82),['*',mainStroke(colors.dark ? .76 : .82),.4]]);
+  }
   map.setPaintProperty("point-place-center-halo", "circle-opacity", legendMapActive() ? 0 : ["case", ["==", ["get", "centerKey"], selected], scale(colors.dark ? 0.13 : 0.1), 0]);
   map.setPaintProperty("point-place-centers", "circle-radius", mapMode === "places"
     ? placesRadiusExpression()
@@ -761,7 +769,6 @@ const updatePointCenterSelection = () => {
 const applyFilters = (save = true) => {
   const from = Number(yearFromInput.value), to = Number(yearToInput.value), timeFilterActive = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max;
   const matchesFilters = (properties: LegendProperties) => {
-    if(legendContext && properties.id!==legendContext)return false;
     if (subsection && !properties.id.startsWith(subsection)) return false;
     const year = Number(properties.year);
     if (year ? timeFilterActive && (year < from || year > to) : !includeUndated.checked) return false;
@@ -779,7 +786,10 @@ const applyFilters = (save = true) => {
   if (selectedLegendRemoved) {
     map.setFeatureState({ source: "legends", id: selectedPointLegend! }, { selected: false });
     selectedPointLegend = null;
+    legendContext="";
     activePointLegend = null;
+    showPointLegendLink(null);
+    updatePointCenterSelection();
   }
   const collection = { type: "FeatureCollection", features: filteredFeatures } as any;
   updatePointSources();
@@ -833,10 +843,13 @@ const renderPanel = (properties?: PlaceProperties) => {
     ?.addEventListener("click", () => selectPlace(null, true));
 };
 const renderLegend = (properties: LegendProperties) => {
+  legendContext=properties.id;
+  const mapped=pointDisplayFeatures.has(properties.id);
+  const placeCount=placeProfileSelection(properties.placeId,placesAtCoordinates(properties.placeId).map(place=>place.properties),filteredFeatures.map(feature=>feature.properties),true).records.length;
   selectedId = null;
   selectedPointCenter = null;
   updatePointCenterSelection();
-  selectPointLegend(properties.id);
+  selectPointLegend(mapped?properties.id:null);
   const english = document.documentElement.dataset.uiLang === "de",
     title =
       (english ? properties.titleDe : properties.titleLv) ||
@@ -846,21 +859,25 @@ const renderLegend = (properties: LegendProperties) => {
       (english ? properties.themeDe : properties.themeLv) ||
       properties.themeLv;
   panel.hidden = false;
-  panel.innerHTML = `<button class="map-panel-close" type="button" aria-label="${tr("map.close")}"><i data-lucide="x"></i></button><p class="map-panel-eyebrow">${tr("map.profile.legend")} · ${properties.id}</p><h2>${title}</h2><dl><div><dt>${tr("meta.place")}</dt><dd>${properties.placeName}</dd></div>${theme ? `<div><dt>${tr("meta.theme")}</dt><dd>${theme}</dd></div>` : ""}${properties.narrator ? `<div><dt>${tr("meta.narrator")}</dt><dd>${properties.narrator}</dd></div>` : ""}${properties.collector ? `<div><dt>${tr("meta.collector")}</dt><dd>${properties.collector}</dd></div>` : ""}<div><dt>${tr("meta.year")}</dt><dd>${properties.year || tr("map.noYear")}</dd></div></dl><a class="button" href="${base}teikas/${properties.id}/"><span>${tr("map.openLegend")}</span><i data-lucide="arrow-right"></i></a><button class="button button-secondary" type="button" data-open-point-place="${properties.placeId}">${tr("map.openPlaceLegends")}</button>`;
+  panel.innerHTML = `<button class="map-panel-close" type="button" aria-label="${tr("map.close")}"><i data-lucide="x"></i></button><p class="map-panel-eyebrow" data-legend-profile="${properties.id}">${tr("map.profile.legend")} · ${properties.id}</p>${!mapped?`<p class="map-panel-note">${document.documentElement.dataset.uiLang==='de'?'Für diese Sage sind keine Koordinaten bekannt.':document.documentElement.dataset.uiLang==='en'?'No coordinates are known for this legend.':'Šai teikai nav zināmu koordinātu.'}</p>`:''}<h2>${title}</h2><dl><div><dt>${tr("meta.place")}</dt><dd>${properties.placeName}</dd></div>${theme ? `<div><dt>${tr("meta.theme")}</dt><dd>${theme}</dd></div>` : ""}${properties.narrator ? `<div><dt>${tr("meta.narrator")}</dt><dd>${properties.narrator}</dd></div>` : ""}${properties.collector ? `<div><dt>${tr("meta.collector")}</dt><dd>${properties.collector}</dd></div>` : ""}<div><dt>${tr("meta.year")}</dt><dd>${properties.year || tr("map.noYear")}</dd></div></dl><a class="button" href="${base}teksti/${properties.id}/"><span>${tr("map.openLegend")}</span><i data-lucide="arrow-right"></i></a>${mapped&&placeCount?`<button class="button button-secondary" type="button" data-open-point-place="${properties.placeId}">${tr("map.openPlaceLegends")} (${placeCount})</button>`:''}`;
   (window as any).renderLucideIcons?.();
   panel
     .querySelector("button")
     ?.addEventListener("click", () => {
+      legendContext="";
       selectPointLegend(null);
       renderPanel();
+      updateUrl();
     });
   panel.querySelector<HTMLButtonElement>("[data-open-point-place]")?.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
     renderPointPlace(properties.placeId, String((properties as LegendProperties & { centerKey?: string }).centerKey || "") || null);
   }, { capture: true });
+  updateUrl();
 };
 const renderPointPlace = (placeId: string, centerKey: string | null = null) => {
+  legendContext="";
   if (selectedPointLegend) map.setFeatureState({ source: "legends", id: selectedPointLegend }, { selected: false });
   selectedPointLegend = null;
   const { records } = placeProfileSelection(placeId, placesAtCoordinates(placeId).map(place => place.properties), filteredFeatures.map(feature => feature.properties), true);
@@ -1379,9 +1396,9 @@ const applyTheme = (preserveMapPalette = false) => {
   paint("cluster-count", "text-halo-color", colors.dark ? "rgba(7,13,28,.72)" : "rgba(255,255,255,.84)");
   paint("cluster-count", "text-halo-width", colors.dark ? 0.6 : 1.1);
   paint("points", "circle-color", ["case", ["boolean", ["feature-state", "selected"], false], corpusPointColor, colors.raised]);
-  paint("points", "circle-opacity", 0);
+  paint("points", "circle-opacity", ["case", ["boolean", ["feature-state", "selected"], false], .2, 0]);
   paint("points", "circle-stroke-color", corpusPointColor);
-  paint("points", "circle-radius", ["interpolate", ["linear"], ["zoom"], 5, 2.3, 8, 3, 11, 4.3]);
+  paint("points", "circle-radius", ["interpolate", ["linear"], ["zoom"], 5, ["case", ["boolean", ["feature-state", "selected"], false], 5, 2.3], 8, ["case", ["boolean", ["feature-state", "selected"], false], 6, 3], 11, ["case", ["boolean", ["feature-state", "selected"], false], 7, 4.3]]);
   paint("points", "circle-stroke-opacity", ["case", ["boolean", ["feature-state", "selected"], false], 0.98, 0]);
   paint("points", "circle-stroke-width", ["interpolate", ["linear"], ["zoom"], 5, ["case", ["boolean", ["feature-state", "selected"], false], 2, 0.9], 10, ["case", ["boolean", ["feature-state", "selected"], false], 2, 1.2]]);
   paint("point-end-bubbles", "circle-color", colors.land);
@@ -1405,8 +1422,10 @@ const applyTheme = (preserveMapPalette = false) => {
   paint("point-links", "line-width", ["interpolate", ["linear"], ["zoom"], 5, ["case", ["boolean", ["feature-state", "hovered"], false], 2.25, linkWidths[0] * linkWidthScale], 9, ["case", ["boolean", ["feature-state", "hovered"], false], 2.25, linkWidths[1] * linkWidthScale], 12, ["case", ["boolean", ["feature-state", "hovered"], false], 2.25, linkWidths[2] * linkWidthScale]]);
   paint("point-links", "line-blur", displayStyle === "rays" ? Math.max(0.08, 0.18 - pointStrength * 0.06) : 0);
   paint("point-focus-links", "line-color", corpusLinkColor);
-  paint("point-focus-links", "line-opacity", ["case", ["boolean", ["get", "hovered"], false], 1, ["boolean", ["get", "selected"], false], ["min", 0.72, ["+", 0.12, scalePointOpacity(["interpolate", ["linear"], ["get", "placeCount"], 1, colors.dark ? 0.72 : 0.66, 20, colors.dark ? 0.56 : 0.5, 100, colors.dark ? 0.4 : 0.35, 300, colors.dark ? 0.26 : 0.23])]], ["interpolate", ["linear"], ["get", "placeCount"], 1, colors.dark ? 0.64 : 0.58, 20, colors.dark ? 0.42 : 0.36, 100, colors.dark ? 0.22 : 0.18, 300, colors.dark ? 0.14 : 0.12]]);
-  paint("point-focus-links", "line-width", ["case", ["boolean", ["get", "hovered"], false], 2.4, ["boolean", ["get", "selected"], false], ["interpolate", ["linear"], ["get", "placeCount"], 1, 1.45, 20, 1.25, 100, 1.05, 300, 0.9], ["interpolate", ["linear"], ["get", "placeCount"], 1, 1.2, 20, 0.95, 100, 0.72, 300, 0.6]]);
+  pointFocusOpacity = ["case", ["boolean", ["get", "hovered"], false], 1, ["boolean", ["get", "selected"], false], ["min", 0.72, ["+", 0.12, scalePointOpacity(["interpolate", ["linear"], ["get", "placeCount"], 1, colors.dark ? 0.72 : 0.66, 20, colors.dark ? 0.56 : 0.5, 100, colors.dark ? 0.4 : 0.35, 300, colors.dark ? 0.26 : 0.23])]], ["interpolate", ["linear"], ["get", "placeCount"], 1, colors.dark ? 0.64 : 0.58, 20, colors.dark ? 0.42 : 0.36, 100, colors.dark ? 0.22 : 0.18, 300, colors.dark ? 0.14 : 0.12]];
+  paint("point-focus-links", "line-opacity", pointFocusOpacity);
+  pointFocusWidth = ["case", ["boolean", ["get", "hovered"], false], 2.4, ["boolean", ["get", "selected"], false], ["interpolate", ["linear"], ["get", "placeCount"], 1, 1.45, 20, 1.25, 100, 1.05, 300, 0.9], ["interpolate", ["linear"], ["get", "placeCount"], 1, 1.2, 20, 0.95, 100, 0.72, 300, 0.6]];
+  paint("point-focus-links", "line-width", pointFocusWidth);
   paint("point-focus-links", "line-blur", ["case", ["boolean", ["get", "selected"], false], 0.08, 0.16]);
   paint("point-place-centers", "circle-color", colors.land);
   paint("point-place-centers", "circle-stroke-color", colors.green);
@@ -2079,7 +2098,19 @@ map.on("load", async () => {
   applyTheme(basemapExplicit);
   setMapMode(mapMode, false);
   applyFilters(false);
-  if (selectedId) selectPlace(selectedId);
+  if(legendContext){
+    const feature=dataset.legends.features.find(feature=>feature.properties.id===legendContext);
+    const record=allLegendProperties.find(record=>record.id===legendContext)!;
+    if(feature){
+      const zoom=params.has('z')?map.getZoom():11;
+      map.jumpTo({center:feature.geometry.coordinates,zoom});
+      updatePointSources();
+      renderLegend(record);
+      const display=pointDisplayFeatures.get(record.id);
+      const compact=matchMedia('(max-width:720px)').matches;
+      if(display)map.easeTo({duration:0,center:display.geometry.coordinates,offset:compact?[0,-Math.min(70,container.clientHeight*.14)]:[-Math.min(170,container.clientWidth*.2),0]});
+    }else renderLegend(record);
+  }else if (selectedId) selectPlace(selectedId);
   updateCount();
   syncControls();
 });
@@ -2197,6 +2228,7 @@ map.on("click", "network", (event) => {
   if (id) renderNetworkEdgePanel(id);
 });
 const clearMapSelection = () => {
+  legendContext="";
   setHoveredPointLegendState(null);
   selectPointLegend(null);
   selectedId = null;
@@ -2484,7 +2516,6 @@ filterPanel.querySelectorAll<HTMLButtonElement>("[data-map-select-all], [data-ma
   applyFilters();
 }));
 filterClear.addEventListener("click", () => {
-  legendContext = "";
   for (const key of filterKeys) selectedFilters[key].clear();
   filterKeys.forEach((key) => filterExplicit[key] = false);
   personFilterKeys.forEach((key) => personFilterExplicit[key] = false);
@@ -2635,7 +2666,8 @@ const translate = () => {
   requestAnimationFrame(syncBasemapMenu);
   const language = document.documentElement.dataset.uiLang;
   filterPanel.querySelectorAll<HTMLElement>("[data-theme-lv]").forEach((option) => option.textContent = language === "de" ? option.dataset.themeDe! : option.dataset.themeLv!);
-  if (activeNetworkNode && mapMode === "network") renderNetworkNodePanel(activeNetworkNode);
+  if(legendContext&&legendMapActive()&&map.getSource("legends")){const record=allLegendProperties.find(record=>record.id===legendContext);if(record)renderLegend(record);}
+  else if (activeNetworkNode && mapMode === "network") renderNetworkNodePanel(activeNetworkNode);
   else if (selectedId) {
     if ((legendMapActive() || clusterDetailActive()) && selectedPointCenter) renderPointPlace(selectedId, selectedPointCenter);
     else {

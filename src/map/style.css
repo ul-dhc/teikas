@@ -764,3 +764,8 @@ body.map-fullscreen-active{overflow:hidden}
 .layer-panel>.context-help{margin:.35rem .4rem .6rem}
 .layer-panel .network-field,.layer-panel .network-thread-control{font:.8rem/1.45 var(--sans)}
 .layer-panel .network-choice>div button,.layer-panel .basemap-options button{font:400 .85rem/1.45 var(--sans)}
+
+/* Keep the focused ray visible above its compact legend profile on phones. */
+@media(max-width:720px){
+ :root .map-stage:has([data-legend-profile]) .map-panel{top:auto;bottom:.5rem;max-height:36%}
+}
