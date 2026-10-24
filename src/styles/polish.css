@@ -868,3 +868,25 @@ body{background:
 .legend-browser .legend-context-actions a{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border-radius:999px;color:var(--muted);text-decoration:none}
 .legend-browser .legend-context-actions a:is(:hover,:focus-visible){color:var(--palette-ochre);text-decoration:none}
 .legend-browser .legend-context-actions .lucide{width:1.1rem;height:1.1rem;pointer-events:none}
+
+/* Reserve a header column so the pin stays beside the title's first line. */
+.legend-browser[data-view=grid] .result-card{
+  --legend-title-size:clamp(1.3rem,1.45vw,1.55rem);
+  --legend-title-line:calc(var(--legend-title-size)*1.22);
+  grid-template-columns:minmax(0,1fr) 44px;
+}
+.legend-browser[data-view=grid] .result-card h2{
+  min-width:0;
+  align-self:start;
+  font-size:var(--legend-title-size);
+  overflow-wrap:anywhere;
+}
+.legend-browser[data-view=grid] .pin-button{
+  position:static;
+  inset:auto;
+  align-self:start;
+  justify-self:end;
+  width:44px;
+  height:44px;
+  margin-top:calc((var(--legend-title-line) - 44px)/2);
+}
