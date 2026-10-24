@@ -935,11 +935,6 @@
     "de": "Für {places} Orte und {legends} Sagen fehlen kartierbare Koordinaten.",
     "en": "{places} places and {legends} legends have no mappable coordinates."
   },
-  "map.accessibleAlternative": {
-    "lv": "Izmantojiet tekstu pārlūku kā kartes tekstuālo alternatīvu.",
-    "de": "Nutzen Sie den Textbrowser als textuelle Alternative zur Karte.",
-    "en": "Use the text browser as a textual alternative to the map."
-  },
   "map.openBrowser": {
     "lv": "Atvērt tekstu pārlūku",
     "de": "Textbrowser öffnen",

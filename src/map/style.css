@@ -531,7 +531,6 @@
 .map-mode button[aria-pressed=true]{background:var(--action-fill);color:var(--action-ink)}
 .map-filters .multi-options{max-height:240px;overflow:auto}
 .map-filters .multi-options label[hidden]{display:none}
-.map-alternative-link{display:block;padding:.75rem 0;font: .8rem/1.5 var(--sans);color:var(--blue)}
 @media(max-width:600px){.map-toolbar-primary{max-width:100%}.map-count{top:0;right:0;max-width:45%;font-size:.7rem}.map-mode{max-width:100%}.map-mode button{font-size:.75rem;padding:0 .55rem}.map-legend{max-width:calc(100% - 4rem)}.map-legend .overlap-key{display:none}.layer-panel{max-height:420px;overflow:auto}}
 .map-stage{--interaction-green:var(--blue)}
 .layer-panel{position:absolute;top:calc(100% + .4rem);left:0;z-index:10;background:var(--raised);border:1px solid var(--line);border-radius:18px;max-height:min(600px,calc(100dvh - 180px));overflow:auto}
