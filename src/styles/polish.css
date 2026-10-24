@@ -541,6 +541,8 @@ body{background:
 }
 .browser[data-view=grid] .result-card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
 .browser[data-view=grid] .result-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--browse-green),var(--line) 35%);box-shadow:0 18px 44px color-mix(in srgb,var(--browse-green),transparent 88%)}
+/* Preserve the pinned outline over the dark collection surface and hover styles. */
+:root[data-theme=dark] .legend-browser .result-card.is-pinned{--interaction-line:color-mix(in srgb,var(--pin),transparent 25%);border-color:var(--interaction-line)}
 .unknown-toggle{display:flex!important;align-items:center;gap:.5rem;padding:.55rem .25rem;margin:.15rem 0 .35rem!important;color:var(--muted)}
 .unknown-toggle input{accent-color:var(--browse-green)}
 .result-excerpt:not(.is-parallel) .excerpt-de{border-top:0!important;margin-top:0!important;padding-top:0!important}
