@@ -3,10 +3,10 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 type Props={coordinates:[number,number]|null;placeName:string;href:string;uncertain?:boolean};
 const {coordinates,placeName,href,uncertain=false}=Astro.props;
 ---
-<section class="legend-location" data-profile-map data-base={import.meta.env.BASE_URL} data-coordinates={coordinates?JSON.stringify(coordinates):undefined} aria-labelledby="legend-map-title">
+<section class="legend-location" data-profile-map data-base={import.meta.env.BASE_URL} data-coordinates={coordinates?JSON.stringify(coordinates):undefined} aria-label="Karte" data-i18n-ariaLabel="nav.map">
   <header class="legend-location-heading">
-    <div><h2 id="legend-map-title" data-i18n="nav.map">Karte</h2>{placeName && <p>{placeName}</p>}</div>
-    <a class="legend-location-open" href={href} aria-label="Atvērt karti" data-profile-map-open data-tooltip="Atvērt karti"><i data-lucide="maximize-2" aria-hidden="true"></i></a>
+    <div>{placeName && <p>{placeName}</p>}</div>
+    <a class="legend-location-open" href={href} aria-label="Atvērt karti" data-profile-map-open data-tooltip="Atvērt karti"><i data-lucide="external-link" aria-hidden="true"></i></a>
   </header>
   {coordinates ? <>
     <div class="legend-location-map" data-profile-map-canvas role="region" aria-label="Karte" data-i18n-ariaLabel="nav.map"></div>
@@ -66,8 +66,7 @@ const {coordinates,placeName,href,uncertain=false}=Astro.props;
 <style>
   .legend-location{min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--raised);overflow:hidden}
   .legend-location-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1rem}
-  .legend-location-heading h2{margin:0;font:400 1.2rem/1.3 var(--serif)}
-  .legend-location-heading p{margin:.2rem 0 0;color:var(--muted);font:.8rem/1.4 var(--sans)}
+  .legend-location-heading p{margin:0;color:var(--muted);font:.8rem/1.4 var(--sans)}
   .legend-location-open{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;color:var(--muted);text-decoration:none}
   .legend-location-open:hover{color:var(--interaction-green)}
   .legend-location-map{height:220px;background:var(--surface)}
