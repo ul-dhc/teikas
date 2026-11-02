@@ -183,7 +183,7 @@ const browseNarrators = narrators.map((person) => ({
   themes: createThemeList(person),
   places: createPlaceList(person),
   persons: createCollectorList(person),
-  mapHref: 'karte/?'+ new URLSearchParams({collectorMode: 'selection', collector: person.fullName ?? '__unknown__'}),
+  mapHref: 'karte/?'+ new URLSearchParams({narratorMode: 'selection', narrator: person.fullName ?? '__unknown__'}),
 }));
 export const browsePersons = [...browseNarrators, ...browseCollectors];
 
