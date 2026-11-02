@@ -229,7 +229,7 @@ body{background:
 }
 .read-full-person nav {
   display: flex;
-  gap:.75rem;
+  gap:1rem;
   margin-top: 0.25rem;
 }
 

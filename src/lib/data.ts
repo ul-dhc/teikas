@@ -19,6 +19,9 @@ type Place = { id: string; name: string; coordinates: { latitude: number; longit
 type Source = { id: string; code: string | null; title: string | null; authorsRaw: string | null; category: string | null; categoryOriginal: string | null; year: string | null; publisher: string | null; publicationPlace: string | null; url: string | null; originalLabel: string | null; notes: string | null; relationCount: number };
 type LegendSource = { id: string; legendId: string; sourceId: string; role: string; rawCitation: string | null; mappingStatus: string | null; notes: string | null };
 
+const COLLECTOR_TYPE = "Pierakstītājs";
+const NARRATOR_TYPE = "Teicējs";
+
 function indexById<T extends { id: string }>(records: T[], label: string): Map<string, T> {
   const map = new Map<string, T>();
   for (const record of records) {
@@ -156,6 +159,27 @@ export function createThemeList(person: Person): string {
   return themeStrings.join(',') ?? '';
 }
 
+export function dataHref(person: Person, personType : string, view : string ): string {
+  const params = new URLSearchParams();
+  if (view === 'network') {
+    params.set('layout','free');
+    if (personType === COLLECTOR_TYPE) {
+      params.set('collector', person.id);
+      params.set('categories','county,typeId,narrator,place,topic');
+    } else {
+      params.set('narrator', person.id);
+      params.set('categories','county,collector,typeId,place,topic');
+    }
+  } else {
+      if (personType === COLLECTOR_TYPE) {
+        params.set('collector', person.fullName);
+    } else {
+        params.set('narrator', person.fullName);
+    }
+  }
+  return 'dati/?'+params+'#'+view;
+}
+
 export const browseRecords = legends.map((legend) => ({
   id: legend.id, volume: legend.volume, chapterLv: legend.chapter.lv ?? '', chapterDe: legend.chapter.de ?? '',
   placeId: legend.placeId ?? '', collectorId: legend.collectorId ?? '', narratorId: legend.narratorId ?? '',
@@ -166,7 +190,7 @@ export const browseRecords = legends.map((legend) => ({
 
 const browseCollectors = collectors.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
-  type: "Pierakstītājs",
+  type: COLLECTOR_TYPE,
   gender: person.gender,
   textHref: 'teksti/?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&collector=', person.id),
   legendIds: legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '',
@@ -174,16 +198,20 @@ const browseCollectors = collectors.map((person) => ({
   places: createPlaceList(person),
   persons: createNarratorList(person),
   mapHref: 'karte/?'+ new URLSearchParams({collectorMode: 'selection', collector: person.fullName ?? '__unknown__'}),
+  networkHref: dataHref(person, COLLECTOR_TYPE, "network"),
+  overviewHref: dataHref(person, COLLECTOR_TYPE, "overview"),
 }));
 const browseNarrators = narrators.map((person) => ({
   id: person.id, fullname: person.fullName, notes: person.notes ?? '', legendcount: person.legendCount,
-  type: "Teicējs",
+  type: NARRATOR_TYPE,
   gender: person.gender,
   textHref: 'teksti/?selection='.concat(legendsByPerson.get(person.id)?.map((legend) => (legend.id)).join(encodeURIComponent(',')) ?? '', '&narrator=', person.id),
   themes: createThemeList(person),
   places: createPlaceList(person),
   persons: createCollectorList(person),
   mapHref: 'karte/?'+ new URLSearchParams({narratorMode: 'selection', narrator: person.fullName ?? '__unknown__'}),
+  networkHref: dataHref(person, NARRATOR_TYPE, "network"),
+  overviewHref: dataHref(person, NARRATOR_TYPE, "overview"),
 }));
 export const browsePersons = [...browseNarrators, ...browseCollectors];
 
