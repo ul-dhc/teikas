@@ -1,4 +1,7 @@
 ---
+import LegendMap from '../../components/LegendMap.astro';
+import {mapData} from '../../map/data';
+import {legendDataHref} from '../../lib/legend-context.js';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { legends, resolveLegend, sourceLabel, legendYear, displayPersonName, type Legend } from '../../lib/data';
 const base = import.meta.env.BASE_URL;
@@ -11,6 +14,17 @@ const allSources = [...data.primarySources, ...data.secondarySources];
 const hasSources = allSources.length > 0 || Boolean(legend.primarySourceRaw || legend.secondarySourceRaw);
 const publicUrl = new URL(`${base}teksti/${legend.id}/`, Astro.site ?? Astro.url.origin).href;
 const narratorName = displayPersonName(data.narrator), collectorName = displayPersonName(data.collector);
+const mapFeature=mapData.legends.features.find(feature=>feature.properties.id===legend.id);
+const mapPlace=mapData.places.features.find(feature=>feature.properties.id===legend.placeId);
+const mapCoordinates=mapFeature?.geometry.coordinates as [number,number]|undefined;
+const mapParams=new URLSearchParams({legend:legend.id});
+if(legend.placeId)mapParams.set('selectedPlace',legend.placeId);
+const mapHref=`${base}karte/?${mapParams}`;
+const contextRecord={id:legend.id,collector:collectorName,collectorId:legend.collectorId,narrator:narratorName,narratorId:legend.narratorId};
+const contextActions=[
+  {href:legendDataHref(base,contextRecord,'network'),icon:'network',label:'Tīkls',key:'themes.network'},
+  {href:legendDataHref(base,contextRecord,'overview'),icon:'chart-no-axes-column',label:'Datu pārskats',key:'themes.overview'},
+];
 const trimPeriod = (value: string) => value.replace(/[.\s]+$/,'');
 const shortCitation = `Latviešu pasakas un teikas, ${legend.volume}. sējums, ID ${legend.id}. sast. Pēteris Šmits. 1925–1937. Pieejams: ${publicUrl}`;
 const extendedCitation = [
@@ -38,13 +52,16 @@ const parallelShareText = [legend.title.lv || 'Bez nosaukuma', 'Latviski', legen
 ---
 <BaseLayout title={legend.title.lv || legend.id} active="browse">
   <article class="detail">
-    <div class="detail-top"><a class="back-link icon-link" href={`${base}teksti/`} data-back><i data-lucide="arrow-left"></i> Atpakaļ</a><div class="detail-actions"><button class="copy-icon detail-pin" type="button" data-detail-pin={legend.id} aria-pressed="false" aria-label="Piespraust teiku" data-tooltip="Piespraust teiku"><i data-lucide="pin"></i></button><button class="copy-icon" type="button" data-copy-link={publicUrl} aria-label="Kopēt saiti" data-tooltip="Kopēt saiti"><i data-lucide="link"></i></button><button class="copy-icon" type="button" data-copy data-copy-lv={lvShareText} data-copy-de={deShareText} data-copy-parallel={parallelShareText} aria-label="Kopēt teiku" data-tooltip="Kopēt teiku"><i data-lucide="copy"></i></button><div class="citation-control"><button class="copy-icon citation-toggle" type="button" data-citation-toggle aria-expanded="false" aria-controls="citation-panel" aria-label="Citēt teiku" data-tooltip="Citēt teiku"><i data-lucide="quote"></i></button><section class="citation-panel" id="citation-panel" data-citation-panel hidden aria-labelledby="citation-title"><div class="citation-panel-head"><h2 id="citation-title" data-i18n="detail.citation">Citēšana</h2><button type="button" class="citation-close" data-citation-close aria-label="Aizvērt citēšanu"><i data-lucide="x"></i></button></div><article><h3 data-i18n="detail.shortCitation">Īsā atsauce</h3><p>{shortCitation}</p><button type="button" class="citation-copy" data-citation-copy={shortCitation}><i data-lucide="copy"></i><span data-i18n="common.copy">Kopēt</span></button></article><article><h3 data-i18n="detail.extendedCitation">Paplašinātā atsauce</h3><p>{extendedCitation}</p><button type="button" class="citation-copy" data-citation-copy={extendedCitation}><i data-lucide="copy"></i><span data-i18n="common.copy">Kopēt</span></button></article></section></div></div></div>
+    <div class="detail-top"><a class="back-link icon-link" href={`${base}teksti/`} data-back><i data-lucide="arrow-left"></i> Atpakaļ</a><div class="detail-actions">{contextActions.map(action=><a class="copy-icon detail-context-link" href={action.href} aria-label={action.label} data-tooltip={action.label} data-i18n-ariaLabel={action.key} data-i18n-dataTooltip={action.key}><i data-lucide={action.icon} aria-hidden="true"></i></a>)}<button class="copy-icon detail-pin" type="button" data-detail-pin={legend.id} aria-pressed="false" aria-label="Piespraust teiku" data-tooltip="Piespraust teiku"><i data-lucide="pin"></i></button><button class="copy-icon" type="button" data-copy-link={publicUrl} aria-label="Kopēt saiti" data-tooltip="Kopēt saiti"><i data-lucide="link"></i></button><button class="copy-icon" type="button" data-copy data-copy-lv={lvShareText} data-copy-de={deShareText} data-copy-parallel={parallelShareText} aria-label="Kopēt teiku" data-tooltip="Kopēt teiku"><i data-lucide="copy"></i></button><div class="citation-control"><button class="copy-icon citation-toggle" type="button" data-citation-toggle aria-expanded="false" aria-controls="citation-panel" aria-label="Citēt teiku" data-tooltip="Citēt teiku"><i data-lucide="quote"></i></button><section class="citation-panel" id="citation-panel" data-citation-panel hidden aria-labelledby="citation-title"><div class="citation-panel-head"><h2 id="citation-title" data-i18n="detail.citation">Citēšana</h2><button type="button" class="citation-close" data-citation-close aria-label="Aizvērt citēšanu"><i data-lucide="x"></i></button></div><article><h3 data-i18n="detail.shortCitation">Īsā atsauce</h3><p>{shortCitation}</p><button type="button" class="citation-copy" data-citation-copy={shortCitation}><i data-lucide="copy"></i><span data-i18n="common.copy">Kopēt</span></button></article><article><h3 data-i18n="detail.extendedCitation">Paplašinātā atsauce</h3><p>{extendedCitation}</p><button type="button" class="citation-copy" data-citation-copy={extendedCitation}><i data-lucide="copy"></i><span data-i18n="common.copy">Kopēt</span></button></article></section></div></div></div>
     <header class="title-row"><div><h1 data-title-lang="lv">{legend.title.lv || 'Bez nosaukuma'}</h1><h1 data-title-lang="de" lang="de">{legend.title.de || 'Ohne Titel'}</h1></div></header>
     <div class="mode-tabs" role="tablist" aria-label="Šīs teikas valodas skats"><button role="tab" data-mode="lv">Latviski</button><button role="tab" data-mode="de">Deutsch</button><button role="tab" data-mode="parallel">Paralēli</button></div>
     <div class="detail-grid">
       <div class="reading-column">
         <div class="texts" data-texts><section class="text-panel" data-lang="lv" aria-labelledby="lv-heading"><h2 id="lv-heading">LATVISKI</h2><div class="legend-text">{legend.text.lv || 'Teksts nav norādīts.'}</div></section><section class="text-panel" data-lang="de" lang="de" aria-labelledby="de-heading"><h2 id="de-heading">DEUTSCH</h2><div class="legend-text">{legend.text.de || 'Text nicht angegeben.'}</div></section></div>
+        <aside class="legend-profile-sidebar">
+          <LegendMap coordinates={mapCoordinates||null} placeName={data.place?.name||''} href={mapHref} uncertain={mapFeature?.properties.coordinateSource==='place'&&['area','ambiguous'].includes(mapPlace?.properties.geography?.mapUncertainty?.kind||'none')} />
         <details class="information" data-information open><summary><span><span data-i18n="detail.information">Informācija</span><small data-i18n="detail.infoHelp">par teiku un tās avotiem</small></span><i data-lucide="chevron-down"></i></summary><div class="information-body"><dl>{basicRows.map(([key,label,value]) => <div class="metadata-row"><dt data-i18n={key || undefined}>{label}</dt><dd>{value}</dd></div>)}</dl><details class="more-metadata"><summary><span data-i18n="detail.moreMetadata">Papildu metadati</span><i data-lucide="chevron-down"></i></summary><dl><div class="metadata-row"><dt data-i18n="meta.volume">Sējums</dt><dd>{legend.volume}. sējums</dd></div><div class="metadata-row"><dt data-i18n="meta.theme">Tēma</dt><dd>{legend.chapter.lv || 'Nav norādīts'}{legend.chapter.de && <small lang="de"><br />{legend.chapter.de}</small>}</dd></div>{legend.originalMetadata && <div class="metadata-row"><dt data-i18n="meta.original">Oriģinālie metadati</dt><dd>{legend.originalMetadata}</dd></div>}{hasSources && <div class="metadata-row"><dt data-i18n="meta.sources">Avoti</dt><dd>{allSources.length ? <ul class="source-list">{allSources.map(({source,relation}) => <li>{source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer">{sourceLabel(source)}</a> : sourceLabel(source)}{relation.rawCitation && <small><br />{relation.rawCitation}</small>}</li>)}</ul> : (legend.primarySourceRaw || legend.secondarySourceRaw)}</dd></div>}</dl></details></div></details>
+        </aside>
         {(legend.comments || legend.notes) && <aside class="editorial" aria-label="Redakcionālā informācija">{legend.comments && <details><summary>Redaktora komentārs</summary><p>{legend.comments}</p></details>}{legend.notes && <details><summary>Redakcionālās piezīmes</summary><p>{legend.notes}</p></details>}</aside>}
         <nav class="prev-next" aria-label="Blakus teikas" data-prev-next data-current-id={legend.id}><a href={previous ? `${base}teksti/${previous.id}/` : '#'} data-previous hidden={!previous}><span class="nav-direction"><i data-lucide="arrow-left"></i> Iepriekšējā teika</span><span class="legend-nav-title">{previous ? (previous.title.lv || previous.title.de || previous.id) : ''}</span></a><a href={next ? `${base}teksti/${next.id}/` : '#'} data-next hidden={!next}><span class="nav-direction">Nākamā teika <i data-lucide="arrow-right"></i></span><span class="legend-nav-title">{next ? (next.title.lv || next.title.de || next.id) : ''}</span></a></nav>
       </div>
@@ -70,3 +87,9 @@ const parallelShareText = [legend.title.lv || 'Bez nosaukuma', 'Latviski', legen
     const info=document.querySelector<HTMLDetailsElement>('[data-information]')!,mobile=matchMedia('(max-width: 850px)');const arrangeInfo=(event:MediaQueryList|MediaQueryListEvent)=>{info.open=!event.matches};arrangeInfo(mobile);mobile.addEventListener('change',arrangeInfo);
   </script>
 </BaseLayout>
+<style>
+  .legend-profile-sidebar{grid-column:2;grid-row:1;display:grid;gap:1rem;min-width:0;align-self:start}
+  .legend-profile-sidebar .information{position:static;grid-column:auto;grid-row:auto;margin:0}
+  .detail-context-link{flex:none;color:var(--blue);text-decoration:none}
+  @media(max-width:850px){.legend-profile-sidebar{grid-column:1;grid-row:auto}}
+</style>

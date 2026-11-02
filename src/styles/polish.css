@@ -541,6 +541,8 @@ body{background:
 }
 .browser[data-view=grid] .result-card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
 .browser[data-view=grid] .result-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--browse-green),var(--line) 35%);box-shadow:0 18px 44px color-mix(in srgb,var(--browse-green),transparent 88%)}
+/* Preserve the pinned outline over the dark collection surface and hover styles. */
+:root[data-theme=dark] .legend-browser .result-card.is-pinned{--interaction-line:color-mix(in srgb,var(--pin),transparent 25%);border-color:var(--interaction-line)}
 .unknown-toggle{display:flex!important;align-items:center;gap:.5rem;padding:.55rem .25rem;margin:.15rem 0 .35rem!important;color:var(--muted)}
 .unknown-toggle input{accent-color:var(--browse-green)}
 .result-excerpt:not(.is-parallel) .excerpt-de{border-top:0!important;margin-top:0!important;padding-top:0!important}
@@ -806,18 +808,19 @@ body{background:
   .browser[data-view=grid] .card-read-actions{grid-row:3}
 }
 
-/* Match the map workspace's collapsible filter rail in the text browser. */
+/* Keep the collapse control anchored to the filter panel header at every desktop width. */
 @media(min-width:851px){
   .browser-layout.browser{position:relative;transition:grid-template-columns .2s ease,gap .2s ease}
-  .browse-filter-collapse{position:absolute;z-index:8;top:3.35rem;left:244px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;gap:.45rem;padding:0;border:1px solid transparent;border-radius:999px;background:transparent!important;color:var(--muted);font:600 .76rem/1 var(--sans);white-space:nowrap;cursor:pointer;transition:left .2s ease,width .2s ease,color .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .18s ease}
+  .browse-filter-collapse{position:absolute;z-index:8;top:var(--filter-panel-padding,.8rem);right:var(--filter-panel-padding,.8rem);width:32px;height:32px;display:flex;align-items:center;justify-content:center;gap:.45rem;padding:0;border:1px solid transparent;border-radius:999px;background:transparent!important;color:var(--muted);font:600 .76rem/1 var(--sans);white-space:nowrap;cursor:pointer;transition:width .2s ease,color .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .18s ease}
+  .browser-layout.browser .filter-title{min-height:32px;padding-right:40px;flex-wrap:wrap;gap:.35rem}
   .browse-filter-collapse [data-filter-collapse-label],.browse-filter-collapse .filter-collapse-icon{display:none}
   .browse-filter-collapse .lucide{width:18px;height:18px;flex:none;transition:transform .18s ease}
   .browse-filter-collapse:hover,.browse-filter-collapse:focus-visible{outline:0;color:var(--interaction-green);background:var(--raised)!important;border-color:color-mix(in srgb,var(--interaction-green),transparent 55%);box-shadow:0 5px 16px color-mix(in srgb,var(--navy),transparent 78%)}
   .browse-filter-collapse:hover .filter-collapse-chevron{transform:translateX(-2px)}
   .browser-layout.browser.filters-collapsed{grid-template-columns:136px minmax(0,1fr);gap:1rem}
-  .browser-layout.browser.filters-collapsed .filter-sidebar{padding:0;overflow:hidden;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
-  .browser-layout.browser.filters-collapsed .filter-sidebar>*{display:none}
-  .browser-layout.browser.filters-collapsed .browse-filter-collapse{left:4px;width:128px;padding:0 .7rem;background:var(--raised)!important;border-color:var(--line);color:var(--interaction-green);box-shadow:0 5px 18px color-mix(in srgb,var(--navy),transparent 82%)}
+  .browser-layout.browser.filters-collapsed .filter-sidebar{padding:0;min-height:40px;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .browser-layout.browser.filters-collapsed .filter-sidebar>:not(.browse-filter-collapse){display:none}
+  .browser-layout.browser.filters-collapsed .browse-filter-collapse{top:0;right:auto;left:4px;width:128px;height:40px;padding:0 .7rem;background:var(--raised)!important;border-color:var(--line);color:var(--interaction-green);box-shadow:0 5px 18px color-mix(in srgb,var(--navy),transparent 82%)}
   .browser-layout.browser.filters-collapsed .browse-filter-collapse [data-filter-collapse-label],.browser-layout.browser.filters-collapsed .browse-filter-collapse .filter-collapse-icon{display:block}
   .browser-layout.browser.filters-collapsed .browse-filter-collapse .filter-collapse-chevron{transform:rotate(180deg)}
   .browser-layout.browser.filters-collapsed .browse-filter-collapse:hover .filter-collapse-chevron{transform:rotate(180deg) translateX(-2px)}
@@ -852,3 +855,40 @@ body{background:
 }
 
 @media(prefers-reduced-motion:reduce){.home-map-light{transition:none}}
+
+/* Expanded legend cards expose the full text and contextual views. */
+.legend-browser[data-view=grid] .result-card{align-self:start}
+.legend-browser[data-view=grid] .result-card.is-expanded .result-excerpt,
+.legend-browser[data-view=grid] .result-card.is-expanded .result-excerpt>span{display:block;-webkit-line-clamp:unset;overflow:visible}
+.legend-browser .card-read-actions{flex-wrap:wrap}
+.legend-browser .legend-context-actions{display:none;align-items:center;gap:.25rem;margin-left:auto}
+.legend-browser[data-view=grid] .result-card.is-expanded .legend-context-actions{display:flex;grid-column:1/-1;grid-row:2}
+.legend-browser[data-view=grid] .result-card.is-expanded .result-excerpt{grid-row:3}
+.legend-browser[data-view=grid] .result-card.is-expanded .card-read-actions{grid-row:4}
+.legend-browser[data-view=grid] .result-card.is-expanded .card-location{grid-row:5}
+.legend-browser[data-view=grid] .result-card.is-expanded .card-people{grid-row:6}
+.legend-browser .legend-context-actions a{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border-radius:999px;color:var(--muted);text-decoration:none}
+.legend-browser .legend-context-actions a:is(:hover,:focus-visible){color:var(--palette-ochre);text-decoration:none}
+.legend-browser .legend-context-actions .lucide{width:1.1rem;height:1.1rem;pointer-events:none}
+
+/* Reserve a header column so the pin stays beside the title's first line. */
+.legend-browser[data-view=grid] .result-card{
+  --legend-title-size:clamp(1.3rem,1.45vw,1.55rem);
+  --legend-title-line:calc(var(--legend-title-size)*1.22);
+  grid-template-columns:minmax(0,1fr) 44px;
+}
+.legend-browser[data-view=grid] .result-card h2{
+  min-width:0;
+  align-self:start;
+  font-size:var(--legend-title-size);
+  overflow-wrap:anywhere;
+}
+.legend-browser[data-view=grid] .pin-button{
+  position:static;
+  inset:auto;
+  align-self:start;
+  justify-self:end;
+  width:44px;
+  height:44px;
+  margin-top:calc((var(--legend-title-line) - 44px)/2);
+}
