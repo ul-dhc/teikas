@@ -27,7 +27,7 @@
 .person-source p{margin:.3rem 0}
 .people-table-wrap{overflow-x:auto}
 .people-table{width:100%;border-collapse:collapse}
-.people-workspace.browser[data-view=list] .person-table-row{display:grid;grid-template-columns:1.2fr .7fr .5fr .6fr .8fr 1fr}
+.people-workspace.browser[data-view=list] .person-table-row{display:grid;grid-template-columns:1.4fr .8fr .6fr .7fr 1fr}
 .people-workspace.browser[data-view=list] .person-table-row>*{grid-column:auto;min-width:0;text-align:left}
 .people-table .person-quick-actions{justify-content:flex-start}
 @media(max-width:850px){

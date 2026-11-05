@@ -6,7 +6,7 @@ import '../../styles/persons.css';
 const base=import.meta.env.BASE_URL;
 const profiles=buildProfiles(browsePersons,browseRecords);
 const records=browseRecords.map(({id,chapterLv,chapterDe,placeId,place})=>({id,chapterLv,chapterDe,placeId,place}));
-const sortOptions=[['random','randomOrder'],['name','byName'],['name-desc','byNameDesc'],['count','byCount'],['count-asc','byCountAsc'],['role','byRole'],['role-desc','byRoleDesc'],['gender','byGender'],['gender-desc','byGenderDesc'],['notes','byNotes'],['notes-desc','byNotesDesc']];
+const sortOptions=[['random','randomOrder'],['name','byName'],['name-desc','byNameDesc'],['count','byCount'],['count-asc','byCountAsc'],['role','byRole'],['role-desc','byRoleDesc'],['gender','byGender'],['gender-desc','byGenderDesc']];
 ---
 <BaseLayout title="Teicēji un pierakstītāji" active="persons">
  <div class="people-page" data-people data-i18n-skip>

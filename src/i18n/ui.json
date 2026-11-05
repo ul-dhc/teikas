@@ -3193,15 +3193,5 @@
     "lv": "Dzimums Z–A",
     "de": "Geschlecht Z–A",
     "en": "Gender Z–A"
-  },
-  "persons.byNotes": {
-    "lv": "Piezīmes A–Z",
-    "de": "Anmerkungen A–Z",
-    "en": "Notes A–Z"
-  },
-  "persons.byNotesDesc": {
-    "lv": "Piezīmes Z–A",
-    "de": "Anmerkungen Z–A",
-    "en": "Notes Z–A"
   }
 }
