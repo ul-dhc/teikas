@@ -2820,9 +2820,9 @@
     "en": "Not recorded"
   },
   "persons.minimum": {
-    "lv": "Vismaz tik teiku krājumā",
-    "de": "Mindestanzahl der Sagen in der Sammlung",
-    "en": "Minimum legends in the collection"
+    "lv": "Teiku skaits",
+    "de": "Anzahl der Sagen",
+    "en": "Number of legends"
   },
   "persons.savedOnly": {
     "lv": "Tikai piespraustās personas",
@@ -3173,5 +3173,35 @@
     "lv": "Pamanīji kļūdu tekstā, datos vai platformas darbībā? Tev ir ieteikums uzlabojumam? Izmanto ziņojuma ikonu lapas galvenē. Tavas atsauksmes palīdzēs mums pilnveidot platformu. Ziņojumam automātiski pievienosies lapas saite; e-pasts nav jānorāda.",
     "de": "Hast du einen Fehler im Text, in den Daten oder in der Plattform entdeckt? Oder einen Verbesserungsvorschlag? Nutze das Nachrichtensymbol in der Kopfzeile. Deine Rückmeldungen helfen uns, die Plattform zu verbessern. Der Seitenlink wird automatisch beigefügt; eine E-Mail-Adresse ist nicht erforderlich.",
     "en": "Found an error in the text, data or platform? Have a suggestion for improvement? Use the message icon in the header. Your feedback will help us improve the platform. The page link is attached automatically; no email address is required."
+  },
+  "persons.byRole": {
+    "lv": "Loma A–Z",
+    "de": "Rolle A–Z",
+    "en": "Role A–Z"
+  },
+  "persons.byRoleDesc": {
+    "lv": "Loma Z–A",
+    "de": "Rolle Z–A",
+    "en": "Role Z–A"
+  },
+  "persons.byGender": {
+    "lv": "Dzimums A–Z",
+    "de": "Geschlecht A–Z",
+    "en": "Gender A–Z"
+  },
+  "persons.byGenderDesc": {
+    "lv": "Dzimums Z–A",
+    "de": "Geschlecht Z–A",
+    "en": "Gender Z–A"
+  },
+  "persons.byNotes": {
+    "lv": "Piezīmes A–Z",
+    "de": "Anmerkungen A–Z",
+    "en": "Notes A–Z"
+  },
+  "persons.byNotesDesc": {
+    "lv": "Piezīmes Z–A",
+    "de": "Anmerkungen Z–A",
+    "en": "Notes Z–A"
   }
 }

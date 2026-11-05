@@ -16,7 +16,7 @@ const query=el<HTMLInputElement>('[data-query]'),theme=el<HTMLSelectElement>('[d
 const params=new URLSearchParams(location.search);let role=params.get('role')||'',view=params.get('view')==='table'?'table':'list',page=Math.max(1,Number(params.get('page'))||1),focusId=params.get('person')||params.get('collector')||params.get('narrator')||'',selection=new Set(decodeSelection(params.get('selection')||'',profiles)),selectionOnly=params.has('selection'),filtered:Profile[]=[];
 let saved=new Set<string>();try{saved=new Set(JSON.parse(localStorage.getItem('teikas-person-saved')||localStorage.getItem('teikas-pins')||'[]').filter((id:string)=>peopleById.has(id)));}catch{}
 const expanded=new Set<string>(focusId?[focusId]:[]),size=20;
-query.value=params.get('q')||'';sort.value=['random','name','name-desc','count','count-asc'].includes(params.get('sort')||'')?params.get('sort')!:'random';gender.value=params.get('gender')||'';minimum.value=String(Math.max(1,Number(params.get('min'))||1));savedOnly.checked=params.get('saved')==='1'||params.get('pinned')==='1';
+query.value=params.get('q')||'';sort.value=[...sort.options].some(option=>option.value===params.get('sort'))?params.get('sort')!:'random';gender.value=params.get('gender')||'';minimum.value=String(Math.max(1,Number(params.get('min'))||1));savedOnly.checked=params.get('saved')==='1'||params.get('pinned')==='1';
 const filterQuery=matchMedia('(max-width:850px)');let mobileFiltersOpen=Boolean(params.get('theme')||params.get('place')||params.get('gender')||params.get('min')||params.get('saved'));
 function updateFilterDrawer(){el('.filter-sidebar').classList.toggle('filters-open',mobileFiltersOpen);el('#people-filter-body').hidden=filterQuery.matches&&!mobileFiltersOpen;el('[data-filter-toggle]').setAttribute('aria-expanded',String(mobileFiltersOpen));}
 filterQuery.addEventListener('change',updateFilterDrawer);updateFilterDrawer();
@@ -56,7 +56,7 @@ function syncPersonFilterMenus(){
    return `<label ${matches?'':'hidden'}><input type="radio" name="person-filter-${key}" value="${esc(option.value)}" data-person-filter-choice="${key}" ${option.selected?'checked':''} /><span>${esc(option.textContent)}</span></label>`;
   }).join('');
  }
- el('[data-minimum-output]').textContent=minimum.value;
+ el('[data-minimum-output]').textContent=Number(minimum.value)<=1?t().all:`${minimum.value}+`;
  minimum.setAttribute('aria-label',t().minimum);
  el('[data-person-download-label]').textContent=ui['browser.download'][language()];
  el<HTMLButtonElement>('[data-reset]').hidden=!(query.value||role||theme.value||place.value||gender.value||Number(minimum.value)>1||savedOnly.checked||focusId||selectionOnly);
@@ -98,7 +98,7 @@ function row(p:Profile){
  <div class="person-actions"><a class="read-full person-read" href="${esc(textsHref(base,p,ids))}">${t().read} (${ids.length}) <i data-lucide="arrow-right" aria-hidden="true"></i></a><div class="person-quick-actions">${explorationActions(p)}${saveButton(p)}</div></div>
  <details class="result-preview person-details" id="person-details-${esc(p.id)}" data-detail="${esc(p.id)}" ${expanded.has(p.id)?'open':''}><summary>${t().more}</summary><div data-detail-content>${expanded.has(p.id)?detailsBody(p):''}</div></details></li>`;
 }
-function table(rows:Profile[]){return `<div class="people-table-wrap" tabindex="0" role="region" aria-label="${t().table}"><table class="people-table"><thead><tr class="list-head person-table-row">${[t().name,t().role,t().count,t().gender,t().notes,t().read].map(v=>`<th scope="col"><span>${v}</span></th>`).join('')}</tr></thead><tbody>${rows.map(p=>`<tr class="result-card person-table-row ${saved.has(p.id)?'is-pinned':''}"><td><h2><a href="${esc(personHref(p.id))}">${esc(p.name)}</a></h2></td><td class="result-type">${label(p)}</td><td class="result-legendcount">${p.ids.length}</td><td class="result-gender">${p.gender==='F'?t().female:p.gender==='M'?t().male:t().unknown}</td><td class="result-notes">${esc(p.notes)}</td><td><a class="read-full person-read" href="${esc(textsHref(base,p,matchingRecords(p,byId,theme.value,place.value).map((r:RecordRow)=>r.id)))}">${t().read} <i data-lucide="arrow-right" aria-hidden="true"></i></a><div class="person-quick-actions">${explorationActions(p)}${saveButton(p)}</div></td></tr>`).join('')}</tbody></table></div>`;}
+function table(rows:Profile[]){return `<div class="people-table-wrap" tabindex="0" role="region" aria-label="${t().table}"><table class="people-table"><thead><tr class="list-head person-table-row">${['name','role','count','gender','notes'].map(field=>{const asc=field==='count'?'count-asc':field,desc=field==='count'?'count':`${field}-desc`,direction=sort.value===asc?'ascending':sort.value===desc?'descending':'none';return `<th scope="col" aria-sort="${direction}"><button type="button" data-person-column="${field}" aria-pressed="${direction!=='none'}">${esc(t()[field])} <i data-lucide="${direction==='ascending'?'arrow-up':direction==='descending'?'arrow-down':'arrow-up-down'}" aria-hidden="true"></i></button></th>`;}).join('')}<th scope="col"><span>${t().read}</span></th></tr></thead><tbody>${rows.map(p=>`<tr class="result-card person-table-row ${saved.has(p.id)?'is-pinned':''}"><td><h2><a href="${esc(personHref(p.id))}">${esc(p.name)}</a></h2></td><td class="result-type">${label(p)}</td><td class="result-legendcount">${p.ids.length}</td><td class="result-gender">${p.gender==='F'?t().female:p.gender==='M'?t().male:t().unknown}</td><td class="result-notes">${esc(p.notes)}</td><td><a class="read-full person-read" href="${esc(textsHref(base,p,matchingRecords(p,byId,theme.value,place.value).map((r:RecordRow)=>r.id)))}">${t().read} <i data-lucide="arrow-right" aria-hidden="true"></i></a><div class="person-quick-actions">${explorationActions(p)}${saveButton(p)}</div></td></tr>`).join('')}</tbody></table></div>`;}
 const mobileCards=matchMedia('(max-width:850px)');
 mobileCards.addEventListener('change',()=>render());
 function render(){
@@ -110,7 +110,12 @@ function render(){
   const pinned=Number(saved.has(b.id))-Number(saved.has(a.id));
   if(pinned)return pinned;
   const names=a.name.localeCompare(b.name,'lv');
-  const primary=sort.value==='random'?discoveryOrder.get(a.id)!-discoveryOrder.get(b.id)!:sort.value==='count'?b.ids.length-a.ids.length:sort.value==='count-asc'?a.ids.length-b.ids.length:sort.value==='name-desc'?-names:names;
+  const field=sort.value.replace(/-desc$/,'');
+  const value=(p:Profile)=>field==='role'?label(p):field==='gender'?(p.gender==='F'?t().female:p.gender==='M'?t().male:''):field==='notes'?p.notes:p.name;
+  const first=value(a),second=value(b);
+  const missing=['gender','notes'].includes(field)?Number(!first)-Number(!second):0;
+  const textOrder=first.localeCompare(second,language())*(sort.value.endsWith('-desc')?-1:1);
+  const primary=sort.value==='random'?discoveryOrder.get(a.id)!-discoveryOrder.get(b.id)!:sort.value==='count'?b.ids.length-a.ids.length:sort.value==='count-asc'?a.ids.length-b.ids.length:missing||textOrder;
   return primary||names||a.id.localeCompare(b.id);
  });
  const totalPages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(page,totalPages);const rows=filtered.slice((page-1)*size,page*size);
@@ -140,7 +145,7 @@ function clear(){root.querySelectorAll<HTMLInputElement>('[data-person-filter-se
 function changed(){page=1;render();}
 query.addEventListener('input',changed);[theme,place,gender,minimum,savedOnly].forEach(input=>input.addEventListener('change',changed));
 root.querySelectorAll<HTMLInputElement>('[data-person-filter-search]').forEach(input=>input.addEventListener('input',syncPersonFilterMenus));
-minimum.addEventListener('input',()=>{el('[data-minimum-output]').textContent=minimum.value;});
+minimum.addEventListener('input',()=>{el('[data-minimum-output]').textContent=Number(minimum.value)<=1?t().all:`${minimum.value}+`;});
 root.addEventListener('change',event=>{
  const choice=event.target as HTMLInputElement,key=choice.dataset.personFilterChoice;
  if(!key)return;
@@ -181,6 +186,7 @@ root.addEventListener('click',async event=>{
  }
  const target=origin.closest<HTMLElement>('button,a');if(!target)return;
  if(target.hasAttribute('data-filter-toggle')){mobileFiltersOpen=!mobileFiltersOpen;updateFilterDrawer();}
+ if(target.hasAttribute('data-person-column')){const field=target.dataset.personColumn!,asc=field==='count'?'count-asc':field,desc=field==='count'?'count':`${field}-desc`;sort.value=sort.value===asc?desc:asc;page=1;render();el<HTMLButtonElement>(`[data-person-column="${field}"]`).focus({preventScroll:true});}
  if(target.hasAttribute('data-person-sort')){sort.value=target.dataset.personSort!;el<HTMLDetailsElement>('[data-person-sort-menu]').open=false;page=1;render();}
  if(target.hasAttribute('data-role')){role=target.dataset.role!;changed();}
  if(target.hasAttribute('data-view')){view=target.dataset.view!;render();}

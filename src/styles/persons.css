@@ -3,6 +3,7 @@
 .people-workspace .browser-top{align-items:center}
 .people-workspace .browser-toolbar{flex-wrap:wrap}
 .people-workspace .view-tools{flex-wrap:wrap}
+.people-workspace [data-person-sort-menu] .sort-menu-options{max-height:min(60dvh,28rem);overflow:auto}
 .people-workspace .people-filter-form{grid-template-columns:1fr}
 .people-workspace [data-feedback]:empty{display:none}
 .people-roles{flex-wrap:wrap}
