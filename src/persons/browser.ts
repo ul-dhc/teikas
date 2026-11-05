@@ -129,9 +129,15 @@ function render(){
  root.querySelectorAll<HTMLButtonElement>('button[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===effectiveView)));
  el<HTMLButtonElement>('[data-export]').disabled=!filtered.length;
  el('[data-person-download]').dataset.hasSelection=String(filtered.length>0);
- el('[data-person-sort-label]').textContent=sort.selectedOptions[0].textContent;
+ const criterion=sort.value.startsWith('count')?'count':sort.value.replace(/-desc$/,'');
+ el('[data-person-sort-label]').textContent=t()[({random:'randomOrder',name:'sortName',count:'sortCount',role:'sortRole',gender:'sortGender'} as Record<string,string>)[criterion]];
+ const direction=el<HTMLButtonElement>('[data-person-sort-direction]'),descending=sort.value==='count'||sort.value.endsWith('-desc');
+ direction.hidden=criterion==='random';direction.dataset.direction=descending?'descending':'ascending';
+ const directionLabel=ui[descending?'browser.sortAscending':'browser.sortDescending'][language()];
+ direction.setAttribute('aria-label',directionLabel);direction.dataset.tooltip=directionLabel;
+ direction.querySelector<HTMLElement>('[data-lucide]')!.dataset.lucide=descending?'arrow-down':'arrow-up';
  const sortSummary=el('[data-person-sort-menu] summary');if(sort.value==='random')sortSummary.dataset.tooltip=t().randomHint;else delete sortSummary.dataset.tooltip;
- root.querySelectorAll<HTMLElement>('[data-person-sort]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.personSort===sort.value)));
+ root.querySelectorAll<HTMLElement>('[data-person-sort]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.personSort===criterion)));
  syncUrl();
  syncPersonFilterMenus();
  window.dispatchEvent(new Event('lucide-refresh'));
@@ -158,11 +164,7 @@ root.addEventListener('change',event=>{
 root.addEventListener('change',event=>{const input=event.target as HTMLInputElement;if(input.hasAttribute('data-person-page-current')){page=Math.max(1,Math.floor(Number(input.value)||1));render();}});
 root.addEventListener('keydown',event=>{if(event.key==='Enter'&&(event.target as HTMLElement).hasAttribute('data-person-page-current')){event.preventDefault();(event.target as HTMLInputElement).dispatchEvent(new Event('change',{bubbles:true}));return;}
 
- if(event.key!=='Escape')return;
- const menu=(event.target as HTMLElement).closest<HTMLDetailsElement>('[data-person-filter]');
- if(menu){menu.open=false;menu.querySelector('summary')!.focus();}
 });
-document.addEventListener('click',event=>{root.querySelectorAll<HTMLDetailsElement>('[data-person-filter][open]').forEach(menu=>{if(!menu.contains(event.target as Node))menu.open=false;});});
 let filtersCollapsed=false;
 const collapseButton=el<HTMLButtonElement>('[data-person-filter-collapse]');
 function syncFilterCollapse(){
@@ -187,6 +189,7 @@ root.addEventListener('click',async event=>{
  const target=origin.closest<HTMLElement>('button,a');if(!target)return;
  if(target.hasAttribute('data-filter-toggle')){mobileFiltersOpen=!mobileFiltersOpen;updateFilterDrawer();}
  if(target.hasAttribute('data-person-column')){const field=target.dataset.personColumn!,asc=field==='count'?'count-asc':field,desc=field==='count'?'count':`${field}-desc`;sort.value=sort.value===asc?desc:asc;page=1;render();el<HTMLButtonElement>(`[data-person-column="${field}"]`).focus({preventScroll:true});}
+ if(target.hasAttribute('data-person-sort-direction')){sort.value=sort.value==='count'?'count-asc':sort.value==='count-asc'?'count':sort.value.endsWith('-desc')?sort.value.slice(0,-5):`${sort.value}-desc`;page=1;render();}
  if(target.hasAttribute('data-person-sort')){sort.value=target.dataset.personSort!;el<HTMLDetailsElement>('[data-person-sort-menu]').open=false;page=1;render();}
  if(target.hasAttribute('data-role')){role=target.dataset.role!;changed();}
  if(target.hasAttribute('data-view')){view=target.dataset.view!;render();}

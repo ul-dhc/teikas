@@ -3193,5 +3193,25 @@
     "lv": "Dzimums Z–A",
     "de": "Geschlecht Z–A",
     "en": "Gender Z–A"
+  },
+  "persons.sortName": {
+    "lv": "Pēc vārda",
+    "de": "Nach Name",
+    "en": "By name"
+  },
+  "persons.sortCount": {
+    "lv": "Teiku skaits",
+    "de": "Anzahl der Sagen",
+    "en": "Legend count"
+  },
+  "persons.sortRole": {
+    "lv": "Personas loma",
+    "de": "Rolle",
+    "en": "Role"
+  },
+  "persons.sortGender": {
+    "lv": "Dzimums",
+    "de": "Geschlecht",
+    "en": "Gender"
   }
 }

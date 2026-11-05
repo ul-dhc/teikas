@@ -1,3 +1,4 @@
+import {registerPopover,dismissOtherPopovers} from '../scripts/popovers';
 import {scopeRecordsToSelection} from '../lib/selection.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
 import { enhanceSelects } from './select-menu';
@@ -224,21 +225,22 @@ export function createDashboard(options: Options) {
   root.querySelectorAll('[data-sort]').forEach(button=>button.setAttribute('aria-expanded','false'));
  }
  function openSortMenu(button:HTMLElement,last=false) {
-  closeSortMenus();button.setAttribute('aria-expanded','true');
+  closeSortMenus();dismissOtherPopovers(button);button.setAttribute('aria-expanded','true');
   const menu=document.getElementById(button.getAttribute('aria-controls')!)!;menu.hidden=false;
   const items=menu.querySelectorAll<HTMLElement>('button');
   (last?items[items.length-1]:menu.querySelector<HTMLElement>('[aria-checked="true"]')||items[0])?.focus({preventScroll:true});
  }
- document.addEventListener('click',event=>{if(!(event.target as Element).closest('.ml-facet-sort'))closeSortMenus();});
+ registerPopover(()=>{
+  const content=root.querySelector<HTMLElement>('.ml-sort-menu:not([hidden])');
+  const trigger=content&&root.querySelector<HTMLElement>(`[aria-controls="${content.id}"]`);
+  return content&&trigger?{content,trigger,close:closeSortMenus}:null;
+ });
  root.addEventListener('keydown',event=>{
   const target=event.target as HTMLElement;
   if(target.dataset.sort&&['ArrowDown','ArrowUp'].includes(event.key)){event.preventDefault();openSortMenu(target,event.key==='ArrowUp');return;}
   const menu=target.closest<HTMLElement>('.ml-sort-menu');if(!menu)return;
-  const trigger=root.querySelector<HTMLElement>(`[aria-controls="${menu.id}"]`)!;
   const items=[...menu.querySelectorAll<HTMLElement>('button')],index=items.indexOf(target);
   if(['ArrowDown','ArrowUp','Home','End'].includes(event.key)){event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?items.length-1:(index+(event.key==='ArrowDown'?1:-1)+items.length)%items.length;items[next].focus();}
-  if(event.key==='Escape'){event.preventDefault();event.stopPropagation();closeSortMenus();trigger.focus({preventScroll:true});}
-  if(event.key==='Tab'){closeSortMenus();trigger.focus({preventScroll:true});}
  });
  root.addEventListener('click',async event=>{
   if(network.suppressClick)return;

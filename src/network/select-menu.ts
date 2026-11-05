@@ -1,3 +1,4 @@
+import {registerPopover,dismissOtherPopovers} from '../scripts/popovers';
 // Keep the native select as the form/state source; render its menu with site tokens.
 let opened: { select: HTMLSelectElement; trigger: HTMLButtonElement; menu: HTMLElement; active: number; input?: HTMLInputElement } | null = null;
 let serial = 0;
@@ -37,7 +38,7 @@ function choose(index: number) {
   (labels.get(replacement || select) || trigger).focus({ preventScroll: true });
 }
 function open(select: HTMLSelectElement, trigger: HTMLButtonElement) {
-  close(); search = '';
+  close(); dismissOtherPopovers(trigger); search = '';
   const menu = document.createElement('div');
   menu.className = select.hasAttribute('data-network-filter')?'ml-select-menu platform-filter-menu':'ml-select-menu';
   const list = document.createElement('div'); list.className = 'ml-select-options';
@@ -159,8 +160,6 @@ export function enhanceSelects(root: HTMLElement) {
     });
   });
 }
-document.addEventListener('pointerdown', event => {
-  if (opened && !opened.menu.contains(event.target as Node) && !opened.trigger.contains(event.target as Node)) close();
-});
+registerPopover(()=>opened?{content:opened.menu,trigger:opened.trigger,close:()=>close()}:null);
 window.addEventListener('resize', () => close());
 document.addEventListener('scroll', event => { if (opened && !opened.menu.contains(event.target as Node)) close(); }, true);

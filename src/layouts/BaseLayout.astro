@@ -76,6 +76,7 @@ const base = import.meta.env.BASE_URL;
     <Feedback />
     <footer class="site-footer"><div class="institution-credit"><a href="https://ul-dhc.github.io/" target="_blank" rel="noopener noreferrer">LU Digitālo humanitāro zinātņu centrs</a><span>, 2026</span></div></footer>
     <script>
+      import {registerPopover,dismissOtherPopovers} from '../scripts/popovers';
       import {attachPlatformTooltips} from '../scripts/tooltips';
       attachPlatformTooltips();
       import { createIcons, BookOpen, Mic, Menu, ChartScatter, Pause, Play, ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, CalendarDays, ChartNoAxesColumn, CircleAlert, LocateFixed, MapPinOff, Circle, Eye, EyeOff, ListFilter, Maximize2, Minimize2, Scan, Type, ZoomIn, ZoomOut, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, FileStack, GitCompareArrows, Info, Layers, LayoutGrid, Link, List, MapPin, Minus, Moon, Network, NotebookPen, Pin, PinOff, Plus, Quote, RotateCcw, Settings2, SlidersHorizontal, Sun, UsersRound, X } from 'lucide';
@@ -103,9 +104,8 @@ const base = import.meta.env.BASE_URL;
         movable.forEach(({element,marker})=>compact.matches?menu.append(element):marker.after(element));
         if(focusInMenu&&compact.matches)menuButton.focus({preventScroll:true});
       };
-      menuButton.addEventListener('click',()=>{const open=menu.hidden;menu.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));});
-      document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){event.preventDefault();closeMenu(true);}});
-      document.addEventListener('pointerdown',event=>{if(!menu.hidden&&!header.contains(event.target as Node))closeMenu();});
+      registerPopover(()=>menu.hidden?null:{content:menu,trigger:menuButton,close:()=>closeMenu()});
+      menuButton.addEventListener('click',()=>{const open=menu.hidden;if(open)dismissOtherPopovers(menu);menu.hidden=!open;menuButton.setAttribute('aria-expanded',String(open));});
       header.addEventListener('focusout',()=>{requestAnimationFrame(()=>{if(!header.contains(document.activeElement))closeMenu();});});
       menu.addEventListener('click',event=>{if((event.target as Element).closest('a'))closeMenu();});
       compact.addEventListener('change',syncHeader);syncHeader();

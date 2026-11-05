@@ -5,7 +5,6 @@ const page = document.querySelector<HTMLElement>("[data-map-page]")!,
   mapStage = page.querySelector<HTMLElement>(".map-stage")!,
   container = page.querySelector<HTMLElement>("[data-map]")!,
   panel = page.querySelector<HTMLElement>("[data-map-panel]")!,
-  layerMenu = page.querySelector<HTMLDetailsElement>("[data-layer-menu]")!,
   countLabel = page.querySelector<HTMLAnchorElement>("[data-map-count]")!,
   countText = countLabel.querySelector<HTMLElement>("[data-map-count-text]")!,
   heatKey = page.querySelector<HTMLElement>("[data-heat-key]")!,
@@ -2141,32 +2140,6 @@ map.on("moveend", () => {
     updateUrl();
   }, 120);
 });
-document.addEventListener("click", (event) => {
-  if (layerMenu.open && !layerMenu.contains(event.target as Node))
-    layerMenu.open = false;
-  if (basemapMenu.open && !basemapMenu.contains(event.target as Node))
-    basemapMenu.open = false;
-  filterPanel.querySelectorAll<HTMLDetailsElement>("[data-map-filter][open]").forEach((details) => {
-    if (!details.contains(event.target as Node)) details.open = false;
-  });
-  networkToolbar.querySelectorAll<HTMLDetailsElement>("[data-network-choice][open]").forEach((details) => {
-    if (!details.contains(event.target as Node)) details.open = false;
-  });
-});
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    layerMenu.open = false;
-    basemapMenu.open = false;
-    filterPanel.querySelectorAll<HTMLDetailsElement>("[data-map-filter][open]").forEach((details) => details.open = false);
-    networkToolbar.querySelectorAll<HTMLDetailsElement>("[data-network-choice][open]").forEach((details) => details.open = false);
-  }
-});
-filterPanel.querySelectorAll<HTMLDetailsElement>("[data-map-filter]").forEach((details) => details.addEventListener("toggle", () => {
-  if (!details.open) return;
-  filterPanel.querySelectorAll<HTMLDetailsElement>("[data-map-filter][open]").forEach((other) => {
-    if (other !== details) other.open = false;
-  });
-}));
 new MutationObserver((records) => {
   if (records.some((record) => record.attributeName === "data-theme")) {
     if (!basemapExplicit) {

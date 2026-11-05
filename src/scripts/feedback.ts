@@ -32,8 +32,6 @@ dialog.addEventListener('close',()=>{kindMenu.open=false;openedFrom.focus({preve
 dialog.querySelectorAll<HTMLButtonElement>('[data-feedback-kind]').forEach(button=>button.addEventListener('click',()=>{
  kind.value=button.dataset.feedbackKind!;kindMenu.open=false;translate();kindMenu.querySelector('summary')!.focus({preventScroll:true});
 }));
-kindMenu.addEventListener('keydown',event=>{if(event.key==='Escape'&&kindMenu.open){event.preventDefault();event.stopPropagation();kindMenu.open=false;kindMenu.querySelector('summary')!.focus();}});
-dialog.addEventListener('click',event=>{if(!kindMenu.contains(event.target as Node))kindMenu.open=false;});
 form.addEventListener('submit',event=>{
  if(pending){event.preventDefault();return;}
  if(!/^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(endpoint)){

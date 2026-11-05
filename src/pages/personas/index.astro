@@ -6,6 +6,7 @@ import '../../styles/persons.css';
 const base=import.meta.env.BASE_URL;
 const profiles=buildProfiles(browsePersons,browseRecords);
 const records=browseRecords.map(({id,chapterLv,chapterDe,placeId,place})=>({id,chapterLv,chapterDe,placeId,place}));
+const sortCriteria=[['random','randomOrder'],['name','sortName'],['count','sortCount'],['role','sortRole'],['gender','sortGender']];
 const sortOptions=[['random','randomOrder'],['name','byName'],['name-desc','byNameDesc'],['count','byCount'],['count-asc','byCountAsc'],['role','byRole'],['role-desc','byRoleDesc'],['gender','byGender'],['gender-desc','byGenderDesc']];
 ---
 <BaseLayout title="Teicēji un pierakstītāji" active="persons">
@@ -34,7 +35,7 @@ const sortOptions=[['random','randomOrder'],['name','byName'],['name-desc','byNa
      <div class="view-switch people-roles" role="group" data-copy-aria="role"><button type="button" data-role="" aria-pressed="true" data-copy="all">Visi</button><button type="button" data-role="narrator" aria-pressed="false" data-copy="narrators">Teicēji</button><button type="button" data-role="collector" aria-pressed="false" data-copy="collectors">Pierakstītāji</button></div>
     </div>
     <div class="browser-toolbar"><div class="result-summary"><span data-result-status role="status" aria-live="polite"></span><button class="clear-pins" type="button" data-copy-link data-copy="copyLink">Kopēt atlases saiti</button></div>
-     <div class="view-tools"><label class="card-sort"><span data-copy="sort">Kārtot</span><select class="sr-only" tabindex="-1" aria-hidden="true" data-sort>{sortOptions.map(([value,key])=><option value={value} data-copy={key}></option>)}</select><details class="sort-menu" data-person-sort-menu><summary><span data-person-sort-label></span><i data-lucide="chevron-down" aria-hidden="true"></i></summary><div class="sort-menu-options">{sortOptions.map(([value,key])=><button type="button" data-person-sort={value} aria-pressed="false"><i data-lucide="check" aria-hidden="true"></i><span data-copy={key}></span></button>)}</div></details></label>
+     <div class="view-tools"><div class="card-sort"><span data-copy="sort">Kārtot</span><select class="sr-only" tabindex="-1" aria-hidden="true" data-sort>{sortOptions.map(([value,key])=><option value={value} data-copy={key}></option>)}</select><details class="sort-menu" data-person-sort-menu><summary><span data-person-sort-label></span><i data-lucide="chevron-down" aria-hidden="true"></i></summary><div class="sort-menu-options">{sortCriteria.map(([value,key])=><button type="button" data-person-sort={value} aria-pressed="false"><i data-lucide="check" aria-hidden="true"></i><span data-copy={key}></span></button>)}</div></details><button class="sort-direction" type="button" data-person-sort-direction hidden><i data-lucide="arrow-up" aria-hidden="true"></i></button></div>
       <div class="view-switch person-view-switch" role="group" data-copy-aria="view"><button type="button" data-view="list" aria-pressed="true"><i data-lucide="list" aria-hidden="true"></i><span data-copy="list">Saraksts</span></button><button type="button" data-view="table" aria-pressed="false"><i data-lucide="layout-grid" aria-hidden="true"></i><span data-copy="table">Tabula</span></button></div>
      </div>
     </div>
