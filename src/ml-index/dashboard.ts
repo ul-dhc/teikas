@@ -1,3 +1,4 @@
+import {scopeRecordsToSelection} from '../lib/selection.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
 import {hidePlatformTooltip as hideTooltip} from '../scripts/tooltips';
 import {dashboardCopy} from './dashboard-copy';
@@ -30,9 +31,11 @@ export function createDashboard(options: Options) {
  let typeQuery = '';
  const expandedLists=new Set<string>();
  let textMode = localStorage.getItem('teikas-content-mode') || 'parallel';
- const cohort = (skip='') => selectRecords(scopeRecordsToSection(all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
+ let recordSelection:string|null=null;
+ const cohort = (skip='') => selectRecords(scopeRecordsToSection(scopeRecordsToSelection(all,recordSelection),options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
  const countUnique = (rows:Row[],field:'county'|'collector'|'narrator'|'typeId') => new Set(rows.map(row=>row[field]).filter(Boolean)).size;
  function read(params:URLSearchParams) {
+  recordSelection=params.get('selection');
   filters = {};
   sorts = {};
   for(const field of sortFields){const value=params.get(`sort_${field}`);if(value&&['count-desc','count-asc','name',...(field==='type'?['code']:[])].includes(value))sorts[field]=value as Sort;}
@@ -47,6 +50,7 @@ export function createDashboard(options: Options) {
   typeQuery=''; previewSize=12;
  }
  function write(params:URLSearchParams) {
+  if(recordSelection!==null)params.set('selection',recordSelection);
   for (const [field,value] of Object.entries(filters)) if(value)params.set(field,value);
   if(panelOpen)params.set('texts','1');
   for(const [field,value] of Object.entries(sorts))if(value!=='count-desc')params.set(`sort_${field}`,value);

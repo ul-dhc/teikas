@@ -1,0 +1,57 @@
+/* Person-specific structure only. Surfaces, typography, controls and pins use
+   the same classes as the text browser; exploration icons use the theme catalogue. */
+.people-workspace .browser-top{align-items:center}
+.people-workspace .browser-toolbar{flex-wrap:wrap}
+.people-workspace .view-tools{flex-wrap:wrap}
+.people-workspace .people-filter-form{grid-template-columns:1fr}
+.people-workspace [data-feedback]:empty{display:none}
+.people-roles{flex-wrap:wrap}
+.people-workspace.browser[data-view=list] .person-row{grid-template-columns:minmax(0,1fr) auto}
+.people-workspace.browser[data-view=list] .person-row>*{grid-column:auto}
+.people-workspace.browser[data-view=list] .person-row .person-details{grid-column:1/-1}
+.people-workspace.browser[data-view=list] .result-card h2{font-size:1.25rem}
+.person-meta{display:flex;gap:.75rem;margin:.4rem 0}
+.person-summary{margin:.4rem 0}
+.person-actions{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
+.person-quick-actions{display:flex;align-items:center;gap:.25rem}
+.people-workspace .person-read{display:inline-flex}
+.people-workspace .person-details>div{display:block;font:inherit}
+.people-workspace .person-details>summary{font-weight:400}
+.people-workspace .person-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.person-detail-grid ul{list-style:none;margin:0}
+.person-detail-grid li a{display:flex;justify-content:space-between;gap:1rem;width:100%}
+.person-excerpts ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;list-style:none;padding:0}
+.person-excerpts p{margin:.5rem 0}
+.person-source{margin-top:1rem}
+.person-source p{margin:.3rem 0}
+.people-table-wrap{overflow-x:auto}
+.people-table{width:100%;border-collapse:collapse}
+.people-workspace.browser[data-view=list] .person-table-row{display:grid;grid-template-columns:1.2fr .7fr .5fr .6fr .8fr 1fr}
+.people-workspace.browser[data-view=list] .person-table-row>*{grid-column:auto;min-width:0;text-align:left}
+.people-table .person-quick-actions{justify-content:flex-start}
+@media(max-width:850px){
+ .people-workspace.browser[data-view=list] .person-row{grid-template-columns:minmax(0,1fr)}
+ .people-workspace.browser[data-view=list] .person-row>*{grid-column:1}
+ .person-actions{align-items:flex-start}
+ .people-workspace .person-detail-grid{grid-template-columns:1fr}
+ .people-workspace.browser[data-view=list] .person-table-row.list-head{display:grid!important}
+}
+@media(max-width:600px){
+ .person-excerpts ol{grid-template-columns:1fr}
+ .people-workspace .people-roles span,.people-workspace .view-switch span{display:inline}
+}
+@media(max-width:600px){
+ .people-workspace .browser-toolbar .view-tools{display:flex}
+}
+
+.people-workspace.browser[data-view=list] .person-table-row>*{display:block}
+@media(max-width:850px){
+ .people-workspace [data-person-results]{order:6}
+ .people-workspace [data-feedback]{order:3}
+}
+
+/* Expanded text uses the explorer's excerpt typography without its collapsed clamp. */
+.people-workspace .person-details[open] .result-excerpt{display:block;-webkit-line-clamp:unset;overflow:visible}
+@media(max-width:850px){
+ .people-workspace .person-view-switch{display:none!important}
+}

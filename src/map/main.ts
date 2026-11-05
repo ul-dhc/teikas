@@ -1,7 +1,7 @@
 import {legendFocusOpacity} from './legend-focus.js';
 import {sectionScope} from '../lib/section-scope';
 import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
-import {encodeSelection} from '../lib/selection.js';
+import {encodeSelection,scopeRecordsToSelection} from '../lib/selection.js';
 import {createNetworkTrace} from './network-trace.js';
 import * as maplibregl from "maplibre-gl";
 import { createElement, Maximize, Minimize, MapPin } from "lucide";
@@ -78,6 +78,7 @@ const dataset = JSON.parse(
   formatter = () => new Intl.NumberFormat(document.documentElement.lang),
   params = new URLSearchParams(location.search);
 const subsection = sectionScope(params.get('section'));
+const selectedLegendIds=params.has('selection')?new Set(scopeRecordsToSelection([...dataset.legends.features.map(feature=>feature.properties),...dataset.unmappedLegends],params.get('selection')).map(record=>record.id)):null;
 let legendContext = [...dataset.legends.features.map(feature=>feature.properties),...dataset.unmappedLegends].find(record=>record.id===params.get('legend'))?.id || '';
 const placeUncertaintyById = new Map(dataset.places.features.map(place => [place.properties.id, place.properties.geography?.mapUncertainty?.kind || 'none']));
 for (const feature of dataset.legends.features) (feature.properties as any).locationUncertain = ['area', 'ambiguous'].includes(placeUncertaintyById.get(feature.properties.placeId) || 'none') ? 1 : 0;
@@ -473,11 +474,24 @@ const updateCount = () => {
   countLabel.setAttribute("aria-label", tr("map.openVisibleSelection", { count: formatter().format(value) }));
 };
 const syncFilterInterface = () => {
-  let active = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max || !includeUndated.checked || !includeUnknownPlace.checked || Object.values(personFilterExplicit).some(Boolean);
+  let active = selectedLegendIds!==null || yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max || !includeUndated.checked || !includeUnknownPlace.checked || Object.values(personFilterExplicit).some(Boolean);
   for (const key of filterKeys) {
     const count = selectedFilters[key].size;
     active ||= filterExplicit[key];
     filterPanel.querySelector<HTMLElement>(`[data-map-filter="${key}"] [data-map-filter-count]`)!.textContent = !filterExplicit[key] ? tr(`map.filterAll.${key}`) : String(count);
+    const options = filterPanel.querySelector<HTMLElement>(`[data-map-filter="${key}"] .multi-options`)!;
+    const labels = [...options.querySelectorAll<HTMLLabelElement>("label")];
+    const originalOrder = new Map(filterOptionValues[key].map((value,index) => [value,index]));
+    const value = (label:HTMLLabelElement) => label.querySelector<HTMLInputElement>("input")!.value;
+    const ordered = [...labels].sort((a,b) =>
+      Number(filterExplicit[key] && selectedFilters[key].has(value(b))) - Number(filterExplicit[key] && selectedFilters[key].has(value(a)))
+      || originalOrder.get(value(a))! - originalOrder.get(value(b))!);
+    if (ordered.some((label,index) => label !== labels[index])) {
+      const focused = options.contains(document.activeElement) ? document.activeElement as HTMLElement : null;
+      options.append(...ordered);
+      focused?.focus({preventScroll:true});
+      options.scrollTop = 0;
+    }
   }
   const activeFilterDisplay = page.querySelector<HTMLElement>("[data-network-active-filters]")!;
   activeFilterDisplay.replaceChildren();
@@ -769,6 +783,7 @@ const updatePointCenterSelection = () => {
 const applyFilters = (save = true) => {
   const from = Number(yearFromInput.value), to = Number(yearToInput.value), timeFilterActive = yearFromInput.value !== yearFromInput.min || yearToInput.value !== yearToInput.max;
   const matchesFilters = (properties: LegendProperties) => {
+    if(selectedLegendIds&&!selectedLegendIds.has(properties.id))return false;
     if (subsection && !properties.id.startsWith(subsection)) return false;
     const year = Number(properties.year);
     if (year ? timeFilterActive && (year < from || year > to) : !includeUndated.checked) return false;

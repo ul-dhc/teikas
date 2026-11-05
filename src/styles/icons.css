@@ -12,3 +12,10 @@
 .prev-next a{display:flex;flex-direction:column;gap:.4rem}.prev-next a:last-child{align-items:flex-end}.nav-direction{color:var(--muted);font-size:.82rem}
 .daily-icon{height:auto;min-height:84px;padding:.85rem 1rem;display:grid;grid-template-columns:38px 1fr;grid-template-rows:auto auto;column-gap:.75rem;align-content:center;place-items:initial}.daily-icon:before{content:none}.daily-icon .calendar-mark{grid-row:1/-1;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--accent),transparent 88%);padding:0}.daily-icon .lucide{width:19px;height:19px}.daily-icon .calendar-label{font:750 .68rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:0;align-self:end}.daily-icon time{font:650 .88rem/1.25 var(--sans);white-space:nowrap;align-self:start;margin-top:.28rem}
 @media(max-width:850px){.daily-icon{width:100%;min-height:76px;padding:.7rem .85rem;grid-template-columns:34px 1fr;column-gap:.6rem}.daily-icon .calendar-mark{width:34px;height:34px}.daily-icon .lucide{width:17px;height:17px}.daily-icon time{font-size:.8rem}}
+
+/* Shared exploration actions, originally used by the theme catalogue. */
+.exploration-actions{--link-hover-color:var(--palette-ochre);display:flex;justify-content:flex-end;gap:.25rem;padding:.1rem 0 .35rem}
+.exploration-actions a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border-radius:999px;color:var(--muted);text-decoration:none;transition:color .15s}
+.exploration-actions a:is(:hover,:focus-visible){background:transparent;color:var(--palette-ochre);text-decoration:none}
+.exploration-actions svg{width:1.1rem;height:1.1rem;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.exploration-actions a{transition:none}}

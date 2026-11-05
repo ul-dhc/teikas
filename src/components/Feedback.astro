@@ -1,0 +1,21 @@
+---
+import '../styles/feedback.css';
+const endpoint = import.meta.env.PUBLIC_FEEDBACK_ENDPOINT || '';
+---
+<dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="feedback-title" data-endpoint={endpoint} data-i18n-skip>
+ <form id="feedback-form" method="post" target="feedback-response">
+  <div class="feedback-heading"><h2 id="feedback-title" data-feedback-copy="title">Kļūda vai ieteikums</h2><button class="icon-control" type="button" data-feedback-close aria-label="Aizvērt"><i data-lucide="x" aria-hidden="true"></i></button></div>
+  <div class="field"><span id="feedback-kind-label" data-feedback-copy="kind">Ziņojuma veids</span><select name="kind" hidden><option value="error" data-feedback-copy="error">Kļūda</option><option value="suggestion" data-feedback-copy="suggestion">Ieteikums</option><option value="data" data-feedback-copy="data">Datu precizējums</option></select><details class="sort-menu" data-feedback-kind-menu><summary aria-labelledby="feedback-kind-label feedback-kind-value"><span id="feedback-kind-value">Kļūda</span><i data-lucide="chevron-down" aria-hidden="true"></i></summary><div class="sort-menu-options">{['error','suggestion','data'].map(kind=><button type="button" data-feedback-kind={kind} aria-pressed={kind==='error'?'true':'false'}><i data-lucide="check" aria-hidden="true"></i><span data-feedback-copy={kind}></span></button>)}</div></details></div>
+  <label class="field"><span data-feedback-copy="description">Apraksts</span><textarea name="description" required minlength="5" maxlength="5000" rows="5"></textarea></label>
+  <label class="field"><span data-feedback-copy="page">Lapa, no kuras sūti ziņojumu</span><input class="feedback-url" type="url" name="pageUrl" readonly /></label>
+  <p class="search-help" data-feedback-copy="privacy">E-pastu neprasām. Lapas saite ar pašreizējo atlasi tiks pievienota ziņojumam.</p>
+  <label class="feedback-trap" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off" /></label>
+  <input type="hidden" name="requestId" />
+  <p class="search-help" data-feedback-status role="status" aria-live="polite"></p>
+  <div class="feedback-actions"><button class="text-button" type="button" data-feedback-close data-feedback-copy="cancel">Atcelt</button><button class="button" type="submit" data-feedback-submit data-feedback-copy="send">Nosūtīt</button></div>
+ </form>
+ <iframe name="feedback-response" title="Feedback response" hidden></iframe>
+</dialog>
+<script>
+ import '../scripts/feedback';
+</script>

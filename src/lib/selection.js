@@ -19,3 +19,16 @@ export function decodeSelection(value, records) {
  }
  return [...selected];
 }
+
+// A missing selection means the full dataset; an explicit empty/invalid one stays empty.
+/**
+ * @template {{id:string}} T
+ * @param {T[]} records
+ * @param {string|null|undefined} value
+ * @returns {T[]}
+ */
+export function scopeRecordsToSelection(records, value) {
+ if(value===null||value===undefined)return records;
+ const ids=new Set(decodeSelection(value,records));
+ return records.filter(record=>ids.has(record.id));
+}

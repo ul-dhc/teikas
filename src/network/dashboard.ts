@@ -1,3 +1,4 @@
+import {scopeRecordsToSelection} from '../lib/selection.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
 import { enhanceSelects } from './select-menu';
 import {createNetwork} from './network';
@@ -36,9 +37,11 @@ export function createDashboard(options: Options) {
  let previewSize = 12;
  let typeQuery = '';
  let textMode = localStorage.getItem('teikas-network-content-mode') || 'parallel';
- const cohort = (skip='') => selectRecords(scopeRecordsToSection(all,options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
+ let recordSelection:string|null=null;
+ const cohort = (skip='') => selectRecords(scopeRecordsToSection(scopeRecordsToSelection(all,recordSelection),options.section || ''),{topic:scope.topic?.id,type:scope.type?.id},filters,skip) as Row[];
  const countUnique = (rows:Row[],field:'county'|'collector'|'narrator'|'typeId') => new Set(rows.map(row=>row[field]).filter(Boolean)).size;
  function read(params:URLSearchParams) {
+  recordSelection=params.get('selection');
   view=networkEnabled&&params.get('view')!=='overview'?'network':'overview';
   network.read(params);
   filters = {};
@@ -56,6 +59,7 @@ export function createDashboard(options: Options) {
   typeQuery=''; previewSize=12;
  }
  function write(params:URLSearchParams) {
+  if(recordSelection!==null)params.set('selection',recordSelection);
   if(networkEnabled&&view==='network'){params.set('view','network');network.write(params);}
   for (const [field,value] of Object.entries(filters)) if(value)params.set(field,value);
   if(panelOpen)params.set('texts','1');
@@ -155,7 +159,7 @@ export function createDashboard(options: Options) {
  function networkFilters() {
   const select=(field:string,title:string,current:string,choices:Array<[string,string]>)=>`<label class="ml-network-filter-field"><span class="platform-filter-label">${title}</span><select aria-label="${title}" data-network-filter="${field}"><option value="">${tr('all')}</option>${choices.map(([value,text])=>`<option value="${esc(value)}" ${current===value?'selected':''}>${esc(text)}</option>`).join('')}</select></label>`;
   return select('topic',tr('topics'),scope.topic?.id||'',topics.map(t=>[t.id,t[lang()]]))+
-   select('type',tr('types'),scope.type?key(scope.type):'',types.filter(t=>!scope.topic||t.topic===scope.topic.id).map(t=>[key(t),`${t.code} · ${name(t)}`]))+
+   select('type',tr('types'),scope.type?key(scope.type):'',types.filter(t=>!scope.topic||t.topic===scope.topic.id).map(t=>[key(t),name(t)]))+
    (['county','collector','narrator'] as const).map(field=>select(field,tr(field==='county'?'counties':field==='collector'?'collectors':'narrators'),filters[field]||'',[...countsBy(cohort(field),field)].sort((a,b)=>named(field,a[0]).localeCompare(named(field,b[0]),lang())).map(([value,count])=>[value,`${value===UNKNOWN?tr('unknown'):named(field,value)} (${count})`]))).join('')+
    select('translation',tr('translation'),filters.translation||'',[['translated',tr('translated')],['original',tr('original')]]);
  }

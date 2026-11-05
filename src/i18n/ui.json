@@ -829,17 +829,61 @@
     "de": "Datenebenen",
     "en": "Data layers"
   },
-  "map.dataColor": { "lv": "Datu krāsa", "de": "Datenfarbe", "en": "Data color" },
-  "map.colorGreen": { "lv": "Zaļa", "de": "Grün", "en": "Green" },
-  "map.colorBlue": { "lv": "Zila", "de": "Blau", "en": "Blue" },
-  "map.colorYellow": { "lv": "Dzeltena", "de": "Gelb", "en": "Yellow" },
-  "map.pointStyle": { "lv": "Punktu attēlojums", "de": "Punktdarstellung", "en": "Point display" },
-  "map.pointStyleRays": { "lv": "Stari", "de": "Strahlen", "en": "Rays" },
-  "map.pointStyleBubbles": { "lv": "Burbuļi", "de": "Blasen", "en": "Bubbles" },
-  "map.rayLegend": { "lv": "Viens stars = viena teika", "de": "Ein Strahl = eine Sage", "en": "One ray = one legend" },
-  "map.rayExplanation": { "lv": "Centra punkts = vieta; katrs stars ved uz vienu teiku.", "de": "Mittelpunkt = Ort; jeder Strahl führt zu einer Sage.", "en": "Center point = place; each ray leads to one legend." },
-  "map.bubbleLegend": { "lv": "Viens burbulis = viena teika", "de": "Eine Blase = eine Sage", "en": "One bubble = one legend" },
-  "map.bubbleExplanation": { "lv": "Centra burbulis = vieta; mazais burbulis un stars = teika.", "de": "Zentrale Blase = Ort; kleine Blase und Strahl = Sage.", "en": "Center bubble = place; small bubble and ray = legend." },
+  "map.dataColor": {
+    "lv": "Datu krāsa",
+    "de": "Datenfarbe",
+    "en": "Data color"
+  },
+  "map.colorGreen": {
+    "lv": "Zaļa",
+    "de": "Grün",
+    "en": "Green"
+  },
+  "map.colorBlue": {
+    "lv": "Zila",
+    "de": "Blau",
+    "en": "Blue"
+  },
+  "map.colorYellow": {
+    "lv": "Dzeltena",
+    "de": "Gelb",
+    "en": "Yellow"
+  },
+  "map.pointStyle": {
+    "lv": "Punktu attēlojums",
+    "de": "Punktdarstellung",
+    "en": "Point display"
+  },
+  "map.pointStyleRays": {
+    "lv": "Stari",
+    "de": "Strahlen",
+    "en": "Rays"
+  },
+  "map.pointStyleBubbles": {
+    "lv": "Burbuļi",
+    "de": "Blasen",
+    "en": "Bubbles"
+  },
+  "map.rayLegend": {
+    "lv": "Viens stars = viena teika",
+    "de": "Ein Strahl = eine Sage",
+    "en": "One ray = one legend"
+  },
+  "map.rayExplanation": {
+    "lv": "Centra punkts = vieta; katrs stars ved uz vienu teiku.",
+    "de": "Mittelpunkt = Ort; jeder Strahl führt zu einer Sage.",
+    "en": "Center point = place; each ray leads to one legend."
+  },
+  "map.bubbleLegend": {
+    "lv": "Viens burbulis = viena teika",
+    "de": "Eine Blase = eine Sage",
+    "en": "One bubble = one legend"
+  },
+  "map.bubbleExplanation": {
+    "lv": "Centra burbulis = vieta; mazais burbulis un stars = teika.",
+    "de": "Zentrale Blase = Ort; kleine Blase und Strahl = Sage.",
+    "en": "Center bubble = place; small bubble and ray = legend."
+  },
   "map.geography": {
     "lv": "Ģeogrāfiskais fons",
     "de": "Geografischer Hintergrund",
@@ -1080,31 +1124,131 @@
     "de": "Äußerer Kreis = Ort; Ring = Sage; die Linie verbindet die Sage mit der Ortskoordinate.",
     "en": "Outer circle = place; ring = legend; a line ties the legend to the place coordinate."
   },
-  "map.pointPlaceCollection": { "lv": "Teiku kopa", "de": "Sagenbestand", "en": "Legend collection" },
-  "map.colorBy": { "lv": "Krāsot pēc", "de": "Färben nach", "en": "Color by" },
-  "map.colorByTheme": { "lv": "Tēmas", "de": "Thema", "en": "Theme" },
-  "map.colorBySingle": { "lv": "Vienā krāsā", "de": "Einfarbig", "en": "Single colour" },
-  "map.pointIntensity": { "lv": "Krāsu intensitāte", "de": "Farbintensität", "en": "Colour intensity" },
-  "map.colorByNarrator": { "lv": "Teicēja", "de": "Erzähler", "en": "Narrator" },
-  "map.colorByCollector": { "lv": "Pierakstītāja", "de": "Sammler", "en": "Collector" },
-  "map.placeThemeCount": { "lv": "Tēmas", "de": "Themen", "en": "Themes" },
-  "map.placeTopThemes": { "lv": "Populārākās tēmas", "de": "Häufigste Themen", "en": "Most frequent themes" },
-  "map.openLegendBrowser": { "lv": "Atvērt teiku pārlūkā", "de": "Im Sagenbrowser öffnen", "en": "Open in legend browser" },
-  "map.pointStatus": { "lv": "{mapped} kartētas teikas · {unmapped} bez koordinātām", "de": "{mapped} kartierte Sagen · {unmapped} ohne Koordinaten", "en": "{mapped} mapped legends · {unmapped} without coordinates" },
-  "map.onlyUnknownNarrators": { "lv": "Tikai nezināmie teicēji", "de": "Nur unbekannte Erzählende", "en": "Only unknown narrators" },
-  "map.onlyUnknownCollectors": { "lv": "Tikai nezināmie pierakstītāji", "de": "Nur unbekannte Aufzeichnende", "en": "Only unknown collectors" },
-  "map.onlyUnknown.narrator": { "lv": "Tikai nezināmie", "de": "Nur unbekannte", "en": "Unknown only" },
-  "map.onlyUnknown.collector": { "lv": "Tikai nezināmie", "de": "Nur unbekannte", "en": "Unknown only" },
-  "map.selectAll": { "lv": "Atzīmēt visus", "de": "Alle auswählen", "en": "Select all" },
-  "map.searchVolumes": { "lv": "Meklēt sējumu", "de": "Band suchen", "en": "Search volumes" },
-  "map.clearAll": { "lv": "Noņemt visus", "de": "Alle abwählen", "en": "Clear all" },
-  "map.unknownPerson": { "lv": "Nezināms", "de": "Unbekannt", "en": "Unknown" },
-  "map.unknownNarrators": { "lv": "Nezināmie teicēji", "de": "Unbekannte Erzählende", "en": "Unknown narrators" },
-  "map.unknownCollectors": { "lv": "Nezināmie pierakstītāji", "de": "Unbekannte Aufzeichnende", "en": "Unknown collectors" },
-  "map.noNarrators": { "lv": "Nav atlasītu teicēju", "de": "Keine Erzählenden ausgewählt", "en": "No narrators selected" },
-  "map.noCollectors": { "lv": "Nav atlasītu pierakstītāju", "de": "Keine Aufzeichnenden ausgewählt", "en": "No collectors selected" },
-  "map.dispersedPointExplanation": { "lv": "Teiku gredzeni ir vizuāli izkārtoti vietas medaljonā ap avotā norādīto koordinātu; to novietojums medaljonā nav precīza izcelsmes vieta.", "de": "Die Sagenringe sind im Ortsmedaillon um die in der Quelle genannte Koordinate angeordnet; ihre Position im Medaillon ist kein genauer Herkunftsort.", "en": "Legend rings are arranged inside the place medallion around the coordinate recorded in the source; their position inside it is not a precise place of origin." },
-  "map.showingPointRecords": { "lv": "Parādītas {shown} no {total} teikām.", "de": "{shown} von {total} Sagen werden angezeigt.", "en": "Showing {shown} of {total} legends." },
+  "map.pointPlaceCollection": {
+    "lv": "Teiku kopa",
+    "de": "Sagenbestand",
+    "en": "Legend collection"
+  },
+  "map.colorBy": {
+    "lv": "Krāsot pēc",
+    "de": "Färben nach",
+    "en": "Color by"
+  },
+  "map.colorByTheme": {
+    "lv": "Tēmas",
+    "de": "Thema",
+    "en": "Theme"
+  },
+  "map.colorBySingle": {
+    "lv": "Vienā krāsā",
+    "de": "Einfarbig",
+    "en": "Single colour"
+  },
+  "map.pointIntensity": {
+    "lv": "Krāsu intensitāte",
+    "de": "Farbintensität",
+    "en": "Colour intensity"
+  },
+  "map.colorByNarrator": {
+    "lv": "Teicēja",
+    "de": "Erzähler",
+    "en": "Narrator"
+  },
+  "map.colorByCollector": {
+    "lv": "Pierakstītāja",
+    "de": "Sammler",
+    "en": "Collector"
+  },
+  "map.placeThemeCount": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "map.placeTopThemes": {
+    "lv": "Populārākās tēmas",
+    "de": "Häufigste Themen",
+    "en": "Most frequent themes"
+  },
+  "map.openLegendBrowser": {
+    "lv": "Atvērt teiku pārlūkā",
+    "de": "Im Sagenbrowser öffnen",
+    "en": "Open in legend browser"
+  },
+  "map.pointStatus": {
+    "lv": "{mapped} kartētas teikas · {unmapped} bez koordinātām",
+    "de": "{mapped} kartierte Sagen · {unmapped} ohne Koordinaten",
+    "en": "{mapped} mapped legends · {unmapped} without coordinates"
+  },
+  "map.onlyUnknownNarrators": {
+    "lv": "Tikai nezināmie teicēji",
+    "de": "Nur unbekannte Erzählende",
+    "en": "Only unknown narrators"
+  },
+  "map.onlyUnknownCollectors": {
+    "lv": "Tikai nezināmie pierakstītāji",
+    "de": "Nur unbekannte Aufzeichnende",
+    "en": "Only unknown collectors"
+  },
+  "map.onlyUnknown.narrator": {
+    "lv": "Tikai nezināmie",
+    "de": "Nur unbekannte",
+    "en": "Unknown only"
+  },
+  "map.onlyUnknown.collector": {
+    "lv": "Tikai nezināmie",
+    "de": "Nur unbekannte",
+    "en": "Unknown only"
+  },
+  "map.selectAll": {
+    "lv": "Atzīmēt visus",
+    "de": "Alle auswählen",
+    "en": "Select all"
+  },
+  "map.searchVolumes": {
+    "lv": "Meklēt sējumu",
+    "de": "Band suchen",
+    "en": "Search volumes"
+  },
+  "map.clearAll": {
+    "lv": "Noņemt visus",
+    "de": "Alle abwählen",
+    "en": "Clear all"
+  },
+  "map.unknownPerson": {
+    "lv": "Nezināms",
+    "de": "Unbekannt",
+    "en": "Unknown"
+  },
+  "map.unknownNarrators": {
+    "lv": "Nezināmie teicēji",
+    "de": "Unbekannte Erzählende",
+    "en": "Unknown narrators"
+  },
+  "map.unknownCollectors": {
+    "lv": "Nezināmie pierakstītāji",
+    "de": "Unbekannte Aufzeichnende",
+    "en": "Unknown collectors"
+  },
+  "map.noNarrators": {
+    "lv": "Nav atlasītu teicēju",
+    "de": "Keine Erzählenden ausgewählt",
+    "en": "No narrators selected"
+  },
+  "map.noCollectors": {
+    "lv": "Nav atlasītu pierakstītāju",
+    "de": "Keine Aufzeichnenden ausgewählt",
+    "en": "No collectors selected"
+  },
+  "map.dispersedPointExplanation": {
+    "lv": "Teiku gredzeni ir vizuāli izkārtoti vietas medaljonā ap avotā norādīto koordinātu; to novietojums medaljonā nav precīza izcelsmes vieta.",
+    "de": "Die Sagenringe sind im Ortsmedaillon um die in der Quelle genannte Koordinate angeordnet; ihre Position im Medaillon ist kein genauer Herkunftsort.",
+    "en": "Legend rings are arranged inside the place medallion around the coordinate recorded in the source; their position inside it is not a precise place of origin."
+  },
+  "map.showingPointRecords": {
+    "lv": "Parādītas {shown} no {total} teikām.",
+    "de": "{shown} von {total} Sagen werden angezeigt.",
+    "en": "Showing {shown} of {total} legends."
+  },
   "map.legendRecord": {
     "lv": "Teika",
     "de": "Sage",
@@ -1450,56 +1594,236 @@
     "de": "Satellit — Zugang erforderlich",
     "en": "Satellite — access required"
   },
-  "map.networkSimilarity": { "lv": "Tematu līdzība", "de": "Ähnlichkeit der Themen", "en": "Theme similarity" },
-  "map.networkCollectorGeography": { "lv": "Pierakstītāju ģeogrāfija", "de": "Geografie der Sammler", "en": "Collector geography" },
-  "map.networkPlotPlaces": { "lv": "Temats un vietas", "de": "Thema und Orte", "en": "Theme and places" },
-  "map.networkNarratorCollectors": { "lv": "Teicēji un pierakstītāji", "de": "Erzähler und Sammler", "en": "Narrators and collectors" },
-  "map.networkSources": { "lv": "Avotu saiknes", "de": "Quellenbeziehungen", "en": "Source relationships" },
-  "map.networkDensity": { "lv": "Saikņu blīvums", "de": "Beziehungsdichte", "en": "Relationship density" },
-  "map.networkLess": { "lv": "Mazāk", "de": "Weniger", "en": "Fewer" },
-  "map.networkMore": { "lv": "Vairāk", "de": "Mehr", "en": "More" },
-  "map.networkColorBy": { "lv": "Krāsot pēc", "de": "Färben nach", "en": "Color by" },
-  "map.networkColorTheme": { "lv": "Dominējošās tēmas", "de": "Dominantem Thema", "en": "Dominant theme" },
-  "map.networkColorCount": { "lv": "Teiku skaita", "de": "Anzahl der Sagen", "en": "Legend count" },
-  "map.networkColorRegion": { "lv": "Reģiona", "de": "Region", "en": "Region" },
-  "map.networkColorSingle": { "lv": "Vienā krāsā", "de": "Eine Farbe", "en": "Single color" },
-  "map.networkFocus": { "lv": "Fokusa režīms", "de": "Fokusmodus", "en": "Focus mode" },
-  "map.networkFocusAll": { "lv": "Viss tīkls", "de": "Gesamtes Netzwerk", "en": "Whole network" },
-  "map.networkFocusRelated": { "lv": "Tikai saistītās vietas", "de": "Nur verbundene Orte", "en": "Connected places only" },
-  "map.comparePlaces": { "lv": "Salīdzināt vietas", "de": "Orte vergleichen", "en": "Compare places" },
-  "map.networkBuiltFrom": { "lv": "Tīklojums veidots no {count} atlasītām teikām", "de": "Netzwerk aus {count} ausgewählten Sagen", "en": "Network built from {count} selected legends" },
+  "map.networkSimilarity": {
+    "lv": "Tematu līdzība",
+    "de": "Ähnlichkeit der Themen",
+    "en": "Theme similarity"
+  },
+  "map.networkCollectorGeography": {
+    "lv": "Pierakstītāju ģeogrāfija",
+    "de": "Geografie der Sammler",
+    "en": "Collector geography"
+  },
+  "map.networkPlotPlaces": {
+    "lv": "Temats un vietas",
+    "de": "Thema und Orte",
+    "en": "Theme and places"
+  },
+  "map.networkNarratorCollectors": {
+    "lv": "Teicēji un pierakstītāji",
+    "de": "Erzähler und Sammler",
+    "en": "Narrators and collectors"
+  },
+  "map.networkSources": {
+    "lv": "Avotu saiknes",
+    "de": "Quellenbeziehungen",
+    "en": "Source relationships"
+  },
+  "map.networkDensity": {
+    "lv": "Saikņu blīvums",
+    "de": "Beziehungsdichte",
+    "en": "Relationship density"
+  },
+  "map.networkLess": {
+    "lv": "Mazāk",
+    "de": "Weniger",
+    "en": "Fewer"
+  },
+  "map.networkMore": {
+    "lv": "Vairāk",
+    "de": "Mehr",
+    "en": "More"
+  },
+  "map.networkColorBy": {
+    "lv": "Krāsot pēc",
+    "de": "Färben nach",
+    "en": "Color by"
+  },
+  "map.networkColorTheme": {
+    "lv": "Dominējošās tēmas",
+    "de": "Dominantem Thema",
+    "en": "Dominant theme"
+  },
+  "map.networkColorCount": {
+    "lv": "Teiku skaita",
+    "de": "Anzahl der Sagen",
+    "en": "Legend count"
+  },
+  "map.networkColorRegion": {
+    "lv": "Reģiona",
+    "de": "Region",
+    "en": "Region"
+  },
+  "map.networkColorSingle": {
+    "lv": "Vienā krāsā",
+    "de": "Eine Farbe",
+    "en": "Single color"
+  },
+  "map.networkFocus": {
+    "lv": "Fokusa režīms",
+    "de": "Fokusmodus",
+    "en": "Focus mode"
+  },
+  "map.networkFocusAll": {
+    "lv": "Viss tīkls",
+    "de": "Gesamtes Netzwerk",
+    "en": "Whole network"
+  },
+  "map.networkFocusRelated": {
+    "lv": "Tikai saistītās vietas",
+    "de": "Nur verbundene Orte",
+    "en": "Connected places only"
+  },
+  "map.comparePlaces": {
+    "lv": "Salīdzināt vietas",
+    "de": "Orte vergleichen",
+    "en": "Compare places"
+  },
+  "map.networkBuiltFrom": {
+    "lv": "Tīklojums veidots no {count} atlasītām teikām",
+    "de": "Netzwerk aus {count} ausgewählten Sagen",
+    "en": "Network built from {count} selected legends"
+  },
   "map.networkStatus": {
     "lv": "{legends} teikas · {places} vietas · {edges} saiknes",
     "de": "{legends} Sagen · {places} Orte · {edges} Verbindungen",
     "en": "{legends} legends · {places} nodes · {edges} relationships"
   },
-  "map.networkNodeSize": { "lv": "Lielāks mezgls = vairāk teiku", "de": "Größerer Knoten = mehr Sagen", "en": "Larger node = more legends" },
-  "map.networkEdgeStrength": { "lv": "Biezāka saikne = lielāka līdzība", "de": "Stärkere Linie = größere Ähnlichkeit", "en": "Thicker line = greater similarity" },
-  "map.networkMethodAction": { "lv": "Kā tiek aprēķināta līdzība?", "de": "Wie wird Ähnlichkeit berechnet?", "en": "How is similarity calculated?" },
-  "map.networkMethodTitle": { "lv": "Vietu tematiskā līdzība", "de": "Thematische Ähnlichkeit der Orte", "en": "Theme similarity between places" },
-  "map.networkMethodExplanation": { "lv": "Vietu līdzība tiek aprēķināta pēc tajās sastopamo teiku tematu kopuma un to biežuma. Retāk sastopamiem kopīgiem tematiem ir lielāka nozīme nekā ļoti izplatītiem tematiem.", "de": "Die Ähnlichkeit von Orten wird anhand der dort belegten Themen und ihrer Häufigkeit berechnet. Seltenere gemeinsame Themen erhalten mehr Gewicht als sehr verbreitete.", "en": "Place similarity is calculated from the legend themes found there and their frequency. Rarer shared themes carry more weight than very common themes." },
-  "map.networkMethodDetails": { "lv": "Tīklā iekļauj vietas ar vismaz piecām atlasītām teikām. Saiknei vajadzīgi vismaz divi kopīgi temati; tiek paturētas tikai katras vietas stiprākās saiknes.", "de": "Einbezogen werden Orte mit mindestens fünf ausgewählten Sagen. Eine Beziehung benötigt mindestens zwei gemeinsame Themen; nur die stärksten Beziehungen jedes Ortes bleiben sichtbar.", "en": "The network includes places with at least five selected legends. A relationship requires at least two shared themes, and only each place’s strongest relationships remain visible." },
-  "map.networkPlace": { "lv": "Vietas repertuārs", "de": "Ortsrepertoire", "en": "Place repertoire" },
-  "map.networkLegendCount": { "lv": "{count} teikas", "de": "{count} Sagen", "en": "{count} legends" },
-  "map.networkPlotCount": { "lv": "{count} temati", "de": "{count} Themen", "en": "{count} themes" },
-  "map.networkRelatedCount": { "lv": "{count} saistītas vietas", "de": "{count} verbundene Orte", "en": "{count} connected places" },
-  "map.dominantThemes": { "lv": "Dominējošās tēmas", "de": "Dominante Themen", "en": "Dominant themes" },
-  "map.networkTopPlots": { "lv": "Biežākie temati", "de": "Häufigste Themen", "en": "Most frequent themes" },
-  "map.networkMostSimilar": { "lv": "Vislīdzīgākās vietas", "de": "Ähnlichste Orte", "en": "Most similar places" },
-  "map.openPlaceLegends": { "lv": "Skatīt šīs vietas teikas", "de": "Sagen dieses Ortes ansehen", "en": "View this place’s legends" },
-  "map.compareWithPlace": { "lv": "Salīdzināt ar citu vietu", "de": "Mit einem anderen Ort vergleichen", "en": "Compare with another place" },
-  "map.plotSimilarity": { "lv": "Tematiskā līdzība", "de": "Ähnlichkeit der Themen", "en": "Theme similarity" },
-  "map.similarity": { "lv": "Līdzība", "de": "Ähnlichkeit", "en": "Similarity" },
-  "map.sharedPlots": { "lv": "Kopīgi temati", "de": "Gemeinsame Themen", "en": "Shared themes" },
-  "map.strongestMatches": { "lv": "Spēcīgākās sakritības", "de": "Stärkste Übereinstimmungen", "en": "Strongest matches" },
-  "map.compareBothPlaces": { "lv": "Salīdzināt abu vietu teikas", "de": "Sagen beider Orte vergleichen", "en": "Compare both places’ legends" },
-  "map.networkComparison": { "lv": "Repertuāru salīdzinājums", "de": "Repertoirevergleich", "en": "Repertoire comparison" },
-  "map.firstPlace": { "lv": "1. vieta", "de": "1. Ort", "en": "First place" },
-  "map.secondPlace": { "lv": "2. vieta", "de": "2. Ort", "en": "Second place" },
-  "map.chooseSecondPlace": { "lv": "Izvēlieties otru vietu salīdzinājumam.", "de": "Wählen Sie einen zweiten Ort für den Vergleich.", "en": "Choose a second place to compare." },
-  "map.onlyIn": { "lv": "Tikai — {place}", "de": "Nur in {place}", "en": "Only in {place}" },
-  "map.shared": { "lv": "Kopīgais", "de": "Gemeinsam", "en": "Shared" },
-  "map.openComparisonLegends": { "lv": "Atvērt salīdzinājuma teikas", "de": "Sagen des Vergleichs öffnen", "en": "Open comparison legends" },
+  "map.networkNodeSize": {
+    "lv": "Lielāks mezgls = vairāk teiku",
+    "de": "Größerer Knoten = mehr Sagen",
+    "en": "Larger node = more legends"
+  },
+  "map.networkEdgeStrength": {
+    "lv": "Biezāka saikne = lielāka līdzība",
+    "de": "Stärkere Linie = größere Ähnlichkeit",
+    "en": "Thicker line = greater similarity"
+  },
+  "map.networkMethodAction": {
+    "lv": "Kā tiek aprēķināta līdzība?",
+    "de": "Wie wird Ähnlichkeit berechnet?",
+    "en": "How is similarity calculated?"
+  },
+  "map.networkMethodTitle": {
+    "lv": "Vietu tematiskā līdzība",
+    "de": "Thematische Ähnlichkeit der Orte",
+    "en": "Theme similarity between places"
+  },
+  "map.networkMethodExplanation": {
+    "lv": "Vietu līdzība tiek aprēķināta pēc tajās sastopamo teiku tematu kopuma un to biežuma. Retāk sastopamiem kopīgiem tematiem ir lielāka nozīme nekā ļoti izplatītiem tematiem.",
+    "de": "Die Ähnlichkeit von Orten wird anhand der dort belegten Themen und ihrer Häufigkeit berechnet. Seltenere gemeinsame Themen erhalten mehr Gewicht als sehr verbreitete.",
+    "en": "Place similarity is calculated from the legend themes found there and their frequency. Rarer shared themes carry more weight than very common themes."
+  },
+  "map.networkMethodDetails": {
+    "lv": "Tīklā iekļauj vietas ar vismaz piecām atlasītām teikām. Saiknei vajadzīgi vismaz divi kopīgi temati; tiek paturētas tikai katras vietas stiprākās saiknes.",
+    "de": "Einbezogen werden Orte mit mindestens fünf ausgewählten Sagen. Eine Beziehung benötigt mindestens zwei gemeinsame Themen; nur die stärksten Beziehungen jedes Ortes bleiben sichtbar.",
+    "en": "The network includes places with at least five selected legends. A relationship requires at least two shared themes, and only each place’s strongest relationships remain visible."
+  },
+  "map.networkPlace": {
+    "lv": "Vietas repertuārs",
+    "de": "Ortsrepertoire",
+    "en": "Place repertoire"
+  },
+  "map.networkLegendCount": {
+    "lv": "{count} teikas",
+    "de": "{count} Sagen",
+    "en": "{count} legends"
+  },
+  "map.networkPlotCount": {
+    "lv": "{count} temati",
+    "de": "{count} Themen",
+    "en": "{count} themes"
+  },
+  "map.networkRelatedCount": {
+    "lv": "{count} saistītas vietas",
+    "de": "{count} verbundene Orte",
+    "en": "{count} connected places"
+  },
+  "map.dominantThemes": {
+    "lv": "Dominējošās tēmas",
+    "de": "Dominante Themen",
+    "en": "Dominant themes"
+  },
+  "map.networkTopPlots": {
+    "lv": "Biežākie temati",
+    "de": "Häufigste Themen",
+    "en": "Most frequent themes"
+  },
+  "map.networkMostSimilar": {
+    "lv": "Vislīdzīgākās vietas",
+    "de": "Ähnlichste Orte",
+    "en": "Most similar places"
+  },
+  "map.openPlaceLegends": {
+    "lv": "Skatīt šīs vietas teikas",
+    "de": "Sagen dieses Ortes ansehen",
+    "en": "View this place’s legends"
+  },
+  "map.compareWithPlace": {
+    "lv": "Salīdzināt ar citu vietu",
+    "de": "Mit einem anderen Ort vergleichen",
+    "en": "Compare with another place"
+  },
+  "map.plotSimilarity": {
+    "lv": "Tematiskā līdzība",
+    "de": "Ähnlichkeit der Themen",
+    "en": "Theme similarity"
+  },
+  "map.similarity": {
+    "lv": "Līdzība",
+    "de": "Ähnlichkeit",
+    "en": "Similarity"
+  },
+  "map.sharedPlots": {
+    "lv": "Kopīgi temati",
+    "de": "Gemeinsame Themen",
+    "en": "Shared themes"
+  },
+  "map.strongestMatches": {
+    "lv": "Spēcīgākās sakritības",
+    "de": "Stärkste Übereinstimmungen",
+    "en": "Strongest matches"
+  },
+  "map.compareBothPlaces": {
+    "lv": "Salīdzināt abu vietu teikas",
+    "de": "Sagen beider Orte vergleichen",
+    "en": "Compare both places’ legends"
+  },
+  "map.networkComparison": {
+    "lv": "Repertuāru salīdzinājums",
+    "de": "Repertoirevergleich",
+    "en": "Repertoire comparison"
+  },
+  "map.firstPlace": {
+    "lv": "1. vieta",
+    "de": "1. Ort",
+    "en": "First place"
+  },
+  "map.secondPlace": {
+    "lv": "2. vieta",
+    "de": "2. Ort",
+    "en": "Second place"
+  },
+  "map.chooseSecondPlace": {
+    "lv": "Izvēlieties otru vietu salīdzinājumam.",
+    "de": "Wählen Sie einen zweiten Ort für den Vergleich.",
+    "en": "Choose a second place to compare."
+  },
+  "map.onlyIn": {
+    "lv": "Tikai — {place}",
+    "de": "Nur in {place}",
+    "en": "Only in {place}"
+  },
+  "map.shared": {
+    "lv": "Kopīgais",
+    "de": "Gemeinsam",
+    "en": "Shared"
+  },
+  "map.openComparisonLegends": {
+    "lv": "Atvērt salīdzinājuma teikas",
+    "de": "Sagen des Vergleichs öffnen",
+    "en": "Open comparison legends"
+  },
   "map.networkSettings": {
     "lv": "Tīkla iestatījumi",
     "de": "Netzwerkeinstellungen",
@@ -2360,7 +2684,11 @@
     "de": "Gefundene Sagen: {count}. Kapitel: {chapters}.",
     "en": "Matching legends: {count}. Chapters: {chapters}."
   },
-  "themes.record": {"lv":"teika","de":"Sage","en":"legend"},
+  "themes.record": {
+    "lv": "teika",
+    "de": "Sage",
+    "en": "legend"
+  },
   "themes.searchNamesLabel": {
     "lv": "Meklēt nodaļu un apakšnodaļu nosaukumos",
     "de": "Kapitel- und Unterkapiteltitel durchsuchen",
@@ -2375,5 +2703,475 @@
     "lv": "Meklēt arī teiku tekstos un metadatos",
     "de": "Auch Sagentexte und Metadaten durchsuchen",
     "en": "Also search legend texts and metadata"
+  },
+  "persons.filters": {
+    "lv": "Tēmas, vietas un papildu atlase",
+    "de": "Themen, Orte und weitere Filter",
+    "en": "Themes, places and more filters"
+  },
+  "persons.eyebrow": {
+    "lv": "Cilvēki aiz teikām",
+    "de": "Menschen hinter den Sagen",
+    "en": "People behind the legends"
+  },
+  "persons.title": {
+    "lv": "Teicēji un pierakstītāji",
+    "de": "Erzähler und Sammler",
+    "en": "Narrators and collectors"
+  },
+  "persons.intro": {
+    "lv": "Iepazīstiet cilvēkus, kuri stāstījuši un pierakstījuši šajā krājumā publicētās teikas. Atrodiet viņu tekstus un izpētiet saistītās tēmas, vietas un cilvēkus.",
+    "de": "Entdecken Sie die Menschen, die die Sagen dieser Sammlung erzählt und aufgezeichnet haben. Lesen Sie ihre Texte und erkunden Sie verbundene Themen, Orte und Personen.",
+    "en": "Discover the people who told and recorded the legends in this collection. Read their texts and explore connected themes, places and people."
+  },
+  "persons.narrators": {
+    "lv": "Teicēji",
+    "de": "Erzähler",
+    "en": "Narrators"
+  },
+  "persons.collectors": {
+    "lv": "Pierakstītāji",
+    "de": "Sammler",
+    "en": "Collectors"
+  },
+  "persons.narratorHelp": {
+    "lv": "Cilvēki, no kuriem teikas pierakstītas.",
+    "de": "Personen, von denen Sagen aufgezeichnet wurden.",
+    "en": "People from whom legends were recorded."
+  },
+  "persons.collectorHelp": {
+    "lv": "Cilvēki, kuru pieraksti iekļauti krājumā.",
+    "de": "Personen, deren Aufzeichnungen in der Sammlung enthalten sind.",
+    "en": "People whose recordings appear in the collection."
+  },
+  "persons.search": {
+    "lv": "Meklēt personu",
+    "de": "Person suchen",
+    "en": "Search for a person"
+  },
+  "persons.all": {
+    "lv": "Visi",
+    "de": "Alle",
+    "en": "All"
+  },
+  "persons.role": {
+    "lv": "Personas loma",
+    "de": "Rolle der Person",
+    "en": "Person’s role"
+  },
+  "persons.theme": {
+    "lv": "Tēma",
+    "de": "Thema",
+    "en": "Theme"
+  },
+  "persons.place": {
+    "lv": "Vietas",
+    "de": "Orte",
+    "en": "Places"
+  },
+  "persons.sort": {
+    "lv": "Kārtot",
+    "de": "Sortieren",
+    "en": "Sort"
+  },
+  "persons.byName": {
+    "lv": "Pēc vārda A–Z",
+    "de": "Name A–Z",
+    "en": "Name A–Z"
+  },
+  "persons.byNameDesc": {
+    "lv": "Pēc vārda Z–A",
+    "de": "Name Z–A",
+    "en": "Name Z–A"
+  },
+  "persons.byCountAsc": {
+    "lv": "Teiku skaits: mazāk → vairāk",
+    "de": "Sagen: aufsteigend",
+    "en": "Legends: fewest first"
+  },
+  "persons.byCount": {
+    "lv": "Teiku skaits: vairāk → mazāk",
+    "de": "Sagen: absteigend",
+    "en": "Legends: most first"
+  },
+  "persons.advanced": {
+    "lv": "Papildu atlase",
+    "de": "Weitere Filter",
+    "en": "More filters"
+  },
+  "persons.gender": {
+    "lv": "Dzimums",
+    "de": "Geschlecht",
+    "en": "Gender"
+  },
+  "persons.female": {
+    "lv": "Sieviete",
+    "de": "Frau",
+    "en": "Woman"
+  },
+  "persons.male": {
+    "lv": "Vīrietis",
+    "de": "Mann",
+    "en": "Man"
+  },
+  "persons.unknown": {
+    "lv": "Nav norādīts",
+    "de": "Nicht angegeben",
+    "en": "Not recorded"
+  },
+  "persons.minimum": {
+    "lv": "Vismaz tik teiku krājumā",
+    "de": "Mindestanzahl der Sagen in der Sammlung",
+    "en": "Minimum legends in the collection"
+  },
+  "persons.savedOnly": {
+    "lv": "Tikai piespraustās personas",
+    "de": "Nur angeheftete Personen",
+    "en": "Pinned people only"
+  },
+  "persons.placeNote": {
+    "lv": "Vietas raksturo teiku ierakstus; tās neapliecina personas dzīvesvietu.",
+    "de": "Die Orte beziehen sich auf Sageneinträge; sie belegen keinen Wohnort der Person.",
+    "en": "Places describe legend records; they do not establish where a person lived."
+  },
+  "persons.reset": {
+    "lv": "Notīrīt filtrus",
+    "de": "Filter zurücksetzen",
+    "en": "Clear filters"
+  },
+  "persons.copyLink": {
+    "lv": "Kopēt atlases saiti",
+    "de": "Auswahllink kopieren",
+    "en": "Copy selection link"
+  },
+  "persons.export": {
+    "lv": "Lejupielādēt CSV",
+    "de": "CSV herunterladen",
+    "en": "Download CSV"
+  },
+  "persons.view": {
+    "lv": "Rezultātu skats",
+    "de": "Ergebnisansicht",
+    "en": "Results view"
+  },
+  "persons.list": {
+    "lv": "Saraksts",
+    "de": "Liste",
+    "en": "List"
+  },
+  "persons.table": {
+    "lv": "Tabula",
+    "de": "Tabelle",
+    "en": "Table"
+  },
+  "persons.allThemes": {
+    "lv": "Visas tēmas",
+    "de": "Alle Themen",
+    "en": "All themes"
+  },
+  "persons.allPlaces": {
+    "lv": "Visas vietas",
+    "de": "Alle Orte",
+    "en": "All places"
+  },
+  "persons.narrator": {
+    "lv": "Teicējs",
+    "de": "Erzähler",
+    "en": "Narrator"
+  },
+  "persons.collector": {
+    "lv": "Pierakstītājs",
+    "de": "Sammler",
+    "en": "Collector"
+  },
+  "persons.narratorF": {
+    "lv": "Teicēja",
+    "de": "Erzählerin",
+    "en": "Narrator"
+  },
+  "persons.collectorF": {
+    "lv": "Pierakstītāja",
+    "de": "Sammlerin",
+    "en": "Collector"
+  },
+  "persons.legends": {
+    "lv": "teikas",
+    "de": "Sagen",
+    "en": "legends"
+  },
+  "persons.read": {
+    "lv": "Lasīt teikas",
+    "de": "Sagen lesen",
+    "en": "Read legends"
+  },
+  "persons.save": {
+    "lv": "Piespraust",
+    "de": "Anheften",
+    "en": "Pin"
+  },
+  "persons.saved": {
+    "lv": "Piesprausts",
+    "de": "Angeheftet",
+    "en": "Pinned"
+  },
+  "persons.unpin": {
+    "lv": "Noņemt piespraudi",
+    "de": "Loslösen",
+    "en": "Unpin"
+  },
+  "persons.more": {
+    "lv": "Tēmas, saiknes un teiku fragmenti",
+    "de": "Themen, Verbindungen und Textauszüge",
+    "en": "Themes, connections and excerpts"
+  },
+  "persons.themes": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "persons.places": {
+    "lv": "Tekstiem piesaistītās vietas",
+    "de": "Mit den Texten verbundene Orte",
+    "en": "Places associated with the texts"
+  },
+  "persons.peersCollector": {
+    "lv": "Saistītie pierakstītāji",
+    "de": "Verbundene Sammler",
+    "en": "Connected collectors"
+  },
+  "persons.peersNarrator": {
+    "lv": "Saistītie teicēji",
+    "de": "Verbundene Erzähler",
+    "en": "Connected narrators"
+  },
+  "persons.preview": {
+    "lv": "Ieskatieties teikās",
+    "de": "Einblick in die Sagen",
+    "en": "Explore the legends"
+  },
+  "persons.map": {
+    "lv": "Skatīt kartē",
+    "de": "Auf der Karte ansehen",
+    "en": "View on map"
+  },
+  "persons.network": {
+    "lv": "Izpētīt saikņu tīklu",
+    "de": "Beziehungsnetz erkunden",
+    "en": "Explore the relationship network"
+  },
+  "persons.overview": {
+    "lv": "Datu pārskats",
+    "de": "Datenübersicht",
+    "en": "Data overview"
+  },
+  "persons.source": {
+    "lv": "Avota ieraksts",
+    "de": "Quelldatensatz",
+    "en": "Source record"
+  },
+  "persons.notes": {
+    "lv": "Piezīmes",
+    "de": "Anmerkungen",
+    "en": "Notes"
+  },
+  "persons.identity": {
+    "lv": "Krājumā ir arī citi ieraksti ar šādu vārdu. Vārda sakritība neapliecina, ka tā ir viena persona.",
+    "de": "In der Sammlung gibt es weitere Einträge mit diesem Namen. Gleiche Namen belegen nicht, dass es sich um dieselbe Person handelt.",
+    "en": "Other records in the collection have this name. Matching names do not establish that they refer to the same person."
+  },
+  "persons.otherEntries": {
+    "lv": "Skatīt vienāda vārda ierakstus",
+    "de": "Einträge mit diesem Namen ansehen",
+    "en": "View records with this name"
+  },
+  "persons.empty": {
+    "lv": "Neviena persona neatbilst atlasei.",
+    "de": "Keine Person entspricht Ihrer Auswahl.",
+    "en": "No people match your selection."
+  },
+  "persons.adjust": {
+    "lv": "Mainiet meklējamo vārdu vai filtrus.",
+    "de": "Ändern Sie den Namen oder die Filter.",
+    "en": "Change the name or filters."
+  },
+  "persons.previous": {
+    "lv": "Iepriekšējā",
+    "de": "Zurück",
+    "en": "Previous"
+  },
+  "persons.next": {
+    "lv": "Nākamā",
+    "de": "Weiter",
+    "en": "Next"
+  },
+  "persons.page": {
+    "lv": "Lapa",
+    "de": "Seite",
+    "en": "Page"
+  },
+  "persons.of": {
+    "lv": "no",
+    "de": "von",
+    "en": "of"
+  },
+  "persons.people": {
+    "lv": "personu ieraksti",
+    "de": "Personeneinträge",
+    "en": "person records"
+  },
+  "persons.matched": {
+    "lv": "atbilst tēmas un vietas atlasei",
+    "de": "entsprechen der Themen- und Ortsauswahl",
+    "en": "match the theme and place filters"
+  },
+  "persons.copied": {
+    "lv": "Atlases saite nokopēta.",
+    "de": "Auswahllink kopiert.",
+    "en": "Selection link copied."
+  },
+  "persons.copyFailed": {
+    "lv": "Saiti neizdevās nokopēt. To var kopēt no pārlūka adreses joslas.",
+    "de": "Der Link konnte nicht kopiert werden. Kopieren Sie ihn aus der Adressleiste.",
+    "en": "The link could not be copied. Copy it from the browser address bar."
+  },
+  "persons.storageFailed": {
+    "lv": "Šajā pārlūkā piespraudes nav iespējams saglabāt.",
+    "de": "Speichern ist in diesem Browser nicht verfügbar.",
+    "en": "Saving is unavailable in this browser."
+  },
+  "persons.name": {
+    "lv": "Vārds",
+    "de": "Name",
+    "en": "Name"
+  },
+  "persons.count": {
+    "lv": "Teiku skaits",
+    "de": "Sagen",
+    "en": "Legends"
+  },
+  "persons.showAll": {
+    "lv": "Rādīt visus",
+    "de": "Alle anzeigen",
+    "en": "Show all"
+  },
+  "persons.missing": {
+    "lv": "Nav norādīts",
+    "de": "Nicht angegeben",
+    "en": "Not recorded"
+  },
+  "persons.unknownCollector": {
+    "lv": "Nezināms pierakstītājs",
+    "de": "Unbekannter Sammler",
+    "en": "Unknown collector"
+  },
+  "persons.unknownNarrator": {
+    "lv": "Nezināms teicējs",
+    "de": "Unbekannter Erzähler",
+    "en": "Unknown narrator"
+  },
+  "persons.filtersTitle": {
+    "lv": "Filtri",
+    "de": "Filter",
+    "en": "Filters"
+  },
+  "persons.back": {
+    "lv": "Atpakaļ",
+    "de": "Zurück",
+    "en": "Back"
+  },
+  "persons.randomOrder": {
+    "lv": "Nejauša secība",
+    "de": "Zufällige Reihenfolge",
+    "en": "Random order"
+  },
+  "persons.randomHint": {
+    "lv": "Personām ar vairāk teikām ir lielāka iespēja parādīties saraksta augšpusē.",
+    "de": "Personen mit mehr Sagen erscheinen mit höherer Wahrscheinlichkeit weiter oben.",
+    "en": "People with more legends have a greater chance of appearing near the top."
+  },
+  "feedback.open": {
+    "lv": "Ziņot par kļūdu vai ieteikt uzlabojumu",
+    "de": "Fehler melden oder Verbesserung vorschlagen",
+    "en": "Report a problem or suggest an improvement"
+  },
+  "feedback.title": {
+    "lv": "Kļūda vai ieteikums",
+    "de": "Fehler oder Vorschlag",
+    "en": "Problem or suggestion"
+  },
+  "feedback.kind": {
+    "lv": "Ziņojuma veids",
+    "de": "Art der Meldung",
+    "en": "Report type"
+  },
+  "feedback.error": {
+    "lv": "Kļūda",
+    "de": "Fehler",
+    "en": "Problem"
+  },
+  "feedback.suggestion": {
+    "lv": "Ieteikums",
+    "de": "Vorschlag",
+    "en": "Suggestion"
+  },
+  "feedback.data": {
+    "lv": "Datu precizējums",
+    "de": "Datenkorrektur",
+    "en": "Data correction"
+  },
+  "feedback.description": {
+    "lv": "Apraksts",
+    "de": "Beschreibung",
+    "en": "Description"
+  },
+  "feedback.page": {
+    "lv": "Lapa, no kuras sūti ziņojumu",
+    "de": "Seite, von der die Meldung gesendet wird",
+    "en": "Page you are reporting from"
+  },
+  "feedback.privacy": {
+    "lv": "E-pastu neprasām. Lapas saite ar pašreizējo atlasi tiks pievienota ziņojumam.",
+    "de": "Wir fragen nicht nach Ihrer E-Mail-Adresse. Der Link zur Seite mit der aktuellen Auswahl wird der Meldung beigefügt.",
+    "en": "We do not ask for your email. The page link, including your current selection, will accompany your report."
+  },
+  "feedback.cancel": {
+    "lv": "Aizvērt",
+    "de": "Schließen",
+    "en": "Close"
+  },
+  "feedback.send": {
+    "lv": "Nosūtīt",
+    "de": "Senden",
+    "en": "Send"
+  },
+  "feedback.sending": {
+    "lv": "Sūta…",
+    "de": "Wird gesendet…",
+    "en": "Sending…"
+  },
+  "feedback.success": {
+    "lv": "Paldies! Ziņojums ir saņemts.",
+    "de": "Vielen Dank! Die Meldung wurde empfangen.",
+    "en": "Thank you! Your report has been received."
+  },
+  "feedback.failed": {
+    "lv": "Neizdevās saņemt apstiprinājumu. Apraksts ir saglabāts formā — mēģini vēlreiz.",
+    "de": "Keine Bestätigung erhalten. Der Text bleibt im Formular. Bitte versuchen Sie es erneut.",
+    "en": "No confirmation received. Your text is still in the form — please try again."
+  },
+  "feedback.unavailable": {
+    "lv": "Ziņojumu nosūtīšana vēl nav pieslēgta.",
+    "de": "Das Senden von Meldungen ist noch nicht eingerichtet.",
+    "en": "Report submission has not been connected yet."
+  },
+  "about.feedbackTitle": {
+    "lv": "Palīdzi uzlabot platformu",
+    "de": "Hilf uns, die Plattform zu verbessern",
+    "en": "Help improve the platform"
+  },
+  "about.feedbackText": {
+    "lv": "Pamanīji kļūdu tekstā, datos vai platformas darbībā? Tev ir ieteikums uzlabojumam? Izmanto ziņojuma ikonu lapas galvenē. Tavas atsauksmes palīdzēs mums pilnveidot platformu. Ziņojumam automātiski pievienosies lapas saite; e-pasts nav jānorāda.",
+    "de": "Hast du einen Fehler im Text, in den Daten oder in der Plattform entdeckt? Oder einen Verbesserungsvorschlag? Nutze das Nachrichtensymbol in der Kopfzeile. Deine Rückmeldungen helfen uns, die Plattform zu verbessern. Der Seitenlink wird automatisch beigefügt; eine E-Mail-Adresse ist nicht erforderlich.",
+    "en": "Found an error in the text, data or platform? Have a suggestion for improvement? Use the message icon in the header. Your feedback will help us improve the platform. The page link is attached automatically; no email address is required."
   }
 }

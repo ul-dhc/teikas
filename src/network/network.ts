@@ -3,7 +3,7 @@ import {layoutNetwork,nodeRadius,cameraPoint,pinchCamera,echoDistances,scatterNe
 import {positionWithMotion,motionAmplitudeScale} from './network-motion.js';
 import {buildRelationships,buildFreeNetwork,freeFields,defaultFreeFields,relationshipSelection,nodeConnectionSizes} from './network-data.js';
 import {UNKNOWN} from './statistics.js';
-import {networkCopy as copy, settingsCopy, extraCopy,nodeSizeCopy} from './copy';
+import {networkCopy as copy, settingsCopy, extraCopy,nodeSizeCopy,networkUnknownCopy} from './copy';
 type NetworkOptions={lang:()=> 'lv'|'de'|'en';types:any[];topics:any[];change:()=>void;sync:()=>void;metadataLabels:Record<string,Record<string,string>>};
 export function createNetwork({lang,types,topics,change,sync,metadataLabels}:NetworkOptions){
  let layout='free',left='county',right='typeId',limit=10000,labels=true,allLabels=false,nodeSize=1,textSize=1,filtersOpen=!matchMedia('(max-width:700px)').matches;
@@ -23,9 +23,9 @@ export function createNetwork({lang,types,topics,change,sync,metadataLabels}:Net
  const esc=(value:unknown)=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
  const fieldLabel=(field:string)=>(tr() as any)[field];
  function label(field:string,value:string){
-  if(value===UNKNOWN)return tr().unknown;
+  if(value===UNKNOWN)return networkUnknownCopy[lang()][field]||`${fieldLabel(field)}: ${tr().unknown}`;
   if(field==='topic'){const topic=topics.find(t=>t.id===value);return topic?.[lang()]||value;}
-  if(field==='typeId'){const type=types.find(t=>t.id===value);return `${type?.code||value} · ${type?.[lang()]||type?.lv||value}`;}
+  if(field==='typeId'){const type=types.find(t=>t.id===value);return type?.[lang()]||type?.lv||value;}
   if(field==='translated')return value==='translated'?(extraCopy[lang()].translated):tr().untranslated;
   return metadataLabels[field]?.[value] || value;
  }

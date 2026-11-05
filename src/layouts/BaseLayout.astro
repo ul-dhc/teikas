@@ -10,6 +10,7 @@ import '../styles/interactions.css';
 import '../styles/palette.css';
 import '../styles/mobile.css';
 import uiTranslations from '../i18n/ui.json';
+import Feedback from '../components/Feedback.astro';
 const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitālā kolekcija', active = '' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
@@ -41,11 +42,13 @@ const base = import.meta.env.BASE_URL;
         <div class="mini-switch" aria-label="Saskarnes valoda"><button type="button" aria-pressed="true" data-ui-lang="lv">LV</button><button type="button" aria-pressed="false" data-ui-lang="de">DE</button><button type="button" aria-pressed="false" data-ui-lang="en">EN</button></div>
         <div class="font-tools" aria-label="Teksta izmērs"><button type="button" data-font-down aria-label="Samazināt burtus"><span aria-hidden="true">A</span><i data-lucide="minus"></i></button><button type="button" data-font-up aria-label="Palielināt burtus"><span aria-hidden="true">A</span><i data-lucide="plus"></i></button></div>
         <button class="icon-control theme-toggle" type="button" data-theme-toggle aria-label="Ieslēgt tumšo režīmu"><i data-theme-icon data-lucide="moon"></i></button>
+        <button class="icon-control" type="button" data-feedback-open aria-label="Ziņot par kļūdu vai ieteikt uzlabojumu" data-tooltip="Ziņot par kļūdu vai ieteikt uzlabojumu" aria-haspopup="dialog" aria-controls="feedback-dialog"><i data-lucide="circle-alert" aria-hidden="true"></i></button>
       </div>
       <button class="mobile-menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Galvenā navigācija"><i data-lucide="menu" aria-hidden="true"></i></button>
       <div id="mobile-menu" class="mobile-menu" hidden></div>
     </header>
     <main id="saturs"><slot /></main>
+    <Feedback />
     <footer class="site-footer"><div class="institution-credit"><a href="https://ul-dhc.github.io/" target="_blank" rel="noopener noreferrer">LU Digitālo humanitāro zinātņu centrs</a><span>, 2026</span></div></footer>
     <script>
       import {attachPlatformTooltips} from '../scripts/tooltips';

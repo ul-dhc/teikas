@@ -1,3 +1,9 @@
+export const networkUnknownCopy:Record<'lv'|'de'|'en',Record<string,string>> = {
+ lv:{county:'Vieta nav norādīta',collector:'Pierakstītājs nezināms',narrator:'Teicējs nezināms',typeId:'Tēma nav norādīta',topic:'Sējums nav norādīts',place:'Avots nav norādīts'},
+ de:{county:'Ort nicht angegeben',collector:'Aufzeichner unbekannt',narrator:'Erzähler unbekannt',typeId:'Thema nicht angegeben',topic:'Band nicht angegeben',place:'Quelle nicht angegeben'},
+ en:{county:'Place not specified',collector:'Collector unknown',narrator:'Narrator unknown',typeId:'Theme not specified',topic:'Volume not specified',place:'Source not specified'},
+};
+
 export const networkCopy = {
   "lv": {
     "overview": "Pārskats",
