@@ -11,7 +11,21 @@ import '../styles/palette.css';
 import '../styles/mobile.css';
 import uiTranslations from '../i18n/ui.json';
 import Feedback from '../components/Feedback.astro';
-const { title = 'Teikas', description = 'Pētera Šmita latviešu teiku digitālā kolekcija', active = '' } = Astro.props;
+import {canonicalUrl, pageMetadata} from '../lib/seo.js';
+const defaults = pageMetadata(Astro.url.pathname);
+const { title = defaults.title, description = defaults.description, active = '', structuredData = null } = Astro.props;
+const canonical = canonicalUrl(Astro.url.pathname);
+const pageTitle = title === 'Teikas' ? 'Latviešu tautas teikas — Pētera Šmita krājums | LU' : `${title} – Teikas`;
+const siteUrl = 'https://dhc.lu.lv/teikas/';
+const schema = {
+  '@context':'https://schema.org',
+  '@graph':[
+    {'@type':'Organization','@id':`${siteUrl}#publisher`,name:'LU Digitālo humanitāro zinātņu centrs',url:'https://dhc.lu.lv/'},
+    {'@type':'WebSite','@id':`${siteUrl}#website`,url:siteUrl,name:'Teikas — Latviešu tautas teikas',inLanguage:['lv','de','en'],publisher:{'@id':`${siteUrl}#publisher`}},
+    {'@type':active === 'home' ? 'CollectionPage' : 'WebPage','@id':`${canonical}#webpage`,url:canonical,name:pageTitle,description,inLanguage:'lv',isPartOf:{'@id':`${siteUrl}#website`},publisher:{'@id':`${siteUrl}#publisher`}},
+    ...(structuredData ? [structuredData] : []),
+  ],
+};
 const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
@@ -22,7 +36,17 @@ const base = import.meta.env.BASE_URL;
     <meta name="description" content={description} />
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <script is:inline>try{const d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('teikas-theme')||'light';d.dataset.contentMode=s.getItem('teikas-content-mode')||'parallel';d.dataset.uiLang=s.getItem('teikas-ui-lang')||'lv';d.style.setProperty('--font-scale',s.getItem('teikas-font-scale')||'1')}catch{}</script>
-    <title>{title === 'Teikas' ? title : `${title} – Teikas`}</title>
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" type="application/xml" href={`${siteUrl}sitemap.xml`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Teikas — Latviešu tautas teikas" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="lv_LV" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schema).replace(/</g,'\\u003c')} />
   </head>
   <body>
     <script type="application/json" id="ui-translations" is:inline set:html={JSON.stringify(uiTranslations).replace(/</g,'\u003c')} />

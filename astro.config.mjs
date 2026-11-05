@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://ul-dhc.github.io',
+  site: 'https://dhc.lu.lv',
   base: '/teikas',
   output: 'static',
   outDir: './build',
