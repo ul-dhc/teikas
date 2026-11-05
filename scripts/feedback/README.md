@@ -11,10 +11,11 @@ the fixed private spreadsheet; it does not expose spreadsheet contents.
 Spreadsheet: https://docs.google.com/spreadsheets/d/1IgdN_Y-OnftFJkTMwNr2PLCvxlqYWhCDtNu03rV_5GQ/edit
 Tab: `Ziņojumi`; columns: timestamp, kind, description, page URL, status, request ID.
 
-After the Google owner authorizes the deployment, set its `/exec` URL as the
-Astro build variable `PUBLIC_FEEDBACK_ENDPOINT` and rebuild. This is a public
-write-only endpoint URL, not a credential. Without it the UI explicitly says
-submission is not connected; it never pretends to have sent a report.
+The owner authorized and deployed version 1 on 5 November 2026. The public
+write-only `/exec` URL is the default in `src/components/Feedback.astro` and can
+be overridden with the Astro build variable `PUBLIC_FEEDBACK_ENDPOINT`.
+This URL is not a credential. A missing or invalid endpoint never produces a
+false success message.
 
 Submission uses a normal POST into a hidden iframe. The receiver acknowledges
 with `postMessage` after a successful sheet write. The client validates the

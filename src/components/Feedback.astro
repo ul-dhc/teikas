@@ -1,6 +1,7 @@
 ---
 import '../styles/feedback.css';
-const endpoint = import.meta.env.PUBLIC_FEEDBACK_ENDPOINT || '';
+// Public write-only service URL; the response never exposes sheet contents.
+const endpoint = import.meta.env.PUBLIC_FEEDBACK_ENDPOINT || 'https://script.google.com/macros/s/AKfycbwoy8tBpCzcFiAGIB3u_fSxQbgjH0M00PBcG9DjOe98XaZizH2dqFbqPr0kVtQPR2-enQ/exec';
 ---
 <dialog class="feedback-dialog" id="feedback-dialog" aria-labelledby="feedback-title" data-endpoint={endpoint} data-i18n-skip>
  <form id="feedback-form" method="post" target="feedback-response">
