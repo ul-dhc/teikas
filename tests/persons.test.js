@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {buildProfiles,matchingRecords,textsHref} from '../src/persons/model.js';
+import {buildProfiles,matchingRecords,matchPerson,textsHref} from '../src/persons/model.js';
 import {decodeSelection} from '../src/lib/selection.js';
 const read=name=>JSON.parse(readFileSync(`teikas_json/${name}.json`,'utf8'));
 const legends=read('legends'),collectors=read('collectors'),narrators=read('narrators');
@@ -96,4 +96,26 @@ test('unknown-person buckets receive no contribution boost and discovery scores 
  const scores=createDiscoveryOrder([{id:'small',ids:['1']},{id:'unknown',unknown:true,ids:Array(195).fill('1')}],()=>.5);
  assert.equal(scores.get('small'),scores.get('unknown'));
  for(const draw of [0,1])for(const score of createDiscoveryOrder(profiles,()=>draw).values())assert.ok(Number.isFinite(score)&&score>0);
+});
+
+const searchRecords=new Map([
+ ['renda',{id:'renda',chapterLv:'Dievs',placeId:'place-renda',place:'Renda'}],
+ ['riga',{id:'riga',chapterLv:'Velni',placeId:'place-riga',place:'Rīga'}],
+ ['riga2',{id:'riga2',chapterLv:'Dievs',placeId:'place-riga',place:'Rīga'}],
+]);
+const searchPerson={name:'Zeltiņa, P.',ids:['renda','riga','riga2']};
+test('person search finds names and legend places without requiring diacritics',()=>{
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'  ZELTINA  ').records.map(r=>r.id),searchPerson.ids);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'rIgA').records.map(r=>r.id),['riga','riga2']);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'rIgA').places,['Rīga']);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'Renda').records.map(r=>r.id),['renda']);
+ assert.equal(matchPerson(searchPerson,searchRecords,'Kuldīga').records.length,0);
+});
+test('place search and active filters must apply to the same legend records',()=>{
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'Rīga','Dievs').records.map(r=>r.id),['riga2']);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'Renda','Velni').records,[]);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'Renda','','place-riga').records,[]);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'Zeltiņa','Velni').records.map(r=>r.id),['riga']);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'Zeltiņa').places,[]);
+ assert.deepEqual(matchPerson(searchPerson,searchRecords,'').records.map(r=>r.id),searchPerson.ids);
 });

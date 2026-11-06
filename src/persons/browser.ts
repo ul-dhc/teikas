@@ -1,4 +1,4 @@
-import {matchingRecords,textsHref,explorationHrefs,sharedPersonSelectionUrl,createDiscoveryOrder} from './model.js';
+import {matchPerson,textsHref,explorationHrefs,sharedPersonSelectionUrl,createDiscoveryOrder} from './model.js';
 import {decodeSelection} from '../lib/selection.js';
 type Lang='lv'|'de'|'en';
 const ui=JSON.parse(document.querySelector('#ui-translations')!.textContent||'{}') as Record<string,Record<Lang,string>>;
@@ -74,13 +74,15 @@ function syncUrl(){
  if(selectionOnly)next.set('selection',[...selection].join(','));
  history.replaceState(null,'',`${location.pathname}${next.size?'?'+next:''}`);
 }
+const personMatch=(p:Profile)=>matchPerson(p,byId,query.value,theme.value,place.value) as {records:RecordRow[];places:string[]};
+function placeMatchHint(p:Profile){const places=personMatch(p).places;return places.length?`<p class="result-metadata person-summary" data-person-place-match>${esc(places.length===1?t().legendPlace:t().legendPlaces)}: ${places.map(esc).join(' · ')}</p>`:'';}
 function groupLink(p:Profile,g:Group){return textsHref(base,p,g.ids);}
 function groupList(p:Profile,groups:Group[],kind:'themes'|'places'|'peers'){
  const item=(g:Group)=>`<li><a href="${esc(kind==='peers'?personHref(g.id):groupLink(p,g))}"><span>${esc(kind==='themes'?themeLabel(g.id):kind==='peers'?peerLabel(p,g):g.label)}</span><span>${g.ids.length}</span></a></li>`;
  return `<ul>${groups.slice(0,5).map(item).join('')}</ul>${groups.length>5?`<details><summary>${t().showAll} (${groups.length})</summary><ul>${groups.slice(5).map(item).join('')}</ul></details>`:''}`;
 }
 function detailsBody(p:Profile){
- const related=matchingRecords(p,byId,theme.value,place.value) as RecordRow[];
+ const related=personMatch(p).records as RecordRow[];
  const sameNames=(names.get(p.name.trim().toLocaleLowerCase('lv'))||[]).filter(other=>other.id!==p.id);
  return `<div class="person-detail-body">${sameNames.length?`<p class="result-metadata person-identity-note">${t().identity} ${sameNames.map(other=>`<a href="${esc(personHref(other.id))}">${esc(other.name)} · ${label(other)}</a>`).join(' · ')}</p>`:''}
  <div class="read-full-person person-detail-grid"><section class="person-stat"><h3 class="person-stat-title">${t().themes} (${p.themes.length})</h3>${groupList(p,p.themes,'themes')}</section><section class="person-stat"><h3 class="person-stat-title">${t().places} (${p.places.length})</h3>${groupList(p,p.places,'places')}</section>${p.peers.length?`<section class="person-stat"><h3 class="person-stat-title">${p.role==='narrator'?t().peersCollector:t().peersNarrator} (${p.peers.length})</h3>${groupList(p,p.peers,'peers')}</section>`:''}</div>
@@ -98,15 +100,16 @@ function saveButton(p:Profile){
  return `<button class="pin-button person-save" type="button" data-save="${esc(p.id)}" aria-pressed="${pinned}" aria-label="${esc(`${action}: ${p.name}`)}" data-tooltip="${esc(action)}"><i data-lucide="pin" aria-hidden="true"></i></button>`;
 }
 function row(p:Profile){
- const matches=matchingRecords(p,byId,theme.value,place.value) as RecordRow[],ids=(theme.value||place.value)?matches.map(r=>r.id):p.ids;
+ const matches=personMatch(p).records,ids=matches.map(r=>r.id);
  return `<li class="result-card person-row${saved.has(p.id)?' is-pinned':''}" id="person-${esc(p.id)}"><div><h2><a href="${esc(personHref(p.id))}" data-open-person="${esc(p.id)}" aria-expanded="${expanded.has(p.id)}" aria-controls="person-details-${esc(p.id)}">${esc(p.name)}</a></h2><p class="result-metadata person-meta"><span class="person-role">${label(p)}</span><span>${legendCount(p.ids.length)}</span></p>
+ ${placeMatchHint(p)}
  ${p.themes.length?`<p class="result-metadata person-summary">${t().themes}: ${p.themes.slice(0,3).map(g=>`<a href="${esc(groupLink(p,g))}">${esc(themeLabel(g.id))}</a>`).join(' · ')}</p>`:''}
  ${p.peers.length?`<p class="result-metadata person-summary">${p.role==='narrator'?t().peersCollector:t().peersNarrator}: ${p.peers.slice(0,2).map(g=>`<a href="${esc(personHref(g.id))}">${esc(peerLabel(p,g))}</a>`).join(' · ')}${p.peers.length>2?` (+${p.peers.length-2})`:''}</p>`:''}
- ${(theme.value||place.value)?`<p class="result-metadata person-summary">${legendCount(matches.length)} ${t().matched}</p>`:''}</div>
+ ${(theme.value||place.value||personMatch(p).places.length)?`<p class="result-metadata person-summary">${legendCount(matches.length)} ${t().matched}</p>`:''}</div>
  <div class="person-actions"><a class="read-full person-read" href="${esc(textsHref(base,p,ids))}">${t().read} (${ids.length}) <i data-lucide="arrow-right" aria-hidden="true"></i></a><div class="person-quick-actions">${explorationActions(p)}${saveButton(p)}</div></div>
  <details class="result-preview person-details" id="person-details-${esc(p.id)}" data-detail="${esc(p.id)}" ${expanded.has(p.id)?'open':''}><summary>${t().more}</summary><div data-detail-content>${expanded.has(p.id)?detailsBody(p):''}</div></details></li>`;
 }
-function table(rows:Profile[]){return `<div class="people-table-wrap" tabindex="0" role="region" aria-label="${t().table}"><table class="people-table"><thead><tr class="list-head person-table-row">${['name','role','count','gender'].map(field=>{const asc=field==='count'?'count-asc':field,desc=field==='count'?'count':`${field}-desc`,direction=sort.value===asc?'ascending':sort.value===desc?'descending':'none';return `<th scope="col" aria-sort="${direction}"><button type="button" data-person-column="${field}" aria-pressed="${direction!=='none'}">${esc(t()[field])} <i data-lucide="${direction==='ascending'?'arrow-up':direction==='descending'?'arrow-down':'arrow-up-down'}" aria-hidden="true"></i></button></th>`;}).join('')}<th scope="col"><span>${t().read}</span></th></tr></thead><tbody>${rows.map(p=>`<tr class="result-card person-table-row ${saved.has(p.id)?'is-pinned':''}"><td><h2><a href="${esc(personHref(p.id))}">${esc(p.name)}</a></h2></td><td class="result-type">${label(p)}</td><td class="result-legendcount">${p.ids.length}</td><td class="result-gender">${p.gender==='F'?t().female:p.gender==='M'?t().male:t().unknown}</td><td><a class="read-full person-read" href="${esc(textsHref(base,p,matchingRecords(p,byId,theme.value,place.value).map((r:RecordRow)=>r.id)))}">${t().read} <i data-lucide="arrow-right" aria-hidden="true"></i></a><div class="person-quick-actions">${explorationActions(p)}${saveButton(p)}</div></td></tr>`).join('')}</tbody></table></div>`;}
+function table(rows:Profile[]){return `<div class="people-table-wrap" tabindex="0" role="region" aria-label="${t().table}"><table class="people-table"><thead><tr class="list-head person-table-row">${['name','role','count','gender'].map(field=>{const asc=field==='count'?'count-asc':field,desc=field==='count'?'count':`${field}-desc`,direction=sort.value===asc?'ascending':sort.value===desc?'descending':'none';return `<th scope="col" aria-sort="${direction}"><button type="button" data-person-column="${field}" aria-pressed="${direction!=='none'}">${esc(t()[field])} <i data-lucide="${direction==='ascending'?'arrow-up':direction==='descending'?'arrow-down':'arrow-up-down'}" aria-hidden="true"></i></button></th>`;}).join('')}<th scope="col"><span>${t().read}</span></th></tr></thead><tbody>${rows.map(p=>`<tr class="result-card person-table-row ${saved.has(p.id)?'is-pinned':''}"><td><h2><a href="${esc(personHref(p.id))}">${esc(p.name)}</a></h2>${placeMatchHint(p)}</td><td class="result-type">${label(p)}</td><td class="result-legendcount">${p.ids.length}</td><td class="result-gender">${p.gender==='F'?t().female:p.gender==='M'?t().male:t().unknown}</td><td><a class="read-full person-read" href="${esc(textsHref(base,p,personMatch(p).records.map((r:RecordRow)=>r.id)))}">${t().read} <i data-lucide="arrow-right" aria-hidden="true"></i></a><div class="person-quick-actions">${explorationActions(p)}${saveButton(p)}</div></td></tr>`).join('')}</tbody></table></div>`;}
 const mobileCards=matchMedia('(max-width:850px)');
 mobileCards.addEventListener('change',()=>render());
 function render(){
@@ -114,8 +117,7 @@ function render(){
  el('[data-saved-only-filter]').hidden=!saved.size;
  const effectiveView=mobileCards.matches?'list':view;
  const workspace=el('.people-workspace');workspace.dataset.view='list';workspace.dataset.personView=effectiveView;
- const term=query.value.trim().toLocaleLowerCase('lv');
- filtered=profiles.filter(p=>(!role||p.role===role)&&(!term||p.name.toLocaleLowerCase('lv').includes(term))&&(!gender.value||(gender.value==='unknown'?!p.gender:p.gender===gender.value))&&p.ids.length>=Math.max(1,Number(minimum.value)||1)&&(!savedOnly.checked||saved.has(p.id))&&(!focusId||p.id===focusId)&&(!selectionOnly||selection.has(p.id))&&matchingRecords(p,byId,theme.value,place.value).length>0);
+ filtered=profiles.filter(p=>(!role||p.role===role)&&(!gender.value||(gender.value==='unknown'?!p.gender:p.gender===gender.value))&&p.ids.length>=Math.max(1,Number(minimum.value)||1)&&(!savedOnly.checked||saved.has(p.id))&&(!focusId||p.id===focusId)&&(!selectionOnly||selection.has(p.id))&&personMatch(p).records.length>0);
  filtered.sort((a,b)=>{
   const pinned=Number(saved.has(b.id))-Number(saved.has(a.id));
   if(pinned)return pinned;
@@ -155,7 +157,7 @@ function render(){
 function translate(){
  root.querySelectorAll<HTMLElement>('[data-copy]').forEach(node=>{const key=node.dataset.copy as keyof typeof copy.lv;node.textContent=t()[key];});
  root.querySelectorAll<HTMLElement>('[data-copy-aria]').forEach(node=>node.setAttribute('aria-label',t()[node.dataset.copyAria as keyof typeof copy.lv]));
- query.placeholder=t().search+'…';document.title=`${t().title} – Teikas`;populateFilters();render();
+ query.placeholder=t().searchPersonOrPlace+'…';document.title=`${t().title} – Teikas`;populateFilters();render();
 }
 function clear(){root.querySelectorAll<HTMLInputElement>('[data-person-filter-search]').forEach(input=>input.value='');query.value='';role='';theme.value='';place.value='';gender.value='';minimum.value='1';savedOnly.checked=false;focusId='';selection.clear();selectionOnly=false;page=1;expanded.clear();render();}
 function changed(){page=1;render();}
@@ -211,7 +213,7 @@ root.addEventListener('click',async event=>{
  if(target.hasAttribute('data-export')){
   el<HTMLDetailsElement>('[data-person-download]').open=false;
   const cell=(value:unknown)=>`"${String(value??'').replace(/"/g,'""')}"`,citation='Reinsone, Sanita; Kaščejeva, Simona; Spektors, Andrejs and Pakalns, Guntis (2025). Latvian Folk Legend Corpus of LPT (in Latvian). CLARIN-LV. https://hdl.handle.net/20.500.12574/147; Teikas. LU Digitālo humanitāro zinātņu centrs. https://dhc.lu.lv/teikas/';
-  const rows=[['id','name','role','gender','legend_count','matching_legend_count','notes','citation'],...filtered.map(p=>[p.id,p.name,p.role,p.gender,p.ids.length,matchingRecords(p,byId,theme.value,place.value).length,p.notes,citation])];
+  const rows=[['id','name','role','gender','legend_count','matching_legend_count','notes','citation'],...filtered.map(p=>[p.id,p.name,p.role,p.gender,p.ids.length,personMatch(p).records.length,p.notes,citation])];
   const url=URL.createObjectURL(new Blob(['\ufeff'+rows.map(row=>row.map(cell).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='teikas-personas.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
  }
 });

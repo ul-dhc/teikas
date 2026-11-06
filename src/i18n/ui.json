@@ -3428,5 +3428,20 @@
     "lv": "Visā laikā",
     "de": "Gesamter Zeitraum",
     "en": "All time"
+  },
+  "persons.searchPersonOrPlace": {
+    "lv": "Meklēt personu vai vietu",
+    "de": "Person oder Ort suchen",
+    "en": "Search for a person or place"
+  },
+  "persons.legendPlace": {
+    "lv": "Teiku vieta",
+    "de": "Ort der Sagenaufzeichnungen",
+    "en": "Legend location"
+  },
+  "persons.legendPlaces": {
+    "lv": "Teiku vietas",
+    "de": "Orte der Sagenaufzeichnungen",
+    "en": "Legend locations"
   }
 }

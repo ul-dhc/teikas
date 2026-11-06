@@ -180,3 +180,6 @@
 "adminStats.recentReports","Rādīti jaunākie {count} no {total} iesniegumiem.","Die neuesten {count} von {total} Meldungen werden angezeigt.","Showing the latest {count} of {total} reports."
 "adminStats.noReports","Nav atrastu iesniegumu.","Keine Meldungen gefunden.","No reports found."
 "adminStats.days0","Visā laikā","Gesamter Zeitraum","All time"
+"persons.searchPersonOrPlace","Meklēt personu vai vietu","Person oder Ort suchen","Search for a person or place"
+"persons.legendPlace","Teiku vieta","Ort der Sagenaufzeichnungen","Legend location"
+"persons.legendPlaces","Teiku vietas","Orte der Sagenaufzeichnungen","Legend locations"

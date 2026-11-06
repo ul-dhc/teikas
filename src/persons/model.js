@@ -28,6 +28,15 @@ export function matchingRecords(profile, byId, theme='', place='') {
  return profile.ids.map(id=>byId.get(id)).filter(record=>record&&(!theme||record.chapterLv===theme)&&(!place||record.placeId===place));
 }
 
+// Places describe the person's legend records, rather than their residence.
+export function matchPerson(profile, byId, query='', theme='', place='') {
+ const normalize=value=>String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('lv').trim();
+ const term=normalize(query),eligible=matchingRecords(profile,byId,theme,place);
+ const placeRecords=term?eligible.filter(record=>record.place && normalize(record.place).includes(term)):[];
+ const records=!term || normalize(profile.name).includes(term)?eligible:placeRecords;
+ return {records,places:[...new Set(placeRecords.map(record=>record.place))].sort((a,b)=>a.localeCompare(b,'lv'))};
+}
+
 export function textsHref(base, profile, ids=profile.ids) {
  const params=new URLSearchParams({[profile.role]:profile.id,selection:encodeSelection(ids)});
  return `${base}teksti/?${params}`;
