@@ -1,10 +1,11 @@
 // Deploy as a web app: execute as owner, accept anonymous submissions.
-// No read endpoint, email collection, or account lookup.
+// Anonymous feedback writes; private statistics requests require server-side authentication.
 const FEEDBACK_SHEET_ID = '1IgdN_Y-OnftFJkTMwNr2PLCvxlqYWhCDtNu03rV_5GQ';
 const FEEDBACK_TYPES = ['error', 'suggestion', 'data'];
 
 function doPost(e) {
   const p = (e && e.parameter) || {};
+  if (String(p.action || "").startsWith("stats-")) return statsPost(p);
   const result = {type: 'teikas-feedback', requestId: String(p.requestId || ''), ok: false};
   let origin = '';
   try {

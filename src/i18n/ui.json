@@ -3223,5 +3223,210 @@
     "lv": "Rādīt personas ar vismaz {count} saistītajām teikām.",
     "de": "Personen mit mindestens {count} zugeordneten Sagen anzeigen.",
     "en": "Show people linked to at least {count} legends."
+  },
+  "adminStats.title": {
+    "lv": "Platformas statistika",
+    "de": "Plattformstatistik",
+    "en": "Platform statistics"
+  },
+  "adminStats.password": {
+    "lv": "Parole",
+    "de": "Passwort",
+    "en": "Password"
+  },
+  "adminStats.signIn": {
+    "lv": "Atvērt statistiku",
+    "de": "Statistik öffnen",
+    "en": "Open statistics"
+  },
+  "adminStats.visits": {
+    "lv": "Apmeklējumi",
+    "de": "Aufrufe",
+    "en": "Visits"
+  },
+  "adminStats.reports": {
+    "lv": "Kļūdas un ierosinājumi",
+    "de": "Fehler und Vorschläge",
+    "en": "Errors and suggestions"
+  },
+  "adminStats.days7": {
+    "lv": "Pēdējās 7 dienas",
+    "de": "Letzte 7 Tage",
+    "en": "Last 7 days"
+  },
+  "adminStats.days30": {
+    "lv": "Pēdējās 30 dienas",
+    "de": "Letzte 30 Tage",
+    "en": "Last 30 days"
+  },
+  "adminStats.days90": {
+    "lv": "Pēdējās 90 dienas",
+    "de": "Letzte 90 Tage",
+    "en": "Last 90 days"
+  },
+  "adminStats.days365": {
+    "lv": "Pēdējās 365 dienas",
+    "de": "Letzte 365 Tage",
+    "en": "Last 365 days"
+  },
+  "adminStats.refresh": {
+    "lv": "Atjaunot",
+    "de": "Aktualisieren",
+    "en": "Refresh"
+  },
+  "adminStats.signOut": {
+    "lv": "Iziet",
+    "de": "Abmelden",
+    "en": "Sign out"
+  },
+  "adminStats.visitedPages": {
+    "lv": "Apmeklētās lapas",
+    "de": "Besuchte Seiten",
+    "en": "Visited pages"
+  },
+  "adminStats.scope": {
+    "lv": "Tikai TEIKAS lapas zem /teikas/. Avots: GoatCounter.",
+    "de": "Nur TEIKAS-Seiten unter /teikas/. Quelle: GoatCounter.",
+    "en": "Only TEIKAS pages under /teikas/. Source: GoatCounter."
+  },
+  "adminStats.daily": {
+    "lv": "Apmeklējumi pa dienām",
+    "de": "Aufrufe pro Tag",
+    "en": "Visits by day"
+  },
+  "adminStats.day": {
+    "lv": "Diena",
+    "de": "Tag",
+    "en": "Day"
+  },
+  "adminStats.sections": {
+    "lv": "Apmeklējumi pa sadaļām",
+    "de": "Aufrufe nach Bereich",
+    "en": "Visits by section"
+  },
+  "adminStats.popular": {
+    "lv": "Apmeklētākās lapas",
+    "de": "Meistbesuchte Seiten",
+    "en": "Most visited pages"
+  },
+  "adminStats.countNote": {
+    "lv": "Apmeklējumi nav unikālu cilvēku skaits. Uzskaite aptver laiku, kad lapās darbojas GoatCounter.",
+    "de": "Aufrufe entsprechen nicht der Anzahl einzelner Personen. Die Erfassung beginnt mit der Aktivierung von GoatCounter.",
+    "en": "Visits are not a count of unique people. Data covers the time GoatCounter has been active on these pages."
+  },
+  "adminStats.searchReports": {
+    "lv": "Meklēt iesniegumos",
+    "de": "Meldungen durchsuchen",
+    "en": "Search reports"
+  },
+  "adminStats.loading": {
+    "lv": "Ielādē…",
+    "de": "Wird geladen…",
+    "en": "Loading…"
+  },
+  "adminStats.signingIn": {
+    "lv": "Pārbauda paroli…",
+    "de": "Passwort wird geprüft…",
+    "en": "Checking password…"
+  },
+  "adminStats.expired": {
+    "lv": "Sesija ir beigusies. Ievadi paroli vēlreiz.",
+    "de": "Sitzung abgelaufen. Bitte erneut anmelden.",
+    "en": "Session expired. Enter the password again."
+  },
+  "adminStats.unavailable": {
+    "lv": "Neizdevās ielādēt datus. Mēģini vēlreiz.",
+    "de": "Daten konnten nicht geladen werden. Bitte erneut versuchen.",
+    "en": "Could not load the data. Please try again."
+  },
+  "adminStats.wrongPassword": {
+    "lv": "Nepareiza parole.",
+    "de": "Falsches Passwort.",
+    "en": "Incorrect password."
+  },
+  "adminStats.setup": {
+    "lv": "Statistikas piekļuve vēl nav iestatīta.",
+    "de": "Der Statistikzugang ist noch nicht eingerichtet.",
+    "en": "Statistics access has not been configured yet."
+  },
+  "adminStats.tooMany": {
+    "lv": "Pārāk daudz mēģinājumu. Mēģini vēlreiz pēc minūtes.",
+    "de": "Zu viele Versuche. Bitte in einer Minute erneut versuchen.",
+    "en": "Too many attempts. Try again in a minute."
+  },
+  "adminStats.page": {
+    "lv": "Lapa",
+    "de": "Seite",
+    "en": "Page"
+  },
+  "adminStats.noVisits": {
+    "lv": "Šajā periodā vēl nav reģistrētu apmeklējumu.",
+    "de": "In diesem Zeitraum wurden noch keine Aufrufe erfasst.",
+    "en": "No visits have been recorded for this period yet."
+  },
+  "adminStats.visitsUnavailable": {
+    "lv": "Apmeklējumu dati pašlaik nav pieejami.",
+    "de": "Aufrufdaten sind derzeit nicht verfügbar.",
+    "en": "Visit data is currently unavailable."
+  },
+  "adminStats.updated": {
+    "lv": "Atjaunots:",
+    "de": "Aktualisiert:",
+    "en": "Updated:"
+  },
+  "adminStats.home": {
+    "lv": "Sākums",
+    "de": "Startseite",
+    "en": "Home"
+  },
+  "adminStats.texts": {
+    "lv": "Teksti",
+    "de": "Texte",
+    "en": "Texts"
+  },
+  "adminStats.people": {
+    "lv": "Personas",
+    "de": "Personen",
+    "en": "People"
+  },
+  "adminStats.themes": {
+    "lv": "Tēmas",
+    "de": "Themen",
+    "en": "Themes"
+  },
+  "adminStats.map": {
+    "lv": "Karte",
+    "de": "Karte",
+    "en": "Map"
+  },
+  "adminStats.data": {
+    "lv": "Dati",
+    "de": "Daten",
+    "en": "Data"
+  },
+  "adminStats.about": {
+    "lv": "Par projektu",
+    "de": "Über das Projekt",
+    "en": "About"
+  },
+  "adminStats.other": {
+    "lv": "Citas lapas",
+    "de": "Weitere Seiten",
+    "en": "Other pages"
+  },
+  "adminStats.recentReports": {
+    "lv": "Rādīti jaunākie {count} no {total} iesniegumiem.",
+    "de": "Die neuesten {count} von {total} Meldungen werden angezeigt.",
+    "en": "Showing the latest {count} of {total} reports."
+  },
+  "adminStats.noReports": {
+    "lv": "Nav atrastu iesniegumu.",
+    "de": "Keine Meldungen gefunden.",
+    "en": "No reports found."
+  },
+  "adminStats.days0": {
+    "lv": "Visā laikā",
+    "de": "Gesamter Zeitraum",
+    "en": "All time"
   }
 }

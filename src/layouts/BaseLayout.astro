@@ -13,7 +13,7 @@ import uiTranslations from '../i18n/ui.json';
 import Feedback from '../components/Feedback.astro';
 import {canonicalUrl, pageMetadata} from '../lib/seo.js';
 const defaults = pageMetadata(Astro.url.pathname);
-const { title = defaults.title, description = defaults.description, active = '', structuredData = null } = Astro.props;
+const { title = defaults.title, description = defaults.description, active = '', structuredData = null, noindex = false } = Astro.props;
 const canonical = canonicalUrl(Astro.url.pathname);
 const pageTitle = title === 'Teikas' ? 'Latviešu tautas teikas — Pētera Šmita krājums | LU' : `${title} – Teikas`;
 const siteUrl = 'https://dhc.lu.lv/teikas/';
@@ -35,10 +35,12 @@ const base = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width" />
     {active === 'home' && <meta name="google-site-verification" content="j_ybW8E7SRYyFQmh1t-WogmeX9sV0FyeDnIEHCdHCHw" />}
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <script is:inline>try{const d=document.documentElement,s=localStorage;d.dataset.theme=s.getItem('teikas-theme')||'light';d.dataset.contentMode=s.getItem('teikas-content-mode')||'parallel';d.dataset.uiLang=s.getItem('teikas-ui-lang')||'lv';d.style.setProperty('--font-scale',s.getItem('teikas-font-scale')||'1')}catch{}</script>
     <title>{pageTitle}</title>
     <link rel="canonical" href={canonical} />
+    {import.meta.env.PROD && !Astro.url.pathname.startsWith(`${base}stats/`) && <script is:inline async src="https://gc.zgo.at/count.js" data-goatcounter="https://ludhc.goatcounter.com/count" data-goatcounter-settings={JSON.stringify({path:new URL(canonical).pathname})}></script>}
     <link rel="sitemap" type="application/xml" href={`${siteUrl}sitemap.xml`} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Teikas — Latviešu tautas teikas" />
