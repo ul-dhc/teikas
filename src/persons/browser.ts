@@ -30,7 +30,7 @@ const localExcerpt=(r:RecordRow)=>(language()==='de'?(r.excerptDe||r.excerptLv):
 const legendCount=(n:number)=>language()==='lv'?`${n} ${n%10===1&&n%100!==11?'teika':'teikas'}`:`${n} ${language()==='de'?(n===1?'Sage':'Sagen'):(n===1?'legend':'legends')}`;
 let excerptsLoaded=false,excerptsRequest:Promise<void>|null=null;
 function syncMinimum(){
- const count=Number(minimum.value),singular=count%10===1&&count%100!==11;
+ const count=Number(minimum.value),singular=new Intl.PluralRules(language()).select(count)==='one';
  el('[data-minimum-output]').textContent=count<=1?t().all:`${count}+`;
  el('[data-minimum-help]').textContent=t()[singular?'minimumHelpOne':'minimumHelpOther'].replace('{count}',String(count));
 }
