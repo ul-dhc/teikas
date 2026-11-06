@@ -17,7 +17,7 @@ export function buildProfiles(people, records) {
    }
    return [...groups.values()].sort((a,b)=>b.ids.length-a.ids.length||a.label.localeCompare(b.label,'lv'));
   };
-  return {id:person.id,name:person.fullname,unknown:person.unknown===true,gender:person.gender||'',notes:person.notes||'',role,
+  return {id:person.id,name:person.fullname,sortName:person.sortname||person.fullname,unknown:person.unknown===true,gender:person.gender||'',notes:person.notes||'',role,
    ids:related.map(record=>record.id),themes:aggregate('chapterLv','chapterLv'),places:aggregate('placeId','place'),
    peers:aggregate(role==='collector'?'narratorId':'collectorId',role==='collector'?'narrator':'collector')};
  });
@@ -33,7 +33,7 @@ export function matchPerson(profile, byId, query='', theme='', place='') {
  const normalize=value=>String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('lv').trim();
  const term=normalize(query),eligible=matchingRecords(profile,byId,theme,place);
  const placeRecords=term?eligible.filter(record=>record.place && normalize(record.place).includes(term)):[];
- const records=!term || normalize(profile.name).includes(term)?eligible:placeRecords;
+ const records=!term || (normalize(profile.name).includes(term)||normalize(profile.sortName).includes(term))?eligible:placeRecords;
  return {records,places:[...new Set(placeRecords.map(record=>record.place))].sort((a,b)=>a.localeCompare(b,'lv'))};
 }
 

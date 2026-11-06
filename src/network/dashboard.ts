@@ -1,3 +1,4 @@
+import { comparePersonNames } from '../lib/person-name-order.js';
 import {registerPopover,dismissOtherPopovers} from '../scripts/popovers';
 import {scopeRecordsToSelection} from '../lib/selection.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
@@ -89,7 +90,7 @@ export function createDashboard(options: Options) {
   return `<div class="ml-facet-sort"><button type="button" data-sort="${field}" aria-haspopup="menu" aria-expanded="false" aria-controls="ml-sort-${field}" aria-label="${tr('sort')}: ${label}"><span>${choices.find(([value])=>value===current)![1]}</span><i data-lucide="chevron-down"></i></button><div class="ml-sort-menu" id="ml-sort-${field}" role="menu" aria-label="${tr('sort')}: ${label}" hidden>${choices.map(([value,text])=>`<button type="button" role="menuitemradio" aria-checked="${current===value}" data-sort-option="${field}" data-sort-value="${value}" tabindex="-1"><span>${text}</span><i data-lucide="check"></i></button>`).join('')}</div></div>`;
  }
  function compare(field:string,a:{count:number;label:string;code?:string},b:{count:number;label:string;code?:string}) {
-  const alphabetical=()=>a.label.localeCompare(b.label,lang(),{numeric:true});
+  const alphabetical=()=>field==='collector'||field==='narrator'?comparePersonNames(a.label,b.label):a.label.localeCompare(b.label,lang(),{numeric:true});
   switch(sorts[field]||'count-desc'){
    case 'name':return alphabetical();
    case 'code':return (a.code||'').localeCompare(b.code||'',lang(),{numeric:true});
@@ -161,7 +162,7 @@ export function createDashboard(options: Options) {
   const select=(field:string,title:string,current:string,choices:Array<[string,string]>)=>`<label class="ml-network-filter-field"><span class="platform-filter-label">${title}</span><select aria-label="${title}" data-network-filter="${field}"><option value="">${tr('all')}</option>${choices.map(([value,text])=>`<option value="${esc(value)}" ${current===value?'selected':''}>${esc(text)}</option>`).join('')}</select></label>`;
   return select('topic',tr('topics'),scope.topic?.id||'',topics.map(t=>[t.id,t[lang()]]))+
    select('type',tr('types'),scope.type?key(scope.type):'',types.filter(t=>!scope.topic||t.topic===scope.topic.id).map(t=>[key(t),name(t)]))+
-   (['county','collector','narrator'] as const).map(field=>select(field,tr(field==='county'?'counties':field==='collector'?'collectors':'narrators'),filters[field]||'',[...countsBy(cohort(field),field)].sort((a,b)=>named(field,a[0]).localeCompare(named(field,b[0]),lang())).map(([value,count])=>[value,`${value===UNKNOWN?tr('unknown'):named(field,value)} (${count})`]))).join('')+
+   (['county','collector','narrator'] as const).map(field=>select(field,tr(field==='county'?'counties':field==='collector'?'collectors':'narrators'),filters[field]||'',[...countsBy(cohort(field),field)].sort((a,b)=>field==='collector'||field==='narrator'?comparePersonNames(named(field,a[0]),named(field,b[0])):named(field,a[0]).localeCompare(named(field,b[0]),lang())).map(([value,count])=>[value,`${value===UNKNOWN?tr('unknown'):named(field,value)} (${count})`]))).join('')+
    select('translation',tr('translation'),filters.translation||'',[['translated',tr('translated')],['original',tr('original')]]);
  }
  const resultRows=():Row[]=>view==='network'?network.selectedRows(cohort()):cohort();

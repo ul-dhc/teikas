@@ -4,7 +4,7 @@ type Lang='lv'|'de'|'en';
 const ui=JSON.parse(document.querySelector('#ui-translations')!.textContent||'{}') as Record<string,Record<Lang,string>>;
 const copy=Object.fromEntries((['lv','de','en'] as Lang[]).map(lang=>[lang,Object.fromEntries(Object.entries(ui).filter(([key])=>key.startsWith('persons.')).map(([key,value])=>[key.slice(8),value[lang]]))])) as Record<Lang,Record<string,string>>;
 type Group={id:string;label:string;ids:string[];unknown?:boolean};
-type Profile={id:string;name:string;role:'collector'|'narrator';unknown:boolean;gender:string;notes:string;ids:string[];themes:Group[];places:Group[];peers:Group[]};
+type Profile={id:string;name:string;sortName:string;role:'collector'|'narrator';unknown:boolean;gender:string;notes:string;ids:string[];themes:Group[];places:Group[];peers:Group[]};
 type RecordRow={id:string;titleLv:string;titleDe:string;excerptLv:string;excerptDe:string;chapterLv:string;chapterDe:string;placeId:string;place:string};
 const root=document.querySelector<HTMLElement>('[data-people]')!;
 const {base,profiles,records}=JSON.parse(document.querySelector('#people-data')!.textContent!) as {base:string;profiles:Profile[];records:RecordRow[]};
@@ -121,9 +121,9 @@ function render(){
  filtered.sort((a,b)=>{
   const pinned=Number(saved.has(b.id))-Number(saved.has(a.id));
   if(pinned)return pinned;
-  const names=a.name.localeCompare(b.name,'lv');
+  const names=a.sortName.localeCompare(b.sortName,'lv');
   const field=sort.value.replace(/-desc$/,'');
-  const value=(p:Profile)=>field==='role'?label(p):field==='gender'?(p.gender==='F'?t().female:p.gender==='M'?t().male:''):p.name;
+  const value=(p:Profile)=>field==='role'?label(p):field==='gender'?(p.gender==='F'?t().female:p.gender==='M'?t().male:''):p.sortName;
   const first=value(a),second=value(b);
   const missing=field==='gender'?Number(!first)-Number(!second):0;
   const textOrder=first.localeCompare(second,language())*(sort.value.endsWith('-desc')?-1:1);

@@ -1,3 +1,5 @@
+import { comparePersonNames } from '../lib/person-name-order.js';
+import { formatPersonName } from '../lib/person-names.js';
 import {showPlatformTooltip,movePlatformTooltip,hidePlatformTooltip} from '../scripts/tooltips';
 import maplibregl from "maplibre-gl";
 import type { LegendProperties, MapDataset, PlaceProperties, SimilarityEdge, SimilarityNode } from "../lib/map/types";
@@ -71,7 +73,7 @@ const requestedLayers = new Set(
   initialZoom = Number(params.get("z")) || 6.26;
 let mapMode = ["points", "clusters"].includes(params.get("mode") || "") ? params.get("mode")! : "points";
 const filterKeys = ["theme", "narrator", "collector", "place", "volume"] as const,
-  selectedFilters = Object.fromEntries(filterKeys.map((key) => [key, new Set((params.get(key) || "").split("|").filter((value) => value && !(key === "place" && value.startsWith("place-"))))])) as Record<(typeof filterKeys)[number], Set<string>>;
+  selectedFilters = Object.fromEntries(filterKeys.map((key) => [key, new Set((params.get(key) || "").split("|").filter((value) => value && !(key === "place" && value.startsWith("place-"))).map(value => key === "collector" || key === "narrator" ? formatPersonName(value) : value))])) as Record<(typeof filterKeys)[number], Set<string>>;
 const unknownPersonValue = "__unknown__", personFilterKeys = ["narrator", "collector"] as const,
   unknownPersonKey = { narrator: "map.unknownNarrators", collector: "map.unknownCollectors" } as const,
   personFilterExplicit: Record<(typeof personFilterKeys)[number], boolean> = {
@@ -88,7 +90,7 @@ let unmappedSelected = false;
 const propertyForFilter = { theme: "themeLv", narrator: "narrator", collector: "collector", place: "placeName", volume: "volume" } as const;
 const allLegendProperties = [...dataset.legends.features.map((feature) => feature.properties), ...(dataset.unmappedLegends || [])];
 for (const key of filterKeys) {
-  const values = [...new Set(allLegendProperties.map((properties) => properties[propertyForFilter[key]]).filter(Boolean))].sort((first, second) => String(first).localeCompare(String(second), "lv", { numeric: true })).map(String);
+  const values = [...new Set(allLegendProperties.map((properties) => properties[propertyForFilter[key]]).filter(Boolean))].sort((first, second) => (key === "collector" || key === "narrator") ? comparePersonNames(String(first), String(second)) : String(first).localeCompare(String(second), "lv", { numeric: true })).map(String);
   if (key === "narrator" || key === "collector") values.unshift(unknownPersonValue);
   filterOptionValues[key] = values;
   const options = filterPanel.querySelector<HTMLElement>(`[data-map-filter="${key}"] .multi-options`)!;

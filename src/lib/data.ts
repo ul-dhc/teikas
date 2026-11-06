@@ -1,3 +1,4 @@
+import { formatPersonName } from './person-names.js';
 import legendsRaw from '../../teikas_json/legends.json';
 import collectorsRaw from '../../teikas_json/collectors.json';
 import narratorsRaw from '../../teikas_json/narrators.json';
@@ -79,7 +80,7 @@ export function legendYear(legend: Legend): string {
 
 export function displayPersonName(person: Person | null | undefined): string {
   const name = person?.fullName?.trim() ?? '';
-  return /^(nezināms|unknown|unbekannt)$/iu.test(name) ? '' : name;
+  return /^(nezināms|unknown|unbekannt)$/iu.test(name) ? '' : formatPersonName(name);
 }
 
 function excerpt(value: string | null, length = 420): string {
@@ -93,13 +94,14 @@ export const browseRecords = legends.map((legend) => ({
   placeId: legend.placeId ?? '', collectorId: legend.collectorId ?? '', narratorId: legend.narratorId ?? '',
   titleLv: legend.title.lv ?? '', titleDe: legend.title.de ?? '', place: legend.placeId ? placesById.get(legend.placeId)?.name ?? '' : '',
   collector: displayPersonName(collectorsById.get(legend.collectorId)), narrator: legend.narratorId ? displayPersonName(narratorsById.get(legend.narratorId)) : '',
+  collectorSort: collectorsById.get(legend.collectorId)?.fullName ?? '', narratorSort: legend.narratorId ? narratorsById.get(legend.narratorId)?.fullName ?? '' : '',
   year: legendYear(legend), excerptLv: excerpt(legend.text.lv), excerptDe: excerpt(legend.text.de),
 }));
 
 // Person profiles derive relationships from browseRecords once, without serialized statistics.
 export const browsePersons = [
-  ...narrators.map(person => ({ id:person.id, fullname:person.fullName, gender:person.gender, notes:person.notes ?? '', unknown:!displayPersonName(person), type:NARRATOR_TYPE })),
-  ...collectors.map(person => ({ id:person.id, fullname:person.fullName, gender:person.gender, notes:person.notes ?? '', unknown:!displayPersonName(person), type:COLLECTOR_TYPE })),
+  ...narrators.map(person => ({ id:person.id, fullname:formatPersonName(person.fullName), sortname:person.fullName, gender:person.gender, notes:person.notes ?? '', unknown:!displayPersonName(person), type:NARRATOR_TYPE })),
+  ...collectors.map(person => ({ id:person.id, fullname:formatPersonName(person.fullName), sortname:person.fullName, gender:person.gender, notes:person.notes ?? '', unknown:!displayPersonName(person), type:COLLECTOR_TYPE })),
 ];
 
 const dailyTheme = (legend: Legend) => legend.chapter.lv?.trim() || '__unknown__';

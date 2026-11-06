@@ -3,8 +3,8 @@ import { legends, collectorsById, narratorsById, placesById, legendYear, display
 export const topics = [...new Set(legends.map(l=>l.volume))].sort().map(volume=>({id:volume,lv:`${volume}. sējums`,de:`Band ${volume}`,en:`Volume ${volume}`}));
 export const metadataLabels:Record<string,Record<string,string>> = {
  county:Object.fromEntries([...placesById.values()].map(p=>[p.id,p.name])),
- collector:Object.fromEntries([...collectorsById.values()].map(p=>[p.id,p.fullName])),
- narrator:Object.fromEntries([...narratorsById.values()].map(p=>[p.id,p.fullName])),
+ collector:Object.fromEntries([...collectorsById.values()].map(p=>[p.id,displayPersonName(p)])),
+ narrator:Object.fromEntries([...narratorsById.values()].map(p=>[p.id,displayPersonName(p)])),
  place:{},
 };
 const grouped = new Map<string,typeof legends>();

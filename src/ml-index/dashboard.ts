@@ -1,3 +1,5 @@
+import { comparePersonNames } from '../lib/person-name-order.js';
+import { formatPersonName } from '../lib/person-names.js';
 import {registerPopover,dismissOtherPopovers} from '../scripts/popovers';
 import {scopeRecordsToSelection} from '../lib/selection.js';
 import {scopeRecordsToSection} from '../lib/section-scope';
@@ -41,7 +43,8 @@ export function createDashboard(options: Options) {
   sorts = {};
   for(const field of sortFields){const value=params.get(`sort_${field}`);if(value&&['count-desc','count-asc','name',...(field==='type'?['code']:[])].includes(value))sorts[field]=value as Sort;}
   for (const field of ['county','collector','narrator','translation'] as Filter[]) {
-   const value=params.get(field);
+   const rawValue=params.get(field);
+   const value=rawValue && (field==='collector'||field==='narrator') ? formatPersonName(rawValue) : rawValue;
    if (!value) continue;
    if (field==='translation' && !['translated','original'].includes(value)) continue;
    if (['county','collector','narrator'].includes(field) && value!==UNKNOWN && !all.some(row=>(row as any)[field]===value)) continue;
@@ -78,7 +81,7 @@ export function createDashboard(options: Options) {
   return `<div class="ml-facet-sort"><button type="button" data-sort="${field}" aria-haspopup="menu" aria-expanded="false" aria-controls="ml-sort-${field}" aria-label="${tr('sort')}: ${label}"><span>${choices.find(([value])=>value===current)![1]}</span><i data-lucide="chevron-down"></i></button><div class="ml-sort-menu" id="ml-sort-${field}" role="menu" aria-label="${tr('sort')}: ${label}" hidden>${choices.map(([value,text])=>`<button type="button" role="menuitemradio" aria-checked="${current===value}" data-sort-option="${field}" data-sort-value="${value}" tabindex="-1"><span>${text}</span><i data-lucide="check"></i></button>`).join('')}</div></div>`;
  }
  function compare(field:string,a:{count:number;label:string;code?:string},b:{count:number;label:string;code?:string}) {
-  const alphabetical=()=>a.label.localeCompare(b.label,lang(),{numeric:true});
+  const alphabetical=()=>field==='collector'||field==='narrator'?comparePersonNames(a.label,b.label):a.label.localeCompare(b.label,lang(),{numeric:true});
   switch(sorts[field]||'count-desc'){
    case 'name':return alphabetical();
    case 'code':return (a.code||'').localeCompare(b.code||'',lang(),{numeric:true});
