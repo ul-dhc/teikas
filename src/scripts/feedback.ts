@@ -20,7 +20,7 @@ function translate(){
  dialog.querySelectorAll('[data-feedback-close]').forEach(node=>node.setAttribute('aria-label',tr('cancel')));
  dialog.querySelector('#feedback-kind-value')!.textContent=tr(kind.value);
  dialog.querySelectorAll<HTMLElement>('[data-feedback-kind]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.feedbackKind===kind.value)));
- submit.textContent=tr(pending?'sending':'send');status.textContent=message?tr(message):'';
+ submit.textContent=tr(pending?'sending':'send');status.textContent=message?tr(message):'';status.dataset.state=message;
 }
 document.querySelectorAll<HTMLButtonElement>('[data-feedback-open],[data-feedback-launch]').forEach(button=>button.addEventListener('click',()=>{
  openedFrom=button;

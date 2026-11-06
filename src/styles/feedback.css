@@ -17,4 +17,5 @@
 .feedback-actions :is(.button,.text-button){font-size:.88rem;font-weight:400;min-height:40px}
 .feedback-dialog .search-help{margin:0}
 .feedback-dialog [data-feedback-status]:empty{display:none}
+.feedback-dialog [data-feedback-status][data-state=success]{color:var(--success-green)}
 @media(max-width:600px){.feedback-dialog{padding:1rem}}

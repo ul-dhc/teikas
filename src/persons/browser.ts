@@ -64,7 +64,10 @@ function syncPersonFilterMenus(){
  syncMinimum();
  minimum.setAttribute('aria-label',t().minimum);
  el('[data-person-download-label]').textContent=ui['browser.download'][language()];
- el<HTMLButtonElement>('[data-reset]').hidden=!(query.value||role||theme.value||place.value||gender.value||Number(minimum.value)>1||savedOnly.checked||focusId||selectionOnly);
+ const hasSelection=Boolean(query.value.trim()||role||theme.value||place.value||gender.value||Number(minimum.value)>1||savedOnly.checked||focusId||selectionOnly);
+ el<HTMLButtonElement>('[data-reset]').hidden=!hasSelection;
+ el<HTMLButtonElement>('[data-copy-link]').hidden=!hasSelection;
+ el('[data-copy-link]').dataset.tooltip=t().copyLink;
 }
 function syncUrl(){
  const next=new URLSearchParams();for(const [key,value] of Object.entries({q:query.value.trim(),role,theme:theme.value,place:place.value,sort:sort.value==='random'?'':sort.value,gender:gender.value,min:Number(minimum.value)>1?minimum.value:'',saved:savedOnly.checked?'1':'',view:view==='table'?'table':'',page:page>1?String(page):'',person:focusId,selection:[...selection].join(',')}))if(value)next.set(key,value);
