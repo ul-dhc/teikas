@@ -29,6 +29,11 @@ const localTitle=(r:RecordRow)=>language()==='de'?(r.titleDe||r.titleLv):(r.titl
 const localExcerpt=(r:RecordRow)=>(language()==='de'?(r.excerptDe||r.excerptLv):(r.excerptLv||r.excerptDe))||'';
 const legendCount=(n:number)=>language()==='lv'?`${n} ${n%10===1&&n%100!==11?'teika':'teikas'}`:`${n} ${language()==='de'?(n===1?'Sage':'Sagen'):(n===1?'legend':'legends')}`;
 let excerptsLoaded=false,excerptsRequest:Promise<void>|null=null;
+function syncMinimum(){
+ const count=Number(minimum.value),singular=count%10===1&&count%100!==11;
+ el('[data-minimum-output]').textContent=count<=1?t().all:`${count}+`;
+ el('[data-minimum-help]').textContent=t()[singular?'minimumHelpOne':'minimumHelpOther'].replace('{count}',String(count));
+}
 function loadExcerpts(){
  if(excerptsLoaded)return Promise.resolve();
  if(!excerptsRequest)excerptsRequest=fetch(`${base}person-excerpts.json`).then(response=>{if(!response.ok)throw Error('excerpts');return response.json();}).then((rows:RecordRow[])=>{for(const row of rows){const record=byId.get(row.id);if(record)Object.assign(record,row);}excerptsLoaded=true;}).catch(()=>{excerptsRequest=null;});
@@ -56,7 +61,7 @@ function syncPersonFilterMenus(){
    return `<label ${matches?'':'hidden'}><input type="radio" name="person-filter-${key}" value="${esc(option.value)}" data-person-filter-choice="${key}" ${option.selected?'checked':''} /><span>${esc(option.textContent)}</span></label>`;
   }).join('');
  }
- el('[data-minimum-output]').textContent=Number(minimum.value)<=1?t().all:`${minimum.value}+`;
+ syncMinimum();
  minimum.setAttribute('aria-label',t().minimum);
  el('[data-person-download-label]').textContent=ui['browser.download'][language()];
  el<HTMLButtonElement>('[data-reset]').hidden=!(query.value||role||theme.value||place.value||gender.value||Number(minimum.value)>1||savedOnly.checked||focusId||selectionOnly);
@@ -151,7 +156,7 @@ function clear(){root.querySelectorAll<HTMLInputElement>('[data-person-filter-se
 function changed(){page=1;render();}
 query.addEventListener('input',changed);[theme,place,gender,minimum,savedOnly].forEach(input=>input.addEventListener('change',changed));
 root.querySelectorAll<HTMLInputElement>('[data-person-filter-search]').forEach(input=>input.addEventListener('input',syncPersonFilterMenus));
-minimum.addEventListener('input',()=>{el('[data-minimum-output]').textContent=Number(minimum.value)<=1?t().all:`${minimum.value}+`;});
+minimum.addEventListener('input',syncMinimum);
 root.addEventListener('change',event=>{
  const choice=event.target as HTMLInputElement,key=choice.dataset.personFilterChoice;
  if(!key)return;

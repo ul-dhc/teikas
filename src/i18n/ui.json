@@ -3213,5 +3213,15 @@
     "lv": "Dzimums",
     "de": "Geschlecht",
     "en": "Gender"
+  },
+  "persons.minimumHelpOne": {
+    "lv": "Rādīt personas ar vismaz {count} saistīto teiku.",
+    "de": "Personen mit mindestens {count} zugeordneten Sage anzeigen.",
+    "en": "Show people linked to at least {count} legend."
+  },
+  "persons.minimumHelpOther": {
+    "lv": "Rādīt personas ar vismaz {count} saistītajām teikām.",
+    "de": "Personen mit mindestens {count} zugeordneten Sagen anzeigen.",
+    "en": "Show people linked to at least {count} legends."
   }
 }

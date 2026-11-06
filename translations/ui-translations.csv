@@ -589,3 +589,5 @@ themes.searchInTexts,Meklēt arī teiku tekstos un metadatos,Auch Sagentexte und
 "persons.sortCount","Teiku skaits","Anzahl der Sagen","Legend count"
 "persons.sortRole","Personas loma","Rolle","Role"
 "persons.sortGender","Dzimums","Geschlecht","Gender"
+"persons.minimumHelpOne","Rādīt personas ar vismaz {count} saistīto teiku.","Personen mit mindestens {count} zugeordneten Sage anzeigen.","Show people linked to at least {count} legend."
+"persons.minimumHelpOther","Rādīt personas ar vismaz {count} saistītajām teikām.","Personen mit mindestens {count} zugeordneten Sagen anzeigen.","Show people linked to at least {count} legends."
