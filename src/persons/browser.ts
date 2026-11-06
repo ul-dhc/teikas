@@ -110,6 +110,8 @@ function table(rows:Profile[]){return `<div class="people-table-wrap" tabindex="
 const mobileCards=matchMedia('(max-width:850px)');
 mobileCards.addEventListener('change',()=>render());
 function render(){
+ if (!saved.size) savedOnly.checked=false;
+ el('[data-saved-only-filter]').hidden=!saved.size;
  const effectiveView=mobileCards.matches?'list':view;
  const workspace=el('.people-workspace');workspace.dataset.view='list';workspace.dataset.personView=effectiveView;
  const term=query.value.trim().toLocaleLowerCase('lv');

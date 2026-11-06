@@ -56,3 +56,5 @@
 @media(max-width:850px){
  .people-workspace .person-view-switch{display:none!important}
 }
+
+.people-workspace [data-saved-only-filter][hidden]{display:none!important}
